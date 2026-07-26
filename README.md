@@ -6,7 +6,7 @@ Every day a scheduled [GitHub Actions](https://docs.github.com/actions) workflow
 places **six falsifiable bets** on the next 24 hours, commits them, and grades
 the ones that have come due.
 
-**🌐 Live page → _(add your Pages / Vercel URL here)_**
+**🌐 Live page → https://deadsunx.github.io/pas-vraiment-secret/**
 
 ## Why this is hard to fake
 
