@@ -32,9 +32,12 @@
     --mark: #A7ADA6;
     --loss: #C2453C;
     --patina: #4E9A8C;
-    --tick-pending: rgba(230, 228, 220, 0.05);
-    --tick-right: rgba(230, 228, 220, 0.10);
-    --tick-wrong: rgba(194, 69, 60, 0.20);
+    /* The field stays monochrome. A loss is shown by the strike through it,
+       not by colour — red belongs to the record itself, not the wallpaper. */
+    --tick-blank: 230, 228, 220;
+    --tick-pending: 230, 228, 220;
+    --tick-right: 230, 228, 220;
+    --tick-wrong: 230, 228, 220;
   }
   :root[data-theme="light"] {
     --ground: #E3E5DF;
@@ -48,9 +51,10 @@
     --mark: #2A3140;
     --loss: #9E2B25;
     --patina: #2E6E62;
-    --tick-pending: rgba(22, 26, 36, 0.06);
-    --tick-right: rgba(22, 26, 36, 0.12);
-    --tick-wrong: rgba(158, 43, 37, 0.22);
+    --tick-blank: 22, 26, 36;
+    --tick-pending: 22, 26, 36;
+    --tick-right: 22, 26, 36;
+    --tick-wrong: 22, 26, 36;
   }
 
   * { box-sizing: border-box; }
@@ -359,24 +363,28 @@
     ticks.recolour();
   });
 
-  // ---------- ambient tally field ----------
-  // A margin of tally marks, most of them pencil and undecided. One at a time
-  // they settle into ink or into red, then a wave from the left rubs them out
-  // and it starts over. The page's argument, running quietly behind it.
+  // ---------- the tally field ----------
+  // Every mark behind this page is a real bet. They are laid out in reading
+  // order, oldest first, exactly as they were written: struck through in red
+  // where the register lost, plain where it held, pencil where the answer has
+  // not arrived. Everything past the last bet is blank ruling — the rest of
+  // the book, not yet lived. A nib sweeps the page and re-inks what it passes.
+  var BLANK = 0, PENDING = 1, RIGHT = 2, WRONG = 3;
+
   var ticks = (function () {
     var cv = document.getElementById("field");
     var ctx = cv.getContext("2d");
-    var marks = [], cols = 0, rows = 0, dpr = 1;
-    var GAP_X = 34, GAP_Y = 30, H = 13, W = 2;
-    var palette = {};
+    var marks = [], dpr = 1, palette = {};
+    var GAP_X = 30, GAP_Y = 27, H = 12, W = 2;
+    var record = null;          // real states, oldest first
+    var nibX = -200, t0 = 0;
+    var SWEEP_MS = 14000, REACH = 120;
 
     function readPalette() {
       var s = getComputedStyle(document.documentElement);
-      palette = {
-        pending: s.getPropertyValue("--tick-pending").trim(),
-        right: s.getPropertyValue("--tick-right").trim(),
-        wrong: s.getPropertyValue("--tick-wrong").trim()
-      };
+      ["blank", "pending", "right", "wrong"].forEach(function (k) {
+        palette[k] = s.getPropertyValue("--tick-" + k).trim();
+      });
     }
 
     function build() {
@@ -387,82 +395,71 @@
       cv.style.height = innerHeight + "px";
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      cols = Math.ceil(innerWidth / GAP_X) + 1;
-      rows = Math.ceil(innerHeight / GAP_Y) + 1;
+      var cols = Math.ceil(innerWidth / GAP_X) + 1;
+      var rows = Math.ceil(innerHeight / GAP_Y) + 1;
       marks = [];
-      for (var c = 0; c < cols; c++) {
-        for (var r = 0; r < rows; r++) {
+      // Row-major, so index order is reading order and the record fills the
+      // page the way a hand would.
+      for (var r = 0; r < rows; r++) {
+        for (var c = 0; c < cols; c++) {
           marks.push({
-            x: c * GAP_X + 10,
-            y: r * GAP_Y + 8,
-            col: c,
-            state: 0,          // 0 pending, 1 right, 2 wrong
-            lean: (Math.random() - 0.5) * 0.22,
-            flash: 0
+            x: c * GAP_X + 9,
+            y: r * GAP_Y + 7,
+            state: BLANK,
+            lean: (Math.random() - 0.5) * 0.2,
+            phase: Math.random() * 6.28
           });
         }
       }
-      draw();
+      assign();
     }
 
-    function draw() {
+    function assign() {
+      for (var i = 0; i < marks.length; i++) {
+        marks[i].state = record && i < record.length ? record[i] : BLANK;
+      }
+    }
+
+    // A third of a real register is losses, so the field has to stay quiet or
+    // it stops being atmosphere and starts competing with the text.
+    var BASE = {};
+    BASE[BLANK] = 0.035;
+    BASE[PENDING] = 0.15;
+    BASE[RIGHT] = 0.12;
+    BASE[WRONG] = 0.09;
+
+    function draw(now) {
       ctx.clearRect(0, 0, innerWidth, innerHeight);
       for (var i = 0; i < marks.length; i++) {
         var m = marks[i];
+        var a = BASE[m.state];
+
+        // An unsettled bet is the only thing on the page still moving of its
+        // own accord — it has not been answered yet.
+        if (m.state === PENDING) a *= 0.62 + 0.55 * (0.5 + 0.5 * Math.sin(now / 780 + m.phase));
+
+        var d = Math.abs(m.x - nibX);
+        if (d < REACH) a += 0.20 * (1 - d / REACH) * (m.state === BLANK ? 0.5 : 1);
+
         ctx.save();
         ctx.translate(m.x, m.y);
         ctx.rotate(m.lean);
-        ctx.globalAlpha = 1 + m.flash * 2.2;
-        ctx.fillStyle = m.state === 0 ? palette.pending
-                      : m.state === 1 ? palette.right : palette.wrong;
+        var key = m.state === WRONG ? "wrong" : m.state === RIGHT ? "right"
+                : m.state === PENDING ? "pending" : "blank";
+        ctx.fillStyle = "rgba(" + palette[key] + "," + a.toFixed(3) + ")";
         ctx.fillRect(0, 0, W, H);
+        // A loss is struck out. Offset to the right rather than centred, or
+        // the two strokes read as a plus sign instead of a crossing-out.
+        if (m.state === WRONG) ctx.fillRect(-1, H * 0.56, 8, 1.1);
         ctx.restore();
       }
     }
 
-    var settled = 0, wiping = false, wipeCol = -1, last = 0, acc = 0;
-
     function step(now) {
-      if (!last) last = now;
-      var dt = now - last;
-      last = now;
-      acc += dt;
-
-      var changed = false;
-      for (var i = 0; i < marks.length; i++) {
-        if (marks[i].flash > 0) {
-          marks[i].flash = Math.max(0, marks[i].flash - dt / 900);
-          changed = true;
-        }
-      }
-
-      if (acc > 260) {
-        acc = 0;
-        if (!wiping) {
-          var pool = [];
-          for (var j = 0; j < marks.length; j++) if (marks[j].state === 0) pool.push(j);
-          if (pool.length) {
-            var pick = pool[(Math.random() * pool.length) | 0];
-            // Roughly two in nine go red, which is about what an honest
-            // register of near-coin-flips looks like.
-            marks[pick].state = Math.random() < 0.22 ? 2 : 1;
-            marks[pick].flash = 1;
-            settled++;
-            changed = true;
-          }
-          if (settled > marks.length * 0.62) { wiping = true; wipeCol = 0; }
-        } else {
-          for (var k = 0; k < marks.length; k++) {
-            if (marks[k].col === wipeCol && marks[k].state !== 0) {
-              marks[k].state = 0;
-              changed = true;
-            }
-          }
-          wipeCol++;
-          if (wipeCol > cols) { wiping = false; settled = 0; }
-        }
-      }
-      if (changed) draw();
+      if (!t0) t0 = now;
+      var p = ((now - t0) % SWEEP_MS) / SWEEP_MS;
+      nibX = p * (innerWidth + REACH * 2) - REACH;
+      draw(now);
       requestAnimationFrame(step);
     }
 
@@ -475,19 +472,28 @@
       resizeTimer = setTimeout(build, 200);
     });
 
-    if (!reduced) {
-      // A static field still reads as a register margin, so reduced motion
-      // simply gets the finished page rather than nothing at all.
-      requestAnimationFrame(step);
-    } else {
-      for (var i = 0; i < marks.length; i++) {
-        if (Math.random() < 0.55) marks[i].state = Math.random() < 0.22 ? 2 : 1;
-      }
-      draw();
-    }
+    if (!reduced) requestAnimationFrame(step);
+    else draw(0);
 
-    return { recolour: function () { readPalette(); draw(); } };
+    return {
+      recolour: function () { readPalette(); if (reduced) draw(0); },
+      setRecord: function (states) {
+        record = states;
+        assign();
+        if (reduced) draw(0);
+      }
+    };
   })();
+
+  // Turn the ledger into the sequence of marks behind the page.
+  function recordFromLedger(ledger) {
+    var states = [];
+    (ledger.grades || []).slice().sort(function (a, b) {
+      return a.made_on < b.made_on ? -1 : 1;
+    }).forEach(function (g) { states.push(g.correct ? RIGHT : WRONG); });
+    for (var i = 0; i < (ledger.totals.open || 0); i++) states.push(PENDING);
+    return states;
+  }
 
   // ---------- helpers ----------
   function pct(x, d) {
@@ -749,6 +755,7 @@
     renderHeadToHead(r[0]);
     renderPlot(r[0]);
     renderReceipts(r[0]);
+    ticks.setRecord(recordFromLedger(r[0]));
   }).catch(function (err) {
     document.getElementById("openBets").innerHTML =
       '<li class="blank"><b>The register could not be read.</b>' + err.message + "</li>";
