@@ -167,7 +167,9 @@
   .cell[data-state="future"] { background: transparent; }
   .key { display: flex; flex-wrap: wrap; gap: 1.1rem; align-items: center; margin-top: 1rem; font-family: "Azeret Mono", monospace; font-size: 0.62rem; color: var(--pencil); }
   .key i { display: inline-block; width: 11px; height: 11px; margin-right: 0.35rem; vertical-align: -1px; }
-  .ramp { width: 58px; background: linear-gradient(90deg, var(--loss), var(--mark)); }
+  /* Needs the `i` too: `.ramp` alone loses to `.key i` on specificity and the
+     gradient collapses to an 11px smudge wedged against the words. */
+  .key i.ramp { width: 62px; margin: 0 0.5rem; background: linear-gradient(90deg, var(--loss), var(--mark)); }
 
   /* ---------- tables ---------- */
   .scroll { overflow-x: auto; }
