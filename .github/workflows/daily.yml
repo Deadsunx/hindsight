@@ -27,6 +27,11 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
+        with:
+          # verify.py reads commit timestamps to prove each prediction predates
+          # its outcome; the default shallow clone has no history to read, and
+          # the check would silently skip itself rather than fail.
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -43,7 +48,12 @@ jobs:
           CITY_TZ: ${{ vars.CITY_TZ }}
         run: python predict.py
 
-      - name: Commit and push
+      # Committing before the audit is deliberate. The chronology check reads
+      # each archive day's commit timestamp, so today's file has to be in git
+      # for it to be checked at all — and committing is local, so nothing is
+      # published yet if the audit then fails.
+      - name: Commit locally
+        id: commit
         env:
           AUTHOR_NAME: ${{ vars.GIT_AUTHOR_NAME || 'Oumar Tamba Tirera' }}
           AUTHOR_EMAIL: ${{ vars.GIT_AUTHOR_EMAIL || 'oumartambatirera@gmail.com' }}
@@ -55,10 +65,19 @@ jobs:
           git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Predictions and grading: $(date -u +'%Y-%m-%d')"
-            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # The gate. A record that does not audit never reaches the public repo.
+      - name: Audit before publishing
+        run: python verify.py
+
+      - name: Push
+        if: steps.commit.outputs.changed == 'true'
+        run: git push
 
       - name: Report failure as an issue
         if: failure()
@@ -74,6 +93,10 @@ jobs:
               ``,
               `A single failed run does not break the streak on its own — the backup run may still succeed.`,
               `Bets that never get settled are counted as **void** in the ledger, not as wins.`,
+              ``,
+              `If the **Audit before publishing** step is the one that failed, nothing was pushed:`,
+              `the record did not reconcile, so it was withheld rather than published. Run`,
+              `\`python verify.py\` locally for the specific mismatch.`,
             ].join("\n");
             // Avoid duplicate open issues for the same failure.
             const open = await github.rest.issues.listForRepo({

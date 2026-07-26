@@ -1,10 +1,10 @@
 {
   "date": "2026-07-26",
-  "fetched_at": "2026-07-26T11:23:49.541522+00:00",
+  "fetched_at": "2026-07-26T11:41:28.708505+00:00",
   "observations": {
     "btc": {
-      "usd": 64470,
-      "usd_24h_change": 0.71
+      "usd": 64453,
+      "usd_24h_change": 0.69
     },
     "kp": {
       "max_kp": 2.0,
@@ -13,7 +13,7 @@
     },
     "quakes": {
       "max_mag": 5.8,
-      "count": 199,
+      "count": 196,
       "strongest_place": "99 km SE of Atka, Alaska"
     },
     "wiki": {
@@ -29,12 +29,12 @@
         49056194,
         49055169,
         49047453,
+        49015286,
         49054107,
         49051361,
         49052912,
-        49054010,
         49053375,
-        49034777
+        49054010
       ]
     },
     "weather": {
@@ -56,8 +56,8 @@
       "call": true,
       "confidence": 0.527,
       "basis": {
-        "today_usd": 64470,
-        "change_24h": 0.71
+        "today_usd": 64453,
+        "change_24h": 0.69
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
