@@ -7,7 +7,8 @@ answers **six falsifiable questions** about the next 24 hours — twice. Once wi
 a hand-written rule, once with a logistic regression trained only on bets that
 have already settled. Then it commits them and grades whatever has come due.
 
-**🌐 Live page → https://deadsunx.github.io/pas-vraiment-secret/**
+**🌐 Live page → https://pas-vraiment-secret.vercel.app/**
+_(also mirrored at [deadsunx.github.io/pas-vraiment-secret](https://deadsunx.github.io/pas-vraiment-secret/))_
 
 ## Why this is hard to fake
 
