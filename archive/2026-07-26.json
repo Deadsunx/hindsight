@@ -1,10 +1,10 @@
 {
   "date": "2026-07-26",
-  "fetched_at": "2026-07-26T11:02:30.846966+00:00",
+  "fetched_at": "2026-07-26T11:03:00.617453+00:00",
   "observations": {
     "btc": {
-      "usd": 64472,
-      "usd_24h_change": 0.75
+      "usd": 64469,
+      "usd_24h_change": 0.73
     },
     "kp": {
       "max_kp": 2.0,
@@ -54,8 +54,8 @@
       "call": true,
       "confidence": 0.527,
       "basis": {
-        "today_usd": 64472,
-        "change_24h": 0.75
+        "today_usd": 64469,
+        "change_24h": 0.73
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"

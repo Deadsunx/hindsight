@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T11:02:42.360384+00:00",
+  "updated": "2026-07-26T11:03:01.750100+00:00",
   "totals": {
     "graded": 0,
     "correct": 0,
@@ -93,8 +93,8 @@
       "call": true,
       "confidence": 0.527,
       "basis": {
-        "today_usd": 64472,
-        "change_24h": 0.75
+        "today_usd": 64469,
+        "change_24h": 0.73
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
