@@ -3,8 +3,9 @@
 A machine that guesses tomorrow, in public, and keeps score.
 
 Every day a scheduled [GitHub Actions](https://docs.github.com/actions) workflow
-places **six falsifiable bets** on the next 24 hours, commits them, and grades
-the ones that have come due.
+answers **six falsifiable questions** about the next 24 hours — twice. Once with
+a hand-written rule, once with a logistic regression trained only on bets that
+have already settled. Then it commits them and grades whatever has come due.
 
 **🌐 Live page → https://deadsunx.github.io/pas-vraiment-secret/**
 
@@ -34,6 +35,36 @@ weather service**, which nobody publishes.
 
 Some of these are close to coin flips and are expected to prove it. Nothing is
 tuned after the fact.
+
+## The model, and why it can't cheat
+
+Each question is also answered by a logistic regression in [`learn.py`](learn.py)
+— pure Python, no dependencies. Two properties make its record trustworthy, and
+both are enforced by tests rather than by good intentions:
+
+1. **Walk-forward only.** On any run it trains solely on bets that have already
+   settled, then predicts today. It never sees an outcome it is being asked to
+   predict.
+2. **Features are blind to the future.** `features(days, date)` reads nothing
+   after `date`. The test truncates the archive at `date`, corrupts every later
+   day, and asserts the features come out byte-identical.
+
+That second test earned its keep immediately: it caught the forecast-error
+feature reading two days ahead, because a forecast made on day *D* is only
+settled on *D+2*. Undetected, that leak would have silently inflated the
+model's apparent skill.
+
+The model stays out entirely until **25 settled examples** exist, and never
+claims more than **95%** confidence. If a family's history is one-sided — as
+`hn_fade` tends to be — it falls back to Laplace smoothing instead of letting
+gradient descent chase an infinite weight into false certainty.
+
+**The rules are never retired.** They are the control. Comparing the two on
+*shared days only* — the days both actually bet — is the only way to show
+whether the model is earning its complexity, and often the honest answer is
+"barely". A model that beats a five-line heuristic by 0.02 Brier is a more
+interesting public result than one claiming 90% accuracy with nothing to
+compare against.
 
 ## How it works
 
@@ -65,7 +96,9 @@ run rather than accumulated. A bad day can never corrupt the ledger, and
 
 | Path | What |
 | ---- | ---- |
-| `predict.py` | the whole engine — observe, predict, grade |
+| `predict.py` | the engine — observe, predict, grade |
+| `learn.py` | logistic regression + walk-forward features |
+| `test_predict.py` / `test_learn.py` | offline tests, no network |
 | `archive/YYYY-MM-DD.json` | one day: observations + the bets placed that day |
 | `archive/ledger.json` | the full scorecard the page reads |
 | `archive/index.json` | per-day summary for the calendar |
@@ -82,7 +115,7 @@ Only the Python standard library is used — nothing to install, no API keys.
 Run the tests (offline, no network):
 
 ```bash
-python -m unittest test_predict -v
+python -m unittest test_predict test_learn -v
 ```
 
 ## Move the forecast bet to your city

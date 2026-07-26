@@ -297,6 +297,8 @@ class TestPredictors(unittest.TestCase):
             "weather": {"forecast_next": 30.0, "forecast_next_date": "2026-01-02"},
         }
         for pid, spec in predict.PREDICTORS.items():
+            if spec["variant"] != "rule":
+                continue  # models need settled history; covered in TestLearning
             result = spec["make"](obs, {}, "2026-01-01")
             self.assertIsNotNone(result, pid)
             _, confidence, _ = result
@@ -306,6 +308,29 @@ class TestPredictors(unittest.TestCase):
     def test_predictors_return_none_without_data(self):
         for pid, spec in predict.PREDICTORS.items():
             self.assertIsNone(spec["make"]({}, {}, "2026-01-01"), pid)
+
+    def test_every_family_has_both_a_rule_and_a_model(self):
+        families = {}
+        for spec in predict.PREDICTORS.values():
+            families.setdefault(spec["family"], set()).add(spec["variant"])
+        self.assertEqual(len(families), 6)
+        for family, variants in families.items():
+            self.assertEqual(variants, {"rule", "model"}, family)
+
+    def test_variants_share_a_resolver(self):
+        """Both variants answer the same question, so one settles both."""
+        for family in [s["family"] for s in predict.PREDICTORS.values()
+                       if s["variant"] == "rule"]:
+            self.assertIs(
+                predict.PREDICTORS[family]["resolve"],
+                predict.PREDICTORS[f"{family}_ml"]["resolve"],
+                family,
+            )
+            self.assertEqual(
+                predict.PREDICTORS[family]["horizon"],
+                predict.PREDICTORS[f"{family}_ml"]["horizon"],
+                family,
+            )
 
     def test_momentum_follows_the_move(self):
         up = predict.make_btc({"btc": {"usd": 1, "usd_24h_change": 2.0}}, {}, "2026-01-01")

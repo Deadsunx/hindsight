@@ -1,10 +1,10 @@
 {
   "date": "2026-07-26",
-  "fetched_at": "2026-07-26T11:03:00.617453+00:00",
+  "fetched_at": "2026-07-26T11:23:49.541522+00:00",
   "observations": {
     "btc": {
-      "usd": 64469,
-      "usd_24h_change": 0.73
+      "usd": 64470,
+      "usd_24h_change": 0.71
     },
     "kp": {
       "max_kp": 2.0,
@@ -13,7 +13,7 @@
     },
     "quakes": {
       "max_mag": 5.8,
-      "count": 200,
+      "count": 199,
       "strongest_place": "99 km SE of Atka, Alaska"
     },
     "wiki": {
@@ -27,14 +27,14 @@
       "top10": [
         49056112,
         49056194,
-        49047453,
         49055169,
+        49047453,
         49054107,
         49051361,
         49052912,
-        49053375,
         49054010,
-        49005197
+        49053375,
+        49034777
       ]
     },
     "weather": {
@@ -51,11 +51,13 @@
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
       "call": true,
       "confidence": 0.527,
       "basis": {
-        "today_usd": 64469,
-        "change_24h": 0.73
+        "today_usd": 64470,
+        "change_24h": 0.71
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
@@ -64,6 +66,8 @@
       "id": "kp_storm",
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
       "call": false,
       "confidence": 0.78,
       "basis": {
@@ -76,6 +80,8 @@
       "id": "quake_m5",
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
       "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
       "call": true,
       "confidence": 0.85,
       "basis": {
@@ -88,6 +94,8 @@
       "id": "wiki_hold",
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
       "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
       "call": false,
       "confidence": 0.62,
       "basis": {
@@ -100,6 +108,8 @@
       "id": "hn_fade",
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
       "call": true,
       "confidence": 0.88,
       "basis": {
@@ -113,6 +123,8 @@
       "id": "forecast_hit",
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
       "call": true,
       "confidence": 0.8,
       "basis": {

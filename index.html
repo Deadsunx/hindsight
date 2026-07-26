@@ -222,6 +222,17 @@
   .verdict.hit { color: var(--hit); }
   .verdict.miss { color: var(--miss); }
 
+  /* ---------- head-to-head ---------- */
+  /* Narrower than this and the nowrap result cells shove Model off-screen;
+     the .scroller wrapper takes over instead of silently clipping. */
+  .h2h { min-width: 610px; }
+  .h2h td.side { white-space: nowrap; font-family: "IBM Plex Mono", monospace; }
+  .h2h .win { color: var(--hit); font-weight: 600; }
+  .h2h .lose { color: var(--dim); }
+  .h2h .tie { color: var(--gold); }
+  .h2h .cold { color: var(--dimmer); font-style: italic; font-family: "Inter", sans-serif; }
+  .h2h .brier { font-size: .78rem; color: var(--dimmer); display: block; }
+
   .scroller { overflow-x: auto; }
   .empty {
     border: 1px dashed var(--line); border-radius: 12px; padding: 2rem 1.4rem;
@@ -263,8 +274,9 @@
     <div class="eyebrow">An autonomous prediction ledger</div>
     <h1>Hind<em>sight</em></h1>
     <p class="lede">
-      Every day a script places six falsifiable bets on tomorrow, <strong>commits them to a
-      public repo before the outcome exists</strong>, and grades itself when the truth arrives.
+      Every day a script answers six questions about tomorrow — twice, once by hand-written rule
+      and once by a model that trained only on bets already settled. It <strong>commits them to a
+      public repo before the outcome exists</strong>, then grades itself when the truth arrives.
       It cannot quietly delete the ones it got wrong — the timestamps are the receipt.
     </p>
   </header>
@@ -313,6 +325,23 @@
       <span>all wrong<i class="ramp"></i>all right</span>
       <span><i style="background:var(--gold-soft);border:1px solid var(--gold)"></i>still open</span>
       <span><i style="background:color-mix(in srgb, var(--chalk) 6%, transparent)"></i>no run</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Five lines of arithmetic versus gradient descent</div>
+    <h2>Rules vs models</h2>
+    <p class="sub">
+      Every question is answered twice a day — once by a hand-written rule, once by a logistic
+      regression trained only on bets that have already settled. The rule is the control. Without
+      one there is no way to show whether the model is earning its complexity, so it never gets
+      retired no matter how it does. Compared on <strong>shared days only</strong>: the model
+      cannot bet until it has 25 settled examples, and counting the days it sat out would flatter
+      whichever got the easier ones.
+    </p>
+    <div class="scroller" id="headToHead"></div>
+    <div class="legend" style="margin-top:1rem">
+      <span>Brier decides the winner — accuracy ignores how confidently each one was wrong.</span>
     </div>
   </section>
 
@@ -593,6 +622,60 @@
     host.innerHTML = parts.join("");
   }
 
+  // ---------- head to head ----------
+  function renderHeadToHead(ledger) {
+    var host = document.getElementById("headToHead");
+    var families = ledger.head_to_head || {};
+    var keys = Object.keys(families);
+
+    if (!keys.length) {
+      host.innerHTML = '<div class="empty"><b>Nothing to compare yet.</b>' +
+        "The models need 25 settled bets before they are allowed to place one.</div>";
+      return;
+    }
+    // Warm families first, sorted by how much the model is winning by.
+    keys.sort(function (a, b) {
+      var A = families[a], B = families[b];
+      if (!A.shared_days !== !B.shared_days) return A.shared_days ? -1 : 1;
+      if (!A.shared_days) return 0;
+      return (A.rule_brier - A.model_brier) < (B.rule_brier - B.model_brier) ? 1 : -1;
+    });
+
+    // No separate "days" column — both cells already carry it as the
+    // denominator, and the width is better spent on the model result.
+    var html = ["<table class='tbl h2h'><thead><tr><th>Question</th>" +
+      "<th>Rule</th><th>Model</th><th>Winner</th></tr></thead><tbody>"];
+
+    keys.forEach(function (key) {
+      var f = families[key];
+      if (!f.shared_days) {
+        html.push("<tr><td>" + f.question +
+          '</td><td class="cold" colspan="3">model still warming up</td></tr>');
+        return;
+      }
+      // Lower Brier wins. Accuracy is shown but deliberately not decisive.
+      var diff = f.rule_brier - f.model_brier;
+      var modelWins = diff > 0.001, ruleWins = diff < -0.001;
+      var cell = function (side, wins) {
+        return '<td class="side ' + (wins ? "win" : "lose") + '">' +
+          f[side + "_correct"] + " / " + f.shared_days +
+          " (" + pct(f[side + "_accuracy"]) + ")" +
+          '<span class="brier">Brier ' + f[side + "_brier"].toFixed(3) + "</span></td>";
+      };
+      var verdict = modelWins
+        ? '<span class="win">model</span>'
+        : ruleWins ? '<span class="lose" style="color:var(--chalk)">rule</span>'
+                   : '<span class="tie">too close</span>';
+      html.push(
+        "<tr><td>" + f.question + "</td>" +
+        cell("rule", ruleWins) + cell("model", modelWins) +
+        "<td>" + verdict + "</td></tr>"
+      );
+    });
+    html.push("</tbody></table>");
+    host.innerHTML = html.join("");
+  }
+
   // ---------- leaderboard ----------
   function renderLeaderboard(ledger) {
     var table = document.getElementById("leaderboard");
@@ -654,6 +737,7 @@
     renderStanding(ledger);
     renderOpen(ledger);
     renderCalendar(index);
+    renderHeadToHead(ledger);
     renderCalibration(ledger);
     renderLeaderboard(ledger);
     renderReceipts(ledger);

@@ -246,7 +246,7 @@ def _rate(days: dict, test, default: float, minimum: int = 5) -> float:
 #   the data needed to settle it never arrived (void).
 
 
-def make_btc(obs, days, today):
+def make_btc(obs, days, today, grades=()):
     btc = obs.get("btc")
     if not btc or btc.get("usd") is None:
         return None
@@ -268,7 +268,7 @@ def resolve_btc(pred, days):
     return after["usd"] > before["usd"]
 
 
-def make_kp(obs, days, today):
+def make_kp(obs, days, today, grades=()):
     kp = obs.get("kp")
     if not kp or kp.get("max_kp") is None:
         return None
@@ -285,7 +285,7 @@ def resolve_kp(pred, days):
     return after["max_kp"] > 3
 
 
-def make_quake(obs, days, today):
+def make_quake(obs, days, today, grades=()):
     if not obs.get("quakes"):
         return None
     rate = _rate(
@@ -309,7 +309,7 @@ def resolve_quake(pred, days):
     return after["max_mag"] >= 5.0
 
 
-def make_wiki(obs, days, today):
+def make_wiki(obs, days, today, grades=()):
     wiki = obs.get("wiki")
     if not wiki or not wiki.get("top"):
         return None
@@ -329,7 +329,7 @@ def resolve_wiki(pred, days):
     return after["top"] == before["top"]
 
 
-def make_hn(obs, days, today):
+def make_hn(obs, days, today, grades=()):
     hn = obs.get("hn")
     if not hn or hn.get("top_id") is None:
         return None
@@ -345,7 +345,7 @@ def resolve_hn(pred, days):
     return pred["basis"]["top_id"] not in after["top10"]
 
 
-def make_forecast(obs, days, today):
+def make_forecast(obs, days, today, grades=()):
     weather = obs.get("weather")
     if not weather or weather.get("forecast_next") is None:
         return None
@@ -427,6 +427,55 @@ PREDICTORS = {
     },
 }
 
+# Every rule above is the "rule" variant of its own family.
+for _family, _spec in PREDICTORS.items():
+    _spec["family"] = _family
+    _spec["variant"] = "rule"
+
+
+def _ml(family: str):
+    """Build the model variant of a family: same question, learned answer.
+
+    It borrows the rule's `basis` so the shared resolver settles both variants
+    identically — the two are answering the exact same question, and the only
+    thing that differs is how the call was reached.
+    """
+
+    def make(obs, days, today, grades=()):
+        import learn  # lazy: learn imports predict, so not at module load
+
+        base = PREDICTORS[family]["make"](obs, days, today)
+        if base is None:
+            return None  # no data today; the rule sat this one out too
+        _, _, basis = base
+
+        result = learn.probability(family, days, grades, today)
+        if result is None:
+            return None  # not enough settled history to train on yet
+        p_event, detail = result
+        call, confidence = learn.call_and_confidence(p_event)
+
+        basis = dict(basis)
+        basis["model"] = {"p_event": round(p_event, 4), **detail}
+        return call, confidence, basis
+
+    return make
+
+
+# Each family runs twice a day: once by rule, once by model, on the same
+# question and settled by the same resolver. The rule is the control — without
+# it there is no way to show whether the model is earning its complexity.
+for _family, _spec in list(PREDICTORS.items()):
+    PREDICTORS[f"{_family}_ml"] = {
+        "question": _spec["question"],
+        "rule": "logistic regression",
+        "horizon": _spec["horizon"],
+        "family": _family,
+        "variant": "model",
+        "make": _ml(_family),
+        "resolve": _spec["resolve"],
+    }
+
 
 # --------------------------------------------------------------------------
 # the three phases
@@ -445,11 +494,17 @@ def collect_observations() -> dict:
     return out
 
 
-def make_predictions(obs: dict, days: dict, today: str) -> list:
+def make_predictions(obs: dict, days: dict, today: str, grades=()) -> list:
+    """Place today's bets.
+
+    `grades` is the settled record so far — the model variants train on it.
+    It never contains anything resolving today or later, which is what keeps
+    the models walk-forward.
+    """
     preds = []
     for pid, spec in PREDICTORS.items():
         try:
-            result = spec["make"](obs, days, today)
+            result = spec["make"](obs, days, today, grades)
         except Exception as err:
             print(f"[fail] predict {pid}: {err}")
             continue
@@ -462,6 +517,8 @@ def make_predictions(obs: dict, days: dict, today: str) -> list:
                 "id": pid,
                 "question": spec["question"],
                 "rule": spec["rule"],
+                "family": spec["family"],
+                "variant": spec["variant"],
                 "call": bool(call),
                 "confidence": float(confidence),
                 "basis": basis,
@@ -496,6 +553,8 @@ def grade_all(days: dict) -> list:
                     "id": pred["id"],
                     "question": pred.get("question"),
                     "rule": pred.get("rule"),
+                    "family": spec["family"],
+                    "variant": spec["variant"],
                     "made_on": pred["made_on"],
                     "resolve_on": pred["resolve_on"],
                     "call": pred["call"],
@@ -536,6 +595,8 @@ def build_ledger(days: dict, grades: list, today: str) -> dict:
         by_predictor[pid] = {
             "question": spec["question"],
             "rule": spec["rule"],
+            "family": spec["family"],
+            "variant": spec["variant"],
             "graded": len(mine),
             "correct": hits,
             "accuracy": round(hits / len(mine), 4) if mine else None,
@@ -572,6 +633,7 @@ def build_ledger(days: dict, grades: list, today: str) -> dict:
 
     return {
         "updated": datetime.now(timezone.utc).isoformat(),
+        "head_to_head": build_head_to_head(grades),
         "totals": {
             "graded": graded,
             "correct": correct,
@@ -586,6 +648,52 @@ def build_ledger(days: dict, grades: list, today: str) -> dict:
         "open_bets": open_bets,
         "grades": grades,
     }
+
+
+def build_head_to_head(grades: list) -> dict:
+    """Rule versus model, per family, on **shared days only**.
+
+    The model cannot bet until it has 25 settled examples, so it will always
+    have fewer bets than the rule. Comparing their lifetime accuracies would
+    quietly compare different sets of days and flatter whichever got the easier
+    ones. Only days where both placed a bet count here.
+    """
+    paired: dict = {}
+    for grade in grades:
+        family = grade.get("family")
+        variant = grade.get("variant")
+        if not family or not variant:
+            continue  # a prediction archived before variants existed
+        paired.setdefault(family, {}).setdefault(grade["made_on"], {})[variant] = grade
+
+    out = {}
+    for family, dates in paired.items():
+        both = [p for p in dates.values() if "rule" in p and "model" in p]
+        rule_hits = sum(1 for p in both if p["rule"]["correct"])
+        model_hits = sum(1 for p in both if p["model"]["correct"])
+        # Brier on the same shared days, which is the fairer comparison of the
+        # two: accuracy ignores how confidently each one was wrong.
+        def brier(side):
+            if not both:
+                return None
+            total = 0.0
+            for pair in both:
+                g = pair[side]
+                p_event = g["confidence"] if g["call"] else 1 - g["confidence"]
+                total += (p_event - (1.0 if g["actual"] else 0.0)) ** 2
+            return round(total / len(both), 4)
+
+        out[family] = {
+            "question": PREDICTORS[family]["question"],
+            "shared_days": len(both),
+            "rule_correct": rule_hits,
+            "model_correct": model_hits,
+            "rule_accuracy": round(rule_hits / len(both), 4) if both else None,
+            "model_accuracy": round(model_hits / len(both), 4) if both else None,
+            "rule_brier": brier("rule"),
+            "model_brier": brier("model"),
+        }
+    return out
 
 
 def build_index(days: dict, grades: list) -> list:
@@ -703,8 +811,16 @@ def main() -> None:
     print("-- observe --")
     observations = collect_observations()
 
+    # Today's observations are the truth that settles yesterday's bets, so
+    # grading happens *before* predicting. That ordering is what makes the
+    # models walk-forward: they train on this settled record, which by
+    # construction contains nothing that resolves today or later.
+    print("-- grade --")
+    days[today] = {"date": today, "observations": observations, "predictions": []}
+    grades = grade_all(days)
+
     print("-- predict --")
-    predictions = make_predictions(observations, days, today)
+    predictions = make_predictions(observations, days, today, grades)
 
     snapshot = {
         "date": today,
@@ -715,7 +831,8 @@ def main() -> None:
     _write(ARCHIVE / f"{today}.json", snapshot)
     days[today] = snapshot
 
-    print("-- grade --")
+    # Recomputed over the finished archive; today's fresh bets cannot settle
+    # yet, so this matches the grading above and stays a pure function of it.
     grades = grade_all(days)
     ledger = build_ledger(days, grades, today)
     totals = ledger["totals"]
