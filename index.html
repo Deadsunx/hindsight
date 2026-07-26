@@ -4,404 +4,339 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script>try{var t=localStorage.getItem('hs-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
-<title>Hindsight — a machine that guesses tomorrow and keeps score</title>
-<meta name="description" content="Every day an autonomous script places six falsifiable bets on tomorrow, commits them to a public repo before the outcome exists, and grades itself when the truth arrives. The git history is the receipt." />
-
-<!-- Favicon: a die on near-black -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0F0E'/%3E%3Ccircle cx='10' cy='10' r='2.6' fill='%2352C08A'/%3E%3Ccircle cx='22' cy='22' r='2.6' fill='%23D96A5B'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%23D9B26A'/%3E%3C/svg%3E" />
+<title>Hindsight — a register of what a machine expected</title>
+<meta name="description" content="Twice a day a script writes down what it expects of tomorrow, seals it in a public repository before the outcome exists, and marks its own losses in red when the truth arrives." />
 
 <link rel="canonical" href="https://pas-vraiment-secret.vercel.app/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2310131C'/%3E%3Crect x='7' y='6' width='2' height='20' fill='%23E6E4DC'/%3E%3Crect x='13' y='6' width='2' height='20' fill='%23E6E4DC'/%3E%3Crect x='19' y='6' width='2' height='20' fill='%23C2453C'/%3E%3Crect x='25' y='6' width='2' height='20' fill='%23E6E4DC'/%3E%3C/svg%3E" />
+
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pas-vraiment-secret.vercel.app/" />
 <meta property="og:site_name" content="Hindsight" />
-<meta property="og:title" content="Hindsight — a machine that guesses tomorrow and keeps score" />
-<meta property="og:description" content="Six falsifiable bets a day, committed before the outcome exists. The git timestamps are the proof." />
+<meta property="og:title" content="Hindsight — a register of what a machine expected" />
+<meta property="og:description" content="Sealed before the outcome exists. Losses marked in red, in public, by the thing that made them." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   :root {
-    --void: #0B0F0E;
-    --slate: #101614;
-    --panel: #141C19;
-    --panel-2: #18211D;
-    --line: rgba(130, 168, 148, 0.18);
-    --line-soft: rgba(228, 232, 227, 0.08);
-    --chalk: #E4E8E3;
-    --dim: #8A968F;
-    --dimmer: #5C665F;
-    --hit: #52C08A;
-    --hit-soft: rgba(82, 192, 138, 0.16);
-    --miss: #D96A5B;
-    --miss-soft: rgba(217, 106, 91, 0.16);
-    --gold: #D9B26A;
-    --gold-soft: rgba(217, 178, 106, 0.14);
-    --shadow: 0 28px 70px -40px rgba(0,0,0,0.95);
+    --ground: #10131C;
+    --band: #151A26;
+    --raised: #171D2A;
+    --rule: rgba(230, 228, 220, 0.14);
+    --rule-soft: rgba(230, 228, 220, 0.07);
+    --ink: #E6E4DC;
+    --ink-dim: #939AA6;
+    --pencil: #6E7382;
+    --mark: #A7ADA6;
+    --loss: #C2453C;
+    --patina: #4E9A8C;
+    --tick-pending: rgba(230, 228, 220, 0.05);
+    --tick-right: rgba(230, 228, 220, 0.10);
+    --tick-wrong: rgba(194, 69, 60, 0.20);
   }
   :root[data-theme="light"] {
-    --void: #EDEBE3;
-    --slate: #F5F3EC;
-    --panel: #FBFAF4;
-    --panel-2: #F2F0E7;
-    --line: rgba(60, 92, 76, 0.22);
-    --line-soft: rgba(26, 33, 29, 0.10);
-    --chalk: #1A211D;
-    --dim: #5F6A63;
-    --dimmer: #8B948D;
-    --hit: #1F8355;
-    --hit-soft: rgba(31, 131, 85, 0.14);
-    --miss: #B14434;
-    --miss-soft: rgba(177, 68, 52, 0.13);
-    --gold: #8C6A20;
-    --gold-soft: rgba(140, 106, 32, 0.13);
-    --shadow: 0 22px 55px -42px rgba(30, 50, 40, 0.45);
+    --ground: #E3E5DF;
+    --band: #DBDED7;
+    --raised: #EDEEE9;
+    --rule: rgba(22, 26, 36, 0.20);
+    --rule-soft: rgba(22, 26, 36, 0.09);
+    --ink: #161A24;
+    --ink-dim: #5A616D;
+    --pencil: #878D99;
+    --mark: #2A3140;
+    --loss: #9E2B25;
+    --patina: #2E6E62;
+    --tick-pending: rgba(22, 26, 36, 0.06);
+    --tick-right: rgba(22, 26, 36, 0.12);
+    --tick-wrong: rgba(158, 43, 37, 0.22);
   }
 
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: var(--void);
-    color: var(--chalk);
-    font-family: "Inter", system-ui, sans-serif;
-    font-size: 16.5px;
-    line-height: 1.65;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Karla", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.66;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    transition: background .4s ease, color .4s ease;
   }
-  .backdrop {
-    position: fixed; inset: 0; z-index: -1; transition: background .5s ease;
-    background:
-      radial-gradient(ellipse at 82% -8%, rgba(82,192,138,0.10), transparent 55%),
-      radial-gradient(ellipse at 6% 104%, rgba(217,106,91,0.09), transparent 52%);
-  }
-  .wrap { max-width: 1020px; margin: 0 auto; padding: clamp(1.2rem, 4vw, 3rem); }
-  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  #field { position: fixed; inset: 0; z-index: 0; pointer-events: none; display: block; }
+  .sheet { position: relative; z-index: 1; max-width: 940px; margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2.6rem) 4rem; }
+
+  .mono { font-family: "Azeret Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   a { color: inherit; }
-  .eyebrow {
-    font-family: "IBM Plex Mono", monospace; font-size: .68rem;
-    letter-spacing: .30em; text-transform: uppercase; color: var(--gold);
+  :focus-visible { outline: 2px solid var(--patina); outline-offset: 3px; }
+
+  .label {
+    font-family: "Azeret Mono", monospace; font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--pencil);
   }
 
+  /* Sits in the folio line rather than pinned: a fixed control in the corner
+     collides with the seal stamp at the top of the slip. */
   .theme-toggle {
-    position: fixed; top: 1rem; right: 1rem; z-index: 10;
-    font-family: "IBM Plex Mono", monospace; font-size: .66rem;
-    letter-spacing: .12em; text-transform: uppercase; color: var(--gold);
-    background: color-mix(in srgb, var(--panel) 84%, transparent);
-    border: 1px solid var(--line); border-radius: 999px;
-    padding: .45rem .85rem; cursor: pointer; backdrop-filter: blur(6px);
-    transition: color .2s, border-color .2s;
+    font-family: "Azeret Mono", monospace; font-size: 0.6rem; font-weight: 500;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--pencil);
+    background: none; border: 0; border-bottom: 1px solid var(--rule);
+    padding: 0 0 2px; cursor: pointer;
   }
-  .theme-toggle:hover { color: var(--chalk); border-color: var(--gold); }
+  .theme-toggle:hover { color: var(--ink); border-color: var(--ink); }
+  .folio-end { display: flex; gap: 1.1rem; align-items: baseline; }
 
   /* ---------- masthead ---------- */
-  .masthead { padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(1.5rem, 4vw, 2.5rem); }
+  .masthead { padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(1.6rem, 4vw, 2.4rem); }
+  .folio { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.6rem; }
   h1 {
-    font-family: "Instrument Serif", Georgia, serif; font-weight: 400;
-    font-size: clamp(3.2rem, 11vw, 6.4rem); line-height: .92;
-    margin: .5rem 0 .6rem; letter-spacing: -.02em;
+    font-family: "Bodoni Moda", Didot, serif; font-weight: 400;
+    font-size: clamp(3.4rem, 12vw, 7rem); line-height: 0.94;
+    margin: 1.4rem 0 0; letter-spacing: -0.015em;
   }
-  h1 em { font-style: italic; color: var(--gold); }
-  .lede { max-width: 46ch; color: var(--dim); font-size: 1.06rem; }
-  .lede strong { color: var(--chalk); font-weight: 500; }
+  h1 em { font-style: italic; }
+  .lede {
+    max-width: 44ch; margin: 1.1rem 0 0; color: var(--ink-dim); font-size: 1.05rem;
+  }
+  .lede b { color: var(--ink); font-weight: 600; }
 
-  /* ---------- the standing ---------- */
+  /* ---------- the slip (hero) ---------- */
+  .slip { border: 1px solid var(--rule); background: var(--raised); margin-top: clamp(1.8rem, 5vw, 2.8rem); }
+  .slip-head {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap;
+    padding: 0.85rem clamp(0.9rem, 3vw, 1.4rem); border-bottom: 1px solid var(--rule);
+  }
+  .entries { list-style: none; margin: 0; padding: 0; }
+  .entry {
+    display: grid; grid-template-columns: 3.2rem 1fr 8.5rem; gap: 0 1.1rem; align-items: baseline;
+    padding: 0.7rem clamp(0.9rem, 3vw, 1.4rem); border-bottom: 1px solid var(--rule-soft);
+  }
+  /* Banded per question, not per row: a rule and its model are two lines of
+     one entry, the way a ledger runs a continuation line under its own. */
+  .entry.band { background: var(--band); }
+  .entry.pairs { border-bottom-color: transparent; }
+  .entries .entry:last-child { border-bottom: 0; }
+  .entry-head { padding-top: 0.55rem; padding-bottom: 0.55rem; border-bottom: 1px solid var(--rule); }
+  .entry-call { font-family: "Azeret Mono", monospace; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; color: var(--ink); }
+  .entry-q { font-size: 0.95rem; }
+  /* The figure leads and the rule name sits under it. A single nowrap line
+     cannot hold "trust the forecaster" without spilling out of the cell. */
+  .entry-by { font-family: "Azeret Mono", monospace; text-align: right; }
+  .entry-conf { display: block; font-size: 0.78rem; color: var(--ink); }
+  .entry-why { display: block; font-size: 0.62rem; line-height: 1.45; color: var(--pencil); }
+  .entry-by.model .entry-why { color: var(--patina); }
+  .slip-foot { padding: 0.8rem clamp(0.9rem, 3vw, 1.4rem); border-top: 1px solid var(--rule); }
+  .slip-foot a { color: var(--ink-dim); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .slip-foot a:hover { color: var(--ink); border-color: var(--ink); }
+
+  /* ---------- standing strip ---------- */
   .standing {
-    margin: clamp(1.8rem, 5vw, 3rem) 0;
-    border: 1px solid var(--line); border-radius: 16px;
-    background: linear-gradient(160deg, var(--panel), var(--slate));
-    box-shadow: var(--shadow); overflow: hidden;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+    border: 1px solid var(--rule); border-bottom: 0; margin-top: clamp(2.4rem, 6vw, 3.6rem);
   }
-  .standing-main {
-    padding: clamp(1.4rem, 4vw, 2.4rem);
-    display: flex; flex-wrap: wrap; gap: clamp(1rem, 4vw, 2.5rem); align-items: center;
-  }
-  .bignum {
-    font-family: "Instrument Serif", serif; font-size: clamp(3.4rem, 12vw, 5.6rem);
-    line-height: 1; letter-spacing: -.02em;
-  }
-  .bignum.pending { color: var(--dimmer); }
-  .bignum-label { color: var(--dim); font-size: .9rem; max-width: 34ch; }
-  .stats { display: flex; flex-wrap: wrap; gap: 1.6rem; margin-left: auto; }
-  .stat-v { font-family: "IBM Plex Mono", monospace; font-size: 1.35rem; font-weight: 500; }
-  .stat-k {
-    font-family: "IBM Plex Mono", monospace; font-size: .62rem;
-    letter-spacing: .18em; text-transform: uppercase; color: var(--dimmer);
-  }
-  .baseline {
-    border-top: 1px solid var(--line-soft); padding: .85rem clamp(1.4rem, 4vw, 2.4rem);
-    font-size: .82rem; color: var(--dim); background: color-mix(in srgb, var(--void) 30%, transparent);
-  }
-  .baseline b { color: var(--chalk); font-weight: 500; }
+  .fig { padding: 0.9rem 1rem; border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule-soft); }
+  .fig:last-child { border-right: 0; }
+  .fig-v { font-family: "Azeret Mono", monospace; font-size: 1.5rem; font-weight: 400; line-height: 1.2; }
+  .fig-v.none { color: var(--pencil); }
+  .fig-k { font-family: "Azeret Mono", monospace; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pencil); }
+  .gloss { margin: 0.9rem 0 0; font-size: 0.88rem; color: var(--ink-dim); max-width: 66ch; }
 
   /* ---------- sections ---------- */
-  section { margin: clamp(2.6rem, 7vw, 4.5rem) 0; }
+  .block { margin-top: clamp(3.2rem, 8vw, 5rem); }
   h2 {
-    font-family: "Instrument Serif", serif; font-weight: 400;
-    font-size: clamp(1.7rem, 4.5vw, 2.5rem); margin: .35rem 0 .3rem; letter-spacing: -.01em;
+    font-family: "Bodoni Moda", Didot, serif; font-weight: 400;
+    font-size: clamp(1.7rem, 4.4vw, 2.4rem); margin: 0.4rem 0 0.4rem;
   }
-  .sub { color: var(--dim); font-size: .93rem; max-width: 62ch; margin-bottom: 1.6rem; }
+  .note { color: var(--ink-dim); font-size: 0.92rem; max-width: 64ch; margin: 0 0 1.5rem; }
+  .note b { color: var(--ink); font-weight: 600; }
 
-  /* ---------- open bets (receipt) ---------- */
-  .receipt {
-    border: 1px dashed var(--line); border-radius: 12px; background: var(--panel);
-    padding: clamp(1rem, 3vw, 1.6rem);
-  }
-  .bet { padding: .95rem 0; border-bottom: 1px solid var(--line-soft); }
-  .bet:last-child { border-bottom: 0; padding-bottom: 0; }
-  .bet:first-child { padding-top: 0; }
-  .bet-top { display: flex; gap: .8rem; align-items: baseline; flex-wrap: wrap; }
-  .call {
-    font-family: "IBM Plex Mono", monospace; font-size: .68rem; font-weight: 600;
-    letter-spacing: .14em; text-transform: uppercase;
-    padding: .2rem .55rem; border-radius: 4px; flex-shrink: 0;
-  }
-  .call.yes { color: var(--hit); background: var(--hit-soft); }
-  .call.no  { color: var(--miss); background: var(--miss-soft); }
-  .bet-q { flex: 1; min-width: 15rem; font-size: .96rem; }
-  .bet-meta {
-    display: flex; gap: .7rem; align-items: center; margin-top: .5rem;
-    font-family: "IBM Plex Mono", monospace; font-size: .7rem; color: var(--dimmer);
-  }
-  .conf-bar { flex: 1; max-width: 130px; height: 3px; background: var(--line-soft); border-radius: 2px; overflow: hidden; }
-  .conf-fill { height: 100%; background: var(--gold); }
-
-  /* ---------- calendar ---------- */
-  .cal-shell { display: flex; gap: .5rem; overflow-x: auto; padding-bottom: .5rem; }
-  .cal-days {
-    display: grid; grid-template-rows: repeat(7, 1fr); gap: 3px;
-    font-family: "IBM Plex Mono", monospace; font-size: .58rem; color: var(--dimmer);
-    flex-shrink: 0; padding-top: 1px;
-  }
-  .cal-days span { height: 14px; line-height: 14px; }
-  .cal-grid { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 14px); gap: 3px; }
-  .cell {
-    width: 14px; height: 14px; border-radius: 3px;
-    background: var(--line-soft); transition: transform .12s;
-  }
-  .cell[data-state="none"] { background: color-mix(in srgb, var(--chalk) 6%, transparent); }
-  .cell[data-state="open"] { background: var(--gold-soft); border: 1px solid var(--gold); }
+  /* ---------- register grid ---------- */
+  .reg { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.4rem; }
+  .reg-days { display: grid; grid-template-rows: repeat(7, 15px); gap: 3px; flex-shrink: 0; }
+  .reg-days span { font-family: "Azeret Mono", monospace; font-size: 0.55rem; color: var(--pencil); line-height: 15px; }
+  .reg-grid { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 15px); gap: 3px; }
+  .cell { width: 15px; height: 15px; }
+  .cell[data-state="none"] { background: var(--rule-soft); }
+  .cell[data-state="open"] { background: transparent; border: 1px dashed var(--pencil); }
   .cell[data-state="future"] { background: transparent; }
-  /* graded days get an inline background interpolated by that day's hit rate */
-  .ramp {
-    display: inline-block; width: 54px; height: 10px; border-radius: 2px; margin: 0 .35rem;
-    vertical-align: -1px;
-    background: linear-gradient(90deg, var(--miss), color-mix(in srgb, var(--hit) 50%, var(--miss)), var(--hit));
-  }
-  .cell:hover { transform: scale(1.35); cursor: default; }
-  .legend {
-    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-top: 1rem;
-    font-family: "IBM Plex Mono", monospace; font-size: .66rem; color: var(--dimmer);
-  }
-  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: .35rem; vertical-align: -1px; }
-  .legend i.dashkey {
-    width: 18px; height: 0; border-radius: 0; vertical-align: 3px;
-    border-top: 1px dashed var(--dimmer);
-  }
-
-  /* ---------- calibration ---------- */
-  .calib { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); padding: clamp(1rem, 3vw, 1.6rem); }
-  .calib svg { width: 100%; height: auto; display: block; }
-  .axis-label { font-family: "IBM Plex Mono", monospace; font-size: 9px; fill: var(--dimmer); }
+  .key { display: flex; flex-wrap: wrap; gap: 1.1rem; align-items: center; margin-top: 1rem; font-family: "Azeret Mono", monospace; font-size: 0.62rem; color: var(--pencil); }
+  .key i { display: inline-block; width: 11px; height: 11px; margin-right: 0.35rem; vertical-align: -1px; }
+  .ramp { width: 58px; background: linear-gradient(90deg, var(--loss), var(--mark)); }
 
   /* ---------- tables ---------- */
-  .tbl { width: 100%; border-collapse: collapse; font-size: .9rem; }
-  .tbl th {
-    text-align: left; font-family: "IBM Plex Mono", monospace; font-weight: 500;
-    font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
-    color: var(--dimmer); padding: 0 .8rem .6rem 0; border-bottom: 1px solid var(--line);
+  .scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th {
+    text-align: left; font-family: "Azeret Mono", monospace; font-weight: 500;
+    font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pencil);
+    padding: 0 0.8rem 0.55rem 0; border-bottom: 1px solid var(--rule);
   }
-  .tbl td { padding: .75rem .8rem .75rem 0; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
-  .tbl tr:last-child td { border-bottom: 0; }
-  .tbl .num { font-family: "IBM Plex Mono", monospace; white-space: nowrap; }
-  .rule-tag {
-    font-family: "IBM Plex Mono", monospace; font-size: .66rem; color: var(--dim);
-    border: 1px solid var(--line); border-radius: 4px; padding: .1rem .4rem; white-space: nowrap;
-  }
-  .verdict { font-family: "IBM Plex Mono", monospace; font-size: .72rem; font-weight: 600; letter-spacing: .1em; }
-  .verdict.hit { color: var(--hit); }
-  .verdict.miss { color: var(--miss); }
+  td { padding: 0.7rem 0.8rem 0.7rem 0; border-bottom: 1px solid var(--rule-soft); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  .num { font-family: "Azeret Mono", monospace; white-space: nowrap; }
+  .miss { color: var(--loss); }
+  .by { font-family: "Azeret Mono", monospace; font-size: 0.64rem; color: var(--pencil); }
+  .cold { color: var(--pencil); font-style: italic; }
+  .sub { display: block; font-family: "Azeret Mono", monospace; font-size: 0.7rem; color: var(--pencil); }
+  .lead { color: var(--ink); font-weight: 600; }
+  .h2h { min-width: 580px; }
 
-  /* ---------- head-to-head ---------- */
-  /* Narrower than this and the nowrap result cells shove Model off-screen;
-     the .scroller wrapper takes over instead of silently clipping. */
-  .h2h { min-width: 610px; }
-  .h2h td.side { white-space: nowrap; font-family: "IBM Plex Mono", monospace; }
-  .h2h .win { color: var(--hit); font-weight: 600; }
-  .h2h .lose { color: var(--dim); }
-  .h2h .tie { color: var(--gold); }
-  .h2h .cold { color: var(--dimmer); font-style: italic; font-family: "Inter", sans-serif; }
-  .h2h .brier { font-size: .78rem; color: var(--dimmer); display: block; }
+  /* ---------- calibration ---------- */
+  .plot { border: 1px solid var(--rule); background: var(--raised); padding: clamp(0.9rem, 3vw, 1.4rem); }
+  .plot svg { width: 100%; height: auto; display: block; }
+  .ax { font-family: "Azeret Mono", monospace; font-size: 9px; fill: var(--pencil); }
 
-  .scroller { overflow-x: auto; }
-  .empty {
-    border: 1px dashed var(--line); border-radius: 12px; padding: 2rem 1.4rem;
-    text-align: center; color: var(--dim); font-size: .92rem;
-  }
-  .empty b { color: var(--chalk); font-weight: 500; display: block; margin-bottom: .3rem; }
+  .blank { border: 1px dashed var(--rule); padding: 1.8rem 1.2rem; text-align: center; color: var(--ink-dim); font-size: 0.9rem; }
+  .blank b { display: block; color: var(--ink); font-weight: 600; margin-bottom: 0.25rem; }
 
-  /* ---------- how it works ---------- */
-  .how { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.2rem; }
-  .card { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); padding: 1.2rem; }
-  .card h3 {
-    font-family: "IBM Plex Mono", monospace; font-size: .66rem; letter-spacing: .18em;
-    text-transform: uppercase; color: var(--gold); margin: 0 0 .6rem; font-weight: 500;
-  }
-  .card p { margin: 0; font-size: .89rem; color: var(--dim); }
-  .card p b { color: var(--chalk); font-weight: 500; }
+  /* ---------- method ---------- */
+  .method { border-top: 1px solid var(--rule); }
+  .step { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding: 1.05rem 0; border-bottom: 1px solid var(--rule-soft); }
+  .step p { margin: 0; color: var(--ink-dim); font-size: 0.9rem; }
+  .step p b { color: var(--ink); font-weight: 600; }
 
-  footer {
-    border-top: 1px solid var(--line); margin-top: 4rem; padding: 1.8rem 0 3rem;
-    font-family: "IBM Plex Mono", monospace; font-size: .72rem; color: var(--dimmer);
-    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
-  }
-  footer a { color: var(--dim); text-decoration: none; border-bottom: 1px solid var(--line); }
-  footer a:hover { color: var(--chalk); }
+  footer { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-family: "Azeret Mono", monospace; font-size: 0.64rem; color: var(--pencil); }
 
   @media (max-width: 620px) {
-    .stats { margin-left: 0; gap: 1.2rem; }
-    .bignum { font-size: 3.4rem; }
+    .entry { grid-template-columns: 3rem 1fr; }
+    .entry-by { grid-column: 2; text-align: left; }
+    .entry-conf, .entry-why { display: inline; }
+    .entry-head span:last-child { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
   }
 </style>
 </head>
 <body>
-<div class="backdrop"></div>
-<button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">Light</button>
+<canvas id="field" aria-hidden="true"></canvas>
 
-<div class="wrap">
+<div class="sheet">
 
   <header class="masthead">
-    <div class="eyebrow">An autonomous prediction ledger</div>
+    <div class="folio">
+      <span class="label">an autonomous register</span>
+      <span class="folio-end">
+        <span class="label mono" id="folio">day —</span>
+        <button class="theme-toggle" id="themeBtn">Paper</button>
+      </span>
+    </div>
     <h1>Hind<em>sight</em></h1>
     <p class="lede">
-      Every day a script answers six questions about tomorrow — twice, once by hand-written rule
-      and once by a model that trained only on bets already settled. It <strong>commits them to a
-      public repo before the outcome exists</strong>, then grades itself when the truth arrives.
-      It cannot quietly delete the ones it got wrong — the timestamps are the receipt.
+      Twice a day this machine writes down what it expects of tomorrow and
+      <b>seals it in a public repository before the answer exists</b>. When the truth
+      arrives it marks its own losses. In red, where everyone can see them.
     </p>
   </header>
 
-  <div class="standing" id="standing">
-    <div class="standing-main">
-      <div>
-        <div class="bignum pending" id="accuracy">—</div>
-        <div class="bignum-label" id="accuracyLabel">Loading the ledger…</div>
-      </div>
-      <div class="stats">
-        <div><div class="stat-v" id="statSettled">—</div><div class="stat-k">Settled</div></div>
-        <div><div class="stat-v" id="statBrier">—</div><div class="stat-k">Brier</div></div>
-        <div><div class="stat-v" id="statOpen">—</div><div class="stat-k">Open</div></div>
-        <div><div class="stat-v" id="statDays">—</div><div class="stat-k">Days</div></div>
-      </div>
+  <section class="slip" aria-labelledby="slipTitle">
+    <div class="slip-head">
+      <span class="label" id="slipTitle">entry for <span id="slipDate" class="mono">—</span></span>
+      <span class="label mono" id="slipSeal">unsealed</span>
     </div>
-    <div class="baseline" id="baseline">
-      A Brier score of <b>0.250</b> is what you get by shrugging and saying “50%” to everything.
-      Lower is better. Higher means the machine is confidently wrong.
+    <div class="entry entry-head">
+      <span class="label">expects</span>
+      <span class="label">question</span>
+      <span class="label">at</span>
     </div>
-  </div>
-
-  <section>
-    <div class="eyebrow">Placed, not yet settled</div>
-    <h2>Open bets</h2>
-    <p class="sub">
-      These are live. Nothing below has an outcome yet — the world has not caught up to them.
-    </p>
-    <div id="openBets"></div>
+    <ol class="entries" id="openBets"></ol>
+    <div class="slip-foot">
+      <a id="commitLink" href="https://github.com/Deadsunx/pas-vraiment-secret/commits/main/archive" rel="noopener">
+        Inspect the commit that sealed this entry
+      </a>
+    </div>
   </section>
 
-  <section>
-    <div class="eyebrow">Every day it has ever guessed</div>
-    <h2>The record</h2>
-    <p class="sub">
-      One square per day, shaded by how much of that day it got right — red for a day it missed
-      entirely, green for a clean sweep. Most days land somewhere in between, which is the honest
-      texture of predicting anything.
-    </p>
-    <div class="cal-shell">
-      <div class="cal-days"><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span><span>Sun</span></div>
-      <div class="cal-grid" id="calGrid"></div>
+  <section class="block" aria-label="Standing">
+    <div class="standing">
+      <div class="fig"><div class="fig-v none" id="figAcc">—</div><div class="fig-k">Right</div></div>
+      <div class="fig"><div class="fig-v none" id="figBrier">—</div><div class="fig-k">Brier</div></div>
+      <div class="fig"><div class="fig-v" id="figSettled">—</div><div class="fig-k">Settled</div></div>
+      <div class="fig"><div class="fig-v" id="figOpen">—</div><div class="fig-k">Open</div></div>
+      <div class="fig"><div class="fig-v" id="figVoid">—</div><div class="fig-k">Void</div></div>
     </div>
-    <div class="legend">
+    <p class="gloss" id="gloss">
+      A Brier score of <b>0.250</b> is what shrugging and saying “fifty-fifty” to everything earns you.
+      Lower is better. Higher means confidently wrong. Void means a bet that never got settled —
+      counted apart, never as a win.
+    </p>
+  </section>
+
+  <section class="block">
+    <span class="label">every day it has kept</span>
+    <h2>The register</h2>
+    <p class="note">
+      One square per day, shaded by how much of that day survived contact with the truth.
+      A day it got entirely right is plain ink. <b>Only the misses take colour.</b>
+    </p>
+    <div class="reg">
+      <div class="reg-days"><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span><span>Sun</span></div>
+      <div class="reg-grid" id="regGrid"></div>
+    </div>
+    <div class="key">
       <span>all wrong<i class="ramp"></i>all right</span>
-      <span><i style="background:var(--gold-soft);border:1px solid var(--gold)"></i>still open</span>
-      <span><i style="background:color-mix(in srgb, var(--chalk) 6%, transparent)"></i>no run</span>
+      <span><i style="border:1px dashed var(--pencil)"></i>still open</span>
+      <span><i style="background:var(--rule-soft)"></i>no entry</span>
     </div>
   </section>
 
-  <section>
-    <div class="eyebrow">Five lines of arithmetic versus gradient descent</div>
-    <h2>Rules vs models</h2>
-    <p class="sub">
-      Every question is answered twice a day — once by a hand-written rule, once by a logistic
-      regression trained only on bets that have already settled. The rule is the control. Without
-      one there is no way to show whether the model is earning its complexity, so it never gets
-      retired no matter how it does. Compared on <strong>shared days only</strong>: the model
-      cannot bet until it has 25 settled examples, and counting the days it sat out would flatter
-      whichever got the easier ones.
+  <section class="block">
+    <span class="label">five lines of arithmetic against gradient descent</span>
+    <h2>Rules and models</h2>
+    <p class="note">
+      Every question is answered twice — once by a hand-written rule, once by a regression trained
+      only on bets already settled. The rule is the control, and it is never retired however badly
+      it does. Judged on <b>shared days only</b>: the model may not bet until it has 25 settled
+      examples, and counting the days it sat out would flatter whoever drew the easier ones.
     </p>
-    <div class="scroller" id="headToHead"></div>
-    <div class="legend" style="margin-top:1rem">
-      <span>Brier decides the winner — accuracy ignores how confidently each one was wrong.</span>
-    </div>
+    <div class="scroll" id="headToHead"></div>
+    <p class="note" style="margin-top:1rem;margin-bottom:0">
+      Brier decides it, not accuracy — accuracy cannot tell the difference between a cautious miss
+      and a confident one.
+    </p>
   </section>
 
-  <section>
-    <div class="eyebrow">Does 70% actually mean 70%</div>
+  <section class="block">
+    <span class="label">does seventy per cent mean seventy per cent</span>
     <h2>Calibration</h2>
-    <p class="sub">
-      The chart nobody can fake and nobody can rush. Each dot is a confidence band: how sure the
-      machine claimed to be, against how often it was actually right. On the diagonal means honest.
-      Below it means bluffing. This one needs months of sample size before it means anything —
-      which is exactly why the script runs every single day.
+    <p class="note">
+      The one figure that cannot be rushed. Each mark is a confidence band: how sure it claimed to
+      be, against how often it turned out right. On the dashed line means honest. Below it means
+      bluffing. This needs months of evidence before it means anything, which is the whole reason
+      the register is kept daily.
     </p>
-    <div class="calib" id="calibWrap"></div>
+    <div class="plot" id="plot"></div>
   </section>
 
-  <section>
-    <div class="eyebrow">Which rules are beating chance</div>
-    <h2>By the rule</h2>
-    <p class="sub">
-      Six rules, stated in advance and never tuned after the fact. Some of these are close to coin
-      flips and are expected to prove it.
-    </p>
-    <div class="scroller"><table class="tbl" id="leaderboard"></table></div>
+  <section class="block">
+    <span class="label">settled, win or lose</span>
+    <h2>Receipts</h2>
+    <p class="note">Most recent first. Losses are not quietly dropped — that is the entire point.</p>
+    <div class="scroll" id="receipts"></div>
   </section>
 
-  <section>
-    <div class="eyebrow">Settled, win or lose</div>
-    <h2>The receipts</h2>
-    <p class="sub">Most recent first. Misses are not hidden — that is the entire point.</p>
-    <div class="scroller"><table class="tbl" id="receipts"></table></div>
-  </section>
-
-  <section>
-    <div class="eyebrow">How it works</div>
+  <section class="block">
+    <span class="label">method</span>
     <h2>Why this is hard to fake</h2>
-    <div class="how">
-      <div class="card">
-        <h3>01 · Observe</h3>
-        <p>Six keyless public sources — <b>crypto, geomagnetic storms, earthquakes, Wikipedia, Hacker News, the weather</b> — read fresh each run.</p>
-      </div>
-      <div class="card">
-        <h3>02 · Predict</h3>
-        <p>Each rule makes one binary call with a <b>stated confidence</b>, using only what was knowable at that moment.</p>
-      </div>
-      <div class="card">
-        <h3>03 · Commit</h3>
-        <p>The calls are pushed <b>before the outcome exists</b>. The commit timestamp sits in public git history and cannot be moved.</p>
-      </div>
-      <div class="card">
-        <h3>04 · Grade</h3>
-        <p>Grading is re-derived from the archive on every run, so the ledger is a <b>pure function of the record</b> — never an accumulated number that could drift.</p>
-      </div>
+    <div class="method">
+      <div class="step"><span class="label mono">observe</span>
+        <p>Six keyless public sources — <b>crypto, geomagnetic storms, earthquakes, Wikipedia, Hacker News, the weather</b> — read fresh at every run.</p></div>
+      <div class="step"><span class="label mono">expect</span>
+        <p>Each rule commits to one binary call at a <b>stated confidence</b>, using only what was knowable at that moment.</p></div>
+      <div class="step"><span class="label mono">seal</span>
+        <p>The entry is pushed <b>before the outcome exists</b>. The commit timestamp sits in public history and cannot be moved afterwards.</p></div>
+      <div class="step"><span class="label mono">settle</span>
+        <p>Tomorrow's ordinary reading of the same source answers today's question. There is <b>no separate oracle</b>.</p></div>
+      <div class="step"><span class="label mono">audit</span>
+        <p>The scorecard is re-derived from the archive on every run, so it is a <b>pure function of the record</b> — and <code>verify.py</code> will reject a run whose numbers do not reconcile.</p></div>
     </div>
   </section>
 
   <footer>
-    <span>Runs twice daily on GitHub Actions · standard library only · no API keys</span>
-    <span id="updated"></span>
+    <span>Twice daily on GitHub Actions · standard library only · no API keys</span>
+    <span id="stamp"></span>
   </footer>
 </div>
 
@@ -409,22 +344,155 @@
 (function () {
   "use strict";
 
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   // ---------- theme ----------
   var btn = document.getElementById("themeBtn");
   function applyTheme(t) {
     document.documentElement.dataset.theme = t;
-    btn.textContent = t === "light" ? "Dark" : "Light";
+    btn.textContent = t === "light" ? "Ink" : "Paper";
     try { localStorage.setItem("hs-theme", t); } catch (e) {}
   }
   applyTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark");
   btn.addEventListener("click", function () {
     applyTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
+    ticks.recolour();
   });
 
+  // ---------- ambient tally field ----------
+  // A margin of tally marks, most of them pencil and undecided. One at a time
+  // they settle into ink or into red, then a wave from the left rubs them out
+  // and it starts over. The page's argument, running quietly behind it.
+  var ticks = (function () {
+    var cv = document.getElementById("field");
+    var ctx = cv.getContext("2d");
+    var marks = [], cols = 0, rows = 0, dpr = 1;
+    var GAP_X = 34, GAP_Y = 30, H = 13, W = 2;
+    var palette = {};
+
+    function readPalette() {
+      var s = getComputedStyle(document.documentElement);
+      palette = {
+        pending: s.getPropertyValue("--tick-pending").trim(),
+        right: s.getPropertyValue("--tick-right").trim(),
+        wrong: s.getPropertyValue("--tick-wrong").trim()
+      };
+    }
+
+    function build() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cv.width = Math.floor(innerWidth * dpr);
+      cv.height = Math.floor(innerHeight * dpr);
+      cv.style.width = innerWidth + "px";
+      cv.style.height = innerHeight + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      cols = Math.ceil(innerWidth / GAP_X) + 1;
+      rows = Math.ceil(innerHeight / GAP_Y) + 1;
+      marks = [];
+      for (var c = 0; c < cols; c++) {
+        for (var r = 0; r < rows; r++) {
+          marks.push({
+            x: c * GAP_X + 10,
+            y: r * GAP_Y + 8,
+            col: c,
+            state: 0,          // 0 pending, 1 right, 2 wrong
+            lean: (Math.random() - 0.5) * 0.22,
+            flash: 0
+          });
+        }
+      }
+      draw();
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, innerWidth, innerHeight);
+      for (var i = 0; i < marks.length; i++) {
+        var m = marks[i];
+        ctx.save();
+        ctx.translate(m.x, m.y);
+        ctx.rotate(m.lean);
+        ctx.globalAlpha = 1 + m.flash * 2.2;
+        ctx.fillStyle = m.state === 0 ? palette.pending
+                      : m.state === 1 ? palette.right : palette.wrong;
+        ctx.fillRect(0, 0, W, H);
+        ctx.restore();
+      }
+    }
+
+    var settled = 0, wiping = false, wipeCol = -1, last = 0, acc = 0;
+
+    function step(now) {
+      if (!last) last = now;
+      var dt = now - last;
+      last = now;
+      acc += dt;
+
+      var changed = false;
+      for (var i = 0; i < marks.length; i++) {
+        if (marks[i].flash > 0) {
+          marks[i].flash = Math.max(0, marks[i].flash - dt / 900);
+          changed = true;
+        }
+      }
+
+      if (acc > 260) {
+        acc = 0;
+        if (!wiping) {
+          var pool = [];
+          for (var j = 0; j < marks.length; j++) if (marks[j].state === 0) pool.push(j);
+          if (pool.length) {
+            var pick = pool[(Math.random() * pool.length) | 0];
+            // Roughly two in nine go red, which is about what an honest
+            // register of near-coin-flips looks like.
+            marks[pick].state = Math.random() < 0.22 ? 2 : 1;
+            marks[pick].flash = 1;
+            settled++;
+            changed = true;
+          }
+          if (settled > marks.length * 0.62) { wiping = true; wipeCol = 0; }
+        } else {
+          for (var k = 0; k < marks.length; k++) {
+            if (marks[k].col === wipeCol && marks[k].state !== 0) {
+              marks[k].state = 0;
+              changed = true;
+            }
+          }
+          wipeCol++;
+          if (wipeCol > cols) { wiping = false; settled = 0; }
+        }
+      }
+      if (changed) draw();
+      requestAnimationFrame(step);
+    }
+
+    readPalette();
+    build();
+
+    var resizeTimer;
+    addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(build, 200);
+    });
+
+    if (!reduced) {
+      // A static field still reads as a register margin, so reduced motion
+      // simply gets the finished page rather than nothing at all.
+      requestAnimationFrame(step);
+    } else {
+      for (var i = 0; i < marks.length; i++) {
+        if (Math.random() < 0.55) marks[i].state = Math.random() < 0.22 ? 2 : 1;
+      }
+      draw();
+    }
+
+    return { recolour: function () { readPalette(); draw(); } };
+  })();
+
   // ---------- helpers ----------
-  function pct(x, digits) {
+  function pct(x, d) {
     if (x === null || x === undefined) return "—";
-    return (x * 100).toFixed(digits === undefined ? 0 : digits) + "%";
+    return (x * 100).toFixed(d === undefined ? 0 : d) + "%";
   }
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -433,121 +501,129 @@
     return n;
   }
   function iso(d) { return d.toISOString().slice(0, 10); }
-  function parseISO(s) { return new Date(s + "T00:00:00Z"); }
-
-  function getJSON(path) {
-    return fetch(path, { cache: "no-store" }).then(function (r) {
-      if (!r.ok) throw new Error(path + " " + r.status);
+  function getJSON(p) {
+    return fetch(p, { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error(p + " " + r.status);
       return r.json();
+    });
+  }
+
+  // ---------- the slip ----------
+  function renderSlip(ledger, latest) {
+    var host = document.getElementById("openBets");
+    host.innerHTML = "";
+    document.getElementById("slipDate").textContent = (latest && latest.date) || "—";
+
+    if (latest && latest.fetched_at) {
+      document.getElementById("slipSeal").textContent =
+        "sealed " + latest.fetched_at.slice(11, 16) + " utc";
+      document.getElementById("commitLink").href =
+        "https://github.com/Deadsunx/pas-vraiment-secret/commits/main/archive/" +
+        latest.date + ".json";
+    }
+
+    // This is one day's entry, not every outstanding bet. The forecast
+    // question settles two days out, so without this filter yesterday's copy
+    // of it appears alongside today's under today's date.
+    var day = latest && latest.date;
+    var bets = (ledger.open_bets || []).filter(function (b) {
+      return !day || b.made_on === day;
+    });
+    if (!bets.length) {
+      host.appendChild(Object.assign(el("li", "blank"), {
+        innerHTML: "<b>Nothing outstanding.</b>The next run opens a fresh entry."
+      }));
+      return;
+    }
+
+    var byFamily = {}, order = [];
+    bets.forEach(function (b) {
+      var key = b.family || b.id;
+      if (!byFamily[key]) { byFamily[key] = []; order.push(key); }
+      byFamily[key].push(b);
+    });
+
+    order.forEach(function (key, i) {
+      var group = byFamily[key].sort(function (a, b) {
+        return a.variant === "rule" ? -1 : 1;
+      });
+      group.forEach(function (b, j) {
+        var cls = "entry" + (i % 2 ? " band" : "") + (j < group.length - 1 ? " pairs" : "");
+        var li = el("li", cls);
+        li.appendChild(el("span", "entry-call", b.call ? "yes" : "no"));
+        // The question is written once; the rule name in the last column is
+        // what distinguishes the continuation line.
+        li.appendChild(el("span", "entry-q", j === 0 ? b.question : ""));
+        var by = el("span", "entry-by" + (b.variant === "model" ? " model" : ""));
+        by.appendChild(el("span", "entry-conf", pct(b.confidence)));
+        by.appendChild(el("span", "entry-why", b.rule));
+        li.appendChild(by);
+        host.appendChild(li);
+      });
     });
   }
 
   // ---------- standing ----------
   function renderStanding(ledger) {
     var t = ledger.totals;
-    var acc = document.getElementById("accuracy");
-    var label = document.getElementById("accuracyLabel");
-
+    var acc = document.getElementById("figAcc");
     if (t.graded > 0) {
       acc.textContent = pct(t.accuracy);
-      acc.classList.remove("pending");
-      label.innerHTML = "of <b>" + t.graded + "</b> settled bets called correctly.";
-    } else {
-      acc.textContent = "—";
-      label.textContent = "No bets have settled yet. The first ones resolve tomorrow.";
+      acc.classList.remove("none");
     }
-    document.getElementById("statSettled").textContent = t.graded;
-    document.getElementById("statBrier").textContent =
-      t.brier === null || t.brier === undefined ? "—" : t.brier.toFixed(3);
-    document.getElementById("statOpen").textContent = t.open;
-    document.getElementById("statDays").textContent = t.days;
+    var brier = document.getElementById("figBrier");
+    if (t.brier !== null && t.brier !== undefined) {
+      brier.textContent = t.brier.toFixed(3);
+      brier.classList.remove("none");
+    }
+    document.getElementById("figSettled").textContent = t.graded;
+    document.getElementById("figOpen").textContent = t.open;
+    document.getElementById("figVoid").textContent = t.void;
+    document.getElementById("folio").textContent =
+      "day " + String(t.days).padStart(3, "0");
+    document.getElementById("stamp").textContent =
+      "updated " + (ledger.updated || "").slice(0, 16).replace("T", " ") + " utc";
 
-    if (t.graded > 0 && t.brier !== null) {
-      var verdict = t.brier < 0.25
-        ? "Currently <b>better than a shrug</b>."
-        : "Currently <b>no better than a shrug</b>.";
-      document.getElementById("baseline").innerHTML =
-        "A Brier score of <b>0.250</b> is what you get by saying “50%” to everything. " +
-        "Lower is better. " + verdict;
+    if (!t.graded) {
+      document.getElementById("gloss").innerHTML =
+        "Nothing has settled yet. The first answers arrive tomorrow, and until they do " +
+        "there is honestly nothing to report.";
     }
-    document.getElementById("updated").textContent =
-      "Updated " + (ledger.updated || "").slice(0, 16).replace("T", " ") + " UTC";
   }
 
-  // ---------- open bets ----------
-  function renderOpen(ledger) {
-    var host = document.getElementById("openBets");
-    host.innerHTML = "";
-    var bets = (ledger.open_bets || []).slice().sort(function (a, b) {
-      return a.resolve_on < b.resolve_on ? -1 : 1;
-    });
-    if (!bets.length) {
-      host.appendChild(Object.assign(el("div", "empty"), {
-        innerHTML: "<b>Nothing open.</b>The next run will place a fresh set."
-      }));
-      return;
-    }
-    var receipt = el("div", "receipt");
-    bets.forEach(function (b) {
-      var row = el("div", "bet");
-      var top = el("div", "bet-top");
-      top.appendChild(el("span", "call " + (b.call ? "yes" : "no"), b.call ? "yes" : "no"));
-      top.appendChild(el("span", "bet-q", b.question));
-      row.appendChild(top);
-
-      var meta = el("div", "bet-meta");
-      meta.appendChild(el("span", null, pct(b.confidence) + " confident"));
-      var bar = el("div", "conf-bar");
-      var fill = el("div", "conf-fill");
-      fill.style.width = Math.round(b.confidence * 100) + "%";
-      bar.appendChild(fill);
-      meta.appendChild(bar);
-      meta.appendChild(el("span", "rule-tag", b.rule));
-      meta.appendChild(el("span", null, "settles " + b.resolve_on));
-      row.appendChild(meta);
-      receipt.appendChild(row);
-    });
-    host.appendChild(receipt);
-  }
-
-  // ---------- calendar ----------
+  // ---------- register ----------
   var WEEKS = 14;
-  function renderCalendar(index) {
-    var grid = document.getElementById("calGrid");
+  function renderRegister(index) {
+    var grid = document.getElementById("regGrid");
     grid.innerHTML = "";
-
     var byDate = {};
     (index || []).forEach(function (d) { byDate[d.date] = d; });
 
-    // End on the Sunday of the current week so the grid is a clean rectangle.
     var today = new Date();
     today.setUTCHours(0, 0, 0, 0);
-    var dow = (today.getUTCDay() + 6) % 7;          // 0 = Monday
+    var dow = (today.getUTCDay() + 6) % 7;
     var end = new Date(today); end.setUTCDate(end.getUTCDate() + (6 - dow));
     var start = new Date(end); start.setUTCDate(start.getUTCDate() - (WEEKS * 7 - 1));
-
     var todayStr = iso(today);
+
     for (var i = 0; i < WEEKS * 7; i++) {
       var d = new Date(start); d.setUTCDate(start.getUTCDate() + i);
-      var key = iso(d);
-      var cell = el("div", "cell");
-      var entry = byDate[key];
-      var state = "none", title = key + " — no run";
+      var key = iso(d), cell = el("div", "cell"), e = byDate[key];
+      var state = "none", title = key + " — no entry";
 
-      if (key > todayStr) {
-        state = "future"; title = "";
-      } else if (entry && entry.made > 0) {
-        if (entry.graded === 0) {
+      if (key > todayStr) { state = "future"; title = ""; }
+      else if (e && e.made > 0) {
+        if (e.graded === 0) {
           state = "open";
-          title = key + " — " + entry.made + " placed, none settled yet";
+          title = key + " — " + e.made + " sealed, none settled yet";
         } else {
-          // Six bets a day means almost every day is a split. Ramping the
-          // colour by hit rate keeps that signal instead of flattening it.
-          var rate = entry.correct / entry.graded;
-          state = "graded";
+          var rate = e.correct / e.graded;
+          state = "kept";
+          // Ink at the top of the ramp, red at the bottom: a clean day spends
+          // no colour at all.
           cell.style.background =
-            "color-mix(in srgb, var(--hit) " + Math.round(rate * 100) + "%, var(--miss))";
-          title = key + " — " + entry.correct + "/" + entry.graded + " correct";
+            "color-mix(in srgb, var(--mark) " + Math.round(rate * 100) + "%, var(--loss))";
+          title = key + " — " + e.correct + " of " + e.graded + " right";
         }
       }
       cell.dataset.state = state;
@@ -556,196 +632,126 @@
     }
   }
 
-  // ---------- calibration ----------
-  function renderCalibration(ledger) {
-    var host = document.getElementById("calibWrap");
-    var bands = (ledger.calibration || []).filter(function (b) { return b.n > 0; });
-
-    if (!bands.length) {
-      host.innerHTML = "";
-      host.appendChild(Object.assign(el("div", "empty"), {
-        innerHTML: "<b>Not enough evidence yet.</b>" +
-          "This chart needs settled bets across several confidence bands. Come back in a month."
-      }));
-      return;
-    }
-
-    var W = 620, H = 380, P = 42;
-    function sx(v) { return P + (v - 0.5) * (W - 2 * P) / 0.5; }
-    function sy(v) { return H - P - v * (H - 2 * P); }
-
-    var parts = [
-      '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Calibration curve">',
-      '<rect x="' + P + '" y="' + P + '" width="' + (W - 2 * P) + '" height="' + (H - 2 * P) +
-        '" fill="none" stroke="var(--line-soft)"/>',
-      // perfect-calibration diagonal
-      '<line x1="' + sx(0.5) + '" y1="' + sy(0.5) + '" x2="' + sx(1) + '" y2="' + sy(1) +
-        '" stroke="var(--dimmer)" stroke-dasharray="4 4" stroke-width="1"/>'
-    ];
-
-    [0.5, 0.75, 1].forEach(function (v) {
-      parts.push('<text class="axis-label" x="' + sx(v) + '" y="' + (H - P + 16) +
-        '" text-anchor="middle">' + Math.round(v * 100) + '%</text>');
-      parts.push('<text class="axis-label" x="' + (P - 8) + '" y="' + (sy(v) + 3) +
-        '" text-anchor="end">' + Math.round(v * 100) + '%</text>');
-    });
-    parts.push('<text class="axis-label" x="' + (W / 2) + '" y="' + (H - 6) +
-      '" text-anchor="middle">confidence claimed</text>');
-    parts.push('<text class="axis-label" x="14" y="' + (H / 2) +
-      '" text-anchor="middle" transform="rotate(-90 14 ' + (H / 2) + ')">actually right</text>');
-
-    // connect the dots, then draw them sized by sample count
-    var pts = bands.map(function (b) { return [sx(b.claimed), sy(b.actual)]; });
-    if (pts.length > 1) {
-      parts.push('<polyline points="' + pts.map(function (p) { return p.join(","); }).join(" ") +
-        '" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.55"/>');
-    }
-    bands.forEach(function (b) {
-      var x = sx(b.claimed), y = sy(b.actual);
-      var r = Math.min(16, 5 + Math.sqrt(b.n) * 1.6);
-      var honest = Math.abs(b.actual - b.claimed) <= 0.1;
-      parts.push('<circle cx="' + x + '" cy="' + y + '" r="' + r +
-        '" fill="' + (honest ? "var(--hit)" : "var(--miss)") + '" opacity="0.75"/>');
-      parts.push('<title>' + b.label + " — claimed " + pct(b.claimed) +
-        ", right " + pct(b.actual) + " over " + b.n + " bets</title>");
-      parts.push('<text class="axis-label" x="' + x + '" y="' + (y - r - 6) +
-        '" text-anchor="middle">n=' + b.n + '</text>');
-    });
-    parts.push("</svg>");
-    // The key lives under the chart, where no data point can ever land on it.
-    parts.push(
-      '<div class="legend" style="margin-top:.4rem">' +
-        '<span><i class="dashkey"></i>perfectly calibrated</span>' +
-        '<span><i style="background:var(--hit)"></i>claim within 10 pts of reality</span>' +
-        '<span><i style="background:var(--miss)"></i>over- or under-confident</span>' +
-        '<span>dot size = bets in that band</span>' +
-      "</div>"
-    );
-    host.innerHTML = parts.join("");
-  }
-
-  // ---------- head to head ----------
+  // ---------- rules and models ----------
   function renderHeadToHead(ledger) {
     var host = document.getElementById("headToHead");
-    var families = ledger.head_to_head || {};
-    var keys = Object.keys(families);
-
+    var fams = ledger.head_to_head || {};
+    var keys = Object.keys(fams);
     if (!keys.length) {
-      host.innerHTML = '<div class="empty"><b>Nothing to compare yet.</b>' +
-        "The models need 25 settled bets before they are allowed to place one.</div>";
+      host.innerHTML = '<div class="blank"><b>Nothing to compare yet.</b>' +
+        "A model may not bet until 25 of its family's questions have settled.</div>";
       return;
     }
-    // Warm families first, sorted by how much the model is winning by.
     keys.sort(function (a, b) {
-      var A = families[a], B = families[b];
+      var A = fams[a], B = fams[b];
       if (!A.shared_days !== !B.shared_days) return A.shared_days ? -1 : 1;
       if (!A.shared_days) return 0;
       return (A.rule_brier - A.model_brier) < (B.rule_brier - B.model_brier) ? 1 : -1;
     });
 
-    // No separate "days" column — both cells already carry it as the
-    // denominator, and the width is better spent on the model result.
-    var html = ["<table class='tbl h2h'><thead><tr><th>Question</th>" +
-      "<th>Rule</th><th>Model</th><th>Winner</th></tr></thead><tbody>"];
-
-    keys.forEach(function (key) {
-      var f = families[key];
+    var html = ["<table class='h2h'><thead><tr><th>Question</th><th>Rule</th><th>Model</th><th>Better</th></tr></thead><tbody>"];
+    keys.forEach(function (k) {
+      var f = fams[k];
       if (!f.shared_days) {
-        html.push("<tr><td>" + f.question +
-          '</td><td class="cold" colspan="3">model still warming up</td></tr>');
+        html.push("<tr><td>" + f.question + '</td><td class="cold" colspan="3">model still warming up</td></tr>');
         return;
       }
-      // Lower Brier wins. Accuracy is shown but deliberately not decisive.
       var diff = f.rule_brier - f.model_brier;
       var modelWins = diff > 0.001, ruleWins = diff < -0.001;
-      var cell = function (side, wins) {
-        return '<td class="side ' + (wins ? "win" : "lose") + '">' +
-          f[side + "_correct"] + " / " + f.shared_days +
-          " (" + pct(f[side + "_accuracy"]) + ")" +
-          '<span class="brier">Brier ' + f[side + "_brier"].toFixed(3) + "</span></td>";
-      };
-      var verdict = modelWins
-        ? '<span class="win">model</span>'
-        : ruleWins ? '<span class="lose" style="color:var(--chalk)">rule</span>'
-                   : '<span class="tie">too close</span>';
-      html.push(
-        "<tr><td>" + f.question + "</td>" +
-        cell("rule", ruleWins) + cell("model", modelWins) +
-        "<td>" + verdict + "</td></tr>"
-      );
+      function side(s, wins) {
+        return '<td class="num' + (wins ? " lead" : "") + '">' +
+          f[s + "_correct"] + " of " + f.shared_days +
+          '<span class="sub">brier ' + f[s + "_brier"].toFixed(3) + "</span></td>";
+      }
+      html.push("<tr><td>" + f.question + "</td>" + side("rule", ruleWins) + side("model", modelWins) +
+        '<td class="by">' + (modelWins ? "model" : ruleWins ? "rule" : "level") + "</td></tr>");
     });
     html.push("</tbody></table>");
     host.innerHTML = html.join("");
   }
 
-  // ---------- leaderboard ----------
-  function renderLeaderboard(ledger) {
-    var table = document.getElementById("leaderboard");
-    var rows = Object.keys(ledger.by_predictor || {}).map(function (id) {
-      var r = ledger.by_predictor[id];
-      r.id = id; return r;
+  // ---------- calibration ----------
+  function renderPlot(ledger) {
+    var host = document.getElementById("plot");
+    var bands = (ledger.calibration || []).filter(function (b) { return b.n > 0; });
+    if (!bands.length) {
+      host.innerHTML = '<div class="blank"><b>Not enough evidence yet.</b>' +
+        "This needs settled bets spread across several confidence bands. Come back in a month.</div>";
+      return;
+    }
+    var W = 620, H = 360, P = 44;
+    function sx(v) { return P + (v - 0.5) * (W - 2 * P) / 0.5; }
+    function sy(v) { return H - P - v * (H - 2 * P); }
+
+    var p = ['<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Calibration">',
+      '<line x1="' + P + '" y1="' + (H - P) + '" x2="' + (W - P) + '" y2="' + (H - P) + '" stroke="var(--rule)"/>',
+      '<line x1="' + P + '" y1="' + P + '" x2="' + P + '" y2="' + (H - P) + '" stroke="var(--rule)"/>',
+      '<line x1="' + sx(0.5) + '" y1="' + sy(0.5) + '" x2="' + sx(1) + '" y2="' + sy(1) +
+        '" stroke="var(--pencil)" stroke-dasharray="3 5"/>'];
+
+    [0.5, 0.75, 1].forEach(function (v) {
+      p.push('<text class="ax" x="' + sx(v) + '" y="' + (H - P + 16) + '" text-anchor="middle">' + Math.round(v * 100) + "</text>");
+      p.push('<text class="ax" x="' + (P - 9) + '" y="' + (sy(v) + 3) + '" text-anchor="end">' + Math.round(v * 100) + "</text>");
     });
-    rows.sort(function (a, b) {
-      if (a.accuracy === null) return 1;
-      if (b.accuracy === null) return -1;
-      return b.accuracy - a.accuracy;
+    p.push('<text class="ax" x="' + (W / 2) + '" y="' + (H - 8) + '" text-anchor="middle">claimed</text>');
+    p.push('<text class="ax" x="13" y="' + (H / 2) + '" text-anchor="middle" transform="rotate(-90 13 ' + (H / 2) + ')">actual</text>');
+
+    var pts = bands.map(function (b) { return [sx(b.claimed), sy(b.actual)]; });
+    if (pts.length > 1) {
+      p.push('<polyline points="' + pts.map(function (q) { return q.join(","); }).join(" ") +
+        '" fill="none" stroke="var(--pencil)" stroke-width="1"/>');
+    }
+    bands.forEach(function (b) {
+      var x = sx(b.claimed), y = sy(b.actual), r = Math.min(15, 4.5 + Math.sqrt(b.n) * 1.5);
+      var honest = Math.abs(b.actual - b.claimed) <= 0.1;
+      // Honest bands are plain ink; only the miscalibrated ones cost red.
+      p.push('<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' +
+        (honest ? "var(--mark)" : "var(--loss)") + '" opacity="0.82"><title>' + b.label +
+        ": claimed " + pct(b.claimed) + ", right " + pct(b.actual) + " over " + b.n + "</title></circle>");
+      p.push('<text class="ax" x="' + x + '" y="' + (y - r - 6) + '" text-anchor="middle">' + b.n + "</text>");
     });
-    var html = ["<thead><tr><th>Call</th><th>Rule</th><th>Record</th><th>Accuracy</th></tr></thead><tbody>"];
-    rows.forEach(function (r) {
-      html.push(
-        "<tr><td>" + r.question + "</td>" +
-        '<td><span class="rule-tag">' + r.rule + "</span></td>" +
-        '<td class="num">' + (r.graded ? r.correct + " / " + r.graded : "—") + "</td>" +
-        '<td class="num">' + (r.accuracy === null ? "—" : pct(r.accuracy)) + "</td></tr>"
-      );
-    });
-    html.push("</tbody>");
-    table.innerHTML = html.join("");
+    p.push("</svg>");
+    host.innerHTML = p.join("");
   }
 
   // ---------- receipts ----------
   function renderReceipts(ledger) {
-    var table = document.getElementById("receipts");
-    var grades = (ledger.grades || []).slice().sort(function (a, b) {
+    var host = document.getElementById("receipts");
+    var g = (ledger.grades || []).slice().sort(function (a, b) {
       return a.made_on < b.made_on ? 1 : -1;
     }).slice(0, 25);
-
-    if (!grades.length) {
-      table.outerHTML = '<div class="empty" id="receipts"><b>No settled bets yet.</b>' +
-        'The first receipts appear once tomorrow arrives.</div>';
+    if (!g.length) {
+      host.innerHTML = '<div class="blank"><b>No settled entries yet.</b>' +
+        "The first receipts appear once tomorrow has happened.</div>";
       return;
     }
-    var html = ["<thead><tr><th>Placed</th><th>Call</th><th>Said</th><th>Truth</th><th></th></tr></thead><tbody>"];
-    grades.forEach(function (g) {
-      html.push(
-        '<tr><td class="num">' + g.made_on + "</td>" +
-        "<td>" + (g.question || g.id) + "</td>" +
-        '<td class="num">' + (g.call ? "yes" : "no") + " @ " + pct(g.confidence) + "</td>" +
-        '<td class="num">' + (g.actual ? "yes" : "no") + "</td>" +
-        '<td class="verdict ' + (g.correct ? "hit" : "miss") + '">' +
-          (g.correct ? "RIGHT" : "WRONG") + "</td></tr>"
-      );
+    var html = ["<table><thead><tr><th>Sealed</th><th>Question</th><th>Said</th><th>Truth</th><th></th></tr></thead><tbody>"];
+    g.forEach(function (x) {
+      html.push('<tr><td class="num">' + x.made_on + "</td><td>" + (x.question || x.id) +
+        '<span class="sub">' + (x.rule || "") + "</span></td>" +
+        '<td class="num">' + (x.call ? "yes" : "no") + " at " + pct(x.confidence) + "</td>" +
+        '<td class="num">' + (x.actual ? "yes" : "no") + "</td>" +
+        '<td class="num' + (x.correct ? "" : " miss") + '">' + (x.correct ? "kept" : "lost") + "</td></tr>");
     });
-    html.push("</tbody>");
-    table.innerHTML = html.join("");
+    html.push("</tbody></table>");
+    host.innerHTML = html.join("");
   }
 
   // ---------- boot ----------
   Promise.all([
     getJSON("archive/ledger.json"),
-    getJSON("archive/index.json").catch(function () { return []; })
-  ]).then(function (res) {
-    var ledger = res[0], index = res[1];
-    renderStanding(ledger);
-    renderOpen(ledger);
-    renderCalendar(index);
-    renderHeadToHead(ledger);
-    renderCalibration(ledger);
-    renderLeaderboard(ledger);
-    renderReceipts(ledger);
+    getJSON("archive/index.json").catch(function () { return []; }),
+    getJSON("archive/latest.json").catch(function () { return null; })
+  ]).then(function (r) {
+    renderStanding(r[0]);
+    renderSlip(r[0], r[2]);
+    renderRegister(r[1]);
+    renderHeadToHead(r[0]);
+    renderPlot(r[0]);
+    renderReceipts(r[0]);
   }).catch(function (err) {
-    document.getElementById("accuracyLabel").textContent =
-      "Could not load the ledger (" + err.message + ").";
+    document.getElementById("openBets").innerHTML =
+      '<li class="blank"><b>The register could not be read.</b>' + err.message + "</li>";
   });
 })();
 </script>
