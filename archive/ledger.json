@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-26T10:58:36.676078+00:00",
+  "updated": "2026-07-26T11:02:42.360384+00:00",
   "totals": {
     "graded": 0,
     "correct": 0,
     "accuracy": null,
     "brier": null,
-    "open": 5,
+    "open": 6,
     "void": 0,
     "days": 1
   },
@@ -46,7 +46,7 @@
       "accuracy": null
     },
     "forecast_hit": {
-      "question": "Tomorrow's high in  will land within 2\u00b0C of today's forecast.",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "graded": 0,
       "correct": 0,
@@ -93,8 +93,8 @@
       "call": true,
       "confidence": 0.527,
       "basis": {
-        "today_usd": 64464,
-        "change_24h": 0.73
+        "today_usd": 64472,
+        "change_24h": 0.75
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
@@ -147,6 +147,20 @@
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 33.3,
+        "for_date": "2026-07-27",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-07-26",
+      "resolve_on": "2026-07-28"
     }
   ],
   "grades": []

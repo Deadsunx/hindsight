@@ -6,7 +6,9 @@ The *grading* half is not: if it is wrong, the public track record is a lie.
 So everything below runs on synthetic archives with no network access.
 """
 
+import os
 import unittest
+from unittest import mock
 
 import predict
 
@@ -31,6 +33,30 @@ def bet(pid, date, call, confidence=0.7, basis=None, horizon=1):
         "made_on": date,
         "resolve_on": predict.shift(date, horizon),
     }
+
+
+class TestEnv(unittest.TestCase):
+    """GitHub Actions passes an unset repo variable as "", not as absent.
+
+    A plain os.environ.get() would then hand back a blank latitude and build a
+    URL that 400s — which is exactly how the first CI run lost the weather bet.
+    """
+
+    def test_missing_falls_back(self):
+        with mock.patch.dict(os.environ, {}, clear=True):
+            self.assertEqual(predict.env("CITY_TZ", "Asia/Kolkata"), "Asia/Kolkata")
+
+    def test_empty_falls_back(self):
+        with mock.patch.dict(os.environ, {"CITY_TZ": ""}):
+            self.assertEqual(predict.env("CITY_TZ", "Asia/Kolkata"), "Asia/Kolkata")
+
+    def test_whitespace_falls_back(self):
+        with mock.patch.dict(os.environ, {"CITY_LAT": "   "}):
+            self.assertEqual(predict.env("CITY_LAT", "28.6139"), "28.6139")
+
+    def test_real_value_wins(self):
+        with mock.patch.dict(os.environ, {"CITY_NAME": "Greater Noida"}):
+            self.assertEqual(predict.env("CITY_NAME", "New Delhi"), "Greater Noida")
 
 
 class TestHelpers(unittest.TestCase):

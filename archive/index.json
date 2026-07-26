@@ -6,9 +6,10 @@
       "kp",
       "quakes",
       "wiki",
-      "hn"
+      "hn",
+      "weather"
     ],
-    "made": 5,
+    "made": 6,
     "graded": 0,
     "correct": 0
   }

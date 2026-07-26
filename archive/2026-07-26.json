@@ -1,10 +1,10 @@
 {
   "date": "2026-07-26",
-  "fetched_at": "2026-07-26T10:58:35.414709+00:00",
+  "fetched_at": "2026-07-26T11:02:30.846966+00:00",
   "observations": {
     "btc": {
-      "usd": 64464,
-      "usd_24h_change": 0.73
+      "usd": 64472,
+      "usd_24h_change": 0.75
     },
     "kp": {
       "max_kp": 2.0,
@@ -13,7 +13,7 @@
     },
     "quakes": {
       "max_mag": 5.8,
-      "count": 201,
+      "count": 200,
       "strongest_place": "99 km SE of Atka, Alaska"
     },
     "wiki": {
@@ -38,7 +38,12 @@
       ]
     },
     "weather": {
-      "error": "Expecting value: line 1 column 1 (char 0)"
+      "city": "New Delhi",
+      "actual_prev": 32.3,
+      "actual_prev_date": "2026-07-25",
+      "today": 33.3,
+      "forecast_next": 33.3,
+      "forecast_next_date": "2026-07-27"
     }
   },
   "predictions": [
@@ -49,8 +54,8 @@
       "call": true,
       "confidence": 0.527,
       "basis": {
-        "today_usd": 64464,
-        "change_24h": 0.73
+        "today_usd": 64472,
+        "change_24h": 0.75
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
@@ -103,6 +108,20 @@
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 33.3,
+        "for_date": "2026-07-27",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-07-26",
+      "resolve_on": "2026-07-28"
     }
   ]
 }

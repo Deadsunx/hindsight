@@ -33,11 +33,21 @@ ROOT = Path(__file__).parent
 ARCHIVE = ROOT / "archive"
 README = ROOT / "README.md"
 
+def env(name: str, default: str) -> str:
+    """Like os.environ.get, but treats an empty value as absent.
+
+    GitHub Actions substitutes an unset repo variable as "" rather than leaving
+    it out, so a plain .get() would hand us a blank latitude and build a URL
+    that quietly 400s. Anything blank falls back to the default.
+    """
+    return os.environ.get(name, "").strip() or default
+
+
 # The city whose forecast we grade. Override with env vars to move it.
-CITY_NAME = os.environ.get("CITY_NAME", "New Delhi")
-CITY_LAT = os.environ.get("CITY_LAT", "28.6139")
-CITY_LON = os.environ.get("CITY_LON", "77.2090")
-CITY_TZ = os.environ.get("CITY_TZ", "Asia/Kolkata")
+CITY_NAME = env("CITY_NAME", "New Delhi")
+CITY_LAT = env("CITY_LAT", "28.6139")
+CITY_LON = env("CITY_LON", "77.2090")
+CITY_TZ = env("CITY_TZ", "Asia/Kolkata")
 
 # How close the forecaster has to land to count as a hit.
 FORECAST_TOLERANCE_C = 2.0
