@@ -106,6 +106,5 @@ _No bets have settled yet — the first ones resolve tomorrow._
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(85% confident, base rate)_
 - **no** — Today's most-read Wikipedia article will still be #1 tomorrow. _(62% confident, persistence)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
-- **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
 
 <!-- LEDGER:END -->

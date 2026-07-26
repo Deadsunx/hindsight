@@ -1,10 +1,10 @@
 {
   "date": "2026-07-26",
-  "fetched_at": "2026-07-26T10:37:52.458271+00:00",
+  "fetched_at": "2026-07-26T10:58:35.414709+00:00",
   "observations": {
     "btc": {
-      "usd": 64494,
-      "usd_24h_change": 0.87
+      "usd": 64464,
+      "usd_24h_change": 0.73
     },
     "kp": {
       "max_kp": 2.0,
@@ -13,7 +13,7 @@
     },
     "quakes": {
       "max_mag": 5.8,
-      "count": 206,
+      "count": 201,
       "strongest_place": "99 km SE of Atka, Alaska"
     },
     "wiki": {
@@ -26,24 +26,19 @@
       "top_title": "Ruff v0.16.0 \u2013 Significant new updates \u2013 413 default rules up from 59",
       "top10": [
         49056112,
+        49056194,
         49047453,
         49055169,
-        49056194,
         49054107,
         49051361,
-        49034777,
-        49005197,
+        49052912,
         49053375,
-        49052912
+        49054010,
+        49005197
       ]
     },
     "weather": {
-      "city": "New Delhi",
-      "actual_prev": 32.3,
-      "actual_prev_date": "2026-07-25",
-      "today": 33.3,
-      "forecast_next": 33.3,
-      "forecast_next_date": "2026-07-27"
+      "error": "Expecting value: line 1 column 1 (char 0)"
     }
   },
   "predictions": [
@@ -52,10 +47,10 @@
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
       "call": true,
-      "confidence": 0.529,
+      "confidence": 0.527,
       "basis": {
-        "today_usd": 64494,
-        "change_24h": 0.87
+        "today_usd": 64464,
+        "change_24h": 0.73
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
@@ -108,20 +103,6 @@
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
-    },
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 33.3,
-        "for_date": "2026-07-27",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-07-26",
-      "resolve_on": "2026-07-28"
     }
   ]
 }
