@@ -92,13 +92,45 @@ run rather than accumulated. A bad day can never corrupt the ledger, and
 - **Calibration** — when it says 70%, is it right 70% of the time? This needs
   months of sample size, which is exactly why it runs every day.
 
+## Don't trust it — check it
+
+```bash
+python verify.py
+```
+
+No network, no dependencies. It answers the two questions the whole project
+rests on:
+
+1. **Is the scorecard honest arithmetic?** It recomputes `ledger.json` and
+   `index.json` from `archive/` alone and compares. Hand-edit a total and it
+   names the exact field:
+
+   ```
+   [FAIL] ledger.json does not match a fresh recomputation:
+       .totals.accuracy: type NoneType != float
+       .totals.correct: 0 != 3
+   ```
+
+2. **Did the bets really predate their outcomes?** It asks git when each
+   archive day was last committed and requires that to be before the day it
+   could possibly be settled. Backdate a prediction and it fails.
+
+Exit code 0 means verified. CI runs it on every push, so a broken record
+cannot land silently.
+
+What it deliberately does **not** prove: that the observations were accurate.
+Nobody can re-fetch a past day's Hacker News front page. What it proves is that
+nothing was altered afterwards — which is the property the archive exists to
+have.
+
 ## Files
 
 | Path | What |
 | ---- | ---- |
 | `predict.py` | the engine — observe, predict, grade |
 | `learn.py` | logistic regression + walk-forward features |
-| `test_predict.py` / `test_learn.py` | offline tests, no network |
+| `verify.py` | audits the published record; no network needed |
+| `test_*.py` | offline tests, no network |
 | `archive/YYYY-MM-DD.json` | one day: observations + the bets placed that day |
 | `archive/ledger.json` | the full scorecard the page reads |
 | `archive/index.json` | per-day summary for the calendar |
@@ -115,7 +147,7 @@ Only the Python standard library is used — nothing to install, no API keys.
 Run the tests (offline, no network):
 
 ```bash
-python -m unittest test_predict test_learn -v
+python -m unittest test_predict test_learn test_verify -v
 ```
 
 ## Move the forecast bet to your city

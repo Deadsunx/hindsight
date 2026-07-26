@@ -15,6 +15,10 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
+        with:
+          # verify.py reads commit timestamps to prove predictions predate
+          # their outcomes; the default shallow clone has no history to read.
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -22,7 +26,12 @@ jobs:
           python-version: "3.12"
 
       - name: Byte-compile
-        run: python -m py_compile predict.py learn.py test_predict.py test_learn.py
+        run: |
+          python -m py_compile predict.py learn.py verify.py \
+            test_predict.py test_learn.py test_verify.py
 
       - name: Run tests (offline)
-        run: python -m unittest test_predict test_learn -v
+        run: python -m unittest test_predict test_learn test_verify -v
+
+      - name: Audit the published record
+        run: python verify.py
