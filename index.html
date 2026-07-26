@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>try{var t=localStorage.getItem('hs-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<title>Hindsight — a machine that guesses tomorrow and keeps score</title>
+<meta name="description" content="Every day an autonomous script places six falsifiable bets on tomorrow, commits them to a public repo before the outcome exists, and grades itself when the truth arrives. The git history is the receipt." />
+
+<!-- Favicon: a die on near-black -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B0F0E'/%3E%3Ccircle cx='10' cy='10' r='2.6' fill='%2352C08A'/%3E%3Ccircle cx='22' cy='22' r='2.6' fill='%23D96A5B'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%23D9B26A'/%3E%3C/svg%3E" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Hindsight" />
+<meta property="og:title" content="Hindsight — a machine that guesses tomorrow and keeps score" />
+<meta property="og:description" content="Six falsifiable bets a day, committed before the outcome exists. The git timestamps are the proof." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --void: #0B0F0E;
+    --slate: #101614;
+    --panel: #141C19;
+    --panel-2: #18211D;
+    --line: rgba(130, 168, 148, 0.18);
+    --line-soft: rgba(228, 232, 227, 0.08);
+    --chalk: #E4E8E3;
+    --dim: #8A968F;
+    --dimmer: #5C665F;
+    --hit: #52C08A;
+    --hit-soft: rgba(82, 192, 138, 0.16);
+    --miss: #D96A5B;
+    --miss-soft: rgba(217, 106, 91, 0.16);
+    --gold: #D9B26A;
+    --gold-soft: rgba(217, 178, 106, 0.14);
+    --shadow: 0 28px 70px -40px rgba(0,0,0,0.95);
+  }
+  :root[data-theme="light"] {
+    --void: #EDEBE3;
+    --slate: #F5F3EC;
+    --panel: #FBFAF4;
+    --panel-2: #F2F0E7;
+    --line: rgba(60, 92, 76, 0.22);
+    --line-soft: rgba(26, 33, 29, 0.10);
+    --chalk: #1A211D;
+    --dim: #5F6A63;
+    --dimmer: #8B948D;
+    --hit: #1F8355;
+    --hit-soft: rgba(31, 131, 85, 0.14);
+    --miss: #B14434;
+    --miss-soft: rgba(177, 68, 52, 0.13);
+    --gold: #8C6A20;
+    --gold-soft: rgba(140, 106, 32, 0.13);
+    --shadow: 0 22px 55px -42px rgba(30, 50, 40, 0.45);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--void);
+    color: var(--chalk);
+    font-family: "Inter", system-ui, sans-serif;
+    font-size: 16.5px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition: background .4s ease, color .4s ease;
+  }
+  .backdrop {
+    position: fixed; inset: 0; z-index: -1; transition: background .5s ease;
+    background:
+      radial-gradient(ellipse at 82% -8%, rgba(82,192,138,0.10), transparent 55%),
+      radial-gradient(ellipse at 6% 104%, rgba(217,106,91,0.09), transparent 52%);
+  }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: clamp(1.2rem, 4vw, 3rem); }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  a { color: inherit; }
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace; font-size: .68rem;
+    letter-spacing: .30em; text-transform: uppercase; color: var(--gold);
+  }
+
+  .theme-toggle {
+    position: fixed; top: 1rem; right: 1rem; z-index: 10;
+    font-family: "IBM Plex Mono", monospace; font-size: .66rem;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--gold);
+    background: color-mix(in srgb, var(--panel) 84%, transparent);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: .45rem .85rem; cursor: pointer; backdrop-filter: blur(6px);
+    transition: color .2s, border-color .2s;
+  }
+  .theme-toggle:hover { color: var(--chalk); border-color: var(--gold); }
+
+  /* ---------- masthead ---------- */
+  .masthead { padding: clamp(2.5rem, 7vw, 5rem) 0 clamp(1.5rem, 4vw, 2.5rem); }
+  h1 {
+    font-family: "Instrument Serif", Georgia, serif; font-weight: 400;
+    font-size: clamp(3.2rem, 11vw, 6.4rem); line-height: .92;
+    margin: .5rem 0 .6rem; letter-spacing: -.02em;
+  }
+  h1 em { font-style: italic; color: var(--gold); }
+  .lede { max-width: 46ch; color: var(--dim); font-size: 1.06rem; }
+  .lede strong { color: var(--chalk); font-weight: 500; }
+
+  /* ---------- the standing ---------- */
+  .standing {
+    margin: clamp(1.8rem, 5vw, 3rem) 0;
+    border: 1px solid var(--line); border-radius: 16px;
+    background: linear-gradient(160deg, var(--panel), var(--slate));
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .standing-main {
+    padding: clamp(1.4rem, 4vw, 2.4rem);
+    display: flex; flex-wrap: wrap; gap: clamp(1rem, 4vw, 2.5rem); align-items: center;
+  }
+  .bignum {
+    font-family: "Instrument Serif", serif; font-size: clamp(3.4rem, 12vw, 5.6rem);
+    line-height: 1; letter-spacing: -.02em;
+  }
+  .bignum.pending { color: var(--dimmer); }
+  .bignum-label { color: var(--dim); font-size: .9rem; max-width: 34ch; }
+  .stats { display: flex; flex-wrap: wrap; gap: 1.6rem; margin-left: auto; }
+  .stat-v { font-family: "IBM Plex Mono", monospace; font-size: 1.35rem; font-weight: 500; }
+  .stat-k {
+    font-family: "IBM Plex Mono", monospace; font-size: .62rem;
+    letter-spacing: .18em; text-transform: uppercase; color: var(--dimmer);
+  }
+  .baseline {
+    border-top: 1px solid var(--line-soft); padding: .85rem clamp(1.4rem, 4vw, 2.4rem);
+    font-size: .82rem; color: var(--dim); background: color-mix(in srgb, var(--void) 30%, transparent);
+  }
+  .baseline b { color: var(--chalk); font-weight: 500; }
+
+  /* ---------- sections ---------- */
+  section { margin: clamp(2.6rem, 7vw, 4.5rem) 0; }
+  h2 {
+    font-family: "Instrument Serif", serif; font-weight: 400;
+    font-size: clamp(1.7rem, 4.5vw, 2.5rem); margin: .35rem 0 .3rem; letter-spacing: -.01em;
+  }
+  .sub { color: var(--dim); font-size: .93rem; max-width: 62ch; margin-bottom: 1.6rem; }
+
+  /* ---------- open bets (receipt) ---------- */
+  .receipt {
+    border: 1px dashed var(--line); border-radius: 12px; background: var(--panel);
+    padding: clamp(1rem, 3vw, 1.6rem);
+  }
+  .bet { padding: .95rem 0; border-bottom: 1px solid var(--line-soft); }
+  .bet:last-child { border-bottom: 0; padding-bottom: 0; }
+  .bet:first-child { padding-top: 0; }
+  .bet-top { display: flex; gap: .8rem; align-items: baseline; flex-wrap: wrap; }
+  .call {
+    font-family: "IBM Plex Mono", monospace; font-size: .68rem; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase;
+    padding: .2rem .55rem; border-radius: 4px; flex-shrink: 0;
+  }
+  .call.yes { color: var(--hit); background: var(--hit-soft); }
+  .call.no  { color: var(--miss); background: var(--miss-soft); }
+  .bet-q { flex: 1; min-width: 15rem; font-size: .96rem; }
+  .bet-meta {
+    display: flex; gap: .7rem; align-items: center; margin-top: .5rem;
+    font-family: "IBM Plex Mono", monospace; font-size: .7rem; color: var(--dimmer);
+  }
+  .conf-bar { flex: 1; max-width: 130px; height: 3px; background: var(--line-soft); border-radius: 2px; overflow: hidden; }
+  .conf-fill { height: 100%; background: var(--gold); }
+
+  /* ---------- calendar ---------- */
+  .cal-shell { display: flex; gap: .5rem; overflow-x: auto; padding-bottom: .5rem; }
+  .cal-days {
+    display: grid; grid-template-rows: repeat(7, 1fr); gap: 3px;
+    font-family: "IBM Plex Mono", monospace; font-size: .58rem; color: var(--dimmer);
+    flex-shrink: 0; padding-top: 1px;
+  }
+  .cal-days span { height: 14px; line-height: 14px; }
+  .cal-grid { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 14px); gap: 3px; }
+  .cell {
+    width: 14px; height: 14px; border-radius: 3px;
+    background: var(--line-soft); transition: transform .12s;
+  }
+  .cell[data-state="none"] { background: color-mix(in srgb, var(--chalk) 6%, transparent); }
+  .cell[data-state="open"] { background: var(--gold-soft); border: 1px solid var(--gold); }
+  .cell[data-state="future"] { background: transparent; }
+  /* graded days get an inline background interpolated by that day's hit rate */
+  .ramp {
+    display: inline-block; width: 54px; height: 10px; border-radius: 2px; margin: 0 .35rem;
+    vertical-align: -1px;
+    background: linear-gradient(90deg, var(--miss), color-mix(in srgb, var(--hit) 50%, var(--miss)), var(--hit));
+  }
+  .cell:hover { transform: scale(1.35); cursor: default; }
+  .legend {
+    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-top: 1rem;
+    font-family: "IBM Plex Mono", monospace; font-size: .66rem; color: var(--dimmer);
+  }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: .35rem; vertical-align: -1px; }
+  .legend i.dashkey {
+    width: 18px; height: 0; border-radius: 0; vertical-align: 3px;
+    border-top: 1px dashed var(--dimmer);
+  }
+
+  /* ---------- calibration ---------- */
+  .calib { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); padding: clamp(1rem, 3vw, 1.6rem); }
+  .calib svg { width: 100%; height: auto; display: block; }
+  .axis-label { font-family: "IBM Plex Mono", monospace; font-size: 9px; fill: var(--dimmer); }
+
+  /* ---------- tables ---------- */
+  .tbl { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  .tbl th {
+    text-align: left; font-family: "IBM Plex Mono", monospace; font-weight: 500;
+    font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--dimmer); padding: 0 .8rem .6rem 0; border-bottom: 1px solid var(--line);
+  }
+  .tbl td { padding: .75rem .8rem .75rem 0; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+  .tbl tr:last-child td { border-bottom: 0; }
+  .tbl .num { font-family: "IBM Plex Mono", monospace; white-space: nowrap; }
+  .rule-tag {
+    font-family: "IBM Plex Mono", monospace; font-size: .66rem; color: var(--dim);
+    border: 1px solid var(--line); border-radius: 4px; padding: .1rem .4rem; white-space: nowrap;
+  }
+  .verdict { font-family: "IBM Plex Mono", monospace; font-size: .72rem; font-weight: 600; letter-spacing: .1em; }
+  .verdict.hit { color: var(--hit); }
+  .verdict.miss { color: var(--miss); }
+
+  .scroller { overflow-x: auto; }
+  .empty {
+    border: 1px dashed var(--line); border-radius: 12px; padding: 2rem 1.4rem;
+    text-align: center; color: var(--dim); font-size: .92rem;
+  }
+  .empty b { color: var(--chalk); font-weight: 500; display: block; margin-bottom: .3rem; }
+
+  /* ---------- how it works ---------- */
+  .how { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.2rem; }
+  .card { border: 1px solid var(--line); border-radius: 12px; background: var(--panel); padding: 1.2rem; }
+  .card h3 {
+    font-family: "IBM Plex Mono", monospace; font-size: .66rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--gold); margin: 0 0 .6rem; font-weight: 500;
+  }
+  .card p { margin: 0; font-size: .89rem; color: var(--dim); }
+  .card p b { color: var(--chalk); font-weight: 500; }
+
+  footer {
+    border-top: 1px solid var(--line); margin-top: 4rem; padding: 1.8rem 0 3rem;
+    font-family: "IBM Plex Mono", monospace; font-size: .72rem; color: var(--dimmer);
+    display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  }
+  footer a { color: var(--dim); text-decoration: none; border-bottom: 1px solid var(--line); }
+  footer a:hover { color: var(--chalk); }
+
+  @media (max-width: 620px) {
+    .stats { margin-left: 0; gap: 1.2rem; }
+    .bignum { font-size: 3.4rem; }
+  }
+</style>
+</head>
+<body>
+<div class="backdrop"></div>
+<button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">Light</button>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">An autonomous prediction ledger</div>
+    <h1>Hind<em>sight</em></h1>
+    <p class="lede">
+      Every day a script places six falsifiable bets on tomorrow, <strong>commits them to a
+      public repo before the outcome exists</strong>, and grades itself when the truth arrives.
+      It cannot quietly delete the ones it got wrong — the timestamps are the receipt.
+    </p>
+  </header>
+
+  <div class="standing" id="standing">
+    <div class="standing-main">
+      <div>
+        <div class="bignum pending" id="accuracy">—</div>
+        <div class="bignum-label" id="accuracyLabel">Loading the ledger…</div>
+      </div>
+      <div class="stats">
+        <div><div class="stat-v" id="statSettled">—</div><div class="stat-k">Settled</div></div>
+        <div><div class="stat-v" id="statBrier">—</div><div class="stat-k">Brier</div></div>
+        <div><div class="stat-v" id="statOpen">—</div><div class="stat-k">Open</div></div>
+        <div><div class="stat-v" id="statDays">—</div><div class="stat-k">Days</div></div>
+      </div>
+    </div>
+    <div class="baseline" id="baseline">
+      A Brier score of <b>0.250</b> is what you get by shrugging and saying “50%” to everything.
+      Lower is better. Higher means the machine is confidently wrong.
+    </div>
+  </div>
+
+  <section>
+    <div class="eyebrow">Placed, not yet settled</div>
+    <h2>Open bets</h2>
+    <p class="sub">
+      These are live. Nothing below has an outcome yet — the world has not caught up to them.
+    </p>
+    <div id="openBets"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Every day it has ever guessed</div>
+    <h2>The record</h2>
+    <p class="sub">
+      One square per day, shaded by how much of that day it got right — red for a day it missed
+      entirely, green for a clean sweep. Most days land somewhere in between, which is the honest
+      texture of predicting anything.
+    </p>
+    <div class="cal-shell">
+      <div class="cal-days"><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span><span>Sun</span></div>
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
+    <div class="legend">
+      <span>all wrong<i class="ramp"></i>all right</span>
+      <span><i style="background:var(--gold-soft);border:1px solid var(--gold)"></i>still open</span>
+      <span><i style="background:color-mix(in srgb, var(--chalk) 6%, transparent)"></i>no run</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Does 70% actually mean 70%</div>
+    <h2>Calibration</h2>
+    <p class="sub">
+      The chart nobody can fake and nobody can rush. Each dot is a confidence band: how sure the
+      machine claimed to be, against how often it was actually right. On the diagonal means honest.
+      Below it means bluffing. This one needs months of sample size before it means anything —
+      which is exactly why the script runs every single day.
+    </p>
+    <div class="calib" id="calibWrap"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Which rules are beating chance</div>
+    <h2>By the rule</h2>
+    <p class="sub">
+      Six rules, stated in advance and never tuned after the fact. Some of these are close to coin
+      flips and are expected to prove it.
+    </p>
+    <div class="scroller"><table class="tbl" id="leaderboard"></table></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Settled, win or lose</div>
+    <h2>The receipts</h2>
+    <p class="sub">Most recent first. Misses are not hidden — that is the entire point.</p>
+    <div class="scroller"><table class="tbl" id="receipts"></table></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">How it works</div>
+    <h2>Why this is hard to fake</h2>
+    <div class="how">
+      <div class="card">
+        <h3>01 · Observe</h3>
+        <p>Six keyless public sources — <b>crypto, geomagnetic storms, earthquakes, Wikipedia, Hacker News, the weather</b> — read fresh each run.</p>
+      </div>
+      <div class="card">
+        <h3>02 · Predict</h3>
+        <p>Each rule makes one binary call with a <b>stated confidence</b>, using only what was knowable at that moment.</p>
+      </div>
+      <div class="card">
+        <h3>03 · Commit</h3>
+        <p>The calls are pushed <b>before the outcome exists</b>. The commit timestamp sits in public git history and cannot be moved.</p>
+      </div>
+      <div class="card">
+        <h3>04 · Grade</h3>
+        <p>Grading is re-derived from the archive on every run, so the ledger is a <b>pure function of the record</b> — never an accumulated number that could drift.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Runs twice daily on GitHub Actions · standard library only · no API keys</span>
+    <span id="updated"></span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------- theme ----------
+  var btn = document.getElementById("themeBtn");
+  function applyTheme(t) {
+    document.documentElement.dataset.theme = t;
+    btn.textContent = t === "light" ? "Dark" : "Light";
+    try { localStorage.setItem("hs-theme", t); } catch (e) {}
+  }
+  applyTheme(document.documentElement.dataset.theme === "light" ? "light" : "dark");
+  btn.addEventListener("click", function () {
+    applyTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
+  });
+
+  // ---------- helpers ----------
+  function pct(x, digits) {
+    if (x === null || x === undefined) return "—";
+    return (x * 100).toFixed(digits === undefined ? 0 : digits) + "%";
+  }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  }
+  function iso(d) { return d.toISOString().slice(0, 10); }
+  function parseISO(s) { return new Date(s + "T00:00:00Z"); }
+
+  function getJSON(path) {
+    return fetch(path, { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error(path + " " + r.status);
+      return r.json();
+    });
+  }
+
+  // ---------- standing ----------
+  function renderStanding(ledger) {
+    var t = ledger.totals;
+    var acc = document.getElementById("accuracy");
+    var label = document.getElementById("accuracyLabel");
+
+    if (t.graded > 0) {
+      acc.textContent = pct(t.accuracy);
+      acc.classList.remove("pending");
+      label.innerHTML = "of <b>" + t.graded + "</b> settled bets called correctly.";
+    } else {
+      acc.textContent = "—";
+      label.textContent = "No bets have settled yet. The first ones resolve tomorrow.";
+    }
+    document.getElementById("statSettled").textContent = t.graded;
+    document.getElementById("statBrier").textContent =
+      t.brier === null || t.brier === undefined ? "—" : t.brier.toFixed(3);
+    document.getElementById("statOpen").textContent = t.open;
+    document.getElementById("statDays").textContent = t.days;
+
+    if (t.graded > 0 && t.brier !== null) {
+      var verdict = t.brier < 0.25
+        ? "Currently <b>better than a shrug</b>."
+        : "Currently <b>no better than a shrug</b>.";
+      document.getElementById("baseline").innerHTML =
+        "A Brier score of <b>0.250</b> is what you get by saying “50%” to everything. " +
+        "Lower is better. " + verdict;
+    }
+    document.getElementById("updated").textContent =
+      "Updated " + (ledger.updated || "").slice(0, 16).replace("T", " ") + " UTC";
+  }
+
+  // ---------- open bets ----------
+  function renderOpen(ledger) {
+    var host = document.getElementById("openBets");
+    host.innerHTML = "";
+    var bets = (ledger.open_bets || []).slice().sort(function (a, b) {
+      return a.resolve_on < b.resolve_on ? -1 : 1;
+    });
+    if (!bets.length) {
+      host.appendChild(Object.assign(el("div", "empty"), {
+        innerHTML: "<b>Nothing open.</b>The next run will place a fresh set."
+      }));
+      return;
+    }
+    var receipt = el("div", "receipt");
+    bets.forEach(function (b) {
+      var row = el("div", "bet");
+      var top = el("div", "bet-top");
+      top.appendChild(el("span", "call " + (b.call ? "yes" : "no"), b.call ? "yes" : "no"));
+      top.appendChild(el("span", "bet-q", b.question));
+      row.appendChild(top);
+
+      var meta = el("div", "bet-meta");
+      meta.appendChild(el("span", null, pct(b.confidence) + " confident"));
+      var bar = el("div", "conf-bar");
+      var fill = el("div", "conf-fill");
+      fill.style.width = Math.round(b.confidence * 100) + "%";
+      bar.appendChild(fill);
+      meta.appendChild(bar);
+      meta.appendChild(el("span", "rule-tag", b.rule));
+      meta.appendChild(el("span", null, "settles " + b.resolve_on));
+      row.appendChild(meta);
+      receipt.appendChild(row);
+    });
+    host.appendChild(receipt);
+  }
+
+  // ---------- calendar ----------
+  var WEEKS = 14;
+  function renderCalendar(index) {
+    var grid = document.getElementById("calGrid");
+    grid.innerHTML = "";
+
+    var byDate = {};
+    (index || []).forEach(function (d) { byDate[d.date] = d; });
+
+    // End on the Sunday of the current week so the grid is a clean rectangle.
+    var today = new Date();
+    today.setUTCHours(0, 0, 0, 0);
+    var dow = (today.getUTCDay() + 6) % 7;          // 0 = Monday
+    var end = new Date(today); end.setUTCDate(end.getUTCDate() + (6 - dow));
+    var start = new Date(end); start.setUTCDate(start.getUTCDate() - (WEEKS * 7 - 1));
+
+    var todayStr = iso(today);
+    for (var i = 0; i < WEEKS * 7; i++) {
+      var d = new Date(start); d.setUTCDate(start.getUTCDate() + i);
+      var key = iso(d);
+      var cell = el("div", "cell");
+      var entry = byDate[key];
+      var state = "none", title = key + " — no run";
+
+      if (key > todayStr) {
+        state = "future"; title = "";
+      } else if (entry && entry.made > 0) {
+        if (entry.graded === 0) {
+          state = "open";
+          title = key + " — " + entry.made + " placed, none settled yet";
+        } else {
+          // Six bets a day means almost every day is a split. Ramping the
+          // colour by hit rate keeps that signal instead of flattening it.
+          var rate = entry.correct / entry.graded;
+          state = "graded";
+          cell.style.background =
+            "color-mix(in srgb, var(--hit) " + Math.round(rate * 100) + "%, var(--miss))";
+          title = key + " — " + entry.correct + "/" + entry.graded + " correct";
+        }
+      }
+      cell.dataset.state = state;
+      if (title) cell.title = title;
+      grid.appendChild(cell);
+    }
+  }
+
+  // ---------- calibration ----------
+  function renderCalibration(ledger) {
+    var host = document.getElementById("calibWrap");
+    var bands = (ledger.calibration || []).filter(function (b) { return b.n > 0; });
+
+    if (!bands.length) {
+      host.innerHTML = "";
+      host.appendChild(Object.assign(el("div", "empty"), {
+        innerHTML: "<b>Not enough evidence yet.</b>" +
+          "This chart needs settled bets across several confidence bands. Come back in a month."
+      }));
+      return;
+    }
+
+    var W = 620, H = 380, P = 42;
+    function sx(v) { return P + (v - 0.5) * (W - 2 * P) / 0.5; }
+    function sy(v) { return H - P - v * (H - 2 * P); }
+
+    var parts = [
+      '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Calibration curve">',
+      '<rect x="' + P + '" y="' + P + '" width="' + (W - 2 * P) + '" height="' + (H - 2 * P) +
+        '" fill="none" stroke="var(--line-soft)"/>',
+      // perfect-calibration diagonal
+      '<line x1="' + sx(0.5) + '" y1="' + sy(0.5) + '" x2="' + sx(1) + '" y2="' + sy(1) +
+        '" stroke="var(--dimmer)" stroke-dasharray="4 4" stroke-width="1"/>'
+    ];
+
+    [0.5, 0.75, 1].forEach(function (v) {
+      parts.push('<text class="axis-label" x="' + sx(v) + '" y="' + (H - P + 16) +
+        '" text-anchor="middle">' + Math.round(v * 100) + '%</text>');
+      parts.push('<text class="axis-label" x="' + (P - 8) + '" y="' + (sy(v) + 3) +
+        '" text-anchor="end">' + Math.round(v * 100) + '%</text>');
+    });
+    parts.push('<text class="axis-label" x="' + (W / 2) + '" y="' + (H - 6) +
+      '" text-anchor="middle">confidence claimed</text>');
+    parts.push('<text class="axis-label" x="14" y="' + (H / 2) +
+      '" text-anchor="middle" transform="rotate(-90 14 ' + (H / 2) + ')">actually right</text>');
+
+    // connect the dots, then draw them sized by sample count
+    var pts = bands.map(function (b) { return [sx(b.claimed), sy(b.actual)]; });
+    if (pts.length > 1) {
+      parts.push('<polyline points="' + pts.map(function (p) { return p.join(","); }).join(" ") +
+        '" fill="none" stroke="var(--gold)" stroke-width="1.5" opacity="0.55"/>');
+    }
+    bands.forEach(function (b) {
+      var x = sx(b.claimed), y = sy(b.actual);
+      var r = Math.min(16, 5 + Math.sqrt(b.n) * 1.6);
+      var honest = Math.abs(b.actual - b.claimed) <= 0.1;
+      parts.push('<circle cx="' + x + '" cy="' + y + '" r="' + r +
+        '" fill="' + (honest ? "var(--hit)" : "var(--miss)") + '" opacity="0.75"/>');
+      parts.push('<title>' + b.label + " — claimed " + pct(b.claimed) +
+        ", right " + pct(b.actual) + " over " + b.n + " bets</title>");
+      parts.push('<text class="axis-label" x="' + x + '" y="' + (y - r - 6) +
+        '" text-anchor="middle">n=' + b.n + '</text>');
+    });
+    parts.push("</svg>");
+    // The key lives under the chart, where no data point can ever land on it.
+    parts.push(
+      '<div class="legend" style="margin-top:.4rem">' +
+        '<span><i class="dashkey"></i>perfectly calibrated</span>' +
+        '<span><i style="background:var(--hit)"></i>claim within 10 pts of reality</span>' +
+        '<span><i style="background:var(--miss)"></i>over- or under-confident</span>' +
+        '<span>dot size = bets in that band</span>' +
+      "</div>"
+    );
+    host.innerHTML = parts.join("");
+  }
+
+  // ---------- leaderboard ----------
+  function renderLeaderboard(ledger) {
+    var table = document.getElementById("leaderboard");
+    var rows = Object.keys(ledger.by_predictor || {}).map(function (id) {
+      var r = ledger.by_predictor[id];
+      r.id = id; return r;
+    });
+    rows.sort(function (a, b) {
+      if (a.accuracy === null) return 1;
+      if (b.accuracy === null) return -1;
+      return b.accuracy - a.accuracy;
+    });
+    var html = ["<thead><tr><th>Call</th><th>Rule</th><th>Record</th><th>Accuracy</th></tr></thead><tbody>"];
+    rows.forEach(function (r) {
+      html.push(
+        "<tr><td>" + r.question + "</td>" +
+        '<td><span class="rule-tag">' + r.rule + "</span></td>" +
+        '<td class="num">' + (r.graded ? r.correct + " / " + r.graded : "—") + "</td>" +
+        '<td class="num">' + (r.accuracy === null ? "—" : pct(r.accuracy)) + "</td></tr>"
+      );
+    });
+    html.push("</tbody>");
+    table.innerHTML = html.join("");
+  }
+
+  // ---------- receipts ----------
+  function renderReceipts(ledger) {
+    var table = document.getElementById("receipts");
+    var grades = (ledger.grades || []).slice().sort(function (a, b) {
+      return a.made_on < b.made_on ? 1 : -1;
+    }).slice(0, 25);
+
+    if (!grades.length) {
+      table.outerHTML = '<div class="empty" id="receipts"><b>No settled bets yet.</b>' +
+        'The first receipts appear once tomorrow arrives.</div>';
+      return;
+    }
+    var html = ["<thead><tr><th>Placed</th><th>Call</th><th>Said</th><th>Truth</th><th></th></tr></thead><tbody>"];
+    grades.forEach(function (g) {
+      html.push(
+        '<tr><td class="num">' + g.made_on + "</td>" +
+        "<td>" + (g.question || g.id) + "</td>" +
+        '<td class="num">' + (g.call ? "yes" : "no") + " @ " + pct(g.confidence) + "</td>" +
+        '<td class="num">' + (g.actual ? "yes" : "no") + "</td>" +
+        '<td class="verdict ' + (g.correct ? "hit" : "miss") + '">' +
+          (g.correct ? "RIGHT" : "WRONG") + "</td></tr>"
+      );
+    });
+    html.push("</tbody>");
+    table.innerHTML = html.join("");
+  }
+
+  // ---------- boot ----------
+  Promise.all([
+    getJSON("archive/ledger.json"),
+    getJSON("archive/index.json").catch(function () { return []; })
+  ]).then(function (res) {
+    var ledger = res[0], index = res[1];
+    renderStanding(ledger);
+    renderOpen(ledger);
+    renderCalendar(index);
+    renderCalibration(ledger);
+    renderLeaderboard(ledger);
+    renderReceipts(ledger);
+  }).catch(function (err) {
+    document.getElementById("accuracyLabel").textContent =
+      "Could not load the ledger (" + err.message + ").";
+  });
+})();
+</script>
+</body>
+</html>

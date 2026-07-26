@@ -1,0 +1,127 @@
+{
+  "date": "2026-07-26",
+  "fetched_at": "2026-07-26T10:37:52.458271+00:00",
+  "observations": {
+    "btc": {
+      "usd": 64494,
+      "usd_24h_change": 0.87
+    },
+    "kp": {
+      "max_kp": 2.0,
+      "latest_kp": 2.0,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.8,
+      "count": 206,
+      "strongest_place": "99 km SE of Atka, Alaska"
+    },
+    "wiki": {
+      "top": "Pralhad_Joshi",
+      "views": 756586,
+      "for_date": "2026-07-25"
+    },
+    "hn": {
+      "top_id": 49056112,
+      "top_title": "Ruff v0.16.0 \u2013 Significant new updates \u2013 413 default rules up from 59",
+      "top10": [
+        49056112,
+        49047453,
+        49055169,
+        49056194,
+        49054107,
+        49051361,
+        49034777,
+        49005197,
+        49053375,
+        49052912
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 32.3,
+      "actual_prev_date": "2026-07-25",
+      "today": 33.3,
+      "forecast_next": 33.3,
+      "forecast_next_date": "2026-07-27"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "call": true,
+      "confidence": 0.529,
+      "basis": {
+        "today_usd": 64494,
+        "change_24h": 0.87
+      },
+      "made_on": "2026-07-26",
+      "resolve_on": "2026-07-27"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 2.0
+      },
+      "made_on": "2026-07-26",
+      "resolve_on": "2026-07-27"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "call": true,
+      "confidence": 0.85,
+      "basis": {
+        "base_rate": 0.85
+      },
+      "made_on": "2026-07-26",
+      "resolve_on": "2026-07-27"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Pralhad_Joshi"
+      },
+      "made_on": "2026-07-26",
+      "resolve_on": "2026-07-27"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 49056112,
+        "top_title": "Ruff v0.16.0 \u2013 Significant new updates \u2013 413 default rules up from 59"
+      },
+      "made_on": "2026-07-26",
+      "resolve_on": "2026-07-27"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 33.3,
+        "for_date": "2026-07-27",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-07-26",
+      "resolve_on": "2026-07-28"
+    }
+  ]
+}
