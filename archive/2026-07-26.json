@@ -1,10 +1,10 @@
 {
   "date": "2026-07-26",
-  "fetched_at": "2026-07-26T11:41:49.878399+00:00",
+  "fetched_at": "2026-07-26T16:49:58.438959+00:00",
   "observations": {
     "btc": {
-      "usd": 64450,
-      "usd_24h_change": 0.67
+      "usd": 64766,
+      "usd_24h_change": 0.93
     },
     "kp": {
       "max_kp": 2.0,
@@ -13,7 +13,7 @@
     },
     "quakes": {
       "max_mag": 5.8,
-      "count": 196,
+      "count": 211,
       "strongest_place": "99 km SE of Atka, Alaska"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-07-25"
     },
     "hn": {
-      "top_id": 49056112,
-      "top_title": "Ruff v0.16.0 \u2013 Significant new updates \u2013 413 default rules up from 59",
+      "top_id": 49058669,
+      "top_title": "Park by Robot at London Gatwick Airport",
       "top10": [
+        49058669,
+        49059367,
+        49057175,
+        49059398,
+        49058993,
         49056112,
-        49056194,
-        49055169,
-        49047453,
-        49015286,
-        49054107,
-        49051361,
-        49052912,
-        49053375,
-        49054010
+        49057398,
+        49022355,
+        49057241,
+        49057877
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.3,
       "actual_prev_date": "2026-07-25",
-      "today": 33.3,
-      "forecast_next": 33.3,
+      "today": 33.7,
+      "forecast_next": 33.8,
       "forecast_next_date": "2026-07-27"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.527,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 64450,
-        "change_24h": 0.67
+        "today_usd": 64766,
+        "change_24h": 0.93
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49056112,
-        "top_title": "Ruff v0.16.0 \u2013 Significant new updates \u2013 413 default rules up from 59"
+        "top_id": 49058669,
+        "top_title": "Park by Robot at London Gatwick Airport"
       },
       "made_on": "2026-07-26",
       "resolve_on": "2026-07-27"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.3,
+        "forecast_c": 33.8,
         "for_date": "2026-07-27",
         "city": "New Delhi"
       },
