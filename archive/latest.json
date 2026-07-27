@@ -1,20 +1,20 @@
 {
   "date": "2026-07-27",
-  "fetched_at": "2026-07-27T07:28:13.198977+00:00",
+  "fetched_at": "2026-07-27T17:36:42.319228+00:00",
   "observations": {
     "btc": {
-      "usd": 65375,
-      "usd_24h_change": 1.64
+      "usd": 64995,
+      "usd_24h_change": 0.46
     },
     "kp": {
       "max_kp": 2.0,
-      "latest_kp": 1.0,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.8,
-      "count": 233,
-      "strongest_place": "99 km SE of Atka, Alaska"
+      "max_mag": 5.4,
+      "count": 253,
+      "strongest_place": "82 km SSW of San Pedro de Atacama, Chile"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-07-26"
     },
     "hn": {
-      "top_id": 49063754,
-      "top_title": "PGSimCity - How PostgreSQL Works",
+      "top_id": 49065752,
+      "top_title": "Kimi-K3 on HuggingFace",
       "top10": [
-        49063754,
-        49021270,
         49065752,
-        49063175,
-        49060856,
-        49060495,
-        49063022,
-        49062291,
-        49020219,
-        49057241
+        49072310,
+        49020993,
+        49012309,
+        49067301,
+        49072462,
+        49072523,
+        49069939,
+        49072361,
+        49067352
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.7,
       "actual_prev_date": "2026-07-26",
-      "today": 34.7,
-      "forecast_next": 31.6,
+      "today": 35.3,
+      "forecast_next": 32.1,
       "forecast_next_date": "2026-07-28"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.536,
+      "confidence": 0.525,
       "basis": {
-        "today_usd": 65375,
-        "change_24h": 1.64
+        "today_usd": 64995,
+        "change_24h": 0.46
       },
       "made_on": "2026-07-27",
       "resolve_on": "2026-07-28"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49063754,
-        "top_title": "PGSimCity - How PostgreSQL Works"
+        "top_id": 49065752,
+        "top_title": "Kimi-K3 on HuggingFace"
       },
       "made_on": "2026-07-27",
       "resolve_on": "2026-07-28"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.6,
+        "forecast_c": 32.1,
         "for_date": "2026-07-28",
         "city": "New Delhi"
       },

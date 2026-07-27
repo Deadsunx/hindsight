@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T07:28:14.652438+00:00",
+  "updated": "2026-07-27T17:36:43.437270+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -227,10 +227,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.536,
+      "confidence": 0.525,
       "basis": {
-        "today_usd": 65375,
-        "change_24h": 1.64
+        "today_usd": 64995,
+        "change_24h": 0.46
       },
       "made_on": "2026-07-27",
       "resolve_on": "2026-07-28"
@@ -286,8 +286,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49063754,
-        "top_title": "PGSimCity - How PostgreSQL Works"
+        "top_id": 49065752,
+        "top_title": "Kimi-K3 on HuggingFace"
       },
       "made_on": "2026-07-27",
       "resolve_on": "2026-07-28"
@@ -301,7 +301,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.6,
+        "forecast_c": 32.1,
         "for_date": "2026-07-28",
         "city": "New Delhi"
       },
