@@ -161,18 +161,18 @@ CITY_NAME="Bamako" CITY_LAT=12.6392 CITY_LON=-8.0029 CITY_TZ=Africa/Bamako pytho
 ```
 
 <!-- LEDGER:START -->
-### 🎲 Standing — 2026-07-27
+### 🎲 Standing — 2026-07-28
 
-**5 right / 5 settled (100%)** · Brier 0.090 · 7 still open
+**9 right / 11 settled (82%)** · Brier 0.112 · 7 still open
 
 | Call | Rule | Record |
 | --- | --- | --- |
-| Bitcoin will be higher tomorrow than it is today. | momentum | 1/1 (100%) |
-| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | 1/1 (100%) |
-| A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | 1/1 (100%) |
-| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | 1/1 (100%) |
-| The current #1 story on Hacker News will fall out of the top 10. | decay | 1/1 (100%) |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | — |
+| Bitcoin will be higher tomorrow than it is today. | momentum | 1/2 (50%) |
+| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | 2/2 (100%) |
+| A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | 2/2 (100%) |
+| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | 1/2 (50%) |
+| The current #1 story on Hacker News will fall out of the top 10. | decay | 2/2 (100%) |
+| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | 1/1 (100%) |
 | Bitcoin will be higher tomorrow than it is today. | logistic regression | — |
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | logistic regression | — |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | logistic regression | — |
@@ -182,10 +182,10 @@ CITY_NAME="Bamako" CITY_LAT=12.6392 CITY_LON=-8.0029 CITY_TZ=Africa/Bamako pytho
 
 **Open bets, placed today:**
 
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
+- **no** — Bitcoin will be higher tomorrow than it is today. _(55% confident, momentum)_
 - **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(78% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(85% confident, base rate)_
-- **no** — Today's most-read Wikipedia article will still be #1 tomorrow. _(62% confident, persistence)_
+- **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
 - **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
 
