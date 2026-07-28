@@ -4,7 +4,7 @@ Six falsifiable forecasts a day, committed to public git **before the outcome
 exists**, then scored against a hand-written rule, a coin flip, and the base
 rate. Pure standard-library Python, no API keys, no dependencies.
 
-**Live page → https://pas-vraiment-secret.vercel.app/**
+**Live page → https://hindsight-deadsunx.vercel.app/**
 _(mirrored at [deadsunx.github.io/hindsight](https://deadsunx.github.io/hindsight/))_
 
 ## The leak the test caught
