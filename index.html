@@ -249,7 +249,7 @@
     </div>
     <ol class="entries" id="openBets"></ol>
     <div class="slip-foot">
-      <a id="commitLink" href="https://github.com/Deadsunx/pas-vraiment-secret/commits/main/archive" rel="noopener">
+      <a id="commitLink" href="https://github.com/Deadsunx/hindsight/commits/main/archive" rel="noopener">
         Inspect the commit that sealed this entry
       </a>
     </div>
@@ -259,14 +259,16 @@
     <div class="standing">
       <div class="fig"><div class="fig-v none" id="figAcc">—</div><div class="fig-k">Right</div></div>
       <div class="fig"><div class="fig-v none" id="figBrier">—</div><div class="fig-k">Brier</div></div>
+      <div class="fig"><div class="fig-v none" id="figLoss">—</div><div class="fig-k">Log loss</div></div>
       <div class="fig"><div class="fig-v" id="figSettled">—</div><div class="fig-k">Settled</div></div>
       <div class="fig"><div class="fig-v" id="figOpen">—</div><div class="fig-k">Open</div></div>
       <div class="fig"><div class="fig-v" id="figVoid">—</div><div class="fig-k">Void</div></div>
     </div>
     <p class="gloss" id="gloss">
-      A Brier score of <b>0.250</b> is what shrugging and saying “fifty-fifty” to everything earns you.
-      Lower is better. Higher means confidently wrong. Void means a bet that never got settled —
-      counted apart, never as a win.
+      A Brier score of <b>0.250</b> and a log loss of <b>0.693</b> are what shrugging and saying
+      “fifty-fifty” to everything earns you. Lower is better on both. Log loss is the harsher of the
+      two on purpose — it punishes a confident mistake far more than a cautious one, which accuracy
+      cannot see at all. Void means a bet that never got settled — counted apart, never as a win.
     </p>
   </section>
 
@@ -286,6 +288,20 @@
       <span><i style="border:1px dashed var(--pencil)"></i>still open</span>
       <span><i style="background:var(--rule-soft)"></i>no entry</span>
     </div>
+  </section>
+
+  <section class="block">
+    <span class="label">what each question is actually worth</span>
+    <h2>Per question</h2>
+    <p class="note">
+      Every question scored on its own record, against the two numbers that decide whether the
+      score means anything. <b>Coin flip</b> is what saying “fifty-fifty” to everything earns.
+      <b>Base rate</b> is how often the event simply happens — a question whose answer is “yes”
+      nine days in ten hands you 90% accuracy for nothing, and without this column there is no way
+      to tell that apart from skill. Sample size is printed on every row because at these numbers
+      it is the most important figure on the page.
+    </p>
+    <div class="scroll" id="perQuestion"></div>
   </section>
 
   <section class="block">
@@ -526,7 +542,7 @@
       document.getElementById("slipSeal").textContent =
         "sealed " + latest.fetched_at.slice(11, 16) + " utc";
       document.getElementById("commitLink").href =
-        "https://github.com/Deadsunx/pas-vraiment-secret/commits/main/archive/" +
+        "https://github.com/Deadsunx/hindsight/commits/main/archive/" +
         latest.date + ".json";
     }
 
@@ -584,6 +600,11 @@
       brier.textContent = t.brier.toFixed(3);
       brier.classList.remove("none");
     }
+    var loss = document.getElementById("figLoss");
+    if (t.log_loss !== null && t.log_loss !== undefined) {
+      loss.textContent = t.log_loss.toFixed(3);
+      loss.classList.remove("none");
+    }
     document.getElementById("figSettled").textContent = t.graded;
     document.getElementById("figOpen").textContent = t.open;
     document.getElementById("figVoid").textContent = t.void;
@@ -640,6 +661,70 @@
     }
   }
 
+  // ---------- per question ----------
+  function num(v, d) {
+    return (v === null || v === undefined) ? "—" : v.toFixed(d === undefined ? 3 : d);
+  }
+
+  function renderPerQuestion(ledger) {
+    var host = document.getElementById("perQuestion");
+    var rows = ledger.by_predictor || {};
+    var fams = ledger.head_to_head || {};
+    var coin = (ledger.baselines || {}).coin_flip || {};
+
+    // Rule rows always; a model row only once it has actually bet, or the
+    // table is half placeholders and the real record gets lost in them.
+    var keys = Object.keys(rows).filter(function (k) {
+      return rows[k].variant === "rule" || rows[k].graded > 0;
+    });
+    if (!keys.length) {
+      host.innerHTML = '<div class="blank"><b>Nothing has settled yet.</b>' +
+        "The first answers arrive tomorrow.</div>";
+      return;
+    }
+
+    var html = ["<table class='h2h'><thead><tr><th>Question</th><th>Answered by</th>" +
+      "<th>Settled</th><th>Right</th><th>Brier</th><th>Log loss</th><th>Base rate</th>" +
+      "</tr></thead><tbody>"];
+
+    keys.forEach(function (k) {
+      var r = rows[k];
+      var rate = ((fams[r.family] || {}).base_rate) || {};
+      if (!r.graded) {
+        html.push("<tr><td>" + r.question + '</td><td class="by">' + r.rule +
+          '</td><td class="cold" colspan="5">nothing settled yet</td></tr>');
+        return;
+      }
+      // Beating the coin flip is the minimum bar; failing it is worth showing
+      // in red rather than quietly printing a number nobody compares.
+      var beatsCoin = r.brier !== null && coin.brier !== undefined && r.brier < coin.brier;
+      html.push(
+        "<tr><td>" + r.question + '</td>' +
+        '<td class="by">' + r.rule + "</td>" +
+        '<td class="num">n=' + r.graded + "</td>" +
+        '<td class="num">' + r.correct + " of " + r.graded +
+          '<span class="sub">' + pct(r.accuracy) + "</span></td>" +
+        '<td class="num' + (beatsCoin ? "" : " miss") + '">' + num(r.brier) + "</td>" +
+        '<td class="num">' + num(r.log_loss) + "</td>" +
+        '<td class="num">' + (rate.rate === null || rate.rate === undefined ? "—" : pct(rate.rate)) +
+          '<span class="sub">majority ' +
+          (rate.majority_accuracy === null || rate.majority_accuracy === undefined
+            ? "—" : pct(rate.majority_accuracy)) + "</span></td></tr>"
+      );
+    });
+
+    // The baseline is a row in the same table, not a footnote elsewhere.
+    html.push('<tr><td class="cold">coin flip — the baseline</td>' +
+      '<td class="by">50% to everything</td>' +
+      '<td class="num">n=' + (coin.n === undefined ? 0 : coin.n) + "</td>" +
+      '<td class="num">' + pct(0.5) + "</td>" +
+      '<td class="num">' + num(coin.brier) + "</td>" +
+      '<td class="num">' + num(coin.log_loss) + "</td>" +
+      '<td class="num">—</td></tr>');
+    html.push("</tbody></table>");
+    host.innerHTML = html.join("");
+  }
+
   // ---------- rules and models ----------
   function renderHeadToHead(ledger) {
     var host = document.getElementById("headToHead");
@@ -669,7 +754,8 @@
       function side(s, wins) {
         return '<td class="num' + (wins ? " lead" : "") + '">' +
           f[s + "_correct"] + " of " + f.shared_days +
-          '<span class="sub">brier ' + f[s + "_brier"].toFixed(3) + "</span></td>";
+          '<span class="sub">brier ' + num(f[s + "_brier"]) +
+          " · log loss " + num(f[s + "_log_loss"]) + "</span></td>";
       }
       html.push("<tr><td>" + f.question + "</td>" + side("rule", ruleWins) + side("model", modelWins) +
         '<td class="by">' + (modelWins ? "model" : ruleWins ? "rule" : "level") + "</td></tr>");
@@ -754,6 +840,7 @@
     renderStanding(r[0]);
     renderSlip(r[0], r[2]);
     renderRegister(r[1]);
+    renderPerQuestion(r[0]);
     renderHeadToHead(r[0]);
     renderPlot(r[0]);
     renderReceipts(r[0]);
