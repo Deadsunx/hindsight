@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T06:24:46.885571+00:00",
+  "updated": "2026-07-28T17:19:33.102414+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -237,10 +237,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.551,
+      "confidence": 0.537,
       "basis": {
-        "today_usd": 63457,
-        "change_24h": -3.09
+        "today_usd": 63741,
+        "change_24h": -1.75
       },
       "made_on": "2026-07-28",
       "resolve_on": "2026-07-29"
@@ -296,8 +296,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49076057,
-        "top_title": "Our position on open-weights models"
+        "top_id": 49085909,
+        "top_title": "You Could Have Come Up with Kimi Delta Attention"
       },
       "made_on": "2026-07-28",
       "resolve_on": "2026-07-29"
@@ -311,7 +311,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.9,
+        "forecast_c": 32.4,
         "for_date": "2026-07-29",
         "city": "New Delhi"
       },
