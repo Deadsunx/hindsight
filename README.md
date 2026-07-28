@@ -1,24 +1,69 @@
-# Hindsight 🎲
+# Hindsight
 
-A machine that guesses tomorrow, in public, and keeps score.
+Six falsifiable forecasts a day, committed to public git **before the outcome
+exists**, then scored against a hand-written rule, a coin flip, and the base
+rate. Pure standard-library Python, no API keys, no dependencies.
 
-Every day a scheduled [GitHub Actions](https://docs.github.com/actions) workflow
-answers **six falsifiable questions** about the next 24 hours — twice. Once with
-a hand-written rule, once with a logistic regression trained only on bets that
-have already settled. Then it commits them and grades whatever has come due.
+**Live page → https://pas-vraiment-secret.vercel.app/**
+_(mirrored at [deadsunx.github.io/hindsight](https://deadsunx.github.io/hindsight/))_
 
-**🌐 Live page → https://pas-vraiment-secret.vercel.app/**
-_(also mirrored at [deadsunx.github.io/pas-vraiment-secret](https://deadsunx.github.io/pas-vraiment-secret/))_
+## The leak the test caught
 
-## Why this is hard to fake
+The model half is a walk-forward logistic regression: on any run it trains only
+on bets that have already settled, then predicts today. That claim is worth
+nothing unless something enforces it, so the enforcement is a test rather than a
+comment.
 
-The predictions are committed and pushed **before the outcome exists**. The
-commit timestamp sits in public git history and cannot be moved, so nobody —
-including me — can quietly delete the bad calls afterwards. Anyone can check
-the timestamps against the archive.
+`test_features_unchanged_when_future_is_corrupted` builds a 60-day archive,
+picks a target date, and records every feature vector for that date. It then
+**overwrites every day after the target with garbage** — Bitcoin at $1, Kp at
+99, every Wikipedia headline replaced — and recomputes. If any feature moves by
+so much as a float, the feature read the future and the test fails.
 
-That is the whole design. A prediction site you can edit after the fact is
-worth nothing; this one is a tamper-evident record by construction.
+It failed the first time it ran. The forecast-error feature walked back through
+past forecasts and matched each to the completed high for the date it was about
+— but a forecast made on day *D* only settles on *D+2*, and the loop was
+reading the settling day without checking it was still in the past. On a real
+run that day had not happened yet; on a backfill it had. The feature was reading
+two days ahead of itself.
+
+That is a leak that shows up as *better* scores, never as a crash. It would have
+quietly inflated the model's apparent skill for as long as the project ran, and
+every git timestamp would still have been perfectly honest. The fix is a
+two-line guard in [`learn.py`](learn.py); the reason it was ever found is the
+test.
+
+<!-- LEDGER:START -->
+### Standing — 2026-07-28
+
+**9 right / 11 settled (82%)** · Brier 0.112 · log loss 0.375 · 7 still open
+
+Saying "50%" to all 11 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
+
+| Call | Answered by | Settled | Right | Brier | Log loss |
+| --- | --- | --- | --- | --- | --- |
+| Bitcoin will be higher tomorrow than it is today. | momentum | n=2 | 1/2 (50%) | 0.249 | 0.691 |
+| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=2 | 2/2 (100%) | 0.048 | 0.248 |
+| A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=2 | 2/2 (100%) | 0.022 | 0.163 |
+| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=2 | 1/2 (50%) | 0.264 | 0.723 |
+| The current #1 story on Hacker News will fall out of the top 10. | decay | n=2 | 2/2 (100%) | 0.014 | 0.128 |
+| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=1 | 1/1 (100%) | 0.040 | 0.223 |
+| _coin flip — the baseline_ | _50% to everything_ | n=11 | _50%_ | _0.250_ | _0.693_ |
+
+_Sample is 11 settled bets across 3 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
+
+**Open bets, placed today:**
+
+- **no** — Bitcoin will be higher tomorrow than it is today. _(54% confident, momentum)_
+- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(78% confident, persistence)_
+- **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(85% confident, base rate)_
+- **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
+- **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
+- **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
+
+<!-- LEDGER:END -->
+
+That block is rewritten by the daily run, not by hand.
 
 ## What it bets on
 
@@ -34,8 +79,63 @@ worth nothing; this one is a tamper-evident record by construction.
 The last one is not a weather prediction — it is a **running scorecard on the
 weather service**, which nobody publishes.
 
-Some of these are close to coin flips and are expected to prove it. Nothing is
-tuned after the fact.
+## Where it does not beat the baseline
+
+This section is the reason the base-rate column exists, and it currently reads
+badly for the project. As of the standing above — **11 settled bets, two or
+three per question, which is far too few to conclude anything** — not one of
+the six questions has demonstrated skill:
+
+- **Wikipedia hold** is the outright failure. Brier **0.264** against the coin
+  flip's 0.250, log loss 0.723 against 0.693. It is *worse than shrugging*, and
+  the live page marks it in red.
+- **Bitcoin** lands at Brier 0.249 — a rounding error away from the coin flip,
+  which is roughly what a momentum rule on daily crypto returns deserves.
+- **Earthquakes, Hacker News, and the geomagnetic call** all show 100%
+  accuracy, and all three are worthless as evidence. Their base rates are 100%,
+  100% and 0%: a constant "always yes" or "always no" would have matched them
+  exactly. High accuracy on a one-sided question measures the question, not the
+  predictor.
+
+So the honest summary today is that **three questions are near coin flips, three
+are near constants, and none has beaten the trivial answer.** The interesting
+result, if one arrives, is a Brier gap that survives a few hundred bets — not
+the accuracy figure at the top of the page.
+
+The model half has an emptier record still: it has placed **zero** bets, because
+it may not bet until 25 examples in its family have settled and the archive is
+days old. Until then the head-to-head table is honestly blank rather than
+quietly filled with the rule's numbers.
+
+## How the score is kept
+
+Accuracy alone is close to useless here, so four figures are reported and each
+carries its own sample size:
+
+- **Accuracy** — how often the call was right. Cannot tell a cautious miss from
+  a reckless one, and is trivially inflated by a one-sided question.
+- **Brier score** — mean squared error of the probability assigned to the event.
+  `0.250` is what "50% to everything" earns. Lower is better; higher means
+  confidently wrong.
+- **Log loss** — the same idea, punishing overconfidence far harder. A 95% call
+  that misses costs about 3.0; a 55% miss costs about 0.8. Reported because
+  Brier is comparatively forgiving of exactly the failure worth catching.
+- **Calibration** — when it says 70%, is it right 70% of the time? Binned into
+  confidence bands and plotted against the diagonal on the live page. This is
+  the figure that needs months, which is the whole reason the run is daily.
+
+Every one of them sits next to two references: the **coin flip** (0.250 Brier,
+0.693 log loss, by construction) and the **base rate** — how often the event
+simply happens, and what always calling the majority side would have scored.
+
+### Honest bookkeeping
+
+- **Open** — placed, not yet due.
+- **Void** — the day that would have settled it never got archived. Counted
+  separately and **never** counted as a win.
+- **Shared days only** — the rule and the model are compared solely on days
+  where both actually bet. Comparing lifetime accuracies would compare
+  different sets of days and flatter whichever drew the easier ones.
 
 ## The model, and why it can't cheat
 
@@ -43,29 +143,19 @@ Each question is also answered by a logistic regression in [`learn.py`](learn.py
 — pure Python, no dependencies. Two properties make its record trustworthy, and
 both are enforced by tests rather than by good intentions:
 
-1. **Walk-forward only.** On any run it trains solely on bets that have already
-   settled, then predicts today. It never sees an outcome it is being asked to
-   predict.
+1. **Walk-forward only.** It trains solely on bets that have already settled,
+   then predicts today. It never sees an outcome it is being asked to predict.
 2. **Features are blind to the future.** `features(days, date)` reads nothing
-   after `date`. The test truncates the archive at `date`, corrupts every later
-   day, and asserts the features come out byte-identical.
-
-That second test earned its keep immediately: it caught the forecast-error
-feature reading two days ahead, because a forecast made on day *D* is only
-settled on *D+2*. Undetected, that leak would have silently inflated the
-model's apparent skill.
+   after `date` — the property the corruption test above exists to enforce.
 
 The model stays out entirely until **25 settled examples** exist, and never
 claims more than **95%** confidence. If a family's history is one-sided — as
 `hn_fade` tends to be — it falls back to Laplace smoothing instead of letting
 gradient descent chase an infinite weight into false certainty.
 
-**The rules are never retired.** They are the control. Comparing the two on
-*shared days only* — the days both actually bet — is the only way to show
-whether the model is earning its complexity, and often the honest answer is
-"barely". A model that beats a five-line heuristic by 0.02 Brier is a more
-interesting public result than one claiming 90% accuracy with nothing to
-compare against.
+**The rules are never retired.** They are the control. A model that beats a
+five-line heuristic by 0.02 Brier is a more interesting public result than one
+claiming 90% accuracy with nothing to compare against.
 
 ## How it works
 
@@ -81,17 +171,6 @@ compare against.
 Grading is a **pure function of the archive**, recomputed from scratch on every
 run rather than accumulated. A bad day can never corrupt the ledger, and
 `archive/ledger.json` can always be regenerated by re-running the script.
-
-### Honest bookkeeping
-
-- **Open** — placed, not yet due.
-- **Void** — the day that would have settled it never got archived. Counted
-  separately and **never** counted as a win.
-- **Brier score** — mean squared error of the probability assigned to the event.
-  `0.250` is what you get by saying "50%" to everything. Lower is better;
-  higher means confidently wrong.
-- **Calibration** — when it says 70%, is it right 70% of the time? This needs
-  months of sample size, which is exactly why it runs every day.
 
 ## Don't trust it — check it
 
@@ -116,22 +195,34 @@ rests on:
    archive day was last committed and requires that to be before the day it
    could possibly be settled. Backdate a prediction and it fails.
 
-Exit code 0 means verified. CI runs it on every push, so a broken record
-cannot land silently.
+Exit code 0 means verified. CI runs it on every push, and the daily workflow
+runs it *before* pushing — a record that does not reconcile is withheld rather
+than published.
 
 What it deliberately does **not** prove: that the observations were accurate.
 Nobody can re-fetch a past day's Hacker News front page. What it proves is that
 nothing was altered afterwards — which is the property the archive exists to
 have.
 
+## Tests
+
+```bash
+python -m unittest test_predict test_learn test_verify -v
+```
+
+Offline, no network, no dependencies. **[TESTING.md](TESTING.md)** walks through
+what each test enforces and why — in particular the leak test, what it corrupts,
+what it asserts, and the bug it caught.
+
 ## Files
 
 | Path | What |
 | ---- | ---- |
-| `predict.py` | the engine — observe, predict, grade |
+| `predict.py` | the engine — observe, predict, grade, score |
 | `learn.py` | logistic regression + walk-forward features |
 | `verify.py` | audits the published record; no network needed |
 | `test_*.py` | offline tests, no network |
+| `TESTING.md` | what each test enforces, and why |
 | `archive/YYYY-MM-DD.json` | one day: observations + the bets placed that day |
 | `archive/ledger.json` | the full scorecard the page reads |
 | `archive/index.json` | per-day summary for the calendar |
@@ -145,12 +236,6 @@ python predict.py
 
 Only the Python standard library is used — nothing to install, no API keys.
 
-Run the tests (offline, no network):
-
-```bash
-python -m unittest test_predict test_learn test_verify -v
-```
-
 ## Move the forecast bet to your city
 
 Set repo variables (Settings → Secrets and variables → Actions → Variables),
@@ -159,34 +244,3 @@ or env vars locally:
 ```bash
 CITY_NAME="Bamako" CITY_LAT=12.6392 CITY_LON=-8.0029 CITY_TZ=Africa/Bamako python predict.py
 ```
-
-<!-- LEDGER:START -->
-### 🎲 Standing — 2026-07-28
-
-**9 right / 11 settled (82%)** · Brier 0.112 · 7 still open
-
-| Call | Rule | Record |
-| --- | --- | --- |
-| Bitcoin will be higher tomorrow than it is today. | momentum | 1/2 (50%) |
-| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | 2/2 (100%) |
-| A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | 2/2 (100%) |
-| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | 1/2 (50%) |
-| The current #1 story on Hacker News will fall out of the top 10. | decay | 2/2 (100%) |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | 1/1 (100%) |
-| Bitcoin will be higher tomorrow than it is today. | logistic regression | — |
-| Geomagnetic Kp will exceed 3 within the next 24 hours. | logistic regression | — |
-| A magnitude 5.0+ earthquake will strike somewhere tomorrow. | logistic regression | — |
-| Today's most-read Wikipedia article will still be #1 tomorrow. | logistic regression | — |
-| The current #1 story on Hacker News will fall out of the top 10. | logistic regression | — |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | logistic regression | — |
-
-**Open bets, placed today:**
-
-- **no** — Bitcoin will be higher tomorrow than it is today. _(54% confident, momentum)_
-- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(78% confident, persistence)_
-- **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(85% confident, base rate)_
-- **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
-- **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
-- **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
-
-<!-- LEDGER:END -->
