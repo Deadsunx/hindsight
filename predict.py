@@ -23,6 +23,7 @@ every run rather than accumulated. A bad day can never corrupt the ledger, and
 from __future__ import annotations
 
 import json
+import math
 import os
 import time
 import urllib.request
@@ -572,34 +573,120 @@ def grade_all(days: dict) -> list:
 
 BUCKETS = ((0.5, 0.6), (0.6, 0.7), (0.7, 0.8), (0.8, 0.9), (0.9, 1.001))
 
+# Log loss is unbounded: a confident, wrong call at p=0 costs infinity and would
+# poison the average forever. Clamping is the standard treatment, and the models
+# are capped at 95% anyway — this only ever bites a hand-written rule.
+LOG_LOSS_EPS = 1e-15
+
+# What saying "fifty-fifty" to everything scores, on any set of bets whatsoever.
+# These are constants, not measurements, which is exactly why they are the
+# reference: a Brier above 0.25 means the predictor is worse than shrugging.
+COIN_FLIP_BRIER = 0.25
+COIN_FLIP_LOG_LOSS = round(math.log(2), 4)
+
+
+def p_event(grade: dict) -> float:
+    """The probability a prediction assigned to the event actually happening.
+
+    Confidence is always stated in the *call*, not the event — a 70% "no" is a
+    30% chance of the event — so every scoring rule has to convert first.
+    """
+    return grade["confidence"] if grade["call"] else 1.0 - grade["confidence"]
+
+
+def score(grades: list) -> dict:
+    """Accuracy, Brier and log loss over one set of settled bets.
+
+    Every figure carries its own `n`. A 0.09 Brier over four bets and one over
+    four hundred are not the same claim, and a table printing only the number
+    invites the reader to assume the second.
+
+    Brier is the mean squared error of the probability assigned to the event:
+    0 is perfect, 0.25 is what "50% to everything" earns, above that is worse
+    than useless. Log loss punishes confident mistakes far harder than Brier
+    does, which is the point of reporting both — accuracy alone cannot tell a
+    cautious miss from a reckless one.
+    """
+    n = len(grades)
+    if not n:
+        return {"n": 0, "correct": 0, "accuracy": None, "brier": None, "log_loss": None}
+
+    correct = sum(1 for g in grades if g["correct"])
+    brier_total = 0.0
+    log_loss_total = 0.0
+    for g in grades:
+        p = p_event(g)
+        truth = 1.0 if g["actual"] else 0.0
+        brier_total += (p - truth) ** 2
+        clamped = min(1.0 - LOG_LOSS_EPS, max(LOG_LOSS_EPS, p))
+        log_loss_total += -(truth * math.log(clamped) + (1 - truth) * math.log(1 - clamped))
+
+    return {
+        "n": n,
+        "correct": correct,
+        "accuracy": round(correct / n, 4),
+        "brier": round(brier_total / n, 4),
+        "log_loss": round(log_loss_total / n, 4),
+    }
+
+
+def coin_flip(n: int) -> dict:
+    """The 50%-to-everything baseline, over `n` bets.
+
+    Carried in the ledger rather than left for the reader to remember, so every
+    real score sits next to the number it has to beat to have meant anything.
+    """
+    if not n:
+        return {"n": 0, "accuracy": None, "brier": None, "log_loss": None}
+    return {
+        "n": n,
+        "accuracy": 0.5,
+        "brier": COIN_FLIP_BRIER,
+        "log_loss": COIN_FLIP_LOG_LOSS,
+    }
+
+
+def base_rate(grades: list) -> dict:
+    """How often the event actually happened, and what always calling the
+    majority side would have scored.
+
+    This is the figure that says whether a question is *predictable* at all.
+    `quake_m5` fires on roughly 85% of days, so a rule that scores 85% accuracy
+    has demonstrated nothing — it has matched a constant. Without this column a
+    reader cannot tell that apart from real skill.
+    """
+    n = len(grades)
+    if not n:
+        return {"n": 0, "rate": None, "majority_accuracy": None}
+    happened = sum(1 for g in grades if g["actual"])
+    rate = happened / n
+    return {
+        "n": n,
+        "rate": round(rate, 4),
+        "majority_accuracy": round(max(rate, 1.0 - rate), 4),
+    }
+
 
 def build_ledger(days: dict, grades: list, today: str) -> dict:
-    graded = len(grades)
-    correct = sum(1 for g in grades if g["correct"])
-
-    # Brier score: mean squared error of the probability assigned to the event
-    # actually happening. 0 is perfect, 0.25 is what you get by always saying
-    # "50%", and anything above that is worse than useless.
-    brier = None
-    if graded:
-        total = 0.0
-        for g in grades:
-            p_event = g["confidence"] if g["call"] else 1 - g["confidence"]
-            total += (p_event - (1.0 if g["actual"] else 0.0)) ** 2
-        brier = round(total / graded, 4)
+    overall = score(grades)
+    graded = overall["n"]
+    correct = overall["correct"]
+    brier = overall["brier"]
 
     by_predictor = {}
     for pid, spec in PREDICTORS.items():
         mine = [g for g in grades if g["id"] == pid]
-        hits = sum(1 for g in mine if g["correct"])
+        marks = score(mine)
         by_predictor[pid] = {
             "question": spec["question"],
             "rule": spec["rule"],
             "family": spec["family"],
             "variant": spec["variant"],
-            "graded": len(mine),
-            "correct": hits,
-            "accuracy": round(hits / len(mine), 4) if mine else None,
+            "graded": marks["n"],
+            "correct": marks["correct"],
+            "accuracy": marks["accuracy"],
+            "brier": marks["brier"],
+            "log_loss": marks["log_loss"],
         }
 
     calibration = []
@@ -637,11 +724,17 @@ def build_ledger(days: dict, grades: list, today: str) -> dict:
         "totals": {
             "graded": graded,
             "correct": correct,
-            "accuracy": round(correct / graded, 4) if graded else None,
+            "accuracy": overall["accuracy"],
             "brier": brier,
+            "log_loss": overall["log_loss"],
             "open": len(open_bets),
             "void": void,
             "days": len(days),
+        },
+        # The numbers every figure above has to beat before it means anything.
+        "baselines": {
+            "coin_flip": coin_flip(graded),
+            "base_rate": base_rate(grades),
         },
         "by_predictor": by_predictor,
         "calibration": calibration,
@@ -659,39 +752,40 @@ def build_head_to_head(grades: list) -> dict:
     ones. Only days where both placed a bet count here.
     """
     paired: dict = {}
+    everything: dict = {}
     for grade in grades:
         family = grade.get("family")
         variant = grade.get("variant")
         if not family or not variant:
             continue  # a prediction archived before variants existed
         paired.setdefault(family, {}).setdefault(grade["made_on"], {})[variant] = grade
+        everything.setdefault(family, []).append(grade)
 
     out = {}
     for family, dates in paired.items():
         both = [p for p in dates.values() if "rule" in p and "model" in p]
-        rule_hits = sum(1 for p in both if p["rule"]["correct"])
-        model_hits = sum(1 for p in both if p["model"]["correct"])
-        # Brier on the same shared days, which is the fairer comparison of the
-        # two: accuracy ignores how confidently each one was wrong.
-        def brier(side):
-            if not both:
-                return None
-            total = 0.0
-            for pair in both:
-                g = pair[side]
-                p_event = g["confidence"] if g["call"] else 1 - g["confidence"]
-                total += (p_event - (1.0 if g["actual"] else 0.0)) ** 2
-            return round(total / len(both), 4)
+        # Scored on the same shared days, which is the fairer comparison:
+        # accuracy alone ignores how confidently each one was wrong.
+        rule = score([p["rule"] for p in both])
+        model = score([p["model"] for p in both])
 
         out[family] = {
             "question": PREDICTORS[family]["question"],
             "shared_days": len(both),
-            "rule_correct": rule_hits,
-            "model_correct": model_hits,
-            "rule_accuracy": round(rule_hits / len(both), 4) if both else None,
-            "model_accuracy": round(model_hits / len(both), 4) if both else None,
-            "rule_brier": brier("rule"),
-            "model_brier": brier("model"),
+            "rule_correct": rule["correct"],
+            "model_correct": model["correct"],
+            "rule_accuracy": rule["accuracy"],
+            "model_accuracy": model["accuracy"],
+            "rule_brier": rule["brier"],
+            "model_brier": model["brier"],
+            "rule_log_loss": rule["log_loss"],
+            "model_log_loss": model["log_loss"],
+            # Both references travel with the row. Coin flip is what beating
+            # nothing looks like; base rate is measured over the family's whole
+            # settled record, so it is populated long before the model is warm
+            # enough to appear in the shared-day columns at all.
+            "coin_flip": coin_flip(len(both)),
+            "base_rate": base_rate(everything.get(family, [])),
         }
     return out
 
@@ -754,27 +848,55 @@ def update_readme(snapshot: dict, ledger: dict) -> None:
     if not README.exists():
         return
     totals = ledger["totals"]
+    baselines = ledger.get("baselines") or {}
+    coin = baselines.get("coin_flip") or {}
+
+    def num(value, places=3):
+        return "—" if value is None else f"{value:.{places}f}"
+
     lines = [
         "<!-- LEDGER:START -->",
-        f"### 🎲 Standing — {snapshot['date']}",
+        f"### Standing — {snapshot['date']}",
         "",
     ]
     if totals["graded"]:
         lines += [
             f"**{totals['correct']} right / {totals['graded']} settled "
-            f"({totals['accuracy']:.0%})** · Brier {totals['brier']:.3f} "
-            f"· {totals['open']} still open",
+            f"({totals['accuracy']:.0%})** · Brier {num(totals['brier'])} "
+            f"· log loss {num(totals['log_loss'])} · {totals['open']} still open",
             "",
-            "| Call | Rule | Record |",
-            "| --- | --- | --- |",
+            f"Saying \"50%\" to all {totals['graded']} of them instead would score "
+            f"Brier {num(coin.get('brier'))}, log loss {num(coin.get('log_loss'))}. "
+            "Lower is better; every figure below is only worth what it beats.",
+            "",
+            "| Call | Answered by | Settled | Right | Brier | Log loss |",
+            "| --- | --- | --- | --- | --- | --- |",
         ]
-        for pid, row in ledger["by_predictor"].items():
-            record = (
+        # The model variants sit out until they have 25 settled examples in
+        # their family. Printing a dozen empty rows until then buries the six
+        # that actually have a record, so they appear only once they do.
+        for row in ledger["by_predictor"].values():
+            if row["variant"] == "model" and not row["graded"]:
+                continue
+            right = (
                 f"{row['correct']}/{row['graded']} ({row['accuracy']:.0%})"
                 if row["graded"]
                 else "—"
             )
-            lines.append(f"| {row['question']} | {row['rule']} | {record} |")
+            lines.append(
+                f"| {row['question']} | {row['rule']} | n={row['graded']} | {right} "
+                f"| {num(row['brier'])} | {num(row['log_loss'])} |"
+            )
+        lines.append(
+            f"| _coin flip — the baseline_ | _50% to everything_ | n={totals['graded']} "
+            f"| _50%_ | _{num(coin.get('brier'))}_ | _{num(coin.get('log_loss'))}_ |"
+        )
+        lines.append("")
+        lines.append(
+            f"_Sample is {totals['graded']} settled bets across {totals['days']} "
+            "days. Nothing here is significant yet, and it is published daily "
+            "precisely so that it becomes so._"
+        )
         lines.append("")
     else:
         lines += ["_No bets have settled yet — the first ones resolve tomorrow._", ""]

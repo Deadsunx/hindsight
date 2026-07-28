@@ -6,6 +6,7 @@ The *grading* half is not: if it is wrong, the public track record is a lie.
 So everything below runs on synthetic archives with no network access.
 """
 
+import math
 import os
 import unittest
 from unittest import mock
@@ -276,7 +277,88 @@ class TestLedger(unittest.TestCase):
         ledger = predict.build_ledger({}, [], "2026-01-01")
         self.assertIsNone(ledger["totals"]["accuracy"])
         self.assertIsNone(ledger["totals"]["brier"])
+        self.assertIsNone(ledger["totals"]["log_loss"])
         self.assertEqual(ledger["totals"]["graded"], 0)
+
+    def test_baselines_travel_with_the_ledger(self):
+        days, grades = self._graded()
+        ledger = predict.build_ledger(days, grades, "2026-01-02")
+        coin = ledger["baselines"]["coin_flip"]
+        self.assertEqual(coin["n"], 2)
+        self.assertEqual(coin["brier"], 0.25)
+        self.assertEqual(ledger["baselines"]["base_rate"]["n"], 2)
+
+    def test_every_predictor_row_carries_its_sample_size(self):
+        days, grades = self._graded()
+        ledger = predict.build_ledger(days, grades, "2026-01-02")
+        for pid, row in ledger["by_predictor"].items():
+            self.assertIn("graded", row, pid)
+            self.assertIn("brier", row, pid)
+            self.assertIn("log_loss", row, pid)
+            if not row["graded"]:
+                self.assertIsNone(row["brier"], pid)
+                self.assertIsNone(row["log_loss"], pid)
+
+
+class TestScoring(unittest.TestCase):
+    """The metrics themselves. If these are wrong the whole record is wrong."""
+
+    def _g(self, call, confidence, actual):
+        return {
+            "call": call, "confidence": confidence,
+            "actual": actual, "correct": call == actual,
+        }
+
+    def test_p_event_inverts_a_no_call(self):
+        # Confidence is stated in the call, not the event: a 70% "no" is a 30%
+        # chance of the event happening.
+        self.assertAlmostEqual(predict.p_event(self._g(False, 0.7, False)), 0.3)
+        self.assertAlmostEqual(predict.p_event(self._g(True, 0.7, False)), 0.7)
+
+    def test_brier_matches_hand_arithmetic(self):
+        # yes @ 0.80, happened -> (0.8 - 1)^2 = 0.04
+        # no  @ 0.70, did not  -> (0.3 - 0)^2 = 0.09
+        marks = predict.score([self._g(True, 0.80, True), self._g(False, 0.70, False)])
+        self.assertAlmostEqual(marks["brier"], 0.065, places=4)
+
+    def test_log_loss_punishes_the_confident_miss_harder_than_brier(self):
+        """The whole reason log loss is reported alongside accuracy."""
+        timid = predict.score([self._g(True, 0.55, False)])
+        brash = predict.score([self._g(True, 0.95, False)])
+        # Both are simply "wrong" to accuracy — it cannot tell them apart.
+        self.assertEqual(timid["accuracy"], brash["accuracy"])
+        self.assertGreater(brash["brier"], timid["brier"])
+        # Log loss opens a far wider gap on the same two bets.
+        self.assertGreater(
+            brash["log_loss"] - timid["log_loss"],
+            brash["brier"] - timid["brier"],
+        )
+
+    def test_a_certain_wrong_call_does_not_produce_infinity(self):
+        marks = predict.score([self._g(True, 1.0, False)])
+        self.assertTrue(math.isfinite(marks["log_loss"]))
+        self.assertGreater(marks["log_loss"], 30)
+
+    def test_coin_flip_is_the_reference_every_score_must_beat(self):
+        self.assertEqual(predict.coin_flip(10)["brier"], 0.25)
+        self.assertAlmostEqual(predict.coin_flip(10)["log_loss"], math.log(2), places=4)
+        self.assertIsNone(predict.coin_flip(0)["brier"])
+
+    def test_base_rate_exposes_an_unpredictable_question(self):
+        """A question whose event fires 90% of the time makes 90% accuracy
+        worthless — always calling yes would have matched it."""
+        grades = [self._g(True, 0.9, True)] * 9 + [self._g(True, 0.9, False)]
+        rate = predict.base_rate(grades)
+        self.assertAlmostEqual(rate["rate"], 0.9)
+        self.assertAlmostEqual(rate["majority_accuracy"], 0.9)
+
+    def test_empty_scores_are_none_not_zero(self):
+        """Zero would read as a perfect Brier. None reads as no evidence."""
+        marks = predict.score([])
+        self.assertEqual(marks["n"], 0)
+        self.assertIsNone(marks["brier"])
+        self.assertIsNone(marks["log_loss"])
+        self.assertIsNone(marks["accuracy"])
 
 
 class TestPredictors(unittest.TestCase):
