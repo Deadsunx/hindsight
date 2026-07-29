@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T06:28:48.683931+00:00",
+  "updated": "2026-07-29T17:05:23.573076+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -352,11 +352,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.532,
+      "call": false,
+      "confidence": 0.523,
       "basis": {
-        "today_usd": 64199,
-        "change_24h": 1.19
+        "today_usd": 63742,
+        "change_24h": -0.3
       },
       "made_on": "2026-07-29",
       "resolve_on": "2026-07-30"
@@ -412,8 +412,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49093569,
-        "top_title": "More Tailscale tricks for your jailbroken Kindle"
+        "top_id": 49098510,
+        "top_title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac"
       },
       "made_on": "2026-07-29",
       "resolve_on": "2026-07-30"
@@ -427,7 +427,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.6,
+        "forecast_c": 32.3,
         "for_date": "2026-07-30",
         "city": "New Delhi"
       },

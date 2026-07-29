@@ -1,20 +1,20 @@
 {
   "date": "2026-07-29",
-  "fetched_at": "2026-07-29T06:28:47.681124+00:00",
+  "fetched_at": "2026-07-29T17:05:22.536661+00:00",
   "observations": {
     "btc": {
-      "usd": 64199,
-      "usd_24h_change": 1.19
+      "usd": 63742,
+      "usd_24h_change": -0.3
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 2.0,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.8,
-      "count": 277,
-      "strongest_place": "2026 Uto, Japan Earthquake\u00a0"
+      "max_mag": 5.4,
+      "count": 318,
+      "strongest_place": "53 km E of Rapu-Rapu, Philippines"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-07-28"
     },
     "hn": {
-      "top_id": 49093569,
-      "top_title": "More Tailscale tricks for your jailbroken Kindle",
+      "top_id": 49098510,
+      "top_title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
       "top10": [
-        49093569,
-        49093434,
-        49089755,
-        49092499,
-        49093435,
-        49093232,
-        49090607,
-        49086788,
-        49089814,
-        49069033
+        49098510,
+        49099015,
+        49095865,
+        49098965,
+        49096969,
+        49100056,
+        49098466,
+        49099715,
+        49099143,
+        49065785
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 31.0,
       "actual_prev_date": "2026-07-28",
-      "today": 31.4,
-      "forecast_next": 32.6,
+      "today": 32.5,
+      "forecast_next": 32.3,
       "forecast_next_date": "2026-07-30"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.532,
+      "call": false,
+      "confidence": 0.523,
       "basis": {
-        "today_usd": 64199,
-        "change_24h": 1.19
+        "today_usd": 63742,
+        "change_24h": -0.3
       },
       "made_on": "2026-07-29",
       "resolve_on": "2026-07-30"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49093569,
-        "top_title": "More Tailscale tricks for your jailbroken Kindle"
+        "top_id": 49098510,
+        "top_title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac"
       },
       "made_on": "2026-07-29",
       "resolve_on": "2026-07-30"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.6,
+        "forecast_c": 32.3,
         "for_date": "2026-07-30",
         "city": "New Delhi"
       },
