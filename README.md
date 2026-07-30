@@ -34,29 +34,29 @@ two-line guard in [`learn.py`](learn.py); the reason it was ever found is the
 test.
 
 <!-- LEDGER:START -->
-### Standing — 2026-07-29
+### Standing — 2026-07-30
 
-**14 right / 17 settled (82%)** · Brier 0.102 · log loss 0.354 · 7 still open
+**18 right / 23 settled (78%)** · Brier 0.130 · log loss 0.429 · 7 still open
 
-Saying "50%" to all 17 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
+Saying "50%" to all 23 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
 
 | Call | Answered by | Settled | Right | Brier | Log loss |
 | --- | --- | --- | --- | --- | --- |
-| Bitcoin will be higher tomorrow than it is today. | momentum | n=3 | 1/3 (33%) | 0.262 | 0.717 |
-| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=3 | 3/3 (100%) | 0.048 | 0.248 |
-| A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=3 | 3/3 (100%) | 0.022 | 0.163 |
-| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=3 | 2/3 (67%) | 0.206 | 0.601 |
-| The current #1 story on Hacker News will fall out of the top 10. | decay | n=3 | 3/3 (100%) | 0.014 | 0.128 |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=2 | 2/2 (100%) | 0.040 | 0.223 |
-| _coin flip — the baseline_ | _50% to everything_ | n=17 | _50%_ | _0.250_ | _0.693_ |
+| Bitcoin will be higher tomorrow than it is today. | momentum | n=4 | 1/4 (25%) | 0.265 | 0.723 |
+| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=4 | 4/4 (100%) | 0.048 | 0.248 |
+| A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=4 | 4/4 (100%) | 0.022 | 0.163 |
+| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=4 | 3/4 (75%) | 0.177 | 0.540 |
+| The current #1 story on Hacker News will fall out of the top 10. | decay | n=4 | 3/4 (75%) | 0.204 | 0.626 |
+| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=3 | 3/3 (100%) | 0.040 | 0.223 |
+| _coin flip — the baseline_ | _50% to everything_ | n=23 | _50%_ | _0.250_ | _0.693_ |
 
-_Sample is 17 settled bets across 4 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
+_Sample is 23 settled bets across 5 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
 
 **Open bets, placed today:**
 
 - **no** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
 - **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(78% confident, persistence)_
-- **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(85% confident, base rate)_
+- **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
 - **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
