@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T06:25:26.146946+00:00",
+  "updated": "2026-07-30T17:16:20.725704+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 4,
-        "rate": 0.75,
-        "majority_accuracy": 0.75
+        "rate": 1.0,
+        "majority_accuracy": 1.0
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 23,
-    "correct": 18,
-    "accuracy": 0.7826,
-    "brier": 0.13,
-    "log_loss": 0.429,
+    "correct": 19,
+    "accuracy": 0.8261,
+    "brier": 0.0969,
+    "log_loss": 0.3424,
     "open": 7,
     "void": 0,
     "days": 5
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 23,
-      "rate": 0.6957,
-      "majority_accuracy": 0.6957
+      "rate": 0.7391,
+      "majority_accuracy": 0.7391
     }
   },
   "by_predictor": {
@@ -214,10 +214,10 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 4,
-      "correct": 3,
-      "accuracy": 0.75,
-      "brier": 0.2044,
-      "log_loss": 0.6259
+      "correct": 4,
+      "accuracy": 1.0,
+      "brier": 0.0144,
+      "log_loss": 0.1278
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -320,7 +320,7 @@
       "label": "80\u201390%",
       "n": 11,
       "claimed": 0.8473,
-      "actual": 0.9091
+      "actual": 1.0
     },
     {
       "label": "90\u2013100%",
@@ -352,11 +352,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.523,
+      "call": true,
+      "confidence": 0.535,
       "basis": {
-        "today_usd": 63925,
-        "change_24h": -0.3
+        "today_usd": 64735,
+        "change_24h": 1.5
       },
       "made_on": "2026-07-30",
       "resolve_on": "2026-07-31"
@@ -370,7 +370,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.67
+        "today_max_kp": 2.0
       },
       "made_on": "2026-07-30",
       "resolve_on": "2026-07-31"
@@ -412,8 +412,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49103285,
-        "top_title": "AI's top startups are barely publishing their research"
+        "top_id": 49111305,
+        "top_title": "Physicists Solve a Muon Mystery. Now, Old Results Don't Add Up"
       },
       "made_on": "2026-07-30",
       "resolve_on": "2026-07-31"
@@ -427,7 +427,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.8,
+        "forecast_c": 32.4,
         "for_date": "2026-07-31",
         "city": "New Delhi"
       },
@@ -732,8 +732,8 @@
       "resolve_on": "2026-07-30",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }

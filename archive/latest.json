@@ -1,19 +1,19 @@
 {
   "date": "2026-07-30",
-  "fetched_at": "2026-07-30T06:25:24.654646+00:00",
+  "fetched_at": "2026-07-30T17:16:19.485935+00:00",
   "observations": {
     "btc": {
-      "usd": 63925,
-      "usd_24h_change": -0.3
+      "usd": 64735,
+      "usd_24h_change": 1.5
     },
     "kp": {
-      "max_kp": 1.67,
-      "latest_kp": 1.33,
+      "max_kp": 2.0,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.9,
-      "count": 294,
+      "count": 229,
       "strongest_place": "Kermadec Islands region"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-07-29"
     },
     "hn": {
-      "top_id": 49103285,
-      "top_title": "AI's top startups are barely publishing their research",
+      "top_id": 49111305,
+      "top_title": "Physicists Solve a Muon Mystery. Now, Old Results Don't Add Up",
       "top10": [
-        49103285,
-        49102774,
-        49098510,
-        49098965,
-        49104117,
-        49104335,
-        49106384,
-        49099715,
-        49104937,
-        49103089
+        49111305,
+        49111237,
+        49111176,
+        49110547,
+        49109193,
+        49110655,
+        49112683,
+        49109616,
+        49109474,
+        49109721
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.5,
       "actual_prev_date": "2026-07-29",
-      "today": 33.0,
-      "forecast_next": 32.8,
+      "today": 33.2,
+      "forecast_next": 32.4,
       "forecast_next_date": "2026-07-31"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.523,
+      "call": true,
+      "confidence": 0.535,
       "basis": {
-        "today_usd": 63925,
-        "change_24h": -0.3
+        "today_usd": 64735,
+        "change_24h": 1.5
       },
       "made_on": "2026-07-30",
       "resolve_on": "2026-07-31"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.67
+        "today_max_kp": 2.0
       },
       "made_on": "2026-07-30",
       "resolve_on": "2026-07-31"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49103285,
-        "top_title": "AI's top startups are barely publishing their research"
+        "top_id": 49111305,
+        "top_title": "Physicists Solve a Muon Mystery. Now, Old Results Don't Add Up"
       },
       "made_on": "2026-07-30",
       "resolve_on": "2026-07-31"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.8,
+        "forecast_c": 32.4,
         "for_date": "2026-07-31",
         "city": "New Delhi"
       },
