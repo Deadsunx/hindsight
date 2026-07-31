@@ -1,19 +1,19 @@
 {
   "date": "2026-07-31",
-  "fetched_at": "2026-07-31T06:41:32.642586+00:00",
+  "fetched_at": "2026-07-31T17:20:46.322033+00:00",
   "observations": {
     "btc": {
-      "usd": 64351,
-      "usd_24h_change": 0.64
+      "usd": 62830,
+      "usd_24h_change": -3.09
     },
     "kp": {
       "max_kp": 2.0,
-      "latest_kp": 1.0,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.9,
-      "count": 210,
+      "count": 214,
       "strongest_place": "247 km NNE of Colonia, Micronesia"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-07-30"
     },
     "hn": {
-      "top_id": 49118781,
-      "top_title": "The session you cannot take with you",
+      "top_id": 49124218,
+      "top_title": "Elevators",
       "top10": [
-        49118781,
-        49119063,
-        49112232,
-        49114639,
-        49111237,
-        49116721,
-        49077372,
-        49112744,
-        49119274,
-        49117284
+        49124218,
+        49124858,
+        49120299,
+        49119559,
+        49124658,
+        49124496,
+        49125785,
+        49123208,
+        49125034,
+        49121980
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.2,
       "actual_prev_date": "2026-07-30",
-      "today": 32.4,
-      "forecast_next": 31.0,
+      "today": 32.5,
+      "forecast_next": 31.6,
       "forecast_next_date": "2026-08-01"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.526,
+      "call": false,
+      "confidence": 0.551,
       "basis": {
-        "today_usd": 64351,
-        "change_24h": 0.64
+        "today_usd": 62830,
+        "change_24h": -3.09
       },
       "made_on": "2026-07-31",
       "resolve_on": "2026-08-01"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49118781,
-        "top_title": "The session you cannot take with you"
+        "top_id": 49124218,
+        "top_title": "Elevators"
       },
       "made_on": "2026-07-31",
       "resolve_on": "2026-08-01"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.0,
+        "forecast_c": 31.6,
         "for_date": "2026-08-01",
         "city": "New Delhi"
       },

@@ -54,7 +54,7 @@ _Sample is 29 settled bets across 6 days. Nothing here is significant yet, and i
 
 **Open bets, placed today:**
 
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(53% confident, momentum)_
+- **no** — Bitcoin will be higher tomorrow than it is today. _(55% confident, momentum)_
 - **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(78% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **no** — Today's most-read Wikipedia article will still be #1 tomorrow. _(62% confident, persistence)_

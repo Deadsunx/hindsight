@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T06:41:34.196564+00:00",
+  "updated": "2026-07-31T17:20:47.605120+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -352,11 +352,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.526,
+      "call": false,
+      "confidence": 0.551,
       "basis": {
-        "today_usd": 64351,
-        "change_24h": 0.64
+        "today_usd": 62830,
+        "change_24h": -3.09
       },
       "made_on": "2026-07-31",
       "resolve_on": "2026-08-01"
@@ -412,8 +412,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49118781,
-        "top_title": "The session you cannot take with you"
+        "top_id": 49124218,
+        "top_title": "Elevators"
       },
       "made_on": "2026-07-31",
       "resolve_on": "2026-08-01"
@@ -427,7 +427,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.0,
+        "forecast_c": 31.6,
         "for_date": "2026-08-01",
         "city": "New Delhi"
       },
