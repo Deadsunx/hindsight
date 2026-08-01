@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T17:20:47.605120+00:00",
+  "updated": "2026-08-01T06:26:48.229566+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -19,9 +19,9 @@
         "log_loss": null
       },
       "base_rate": {
-        "n": 5,
-        "rate": 0.6,
-        "majority_accuracy": 0.6
+        "n": 6,
+        "rate": 0.6667,
+        "majority_accuracy": 0.6667
       }
     },
     "kp_storm": {
@@ -42,7 +42,7 @@
         "log_loss": null
       },
       "base_rate": {
-        "n": 5,
+        "n": 6,
         "rate": 0.0,
         "majority_accuracy": 1.0
       }
@@ -65,7 +65,7 @@
         "log_loss": null
       },
       "base_rate": {
-        "n": 5,
+        "n": 6,
         "rate": 1.0,
         "majority_accuracy": 1.0
       }
@@ -88,9 +88,9 @@
         "log_loss": null
       },
       "base_rate": {
-        "n": 5,
-        "rate": 0.6,
-        "majority_accuracy": 0.6
+        "n": 6,
+        "rate": 0.6667,
+        "majority_accuracy": 0.6667
       }
     },
     "hn_fade": {
@@ -111,9 +111,9 @@
         "log_loss": null
       },
       "base_rate": {
-        "n": 5,
-        "rate": 1.0,
-        "majority_accuracy": 1.0
+        "n": 6,
+        "rate": 0.8333,
+        "majority_accuracy": 0.8333
       }
     },
     "forecast_hit": {
@@ -134,33 +134,33 @@
         "log_loss": null
       },
       "base_rate": {
-        "n": 4,
+        "n": 5,
         "rate": 1.0,
         "majority_accuracy": 1.0
       }
     }
   },
   "totals": {
-    "graded": 29,
-    "correct": 23,
-    "accuracy": 0.7931,
-    "brier": 0.1073,
-    "log_loss": 0.3619,
+    "graded": 35,
+    "correct": 26,
+    "accuracy": 0.7429,
+    "brier": 0.1333,
+    "log_loss": 0.4259,
     "open": 7,
     "void": 0,
-    "days": 6
+    "days": 7
   },
   "baselines": {
     "coin_flip": {
-      "n": 29,
+      "n": 35,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 29,
-      "rate": 0.6897,
-      "majority_accuracy": 0.6897
+      "n": 35,
+      "rate": 0.6857,
+      "majority_accuracy": 0.6857
     }
   },
   "by_predictor": {
@@ -169,19 +169,19 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "graded": 5,
+      "graded": 6,
       "correct": 1,
-      "accuracy": 0.2,
-      "brier": 0.2691,
-      "log_loss": 0.7314
+      "accuracy": 0.1667,
+      "brier": 0.2749,
+      "log_loss": 0.743
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "graded": 5,
-      "correct": 5,
+      "graded": 6,
+      "correct": 6,
       "accuracy": 1.0,
       "brier": 0.0484,
       "log_loss": 0.2485
@@ -191,41 +191,41 @@
       "rule": "base rate",
       "family": "quake_m5",
       "variant": "rule",
-      "graded": 5,
-      "correct": 5,
+      "graded": 6,
+      "correct": 6,
       "accuracy": 1.0,
-      "brier": 0.0185,
-      "log_loss": 0.1403
+      "brier": 0.0158,
+      "log_loss": 0.1254
     },
     "wiki_hold": {
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "graded": 5,
+      "graded": 6,
       "correct": 3,
-      "accuracy": 0.6,
-      "brier": 0.2398,
-      "log_loss": 0.6726
+      "accuracy": 0.5,
+      "brier": 0.2639,
+      "log_loss": 0.7218
     },
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "decay",
       "family": "hn_fade",
       "variant": "rule",
-      "graded": 5,
+      "graded": 6,
       "correct": 5,
-      "accuracy": 1.0,
-      "brier": 0.0144,
-      "log_loss": 0.1278
+      "accuracy": 0.8333,
+      "brier": 0.1411,
+      "log_loss": 0.4599
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 4,
-      "correct": 4,
+      "graded": 5,
+      "correct": 5,
       "accuracy": 1.0,
       "brier": 0.04,
       "log_loss": 0.2231
@@ -300,124 +300,36 @@
   "calibration": [
     {
       "label": "50\u201360%",
-      "n": 5,
-      "claimed": 0.5298,
-      "actual": 0.2
+      "n": 6,
+      "claimed": 0.5333,
+      "actual": 0.1667
     },
     {
       "label": "60\u201370%",
-      "n": 2,
+      "n": 3,
       "claimed": 0.62,
-      "actual": 0.5
+      "actual": 0.3333
     },
     {
       "label": "70\u201380%",
-      "n": 8,
-      "claimed": 0.75,
-      "actual": 0.875
+      "n": 9,
+      "claimed": 0.7533,
+      "actual": 0.8889
     },
     {
       "label": "80\u201390%",
-      "n": 13,
-      "claimed": 0.8462,
-      "actual": 1.0
+      "n": 15,
+      "claimed": 0.8453,
+      "actual": 0.9333
     },
     {
       "label": "90\u2013100%",
-      "n": 1,
+      "n": 2,
       "claimed": 0.95,
       "actual": 1.0
     }
   ],
   "open_bets": [
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 32.4,
-        "for_date": "2026-07-31",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-07-30",
-      "resolve_on": "2026-08-01"
-    },
-    {
-      "id": "btc_up",
-      "question": "Bitcoin will be higher tomorrow than it is today.",
-      "rule": "momentum",
-      "family": "btc_up",
-      "variant": "rule",
-      "call": false,
-      "confidence": 0.551,
-      "basis": {
-        "today_usd": 62830,
-        "change_24h": -3.09
-      },
-      "made_on": "2026-07-31",
-      "resolve_on": "2026-08-01"
-    },
-    {
-      "id": "kp_storm",
-      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
-      "rule": "persistence",
-      "family": "kp_storm",
-      "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
-      "basis": {
-        "today_max_kp": 2.0
-      },
-      "made_on": "2026-07-31",
-      "resolve_on": "2026-08-01"
-    },
-    {
-      "id": "quake_m5",
-      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
-      "rule": "base rate",
-      "family": "quake_m5",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.95,
-      "basis": {
-        "base_rate": 1.0
-      },
-      "made_on": "2026-07-31",
-      "resolve_on": "2026-08-01"
-    },
-    {
-      "id": "wiki_hold",
-      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "rule": "persistence",
-      "family": "wiki_hold",
-      "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
-      "basis": {
-        "today_top": "Spider-Man:_Brand_New_Day"
-      },
-      "made_on": "2026-07-31",
-      "resolve_on": "2026-08-01"
-    },
-    {
-      "id": "hn_fade",
-      "question": "The current #1 story on Hacker News will fall out of the top 10.",
-      "rule": "decay",
-      "family": "hn_fade",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.88,
-      "basis": {
-        "top_id": 49124218,
-        "top_title": "Elevators"
-      },
-      "made_on": "2026-07-31",
-      "resolve_on": "2026-08-01"
-    },
     {
       "id": "forecast_hit",
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -433,6 +345,94 @@
       },
       "made_on": "2026-07-31",
       "resolve_on": "2026-08-02"
+    },
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.54,
+      "basis": {
+        "today_usd": 63006,
+        "change_24h": -2.05
+      },
+      "made_on": "2026-08-01",
+      "resolve_on": "2026-08-02"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 2.0
+      },
+      "made_on": "2026-08-01",
+      "resolve_on": "2026-08-02"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-08-01",
+      "resolve_on": "2026-08-02"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_top": "Spider-Man:_Brand_New_Day"
+      },
+      "made_on": "2026-08-01",
+      "resolve_on": "2026-08-02"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 49124218,
+        "top_title": "Elevators"
+      },
+      "made_on": "2026-08-01",
+      "resolve_on": "2026-08-02"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 31.8,
+        "for_date": "2026-08-02",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-08-01",
+      "resolve_on": "2026-08-03"
     }
   ],
   "grades": [
@@ -812,6 +812,84 @@
       "confidence": 0.88,
       "actual": true,
       "correct": true
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-07-30",
+      "resolve_on": "2026-08-01",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "made_on": "2026-07-31",
+      "resolve_on": "2026-08-01",
+      "call": false,
+      "confidence": 0.551,
+      "actual": true,
+      "correct": false
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "made_on": "2026-07-31",
+      "resolve_on": "2026-08-01",
+      "call": false,
+      "confidence": 0.78,
+      "actual": false,
+      "correct": true
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "made_on": "2026-07-31",
+      "resolve_on": "2026-08-01",
+      "call": true,
+      "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "made_on": "2026-07-31",
+      "resolve_on": "2026-08-01",
+      "call": false,
+      "confidence": 0.62,
+      "actual": true,
+      "correct": false
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "made_on": "2026-07-31",
+      "resolve_on": "2026-08-01",
+      "call": true,
+      "confidence": 0.88,
+      "actual": false,
+      "correct": false
     }
   ]
 }
