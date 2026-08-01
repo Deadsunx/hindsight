@@ -1,19 +1,19 @@
 {
   "date": "2026-08-01",
-  "fetched_at": "2026-08-01T06:26:46.600356+00:00",
+  "fetched_at": "2026-08-01T16:50:49.620979+00:00",
   "observations": {
     "btc": {
-      "usd": 63006,
-      "usd_24h_change": -2.05
+      "usd": 62904,
+      "usd_24h_change": 0.23
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 1.0,
+      "max_kp": 1.33,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.6,
-      "count": 229,
+      "count": 235,
       "strongest_place": "200 km SW of Port McNeill, Canada"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-07-31"
     },
     "hn": {
-      "top_id": 49124218,
-      "top_title": "Elevators",
+      "top_id": 49134599,
+      "top_title": "The Art of 64-bit Assembly",
       "top10": [
+        49134599,
+        49135257,
+        49133889,
+        49134694,
+        49135546,
+        49134038,
+        49135245,
+        49135383,
         49124218,
-        49130604,
-        49129990,
-        49126604,
-        49130726,
-        49131034,
-        49131367,
-        49130295,
-        49121196,
-        49096605
+        49105331
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.5,
       "actual_prev_date": "2026-07-31",
-      "today": 31.4,
-      "forecast_next": 31.8,
+      "today": 32.4,
+      "forecast_next": 33.4,
       "forecast_next_date": "2026-08-02"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.54,
+      "call": true,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 63006,
-        "change_24h": -2.05
+        "today_usd": 62904,
+        "change_24h": 0.23
       },
       "made_on": "2026-08-01",
       "resolve_on": "2026-08-02"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 1.33
       },
       "made_on": "2026-08-01",
       "resolve_on": "2026-08-02"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49124218,
-        "top_title": "Elevators"
+        "top_id": 49134599,
+        "top_title": "The Art of 64-bit Assembly"
       },
       "made_on": "2026-08-01",
       "resolve_on": "2026-08-02"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.8,
+        "forecast_c": 33.4,
         "for_date": "2026-08-02",
         "city": "New Delhi"
       },

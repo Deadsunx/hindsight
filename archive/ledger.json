@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01T06:26:48.229566+00:00",
+  "updated": "2026-08-01T16:50:51.250801+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -352,11 +352,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.54,
+      "call": true,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 63006,
-        "change_24h": -2.05
+        "today_usd": 62904,
+        "change_24h": 0.23
       },
       "made_on": "2026-08-01",
       "resolve_on": "2026-08-02"
@@ -370,7 +370,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 1.33
       },
       "made_on": "2026-08-01",
       "resolve_on": "2026-08-02"
@@ -412,8 +412,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49124218,
-        "top_title": "Elevators"
+        "top_id": 49134599,
+        "top_title": "The Art of 64-bit Assembly"
       },
       "made_on": "2026-08-01",
       "resolve_on": "2026-08-02"
@@ -427,7 +427,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.8,
+        "forecast_c": 33.4,
         "for_date": "2026-08-02",
         "city": "New Delhi"
       },
