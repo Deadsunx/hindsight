@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-02T06:32:32.382775+00:00",
+  "updated": "2026-08-02T16:48:44.035061+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -43,8 +43,8 @@
       },
       "base_rate": {
         "n": 7,
-        "rate": 0.0,
-        "majority_accuracy": 1.0
+        "rate": 0.1429,
+        "majority_accuracy": 0.8571
       }
     },
     "quake_m5": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 41,
-    "correct": 32,
-    "accuracy": 0.7805,
-    "brier": 0.1241,
-    "log_loss": 0.404,
+    "correct": 31,
+    "accuracy": 0.7561,
+    "brier": 0.1378,
+    "log_loss": 0.4349,
     "open": 7,
     "void": 0,
     "days": 8
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 41,
-      "rate": 0.7073,
-      "majority_accuracy": 0.7073
+      "rate": 0.7317,
+      "majority_accuracy": 0.7317
     }
   },
   "by_predictor": {
@@ -181,10 +181,10 @@
       "family": "kp_storm",
       "variant": "rule",
       "graded": 7,
-      "correct": 7,
-      "accuracy": 1.0,
-      "brier": 0.0484,
-      "log_loss": 0.2485
+      "correct": 6,
+      "accuracy": 0.8571,
+      "brier": 0.1284,
+      "log_loss": 0.4293
     },
     "quake_m5": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -314,7 +314,7 @@
       "label": "70\u201380%",
       "n": 11,
       "claimed": 0.7509,
-      "actual": 0.9091
+      "actual": 0.8182
     },
     {
       "label": "80\u201390%",
@@ -353,10 +353,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.527,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 63434,
-        "change_24h": 0.68
+        "today_usd": 63167,
+        "change_24h": 0.42
       },
       "made_on": "2026-08-02",
       "resolve_on": "2026-08-03"
@@ -367,10 +367,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 1.33
+        "today_max_kp": 3.67
       },
       "made_on": "2026-08-02",
       "resolve_on": "2026-08-03"
@@ -412,8 +412,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49141073,
-        "top_title": "Running Kimi K3 on MI355X at Better Performance per Dollar Than B300"
+        "top_id": 49145590,
+        "top_title": "How the words we teach English language learners changed"
       },
       "made_on": "2026-08-02",
       "resolve_on": "2026-08-03"
@@ -427,7 +427,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.1,
+        "forecast_c": 31.6,
         "for_date": "2026-08-03",
         "city": "New Delhi"
       },
@@ -927,8 +927,8 @@
       "resolve_on": "2026-08-02",
       "call": false,
       "confidence": 0.78,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "quake_m5",

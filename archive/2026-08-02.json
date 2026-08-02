@@ -1,20 +1,20 @@
 {
   "date": "2026-08-02",
-  "fetched_at": "2026-08-02T06:32:31.232243+00:00",
+  "fetched_at": "2026-08-02T16:48:42.812342+00:00",
   "observations": {
     "btc": {
-      "usd": 63434,
-      "usd_24h_change": 0.68
+      "usd": 63167,
+      "usd_24h_change": 0.42
     },
     "kp": {
-      "max_kp": 1.33,
-      "latest_kp": 1.0,
+      "max_kp": 3.67,
+      "latest_kp": 3.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.2,
-      "count": 231,
-      "strongest_place": "112 km SW of Severo-Kuril\u2019sk, Russia"
+      "max_mag": 5.6,
+      "count": 213,
+      "strongest_place": "14 km S of Hicks Bay, New Zealand"
     },
     "wiki": {
       "top": "Spider-Man:_Brand_New_Day",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-01"
     },
     "hn": {
-      "top_id": 49141073,
-      "top_title": "Running Kimi K3 on MI355X at Better Performance per Dollar Than B300",
+      "top_id": 49145590,
+      "top_title": "How the words we teach English language learners changed",
       "top10": [
-        49141073,
-        49140218,
-        49140702,
-        49138302,
-        49138188,
-        49140213,
-        49140396,
-        49140696,
-        49139102,
-        49139383
+        49145590,
+        49143967,
+        49140998,
+        49143925,
+        49143479,
+        49093845,
+        49094151,
+        49142569,
+        49123003,
+        49143001
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.4,
       "actual_prev_date": "2026-08-01",
-      "today": 32.7,
-      "forecast_next": 31.1,
+      "today": 33.7,
+      "forecast_next": 31.6,
       "forecast_next_date": "2026-08-03"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.527,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 63434,
-        "change_24h": 0.68
+        "today_usd": 63167,
+        "change_24h": 0.42
       },
       "made_on": "2026-08-02",
       "resolve_on": "2026-08-03"
@@ -68,10 +68,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 1.33
+        "today_max_kp": 3.67
       },
       "made_on": "2026-08-02",
       "resolve_on": "2026-08-03"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49141073,
-        "top_title": "Running Kimi K3 on MI355X at Better Performance per Dollar Than B300"
+        "top_id": 49145590,
+        "top_title": "How the words we teach English language learners changed"
       },
       "made_on": "2026-08-02",
       "resolve_on": "2026-08-03"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.1,
+        "forecast_c": 31.6,
         "for_date": "2026-08-03",
         "city": "New Delhi"
       },
