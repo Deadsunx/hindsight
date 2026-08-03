@@ -291,6 +291,14 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
     transition: opacity .34s ease var(--d, 0ms), transform .42s cubic-bezier(.34,1.4,.64,1) var(--d, 0ms);
   }
 
+  /* Table rows fill in after their section lands — a ledger being written
+     down the page rather than a block appearing at once. */
+  .js-anim .scroll tbody tr { opacity: 0; transform: translate3d(0, 9px, 0); }
+  .scroll.shown tbody tr {
+    opacity: 1; transform: none;
+    transition: opacity .45s ease var(--d, 0ms), transform .5s cubic-bezier(.22,.61,.36,1) var(--d, 0ms);
+  }
+
   /* The calibration dots arrive after their axes, smallest first. */
   .js-anim .plot [data-mark] { opacity: 0; transform: scale(0.3); transform-box: fill-box; transform-origin: center; }
   .plot.shown [data-mark] {
@@ -315,7 +323,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
       scroll-behavior: auto !important;
     }
     [data-reveal], .lede .w, .plot [data-mark],
-    .entries .entry, .reg-grid .cell {
+    .entries .entry, .reg-grid .cell, .scroll tbody tr {
       opacity: 1 !important; transform: none !important;
       clip-path: inset(0) !important; will-change: auto !important;
     }
@@ -410,7 +418,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
       to tell that apart from skill. Sample size is printed on every row because at these numbers
       it is the most important figure on the page.
     </p>
-    <div class="scroll" id="perQuestion"></div>
+    <div class="scroll" id="perQuestion" data-reveal="group"></div>
   </section>
 
   <section class="block" data-reveal="up">
@@ -422,7 +430,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
       it does. Judged on <b>shared days only</b>: the model may not bet until it has 25 settled
       examples, and counting the days it sat out would flatter whoever drew the easier ones.
     </p>
-    <div class="scroll" id="headToHead"></div>
+    <div class="scroll" id="headToHead" data-reveal="group"></div>
     <p class="note" style="margin-top:1rem;margin-bottom:0">
       Brier decides it, not accuracy — accuracy cannot tell the difference between a cautious miss
       and a confident one.
@@ -445,7 +453,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
     <span class="label">settled, win or lose</span>
     <h2>Receipts</h2>
     <p class="note">Most recent first. Losses are not quietly dropped — that is the entire point.</p>
-    <div class="scroll" id="receipts"></div>
+    <div class="scroll" id="receipts" data-reveal="group"></div>
   </section>
 
   <section class="block" data-reveal="up">
@@ -952,8 +960,14 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
   // about to be looked at, and each element is unobserved the moment it fires,
   // so the cost is bounded no matter how long the archive grows.
   var reveal = (function () {
-    if (reduced) {
-      return { scan: function () {}, stagger: function () {}, run: function () {} };
+    // No observer, or no motion wanted: show everything and skip the rest.
+    if (reduced || !("IntersectionObserver" in window)) {
+      var showAll = function () {
+        document.querySelectorAll("[data-reveal]:not(.shown)")
+          .forEach(function (n) { n.classList.add("shown"); });
+      };
+      showAll();
+      return { scan: showAll, stagger: function () {}, run: function (el) { if (el) el.classList.add("shown"); } };
     }
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -978,11 +992,14 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
     }
     function run(el) { if (el) el.classList.add("shown"); }
 
-    // Failsafe. Choreography is worth having and never worth losing the page
-    // over, so anything still hidden after five seconds is simply shown.
+    // Failsafe, scoped to what the reader has actually reached. Revealing
+    // everything would mark the whole page shown while it is still below the
+    // fold, so by the time you scrolled down nothing would be left to animate
+    // — the insurance would quietly cancel the feature.
     setTimeout(function () {
-      document.querySelectorAll("[data-reveal]:not(.shown)")
-        .forEach(function (n) { n.classList.add("shown"); });
+      document.querySelectorAll("[data-reveal]:not(.shown)").forEach(function (n) {
+        if (n.getBoundingClientRect().top < window.innerHeight) n.classList.add("shown");
+      });
     }, 5000);
 
     return { scan: scan, stagger: stagger, run: run };
@@ -1055,6 +1072,9 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
     reveal.stagger(document.querySelectorAll("#openBets .entry"), 55, 700);
     // The register fills oldest to newest — the record being written out.
     reveal.stagger(document.querySelectorAll("#regGrid .cell"), 7, 900);
+    reveal.stagger(document.querySelectorAll("#perQuestion tbody tr"), 60, 600);
+    reveal.stagger(document.querySelectorAll("#headToHead tbody tr"), 60, 600);
+    reveal.stagger(document.querySelectorAll("#receipts tbody tr"), 34, 700);
     // Calibration dots land after their axes, smallest sample first.
     var marks = document.querySelectorAll(".plot [data-mark]");
     reveal.stagger(marks, 90, 800);
