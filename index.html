@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script>try{var t=localStorage.getItem('hs-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script>
+/* Theme before first paint, and the animation opt-in.
+   Nothing on this page hides itself unless `js-anim` is set here, so a reader
+   with JS off, a script that fails to load, or a reduced-motion preference
+   gets the finished page rather than a blank one. */
+try{var t=localStorage.getItem('hs-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}
+try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
+  document.documentElement.classList.add('js-anim');}catch(e){}
+</script>
 <title>Hindsight — a register of what a machine expected</title>
 <meta name="description" content="Twice a day a script writes down what it expects of tomorrow, seals it in a public repository before the outcome exists, and marks its own losses in red when the truth arrives." />
 
@@ -71,6 +79,15 @@
   }
   #field { position: fixed; inset: 0; z-index: 0; pointer-events: none; display: block; }
   .sheet { position: relative; z-index: 1; max-width: 940px; margin: 0 auto; padding: 0 clamp(1.1rem, 4vw, 2.6rem) 4rem; }
+
+  .skip {
+    position: absolute; left: -9999px; top: 0; z-index: 10;
+    background: var(--raised); color: var(--ink);
+    border: 1px solid var(--rule); padding: 0.7rem 1rem;
+    font-family: "Azeret Mono", monospace; font-size: 0.7rem;
+    letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+  }
+  .skip:focus { left: 0.6rem; top: 0.6rem; }
 
   .mono { font-family: "Azeret Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
   a { color: inherit; }
@@ -205,39 +222,131 @@
 
   footer { margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-family: "Azeret Mono", monospace; font-size: 0.64rem; color: var(--pencil); }
 
+  /* ==================== depth ====================
+     depth-0  the tally field, parallaxed at 0.06x
+     depth-1  atmospheric wash, fixed
+     depth-4  the sheet itself — content, never parallaxed
+     There is no depth-2/3 tier here: this page has no imagery to float, and
+     inventing decorative objects to fill those layers would be the opposite
+     of what a register is.                                                   */
+  #field { z-index: 0; }
+  .wash {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(120% 80% at 50% -10%, rgba(78, 154, 140, 0.07), transparent 60%),
+      radial-gradient(90% 60% at 50% 110%, rgba(194, 69, 60, 0.05), transparent 65%);
+  }
+  :root[data-theme="light"] .wash {
+    background:
+      radial-gradient(120% 80% at 50% -10%, rgba(46, 110, 98, 0.09), transparent 60%),
+      radial-gradient(90% 60% at 50% 110%, rgba(158, 43, 37, 0.06), transparent 65%);
+  }
+  .sheet { z-index: 1; }
+
+  /* ==================== reveal primitives ====================
+     Only transform, opacity and clip-path are animated. Nothing here touches
+     layout, so none of it can cause a reflow mid-scroll.                     */
+  [data-reveal] { will-change: opacity, transform, clip-path; }
+
+  .js-anim [data-reveal="up"] { opacity: 0; transform: translate3d(0, 20px, 0); }
+  .js-anim [data-reveal="type"] { opacity: 0; clip-path: inset(0 0 105% 0); transform: translate3d(0, 8px, 0); }
+  .js-anim [data-reveal="rule"] { transform: scaleX(0); transform-origin: left center; }
+  .js-anim [data-reveal="wipe"] { opacity: 0; clip-path: inset(0 100% 0 0); }
+  .js-anim [data-reveal="mark"] { opacity: 0; transform: scale(0.4); }
+
+  [data-reveal].shown {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(0 0 0 0);
+    will-change: auto;
+  }
+  [data-reveal="up"], [data-reveal="type"], [data-reveal="wipe"], [data-reveal="mark"] {
+    transition:
+      opacity 0.62s cubic-bezier(.22,.61,.36,1) var(--d, 0ms),
+      transform 0.68s cubic-bezier(.22,.61,.36,1) var(--d, 0ms),
+      clip-path 0.78s cubic-bezier(.22,.61,.36,1) var(--d, 0ms);
+  }
+  [data-reveal="rule"] { transition: transform 0.9s cubic-bezier(.22,.61,.36,1) var(--d, 0ms); }
+
+  /* Words of the lede light one after another as the page settles — the
+     clause is the whole argument, so it is worth reading at its own pace. */
+  .js-anim .lede .w { opacity: 0.16; transition: opacity 0.5s ease var(--d, 0ms); }
+  .lede.shown .w { opacity: 1; }
+  .lede.shown b .w { color: var(--ink); }
+
+  /* A "group" container is watched but never hidden itself — its children do
+     the moving. Fading the card while its rows stagger inside reads as two
+     effects competing. */
+  .js-anim .entries .entry { opacity: 0; transform: translate3d(-10px, 0, 0); }
+  .slip.shown .entries .entry {
+    opacity: 1; transform: none;
+    transition: opacity .5s ease var(--d, 0ms), transform .55s cubic-bezier(.22,.61,.36,1) var(--d, 0ms);
+  }
+
+  /* The signature moment: the register fills oldest to newest, the record
+     being written out in front of you. */
+  .js-anim .reg-grid .cell { opacity: 0; transform: scale(0.45); }
+  .reg-grid.shown .cell {
+    opacity: 1; transform: none;
+    transition: opacity .34s ease var(--d, 0ms), transform .42s cubic-bezier(.34,1.4,.64,1) var(--d, 0ms);
+  }
+
+  /* The calibration dots arrive after their axes, smallest first. */
+  .js-anim .plot [data-mark] { opacity: 0; transform: scale(0.3); transform-box: fill-box; transform-origin: center; }
+  .plot.shown [data-mark] {
+    opacity: 0.82; transform: scale(1);
+    transition: opacity .5s ease var(--d, 0ms), transform .6s cubic-bezier(.34,1.4,.64,1) var(--d, 0ms);
+  }
+
   @media (max-width: 620px) {
     .entry { grid-template-columns: 3rem 1fr; }
     .entry-by { grid-column: 2; text-align: left; }
     .entry-conf, .entry-why { display: inline; }
     .entry-head span:last-child { display: none; }
   }
+  /* Non-negotiable: everything above collapses to its finished state. The
+     page loses its choreography and keeps every word. */
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    [data-reveal], .lede .w, .plot [data-mark],
+    .entries .entry, .reg-grid .cell {
+      opacity: 1 !important; transform: none !important;
+      clip-path: inset(0) !important; will-change: auto !important;
+    }
+    .plot [data-mark] { opacity: 0.82 !important; }
   }
 </style>
 </head>
 <body>
-<canvas id="field" aria-hidden="true"></canvas>
+<a class="skip" href="#main-content">Skip to the register</a>
+<canvas id="field" data-depth="0" aria-hidden="true"></canvas>
+<div class="wash" data-depth="1" aria-hidden="true"></div>
 
-<div class="sheet">
+<main class="sheet" id="main-content">
 
   <header class="masthead">
-    <div class="folio">
+    <div class="folio" data-reveal="rule" data-seq="0">
       <span class="label">an autonomous register</span>
       <span class="folio-end">
         <span class="label mono" id="folio">day —</span>
         <button class="theme-toggle" id="themeBtn">Paper</button>
       </span>
     </div>
-    <h1>Hind<em>sight</em></h1>
-    <p class="lede">
+    <h1 data-reveal="type" data-seq="1">Hind<em>sight</em></h1>
+    <p class="lede" data-words data-seq="2">
       Twice a day this machine writes down what it expects of tomorrow and
       <b>seals it in a public repository before the answer exists</b>. When the truth
       arrives it marks its own losses. In red, where everyone can see them.
     </p>
   </header>
 
-  <section class="slip" aria-labelledby="slipTitle">
+  <section class="slip" aria-labelledby="slipTitle" data-reveal="group">
     <div class="slip-head">
       <span class="label" id="slipTitle">entry for <span id="slipDate" class="mono">—</span></span>
       <span class="label mono" id="slipSeal">unsealed</span>
@@ -255,7 +364,7 @@
     </div>
   </section>
 
-  <section class="block" aria-label="Standing">
+  <section class="block" aria-label="Standing" data-reveal="up">
     <div class="standing">
       <div class="fig"><div class="fig-v none" id="figAcc">—</div><div class="fig-k">Right</div></div>
       <div class="fig"><div class="fig-v none" id="figBrier">—</div><div class="fig-k">Brier</div></div>
@@ -272,7 +381,7 @@
     </p>
   </section>
 
-  <section class="block">
+  <section class="block" data-reveal="up">
     <span class="label">every day it has kept</span>
     <h2>The register</h2>
     <p class="note">
@@ -281,7 +390,7 @@
     </p>
     <div class="reg">
       <div class="reg-days"><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span><span>Sun</span></div>
-      <div class="reg-grid" id="regGrid"></div>
+      <div class="reg-grid" id="regGrid" data-reveal="group"></div>
     </div>
     <div class="key">
       <span>all wrong<i class="ramp"></i>all right</span>
@@ -290,7 +399,7 @@
     </div>
   </section>
 
-  <section class="block">
+  <section class="block" data-reveal="up">
     <span class="label">what each question is actually worth</span>
     <h2>Per question</h2>
     <p class="note">
@@ -304,7 +413,7 @@
     <div class="scroll" id="perQuestion"></div>
   </section>
 
-  <section class="block">
+  <section class="block" data-reveal="up">
     <span class="label">five lines of arithmetic against gradient descent</span>
     <h2>Rules and models</h2>
     <p class="note">
@@ -320,7 +429,7 @@
     </p>
   </section>
 
-  <section class="block">
+  <section class="block" data-reveal="up">
     <span class="label">does seventy per cent mean seventy per cent</span>
     <h2>Calibration</h2>
     <p class="note">
@@ -329,17 +438,17 @@
       bluffing. This needs months of evidence before it means anything, which is the whole reason
       the register is kept daily.
     </p>
-    <div class="plot" id="plot"></div>
+    <div class="plot" id="plot" data-reveal="group"></div>
   </section>
 
-  <section class="block">
+  <section class="block" data-reveal="up">
     <span class="label">settled, win or lose</span>
     <h2>Receipts</h2>
     <p class="note">Most recent first. Losses are not quietly dropped — that is the entire point.</p>
     <div class="scroll" id="receipts"></div>
   </section>
 
-  <section class="block">
+  <section class="block" data-reveal="up">
     <span class="label">method</span>
     <h2>Why this is hard to fake</h2>
     <div class="method">
@@ -360,7 +469,7 @@
     <span>Twice daily on GitHub Actions · standard library only · no API keys</span>
     <span id="stamp"></span>
   </footer>
-</div>
+</main>
 
 <script>
 (function () {
@@ -414,11 +523,12 @@
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       var cols = Math.ceil(innerWidth / GAP_X) + 1;
-      var rows = Math.ceil(innerHeight / GAP_Y) + 1;
+      var rows = Math.ceil(innerHeight / GAP_Y) + 2;
       marks = [];
       // Row-major, so index order is reading order and the record fills the
-      // page the way a hand would.
-      for (var r = 0; r < rows; r++) {
+      // page the way a hand would. Starts one row above the viewport so the
+      // parallax offset never exposes a bare strip along the top edge.
+      for (var r = -1; r < rows; r++) {
         for (var c = 0; c < cols; c++) {
           marks.push({
             x: c * GAP_X + 9,
@@ -446,8 +556,14 @@
     BASE[RIGHT] = 0.12;
     BASE[WRONG] = 0.09;
 
+    // depth-0 parallax. The field is fixed, so it is drawn with a scroll
+    // offset wrapped to the row pitch rather than translated — a translated
+    // canvas would drag its own edge into view.
+    var PARALLAX = 0.06;
+
     function draw(now) {
       ctx.clearRect(0, 0, innerWidth, innerHeight);
+      var oy = (window.pageYOffset * PARALLAX) % GAP_Y;
       for (var i = 0; i < marks.length; i++) {
         var m = marks[i];
         var a = BASE[m.state];
@@ -460,7 +576,7 @@
         if (d < REACH) a += 0.20 * (1 - d / REACH) * (m.state === BLANK ? 0.5 : 1);
 
         ctx.save();
-        ctx.translate(m.x, m.y);
+        ctx.translate(m.x, m.y + oy);
         ctx.rotate(m.lean);
         var key = m.state === WRONG ? "wrong" : m.state === RIGHT ? "right"
                 : m.state === PENDING ? "pending" : "blank";
@@ -799,7 +915,7 @@
       var x = sx(b.claimed), y = sy(b.actual), r = Math.min(15, 4.5 + Math.sqrt(b.n) * 1.5);
       var honest = Math.abs(b.actual - b.claimed) <= 0.1;
       // Honest bands are plain ink; only the miscalibrated ones cost red.
-      p.push('<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' +
+      p.push('<circle data-mark cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' +
         (honest ? "var(--mark)" : "var(--loss)") + '" opacity="0.82"><title>' + b.label +
         ": claimed " + pct(b.claimed) + ", right " + pct(b.actual) + " over " + b.n + "</title></circle>");
       p.push('<text class="ax" x="' + x + '" y="' + (y - r - 6) + '" text-anchor="middle">' + b.n + "</text>");
@@ -831,6 +947,94 @@
     host.innerHTML = html.join("");
   }
 
+  // ---------- reveal engine ----------
+  // One IntersectionObserver for the whole page. Nothing animates until it is
+  // about to be looked at, and each element is unobserved the moment it fires,
+  // so the cost is bounded no matter how long the archive grows.
+  var reveal = (function () {
+    if (reduced) {
+      return { scan: function () {}, stagger: function () {}, run: function () {} };
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("shown");
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
+
+    function scan(root) {
+      (root || document).querySelectorAll("[data-reveal]:not(.shown)")
+        .forEach(function (n) { io.observe(n); });
+    }
+    // Give a set of children an increasing transition-delay, capped so a long
+    // table never leaves its last row waiting seconds to appear.
+    function stagger(nodes, per, cap) {
+      var step = per === undefined ? 45 : per;
+      var max = cap === undefined ? 900 : cap;
+      Array.prototype.forEach.call(nodes, function (n, i) {
+        n.style.setProperty("--d", Math.min(i * step, max) + "ms");
+      });
+    }
+    function run(el) { if (el) el.classList.add("shown"); }
+
+    // Failsafe. Choreography is worth having and never worth losing the page
+    // over, so anything still hidden after five seconds is simply shown.
+    setTimeout(function () {
+      document.querySelectorAll("[data-reveal]:not(.shown)")
+        .forEach(function (n) { n.classList.add("shown"); });
+    }, 5000);
+
+    return { scan: scan, stagger: stagger, run: run };
+  })();
+
+  // The lede is split into words so the clause can light at reading pace.
+  // Done in JS rather than markup so the HTML stays legible and the sentence
+  // survives with no scripting at all.
+  function splitWords(el) {
+    if (!el || reduced) return;
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+    var texts = [];
+    while (walker.nextNode()) texts.push(walker.currentNode);
+    var index = 0;
+    texts.forEach(function (node) {
+      var frag = document.createDocumentFragment();
+      node.nodeValue.split(/(\s+)/).forEach(function (part) {
+        if (!part) return;
+        if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+        var span = document.createElement("span");
+        span.className = "w";
+        span.textContent = part;
+        span.style.setProperty("--d", Math.min(index * 26, 1400) + "ms");
+        index++;
+        frag.appendChild(span);
+      });
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+
+  // ---------- the load sequence ----------
+  // One orchestrated moment rather than scattered effects: the rule draws, the
+  // masthead is written, then the sentence lights word by word.
+  (function openingSequence() {
+    var lede = document.querySelector("[data-words]");
+    splitWords(lede);
+    if (reduced) {
+      document.querySelectorAll("[data-seq]").forEach(function (n) { n.classList.add("shown"); });
+      return;
+    }
+    // setTimeout, not requestAnimationFrame: rAF is suspended in a background
+    // tab, so a page opened in one would keep its masthead hidden until the
+    // reader happened to switch to it.
+    setTimeout(function () {
+      document.querySelectorAll("[data-seq]").forEach(function (n) {
+        var seq = parseInt(n.dataset.seq, 10) || 0;
+        n.style.setProperty("--d", 120 + seq * 210 + "ms");
+        reveal.run(n);
+      });
+    }, 60);
+  })();
+
   // ---------- boot ----------
   Promise.all([
     getJSON("archive/ledger.json"),
@@ -845,10 +1049,22 @@
     renderPlot(r[0]);
     renderReceipts(r[0]);
     ticks.setRecord(recordFromLedger(r[0]));
+
+    // Content arrives after the first paint, so the injected rows have to be
+    // staggered and handed to the observer here rather than at parse time.
+    reveal.stagger(document.querySelectorAll("#openBets .entry"), 55, 700);
+    // The register fills oldest to newest — the record being written out.
+    reveal.stagger(document.querySelectorAll("#regGrid .cell"), 7, 900);
+    // Calibration dots land after their axes, smallest sample first.
+    var marks = document.querySelectorAll(".plot [data-mark]");
+    reveal.stagger(marks, 90, 800);
+    reveal.scan();
   }).catch(function (err) {
     document.getElementById("openBets").innerHTML =
       '<li class="blank"><b>The register could not be read.</b>' + err.message + "</li>";
   });
+
+  reveal.scan();
 })();
 </script>
 </body>
