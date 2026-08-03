@@ -75,9 +75,36 @@ jobs:
       - name: Audit before publishing
         run: python verify.py
 
+      # A push that lands while this run is in flight — a source commit, or the
+      # other daily run — leaves this branch behind and the push is rejected.
+      # That cost a whole day's entry once. Rebase and retry instead.
       - name: Push
         if: steps.commit.outputs.changed == 'true'
-        run: git push
+        run: |
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected — remote moved. Rebasing (attempt $attempt)."
+            if ! git pull --rebase origin main; then
+              echo "Rebase conflicted. This needs a human; nothing was pushed."
+              git rebase --abort || true
+              exit 1
+            fi
+            # The rebase may have brought in an archived day from the other
+            # run, so the derived files have to be rebuilt and re-audited
+            # before this is allowed anywhere near the remote again.
+            python rebuild_derived.py
+            git add -A
+            git diff --cached --quiet || git commit -m "Rebuild derived files after rebase"
+            if ! python verify.py; then
+              echo "Audit failed after rebase; withholding the push."
+              exit 1
+            fi
+          done
+          echo "Still rejected after 3 attempts."
+          exit 1
 
       - name: Report failure as an issue
         if: failure()

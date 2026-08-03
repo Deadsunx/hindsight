@@ -189,7 +189,12 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
   .key i.ramp { width: 62px; margin: 0 0.5rem; background: linear-gradient(90deg, var(--loss), var(--mark)); }
 
   /* ---------- tables ---------- */
-  .scroll { overflow-x: auto; }
+  /* overflow-y must be stated. Setting overflow-x alone makes the other axis
+     compute to auto, and the rows animating in from translateY(9px) overflow
+     the box for the length of the transition — which flashed a vertical
+     scrollbar during the stagger and then removed it. Nothing visible is
+     clipped: a row is still transparent while it is below its resting place. */
+  .scroll { overflow-x: auto; overflow-y: hidden; }
   table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
   th {
     text-align: left; font-family: "Azeret Mono", monospace; font-weight: 500;
@@ -297,6 +302,24 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
   .scroll.shown tbody tr {
     opacity: 1; transform: none;
     transition: opacity .45s ease var(--d, 0ms), transform .5s cubic-bezier(.22,.61,.36,1) var(--d, 0ms);
+  }
+
+  /* Receipts run to every settled bet, which is already dozens of rows and
+     will be hundreds. A first handful is enough to see what a receipt is;
+     the rest is there for anyone checking rather than reading. */
+  .rest { display: none; }
+  .scroll.open .rest { display: table-row; }
+  .more {
+    display: block; width: 100%; margin-top: 0.9rem;
+    background: none; border: 1px dashed var(--rule); color: var(--ink-dim);
+    font-family: "Azeret Mono", monospace; font-size: 0.64rem; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 0.8rem; cursor: pointer; transition: color .2s, border-color .2s;
+  }
+  .more:hover { color: var(--ink); border-color: var(--ink-dim); }
+  .more-note {
+    margin: 0.7rem 0 0; font-family: "Azeret Mono", monospace;
+    font-size: 0.62rem; color: var(--pencil); text-align: center;
   }
 
   /* The calibration dots arrive after their axes, smallest first. */
@@ -454,6 +477,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
     <h2>Receipts</h2>
     <p class="note">Most recent first. Losses are not quietly dropped — that is the entire point.</p>
     <div class="scroll" id="receipts" data-reveal="group"></div>
+    <div id="receiptsMore"></div>
   </section>
 
   <section class="block" data-reveal="up">
@@ -933,19 +957,31 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
   }
 
   // ---------- receipts ----------
+  // Enough rows to show what a receipt looks like, then a way in to the rest.
+  var RECEIPTS_SHOWN = 8;
+  // A cap on what reaches the DOM at all. The archive is the complete record;
+  // this page does not need to be a thousand-row table to be honest.
+  var RECEIPTS_MAX = 120;
+
   function renderReceipts(ledger) {
     var host = document.getElementById("receipts");
-    var g = (ledger.grades || []).slice().sort(function (a, b) {
+    var foot = document.getElementById("receiptsMore");
+    foot.innerHTML = "";
+
+    var all = (ledger.grades || []).slice().sort(function (a, b) {
       return a.made_on < b.made_on ? 1 : -1;
-    }).slice(0, 25);
-    if (!g.length) {
+    });
+    if (!all.length) {
       host.innerHTML = '<div class="blank"><b>No settled entries yet.</b>' +
         "The first receipts appear once tomorrow has happened.</div>";
       return;
     }
+    var g = all.slice(0, RECEIPTS_MAX);
+
     var html = ["<table><thead><tr><th>Sealed</th><th>Question</th><th>Said</th><th>Truth</th><th></th></tr></thead><tbody>"];
-    g.forEach(function (x) {
-      html.push('<tr><td class="num">' + x.made_on + "</td><td>" + (x.question || x.id) +
+    g.forEach(function (x, i) {
+      html.push('<tr' + (i >= RECEIPTS_SHOWN ? ' class="rest"' : "") +
+        '><td class="num">' + x.made_on + "</td><td>" + (x.question || x.id) +
         '<span class="sub">' + (x.rule || "") + "</span></td>" +
         '<td class="num">' + (x.call ? "yes" : "no") + " at " + pct(x.confidence) + "</td>" +
         '<td class="num">' + (x.actual ? "yes" : "no") + "</td>" +
@@ -953,6 +989,28 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
     });
     html.push("</tbody></table>");
     host.innerHTML = html.join("");
+
+    if (g.length <= RECEIPTS_SHOWN) return;
+
+    var btn = el("button", "more");
+    btn.type = "button";
+    btn.setAttribute("aria-expanded", "false");
+    btn.setAttribute("aria-controls", "receipts");
+    var hidden = g.length - RECEIPTS_SHOWN;
+    btn.textContent = "Show " + hidden + " more";
+    btn.addEventListener("click", function () {
+      var open = host.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? "Show fewer" : "Show " + hidden + " more";
+    });
+    foot.appendChild(btn);
+
+    if (all.length > g.length) {
+      var note = el("p", "more-note",
+        "showing the most recent " + g.length + " of " + all.length +
+        " — the complete record is in archive/");
+      foot.appendChild(note);
+    }
   }
 
   // ---------- reveal engine ----------
@@ -1083,7 +1141,7 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
     reveal.stagger(document.querySelectorAll("#regGrid .cell"), 7, 900);
     reveal.stagger(document.querySelectorAll("#perQuestion tbody tr"), 60, 600);
     reveal.stagger(document.querySelectorAll("#headToHead tbody tr"), 60, 600);
-    reveal.stagger(document.querySelectorAll("#receipts tbody tr"), 34, 700);
+    reveal.stagger(document.querySelectorAll("#receipts tbody tr:not(.rest)"), 45, 500);
     // Calibration dots land after their axes, smallest sample first.
     var marks = document.querySelectorAll(".plot [data-mark]");
     reveal.stagger(marks, 90, 800);
