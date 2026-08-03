@@ -977,8 +977,17 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
       });
     }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
 
-    function scan(root) {
-      (root || document).querySelectorAll("[data-reveal]:not(.shown)")
+    // `groups` defaults to true. The parse-time pass sets it false, because a
+    // group container inside the opening viewport would otherwise be marked
+    // shown a frame after load — before the fetch has injected its rows. Rows
+    // created into an already-revealed parent render at their final style with
+    // no transition to run, which is why the top table sat still while the
+    // ones further down animated.
+    function scan(root, groups) {
+      var sel = groups === false
+        ? '[data-reveal]:not(.shown):not([data-reveal="group"])'
+        : "[data-reveal]:not(.shown)";
+      (root || document).querySelectorAll(sel)
         .forEach(function (n) { io.observe(n); });
     }
     // Give a set of children an increasing transition-delay, capped so a long
@@ -1078,13 +1087,20 @@ try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
     // Calibration dots land after their axes, smallest sample first.
     var marks = document.querySelectorAll(".plot [data-mark]");
     reveal.stagger(marks, 90, 800);
+
+    // Force the freshly-injected children to paint in their hidden state
+    // before any group container can be revealed. Without this the browser
+    // may batch insertion and reveal into one style pass, and a transition
+    // needs a previously-rendered value to move away from.
+    void document.body.offsetWidth;
     reveal.scan();
   }).catch(function (err) {
     document.getElementById("openBets").innerHTML =
       '<li class="blank"><b>The register could not be read.</b>' + err.message + "</li>";
   });
 
-  reveal.scan();
+  // Static content only. Group containers wait for their rows to exist.
+  reveal.scan(document, false);
 })();
 </script>
 </body>
