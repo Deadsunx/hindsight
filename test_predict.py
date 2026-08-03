@@ -430,5 +430,109 @@ class TestPredictors(unittest.TestCase):
         self.assertGreater(streak[1], fresh[1])
 
 
+class TestVerdictBlock(unittest.TestCase):
+    """The failure list has to be derived, not written.
+
+    It was prose once. Nine days in it had inverted — naming Wikipedia as the
+    outright failure after Wikipedia had gone on to beat the baseline and
+    Bitcoin had dropped below it. These tests exist so that cannot recur.
+    """
+
+    def _ledger(self, rows, graded=40):
+        by_predictor = {}
+        for pid, row in rows.items():
+            row.setdefault("question", pid)
+            row.setdefault("rule", "r")
+            row.setdefault("family", pid)
+            row.setdefault("variant", "rule")
+            by_predictor[pid] = row
+        return {
+            "totals": {"graded": graded, "correct": 0, "days": 9},
+            "baselines": {"coin_flip": {"brier": predict.COIN_FLIP_BRIER}},
+            "by_predictor": by_predictor,
+        }
+
+    def test_names_the_question_below_the_coin_flip(self):
+        led = self._ledger({
+            "btc_up": {"graded": 8, "correct": 2, "accuracy": 0.25,
+                       "brier": 0.269, "log_loss": 0.73,
+                       "base_rate": 0.62, "majority_accuracy": 0.62,
+                       "question": "Bitcoin question."},
+            "wiki_hold": {"graded": 8, "correct": 5, "accuracy": 0.62,
+                          "brier": 0.220, "log_loss": 0.63,
+                          "base_rate": 0.75, "majority_accuracy": 0.75,
+                          "question": "Wikipedia question."},
+        })
+        text = "\n".join(predict.verdict_block(led))
+        self.assertIn("Bitcoin question.", text)
+        self.assertIn("worse than shrugging", text)
+        # The one that beats the baseline must not be listed as a failure.
+        self.assertNotIn("Wikipedia question.", text)
+
+    def test_flags_a_one_sided_question(self):
+        led = self._ledger({
+            "quake_m5": {"graded": 8, "correct": 8, "accuracy": 1.0,
+                         "brier": 0.013, "log_loss": 0.11,
+                         "base_rate": 1.0, "majority_accuracy": 1.0,
+                         "question": "Quake question."},
+        })
+        text = "\n".join(predict.verdict_block(led))
+        self.assertIn("Quake question.", text)
+        self.assertIn("one-sided", text)
+        self.assertIn("measures the question", text)
+
+    def test_a_balanced_question_is_not_called_one_sided(self):
+        """A 25% base rate is not one-sided; the old prose claimed it was 0%."""
+        led = self._ledger({
+            "kp_storm": {"graded": 8, "correct": 7, "accuracy": 0.88,
+                         "brier": 0.124, "log_loss": 0.42,
+                         "base_rate": 0.25, "majority_accuracy": 0.75,
+                         "question": "Kp question."},
+        })
+        text = "\n".join(predict.verdict_block(led))
+        self.assertNotIn("Kp question.", text)
+
+    def test_reports_when_no_model_has_settled(self):
+        led = self._ledger({
+            "btc_up": {"graded": 8, "correct": 2, "accuracy": 0.25,
+                       "brier": 0.269, "log_loss": 0.73,
+                       "base_rate": 0.62, "majority_accuracy": 0.62},
+            "btc_up_ml": {"graded": 0, "correct": 0, "accuracy": None,
+                          "brier": None, "log_loss": None,
+                          "base_rate": None, "majority_accuracy": None,
+                          "variant": "model"},
+        })
+        self.assertIn("zero", "\n".join(predict.verdict_block(led)))
+
+    def test_empty_ledger_does_not_crash(self):
+        led = self._ledger({}, graded=0)
+        text = "\n".join(predict.verdict_block(led))
+        self.assertIn("Nothing has settled yet", text)
+
+    def test_block_is_delimited_by_its_markers(self):
+        led = self._ledger({})
+        block = predict.verdict_block(led)
+        self.assertEqual(block[0], "<!-- VERDICT:START -->")
+        self.assertEqual(block[-1], "<!-- VERDICT:END -->")
+
+
+class TestPerQuestionBaseRate(unittest.TestCase):
+    def test_by_predictor_carries_its_own_base_rate(self):
+        """Without it, a one-sided question cannot be told from real skill."""
+        days = {
+            "2026-01-01": day(
+                "2026-01-01",
+                {"quakes": {"max_mag": 6.1}},
+                [bet("quake_m5", "2026-01-01", True, 0.85)],
+            ),
+            "2026-01-02": day("2026-01-02", {"quakes": {"max_mag": 6.4}}),
+        }
+        grades = predict.grade_all(days)
+        led = predict.build_ledger(days, grades, "2026-01-02")
+        row = led["by_predictor"]["quake_m5"]
+        self.assertEqual(row["base_rate"], 1.0)
+        self.assertEqual(row["majority_accuracy"], 1.0)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

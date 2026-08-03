@@ -79,33 +79,21 @@ That block is rewritten by the daily run, not by hand.
 The last one is not a weather prediction — it is a **running scorecard on the
 weather service**, which nobody publishes.
 
+<!-- VERDICT:START -->
 ## Where it does not beat the baseline
 
-This section is the reason the base-rate column exists, and it currently reads
-badly for the project. As of the standing above — **11 settled bets, two or
-three per question, which is far too few to conclude anything** — not one of
-the six questions has demonstrated skill:
+Judged against the coin flip's Brier of 0.250, over 47 settled bets:
 
-- **Wikipedia hold** is the outright failure. Brier **0.264** against the coin
-  flip's 0.250, log loss 0.723 against 0.693. It is *worse than shrugging*, and
-  the live page marks it in red.
-- **Bitcoin** lands at Brier 0.249 — a rounding error away from the coin flip,
-  which is roughly what a momentum rule on daily crypto returns deserves.
-- **Earthquakes, Hacker News, and the geomagnetic call** all show 100%
-  accuracy, and all three are worthless as evidence. Their base rates are 100%,
-  100% and 0%: a constant "always yes" or "always no" would have matched them
-  exactly. High accuracy on a one-sided question measures the question, not the
-  predictor.
+- **Bitcoin will be higher tomorrow than it is today.** scores Brier **0.269** against the coin flip's 0.250 over n=8. It is worse than shrugging.
+- **A magnitude 5.0+ earthquake will strike somewhere tomorrow.** is effectively one-sided: the event happened 100% of the time, so always calling the majority side would have scored 100% against this rule's 100%. Accuracy here measures the question, not the predictor.
+- **The current #1 story on Hacker News will fall out of the top 10.** is effectively one-sided: the event happened 88% of the time, so always calling the majority side would have scored 88% against this rule's 88%. Accuracy here measures the question, not the predictor.
+- **Tomorrow's high in New Delhi will land within 2°C of today's forecast.** is effectively one-sided: the event happened 100% of the time, so always calling the majority side would have scored 100% against this rule's 100%. Accuracy here measures the question, not the predictor.
 
-So the honest summary today is that **three questions are near coin flips, three
-are near constants, and none has beaten the trivial answer.** The interesting
-result, if one arrives, is a Brier gap that survives a few hundred bets — not
-the accuracy figure at the top of the page.
+The model half has placed **zero** settled bets: it may not bet until 25 examples in its family have settled. Until then the head-to-head table is honestly blank rather than quietly filled with the rule's numbers.
 
-The model half has an emptier record still: it has placed **zero** bets, because
-it may not bet until 25 examples in its family have settled and the archive is
-days old. Until then the head-to-head table is honestly blank rather than
-quietly filled with the rule's numbers.
+_Derived from the 47 settled bets in the ledger on every run, not written by hand. At this sample size none of it is significant; it is published daily so that one day it might be._
+
+<!-- VERDICT:END -->
 
 ## How the score is kept
 

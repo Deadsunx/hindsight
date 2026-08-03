@@ -677,6 +677,9 @@ def build_ledger(days: dict, grades: list, today: str) -> dict:
     for pid, spec in PREDICTORS.items():
         mine = [g for g in grades if g["id"] == pid]
         marks = score(mine)
+        # Per question, not just overall: a one-sided question inflates its own
+        # accuracy, and only its own base rate reveals that.
+        mine_rate = base_rate(mine)
         by_predictor[pid] = {
             "question": spec["question"],
             "rule": spec["rule"],
@@ -687,6 +690,8 @@ def build_ledger(days: dict, grades: list, today: str) -> dict:
             "accuracy": marks["accuracy"],
             "brier": marks["brier"],
             "log_loss": marks["log_loss"],
+            "base_rate": mine_rate["rate"],
+            "majority_accuracy": mine_rate["majority_accuracy"],
         }
 
     calibration = []
@@ -911,16 +916,108 @@ def update_readme(snapshot: dict, ledger: dict) -> None:
             )
         lines.append("")
     lines.append("<!-- LEDGER:END -->")
-    block = "\n".join(lines)
 
     text = README.read_text(encoding="utf-8")
-    start, end = "<!-- LEDGER:START -->", "<!-- LEDGER:END -->"
-    if start in text and end in text:
-        text = text[: text.index(start)] + block + text[text.index(end) + len(end) :]
-    else:
-        text = text.rstrip() + "\n\n" + block + "\n"
+    text = _splice(text, "LEDGER", "\n".join(lines))
+    text = _splice(text, "VERDICT", "\n".join(verdict_block(ledger)))
     README.write_text(text, encoding="utf-8")
     print("wrote README.md")
+
+
+def _splice(text: str, marker: str, block: str) -> str:
+    start, end = f"<!-- {marker}:START -->", f"<!-- {marker}:END -->"
+    if start in text and end in text:
+        return text[: text.index(start)] + block + text[text.index(end) + len(end) :]
+    return text.rstrip() + "\n\n" + block + "\n"
+
+
+# A question whose event almost always happens (or almost never does) can be
+# matched by a constant, so accuracy on it measures the question rather than
+# the predictor. This is where that line is drawn.
+ONE_SIDED = 0.85
+
+
+def verdict_block(ledger: dict) -> list:
+    """Where the record fails to beat the trivial answer, derived not written.
+
+    This section used to be prose. Nine days in it had inverted — it named
+    Wikipedia as the outright failure when Wikipedia had gone on to beat the
+    baseline and Bitcoin had fallen below it. On a project whose whole claim is
+    honest self-reporting, a hand-written failure list that contradicts the
+    generated table above it is worse than having no section at all. So it is
+    generated now, and it cannot drift.
+    """
+    totals = ledger["totals"]
+    coin = (ledger.get("baselines") or {}).get("coin_flip") or {}
+    coin_brier = coin.get("brier")
+
+    out = ["<!-- VERDICT:START -->", "## Where it does not beat the baseline", ""]
+
+    if not totals["graded"]:
+        out += ["_Nothing has settled yet._", "", "<!-- VERDICT:END -->"]
+        return out
+
+    rules = [
+        r for r in ledger["by_predictor"].values()
+        if r["variant"] == "rule" and r["graded"]
+    ]
+    below, one_sided = [], []
+    for row in rules:
+        if coin_brier is not None and row["brier"] is not None and row["brier"] >= coin_brier:
+            below.append(row)
+        if row["base_rate"] is not None and (
+            row["base_rate"] >= ONE_SIDED or row["base_rate"] <= 1 - ONE_SIDED
+        ):
+            one_sided.append(row)
+
+    out += [
+        f"Judged against the coin flip's Brier of {coin_brier:.3f}, over "
+        f"{totals['graded']} settled bets:",
+        "",
+    ]
+
+    if below:
+        for row in below:
+            out.append(
+                f"- **{row['question']}** scores Brier **{row['brier']:.3f}** "
+                f"against the coin flip's {coin_brier:.3f} over n={row['graded']}. "
+                "It is worse than shrugging."
+            )
+    else:
+        out.append(
+            "- Every question is currently at or under the coin flip's Brier. "
+            "That is not the same as skill at this sample size."
+        )
+
+    for row in one_sided:
+        out.append(
+            f"- **{row['question']}** is effectively one-sided: the event "
+            f"happened {row['base_rate']:.0%} of the time, so always calling the "
+            f"majority side would have scored {row['majority_accuracy']:.0%} "
+            f"against this rule's {row['accuracy']:.0%}. Accuracy here measures "
+            "the question, not the predictor."
+        )
+
+    models = [r for r in ledger["by_predictor"].values() if r["variant"] == "model"]
+    placed = sum(r["graded"] for r in models)
+    if not placed:
+        out += [
+            "",
+            "The model half has placed **zero** settled bets: it may not bet "
+            "until 25 examples in its family have settled. Until then the "
+            "head-to-head table is honestly blank rather than quietly filled "
+            "with the rule's numbers.",
+        ]
+
+    out += [
+        "",
+        f"_Derived from the {totals['graded']} settled bets in the ledger on "
+        "every run, not written by hand. At this sample size none of it is "
+        "significant; it is published daily so that one day it might be._",
+        "",
+        "<!-- VERDICT:END -->",
+    ]
+    return out
 
 
 def main() -> None:
