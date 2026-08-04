@@ -1,20 +1,20 @@
 {
   "date": "2026-08-04",
-  "fetched_at": "2026-08-04T06:25:15.367764+00:00",
+  "fetched_at": "2026-08-04T17:29:56.359085+00:00",
   "observations": {
     "btc": {
-      "usd": 63793,
-      "usd_24h_change": 1.65
+      "usd": 64036,
+      "usd_24h_change": 0.42
     },
     "kp": {
       "max_kp": 4.0,
-      "latest_kp": 3.0,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 4.9,
-      "count": 231,
-      "strongest_place": "204 km SE of Severo-Kuril\u2019sk, Russia"
+      "max_mag": 5.1,
+      "count": 240,
+      "strongest_place": "south of Tonga"
     },
     "wiki": {
       "top": "Spider-Man:_Brand_New_Day",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-03"
     },
     "hn": {
-      "top_id": 49161518,
-      "top_title": "LLMs reward expertise",
+      "top_id": 49170165,
+      "top_title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
       "top10": [
+        49170165,
+        49166491,
+        49170915,
+        49166386,
         49161518,
-        49158333,
-        49099336,
-        49157930,
-        49156111,
-        49156683,
-        49162653,
-        49164649,
-        49158581,
-        49126468
+        49170479,
+        49171650,
+        49166874,
+        49168886,
+        49170001
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.4,
       "actual_prev_date": "2026-08-03",
-      "today": 30.0,
-      "forecast_next": 30.6,
+      "today": 29.5,
+      "forecast_next": 31.9,
       "forecast_next_date": "2026-08-05"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.536,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 63793,
-        "change_24h": 1.65
+        "today_usd": 64036,
+        "change_24h": 0.42
       },
       "made_on": "2026-08-04",
       "resolve_on": "2026-08-05"
@@ -83,9 +83,9 @@
       "family": "quake_m5",
       "variant": "rule",
       "call": true,
-      "confidence": 0.9,
+      "confidence": 0.95,
       "basis": {
-        "base_rate": 0.9
+        "base_rate": 1.0
       },
       "made_on": "2026-08-04",
       "resolve_on": "2026-08-05"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49161518,
-        "top_title": "LLMs reward expertise"
+        "top_id": 49170165,
+        "top_title": "Show HN: Simple algorithm and color space to generate diverse skin tones"
       },
       "made_on": "2026-08-04",
       "resolve_on": "2026-08-05"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.6,
+        "forecast_c": 31.9,
         "for_date": "2026-08-05",
         "city": "New Delhi"
       },

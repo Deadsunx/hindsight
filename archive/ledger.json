@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T06:25:17.100641+00:00",
+  "updated": "2026-08-04T17:29:57.603843+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -66,8 +66,8 @@
       },
       "base_rate": {
         "n": 9,
-        "rate": 0.8889,
-        "majority_accuracy": 0.8889
+        "rate": 1.0,
+        "majority_accuracy": 1.0
       }
     },
     "wiki_hold": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 53,
-    "correct": 40,
-    "accuracy": 0.7547,
-    "brier": 0.143,
-    "log_loss": 0.4624,
+    "correct": 41,
+    "accuracy": 0.7736,
+    "brier": 0.126,
+    "log_loss": 0.4069,
     "open": 7,
     "void": 0,
     "days": 10
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 53,
-      "rate": 0.7547,
-      "majority_accuracy": 0.7547
+      "rate": 0.7736,
+      "majority_accuracy": 0.7736
     }
   },
   "by_predictor": {
@@ -196,12 +196,12 @@
       "family": "quake_m5",
       "variant": "rule",
       "graded": 9,
-      "correct": 8,
-      "accuracy": 0.8889,
-      "brier": 0.1114,
-      "log_loss": 0.4279,
-      "base_rate": 0.8889,
-      "majority_accuracy": 0.8889
+      "correct": 9,
+      "accuracy": 1.0,
+      "brier": 0.0114,
+      "log_loss": 0.1007,
+      "base_rate": 1.0,
+      "majority_accuracy": 1.0
     },
     "wiki_hold": {
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
@@ -350,7 +350,7 @@
       "label": "90\u2013100%",
       "n": 5,
       "claimed": 0.95,
-      "actual": 0.8
+      "actual": 1.0
     }
   ],
   "open_bets": [
@@ -377,10 +377,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.536,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 63793,
-        "change_24h": 1.65
+        "today_usd": 64036,
+        "change_24h": 0.42
       },
       "made_on": "2026-08-04",
       "resolve_on": "2026-08-05"
@@ -406,9 +406,9 @@
       "family": "quake_m5",
       "variant": "rule",
       "call": true,
-      "confidence": 0.9,
+      "confidence": 0.95,
       "basis": {
-        "base_rate": 0.9
+        "base_rate": 1.0
       },
       "made_on": "2026-08-04",
       "resolve_on": "2026-08-05"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49161518,
-        "top_title": "LLMs reward expertise"
+        "top_id": 49170165,
+        "top_title": "Show HN: Simple algorithm and color space to generate diverse skin tones"
       },
       "made_on": "2026-08-04",
       "resolve_on": "2026-08-05"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.6,
+        "forecast_c": 31.9,
         "for_date": "2026-08-05",
         "city": "New Delhi"
       },
@@ -1120,8 +1120,8 @@
       "resolve_on": "2026-08-04",
       "call": true,
       "confidence": 0.95,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "wiki_hold",
