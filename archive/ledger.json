@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T06:25:49.520113+00:00",
+  "updated": "2026-08-05T17:21:23.049929+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -377,10 +377,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.527,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 64246,
-        "change_24h": 0.74
+        "today_usd": 64532,
+        "change_24h": 0.84
       },
       "made_on": "2026-08-05",
       "resolve_on": "2026-08-06"
@@ -394,7 +394,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.0
+        "today_max_kp": 1.33
       },
       "made_on": "2026-08-05",
       "resolve_on": "2026-08-06"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49131438,
-        "top_title": "Stateless MCP has recaptured my interest"
+        "top_id": 49184960,
+        "top_title": "Discovery Loop"
       },
       "made_on": "2026-08-05",
       "resolve_on": "2026-08-06"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.7,
+        "forecast_c": 29.9,
         "for_date": "2026-08-06",
         "city": "New Delhi"
       },

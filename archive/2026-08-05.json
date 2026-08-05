@@ -1,20 +1,20 @@
 {
   "date": "2026-08-05",
-  "fetched_at": "2026-08-05T06:25:48.183395+00:00",
+  "fetched_at": "2026-08-05T17:21:22.063675+00:00",
   "observations": {
     "btc": {
-      "usd": 64246,
-      "usd_24h_change": 0.74
+      "usd": 64532,
+      "usd_24h_change": 0.84
     },
     "kp": {
-      "max_kp": 3.0,
-      "latest_kp": 0.67,
+      "max_kp": 1.33,
+      "latest_kp": 0.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.3,
-      "count": 216,
-      "strongest_place": "32 km SW of Sarangani, Philippines"
+      "count": 213,
+      "strongest_place": "south of the Kermadec Islands"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-04"
     },
     "hn": {
-      "top_id": 49131438,
-      "top_title": "Stateless MCP has recaptured my interest",
+      "top_id": 49184960,
+      "top_title": "Discovery Loop",
       "top10": [
-        49131438,
-        49176830,
-        49176038,
-        49172784,
-        49171268,
-        49176983,
-        49176697,
-        49123231,
-        49084236,
-        49178702
+        49184960,
+        49183850,
+        49184757,
+        49184755,
+        49183115,
+        49183750,
+        49184746,
+        49184190,
+        49182996,
+        49183665
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 29.5,
       "actual_prev_date": "2026-08-04",
-      "today": 32.3,
-      "forecast_next": 30.7,
+      "today": 32.5,
+      "forecast_next": 29.9,
       "forecast_next_date": "2026-08-06"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.527,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 64246,
-        "change_24h": 0.74
+        "today_usd": 64532,
+        "change_24h": 0.84
       },
       "made_on": "2026-08-05",
       "resolve_on": "2026-08-06"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.0
+        "today_max_kp": 1.33
       },
       "made_on": "2026-08-05",
       "resolve_on": "2026-08-06"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49131438,
-        "top_title": "Stateless MCP has recaptured my interest"
+        "top_id": 49184960,
+        "top_title": "Discovery Loop"
       },
       "made_on": "2026-08-05",
       "resolve_on": "2026-08-06"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.7,
+        "forecast_c": 29.9,
         "for_date": "2026-08-06",
         "city": "New Delhi"
       },
