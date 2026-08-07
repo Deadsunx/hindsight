@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T05:38:37.043317+00:00",
+  "updated": "2026-08-07T16:42:31.512118+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 12,
-        "rate": 0.6667,
-        "majority_accuracy": 0.6667
+        "rate": 0.75,
+        "majority_accuracy": 0.75
       }
     },
     "kp_storm": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 71,
-    "correct": 53,
-    "accuracy": 0.7465,
-    "brier": 0.1477,
-    "log_loss": 0.4565,
+    "correct": 54,
+    "accuracy": 0.7606,
+    "brier": 0.147,
+    "log_loss": 0.455,
     "open": 7,
     "void": 0,
     "days": 13
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 71,
-      "rate": 0.7324,
-      "majority_accuracy": 0.7324
+      "rate": 0.7465,
+      "majority_accuracy": 0.7465
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 12,
-      "correct": 4,
-      "accuracy": 0.3333,
-      "brier": 0.2636,
-      "log_loss": 0.7204,
-      "base_rate": 0.6667,
-      "majority_accuracy": 0.6667
+      "correct": 5,
+      "accuracy": 0.4167,
+      "brier": 0.2591,
+      "log_loss": 0.7114,
+      "base_rate": 0.75,
+      "majority_accuracy": 0.75
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 12,
       "claimed": 0.5298,
-      "actual": 0.3333
+      "actual": 0.4167
     },
     {
       "label": "60\u201370%",
@@ -376,11 +376,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.53,
+      "call": true,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 64149,
-        "change_24h": -1.02
+        "today_usd": 64910,
+        "change_24h": 0.39
       },
       "made_on": "2026-08-07",
       "resolve_on": "2026-08-08"
@@ -394,7 +394,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.33
+        "today_max_kp": 1.67
       },
       "made_on": "2026-08-07",
       "resolve_on": "2026-08-08"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49201970,
-        "top_title": "AMD acquires Taalas to boost inference performance by etching models in silicon"
+        "top_id": 49211921,
+        "top_title": "An all-sky map of half a million supermassive black holes"
       },
       "made_on": "2026-08-07",
       "resolve_on": "2026-08-08"
@@ -1328,8 +1328,8 @@
       "resolve_on": "2026-08-07",
       "call": true,
       "confidence": 0.527,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "kp_storm",

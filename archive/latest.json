@@ -1,19 +1,19 @@
 {
   "date": "2026-08-07",
-  "fetched_at": "2026-08-07T05:38:35.308066+00:00",
+  "fetched_at": "2026-08-07T16:42:29.698094+00:00",
   "observations": {
     "btc": {
-      "usd": 64149,
-      "usd_24h_change": -1.02
+      "usd": 64910,
+      "usd_24h_change": 0.39
     },
     "kp": {
-      "max_kp": 1.33,
-      "latest_kp": 0.33,
+      "max_kp": 1.67,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.4,
-      "count": 206,
+      "count": 263,
       "strongest_place": "145 km E of Yamada, Japan"
     },
     "wiki": {
@@ -22,26 +22,26 @@
       "for_date": "2026-08-06"
     },
     "hn": {
-      "top_id": 49201970,
-      "top_title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
+      "top_id": 49211921,
+      "top_title": "An all-sky map of half a million supermassive black holes",
       "top10": [
+        49211921,
+        49204352,
+        49209385,
         49201970,
-        49195231,
-        49184355,
-        49199346,
-        49202716,
-        49199357,
-        49203105,
-        49198302,
-        49198069,
-        49198464
+        49208458,
+        49208535,
+        49145259,
+        49208393,
+        49158934,
+        49199346
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 27.8,
       "actual_prev_date": "2026-08-06",
-      "today": 29.0,
+      "today": 29.1,
       "forecast_next": 31.2,
       "forecast_next_date": "2026-08-08"
     }
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.53,
+      "call": true,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 64149,
-        "change_24h": -1.02
+        "today_usd": 64910,
+        "change_24h": 0.39
       },
       "made_on": "2026-08-07",
       "resolve_on": "2026-08-08"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.33
+        "today_max_kp": 1.67
       },
       "made_on": "2026-08-07",
       "resolve_on": "2026-08-08"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49201970,
-        "top_title": "AMD acquires Taalas to boost inference performance by etching models in silicon"
+        "top_id": 49211921,
+        "top_title": "An all-sky map of half a million supermassive black holes"
       },
       "made_on": "2026-08-07",
       "resolve_on": "2026-08-08"
