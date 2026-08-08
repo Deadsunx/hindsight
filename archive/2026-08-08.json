@@ -1,20 +1,20 @@
 {
   "date": "2026-08-08",
-  "fetched_at": "2026-08-08T04:53:33.830086+00:00",
+  "fetched_at": "2026-08-08T16:21:16.659070+00:00",
   "observations": {
     "btc": {
-      "usd": 64990,
-      "usd_24h_change": 1.31
+      "usd": 65038,
+      "usd_24h_change": 0.14
     },
     "kp": {
-      "max_kp": 1.67,
-      "latest_kp": 0.67,
+      "max_kp": 5.33,
+      "latest_kp": 5.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.5,
-      "count": 282,
-      "strongest_place": "59 km WNW of Skwentna, Alaska"
+      "max_mag": 5.6,
+      "count": 239,
+      "strongest_place": "southeast of Easter Island"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-07"
     },
     "hn": {
-      "top_id": 49218179,
-      "top_title": "NASA to keep its 48-year-old Voyager 2 probe running for yet another year",
+      "top_id": 49221668,
+      "top_title": "A domain can now say it is for sale, in DNS",
       "top10": [
-        49218179,
-        49217993,
-        49214008,
-        49216946,
+        49221668,
+        49220126,
+        49221220,
+        49221939,
+        49221679,
+        49163466,
+        49221864,
         49189457,
-        49214098,
-        49135261,
-        49209539,
-        49214770,
-        49214468
+        49220339,
+        49219508
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 29.1,
       "actual_prev_date": "2026-08-07",
-      "today": 31.4,
-      "forecast_next": 33.7,
+      "today": 32.1,
+      "forecast_next": 33.4,
       "forecast_next_date": "2026-08-09"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.533,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 64990,
-        "change_24h": 1.31
+        "today_usd": 65038,
+        "change_24h": 0.14
       },
       "made_on": "2026-08-08",
       "resolve_on": "2026-08-09"
@@ -68,10 +68,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 1.67
+        "today_max_kp": 5.33
       },
       "made_on": "2026-08-08",
       "resolve_on": "2026-08-09"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49218179,
-        "top_title": "NASA to keep its 48-year-old Voyager 2 probe running for yet another year"
+        "top_id": 49221668,
+        "top_title": "A domain can now say it is for sale, in DNS"
       },
       "made_on": "2026-08-08",
       "resolve_on": "2026-08-09"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.7,
+        "forecast_c": 33.4,
         "for_date": "2026-08-09",
         "city": "New Delhi"
       },

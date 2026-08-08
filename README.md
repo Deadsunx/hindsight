@@ -36,14 +36,14 @@ test.
 <!-- LEDGER:START -->
 ### Standing — 2026-08-08
 
-**60 right / 77 settled (78%)** · Brier 0.141 · log loss 0.441 · 7 still open
+**59 right / 77 settled (77%)** · Brier 0.148 · log loss 0.458 · 7 still open
 
 Saying "50%" to all 77 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
 
 | Call | Answered by | Settled | Right | Brier | Log loss |
 | --- | --- | --- | --- | --- | --- |
 | Bitcoin will be higher tomorrow than it is today. | momentum | n=13 | 6/13 (46%) | 0.257 | 0.706 |
-| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=13 | 11/13 (85%) | 0.132 | 0.436 |
+| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=13 | 10/13 (77%) | 0.175 | 0.533 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=13 | 13/13 (100%) | 0.009 | 0.086 |
 | Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=13 | 8/13 (62%) | 0.224 | 0.637 |
 | The current #1 story on Hacker News will fall out of the top 10. | decay | n=13 | 11/13 (85%) | 0.131 | 0.434 |
@@ -54,8 +54,8 @@ _Sample is 77 settled bets across 14 days. Nothing here is significant yet, and 
 
 **Open bets, placed today:**
 
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(53% confident, momentum)_
-- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(78% confident, persistence)_
+- **yes** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
+- **yes** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(70% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
