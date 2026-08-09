@@ -34,27 +34,27 @@ two-line guard in [`learn.py`](learn.py); the reason it was ever found is the
 test.
 
 <!-- LEDGER:START -->
-### Standing — 2026-08-08
+### Standing — 2026-08-09
 
-**59 right / 77 settled (77%)** · Brier 0.148 · log loss 0.458 · 7 still open
+**63 right / 83 settled (76%)** · Brier 0.153 · log loss 0.471 · 7 still open
 
-Saying "50%" to all 77 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
+Saying "50%" to all 83 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
 
 | Call | Answered by | Settled | Right | Brier | Log loss |
 | --- | --- | --- | --- | --- | --- |
-| Bitcoin will be higher tomorrow than it is today. | momentum | n=13 | 6/13 (46%) | 0.257 | 0.706 |
-| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=13 | 10/13 (77%) | 0.175 | 0.533 |
-| A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=13 | 13/13 (100%) | 0.009 | 0.086 |
-| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=13 | 8/13 (62%) | 0.224 | 0.637 |
-| The current #1 story on Hacker News will fall out of the top 10. | decay | n=13 | 11/13 (85%) | 0.131 | 0.434 |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=12 | 11/12 (92%) | 0.090 | 0.339 |
-| _coin flip — the baseline_ | _50% to everything_ | n=77 | _50%_ | _0.250_ | _0.693_ |
+| Bitcoin will be higher tomorrow than it is today. | momentum | n=14 | 6/14 (43%) | 0.258 | 0.709 |
+| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=14 | 11/14 (79%) | 0.169 | 0.521 |
+| A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=14 | 14/14 (100%) | 0.008 | 0.083 |
+| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=14 | 9/14 (64%) | 0.214 | 0.617 |
+| The current #1 story on Hacker News will fall out of the top 10. | decay | n=14 | 11/14 (79%) | 0.177 | 0.555 |
+| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=13 | 12/13 (92%) | 0.086 | 0.330 |
+| _coin flip — the baseline_ | _50% to everything_ | n=83 | _50%_ | _0.250_ | _0.693_ |
 
-_Sample is 77 settled bets across 14 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
+_Sample is 83 settled bets across 15 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
 
 **Open bets, placed today:**
 
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
+- **no** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
 - **yes** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(70% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
@@ -82,15 +82,15 @@ weather service**, which nobody publishes.
 <!-- VERDICT:START -->
 ## Where it does not beat the baseline
 
-Judged against the coin flip's Brier of 0.250, over 77 settled bets:
+Judged against the coin flip's Brier of 0.250, over 83 settled bets:
 
-- **Bitcoin will be higher tomorrow than it is today.** scores Brier **0.257** against the coin flip's 0.250 over n=13. It is worse than shrugging.
+- **Bitcoin will be higher tomorrow than it is today.** scores Brier **0.258** against the coin flip's 0.250 over n=14. It is worse than shrugging.
 - **A magnitude 5.0+ earthquake will strike somewhere tomorrow.** is effectively one-sided: the event happened 100% of the time, so always calling the majority side would have scored 100% against this rule's 100%. Accuracy here measures the question, not the predictor.
 - **Tomorrow's high in New Delhi will land within 2°C of today's forecast.** is effectively one-sided: the event happened 92% of the time, so always calling the majority side would have scored 92% against this rule's 92%. Accuracy here measures the question, not the predictor.
 
 The model half has placed **zero** settled bets: it may not bet until 25 examples in its family have settled. Until then the head-to-head table is honestly blank rather than quietly filled with the rule's numbers.
 
-_Derived from the 77 settled bets in the ledger on every run, not written by hand. At this sample size none of it is significant; it is published daily so that one day it might be._
+_Derived from the 83 settled bets in the ledger on every run, not written by hand. At this sample size none of it is significant; it is published daily so that one day it might be._
 
 <!-- VERDICT:END -->
 
