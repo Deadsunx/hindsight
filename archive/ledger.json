@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T05:02:00.277749+00:00",
+  "updated": "2026-08-09T16:23:04.640902+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 14,
-        "rate": 0.7143,
-        "majority_accuracy": 0.7143
+        "rate": 0.7857,
+        "majority_accuracy": 0.7857
       }
     },
     "kp_storm": {
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 14,
-        "rate": 0.7857,
-        "majority_accuracy": 0.7857
+        "rate": 0.8571,
+        "majority_accuracy": 0.8571
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 83,
-    "correct": 63,
-    "accuracy": 0.759,
-    "brier": 0.1528,
-    "log_loss": 0.4707,
+    "correct": 65,
+    "accuracy": 0.7831,
+    "brier": 0.1432,
+    "log_loss": 0.4457,
     "open": 7,
     "void": 0,
     "days": 15
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 83,
-      "rate": 0.759,
-      "majority_accuracy": 0.759
+      "rate": 0.7831,
+      "majority_accuracy": 0.7831
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 14,
-      "correct": 6,
-      "accuracy": 0.4286,
-      "brier": 0.2577,
-      "log_loss": 0.7085,
-      "base_rate": 0.7143,
-      "majority_accuracy": 0.7143
+      "correct": 7,
+      "accuracy": 0.5,
+      "brier": 0.2547,
+      "log_loss": 0.7025,
+      "base_rate": 0.7857,
+      "majority_accuracy": 0.7857
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 14,
-      "correct": 11,
-      "accuracy": 0.7857,
-      "brier": 0.1773,
-      "log_loss": 0.5548,
-      "base_rate": 0.7857,
-      "majority_accuracy": 0.7857
+      "correct": 12,
+      "accuracy": 0.8571,
+      "brier": 0.123,
+      "log_loss": 0.4125,
+      "base_rate": 0.8571,
+      "majority_accuracy": 0.8571
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 14,
       "claimed": 0.5288,
-      "actual": 0.4286
+      "actual": 0.5
     },
     {
       "label": "60\u201370%",
@@ -344,7 +344,7 @@
       "label": "80\u201390%",
       "n": 31,
       "claimed": 0.8426,
-      "actual": 0.871
+      "actual": 0.9032
     },
     {
       "label": "90\u2013100%",
@@ -376,11 +376,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.524,
+      "call": true,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 64741,
-        "change_24h": -0.36
+        "today_usd": 65188,
+        "change_24h": 0.23
       },
       "made_on": "2026-08-09",
       "resolve_on": "2026-08-10"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49226636,
-        "top_title": "My server is a phone now"
+        "top_id": 49232570,
+        "top_title": "Tech sucks: You have to vote with your wallet, or nothing will change"
       },
       "made_on": "2026-08-09",
       "resolve_on": "2026-08-10"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.2,
+        "forecast_c": 31.7,
         "for_date": "2026-08-10",
         "city": "New Delhi"
       },
@@ -1484,8 +1484,8 @@
       "resolve_on": "2026-08-09",
       "call": true,
       "confidence": 0.521,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "kp_storm",
@@ -1536,8 +1536,8 @@
       "resolve_on": "2026-08-09",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
