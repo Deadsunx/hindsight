@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T05:05:19.483419+00:00",
+  "updated": "2026-08-11T16:48:21.436015+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -377,10 +377,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.535,
+      "confidence": 0.527,
       "basis": {
-        "today_usd": 63966,
-        "change_24h": -1.55
+        "today_usd": 63431,
+        "change_24h": -0.69
       },
       "made_on": "2026-08-11",
       "resolve_on": "2026-08-12"
@@ -394,7 +394,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 2.67
       },
       "made_on": "2026-08-11",
       "resolve_on": "2026-08-12"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49252179,
-        "top_title": "H3-metal \u2013 Native MiniMax-H3 inference for Apple Silicon"
+        "top_id": 49257377,
+        "top_title": "England set to be one of the first countries to eliminate hepatitis C"
       },
       "made_on": "2026-08-11",
       "resolve_on": "2026-08-12"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.9,
+        "forecast_c": 34.1,
         "for_date": "2026-08-12",
         "city": "New Delhi"
       },
