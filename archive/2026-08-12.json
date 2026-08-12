@@ -1,20 +1,20 @@
 {
   "date": "2026-08-12",
-  "fetched_at": "2026-08-12T05:29:26.588556+00:00",
+  "fetched_at": "2026-08-12T16:47:43.153706+00:00",
   "observations": {
     "btc": {
-      "usd": 63777,
-      "usd_24h_change": -0.21
+      "usd": 63457,
+      "usd_24h_change": 0.02
     },
     "kp": {
       "max_kp": 3.33,
-      "latest_kp": 1.67,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.2,
-      "count": 305,
-      "strongest_place": "42 km ESE of Naalehu, Hawaii"
+      "max_mag": 6,
+      "count": 280,
+      "strongest_place": "South Sandwich Islands region"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-11"
     },
     "hn": {
-      "top_id": 49201953,
-      "top_title": "The hardest working font in Manhattan (2025)",
+      "top_id": 49272832,
+      "top_title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
       "top10": [
-        49201953,
-        49263497,
-        49266921,
-        49265051,
-        49263340,
-        49257876,
-        49261128,
-        49267108,
-        49267818,
-        49257160
+        49272832,
+        49274600,
+        49270953,
+        49272655,
+        49272569,
+        49272549,
+        49273165,
+        49271994,
+        49273330,
+        49273395
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 30.4,
       "actual_prev_date": "2026-08-11",
-      "today": 34.2,
-      "forecast_next": 33.0,
+      "today": 34.4,
+      "forecast_next": 33.7,
       "forecast_next_date": "2026-08-13"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.522,
+      "call": true,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 63777,
-        "change_24h": -0.21
+        "today_usd": 63457,
+        "change_24h": 0.02
       },
       "made_on": "2026-08-12",
       "resolve_on": "2026-08-13"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49201953,
-        "top_title": "The hardest working font in Manhattan (2025)"
+        "top_id": 49272832,
+        "top_title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug"
       },
       "made_on": "2026-08-12",
       "resolve_on": "2026-08-13"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.0,
+        "forecast_c": 33.7,
         "for_date": "2026-08-13",
         "city": "New Delhi"
       },

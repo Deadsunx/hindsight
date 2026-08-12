@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T05:29:28.129142+00:00",
+  "updated": "2026-08-12T16:47:44.897165+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -376,11 +376,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.522,
+      "call": true,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 63777,
-        "change_24h": -0.21
+        "today_usd": 63457,
+        "change_24h": 0.02
       },
       "made_on": "2026-08-12",
       "resolve_on": "2026-08-13"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49201953,
-        "top_title": "The hardest working font in Manhattan (2025)"
+        "top_id": 49272832,
+        "top_title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug"
       },
       "made_on": "2026-08-12",
       "resolve_on": "2026-08-13"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.0,
+        "forecast_c": 33.7,
         "for_date": "2026-08-13",
         "city": "New Delhi"
       },
