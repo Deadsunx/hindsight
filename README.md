@@ -36,17 +36,17 @@ test.
 <!-- LEDGER:START -->
 ### Standing — 2026-08-13
 
-**81 right / 107 settled (76%)** · Brier 0.155 · log loss 0.472 · 7 still open
+**81 right / 107 settled (76%)** · Brier 0.148 · log loss 0.454 · 7 still open
 
 Saying "50%" to all 107 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
 
 | Call | Answered by | Settled | Right | Brier | Log loss |
 | --- | --- | --- | --- | --- | --- |
-| Bitcoin will be higher tomorrow than it is today. | momentum | n=18 | 9/18 (50%) | 0.253 | 0.700 |
+| Bitcoin will be higher tomorrow than it is today. | momentum | n=18 | 8/18 (44%) | 0.256 | 0.704 |
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=18 | 12/18 (67%) | 0.222 | 0.637 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=18 | 18/18 (100%) | 0.007 | 0.076 |
 | Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=18 | 11/18 (61%) | 0.228 | 0.647 |
-| The current #1 story on Hacker News will fall out of the top 10. | decay | n=18 | 15/18 (83%) | 0.141 | 0.460 |
+| The current #1 story on Hacker News will fall out of the top 10. | decay | n=18 | 16/18 (89%) | 0.099 | 0.349 |
 | Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=17 | 16/17 (94%) | 0.075 | 0.305 |
 | _coin flip — the baseline_ | _50% to everything_ | n=107 | _50%_ | _0.250_ | _0.693_ |
 
@@ -54,7 +54,7 @@ _Sample is 107 settled bets across 19 days. Nothing here is significant yet, and
 
 **Open bets, placed today:**
 
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
+- **no** — Bitcoin will be higher tomorrow than it is today. _(53% confident, momentum)_
 - **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(78% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
@@ -84,8 +84,9 @@ weather service**, which nobody publishes.
 
 Judged against the coin flip's Brier of 0.250, over 107 settled bets:
 
-- **Bitcoin will be higher tomorrow than it is today.** scores Brier **0.253** against the coin flip's 0.250 over n=18. It is worse than shrugging.
+- **Bitcoin will be higher tomorrow than it is today.** scores Brier **0.256** against the coin flip's 0.250 over n=18. It is worse than shrugging.
 - **A magnitude 5.0+ earthquake will strike somewhere tomorrow.** is effectively one-sided: the event happened 100% of the time, so always calling the majority side would have scored 100% against this rule's 100%. Accuracy here measures the question, not the predictor.
+- **The current #1 story on Hacker News will fall out of the top 10.** is effectively one-sided: the event happened 89% of the time, so always calling the majority side would have scored 89% against this rule's 89%. Accuracy here measures the question, not the predictor.
 - **Tomorrow's high in New Delhi will land within 2°C of today's forecast.** is effectively one-sided: the event happened 94% of the time, so always calling the majority side would have scored 94% against this rule's 94%. Accuracy here measures the question, not the predictor.
 
 The model half has placed **zero** settled bets: it may not bet until 25 examples in its family have settled. Until then the head-to-head table is honestly blank rather than quietly filled with the rule's numbers.

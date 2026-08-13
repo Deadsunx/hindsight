@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T05:38:30.777766+00:00",
+  "updated": "2026-08-13T16:45:25.900378+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 18,
-        "rate": 0.7222,
-        "majority_accuracy": 0.7222
+        "rate": 0.6667,
+        "majority_accuracy": 0.6667
       }
     },
     "kp_storm": {
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 18,
-        "rate": 0.8333,
-        "majority_accuracy": 0.8333
+        "rate": 0.8889,
+        "majority_accuracy": 0.8889
       }
     },
     "forecast_hit": {
@@ -144,8 +144,8 @@
     "graded": 107,
     "correct": 81,
     "accuracy": 0.757,
-    "brier": 0.1553,
-    "log_loss": 0.4723,
+    "brier": 0.1485,
+    "log_loss": 0.4544,
     "open": 7,
     "void": 0,
     "days": 19
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 18,
-      "correct": 9,
-      "accuracy": 0.5,
-      "brier": 0.2534,
-      "log_loss": 0.6999,
-      "base_rate": 0.7222,
-      "majority_accuracy": 0.7222
+      "correct": 8,
+      "accuracy": 0.4444,
+      "brier": 0.2556,
+      "log_loss": 0.7043,
+      "base_rate": 0.6667,
+      "majority_accuracy": 0.6667
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 18,
-      "correct": 15,
-      "accuracy": 0.8333,
-      "brier": 0.1411,
-      "log_loss": 0.4599,
-      "base_rate": 0.8333,
-      "majority_accuracy": 0.8333
+      "correct": 16,
+      "accuracy": 0.8889,
+      "brier": 0.0988,
+      "log_loss": 0.3492,
+      "base_rate": 0.8889,
+      "majority_accuracy": 0.8889
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 18,
       "claimed": 0.5283,
-      "actual": 0.5
+      "actual": 0.4444
     },
     {
       "label": "60\u201370%",
@@ -344,7 +344,7 @@
       "label": "80\u201390%",
       "n": 39,
       "claimed": 0.8421,
-      "actual": 0.8974
+      "actual": 0.9231
     },
     {
       "label": "90\u2013100%",
@@ -376,11 +376,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.521,
+      "call": false,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 63865,
-        "change_24h": 0.11
+        "today_usd": 62912,
+        "change_24h": -0.89
       },
       "made_on": "2026-08-13",
       "resolve_on": "2026-08-14"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49274600,
-        "top_title": "DeepSeek V4 Pro 0813"
+        "top_id": 49285982,
+        "top_title": "Gloomberb"
       },
       "made_on": "2026-08-13",
       "resolve_on": "2026-08-14"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.3,
+        "forecast_c": 32.0,
         "for_date": "2026-08-14",
         "city": "New Delhi"
       },
@@ -1796,8 +1796,8 @@
       "resolve_on": "2026-08-13",
       "call": true,
       "confidence": 0.52,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm",
@@ -1848,8 +1848,8 @@
       "resolve_on": "2026-08-13",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
