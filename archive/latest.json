@@ -1,20 +1,20 @@
 {
   "date": "2026-08-14",
-  "fetched_at": "2026-08-14T05:36:25.620589+00:00",
+  "fetched_at": "2026-08-14T16:40:53.085611+00:00",
   "observations": {
     "btc": {
-      "usd": 63284,
-      "usd_24h_change": -0.91
+      "usd": 63117,
+      "usd_24h_change": 0.09
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 2.67,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.6,
-      "count": 236,
-      "strongest_place": "Kermadec Islands region"
+      "max_mag": 5.3,
+      "count": 234,
+      "strongest_place": "11 km S of Sarangani, Philippines"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-13"
     },
     "hn": {
-      "top_id": 49294997,
-      "top_title": "GLM-5.3: Frontier Coding with Emergent Cyber Capabilities",
+      "top_id": 49299222,
+      "top_title": "Every Fucking Website (2020)",
       "top10": [
+        49299222,
+        49299675,
+        49299746,
         49294997,
-        49289112,
-        49289844,
-        49290166,
-        49293324,
-        49285244,
-        49286341,
-        49288889,
-        49290299,
-        49289512
+        49299684,
+        49299282,
+        49298910,
+        49299081,
+        49300615,
+        49300759
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.6,
       "actual_prev_date": "2026-08-13",
-      "today": 30.5,
-      "forecast_next": 32.6,
+      "today": 30.9,
+      "forecast_next": 33.1,
       "forecast_next_date": "2026-08-15"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.529,
+      "call": true,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 63284,
-        "change_24h": -0.91
+        "today_usd": 63117,
+        "change_24h": 0.09
       },
       "made_on": "2026-08-14",
       "resolve_on": "2026-08-15"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49294997,
-        "top_title": "GLM-5.3: Frontier Coding with Emergent Cyber Capabilities"
+        "top_id": 49299222,
+        "top_title": "Every Fucking Website (2020)"
       },
       "made_on": "2026-08-14",
       "resolve_on": "2026-08-15"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.6,
+        "forecast_c": 33.1,
         "for_date": "2026-08-15",
         "city": "New Delhi"
       },

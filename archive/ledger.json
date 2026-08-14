@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T05:36:27.252526+00:00",
+  "updated": "2026-08-14T16:40:54.233313+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -376,11 +376,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.529,
+      "call": true,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 63284,
-        "change_24h": -0.91
+        "today_usd": 63117,
+        "change_24h": 0.09
       },
       "made_on": "2026-08-14",
       "resolve_on": "2026-08-15"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49294997,
-        "top_title": "GLM-5.3: Frontier Coding with Emergent Cyber Capabilities"
+        "top_id": 49299222,
+        "top_title": "Every Fucking Website (2020)"
       },
       "made_on": "2026-08-14",
       "resolve_on": "2026-08-15"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.6,
+        "forecast_c": 33.1,
         "for_date": "2026-08-15",
         "city": "New Delhi"
       },
