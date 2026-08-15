@@ -1,38 +1,38 @@
 {
   "date": "2026-08-15",
-  "fetched_at": "2026-08-15T04:27:14.171657+00:00",
+  "fetched_at": "2026-08-15T16:13:31.628398+00:00",
   "observations": {
     "btc": {
-      "usd": 63067,
-      "usd_24h_change": -0.41
+      "usd": 63037,
+      "usd_24h_change": 0.04
     },
     "kp": {
-      "max_kp": 2.67,
-      "latest_kp": 1.33,
+      "max_kp": 2.0,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
       "max_mag": 7.7,
-      "count": 280,
+      "count": 283,
       "strongest_place": "68 km NNW of Ende, Indonesia"
     },
     "wiki": {
       "error": "HTTP Error 404: Not Found"
     },
     "hn": {
-      "top_id": 49306577,
-      "top_title": "Magnitude 7.7 Earthquake \u2013 68 km NNW of Ende, Indonesia",
+      "top_id": 49310682,
+      "top_title": "The First At-Home Test for Infected Ticks Could Improve Lyme Disease Diagnosis",
       "top10": [
-        49306577,
-        49299605,
-        49304447,
-        49306443,
-        49306196,
-        49305250,
-        49300314,
-        49307099,
-        49300759,
-        49263186
+        49310682,
+        49311445,
+        49309549,
+        49310755,
+        49307592,
+        49310495,
+        49237183,
+        49310533,
+        49246366,
+        49306333
       ]
     },
     "weather": {
@@ -40,7 +40,7 @@
       "actual_prev": 30.9,
       "actual_prev_date": "2026-08-14",
       "today": 32.5,
-      "forecast_next": 32.6,
+      "forecast_next": 33.1,
       "forecast_next_date": "2026-08-16"
     }
   },
@@ -51,11 +51,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.524,
+      "call": true,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 63067,
-        "change_24h": -0.41
+        "today_usd": 63037,
+        "change_24h": 0.04
       },
       "made_on": "2026-08-15",
       "resolve_on": "2026-08-16"
@@ -69,7 +69,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.67
+        "today_max_kp": 2.0
       },
       "made_on": "2026-08-15",
       "resolve_on": "2026-08-16"
@@ -97,8 +97,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49306577,
-        "top_title": "Magnitude 7.7 Earthquake \u2013 68 km NNW of Ende, Indonesia"
+        "top_id": 49310682,
+        "top_title": "The First At-Home Test for Infected Ticks Could Improve Lyme Disease Diagnosis"
       },
       "made_on": "2026-08-15",
       "resolve_on": "2026-08-16"
@@ -112,7 +112,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.6,
+        "forecast_c": 33.1,
         "for_date": "2026-08-16",
         "city": "New Delhi"
       },
