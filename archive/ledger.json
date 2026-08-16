@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-16T04:32:58.319030+00:00",
+  "updated": "2026-08-16T16:14:04.758376+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -377,10 +377,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.52,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 63101,
-        "change_24h": 0.05
+        "today_usd": 63121,
+        "change_24h": 0.15
       },
       "made_on": "2026-08-16",
       "resolve_on": "2026-08-17"
@@ -422,8 +422,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49268580,
-        "top_title": "Asus Bike Booster"
+        "top_id": 49319556,
+        "top_title": "Claude: System Prompts"
       },
       "made_on": "2026-08-16",
       "resolve_on": "2026-08-17"
@@ -437,7 +437,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.2,
+        "forecast_c": 33.1,
         "for_date": "2026-08-17",
         "city": "New Delhi"
       },

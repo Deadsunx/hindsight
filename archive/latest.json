@@ -1,46 +1,46 @@
 {
   "date": "2026-08-16",
-  "fetched_at": "2026-08-16T04:32:53.500447+00:00",
+  "fetched_at": "2026-08-16T16:14:00.473997+00:00",
   "observations": {
     "btc": {
-      "usd": 63101,
-      "usd_24h_change": 0.05
+      "usd": 63121,
+      "usd_24h_change": 0.15
     },
     "kp": {
       "max_kp": 2.67,
-      "latest_kp": 1.33,
+      "latest_kp": 0.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.9,
-      "count": 219,
-      "strongest_place": "15 km NNW of Pematangsiantar, Indonesia"
+      "max_mag": 6.1,
+      "count": 197,
+      "strongest_place": "56 km NNE of Port-Olry, Vanuatu"
     },
     "wiki": {
       "error": "HTTP Error 404: Not Found"
     },
     "hn": {
-      "top_id": 49268580,
-      "top_title": "Asus Bike Booster",
+      "top_id": 49319556,
+      "top_title": "Claude: System Prompts",
       "top10": [
-        49268580,
-        49243061,
-        49311651,
-        49316791,
-        49316888,
-        49314235,
-        49315742,
-        49315995,
-        49313367,
-        49316395
+        49319556,
+        49320611,
+        49320856,
+        49319633,
+        49319349,
+        49319814,
+        49320984,
+        49268565,
+        49319389,
+        49292385
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.5,
       "actual_prev_date": "2026-08-15",
-      "today": 33.7,
-      "forecast_next": 33.2,
+      "today": 33.3,
+      "forecast_next": 33.1,
       "forecast_next_date": "2026-08-17"
     }
   },
@@ -52,10 +52,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.52,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 63101,
-        "change_24h": 0.05
+        "today_usd": 63121,
+        "change_24h": 0.15
       },
       "made_on": "2026-08-16",
       "resolve_on": "2026-08-17"
@@ -97,8 +97,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49268580,
-        "top_title": "Asus Bike Booster"
+        "top_id": 49319556,
+        "top_title": "Claude: System Prompts"
       },
       "made_on": "2026-08-16",
       "resolve_on": "2026-08-17"
@@ -112,7 +112,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.2,
+        "forecast_c": 33.1,
         "for_date": "2026-08-17",
         "city": "New Delhi"
       },
