@@ -1,46 +1,48 @@
 {
   "date": "2026-08-17",
-  "fetched_at": "2026-08-17T04:38:48.416355+00:00",
+  "fetched_at": "2026-08-17T16:16:59.137246+00:00",
   "observations": {
     "btc": {
-      "usd": 63444,
-      "usd_24h_change": 0.59
+      "usd": 64023,
+      "usd_24h_change": 1.36
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 1.67,
+      "max_kp": 2.33,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.7,
-      "count": 197,
-      "strongest_place": "65 km NNW of Ende, Indonesia"
+      "max_mag": 5.8,
+      "count": 208,
+      "strongest_place": "72 km E of Petropavlovsk-Kamchatsky, Russia"
     },
     "wiki": {
-      "error": "HTTP Error 404: Not Found"
+      "top": "Wikipedia:Featured_pictures",
+      "views": 717845,
+      "for_date": "2026-08-16"
     },
     "hn": {
-      "top_id": 49324985,
-      "top_title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
+      "top_id": 49332981,
+      "top_title": "Universal Health Coverage Could Save $1T and 114,000 Lives a Year, Yale Study",
       "top10": [
-        49324985,
-        49325185,
-        49325714,
-        49321717,
-        49319556,
-        49325384,
-        49326229,
-        49325061,
-        49259980,
-        49231418
+        49332981,
+        49330781,
+        49331423,
+        49331220,
+        49329575,
+        49332751,
+        49330684,
+        49331474,
+        49330632,
+        49331222
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.3,
       "actual_prev_date": "2026-08-16",
-      "today": 33.1,
-      "forecast_next": 33.2,
+      "today": 33.0,
+      "forecast_next": 32.6,
       "forecast_next_date": "2026-08-18"
     }
   },
@@ -52,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.526,
+      "confidence": 0.534,
       "basis": {
-        "today_usd": 63444,
-        "change_24h": 0.59
+        "today_usd": 64023,
+        "change_24h": 1.36
       },
       "made_on": "2026-08-17",
       "resolve_on": "2026-08-18"
@@ -69,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 2.33
       },
       "made_on": "2026-08-17",
       "resolve_on": "2026-08-18"
@@ -89,6 +91,20 @@
       "resolve_on": "2026-08-18"
     },
     {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures"
+      },
+      "made_on": "2026-08-17",
+      "resolve_on": "2026-08-18"
+    },
+    {
       "id": "hn_fade",
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "decay",
@@ -97,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49324985,
-        "top_title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things"
+        "top_id": 49332981,
+        "top_title": "Universal Health Coverage Could Save $1T and 114,000 Lives a Year, Yale Study"
       },
       "made_on": "2026-08-17",
       "resolve_on": "2026-08-18"
@@ -112,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.2,
+        "forecast_c": 32.6,
         "for_date": "2026-08-18",
         "city": "New Delhi"
       },

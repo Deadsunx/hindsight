@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T04:38:53.253679+00:00",
+  "updated": "2026-08-17T16:17:00.493291+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 22,
-        "rate": 0.8636,
-        "majority_accuracy": 0.8636
+        "rate": 0.9091,
+        "majority_accuracy": 0.9091
       }
     },
     "forecast_hit": {
@@ -142,11 +142,11 @@
   },
   "totals": {
     "graded": 128,
-    "correct": 99,
-    "accuracy": 0.7734,
-    "brier": 0.142,
-    "log_loss": 0.4404,
-    "open": 6,
+    "correct": 100,
+    "accuracy": 0.7812,
+    "brier": 0.136,
+    "log_loss": 0.4248,
+    "open": 7,
     "void": 1,
     "days": 23
   },
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 128,
-      "rate": 0.75,
-      "majority_accuracy": 0.75
+      "rate": 0.7578,
+      "majority_accuracy": 0.7578
     }
   },
   "by_predictor": {
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 22,
-      "correct": 19,
-      "accuracy": 0.8636,
-      "brier": 0.118,
-      "log_loss": 0.3995,
-      "base_rate": 0.8636,
-      "majority_accuracy": 0.8636
+      "correct": 20,
+      "accuracy": 0.9091,
+      "brier": 0.0835,
+      "log_loss": 0.309,
+      "base_rate": 0.9091,
+      "majority_accuracy": 0.9091
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -344,7 +344,7 @@
       "label": "80\u201390%",
       "n": 47,
       "claimed": 0.8417,
-      "actual": 0.9149
+      "actual": 0.9362
     },
     {
       "label": "90\u2013100%",
@@ -377,10 +377,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.526,
+      "confidence": 0.534,
       "basis": {
-        "today_usd": 63444,
-        "change_24h": 0.59
+        "today_usd": 64023,
+        "change_24h": 1.36
       },
       "made_on": "2026-08-17",
       "resolve_on": "2026-08-18"
@@ -394,7 +394,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 2.33
       },
       "made_on": "2026-08-17",
       "resolve_on": "2026-08-18"
@@ -414,6 +414,20 @@
       "resolve_on": "2026-08-18"
     },
     {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures"
+      },
+      "made_on": "2026-08-17",
+      "resolve_on": "2026-08-18"
+    },
+    {
       "id": "hn_fade",
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "decay",
@@ -422,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49324985,
-        "top_title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things"
+        "top_id": 49332981,
+        "top_title": "Universal Health Coverage Could Save $1T and 114,000 Lives a Year, Yale Study"
       },
       "made_on": "2026-08-17",
       "resolve_on": "2026-08-18"
@@ -437,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.2,
+        "forecast_c": 32.6,
         "for_date": "2026-08-18",
         "city": "New Delhi"
       },
@@ -2107,8 +2121,8 @@
       "resolve_on": "2026-08-17",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }

@@ -303,7 +303,7 @@
     ],
     "made": 5,
     "graded": 4,
-    "correct": 3
+    "correct": 4
   },
   {
     "date": "2026-08-17",
@@ -311,10 +311,11 @@
       "btc",
       "kp",
       "quakes",
+      "wiki",
       "hn",
       "weather"
     ],
-    "made": 5,
+    "made": 6,
     "graded": 0,
     "correct": 0
   }
