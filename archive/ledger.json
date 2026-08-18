@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T04:32:35.710972+00:00",
+  "updated": "2026-08-18T16:20:41.735008+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -377,10 +377,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.531,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 64102,
-        "change_24h": 1.07
+        "today_usd": 64682,
+        "change_24h": 1.01
       },
       "made_on": "2026-08-18",
       "resolve_on": "2026-08-19"
@@ -394,7 +394,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.0
+        "today_max_kp": 5.0
       },
       "made_on": "2026-08-18",
       "resolve_on": "2026-08-19"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49338459,
-        "top_title": "How Bluesky draws its logo on screenshots"
+        "top_id": 49344825,
+        "top_title": "Using the railway network as a flatbed scanner"
       },
       "made_on": "2026-08-18",
       "resolve_on": "2026-08-19"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.0,
+        "forecast_c": 32.2,
         "for_date": "2026-08-19",
         "city": "New Delhi"
       },

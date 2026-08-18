@@ -1,20 +1,20 @@
 {
   "date": "2026-08-18",
-  "fetched_at": "2026-08-18T04:32:34.128718+00:00",
+  "fetched_at": "2026-08-18T16:20:40.162867+00:00",
   "observations": {
     "btc": {
-      "usd": 64102,
-      "usd_24h_change": 1.07
+      "usd": 64682,
+      "usd_24h_change": 1.01
     },
     "kp": {
-      "max_kp": 4.0,
-      "latest_kp": 4.0,
+      "max_kp": 5.0,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.8,
-      "count": 241,
-      "strongest_place": "72 km E of Petropavlovsk-Kamchatsky, Russia"
+      "max_mag": 5.7,
+      "count": 267,
+      "strongest_place": "95 km SW of Puerto Madero, Mexico"
     },
     "wiki": {
       "top": "Hayden_Panettiere",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-17"
     },
     "hn": {
-      "top_id": 49338459,
-      "top_title": "How Bluesky draws its logo on screenshots",
+      "top_id": 49344825,
+      "top_title": "Using the railway network as a flatbed scanner",
       "top10": [
-        49338459,
-        49338328,
-        49337602,
-        49285139,
-        49330781,
-        49338285,
-        49331423,
-        49334991,
-        49337392,
-        49270194
+        49344825,
+        49345220,
+        49345263,
+        49342719,
+        49336392,
+        49345476,
+        49272631,
+        49344811,
+        49345094,
+        49346538
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.0,
       "actual_prev_date": "2026-08-17",
-      "today": 32.6,
-      "forecast_next": 33.0,
+      "today": 33.1,
+      "forecast_next": 32.2,
       "forecast_next_date": "2026-08-19"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.531,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 64102,
-        "change_24h": 1.07
+        "today_usd": 64682,
+        "change_24h": 1.01
       },
       "made_on": "2026-08-18",
       "resolve_on": "2026-08-19"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.0
+        "today_max_kp": 5.0
       },
       "made_on": "2026-08-18",
       "resolve_on": "2026-08-19"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49338459,
-        "top_title": "How Bluesky draws its logo on screenshots"
+        "top_id": 49344825,
+        "top_title": "Using the railway network as a flatbed scanner"
       },
       "made_on": "2026-08-18",
       "resolve_on": "2026-08-19"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.0,
+        "forecast_c": 32.2,
         "for_date": "2026-08-19",
         "city": "New Delhi"
       },
