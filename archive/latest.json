@@ -1,10 +1,10 @@
 {
   "date": "2026-08-19",
-  "fetched_at": "2026-08-19T04:33:49.182865+00:00",
+  "fetched_at": "2026-08-19T16:20:08.887550+00:00",
   "observations": {
     "btc": {
-      "usd": 64288,
-      "usd_24h_change": 0.25
+      "usd": 68626,
+      "usd_24h_change": 6.09
     },
     "kp": {
       "max_kp": 5.33,
@@ -13,7 +13,7 @@
     },
     "quakes": {
       "max_mag": 5.9,
-      "count": 293,
+      "count": 304,
       "strongest_place": "270 km WSW of Yanglong, China"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-08-18"
     },
     "hn": {
-      "top_id": 49355142,
-      "top_title": "New paper shows that 37% of workers in US saw real wages decline from 2021-2024 [pdf]",
+      "top_id": 49360242,
+      "top_title": "Devices with GrapheneOS support should be available in 2027",
       "top10": [
-        49355142,
-        49355825,
+        49360242,
+        49360545,
+        49362887,
+        49360015,
+        49363433,
         49355606,
-        49354949,
-        49355968,
-        49353221,
-        49345263,
-        49355105,
-        49354613,
-        49349984
+        49361395,
+        49361279,
+        49359425,
+        49347477
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.1,
       "actual_prev_date": "2026-08-18",
-      "today": 33.3,
-      "forecast_next": 32.8,
+      "today": 33.2,
+      "forecast_next": 33.1,
       "forecast_next_date": "2026-08-20"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.522,
+      "confidence": 0.581,
       "basis": {
-        "today_usd": 64288,
-        "change_24h": 0.25
+        "today_usd": 68626,
+        "change_24h": 6.09
       },
       "made_on": "2026-08-19",
       "resolve_on": "2026-08-20"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49355142,
-        "top_title": "New paper shows that 37% of workers in US saw real wages decline from 2021-2024 [pdf]"
+        "top_id": 49360242,
+        "top_title": "Devices with GrapheneOS support should be available in 2027"
       },
       "made_on": "2026-08-19",
       "resolve_on": "2026-08-20"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.8,
+        "forecast_c": 33.1,
         "for_date": "2026-08-20",
         "city": "New Delhi"
       },

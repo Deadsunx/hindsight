@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T04:33:50.547754+00:00",
+  "updated": "2026-08-19T16:20:10.780102+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 24,
-        "rate": 0.6667,
-        "majority_accuracy": 0.6667
+        "rate": 0.7083,
+        "majority_accuracy": 0.7083
       }
     },
     "kp_storm": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 140,
-    "correct": 109,
-    "accuracy": 0.7786,
-    "brier": 0.1375,
-    "log_loss": 0.4277,
+    "correct": 110,
+    "accuracy": 0.7857,
+    "brier": 0.1371,
+    "log_loss": 0.4268,
     "open": 7,
     "void": 1,
     "days": 25
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 140,
-      "rate": 0.7643,
-      "majority_accuracy": 0.7643
+      "rate": 0.7714,
+      "majority_accuracy": 0.7714
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 24,
-      "correct": 11,
-      "accuracy": 0.4583,
-      "brier": 0.2546,
-      "log_loss": 0.7023,
-      "base_rate": 0.6667,
-      "majority_accuracy": 0.6667
+      "correct": 12,
+      "accuracy": 0.5,
+      "brier": 0.2521,
+      "log_loss": 0.6973,
+      "base_rate": 0.7083,
+      "majority_accuracy": 0.7083
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 24,
       "claimed": 0.5277,
-      "actual": 0.4583
+      "actual": 0.5
     },
     {
       "label": "60\u201370%",
@@ -377,10 +377,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.522,
+      "confidence": 0.581,
       "basis": {
-        "today_usd": 64288,
-        "change_24h": 0.25
+        "today_usd": 68626,
+        "change_24h": 6.09
       },
       "made_on": "2026-08-19",
       "resolve_on": "2026-08-20"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49355142,
-        "top_title": "New paper shows that 37% of workers in US saw real wages decline from 2021-2024 [pdf]"
+        "top_id": 49360242,
+        "top_title": "Devices with GrapheneOS support should be available in 2027"
       },
       "made_on": "2026-08-19",
       "resolve_on": "2026-08-20"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.8,
+        "forecast_c": 33.1,
         "for_date": "2026-08-20",
         "city": "New Delhi"
       },
@@ -2225,8 +2225,8 @@
       "resolve_on": "2026-08-19",
       "call": true,
       "confidence": 0.53,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "kp_storm",
