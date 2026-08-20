@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T04:33:53.373665+00:00",
+  "updated": "2026-08-20T16:23:31.527059+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -377,10 +377,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.598,
+      "confidence": 0.574,
       "basis": {
-        "today_usd": 69296,
-        "change_24h": 7.79
+        "today_usd": 72293,
+        "change_24h": 5.36
       },
       "made_on": "2026-08-20",
       "resolve_on": "2026-08-21"
@@ -394,7 +394,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 5.0
+        "today_max_kp": 3.33
       },
       "made_on": "2026-08-20",
       "resolve_on": "2026-08-21"
@@ -436,8 +436,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49364559,
-        "top_title": "OpenRouter is joining Stripe"
+        "top_id": 49372583,
+        "top_title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint"
       },
       "made_on": "2026-08-20",
       "resolve_on": "2026-08-21"
@@ -451,7 +451,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.1,
+        "forecast_c": 33.5,
         "for_date": "2026-08-21",
         "city": "New Delhi"
       },
@@ -465,18 +465,18 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.741,
+      "confidence": 0.86,
       "basis": {
-        "today_max_kp": 5.0,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.2595,
+          "p_event": 0.1405,
           "n_train": 25,
           "fallback": null,
           "features": [
-            5.0,
-            5.11,
-            3.6185714285714283,
-            3.6185714285714283
+            3.33,
+            4.553333333333334,
+            3.38,
+            3.38
           ],
           "weights": [
             1.0182,
@@ -506,7 +506,7 @@
           "fallback": "laplace",
           "features": [
             5.8,
-            262.7142857142857,
+            254.85714285714286,
             6.042857142857143,
             1.0
           ]
@@ -522,16 +522,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.948,
+      "confidence": 0.911,
       "basis": {
-        "top_id": 49364559,
-        "top_title": "OpenRouter is joining Stripe",
+        "top_id": 49372583,
+        "top_title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "model": {
-          "p_event": 0.9478,
+          "p_event": 0.9112,
           "n_train": 25,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             3.0
           ],

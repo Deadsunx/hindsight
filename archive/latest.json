@@ -1,19 +1,19 @@
 {
   "date": "2026-08-20",
-  "fetched_at": "2026-08-20T04:33:51.989167+00:00",
+  "fetched_at": "2026-08-20T16:23:29.863844+00:00",
   "observations": {
     "btc": {
-      "usd": 69296,
-      "usd_24h_change": 7.79
+      "usd": 72293,
+      "usd_24h_change": 5.36
     },
     "kp": {
-      "max_kp": 5.0,
-      "latest_kp": 2.67,
+      "max_kp": 3.33,
+      "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.8,
-      "count": 346,
+      "count": 291,
       "strongest_place": "25 km NNE of Ruteng, Indonesia"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-08-19"
     },
     "hn": {
-      "top_id": 49364559,
-      "top_title": "OpenRouter is joining Stripe",
+      "top_id": 49372583,
+      "top_title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
       "top10": [
-        49364559,
-        49365405,
-        49369408,
-        49323795,
-        49294441,
-        49362001,
-        49364745,
-        49365841,
-        49365443,
-        49360015
+        49372583,
+        49347543,
+        49373456,
+        49374269,
+        49362689,
+        49368886,
+        49376332,
+        49374287,
+        49375996,
+        49374772
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.2,
       "actual_prev_date": "2026-08-19",
-      "today": 33.4,
-      "forecast_next": 33.1,
+      "today": 33.2,
+      "forecast_next": 33.5,
       "forecast_next_date": "2026-08-21"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.598,
+      "confidence": 0.574,
       "basis": {
-        "today_usd": 69296,
-        "change_24h": 7.79
+        "today_usd": 72293,
+        "change_24h": 5.36
       },
       "made_on": "2026-08-20",
       "resolve_on": "2026-08-21"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 5.0
+        "today_max_kp": 3.33
       },
       "made_on": "2026-08-20",
       "resolve_on": "2026-08-21"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49364559,
-        "top_title": "OpenRouter is joining Stripe"
+        "top_id": 49372583,
+        "top_title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint"
       },
       "made_on": "2026-08-20",
       "resolve_on": "2026-08-21"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.1,
+        "forecast_c": 33.5,
         "for_date": "2026-08-21",
         "city": "New Delhi"
       },
@@ -142,18 +142,18 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.741,
+      "confidence": 0.86,
       "basis": {
-        "today_max_kp": 5.0,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.2595,
+          "p_event": 0.1405,
           "n_train": 25,
           "fallback": null,
           "features": [
-            5.0,
-            5.11,
-            3.6185714285714283,
-            3.6185714285714283
+            3.33,
+            4.553333333333334,
+            3.38,
+            3.38
           ],
           "weights": [
             1.0182,
@@ -183,7 +183,7 @@
           "fallback": "laplace",
           "features": [
             5.8,
-            262.7142857142857,
+            254.85714285714286,
             6.042857142857143,
             1.0
           ]
@@ -199,16 +199,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.948,
+      "confidence": 0.911,
       "basis": {
-        "top_id": 49364559,
-        "top_title": "OpenRouter is joining Stripe",
+        "top_id": 49372583,
+        "top_title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "model": {
-          "p_event": 0.9478,
+          "p_event": 0.9112,
           "n_train": 25,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             3.0
           ],
