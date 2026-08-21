@@ -57,7 +57,7 @@ _Sample is 155 settled bets across 27 days. Nothing here is significant yet, and
 
 **Open bets, placed today:**
 
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(60% confident, momentum)_
+- **yes** — Bitcoin will be higher tomorrow than it is today. _(59% confident, momentum)_
 - **yes** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(70% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **no** — Today's most-read Wikipedia article will still be #1 tomorrow. _(62% confident, persistence)_
@@ -66,7 +66,7 @@ _Sample is 155 settled bets across 27 days. Nothing here is significant yet, and
 - **yes** — Bitcoin will be higher tomorrow than it is today. _(95% confident, logistic regression)_
 - **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(68% confident, logistic regression)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, logistic regression)_
-- **yes** — The current #1 story on Hacker News will fall out of the top 10. _(95% confident, logistic regression)_
+- **yes** — The current #1 story on Hacker News will fall out of the top 10. _(91% confident, logistic regression)_
 - **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(95% confident, logistic regression)_
 
 <!-- LEDGER:END -->
