@@ -190,11 +190,19 @@ def feat_wiki(days, date):
     if not obs or not obs.get("top"):
         return None
     top = obs["top"]
+    # Count consecutive *source* days, not archive days. Wikimedia's publishing
+    # lag means two runs can carry a reading about the same day, and counting
+    # both would inflate the streak with a day that never happened -- feeding
+    # the model a number the record does not support.
+    seen = set()
     streak, cursor = 0, date
     for _ in range(30):  # bounded so an odd archive cannot spin here
         prev = predict.obs_of(days, cursor, "wiki")
         if prev and prev.get("top") == top:
-            streak += 1
+            source_day = prev.get("for_date") or cursor
+            if source_day not in seen:
+                seen.add(source_day)
+                streak += 1
             cursor = predict.shift(cursor, -1)
         else:
             break

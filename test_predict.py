@@ -103,13 +103,57 @@ class TestResolvers(unittest.TestCase):
 
     def test_wiki_hold(self):
         days = {
-            "2026-01-01": day("2026-01-01", {"wiki": {"top": "Dune"}}),
-            "2026-01-02": day("2026-01-02", {"wiki": {"top": "Dune"}}),
+            "2026-01-01": day("2026-01-01", {"wiki": {"top": "Dune", "for_date": "2025-12-31"}}),
+            "2026-01-02": day("2026-01-02", {"wiki": {"top": "Dune", "for_date": "2026-01-01"}}),
         }
         pred = bet("wiki_hold", "2026-01-01", True)
         self.assertTrue(predict.resolve_wiki(pred, days))
         days["2026-01-02"]["observations"]["wiki"]["top"] = "Cleopatra"
         self.assertFalse(predict.resolve_wiki(pred, days))
+
+    def test_wiki_voids_when_both_readings_are_the_same_source_day(self):
+        """The failure mode the observer's fallback introduces.
+
+        Wikimedia lags, the observer walks back a day, and two consecutive runs
+        end up carrying a reading about the *same* day. Comparing those asks
+        whether an article equals itself, which is always yes — a win invented
+        out of an outage. It has to be void instead.
+        """
+        days = {
+            "2026-01-01": day("2026-01-01", {"wiki": {"top": "Dune", "for_date": "2025-12-31"}}),
+            "2026-01-02": day("2026-01-02", {"wiki": {"top": "Dune", "for_date": "2025-12-31"}}),
+        }
+        self.assertIsNone(
+            predict.resolve_wiki(bet("wiki_hold", "2026-01-01", True), days)
+        )
+
+    def test_wiki_voids_when_a_source_day_was_skipped(self):
+        """The bet is about tomorrow, not about two days from now."""
+        days = {
+            "2026-01-01": day("2026-01-01", {"wiki": {"top": "Dune", "for_date": "2025-12-30"}}),
+            "2026-01-02": day("2026-01-02", {"wiki": {"top": "Dune", "for_date": "2026-01-01"}}),
+        }
+        self.assertIsNone(
+            predict.resolve_wiki(bet("wiki_hold", "2026-01-01", True), days)
+        )
+
+    def test_wiki_voids_when_a_reading_has_no_source_date(self):
+        days = {
+            "2026-01-01": day("2026-01-01", {"wiki": {"top": "Dune"}}),
+            "2026-01-02": day("2026-01-02", {"wiki": {"top": "Dune", "for_date": "2026-01-01"}}),
+        }
+        self.assertIsNone(
+            predict.resolve_wiki(bet("wiki_hold", "2026-01-01", True), days)
+        )
+
+    def test_wiki_still_resolves_backwards_across_a_month_boundary(self):
+        days = {
+            "2026-01-31": day("2026-01-31", {"wiki": {"top": "Dune", "for_date": "2026-01-30"}}),
+            "2026-02-01": day("2026-02-01", {"wiki": {"top": "Rome", "for_date": "2026-01-31"}}),
+        }
+        self.assertFalse(
+            predict.resolve_wiki(bet("wiki_hold", "2026-01-31", True), days)
+        )
 
     def test_hn_fade(self):
         pred = bet("hn_fade", "2026-01-01", True, basis={"top_id": 42})

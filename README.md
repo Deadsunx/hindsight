@@ -127,6 +127,12 @@ simply happens, and what always calling the majority side would have scored.
 - **Open** — placed, not yet due.
 - **Void** — the day that would have settled it never got archived. Counted
   separately and **never** counted as a win.
+- **Source lag** — Wikimedia does not publish a day's pageviews the instant the
+  day ends, so `observe_wiki` walks back up to four days and records which day
+  the reading is actually *about*. The resolver then refuses to settle a
+  Wikipedia bet unless the two readings are exactly one source-day apart.
+  Without that guard an outage would compare a day against itself, always
+  answer yes, and manufacture a win out of a 404.
 - **Shared days only** — the rule and the model are compared solely on days
   where both actually bet. Comparing lifetime accuracies would compare
   different sets of days and flatter whichever drew the easier ones.

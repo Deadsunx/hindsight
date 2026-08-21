@@ -132,25 +132,50 @@ def observe_quakes() -> dict:
     }
 
 
+# Wikimedia does not publish a day's pageview totals the moment the day ends.
+# At 04:00 UTC yesterday's file is sometimes still a 404, which cost this
+# project a placed bet and voided the previous day's. Walk back until one of
+# them exists.
+WIKI_LOOKBACK = 4
+
+
 def observe_wiki() -> dict:
-    """The most-read English Wikipedia article for the last *complete* day."""
-    day = datetime.now(timezone.utc) - timedelta(days=1)
-    url = (
-        "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/"
-        f"en.wikipedia/all-access/{day:%Y/%m/%d}"
-    )
-    articles = _get_json(url)["items"][0]["articles"]
+    """The most-read English Wikipedia article for the most recent day
+    Wikimedia has actually published.
+
+    `for_date` records which day the reading is *about*, and it is not always
+    yesterday. Anything comparing two of these readings has to compare that
+    field rather than assume consecutive runs saw consecutive days.
+    """
+    now = datetime.now(timezone.utc)
     skip = {"Main_Page", "Special:Search", "-"}
-    for art in articles:
-        name = art.get("article", "")
-        if name in skip or name.startswith("Special:"):
-            continue
-        return {
-            "top": name,
-            "views": art.get("views"),
-            "for_date": f"{day:%Y-%m-%d}",
-        }
-    raise RuntimeError("no eligible article")
+    last_err = None
+
+    for back in range(1, WIKI_LOOKBACK + 1):
+        day = now - timedelta(days=back)
+        url = (
+            "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/"
+            f"en.wikipedia/all-access/{day:%Y/%m/%d}"
+        )
+        try:
+            articles = _get_json(url)["items"][0]["articles"]
+        except Exception as err:
+            last_err = err
+            continue  # not published yet; try the day before
+        for art in articles:
+            name = art.get("article", "")
+            if name in skip or name.startswith("Special:"):
+                continue
+            return {
+                "top": name,
+                "views": art.get("views"),
+                "for_date": f"{day:%Y-%m-%d}",
+            }
+        last_err = RuntimeError(f"no eligible article for {day:%Y-%m-%d}")
+
+    raise RuntimeError(
+        f"no published pageview day in the last {WIKI_LOOKBACK}: {last_err}"
+    )
 
 
 def observe_hn() -> dict:
@@ -326,6 +351,16 @@ def resolve_wiki(pred, days):
     before = obs_of(days, pred["made_on"], "wiki")
     after = obs_of(days, pred["resolve_on"], "wiki")
     if not before or not after or not before.get("top") or not after.get("top"):
+        return None
+
+    # The observer falls back to an older day when Wikimedia has not published
+    # yet, so two runs can carry readings about the same day. Comparing those
+    # would ask whether an article equals itself and always answer yes: a
+    # fabricated win. The question is also specifically about the *next* day,
+    # so a two-day gap answers a different question than the one that was bet
+    # on. Either way the bet is unresolvable, which counts as void, not a win.
+    first, second = before.get("for_date"), after.get("for_date")
+    if not first or not second or shift(first, 1) != second:
         return None
     return after["top"] == before["top"]
 
