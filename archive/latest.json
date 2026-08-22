@@ -1,20 +1,20 @@
 {
   "date": "2026-08-22",
-  "fetched_at": "2026-08-22T04:29:52.622078+00:00",
+  "fetched_at": "2026-08-22T16:12:55.901523+00:00",
   "observations": {
     "btc": {
-      "usd": 78526,
-      "usd_24h_change": 4.97
+      "usd": 77009,
+      "usd_24h_change": 0.05
     },
     "kp": {
-      "max_kp": 2.33,
+      "max_kp": 1.67,
       "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.7,
-      "count": 297,
-      "strongest_place": "194 km SW of Labuan, Indonesia"
+      "max_mag": 6.2,
+      "count": 223,
+      "strongest_place": "Scotia Sea"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-21"
     },
     "hn": {
-      "top_id": 49395628,
-      "top_title": "There's no reason for software to be slow anymore",
+      "top_id": 49399524,
+      "top_title": "A Kantian Critique of \"Sorry\" by Justin Bieber",
       "top10": [
-        49395628,
-        49389430,
-        49390427,
+        49399524,
+        49399591,
+        49400408,
+        49399898,
+        49398152,
+        49398158,
+        49391168,
         49393052,
-        49395605,
-        49394496,
-        49396086,
-        49392200,
-        49388154,
-        49386895
+        49398904,
+        49389430
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.6,
       "actual_prev_date": "2026-08-21",
-      "today": 33.2,
-      "forecast_next": 32.2,
+      "today": 33.3,
+      "forecast_next": 32.8,
       "forecast_next_date": "2026-08-23"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.57,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 78526,
-        "change_24h": 4.97
+        "today_usd": 77009,
+        "change_24h": 0.05
       },
       "made_on": "2026-08-22",
       "resolve_on": "2026-08-23"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.33
+        "today_max_kp": 1.67
       },
       "made_on": "2026-08-22",
       "resolve_on": "2026-08-23"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49395628,
-        "top_title": "There's no reason for software to be slow anymore"
+        "top_id": 49399524,
+        "top_title": "A Kantian Critique of \"Sorry\" by Justin Bieber"
       },
       "made_on": "2026-08-22",
       "resolve_on": "2026-08-23"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.2,
+        "forecast_c": 32.8,
         "for_date": "2026-08-23",
         "city": "New Delhi"
       },
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.547,
       "basis": {
-        "today_usd": 78526,
-        "change_24h": 4.97,
+        "today_usd": 77009,
+        "change_24h": 0.05,
         "model": {
-          "p_event": 0.9637,
+          "p_event": 0.5472,
           "n_train": 26,
           "fallback": null,
           "features": [
-            4.97,
-            14.42601929297933,
-            24.57128353189397,
-            2.5483468945862535
+            0.05,
+            12.215486841721802,
+            22.164760378825132,
+            2.6719104803042257
           ],
           "weights": [
-            -0.281,
-            0.9811,
-            -0.3588,
-            0.588
+            -0.2272,
+            0.4904,
+            -0.8106,
+            0.4134
           ],
-          "bias": 1.1851
+          "bias": 0.8406
         }
       },
       "made_on": "2026-08-22",
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.733,
+      "confidence": 0.791,
       "basis": {
-        "today_max_kp": 2.33,
+        "today_max_kp": 1.67,
         "model": {
-          "p_event": 0.2672,
+          "p_event": 0.2089,
           "n_train": 27,
           "fallback": null,
           "features": [
-            2.33,
-            2.9966666666666666,
-            3.474285714285714,
+            1.67,
+            2.776666666666667,
+            3.38,
             2.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 27,
           "fallback": "laplace",
           "features": [
-            5.7,
-            266.14285714285717,
-            5.957142857142857,
+            6.2,
+            255.57142857142858,
+            6.028571428571429,
             1.0
           ]
         }
@@ -232,25 +232,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.949,
       "basis": {
-        "top_id": 49395628,
-        "top_title": "There's no reason for software to be slow anymore",
+        "top_id": 49399524,
+        "top_title": "A Kantian Critique of \"Sorry\" by Justin Bieber",
         "model": {
-          "p_event": 0.9662,
+          "p_event": 0.9493,
           "n_train": 27,
           "fallback": null,
           "features": [
-            0.2,
-            9.0,
+            0.1,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4086,
-            -0.1488,
-            -0.2068
+            0.3173,
+            -0.1245,
+            -0.0535
           ],
-          "bias": 2.1647
+          "bias": 2.5793
         }
       },
       "made_on": "2026-08-22",
@@ -265,15 +265,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.2,
+        "forecast_c": 32.8,
         "for_date": "2026-08-23",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9767,
+          "p_event": 0.9817,
           "n_train": 26,
           "fallback": null,
           "features": [
-            1.0,
+            0.5,
             0.8634813257969165,
             0.46250000000000036,
             1.1000000000000014

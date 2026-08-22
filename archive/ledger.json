@@ -1,17 +1,17 @@
 {
-  "updated": "2026-08-22T04:29:54.143685+00:00",
+  "updated": "2026-08-22T16:12:57.385262+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 1,
-      "rule_correct": 1,
-      "model_correct": 1,
-      "rule_accuracy": 1.0,
-      "model_accuracy": 1.0,
-      "rule_brier": 0.1714,
-      "model_brier": 0.0025,
-      "rule_log_loss": 0.5344,
-      "model_log_loss": 0.0513,
+      "rule_correct": 0,
+      "model_correct": 0,
+      "rule_accuracy": 0.0,
+      "model_accuracy": 0.0,
+      "rule_brier": 0.3434,
+      "model_brier": 0.9025,
+      "rule_log_loss": 0.8819,
+      "model_log_loss": 2.9957,
       "coin_flip": {
         "n": 1,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 28,
-        "rate": 0.75,
-        "majority_accuracy": 0.75
+        "rate": 0.6786,
+        "majority_accuracy": 0.6786
       }
     },
     "kp_storm": {
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 2,
-      "rule_correct": 1,
-      "model_correct": 1,
-      "rule_accuracy": 0.5,
-      "model_accuracy": 0.5,
-      "rule_brier": 0.3944,
-      "model_brier": 0.4198,
-      "rule_log_loss": 1.124,
-      "model_log_loss": 1.2618,
+      "rule_correct": 2,
+      "model_correct": 2,
+      "rule_accuracy": 1.0,
+      "model_accuracy": 1.0,
+      "rule_brier": 0.0144,
+      "model_brier": 0.0078,
+      "rule_log_loss": 0.1278,
+      "model_log_loss": 0.0927,
       "coin_flip": {
         "n": 2,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 29,
-        "rate": 0.8621,
-        "majority_accuracy": 0.8621
+        "rate": 0.931,
+        "majority_accuracy": 0.931
       }
     },
     "forecast_hit": {
@@ -144,8 +144,8 @@
     "graded": 165,
     "correct": 129,
     "accuracy": 0.7818,
-    "brier": 0.1453,
-    "log_loss": 0.4489,
+    "brier": 0.1422,
+    "log_loss": 0.4426,
     "open": 13,
     "void": 1,
     "days": 28
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 27,
-      "correct": 15,
-      "accuracy": 0.5556,
-      "brier": 0.2436,
-      "log_loss": 0.6803,
-      "base_rate": 0.7407,
-      "majority_accuracy": 0.7407
+      "correct": 14,
+      "accuracy": 0.5185,
+      "brier": 0.25,
+      "log_loss": 0.6932,
+      "base_rate": 0.7037,
+      "majority_accuracy": 0.7037
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 27,
-      "correct": 24,
-      "accuracy": 0.8889,
-      "brier": 0.0988,
-      "log_loss": 0.3492,
-      "base_rate": 0.8889,
-      "majority_accuracy": 0.8889
+      "correct": 25,
+      "accuracy": 0.9259,
+      "brier": 0.0707,
+      "log_loss": 0.2754,
+      "base_rate": 0.9259,
+      "majority_accuracy": 0.9259
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -248,11 +248,11 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 1,
-      "correct": 1,
-      "accuracy": 1.0,
-      "brier": 0.0025,
-      "log_loss": 0.0513,
-      "base_rate": 1.0,
+      "correct": 0,
+      "accuracy": 0.0,
+      "brier": 0.9025,
+      "log_loss": 2.9957,
+      "base_rate": 0.0,
       "majority_accuracy": 1.0
     },
     "kp_storm_ml": {
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 2,
-      "correct": 1,
-      "accuracy": 0.5,
-      "brier": 0.4198,
-      "log_loss": 1.2618,
-      "base_rate": 0.5,
-      "majority_accuracy": 0.5
+      "correct": 2,
+      "accuracy": 1.0,
+      "brier": 0.0078,
+      "log_loss": 0.0927,
+      "base_rate": 1.0,
+      "majority_accuracy": 1.0
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 27,
       "claimed": 0.5335,
-      "actual": 0.5556
+      "actual": 0.5185
     },
     {
       "label": "60\u201370%",
@@ -344,7 +344,7 @@
       "label": "80\u201390%",
       "n": 58,
       "claimed": 0.8417,
-      "actual": 0.9138
+      "actual": 0.931
     },
     {
       "label": "90\u2013100%",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.57,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 78526,
-        "change_24h": 4.97
+        "today_usd": 77009,
+        "change_24h": 0.05
       },
       "made_on": "2026-08-22",
       "resolve_on": "2026-08-23"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.33
+        "today_max_kp": 1.67
       },
       "made_on": "2026-08-22",
       "resolve_on": "2026-08-23"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49395628,
-        "top_title": "There's no reason for software to be slow anymore"
+        "top_id": 49399524,
+        "top_title": "A Kantian Critique of \"Sorry\" by Justin Bieber"
       },
       "made_on": "2026-08-22",
       "resolve_on": "2026-08-23"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.2,
+        "forecast_c": 32.8,
         "for_date": "2026-08-23",
         "city": "New Delhi"
       },
@@ -499,27 +499,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.547,
       "basis": {
-        "today_usd": 78526,
-        "change_24h": 4.97,
+        "today_usd": 77009,
+        "change_24h": 0.05,
         "model": {
-          "p_event": 0.9637,
+          "p_event": 0.5472,
           "n_train": 26,
           "fallback": null,
           "features": [
-            4.97,
-            14.42601929297933,
-            24.57128353189397,
-            2.5483468945862535
+            0.05,
+            12.215486841721802,
+            22.164760378825132,
+            2.6719104803042257
           ],
           "weights": [
-            -0.281,
-            0.9811,
-            -0.3588,
-            0.588
+            -0.2272,
+            0.4904,
+            -0.8106,
+            0.4134
           ],
-          "bias": 1.1851
+          "bias": 0.8406
         }
       },
       "made_on": "2026-08-22",
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.733,
+      "confidence": 0.791,
       "basis": {
-        "today_max_kp": 2.33,
+        "today_max_kp": 1.67,
         "model": {
-          "p_event": 0.2672,
+          "p_event": 0.2089,
           "n_train": 27,
           "fallback": null,
           "features": [
-            2.33,
-            2.9966666666666666,
-            3.474285714285714,
+            1.67,
+            2.776666666666667,
+            3.38,
             2.0
           ],
           "weights": [
@@ -572,9 +572,9 @@
           "n_train": 27,
           "fallback": "laplace",
           "features": [
-            5.7,
-            266.14285714285717,
-            5.957142857142857,
+            6.2,
+            255.57142857142858,
+            6.028571428571429,
             1.0
           ]
         }
@@ -589,25 +589,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.949,
       "basis": {
-        "top_id": 49395628,
-        "top_title": "There's no reason for software to be slow anymore",
+        "top_id": 49399524,
+        "top_title": "A Kantian Critique of \"Sorry\" by Justin Bieber",
         "model": {
-          "p_event": 0.9662,
+          "p_event": 0.9493,
           "n_train": 27,
           "fallback": null,
           "features": [
-            0.2,
-            9.0,
+            0.1,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4086,
-            -0.1488,
-            -0.2068
+            0.3173,
+            -0.1245,
+            -0.0535
           ],
-          "bias": 2.1647
+          "bias": 2.5793
         }
       },
       "made_on": "2026-08-22",
@@ -622,15 +622,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.2,
+        "forecast_c": 32.8,
         "for_date": "2026-08-23",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9767,
+          "p_event": 0.9817,
           "n_train": 26,
           "fallback": null,
           "features": [
-            1.0,
+            0.5,
             0.8634813257969165,
             0.46250000000000036,
             1.1000000000000014
@@ -2687,8 +2687,8 @@
       "resolve_on": "2026-08-22",
       "call": true,
       "confidence": 0.586,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm",
@@ -2739,8 +2739,8 @@
       "resolve_on": "2026-08-22",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -2752,8 +2752,8 @@
       "resolve_on": "2026-08-22",
       "call": true,
       "confidence": 0.95,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm_ml",
@@ -2791,8 +2791,8 @@
       "resolve_on": "2026-08-22",
       "call": true,
       "confidence": 0.912,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
