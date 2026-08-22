@@ -358,11 +358,25 @@
       "weather"
     ],
     "made": 9,
-    "graded": 8,
-    "correct": 6
+    "graded": 9,
+    "correct": 7
   },
   {
     "date": "2026-08-21",
+    "captured": [
+      "btc",
+      "kp",
+      "quakes",
+      "wiki",
+      "hn",
+      "weather"
+    ],
+    "made": 11,
+    "graded": 9,
+    "correct": 5
+  },
+  {
+    "date": "2026-08-22",
     "captured": [
       "btc",
       "kp",
