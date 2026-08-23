@@ -1,20 +1,20 @@
 {
   "date": "2026-08-23",
-  "fetched_at": "2026-08-23T04:33:29.676082+00:00",
+  "fetched_at": "2026-08-23T16:14:29.164715+00:00",
   "observations": {
     "btc": {
-      "usd": 76949,
-      "usd_24h_change": -2.06
+      "usd": 77253,
+      "usd_24h_change": 0.36
     },
     "kp": {
-      "max_kp": 1.33,
-      "latest_kp": 0.67,
+      "max_kp": 2.0,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.2,
-      "count": 204,
-      "strongest_place": "Scotia Sea"
+      "max_mag": 6,
+      "count": 297,
+      "strongest_place": "33 km SSW of Honch\u014d, Japan"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-22"
     },
     "hn": {
-      "top_id": 49405816,
-      "top_title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
+      "top_id": 49408550,
+      "top_title": "Malware infects Android-based automotive head unit firmware",
       "top10": [
-        49405816,
-        49402189,
-        49402232,
-        49404380,
-        49400408,
-        49351802,
-        49346854,
-        49355659,
-        49405331,
-        49402107
+        49408550,
+        49408858,
+        49409473,
+        49409073,
+        49409200,
+        49402491,
+        49405870,
+        49406333,
+        49409092,
+        49407507
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.3,
       "actual_prev_date": "2026-08-22",
-      "today": 33.0,
-      "forecast_next": 32.4,
+      "today": 32.7,
+      "forecast_next": 32.1,
       "forecast_next_date": "2026-08-24"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.541,
+      "call": true,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 76949,
-        "change_24h": -2.06
+        "today_usd": 77253,
+        "change_24h": 0.36
       },
       "made_on": "2026-08-23",
       "resolve_on": "2026-08-24"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.33
+        "today_max_kp": 2.0
       },
       "made_on": "2026-08-23",
       "resolve_on": "2026-08-24"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49405816,
-        "top_title": "MartyPC is a cross-platform emulator of early PCs written in Rust"
+        "top_id": 49408550,
+        "top_title": "Malware infects Android-based automotive head unit firmware"
       },
       "made_on": "2026-08-23",
       "resolve_on": "2026-08-24"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.4,
+        "forecast_c": 32.1,
         "for_date": "2026-08-24",
         "city": "New Delhi"
       },
@@ -141,28 +141,28 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.784,
+      "call": true,
+      "confidence": 0.693,
       "basis": {
-        "today_usd": 76949,
-        "change_24h": -2.06,
+        "today_usd": 77253,
+        "change_24h": 0.36,
         "model": {
-          "p_event": 0.2162,
+          "p_event": 0.6934,
           "n_train": 27,
           "fallback": null,
           "features": [
-            -2.06,
-            6.440457582338532,
-            21.907130748879133,
-            2.7079357336026226
+            0.36,
+            6.860968558504976,
+            22.388745425452704,
+            2.672653623325076
           ],
           "weights": [
-            0.04,
-            0.3735,
-            -1.0494,
-            0.2985
+            -0.4355,
+            0.4667,
+            -0.5862,
+            0.4775
           ],
-          "bias": 0.7209
+          "bias": 0.8947
         }
       },
       "made_on": "2026-08-23",
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.857,
+      "confidence": 0.817,
       "basis": {
-        "today_max_kp": 1.33,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.1426,
+          "p_event": 0.1831,
           "n_train": 28,
           "fallback": null,
           "features": [
-            1.33,
-            2.11,
-            3.1885714285714286,
+            2.0,
+            2.3333333333333335,
+            3.2842857142857147,
             2.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 28,
           "fallback": "laplace",
           "features": [
-            6.2,
-            256.57142857142856,
-            6.042857142857143,
+            6.0,
+            269.85714285714283,
+            6.014285714285714,
             1.0
           ]
         }
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.916,
       "basis": {
-        "top_id": 49405816,
-        "top_title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
+        "top_id": 49408550,
+        "top_title": "Malware infects Android-based automotive head unit firmware",
         "model": {
-          "p_event": 0.9532,
+          "p_event": 0.9159,
           "n_train": 28,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             6.0
           ],
@@ -297,7 +297,7 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.4,
+        "forecast_c": 32.1,
         "for_date": "2026-08-24",
         "city": "New Delhi",
         "model": {

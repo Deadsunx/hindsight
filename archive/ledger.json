@@ -1,17 +1,17 @@
 {
-  "updated": "2026-08-23T04:33:31.386767+00:00",
+  "updated": "2026-08-23T16:14:30.695216+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 2,
-      "rule_correct": 0,
-      "model_correct": 0,
-      "rule_accuracy": 0.0,
-      "model_accuracy": 0.0,
-      "rule_brier": 0.3069,
-      "model_brier": 0.6009,
-      "rule_log_loss": 0.8079,
-      "model_log_loss": 1.8938,
+      "rule_correct": 1,
+      "model_correct": 1,
+      "rule_accuracy": 0.5,
+      "model_accuracy": 0.5,
+      "rule_brier": 0.2869,
+      "model_brier": 0.5539,
+      "rule_log_loss": 0.7679,
+      "model_log_loss": 1.7995,
       "coin_flip": {
         "n": 2,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 30,
-        "rate": 0.6333,
-        "majority_accuracy": 0.6333
+        "rate": 0.7,
+        "majority_accuracy": 0.7
       }
     },
     "kp_storm": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 176,
-    "correct": 138,
-    "accuracy": 0.7841,
-    "brier": 0.138,
-    "log_loss": 0.4316,
+    "correct": 140,
+    "accuracy": 0.7955,
+    "brier": 0.1372,
+    "log_loss": 0.43,
     "open": 14,
     "void": 1,
     "days": 29
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 176,
-      "rate": 0.767,
-      "majority_accuracy": 0.767
+      "rate": 0.7784,
+      "majority_accuracy": 0.7784
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 28,
-      "correct": 14,
-      "accuracy": 0.5,
-      "brier": 0.2507,
-      "log_loss": 0.6946,
-      "base_rate": 0.6786,
-      "majority_accuracy": 0.6786
+      "correct": 15,
+      "accuracy": 0.5357,
+      "brier": 0.2493,
+      "log_loss": 0.6918,
+      "base_rate": 0.7143,
+      "majority_accuracy": 0.7143
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -248,12 +248,12 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 2,
-      "correct": 0,
-      "accuracy": 0.0,
-      "brier": 0.6009,
-      "log_loss": 1.8938,
-      "base_rate": 0.0,
-      "majority_accuracy": 1.0
+      "correct": 1,
+      "accuracy": 0.5,
+      "brier": 0.5539,
+      "log_loss": 1.7995,
+      "base_rate": 0.5,
+      "majority_accuracy": 0.5
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 29,
       "claimed": 0.5335,
-      "actual": 0.4828
+      "actual": 0.5517
     },
     {
       "label": "60\u201370%",
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.541,
+      "call": true,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 76949,
-        "change_24h": -2.06
+        "today_usd": 77253,
+        "change_24h": 0.36
       },
       "made_on": "2026-08-23",
       "resolve_on": "2026-08-24"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.33
+        "today_max_kp": 2.0
       },
       "made_on": "2026-08-23",
       "resolve_on": "2026-08-24"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49405816,
-        "top_title": "MartyPC is a cross-platform emulator of early PCs written in Rust"
+        "top_id": 49408550,
+        "top_title": "Malware infects Android-based automotive head unit firmware"
       },
       "made_on": "2026-08-23",
       "resolve_on": "2026-08-24"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.4,
+        "forecast_c": 32.1,
         "for_date": "2026-08-24",
         "city": "New Delhi"
       },
@@ -498,28 +498,28 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.784,
+      "call": true,
+      "confidence": 0.693,
       "basis": {
-        "today_usd": 76949,
-        "change_24h": -2.06,
+        "today_usd": 77253,
+        "change_24h": 0.36,
         "model": {
-          "p_event": 0.2162,
+          "p_event": 0.6934,
           "n_train": 27,
           "fallback": null,
           "features": [
-            -2.06,
-            6.440457582338532,
-            21.907130748879133,
-            2.7079357336026226
+            0.36,
+            6.860968558504976,
+            22.388745425452704,
+            2.672653623325076
           ],
           "weights": [
-            0.04,
-            0.3735,
-            -1.0494,
-            0.2985
+            -0.4355,
+            0.4667,
+            -0.5862,
+            0.4775
           ],
-          "bias": 0.7209
+          "bias": 0.8947
         }
       },
       "made_on": "2026-08-23",
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.857,
+      "confidence": 0.817,
       "basis": {
-        "today_max_kp": 1.33,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.1426,
+          "p_event": 0.1831,
           "n_train": 28,
           "fallback": null,
           "features": [
-            1.33,
-            2.11,
-            3.1885714285714286,
+            2.0,
+            2.3333333333333335,
+            3.2842857142857147,
             2.0
           ],
           "weights": [
@@ -572,9 +572,9 @@
           "n_train": 28,
           "fallback": "laplace",
           "features": [
-            6.2,
-            256.57142857142856,
-            6.042857142857143,
+            6.0,
+            269.85714285714283,
+            6.014285714285714,
             1.0
           ]
         }
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.916,
       "basis": {
-        "top_id": 49405816,
-        "top_title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
+        "top_id": 49408550,
+        "top_title": "Malware infects Android-based automotive head unit firmware",
         "model": {
-          "p_event": 0.9532,
+          "p_event": 0.9159,
           "n_train": 28,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             6.0
           ],
@@ -654,7 +654,7 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.4,
+        "forecast_c": 32.1,
         "for_date": "2026-08-24",
         "city": "New Delhi",
         "model": {
@@ -2862,8 +2862,8 @@
       "resolve_on": "2026-08-23",
       "call": true,
       "confidence": 0.52,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "kp_storm",
@@ -2927,8 +2927,8 @@
       "resolve_on": "2026-08-23",
       "call": true,
       "confidence": 0.547,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "kp_storm_ml",
