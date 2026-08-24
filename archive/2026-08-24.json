@@ -1,20 +1,20 @@
 {
   "date": "2026-08-24",
-  "fetched_at": "2026-08-24T04:41:03.980997+00:00",
+  "fetched_at": "2026-08-24T16:24:57.528293+00:00",
   "observations": {
     "btc": {
-      "usd": 77151,
-      "usd_24h_change": 0.4
+      "usd": 79753,
+      "usd_24h_change": 3.23
     },
     "kp": {
       "max_kp": 2.33,
-      "latest_kp": 2.33,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6,
-      "count": 324,
-      "strongest_place": "33 km SSW of Honch\u014d, Japan"
+      "count": 264,
+      "strongest_place": "215 km NNE of Lospalos, Timor Leste"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-23"
     },
     "hn": {
-      "top_id": 49413320,
-      "top_title": "Everything I own, owned",
+      "top_id": 49420873,
+      "top_title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
       "top10": [
-        49413320,
-        49411643,
-        49411102,
-        49414338,
-        49411717,
-        49410932,
-        49413561,
-        49409092,
-        49409473,
-        49408550
+        49420873,
+        49421158,
+        49421074,
+        49419237,
+        49421489,
+        49421554,
+        49418255,
+        49420592,
+        49412396,
+        49413320
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.7,
       "actual_prev_date": "2026-08-23",
-      "today": 33.3,
-      "forecast_next": 33.0,
+      "today": 31.7,
+      "forecast_next": 32.3,
       "forecast_next_date": "2026-08-25"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.524,
+      "confidence": 0.552,
       "basis": {
-        "today_usd": 77151,
-        "change_24h": 0.4
+        "today_usd": 79753,
+        "change_24h": 3.23
       },
       "made_on": "2026-08-24",
       "resolve_on": "2026-08-25"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49413320,
-        "top_title": "Everything I own, owned"
+        "top_id": 49420873,
+        "top_title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded"
       },
       "made_on": "2026-08-24",
       "resolve_on": "2026-08-25"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.0,
+        "forecast_c": 32.3,
         "for_date": "2026-08-25",
         "city": "New Delhi"
       },
@@ -141,28 +141,28 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.704,
+      "call": true,
+      "confidence": 0.581,
       "basis": {
-        "today_usd": 77151,
-        "change_24h": 0.4,
+        "today_usd": 79753,
+        "change_24h": 3.23,
         "model": {
-          "p_event": 0.2964,
+          "p_event": 0.5808,
           "n_train": 28,
           "fallback": null,
           "features": [
-            0.4,
-            0.1414812699566559,
-            20.50513096855817,
-            2.673188470383047
+            3.23,
+            3.5188598426832085,
+            24.56929540946222,
+            2.538192902280176
           ],
           "weights": [
-            -0.3115,
-            0.6452,
-            -0.9183,
-            0.3111
+            -0.5008,
+            0.3631,
+            -0.4102,
+            0.5395
           ],
-          "bias": 0.7711
+          "bias": 0.9563
         }
       },
       "made_on": "2026-08-24",
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.0,
-            286.42857142857144,
+            277.85714285714283,
             6.042857142857143,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.923,
       "basis": {
-        "top_id": 49413320,
-        "top_title": "Everything I own, owned",
+        "top_id": 49420873,
+        "top_title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "model": {
-          "p_event": 0.995,
+          "p_event": 0.9229,
           "n_train": 29,
           "fallback": null,
           "features": [
-            0.3,
-            10.0,
+            0.0,
+            11.0,
             0.0
           ],
           "weights": [
-            0.4781,
-            -0.1309,
-            -0.4144
+            0.3482,
+            -0.1119,
+            0.0049
           ],
-          "bias": 2.2981
+          "bias": 2.6627
         }
       },
       "made_on": "2026-08-24",
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 33.0,
+        "forecast_c": 32.3,
         "for_date": "2026-08-25",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9853,
+          "p_event": 0.9829,
           "n_train": 28,
           "fallback": null,
           "features": [
-            0.29999999999999716,
+            0.5999999999999979,
             0.7236021006050222,
             0.3124999999999991,
             1.0
