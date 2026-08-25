@@ -1,20 +1,20 @@
 {
   "date": "2026-08-25",
-  "fetched_at": "2026-08-25T04:35:32.267410+00:00",
+  "fetched_at": "2026-08-25T16:25:25.070651+00:00",
   "observations": {
     "btc": {
-      "usd": 80310,
-      "usd_24h_change": 4.05
+      "usd": 79185,
+      "usd_24h_change": -0.74
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 1.33,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6,
-      "count": 268,
-      "strongest_place": "215 km NNE of Lospalos, Timor Leste"
+      "max_mag": 5.5,
+      "count": 234,
+      "strongest_place": "south of the Fiji Islands"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-24"
     },
     "hn": {
-      "top_id": 49426564,
-      "top_title": "iCloud+ Hide My Email addresses will remain on icloud.com",
+      "top_id": 49433292,
+      "top_title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
       "top10": [
-        49426564,
-        49420873,
-        49421158,
-        49428121,
-        49426466,
-        49428882,
-        49419237,
-        49422784,
-        49427001,
-        49422800
+        49433292,
+        49433316,
+        49433450,
+        49432317,
+        49434820,
+        49432319,
+        49435728,
+        49432227,
+        49434613,
+        49426564
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 31.7,
       "actual_prev_date": "2026-08-24",
-      "today": 31.6,
-      "forecast_next": 32.6,
+      "today": 32.6,
+      "forecast_next": 33.6,
       "forecast_next_date": "2026-08-26"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.56,
+      "call": false,
+      "confidence": 0.527,
       "basis": {
-        "today_usd": 80310,
-        "change_24h": 4.05
+        "today_usd": 79185,
+        "change_24h": -0.74
       },
       "made_on": "2026-08-25",
       "resolve_on": "2026-08-26"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49426564,
-        "top_title": "iCloud+ Hide My Email addresses will remain on icloud.com"
+        "top_id": 49433292,
+        "top_title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute"
       },
       "made_on": "2026-08-25",
       "resolve_on": "2026-08-26"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.6,
+        "forecast_c": 33.6,
         "for_date": "2026-08-26",
         "city": "New Delhi"
       },
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.725,
+      "confidence": 0.657,
       "basis": {
-        "today_usd": 80310,
-        "change_24h": 4.05,
+        "today_usd": 79185,
+        "change_24h": -0.74,
         "model": {
-          "p_event": 0.7245,
+          "p_event": 0.6566,
           "n_train": 29,
           "fallback": null,
           "features": [
-            4.05,
-            4.2865119661338325,
-            24.161281345660313,
-            2.480773976804619
+            -0.74,
+            2.825643755924623,
+            22.422003030209336,
+            2.6441118675151802
           ],
           "weights": [
-            -0.4423,
-            0.134,
-            -0.1676,
-            0.5871
+            -0.6038,
+            0.6532,
+            -0.72,
+            0.455
           ],
-          "bias": 1.013
+          "bias": 0.8402
         }
       },
       "made_on": "2026-08-25",
@@ -215,9 +215,9 @@
           "n_train": 30,
           "fallback": "laplace",
           "features": [
-            6.0,
-            278.0,
-            6.085714285714286,
+            5.5,
+            273.14285714285717,
+            6.014285714285714,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.928,
       "basis": {
-        "top_id": 49426564,
-        "top_title": "iCloud+ Hide My Email addresses will remain on icloud.com",
+        "top_id": 49433292,
+        "top_title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
         "model": {
-          "p_event": 0.9892,
+          "p_event": 0.9282,
           "n_train": 30,
           "fallback": null,
           "features": [
-            0.3,
-            2.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.3995,
-            -0.1175,
-            0.3639
+            0.3445,
+            -0.1104,
+            -0.033
           ],
-          "bias": 2.3361
+          "bias": 2.6965
         }
       },
       "made_on": "2026-08-25",
@@ -297,7 +297,7 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.6,
+        "forecast_c": 33.6,
         "for_date": "2026-08-26",
         "city": "New Delhi",
         "model": {

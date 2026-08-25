@@ -1,17 +1,17 @@
 {
-  "updated": "2026-08-25T04:35:33.938841+00:00",
+  "updated": "2026-08-25T16:25:26.510658+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 4,
-      "rule_correct": 3,
-      "model_correct": 3,
-      "rule_accuracy": 0.75,
-      "model_accuracy": 0.75,
-      "rule_brier": 0.2503,
-      "model_brier": 0.3444,
-      "rule_log_loss": 0.6941,
-      "model_log_loss": 1.1272,
+      "rule_correct": 2,
+      "model_correct": 2,
+      "rule_accuracy": 0.5,
+      "model_accuracy": 0.5,
+      "rule_brier": 0.2763,
+      "model_brier": 0.3849,
+      "rule_log_loss": 0.7463,
+      "model_log_loss": 1.2089,
       "coin_flip": {
         "n": 4,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 34,
-        "rate": 0.7353,
-        "majority_accuracy": 0.7353
+        "rate": 0.6765,
+        "majority_accuracy": 0.6765
       }
     },
     "kp_storm": {
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 5,
-      "rule_correct": 4,
-      "model_correct": 4,
-      "rule_accuracy": 0.8,
-      "model_accuracy": 0.8,
-      "rule_brier": 0.1664,
-      "model_brier": 0.1755,
-      "rule_log_loss": 0.5263,
-      "model_log_loss": 0.5779,
+      "rule_correct": 5,
+      "model_correct": 5,
+      "rule_accuracy": 1.0,
+      "model_accuracy": 1.0,
+      "rule_brier": 0.0144,
+      "model_brier": 0.0063,
+      "rule_log_loss": 0.1278,
+      "model_log_loss": 0.0811,
       "coin_flip": {
         "n": 5,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 35,
-        "rate": 0.8857,
-        "majority_accuracy": 0.8857
+        "rate": 0.9429,
+        "majority_accuracy": 0.9429
       }
     },
     "forecast_hit": {
@@ -144,8 +144,8 @@
     "graded": 200,
     "correct": 162,
     "accuracy": 0.81,
-    "brier": 0.1355,
-    "log_loss": 0.4291,
+    "brier": 0.1288,
+    "log_loss": 0.4094,
     "open": 14,
     "void": 1,
     "days": 31
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 30,
-      "correct": 17,
-      "accuracy": 0.5667,
-      "brier": 0.2469,
-      "log_loss": 0.687,
-      "base_rate": 0.7333,
-      "majority_accuracy": 0.7333
+      "correct": 16,
+      "accuracy": 0.5333,
+      "brier": 0.2504,
+      "log_loss": 0.6939,
+      "base_rate": 0.7,
+      "majority_accuracy": 0.7
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 30,
-      "correct": 27,
-      "accuracy": 0.9,
-      "brier": 0.0904,
-      "log_loss": 0.3271,
-      "base_rate": 0.9,
-      "majority_accuracy": 0.9
+      "correct": 28,
+      "accuracy": 0.9333,
+      "brier": 0.0651,
+      "log_loss": 0.2607,
+      "base_rate": 0.9333,
+      "majority_accuracy": 0.9333
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -248,12 +248,12 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 4,
-      "correct": 3,
-      "accuracy": 0.75,
-      "brier": 0.3444,
-      "log_loss": 1.1272,
-      "base_rate": 0.75,
-      "majority_accuracy": 0.75
+      "correct": 2,
+      "accuracy": 0.5,
+      "brier": 0.3849,
+      "log_loss": 1.2089,
+      "base_rate": 0.5,
+      "majority_accuracy": 0.5
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 5,
-      "correct": 4,
-      "accuracy": 0.8,
-      "brier": 0.1755,
-      "log_loss": 0.5779,
-      "base_rate": 0.8,
-      "majority_accuracy": 0.8
+      "correct": 5,
+      "accuracy": 1.0,
+      "brier": 0.0063,
+      "log_loss": 0.0811,
+      "base_rate": 1.0,
+      "majority_accuracy": 1.0
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 32,
       "claimed": 0.5353,
-      "actual": 0.5938
+      "actual": 0.5312
     },
     {
       "label": "60\u201370%",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 65,
       "claimed": 0.8412,
-      "actual": 0.9231
+      "actual": 0.9385
     },
     {
       "label": "90\u2013100%",
       "n": 40,
       "claimed": 0.9465,
-      "actual": 0.95
+      "actual": 0.975
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.56,
+      "call": false,
+      "confidence": 0.527,
       "basis": {
-        "today_usd": 80310,
-        "change_24h": 4.05
+        "today_usd": 79185,
+        "change_24h": -0.74
       },
       "made_on": "2026-08-25",
       "resolve_on": "2026-08-26"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49426564,
-        "top_title": "iCloud+ Hide My Email addresses will remain on icloud.com"
+        "top_id": 49433292,
+        "top_title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute"
       },
       "made_on": "2026-08-25",
       "resolve_on": "2026-08-26"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.6,
+        "forecast_c": 33.6,
         "for_date": "2026-08-26",
         "city": "New Delhi"
       },
@@ -499,27 +499,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.725,
+      "confidence": 0.657,
       "basis": {
-        "today_usd": 80310,
-        "change_24h": 4.05,
+        "today_usd": 79185,
+        "change_24h": -0.74,
         "model": {
-          "p_event": 0.7245,
+          "p_event": 0.6566,
           "n_train": 29,
           "fallback": null,
           "features": [
-            4.05,
-            4.2865119661338325,
-            24.161281345660313,
-            2.480773976804619
+            -0.74,
+            2.825643755924623,
+            22.422003030209336,
+            2.6441118675151802
           ],
           "weights": [
-            -0.4423,
-            0.134,
-            -0.1676,
-            0.5871
+            -0.6038,
+            0.6532,
+            -0.72,
+            0.455
           ],
-          "bias": 1.013
+          "bias": 0.8402
         }
       },
       "made_on": "2026-08-25",
@@ -572,9 +572,9 @@
           "n_train": 30,
           "fallback": "laplace",
           "features": [
-            6.0,
-            278.0,
-            6.085714285714286,
+            5.5,
+            273.14285714285717,
+            6.014285714285714,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.928,
       "basis": {
-        "top_id": 49426564,
-        "top_title": "iCloud+ Hide My Email addresses will remain on icloud.com",
+        "top_id": 49433292,
+        "top_title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
         "model": {
-          "p_event": 0.9892,
+          "p_event": 0.9282,
           "n_train": 30,
           "fallback": null,
           "features": [
-            0.3,
-            2.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.3995,
-            -0.1175,
-            0.3639
+            0.3445,
+            -0.1104,
+            -0.033
           ],
-          "bias": 2.3361
+          "bias": 2.6965
         }
       },
       "made_on": "2026-08-25",
@@ -654,7 +654,7 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.6,
+        "forecast_c": 33.6,
         "for_date": "2026-08-26",
         "city": "New Delhi",
         "model": {
@@ -3161,8 +3161,8 @@
       "resolve_on": "2026-08-25",
       "call": true,
       "confidence": 0.552,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm",
@@ -3213,8 +3213,8 @@
       "resolve_on": "2026-08-25",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -3226,8 +3226,8 @@
       "resolve_on": "2026-08-25",
       "call": true,
       "confidence": 0.581,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm_ml",
@@ -3278,8 +3278,8 @@
       "resolve_on": "2026-08-25",
       "call": true,
       "confidence": 0.923,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
