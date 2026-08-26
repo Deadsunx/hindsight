@@ -1,20 +1,20 @@
 {
   "date": "2026-08-26",
-  "fetched_at": "2026-08-26T04:36:37.650708+00:00",
+  "fetched_at": "2026-08-26T16:41:48.660335+00:00",
   "observations": {
     "btc": {
-      "usd": 78910,
-      "usd_24h_change": -1.78
+      "usd": 78025,
+      "usd_24h_change": -1.49
     },
     "kp": {
-      "max_kp": 1.67,
-      "latest_kp": 0.33,
+      "max_kp": 1.0,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.5,
-      "count": 256,
-      "strongest_place": "south of the Fiji Islands"
+      "max_mag": 5.2,
+      "count": 231,
+      "strongest_place": "55 km NW of Kod\u0101ri\u0307\u0304, Nepal"
     },
     "wiki": {
       "top": "Dolly_Parton",
@@ -22,27 +22,27 @@
       "for_date": "2026-08-25"
     },
     "hn": {
-      "top_id": 49433292,
-      "top_title": "Apple introduces M6 and M5 Ultra",
+      "top_id": 49449507,
+      "top_title": "GLM-5.3-Flash",
       "top10": [
-        49433292,
-        49439017,
-        49434378,
-        49433316,
-        49442589,
-        49441666,
-        49437210,
-        49433450,
-        49440410,
-        49439499
+        49449507,
+        49448321,
+        49448210,
+        49450448,
+        49448872,
+        49450353,
+        49449749,
+        49450722,
+        49451495,
+        49450898
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.6,
       "actual_prev_date": "2026-08-25",
-      "today": 33.6,
-      "forecast_next": 34.5,
+      "today": 32.3,
+      "forecast_next": 33.8,
       "forecast_next_date": "2026-08-27"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.538,
+      "confidence": 0.535,
       "basis": {
-        "today_usd": 78910,
-        "change_24h": -1.78
+        "today_usd": 78025,
+        "change_24h": -1.49
       },
       "made_on": "2026-08-26",
       "resolve_on": "2026-08-27"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.67
+        "today_max_kp": 1.0
       },
       "made_on": "2026-08-26",
       "resolve_on": "2026-08-27"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49433292,
-        "top_title": "Apple introduces M6 and M5 Ultra"
+        "top_id": 49449507,
+        "top_title": "GLM-5.3-Flash"
       },
       "made_on": "2026-08-26",
       "resolve_on": "2026-08-27"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.5,
+        "forecast_c": 33.8,
         "for_date": "2026-08-27",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.687,
+      "confidence": 0.677,
       "basis": {
-        "today_usd": 78910,
-        "change_24h": -1.78,
+        "today_usd": 78025,
+        "change_24h": -1.49,
         "model": {
-          "p_event": 0.6869,
+          "p_event": 0.6769,
           "n_train": 30,
           "fallback": null,
           "features": [
-            -1.78,
-            2.144900521662585,
-            14.985573980707013,
-            2.78555552198079
+            -1.49,
+            0.9993139425006126,
+            13.695975286334615,
+            2.9260861671739105
           ],
           "weights": [
             -0.4802,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.818,
+      "confidence": 0.86,
       "basis": {
-        "today_max_kp": 1.67,
+        "today_max_kp": 1.0,
         "model": {
-          "p_event": 0.1816,
+          "p_event": 0.1396,
           "n_train": 31,
           "fallback": null,
           "features": [
-            1.67,
-            2.3333333333333335,
-            2.4757142857142855,
+            1.0,
+            2.11,
+            2.38,
             2.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 31,
           "fallback": "laplace",
           "features": [
-            5.5,
-            266.2857142857143,
-            5.957142857142857,
+            5.2,
+            262.7142857142857,
+            5.914285714285714,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.93,
       "basis": {
-        "top_id": 49433292,
-        "top_title": "Apple introduces M6 and M5 Ultra",
+        "top_id": 49449507,
+        "top_title": "GLM-5.3-Flash",
         "model": {
-          "p_event": 0.9927,
+          "p_event": 0.9304,
           "n_train": 31,
           "fallback": null,
           "features": [
-            0.3,
-            1.0,
+            0.0,
+            11.0,
             2.0
           ],
           "weights": [
-            0.4014,
-            -0.1204,
-            0.1982
+            0.3403,
+            -0.1089,
+            -0.0561
           ],
-          "bias": 2.3303
+          "bias": 2.7299
         }
       },
       "made_on": "2026-08-26",
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 34.5,
+        "forecast_c": 33.8,
         "for_date": "2026-08-27",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9833,
+          "p_event": 0.977,
           "n_train": 30,
           "fallback": null,
           "features": [
-            0.8999999999999986,
+            1.5,
             0.5060632371551999,
             0.36250000000000027,
             1.0

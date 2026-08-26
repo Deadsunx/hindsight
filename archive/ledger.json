@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T04:36:38.913310+00:00",
+  "updated": "2026-08-26T16:41:50.763505+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 6,
-      "rule_correct": 5,
-      "model_correct": 5,
-      "rule_accuracy": 0.8333,
-      "model_accuracy": 0.8333,
-      "rule_brier": 0.1411,
-      "model_brier": 0.1487,
-      "rule_log_loss": 0.4599,
-      "model_log_loss": 0.5061,
+      "rule_correct": 6,
+      "model_correct": 6,
+      "rule_accuracy": 1.0,
+      "model_accuracy": 1.0,
+      "rule_brier": 0.0144,
+      "model_brier": 0.0061,
+      "rule_log_loss": 0.1278,
+      "model_log_loss": 0.08,
       "coin_flip": {
         "n": 6,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 37,
-        "rate": 0.8919,
-        "majority_accuracy": 0.8919
+        "rate": 0.9459,
+        "majority_accuracy": 0.9459
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 212,
-    "correct": 169,
-    "accuracy": 0.7972,
-    "brier": 0.1372,
-    "log_loss": 0.4313,
+    "correct": 171,
+    "accuracy": 0.8066,
+    "brier": 0.1296,
+    "log_loss": 0.4099,
     "open": 14,
     "void": 1,
     "days": 32
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 212,
-      "rate": 0.75,
-      "majority_accuracy": 0.75
+      "rate": 0.7594,
+      "majority_accuracy": 0.7594
     }
   },
   "by_predictor": {
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 31,
-      "correct": 28,
-      "accuracy": 0.9032,
-      "brier": 0.0879,
-      "log_loss": 0.3206,
-      "base_rate": 0.9032,
-      "majority_accuracy": 0.9032
+      "correct": 29,
+      "accuracy": 0.9355,
+      "brier": 0.0634,
+      "log_loss": 0.2564,
+      "base_rate": 0.9355,
+      "majority_accuracy": 0.9355
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 6,
-      "correct": 5,
-      "accuracy": 0.8333,
-      "brier": 0.1487,
-      "log_loss": 0.5061,
-      "base_rate": 0.8333,
-      "majority_accuracy": 0.8333
+      "correct": 6,
+      "accuracy": 1.0,
+      "brier": 0.0061,
+      "log_loss": 0.08,
+      "base_rate": 1.0,
+      "majority_accuracy": 1.0
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 67,
       "claimed": 0.8411,
-      "actual": 0.9254
+      "actual": 0.9403
     },
     {
       "label": "90\u2013100%",
       "n": 44,
       "claimed": 0.9463,
-      "actual": 0.9545
+      "actual": 0.9773
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.538,
+      "confidence": 0.535,
       "basis": {
-        "today_usd": 78910,
-        "change_24h": -1.78
+        "today_usd": 78025,
+        "change_24h": -1.49
       },
       "made_on": "2026-08-26",
       "resolve_on": "2026-08-27"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.67
+        "today_max_kp": 1.0
       },
       "made_on": "2026-08-26",
       "resolve_on": "2026-08-27"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49433292,
-        "top_title": "Apple introduces M6 and M5 Ultra"
+        "top_id": 49449507,
+        "top_title": "GLM-5.3-Flash"
       },
       "made_on": "2026-08-26",
       "resolve_on": "2026-08-27"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.5,
+        "forecast_c": 33.8,
         "for_date": "2026-08-27",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.687,
+      "confidence": 0.677,
       "basis": {
-        "today_usd": 78910,
-        "change_24h": -1.78,
+        "today_usd": 78025,
+        "change_24h": -1.49,
         "model": {
-          "p_event": 0.6869,
+          "p_event": 0.6769,
           "n_train": 30,
           "fallback": null,
           "features": [
-            -1.78,
-            2.144900521662585,
-            14.985573980707013,
-            2.78555552198079
+            -1.49,
+            0.9993139425006126,
+            13.695975286334615,
+            2.9260861671739105
           ],
           "weights": [
             -0.4802,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.818,
+      "confidence": 0.86,
       "basis": {
-        "today_max_kp": 1.67,
+        "today_max_kp": 1.0,
         "model": {
-          "p_event": 0.1816,
+          "p_event": 0.1396,
           "n_train": 31,
           "fallback": null,
           "features": [
-            1.67,
-            2.3333333333333335,
-            2.4757142857142855,
+            1.0,
+            2.11,
+            2.38,
             2.0
           ],
           "weights": [
@@ -572,9 +572,9 @@
           "n_train": 31,
           "fallback": "laplace",
           "features": [
-            5.5,
-            266.2857142857143,
-            5.957142857142857,
+            5.2,
+            262.7142857142857,
+            5.914285714285714,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.93,
       "basis": {
-        "top_id": 49433292,
-        "top_title": "Apple introduces M6 and M5 Ultra",
+        "top_id": 49449507,
+        "top_title": "GLM-5.3-Flash",
         "model": {
-          "p_event": 0.9927,
+          "p_event": 0.9304,
           "n_train": 31,
           "fallback": null,
           "features": [
-            0.3,
-            1.0,
+            0.0,
+            11.0,
             2.0
           ],
           "weights": [
-            0.4014,
-            -0.1204,
-            0.1982
+            0.3403,
+            -0.1089,
+            -0.0561
           ],
-          "bias": 2.3303
+          "bias": 2.7299
         }
       },
       "made_on": "2026-08-26",
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 34.5,
+        "forecast_c": 33.8,
         "for_date": "2026-08-27",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9833,
+          "p_event": 0.977,
           "n_train": 30,
           "fallback": null,
           "features": [
-            0.8999999999999986,
+            1.5,
             0.5060632371551999,
             0.36250000000000027,
             1.0
@@ -3369,8 +3369,8 @@
       "resolve_on": "2026-08-26",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -3434,8 +3434,8 @@
       "resolve_on": "2026-08-26",
       "call": true,
       "confidence": 0.928,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
