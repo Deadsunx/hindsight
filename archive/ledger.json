@@ -1,17 +1,17 @@
 {
-  "updated": "2026-08-28T00:41:00.513378+00:00",
+  "updated": "2026-08-28T15:53:42.739695+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 7,
-      "rule_correct": 4,
-      "model_correct": 4,
-      "rule_accuracy": 0.5714,
-      "model_accuracy": 0.5714,
-      "rule_brier": 0.2598,
-      "model_brier": 0.3256,
-      "rule_log_loss": 0.713,
-      "model_log_loss": 0.9851,
+      "rule_correct": 3,
+      "model_correct": 3,
+      "rule_accuracy": 0.4286,
+      "model_accuracy": 0.4286,
+      "rule_brier": 0.2738,
+      "model_brier": 0.3396,
+      "rule_log_loss": 0.7411,
+      "model_log_loss": 1.0131,
       "coin_flip": {
         "n": 7,
         "accuracy": 0.5,
@@ -20,21 +20,21 @@
       },
       "base_rate": {
         "n": 40,
-        "rate": 0.675,
-        "majority_accuracy": 0.675
+        "rate": 0.625,
+        "majority_accuracy": 0.625
       }
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "shared_days": 8,
-      "rule_correct": 7,
-      "model_correct": 7,
-      "rule_accuracy": 0.875,
-      "model_accuracy": 0.875,
-      "rule_brier": 0.1088,
-      "model_brier": 0.149,
-      "rule_log_loss": 0.3814,
-      "model_log_loss": 0.4942,
+      "rule_correct": 6,
+      "model_correct": 6,
+      "rule_accuracy": 0.75,
+      "model_accuracy": 0.75,
+      "rule_brier": 0.1788,
+      "model_brier": 0.2205,
+      "rule_log_loss": 0.5396,
+      "model_log_loss": 0.6568,
       "coin_flip": {
         "n": 8,
         "accuracy": 0.5,
@@ -43,8 +43,8 @@
       },
       "base_rate": {
         "n": 41,
-        "rate": 0.2683,
-        "majority_accuracy": 0.7317
+        "rate": 0.3171,
+        "majority_accuracy": 0.6829
       }
     },
     "quake_m5": {
@@ -72,25 +72,25 @@
     },
     "wiki_hold": {
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "shared_days": 4,
+      "shared_days": 5,
       "rule_correct": 2,
       "model_correct": 3,
-      "rule_accuracy": 0.5,
-      "model_accuracy": 0.75,
-      "rule_brier": 0.2636,
-      "model_brier": 0.1536,
-      "rule_log_loss": 0.7212,
-      "model_log_loss": 0.4842,
+      "rule_accuracy": 0.4,
+      "model_accuracy": 0.6,
+      "rule_brier": 0.3089,
+      "model_brier": 0.2813,
+      "rule_log_loss": 0.8178,
+      "model_log_loss": 0.8288,
       "coin_flip": {
-        "n": 4,
+        "n": 5,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 33,
-        "rate": 0.7273,
-        "majority_accuracy": 0.7273
+        "n": 35,
+        "rate": 0.6857,
+        "majority_accuracy": 0.6857
       }
     },
     "hn_fade": {
@@ -141,26 +141,26 @@
     }
   },
   "totals": {
-    "graded": 234,
-    "correct": 191,
-    "accuracy": 0.8162,
-    "brier": 0.1244,
-    "log_loss": 0.3965,
+    "graded": 236,
+    "correct": 187,
+    "accuracy": 0.7924,
+    "brier": 0.1344,
+    "log_loss": 0.4201,
     "open": 14,
-    "void": 3,
+    "void": 1,
     "days": 34
   },
   "baselines": {
     "coin_flip": {
-      "n": 234,
+      "n": 236,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 234,
-      "rate": 0.765,
-      "majority_accuracy": 0.765
+      "n": 236,
+      "rate": 0.7585,
+      "majority_accuracy": 0.7585
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 33,
-      "correct": 18,
-      "accuracy": 0.5455,
-      "brier": 0.2492,
-      "log_loss": 0.6916,
-      "base_rate": 0.697,
-      "majority_accuracy": 0.697
+      "correct": 17,
+      "accuracy": 0.5152,
+      "brier": 0.2522,
+      "log_loss": 0.6976,
+      "base_rate": 0.6667,
+      "majority_accuracy": 0.6667
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -183,12 +183,12 @@
       "family": "kp_storm",
       "variant": "rule",
       "graded": 33,
-      "correct": 25,
-      "accuracy": 0.7576,
-      "brier": 0.1774,
-      "log_loss": 0.5374,
-      "base_rate": 0.303,
-      "majority_accuracy": 0.697
+      "correct": 24,
+      "accuracy": 0.7273,
+      "brier": 0.1943,
+      "log_loss": 0.5757,
+      "base_rate": 0.3333,
+      "majority_accuracy": 0.6667
     },
     "quake_m5": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -208,13 +208,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "graded": 29,
+      "graded": 30,
       "correct": 17,
-      "accuracy": 0.5862,
-      "brier": 0.2357,
-      "log_loss": 0.6628,
-      "base_rate": 0.7241,
-      "majority_accuracy": 0.7241
+      "accuracy": 0.5667,
+      "brier": 0.2441,
+      "log_loss": 0.6808,
+      "base_rate": 0.7,
+      "majority_accuracy": 0.7
     },
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -248,11 +248,11 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 7,
-      "correct": 4,
-      "accuracy": 0.5714,
-      "brier": 0.3256,
-      "log_loss": 0.9851,
-      "base_rate": 0.5714,
+      "correct": 3,
+      "accuracy": 0.4286,
+      "brier": 0.3396,
+      "log_loss": 1.0131,
+      "base_rate": 0.4286,
       "majority_accuracy": 0.5714
     },
     "kp_storm_ml": {
@@ -261,12 +261,12 @@
       "family": "kp_storm",
       "variant": "model",
       "graded": 8,
-      "correct": 7,
-      "accuracy": 0.875,
-      "brier": 0.149,
-      "log_loss": 0.4942,
-      "base_rate": 0.125,
-      "majority_accuracy": 0.875
+      "correct": 6,
+      "accuracy": 0.75,
+      "brier": 0.2205,
+      "log_loss": 0.6568,
+      "base_rate": 0.25,
+      "majority_accuracy": 0.75
     },
     "quake_m5_ml": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -286,13 +286,13 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "graded": 4,
+      "graded": 5,
       "correct": 3,
-      "accuracy": 0.75,
-      "brier": 0.1536,
-      "log_loss": 0.4842,
-      "base_rate": 0.75,
-      "majority_accuracy": 0.75
+      "accuracy": 0.6,
+      "brier": 0.2813,
+      "log_loss": 0.8288,
+      "base_rate": 0.6,
+      "majority_accuracy": 0.6
     },
     "hn_fade_ml": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 38,
       "claimed": 0.5381,
-      "actual": 0.5526
+      "actual": 0.5
     },
     {
       "label": "60\u201370%",
@@ -336,15 +336,15 @@
     },
     {
       "label": "70\u201380%",
-      "n": 56,
-      "claimed": 0.7381,
-      "actual": 0.7679
+      "n": 57,
+      "claimed": 0.7374,
+      "actual": 0.7193
     },
     {
       "label": "80\u201390%",
-      "n": 72,
-      "claimed": 0.8413,
-      "actual": 0.9444
+      "n": 73,
+      "claimed": 0.842,
+      "actual": 0.9315
     },
     {
       "label": "90\u2013100%",
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.541,
+      "call": false,
+      "confidence": 0.54,
       "basis": {
-        "today_usd": 80494,
-        "change_24h": 2.11
+        "today_usd": 78726,
+        "change_24h": -2.05
       },
       "made_on": "2026-08-28",
       "resolve_on": "2026-08-29"
@@ -425,10 +425,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 1.33
+        "today_max_kp": 3.67
       },
       "made_on": "2026-08-28",
       "resolve_on": "2026-08-29"
@@ -453,10 +453,10 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Dolly_Parton"
+        "today_top": "Tim_Curry"
       },
       "made_on": "2026-08-28",
       "resolve_on": "2026-08-29"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49468083,
-        "top_title": "Saving 100 terabytes of memory by optimizing 1.1.1.1's DNS cache"
+        "top_id": 49477600,
+        "top_title": "\"IT WoRKs BeTter in the App \""
       },
       "made_on": "2026-08-28",
       "resolve_on": "2026-08-29"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.8,
+        "forecast_c": 34.4,
         "for_date": "2026-08-29",
         "city": "New Delhi"
       },
@@ -499,27 +499,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.818,
+      "confidence": 0.851,
       "basis": {
-        "today_usd": 80494,
-        "change_24h": 2.11,
+        "today_usd": 78726,
+        "change_24h": -2.05,
         "model": {
-          "p_event": 0.8177,
+          "p_event": 0.8505,
           "n_train": 32,
           "fallback": null,
           "features": [
-            2.11,
-            1.6530908631685381,
-            4.480672879727932,
-            2.6295157505122466
+            -2.05,
+            -0.5796552377344222,
+            2.185820721165088,
+            2.8340368845067174
           ],
           "weights": [
-            -0.4244,
-            0.5512,
-            -0.9927,
-            0.6649
+            -0.6844,
+            0.9296,
+            -0.892,
+            0.2459
           ],
-          "bias": 0.8268
+          "bias": 0.6825
         }
       },
       "made_on": "2026-08-28",
@@ -531,27 +531,27 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": false,
-      "confidence": 0.801,
+      "call": true,
+      "confidence": 0.587,
       "basis": {
-        "today_max_kp": 1.33,
+        "today_max_kp": 3.67,
         "model": {
-          "p_event": 0.199,
+          "p_event": 0.5869,
           "n_train": 33,
           "fallback": null,
           "features": [
-            1.33,
-            1.22,
-            1.8085714285714285,
+            3.67,
+            2.0,
+            2.142857142857143,
             1.33
           ],
           "weights": [
-            0.9342,
-            -0.1963,
-            -0.4407,
-            0.2655
+            0.8732,
+            -0.223,
+            -0.5424,
+            0.1733
           ],
-          "bias": -0.9501
+          "bias": -0.7807
         }
       },
       "made_on": "2026-08-28",
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             6.0,
-            255.57142857142858,
+            245.85714285714286,
             5.785714285714286,
             1.0
           ]
@@ -589,26 +589,26 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.895,
+      "confidence": 0.723,
       "basis": {
-        "today_top": "Dolly_Parton",
+        "today_top": "Tim_Curry",
         "model": {
-          "p_event": 0.8954,
-          "n_train": 29,
+          "p_event": 0.7231,
+          "n_train": 30,
           "fallback": null,
           "features": [
-            2.0,
-            15.154278206423626,
-            1.6761536264364028,
-            0.0
+            1.0,
+            14.26763021811145,
+            0.8037987557399986,
+            1.0
           ],
           "weights": [
-            -1.001,
-            0.1239,
-            -0.1318,
-            -0.7655
+            -0.8546,
+            -0.2519,
+            -0.0024,
+            -0.4821
           ],
-          "bias": 1.0547
+          "bias": 0.906
         }
       },
       "made_on": "2026-08-28",
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.931,
       "basis": {
-        "top_id": 49468083,
-        "top_title": "Saving 100 terabytes of memory by optimizing 1.1.1.1's DNS cache",
+        "top_id": 49477600,
+        "top_title": "\"IT WoRKs BeTter in the App \"",
         "model": {
-          "p_event": 0.9788,
+          "p_event": 0.9312,
           "n_train": 33,
           "fallback": null,
           "features": [
-            0.2,
+            0.0,
             11.0,
             4.0
           ],
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 34.8,
+        "forecast_c": 34.4,
         "for_date": "2026-08-29",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9864,
+          "p_event": 0.9878,
           "n_train": 32,
           "fallback": null,
           "features": [
-            0.3999999999999986,
+            0.19999999999999574,
             0.7020683727387241,
             0.412500000000001,
             1.3000000000000043
@@ -3629,8 +3629,8 @@
       "resolve_on": "2026-08-28",
       "call": true,
       "confidence": 0.549,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm",
@@ -3642,8 +3642,8 @@
       "resolve_on": "2026-08-28",
       "call": false,
       "confidence": 0.78,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "quake_m5",
@@ -3657,6 +3657,19 @@
       "confidence": 0.95,
       "actual": true,
       "correct": true
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "made_on": "2026-08-27",
+      "resolve_on": "2026-08-28",
+      "call": true,
+      "confidence": 0.7,
+      "actual": false,
+      "correct": false
     },
     {
       "id": "hn_fade",
@@ -3681,8 +3694,8 @@
       "resolve_on": "2026-08-28",
       "call": true,
       "confidence": 0.549,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm_ml",
@@ -3694,8 +3707,8 @@
       "resolve_on": "2026-08-28",
       "call": false,
       "confidence": 0.786,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "quake_m5_ml",
@@ -3709,6 +3722,19 @@
       "confidence": 0.95,
       "actual": true,
       "correct": true
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "made_on": "2026-08-27",
+      "resolve_on": "2026-08-28",
+      "call": true,
+      "confidence": 0.89,
+      "actual": false,
+      "correct": false
     },
     {
       "id": "hn_fade_ml",
