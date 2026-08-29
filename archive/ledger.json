@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T00:15:56.558948+00:00",
+  "updated": "2026-08-29T10:46:02.345197+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -72,25 +72,25 @@
     },
     "wiki_hold": {
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "shared_days": 5,
-      "rule_correct": 2,
+      "shared_days": 6,
+      "rule_correct": 3,
       "model_correct": 3,
-      "rule_accuracy": 0.4,
-      "model_accuracy": 0.6,
-      "rule_brier": 0.3089,
-      "model_brier": 0.2813,
-      "rule_log_loss": 0.8178,
-      "model_log_loss": 0.8288,
+      "rule_accuracy": 0.5,
+      "model_accuracy": 0.5,
+      "rule_brier": 0.2815,
+      "model_brier": 0.3215,
+      "rule_log_loss": 0.7612,
+      "model_log_loss": 0.9046,
       "coin_flip": {
-        "n": 5,
+        "n": 6,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 35,
-        "rate": 0.6857,
-        "majority_accuracy": 0.6857
+        "n": 37,
+        "rate": 0.6486,
+        "majority_accuracy": 0.6486
       }
     },
     "hn_fade": {
@@ -141,26 +141,26 @@
     }
   },
   "totals": {
-    "graded": 246,
-    "correct": 196,
-    "accuracy": 0.7967,
-    "brier": 0.1341,
-    "log_loss": 0.4192,
+    "graded": 248,
+    "correct": 197,
+    "accuracy": 0.7944,
+    "brier": 0.1357,
+    "log_loss": 0.423,
     "open": 14,
-    "void": 3,
+    "void": 1,
     "days": 35
   },
   "baselines": {
     "coin_flip": {
-      "n": 246,
+      "n": 248,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 246,
-      "rate": 0.7602,
-      "majority_accuracy": 0.7602
+      "n": 248,
+      "rate": 0.754,
+      "majority_accuracy": 0.754
     }
   },
   "by_predictor": {
@@ -208,13 +208,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "graded": 30,
-      "correct": 17,
-      "accuracy": 0.5667,
-      "brier": 0.2441,
-      "log_loss": 0.6808,
-      "base_rate": 0.7,
-      "majority_accuracy": 0.7
+      "graded": 31,
+      "correct": 18,
+      "accuracy": 0.5806,
+      "brier": 0.2409,
+      "log_loss": 0.6743,
+      "base_rate": 0.6774,
+      "majority_accuracy": 0.6774
     },
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -286,13 +286,13 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "graded": 5,
+      "graded": 6,
       "correct": 3,
-      "accuracy": 0.6,
-      "brier": 0.2813,
-      "log_loss": 0.8288,
-      "base_rate": 0.6,
-      "majority_accuracy": 0.6
+      "accuracy": 0.5,
+      "brier": 0.3215,
+      "log_loss": 0.9046,
+      "base_rate": 0.5,
+      "majority_accuracy": 0.5
     },
     "hn_fade_ml": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -330,15 +330,15 @@
     },
     {
       "label": "60\u201370%",
-      "n": 16,
-      "claimed": 0.6402,
-      "actual": 0.5
+      "n": 17,
+      "claimed": 0.639,
+      "actual": 0.5294
     },
     {
       "label": "70\u201380%",
-      "n": 58,
-      "claimed": 0.7368,
-      "actual": 0.7241
+      "n": 59,
+      "claimed": 0.7365,
+      "actual": 0.7119
     },
     {
       "label": "80\u201390%",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.55,
+      "confidence": 0.541,
       "basis": {
-        "today_usd": 77835,
-        "change_24h": -3.02
+        "today_usd": 77684,
+        "change_24h": -2.08
       },
       "made_on": "2026-08-29",
       "resolve_on": "2026-08-30"
@@ -453,10 +453,10 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Tim_Curry"
+        "today_top": "Wikipedia:Featured_pictures"
       },
       "made_on": "2026-08-29",
       "resolve_on": "2026-08-30"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49479837,
-        "top_title": "GUIs should be fully keyboard-driven"
+        "top_id": 49487341,
+        "top_title": "Samsung's Processing-in-Memory (PIM)"
       },
       "made_on": "2026-08-29",
       "resolve_on": "2026-08-30"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.8,
+        "forecast_c": 35.4,
         "for_date": "2026-08-30",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.746,
+      "confidence": 0.693,
       "basis": {
-        "today_usd": 77835,
-        "change_24h": -3.02,
+        "today_usd": 77684,
+        "change_24h": -2.08,
         "model": {
-          "p_event": 0.7461,
+          "p_event": 0.6933,
           "n_train": 33,
           "fallback": null,
           "features": [
-            -3.02,
-            -0.24351169496955594,
-            1.0726019036735979,
-            2.5985346259825852
+            -2.08,
+            -0.4370394104453723,
+            0.8765209261255125,
+            2.615489101129898
           ],
           "weights": [
             -0.5339,
@@ -572,9 +572,9 @@
           "n_train": 34,
           "fallback": "laplace",
           "features": [
-            5.2,
-            254.57142857142858,
-            5.642857142857143,
+            5.1,
+            253.42857142857142,
+            5.628571428571428,
             1.0
           ]
         }
@@ -589,26 +589,26 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.723,
+      "confidence": 0.701,
       "basis": {
-        "today_top": "Tim_Curry",
+        "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.7231,
-          "n_train": 30,
+          "p_event": 0.7007,
+          "n_train": 31,
           "fallback": null,
           "features": [
             1.0,
-            14.26763021811145,
-            0.7568923711061037,
+            13.443677015088731,
+            0.35349861952254047,
             1.0
           ],
           "weights": [
-            -0.8546,
-            -0.2519,
-            -0.0024,
-            -0.4821
+            -0.8552,
+            -0.4352,
+            0.2323,
+            -0.6379
           ],
-          "bias": 0.906
+          "bias": 0.7902
         }
       },
       "made_on": "2026-08-29",
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.932,
       "basis": {
-        "top_id": 49479837,
-        "top_title": "GUIs should be fully keyboard-driven",
+        "top_id": 49487341,
+        "top_title": "Samsung's Processing-in-Memory (PIM)",
         "model": {
-          "p_event": 0.9619,
+          "p_event": 0.9323,
           "n_train": 34,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             5.0
           ],
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 34.8,
+        "forecast_c": 35.4,
         "for_date": "2026-08-30",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9885,
+          "p_event": 0.9849,
           "n_train": 33,
           "fallback": null,
           "features": [
-            0.19999999999999574,
+            0.6999999999999957,
             0.7884161337770813,
             0.42500000000000027,
             1.3000000000000043
@@ -3815,6 +3815,19 @@
       "correct": true
     },
     {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "made_on": "2026-08-28",
+      "resolve_on": "2026-08-29",
+      "call": false,
+      "confidence": 0.62,
+      "actual": false,
+      "correct": true
+    },
+    {
       "id": "hn_fade",
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "decay",
@@ -3865,6 +3878,19 @@
       "confidence": 0.95,
       "actual": true,
       "correct": true
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "made_on": "2026-08-28",
+      "resolve_on": "2026-08-29",
+      "call": true,
+      "confidence": 0.723,
+      "actual": false,
+      "correct": false
     },
     {
       "id": "hn_fade_ml",
