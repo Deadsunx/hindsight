@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T10:46:02.345197+00:00",
+  "updated": "2026-08-29T19:01:08.356395+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -146,8 +146,8 @@
     "accuracy": 0.7944,
     "brier": 0.1357,
     "log_loss": 0.423,
-    "open": 14,
-    "void": 1,
+    "open": 12,
+    "void": 3,
     "days": 35
   },
   "baselines": {
@@ -355,66 +355,16 @@
   ],
   "open_bets": [
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 34.4,
-        "for_date": "2026-08-29",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-08-28",
-      "resolve_on": "2026-08-30"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.95,
-      "basis": {
-        "forecast_c": 34.4,
-        "for_date": "2026-08-29",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.9878,
-          "n_train": 32,
-          "fallback": null,
-          "features": [
-            0.19999999999999574,
-            0.7020683727387241,
-            0.412500000000001,
-            1.3000000000000043
-          ],
-          "weights": [
-            -0.5626,
-            0.0415,
-            0.1543,
-            -0.4397
-          ],
-          "bias": 3.705
-        }
-      },
-      "made_on": "2026-08-28",
-      "resolve_on": "2026-08-30"
-    },
-    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.541,
+      "call": true,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 77684,
-        "change_24h": -2.08
+        "today_usd": 78173,
+        "change_24h": 0.81
       },
       "made_on": "2026-08-29",
       "resolve_on": "2026-08-30"
@@ -470,8 +420,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49487341,
-        "top_title": "Samsung's Processing-in-Memory (PIM)"
+        "top_id": 49492193,
+        "top_title": "The Internet Is Kind of a Predatory Cesspit Now"
       },
       "made_on": "2026-08-29",
       "resolve_on": "2026-08-30"
@@ -485,8 +435,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.4,
-        "for_date": "2026-08-30",
+        "forecast_c": 35.7,
+        "for_date": "2026-08-31",
         "city": "New Delhi"
       },
       "made_on": "2026-08-29",
@@ -499,19 +449,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.693,
+      "confidence": 0.545,
       "basis": {
-        "today_usd": 77684,
-        "change_24h": -2.08,
+        "today_usd": 78173,
+        "change_24h": 0.81,
         "model": {
-          "p_event": 0.6933,
+          "p_event": 0.5447,
           "n_train": 33,
           "fallback": null,
           "features": [
-            -2.08,
-            -0.4370394104453723,
-            0.8765209261255125,
-            2.615489101129898
+            0.81,
+            0.18968279397628685,
+            1.5115116414964547,
+            2.565315395134044
           ],
           "weights": [
             -0.5339,
@@ -573,7 +523,7 @@
           "fallback": "laplace",
           "features": [
             5.1,
-            253.42857142857142,
+            244.71428571428572,
             5.628571428571428,
             1.0
           ]
@@ -623,8 +573,8 @@
       "call": true,
       "confidence": 0.932,
       "basis": {
-        "top_id": 49487341,
-        "top_title": "Samsung's Processing-in-Memory (PIM)",
+        "top_id": 49492193,
+        "top_title": "The Internet Is Kind of a Predatory Cesspit Now",
         "model": {
           "p_event": 0.9323,
           "n_train": 34,
@@ -654,26 +604,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 35.4,
-        "for_date": "2026-08-30",
+        "forecast_c": 35.7,
+        "for_date": "2026-08-31",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9849,
+          "p_event": 0.9845,
           "n_train": 33,
           "fallback": null,
           "features": [
-            0.6999999999999957,
-            0.7884161337770813,
-            0.42500000000000027,
+            0.8000000000000043,
+            0.9038252043398655,
+            0.4571428571428581,
             1.3000000000000043
           ],
           "weights": [
-            -0.5693,
-            0.0334,
-            0.1484,
-            -0.443
+            -0.5686,
+            0.0345,
+            0.147,
+            -0.4431
           ],
-          "bias": 3.7505
+          "bias": 3.751
         }
       },
       "made_on": "2026-08-29",
@@ -3685,19 +3635,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "made_on": "2026-08-27",
-      "resolve_on": "2026-08-29",
-      "call": true,
-      "confidence": 0.8,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -3759,19 +3696,6 @@
       "resolve_on": "2026-08-28",
       "call": true,
       "confidence": 0.931,
-      "actual": true,
-      "correct": true
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "made_on": "2026-08-27",
-      "resolve_on": "2026-08-29",
-      "call": true,
-      "confidence": 0.95,
       "actual": true,
       "correct": true
     },
@@ -3841,6 +3765,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-08-28",
+      "resolve_on": "2026-08-30",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -3902,6 +3839,19 @@
       "resolve_on": "2026-08-29",
       "call": true,
       "confidence": 0.931,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-08-28",
+      "resolve_on": "2026-08-30",
+      "call": true,
+      "confidence": 0.95,
       "actual": true,
       "correct": true
     }

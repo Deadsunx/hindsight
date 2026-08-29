@@ -1,19 +1,19 @@
 {
   "date": "2026-08-29",
-  "fetched_at": "2026-08-29T10:46:00.865596+00:00",
+  "fetched_at": "2026-08-29T19:01:06.642537+00:00",
   "observations": {
     "btc": {
-      "usd": 77684,
-      "usd_24h_change": -2.08
+      "usd": 78173,
+      "usd_24h_change": 0.81
     },
     "kp": {
       "max_kp": 4.33,
-      "latest_kp": 3.67,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.1,
-      "count": 276,
+      "count": 215,
       "strongest_place": "Southwest Indian Ridge"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-08-28"
     },
     "hn": {
-      "top_id": 49487341,
-      "top_title": "Samsung's Processing-in-Memory (PIM)",
+      "top_id": 49492193,
+      "top_title": "The Internet Is Kind of a Predatory Cesspit Now",
       "top10": [
-        49487341,
-        49456819,
-        49479837,
-        49485267,
-        49450782,
-        49486334,
-        49478178,
-        49477854,
-        49485416,
-        49486081
+        49492193,
+        49415386,
+        49426995,
+        49491714,
+        49428756,
+        49490138,
+        49447178,
+        49414891,
+        49424320,
+        49490832
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 34.2,
-      "actual_prev_date": "2026-08-28",
-      "today": 34.7,
-      "forecast_next": 35.4,
-      "forecast_next_date": "2026-08-30"
+      "actual_prev": 34.9,
+      "actual_prev_date": "2026-08-29",
+      "today": 34.9,
+      "forecast_next": 35.7,
+      "forecast_next_date": "2026-08-31"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.541,
+      "call": true,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 77684,
-        "change_24h": -2.08
+        "today_usd": 78173,
+        "change_24h": 0.81
       },
       "made_on": "2026-08-29",
       "resolve_on": "2026-08-30"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49487341,
-        "top_title": "Samsung's Processing-in-Memory (PIM)"
+        "top_id": 49492193,
+        "top_title": "The Internet Is Kind of a Predatory Cesspit Now"
       },
       "made_on": "2026-08-29",
       "resolve_on": "2026-08-30"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.4,
-        "for_date": "2026-08-30",
+        "forecast_c": 35.7,
+        "for_date": "2026-08-31",
         "city": "New Delhi"
       },
       "made_on": "2026-08-29",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.693,
+      "confidence": 0.545,
       "basis": {
-        "today_usd": 77684,
-        "change_24h": -2.08,
+        "today_usd": 78173,
+        "change_24h": 0.81,
         "model": {
-          "p_event": 0.6933,
+          "p_event": 0.5447,
           "n_train": 33,
           "fallback": null,
           "features": [
-            -2.08,
-            -0.4370394104453723,
-            0.8765209261255125,
-            2.615489101129898
+            0.81,
+            0.18968279397628685,
+            1.5115116414964547,
+            2.565315395134044
           ],
           "weights": [
             -0.5339,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.1,
-            253.42857142857142,
+            244.71428571428572,
             5.628571428571428,
             1.0
           ]
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.932,
       "basis": {
-        "top_id": 49487341,
-        "top_title": "Samsung's Processing-in-Memory (PIM)",
+        "top_id": 49492193,
+        "top_title": "The Internet Is Kind of a Predatory Cesspit Now",
         "model": {
           "p_event": 0.9323,
           "n_train": 34,
@@ -297,26 +297,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 35.4,
-        "for_date": "2026-08-30",
+        "forecast_c": 35.7,
+        "for_date": "2026-08-31",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9849,
+          "p_event": 0.9845,
           "n_train": 33,
           "fallback": null,
           "features": [
-            0.6999999999999957,
-            0.7884161337770813,
-            0.42500000000000027,
+            0.8000000000000043,
+            0.9038252043398655,
+            0.4571428571428581,
             1.3000000000000043
           ],
           "weights": [
-            -0.5693,
-            0.0334,
-            0.1484,
-            -0.443
+            -0.5686,
+            0.0345,
+            0.147,
+            -0.4431
           ],
-          "bias": 3.7505
+          "bias": 3.751
         }
       },
       "made_on": "2026-08-29",

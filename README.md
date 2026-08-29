@@ -36,7 +36,7 @@ test.
 <!-- LEDGER:START -->
 ### Standing — 2026-08-29
 
-**197 right / 248 settled (79%)** · Brier 0.136 · log loss 0.423 · 14 still open
+**197 right / 248 settled (79%)** · Brier 0.136 · log loss 0.423 · 12 still open
 
 Saying "50%" to all 248 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
 
@@ -60,13 +60,13 @@ _Sample is 248 settled bets across 35 days. Nothing here is significant yet, and
 
 **Open bets, placed today:**
 
-- **no** — Bitcoin will be higher tomorrow than it is today. _(54% confident, momentum)_
+- **yes** — Bitcoin will be higher tomorrow than it is today. _(53% confident, momentum)_
 - **yes** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(70% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **no** — Today's most-read Wikipedia article will still be #1 tomorrow. _(62% confident, persistence)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
 - **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(69% confident, logistic regression)_
+- **yes** — Bitcoin will be higher tomorrow than it is today. _(55% confident, logistic regression)_
 - **yes** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(65% confident, logistic regression)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, logistic regression)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, logistic regression)_
