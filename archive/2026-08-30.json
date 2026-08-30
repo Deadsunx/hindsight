@@ -1,19 +1,19 @@
 {
   "date": "2026-08-30",
-  "fetched_at": "2026-08-30T09:43:22.460261+00:00",
+  "fetched_at": "2026-08-30T18:56:24.638623+00:00",
   "observations": {
     "btc": {
-      "usd": 78017,
-      "usd_24h_change": 0.41
+      "usd": 79022,
+      "usd_24h_change": 1.05
     },
     "kp": {
       "max_kp": 3.67,
-      "latest_kp": 3.33,
+      "latest_kp": 2.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.8,
-      "count": 157,
+      "count": 173,
       "strongest_place": "Kermadec Islands, New Zealand"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-08-29"
     },
     "hn": {
-      "top_id": 49496782,
-      "top_title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
+      "top_id": 49499867,
+      "top_title": "Haiku R1/beta6 has been released",
       "top10": [
-        49496782,
-        49496918,
-        49425252,
-        49496543,
-        49492632,
-        49494520,
-        49494856,
-        49495372,
-        49415386,
-        49453232
+        49499867,
+        49491791,
+        49499891,
+        49501147,
+        49497810,
+        49498787,
+        49463397,
+        49499095,
+        49499394,
+        49500471
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 34.9,
       "actual_prev_date": "2026-08-29",
-      "today": 35.3,
-      "forecast_next": 35.7,
+      "today": 34.0,
+      "forecast_next": 34.0,
       "forecast_next_date": "2026-08-31"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.524,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 78017,
-        "change_24h": 0.41
+        "today_usd": 79022,
+        "change_24h": 1.05
       },
       "made_on": "2026-08-30",
       "resolve_on": "2026-08-31"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49496782,
-        "top_title": "Longest Straight Line Paths on Water or Land on the Earth (2018)"
+        "top_id": 49499867,
+        "top_title": "Haiku R1/beta6 has been released"
       },
       "made_on": "2026-08-30",
       "resolve_on": "2026-08-31"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.7,
+        "forecast_c": 34.0,
         "for_date": "2026-08-31",
         "city": "New Delhi"
       },
@@ -141,28 +141,28 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.542,
+      "call": true,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 78017,
-        "change_24h": 0.41,
+        "today_usd": 79022,
+        "change_24h": 1.05,
         "model": {
-          "p_event": 0.458,
+          "p_event": 0.5281,
           "n_train": 34,
           "fallback": null,
           "features": [
-            0.41,
-            -2.567657012975655,
-            0.9889583576042416,
-            1.6079990567621356
+            1.05,
+            -1.3125522960298674,
+            2.2898787102119122,
+            1.6273552771483297
           ],
           "weights": [
-            -0.579,
-            0.9636,
-            -0.4671,
-            -0.3479
+            -0.4986,
+            0.8639,
+            -0.7092,
+            -0.0092
           ],
-          "bias": 0.4978
+          "bias": 0.629
         }
       },
       "made_on": "2026-08-30",
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.8,
-            224.71428571428572,
+            227.0,
             5.6000000000000005,
             1.0
           ]
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.935,
       "basis": {
-        "top_id": 49496782,
-        "top_title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
+        "top_id": 49499867,
+        "top_title": "Haiku R1/beta6 has been released",
         "model": {
-          "p_event": 0.9633,
+          "p_event": 0.9351,
           "n_train": 35,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             6.0
           ],
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 35.7,
+        "forecast_c": 34.0,
         "for_date": "2026-08-31",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.988,
+          "p_event": 0.9904,
           "n_train": 33,
           "fallback": null,
           "features": [
-            0.4000000000000057,
+            0.0,
             1.039422916814902,
             0.514285714285715,
             1.3000000000000043

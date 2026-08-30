@@ -1,17 +1,17 @@
 {
-  "updated": "2026-08-30T09:43:23.616121+00:00",
+  "updated": "2026-08-30T18:56:26.187027+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 9,
-      "rule_correct": 4,
-      "model_correct": 3,
-      "rule_accuracy": 0.4444,
-      "model_accuracy": 0.3333,
-      "rule_brier": 0.2674,
-      "model_brier": 0.3776,
-      "rule_log_loss": 0.7283,
-      "model_log_loss": 1.087,
+      "rule_correct": 5,
+      "model_correct": 4,
+      "rule_accuracy": 0.5556,
+      "model_accuracy": 0.4444,
+      "rule_brier": 0.2612,
+      "model_brier": 0.3676,
+      "rule_log_loss": 0.7158,
+      "model_log_loss": 1.067,
       "coin_flip": {
         "n": 9,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 44,
-        "rate": 0.5682,
-        "majority_accuracy": 0.5682
+        "rate": 0.6136,
+        "majority_accuracy": 0.6136
       }
     },
     "kp_storm": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 258,
-    "correct": 204,
-    "accuracy": 0.7907,
-    "brier": 0.1354,
-    "log_loss": 0.4219,
+    "correct": 206,
+    "accuracy": 0.7984,
+    "brier": 0.1349,
+    "log_loss": 0.4208,
     "open": 14,
     "void": 3,
     "days": 36
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 258,
-      "rate": 0.7558,
-      "majority_accuracy": 0.7558
+      "rate": 0.7636,
+      "majority_accuracy": 0.7636
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 35,
-      "correct": 18,
-      "accuracy": 0.5143,
-      "brier": 0.2518,
-      "log_loss": 0.6968,
-      "base_rate": 0.6286,
-      "majority_accuracy": 0.6286
+      "correct": 19,
+      "accuracy": 0.5429,
+      "brier": 0.2502,
+      "log_loss": 0.6936,
+      "base_rate": 0.6571,
+      "majority_accuracy": 0.6571
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -248,12 +248,12 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 9,
-      "correct": 3,
-      "accuracy": 0.3333,
-      "brier": 0.3776,
-      "log_loss": 1.087,
-      "base_rate": 0.3333,
-      "majority_accuracy": 0.6667
+      "correct": 4,
+      "accuracy": 0.4444,
+      "brier": 0.3676,
+      "log_loss": 1.067,
+      "base_rate": 0.4444,
+      "majority_accuracy": 0.5556
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 42,
       "claimed": 0.5392,
-      "actual": 0.5
+      "actual": 0.5476
     },
     {
       "label": "60\u201370%",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.524,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 78017,
-        "change_24h": 0.41
+        "today_usd": 79022,
+        "change_24h": 1.05
       },
       "made_on": "2026-08-30",
       "resolve_on": "2026-08-31"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49496782,
-        "top_title": "Longest Straight Line Paths on Water or Land on the Earth (2018)"
+        "top_id": 49499867,
+        "top_title": "Haiku R1/beta6 has been released"
       },
       "made_on": "2026-08-30",
       "resolve_on": "2026-08-31"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.7,
+        "forecast_c": 34.0,
         "for_date": "2026-08-31",
         "city": "New Delhi"
       },
@@ -498,28 +498,28 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.542,
+      "call": true,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 78017,
-        "change_24h": 0.41,
+        "today_usd": 79022,
+        "change_24h": 1.05,
         "model": {
-          "p_event": 0.458,
+          "p_event": 0.5281,
           "n_train": 34,
           "fallback": null,
           "features": [
-            0.41,
-            -2.567657012975655,
-            0.9889583576042416,
-            1.6079990567621356
+            1.05,
+            -1.3125522960298674,
+            2.2898787102119122,
+            1.6273552771483297
           ],
           "weights": [
-            -0.579,
-            0.9636,
-            -0.4671,
-            -0.3479
+            -0.4986,
+            0.8639,
+            -0.7092,
+            -0.0092
           ],
-          "bias": 0.4978
+          "bias": 0.629
         }
       },
       "made_on": "2026-08-30",
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.8,
-            224.71428571428572,
+            227.0,
             5.6000000000000005,
             1.0
           ]
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.935,
       "basis": {
-        "top_id": 49496782,
-        "top_title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
+        "top_id": 49499867,
+        "top_title": "Haiku R1/beta6 has been released",
         "model": {
-          "p_event": 0.9633,
+          "p_event": 0.9351,
           "n_train": 35,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             6.0
           ],
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 35.7,
+        "forecast_c": 34.0,
         "for_date": "2026-08-31",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.988,
+          "p_event": 0.9904,
           "n_train": 33,
           "fallback": null,
           "features": [
-            0.4000000000000057,
+            0.0,
             1.039422916814902,
             0.514285714285715,
             1.3000000000000043
@@ -3915,8 +3915,8 @@
       "resolve_on": "2026-08-30",
       "call": true,
       "confidence": 0.528,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "kp_storm",
@@ -3980,8 +3980,8 @@
       "resolve_on": "2026-08-30",
       "call": true,
       "confidence": 0.545,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "kp_storm_ml",
