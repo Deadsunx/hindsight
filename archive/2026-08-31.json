@@ -1,19 +1,19 @@
 {
   "date": "2026-08-31",
-  "fetched_at": "2026-08-31T10:30:20.813175+00:00",
+  "fetched_at": "2026-08-31T21:13:31.970498+00:00",
   "observations": {
     "btc": {
-      "usd": 78405,
-      "usd_24h_change": 0.46
+      "usd": 78818,
+      "usd_24h_change": 0.41
     },
     "kp": {
-      "max_kp": 3.67,
-      "latest_kp": 3.33,
+      "max_kp": 3.33,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.5,
-      "count": 179,
+      "count": 218,
       "strongest_place": "44 km NNE of Ruteng, Indonesia"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-08-30"
     },
     "hn": {
-      "top_id": 49507822,
-      "top_title": "OpenShot 4.0: Record, Edit, and Color Like Never Before",
+      "top_id": 49511856,
+      "top_title": "I turned my security cameras into an automatic bird identification system",
       "top10": [
-        49507822,
-        49503601,
-        49506819,
-        49505219,
-        49491791,
-        49506142,
-        49481141,
-        49485020,
-        49506182,
-        49503934
+        49511856,
+        49512975,
+        49510514,
+        49489376,
+        49476239,
+        49514781,
+        49496292,
+        49503521,
+        49433481,
+        49467636
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 34.0,
-      "actual_prev_date": "2026-08-30",
-      "today": 35.2,
-      "forecast_next": 35.3,
-      "forecast_next_date": "2026-09-01"
+      "actual_prev": 34.4,
+      "actual_prev_date": "2026-08-31",
+      "today": 35.6,
+      "forecast_next": 31.6,
+      "forecast_next_date": "2026-09-02"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.525,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 78405,
-        "change_24h": 0.46
+        "today_usd": 78818,
+        "change_24h": 0.41
       },
       "made_on": "2026-08-31",
       "resolve_on": "2026-09-01"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 3.67
+        "today_max_kp": 3.33
       },
       "made_on": "2026-08-31",
       "resolve_on": "2026-09-01"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49507822,
-        "top_title": "OpenShot 4.0: Record, Edit, and Color Like Never Before"
+        "top_id": 49511856,
+        "top_title": "I turned my security cameras into an automatic bird identification system"
       },
       "made_on": "2026-08-31",
       "resolve_on": "2026-09-01"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.3,
-        "for_date": "2026-09-01",
+        "forecast_c": 31.6,
+        "for_date": "2026-09-02",
         "city": "New Delhi"
       },
       "made_on": "2026-08-31",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.653,
+      "confidence": 0.671,
       "basis": {
-        "today_usd": 78405,
-        "change_24h": 0.46,
+        "today_usd": 78818,
+        "change_24h": 0.41,
         "model": {
-          "p_event": 0.6529,
+          "p_event": 0.6706,
           "n_train": 35,
           "fallback": null,
           "features": [
-            0.46,
-            -0.4077433122475438,
-            -1.6902185497724265,
-            1.6605872911137733
+            0.41,
+            0.11686101160988116,
+            -1.1723696914222703,
+            1.6337233074770974
           ],
           "weights": [
             -0.5638,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.555,
+      "confidence": 0.519,
       "basis": {
-        "today_max_kp": 3.67,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.5554,
+          "p_event": 0.5193,
           "n_train": 36,
           "fallback": null,
           "features": [
-            3.67,
-            3.89,
-            2.9528571428571433,
+            3.33,
+            3.776666666666667,
+            2.904285714285714,
             4.0
           ],
           "weights": [
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.5,
-            214.85714285714286,
+            220.42857142857142,
             5.528571428571429,
             1.0
           ]
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.939,
       "basis": {
-        "top_id": 49507822,
-        "top_title": "OpenShot 4.0: Record, Edit, and Color Like Never Before",
+        "top_id": 49511856,
+        "top_title": "I turned my security cameras into an automatic bird identification system",
         "model": {
-          "p_event": 0.9655,
+          "p_event": 0.9393,
           "n_train": 36,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             0.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.92,
       "basis": {
-        "forecast_c": 35.3,
-        "for_date": "2026-09-01",
+        "forecast_c": 31.6,
+        "for_date": "2026-09-02",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9899,
-          "n_train": 33,
+          "p_event": 0.9201,
+          "n_train": 35,
           "fallback": null,
           "features": [
-            0.09999999999999432,
-            1.0547037498748164,
+            4.0,
+            1.0824047302187843,
             0.5333333333333344,
             1.3000000000000043
           ],
           "weights": [
-            -0.5686,
-            0.0345,
-            0.147,
-            -0.4431
+            -0.5784,
+            0.0274,
+            0.137,
+            -0.454
           ],
-          "bias": 3.751
+          "bias": 3.839
         }
       },
       "made_on": "2026-08-31",
