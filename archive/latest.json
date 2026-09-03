@@ -1,20 +1,20 @@
 {
   "date": "2026-09-03",
-  "fetched_at": "2026-09-03T08:31:58.138404+00:00",
+  "fetched_at": "2026-09-03T18:58:51.538970+00:00",
   "observations": {
     "btc": {
-      "usd": 77900,
-      "usd_24h_change": 0.88
+      "usd": 81224,
+      "usd_24h_change": 5.04
     },
     "kp": {
       "max_kp": 2.33,
-      "latest_kp": 1.0,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.2,
-      "count": 191,
-      "strongest_place": "South Sandwich Islands region"
+      "max_mag": 6.3,
+      "count": 266,
+      "strongest_place": "84 km SSW of Nikolski, Alaska"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-09-02"
     },
     "hn": {
-      "top_id": 49546753,
-      "top_title": "Pre-Release of Polars 2.0",
+      "top_id": 49554520,
+      "top_title": "Qwen 3.8 27B available on Cerebras at 1500 tok/SEC",
       "top10": [
-        49546753,
-        49541256,
-        49537553,
-        49546800,
-        49511493,
-        49508405,
-        49530169,
-        49536375,
-        49537131,
-        49535284
+        49554520,
+        49550772,
+        49554273,
+        49551760,
+        49550698,
+        49550375,
+        49551096,
+        49539556,
+        49548395,
+        49553173
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.5,
       "actual_prev_date": "2026-09-02",
-      "today": 32.5,
-      "forecast_next": 30.1,
+      "today": 31.8,
+      "forecast_next": 29.7,
       "forecast_next_date": "2026-09-04"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.529,
+      "confidence": 0.57,
       "basis": {
-        "today_usd": 77900,
-        "change_24h": 0.88
+        "today_usd": 81224,
+        "change_24h": 5.04
       },
       "made_on": "2026-09-03",
       "resolve_on": "2026-09-04"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49546753,
-        "top_title": "Pre-Release of Polars 2.0"
+        "top_id": 49554520,
+        "top_title": "Qwen 3.8 27B available on Cerebras at 1500 tok/SEC"
       },
       "made_on": "2026-09-03",
       "resolve_on": "2026-09-04"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.1,
+        "forecast_c": 29.7,
         "for_date": "2026-09-04",
         "city": "New Delhi"
       },
@@ -141,20 +141,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.606,
+      "call": false,
+      "confidence": 0.576,
       "basis": {
-        "today_usd": 77900,
-        "change_24h": 0.88,
+        "today_usd": 81224,
+        "change_24h": 5.04,
         "model": {
-          "p_event": 0.6063,
+          "p_event": 0.4245,
           "n_train": 38,
           "fallback": null,
           "features": [
-            0.88,
-            -1.1647085691085746,
-            -2.713773681515619,
-            1.4572008716293754
+            5.04,
+            3.052602197467591,
+            1.4374383375170163,
+            2.192997739917657
           ],
           "weights": [
             -0.6014,
@@ -215,9 +215,9 @@
           "n_train": 39,
           "fallback": "laplace",
           "features": [
-            6.2,
-            213.0,
-            5.728571428571429,
+            6.3,
+            223.71428571428572,
+            5.742857142857143,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.944,
       "basis": {
-        "top_id": 49546753,
-        "top_title": "Pre-Release of Polars 2.0",
+        "top_id": 49554520,
+        "top_title": "Qwen 3.8 27B available on Cerebras at 1500 tok/SEC",
         "model": {
-          "p_event": 0.994,
+          "p_event": 0.9445,
           "n_train": 39,
           "fallback": null,
           "features": [
-            0.3,
-            3.0,
+            0.0,
+            11.0,
             3.0
           ],
           "weights": [
-            0.3606,
-            -0.1099,
-            0.0676
+            0.2975,
+            -0.0969,
+            -0.053
           ],
-          "bias": 2.5483
+          "bias": 2.9615
         }
       },
       "made_on": "2026-09-03",
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 30.1,
+        "forecast_c": 29.7,
         "for_date": "2026-09-04",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9759,
+          "p_event": 0.9789,
           "n_train": 36,
           "fallback": null,
           "features": [
-            2.3999999999999986,
+            2.1000000000000014,
             1.168118144709686,
             0.8250000000000011,
             1.3000000000000043
