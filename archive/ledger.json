@@ -1,40 +1,17 @@
 {
-  "updated": "2026-09-03T18:58:52.688254+00:00",
+  "updated": "2026-09-04T08:27:38.184366+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
-      "shared_days": 13,
-      "rule_correct": 6,
-      "model_correct": 6,
-      "rule_accuracy": 0.4615,
-      "model_accuracy": 0.4615,
-      "rule_brier": 0.2641,
-      "model_brier": 0.3302,
-      "rule_log_loss": 0.7215,
-      "model_log_loss": 0.9484,
-      "coin_flip": {
-        "n": 13,
-        "accuracy": 0.5,
-        "brier": 0.25,
-        "log_loss": 0.6931
-      },
-      "base_rate": {
-        "n": 52,
-        "rate": 0.5962,
-        "majority_accuracy": 0.5962
-      }
-    },
-    "kp_storm": {
-      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "shared_days": 14,
-      "rule_correct": 11,
-      "model_correct": 11,
-      "rule_accuracy": 0.7857,
-      "model_accuracy": 0.7857,
-      "rule_brier": 0.1634,
-      "model_brier": 0.1795,
-      "rule_log_loss": 0.5063,
-      "model_log_loss": 0.5516,
+      "rule_correct": 6,
+      "model_correct": 7,
+      "rule_accuracy": 0.4286,
+      "model_accuracy": 0.5,
+      "rule_brier": 0.2684,
+      "model_brier": 0.3195,
+      "rule_log_loss": 0.7302,
+      "model_log_loss": 0.92,
       "coin_flip": {
         "n": 14,
         "accuracy": 0.5,
@@ -42,16 +19,39 @@
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 53,
-        "rate": 0.3585,
-        "majority_accuracy": 0.6415
+        "n": 54,
+        "rate": 0.5741,
+        "majority_accuracy": 0.5741
+      }
+    },
+    "kp_storm": {
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "shared_days": 15,
+      "rule_correct": 12,
+      "model_correct": 12,
+      "rule_accuracy": 0.8,
+      "model_accuracy": 0.8,
+      "rule_brier": 0.1557,
+      "model_brier": 0.1682,
+      "rule_log_loss": 0.4891,
+      "model_log_loss": 0.5218,
+      "coin_flip": {
+        "n": 15,
+        "accuracy": 0.5,
+        "brier": 0.25,
+        "log_loss": 0.6931
+      },
+      "base_rate": {
+        "n": 55,
+        "rate": 0.3455,
+        "majority_accuracy": 0.6545
       }
     },
     "quake_m5": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
-      "shared_days": 14,
-      "rule_correct": 14,
-      "model_correct": 14,
+      "shared_days": 15,
+      "rule_correct": 15,
+      "model_correct": 15,
       "rule_accuracy": 1.0,
       "model_accuracy": 1.0,
       "rule_brier": 0.0025,
@@ -59,28 +59,74 @@
       "rule_log_loss": 0.0513,
       "model_log_loss": 0.0513,
       "coin_flip": {
-        "n": 14,
+        "n": 15,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 53,
+        "n": 55,
         "rate": 1.0,
         "majority_accuracy": 1.0
       }
     },
     "wiki_hold": {
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "shared_days": 11,
+      "shared_days": 12,
       "rule_correct": 7,
-      "model_correct": 8,
-      "rule_accuracy": 0.6364,
-      "model_accuracy": 0.7273,
-      "rule_brier": 0.2212,
-      "model_brier": 0.2244,
-      "rule_log_loss": 0.6328,
-      "model_log_loss": 0.6678,
+      "model_correct": 9,
+      "rule_accuracy": 0.5833,
+      "model_accuracy": 0.75,
+      "rule_brier": 0.2436,
+      "model_brier": 0.2228,
+      "rule_log_loss": 0.6804,
+      "model_log_loss": 0.6624,
+      "coin_flip": {
+        "n": 12,
+        "accuracy": 0.5,
+        "brier": 0.25,
+        "log_loss": 0.6931
+      },
+      "base_rate": {
+        "n": 49,
+        "rate": 0.6939,
+        "majority_accuracy": 0.6939
+      }
+    },
+    "hn_fade": {
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "shared_days": 15,
+      "rule_correct": 14,
+      "model_correct": 14,
+      "rule_accuracy": 0.9333,
+      "model_accuracy": 0.9333,
+      "rule_brier": 0.0651,
+      "model_brier": 0.0641,
+      "rule_log_loss": 0.2607,
+      "model_log_loss": 0.2597,
+      "coin_flip": {
+        "n": 15,
+        "accuracy": 0.5,
+        "brier": 0.25,
+        "log_loss": 0.6931
+      },
+      "base_rate": {
+        "n": 55,
+        "rate": 0.9273,
+        "majority_accuracy": 0.9273
+      }
+    },
+    "forecast_hit": {
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "shared_days": 11,
+      "rule_correct": 11,
+      "model_correct": 11,
+      "rule_accuracy": 1.0,
+      "model_accuracy": 1.0,
+      "rule_brier": 0.04,
+      "model_brier": 0.0029,
+      "rule_log_loss": 0.2231,
+      "model_log_loss": 0.0542,
       "coin_flip": {
         "n": 11,
         "accuracy": 0.5,
@@ -88,79 +134,33 @@
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 47,
-        "rate": 0.7234,
-        "majority_accuracy": 0.7234
-      }
-    },
-    "hn_fade": {
-      "question": "The current #1 story on Hacker News will fall out of the top 10.",
-      "shared_days": 14,
-      "rule_correct": 14,
-      "model_correct": 14,
-      "rule_accuracy": 1.0,
-      "model_accuracy": 1.0,
-      "rule_brier": 0.0144,
-      "model_brier": 0.005,
-      "rule_log_loss": 0.1278,
-      "model_log_loss": 0.0723,
-      "coin_flip": {
-        "n": 14,
-        "accuracy": 0.5,
-        "brier": 0.25,
-        "log_loss": 0.6931
-      },
-      "base_rate": {
-        "n": 53,
-        "rate": 0.9623,
-        "majority_accuracy": 0.9623
-      }
-    },
-    "forecast_hit": {
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 10,
-      "rule_correct": 10,
-      "model_correct": 10,
-      "rule_accuracy": 1.0,
-      "model_accuracy": 1.0,
-      "rule_brier": 0.04,
-      "model_brier": 0.0029,
-      "rule_log_loss": 0.2231,
-      "model_log_loss": 0.0545,
-      "coin_flip": {
-        "n": 10,
-        "accuracy": 0.5,
-        "brier": 0.25,
-        "log_loss": 0.6931
-      },
-      "base_rate": {
-        "n": 46,
-        "rate": 0.9783,
-        "majority_accuracy": 0.9783
+        "n": 48,
+        "rate": 0.9792,
+        "majority_accuracy": 0.9792
       }
     }
   },
   "totals": {
-    "graded": 304,
-    "correct": 245,
-    "accuracy": 0.8059,
-    "brier": 0.1284,
-    "log_loss": 0.4039,
+    "graded": 316,
+    "correct": 253,
+    "accuracy": 0.8006,
+    "brier": 0.1329,
+    "log_loss": 0.4168,
     "open": 14,
     "void": 5,
-    "days": 40
+    "days": 41
   },
   "baselines": {
     "coin_flip": {
-      "n": 304,
+      "n": 316,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 304,
-      "rate": 0.7664,
-      "majority_accuracy": 0.7664
+      "n": 316,
+      "rate": 0.75,
+      "majority_accuracy": 0.75
     }
   },
   "by_predictor": {
@@ -169,37 +169,37 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "graded": 39,
+      "graded": 40,
       "correct": 20,
-      "accuracy": 0.5128,
-      "brier": 0.2523,
-      "log_loss": 0.6978,
-      "base_rate": 0.641,
-      "majority_accuracy": 0.641
+      "accuracy": 0.5,
+      "brier": 0.2541,
+      "log_loss": 0.7014,
+      "base_rate": 0.625,
+      "majority_accuracy": 0.625
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "graded": 39,
-      "correct": 29,
-      "accuracy": 0.7436,
-      "brier": 0.1864,
-      "log_loss": 0.5582,
-      "base_rate": 0.359,
-      "majority_accuracy": 0.641
+      "graded": 40,
+      "correct": 30,
+      "accuracy": 0.75,
+      "brier": 0.183,
+      "log_loss": 0.5505,
+      "base_rate": 0.35,
+      "majority_accuracy": 0.65
     },
     "quake_m5": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
       "rule": "base rate",
       "family": "quake_m5",
       "variant": "rule",
-      "graded": 39,
-      "correct": 39,
+      "graded": 40,
+      "correct": 40,
       "accuracy": 1.0,
-      "brier": 0.0046,
-      "log_loss": 0.0627,
+      "brier": 0.0045,
+      "log_loss": 0.0624,
       "base_rate": 1.0,
       "majority_accuracy": 1.0
     },
@@ -208,73 +208,73 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "graded": 36,
+      "graded": 37,
       "correct": 22,
-      "accuracy": 0.6111,
-      "brier": 0.2281,
-      "log_loss": 0.6471,
-      "base_rate": 0.7222,
-      "majority_accuracy": 0.7222
+      "accuracy": 0.5946,
+      "brier": 0.2352,
+      "log_loss": 0.6622,
+      "base_rate": 0.7027,
+      "majority_accuracy": 0.7027
     },
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "decay",
       "family": "hn_fade",
       "variant": "rule",
-      "graded": 39,
+      "graded": 40,
       "correct": 37,
-      "accuracy": 0.9487,
-      "brier": 0.0534,
-      "log_loss": 0.23,
-      "base_rate": 0.9487,
-      "majority_accuracy": 0.9487
+      "accuracy": 0.925,
+      "brier": 0.0714,
+      "log_loss": 0.2773,
+      "base_rate": 0.925,
+      "majority_accuracy": 0.925
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 36,
-      "correct": 35,
-      "accuracy": 0.9722,
-      "brier": 0.0567,
-      "log_loss": 0.2617,
-      "base_rate": 0.9722,
-      "majority_accuracy": 0.9722
+      "graded": 37,
+      "correct": 36,
+      "accuracy": 0.973,
+      "brier": 0.0562,
+      "log_loss": 0.2606,
+      "base_rate": 0.973,
+      "majority_accuracy": 0.973
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "graded": 13,
-      "correct": 6,
-      "accuracy": 0.4615,
-      "brier": 0.3302,
-      "log_loss": 0.9484,
-      "base_rate": 0.4615,
-      "majority_accuracy": 0.5385
+      "graded": 14,
+      "correct": 7,
+      "accuracy": 0.5,
+      "brier": 0.3195,
+      "log_loss": 0.92,
+      "base_rate": 0.4286,
+      "majority_accuracy": 0.5714
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "graded": 14,
-      "correct": 11,
-      "accuracy": 0.7857,
-      "brier": 0.1795,
-      "log_loss": 0.5516,
-      "base_rate": 0.3571,
-      "majority_accuracy": 0.6429
+      "graded": 15,
+      "correct": 12,
+      "accuracy": 0.8,
+      "brier": 0.1682,
+      "log_loss": 0.5218,
+      "base_rate": 0.3333,
+      "majority_accuracy": 0.6667
     },
     "quake_m5_ml": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
       "rule": "logistic regression",
       "family": "quake_m5",
       "variant": "model",
-      "graded": 14,
-      "correct": 14,
+      "graded": 15,
+      "correct": 15,
       "accuracy": 1.0,
       "brier": 0.0025,
       "log_loss": 0.0513,
@@ -286,37 +286,37 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "graded": 11,
-      "correct": 8,
-      "accuracy": 0.7273,
-      "brier": 0.2244,
-      "log_loss": 0.6678,
-      "base_rate": 0.7273,
-      "majority_accuracy": 0.7273
+      "graded": 12,
+      "correct": 9,
+      "accuracy": 0.75,
+      "brier": 0.2228,
+      "log_loss": 0.6624,
+      "base_rate": 0.6667,
+      "majority_accuracy": 0.6667
     },
     "hn_fade_ml": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "logistic regression",
       "family": "hn_fade",
       "variant": "model",
-      "graded": 14,
+      "graded": 15,
       "correct": 14,
-      "accuracy": 1.0,
-      "brier": 0.005,
-      "log_loss": 0.0723,
-      "base_rate": 1.0,
-      "majority_accuracy": 1.0
+      "accuracy": 0.9333,
+      "brier": 0.0641,
+      "log_loss": 0.2597,
+      "base_rate": 0.9333,
+      "majority_accuracy": 0.9333
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 10,
-      "correct": 10,
+      "graded": 11,
+      "correct": 11,
       "accuracy": 1.0,
       "brier": 0.0029,
-      "log_loss": 0.0545,
+      "log_loss": 0.0542,
       "base_rate": 1.0,
       "majority_accuracy": 1.0
     }
@@ -324,9 +324,9 @@
   "calibration": [
     {
       "label": "50\u201360%",
-      "n": 50,
-      "claimed": 0.5378,
-      "actual": 0.52
+      "n": 53,
+      "claimed": 0.5393,
+      "actual": 0.5283
     },
     {
       "label": "60\u201370%",
@@ -336,146 +336,24 @@
     },
     {
       "label": "70\u201380%",
-      "n": 71,
-      "claimed": 0.7343,
-      "actual": 0.7465
+      "n": 73,
+      "claimed": 0.7344,
+      "actual": 0.7397
     },
     {
       "label": "80\u201390%",
-      "n": 86,
-      "claimed": 0.8428,
-      "actual": 0.9302
+      "n": 88,
+      "claimed": 0.8427,
+      "actual": 0.9205
     },
     {
       "label": "90\u2013100%",
-      "n": 75,
-      "claimed": 0.9453,
-      "actual": 0.9867
+      "n": 80,
+      "claimed": 0.9449,
+      "actual": 0.975
     }
   ],
   "open_bets": [
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 28.6,
-        "for_date": "2026-09-04",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-09-02",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.95,
-      "basis": {
-        "forecast_c": 28.6,
-        "for_date": "2026-09-04",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.9517,
-          "n_train": 36,
-          "fallback": null,
-          "features": [
-            3.8999999999999986,
-            1.1532996141506329,
-            0.6750000000000025,
-            1.3000000000000043
-          ],
-          "weights": [
-            -0.4999,
-            0.0212,
-            0.0721,
-            -0.5039
-          ],
-          "bias": 3.8486
-        }
-      },
-      "made_on": "2026-09-02",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "btc_up",
-      "question": "Bitcoin will be higher tomorrow than it is today.",
-      "rule": "momentum",
-      "family": "btc_up",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.57,
-      "basis": {
-        "today_usd": 81224,
-        "change_24h": 5.04
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "kp_storm",
-      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
-      "rule": "persistence",
-      "family": "kp_storm",
-      "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
-      "basis": {
-        "today_max_kp": 2.33
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "quake_m5",
-      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
-      "rule": "base rate",
-      "family": "quake_m5",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.95,
-      "basis": {
-        "base_rate": 1.0
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "wiki_hold",
-      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "rule": "persistence",
-      "family": "wiki_hold",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
-      "basis": {
-        "today_top": "Wikipedia:Featured_pictures"
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "hn_fade",
-      "question": "The current #1 story on Hacker News will fall out of the top 10.",
-      "rule": "decay",
-      "family": "hn_fade",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.88,
-      "basis": {
-        "top_id": 49554520,
-        "top_title": "Qwen 3.8 27B available on Cerebras at 1500 tok/SEC"
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
-    },
     {
       "id": "forecast_hit",
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -491,159 +369,6 @@
       },
       "made_on": "2026-09-03",
       "resolve_on": "2026-09-05"
-    },
-    {
-      "id": "btc_up_ml",
-      "question": "Bitcoin will be higher tomorrow than it is today.",
-      "rule": "logistic regression",
-      "family": "btc_up",
-      "variant": "model",
-      "call": false,
-      "confidence": 0.576,
-      "basis": {
-        "today_usd": 81224,
-        "change_24h": 5.04,
-        "model": {
-          "p_event": 0.4245,
-          "n_train": 38,
-          "fallback": null,
-          "features": [
-            5.04,
-            3.052602197467591,
-            1.4374383375170163,
-            2.192997739917657
-          ],
-          "weights": [
-            -0.6014,
-            0.9332,
-            -0.6721,
-            -0.0411
-          ],
-          "bias": 0.5619
-        }
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "kp_storm_ml",
-      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
-      "rule": "logistic regression",
-      "family": "kp_storm",
-      "variant": "model",
-      "call": false,
-      "confidence": 0.901,
-      "basis": {
-        "today_max_kp": 2.33,
-        "model": {
-          "p_event": 0.0987,
-          "n_train": 39,
-          "fallback": null,
-          "features": [
-            2.33,
-            2.4433333333333334,
-            3.19,
-            1.67
-          ],
-          "weights": [
-            1.0189,
-            -0.3381,
-            -0.7322,
-            0.4469
-          ],
-          "bias": -0.7212
-        }
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "quake_m5_ml",
-      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
-      "rule": "logistic regression",
-      "family": "quake_m5",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.95,
-      "basis": {
-        "base_rate": 1.0,
-        "model": {
-          "p_event": 0.9756,
-          "n_train": 39,
-          "fallback": "laplace",
-          "features": [
-            6.3,
-            223.71428571428572,
-            5.742857142857143,
-            1.0
-          ]
-        }
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "wiki_hold_ml",
-      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "rule": "logistic regression",
-      "family": "wiki_hold",
-      "variant": "model",
-      "call": false,
-      "confidence": 0.547,
-      "basis": {
-        "today_top": "Wikipedia:Featured_pictures",
-        "model": {
-          "p_event": 0.4531,
-          "n_train": 36,
-          "fallback": null,
-          "features": [
-            6.0,
-            13.447156246392277,
-            0.8518092625674526,
-            0.0
-          ],
-          "weights": [
-            -0.7845,
-            -0.4027,
-            0.1053,
-            -0.6106
-          ],
-          "bias": 1.0204
-        }
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
-    },
-    {
-      "id": "hn_fade_ml",
-      "question": "The current #1 story on Hacker News will fall out of the top 10.",
-      "rule": "logistic regression",
-      "family": "hn_fade",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.944,
-      "basis": {
-        "top_id": 49554520,
-        "top_title": "Qwen 3.8 27B available on Cerebras at 1500 tok/SEC",
-        "model": {
-          "p_event": 0.9445,
-          "n_train": 39,
-          "fallback": null,
-          "features": [
-            0.0,
-            11.0,
-            3.0
-          ],
-          "weights": [
-            0.2975,
-            -0.0969,
-            -0.053
-          ],
-          "bias": 2.9615
-        }
-      },
-      "made_on": "2026-09-03",
-      "resolve_on": "2026-09-04"
     },
     {
       "id": "forecast_hit_ml",
@@ -678,6 +403,281 @@
       },
       "made_on": "2026-09-03",
       "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.559,
+      "basis": {
+        "today_usd": 80887,
+        "change_24h": 3.94
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 2.0
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Gloria_Steinem"
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 49554643,
+        "top_title": "GPT-6 Astra"
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 29.9,
+        "for_date": "2026-09-05",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-06"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.513,
+      "basis": {
+        "today_usd": 80887,
+        "change_24h": 3.94,
+        "model": {
+          "p_event": 0.5133,
+          "n_train": 39,
+          "fallback": null,
+          "features": [
+            3.94,
+            4.993509865005197,
+            2.744963544445289,
+            2.122446511798853
+          ],
+          "weights": [
+            -0.7567,
+            0.9816,
+            -0.5973,
+            -0.1142
+          ],
+          "bias": 0.494
+        }
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.522,
+      "basis": {
+        "today_max_kp": 2.0,
+        "model": {
+          "p_event": 0.5224,
+          "n_train": 40,
+          "fallback": null,
+          "features": [
+            2.0,
+            2.22,
+            2.9514285714285715,
+            5.33
+          ],
+          "weights": [
+            1.02,
+            -0.3324,
+            -0.7584,
+            0.4772
+          ],
+          "bias": -0.7789
+        }
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9762,
+          "n_train": 40,
+          "fallback": "laplace",
+          "features": [
+            6.3,
+            238.0,
+            5.785714285714286,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.751,
+      "basis": {
+        "today_top": "Gloria_Steinem",
+        "model": {
+          "p_event": 0.7514,
+          "n_train": 37,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.626379468841614,
+            1.1724189079176646,
+            1.0
+          ],
+          "weights": [
+            -0.9545,
+            -0.3965,
+            0.0956,
+            -0.6557
+          ],
+          "bias": 0.9386
+        }
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 49554643,
+        "top_title": "GPT-6 Astra",
+        "model": {
+          "p_event": 0.9944,
+          "n_train": 40,
+          "fallback": null,
+          "features": [
+            0.3,
+            3.0,
+            4.0
+          ],
+          "weights": [
+            0.3671,
+            -0.1105,
+            -0.0642
+          ],
+          "bias": 2.5715
+        }
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-05"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "forecast_c": 29.9,
+        "for_date": "2026-09-05",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.9916,
+          "n_train": 37,
+          "fallback": null,
+          "features": [
+            1.1000000000000014,
+            1.1534296684236964,
+            0.5,
+            0.8999999999999986
+          ],
+          "weights": [
+            -0.5048,
+            0.0192,
+            0.0716,
+            -0.5109
+          ],
+          "bias": 3.8892
+        }
+      },
+      "made_on": "2026-09-04",
+      "resolve_on": "2026-09-06"
     }
   ],
   "grades": [
@@ -4439,6 +4439,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-09-01",
+      "resolve_on": "2026-09-03",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -4500,6 +4513,19 @@
       "resolve_on": "2026-09-02",
       "call": true,
       "confidence": 0.943,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-09-01",
+      "resolve_on": "2026-09-03",
+      "call": true,
+      "confidence": 0.95,
       "actual": true,
       "correct": true
     },
@@ -4632,6 +4658,136 @@
       "confidence": 0.944,
       "actual": true,
       "correct": true
+    },
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": true,
+      "confidence": 0.57,
+      "actual": false,
+      "correct": false
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": false,
+      "confidence": 0.78,
+      "actual": false,
+      "correct": true
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": true,
+      "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": true,
+      "confidence": 0.7,
+      "actual": false,
+      "correct": false
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": true,
+      "confidence": 0.88,
+      "actual": false,
+      "correct": false
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": false,
+      "confidence": 0.576,
+      "actual": false,
+      "correct": true
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": false,
+      "confidence": 0.901,
+      "actual": false,
+      "correct": true
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": true,
+      "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": false,
+      "confidence": 0.547,
+      "actual": false,
+      "correct": true
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "made_on": "2026-09-03",
+      "resolve_on": "2026-09-04",
+      "call": true,
+      "confidence": 0.944,
+      "actual": false,
+      "correct": false
     }
   ]
 }
