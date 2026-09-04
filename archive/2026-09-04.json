@@ -1,20 +1,20 @@
 {
   "date": "2026-09-04",
-  "fetched_at": "2026-09-04T08:27:36.733981+00:00",
+  "fetched_at": "2026-09-04T18:42:47.832347+00:00",
   "observations": {
     "btc": {
-      "usd": 80887,
-      "usd_24h_change": 3.94
+      "usd": 79611,
+      "usd_24h_change": -1.76
     },
     "kp": {
       "max_kp": 2.0,
-      "latest_kp": 1.0,
+      "latest_kp": 0.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.3,
-      "count": 343,
-      "strongest_place": "84 km SSW of Nikolski, Alaska"
+      "max_mag": 5.5,
+      "count": 270,
+      "strongest_place": "100 km S of Nikolski, Alaska"
     },
     "wiki": {
       "top": "Gloria_Steinem",
@@ -22,27 +22,27 @@
       "for_date": "2026-09-03"
     },
     "hn": {
-      "top_id": 49554643,
-      "top_title": "GPT-6 Astra",
+      "top_id": 49563355,
+      "top_title": "Discovery of a new OpenAI agent message board",
       "top10": [
+        49563355,
+        49567437,
+        49566788,
+        49563851,
         49554643,
-        49550772,
-        49554520,
-        49526453,
-        49522367,
-        49561320,
-        49507072,
-        49552572,
-        49559522,
-        49550375
+        49562657,
+        49567594,
+        49567053,
+        49562219,
+        49534936
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 31.8,
       "actual_prev_date": "2026-09-03",
-      "today": 31.0,
-      "forecast_next": 29.9,
+      "today": 30.2,
+      "forecast_next": 28.1,
       "forecast_next_date": "2026-09-05"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.559,
+      "call": false,
+      "confidence": 0.538,
       "basis": {
-        "today_usd": 80887,
-        "change_24h": 3.94
+        "today_usd": 79611,
+        "change_24h": -1.76
       },
       "made_on": "2026-09-04",
       "resolve_on": "2026-09-05"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49554643,
-        "top_title": "GPT-6 Astra"
+        "top_id": 49563355,
+        "top_title": "Discovery of a new OpenAI agent message board"
       },
       "made_on": "2026-09-04",
       "resolve_on": "2026-09-05"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 29.9,
+        "forecast_c": 28.1,
         "for_date": "2026-09-05",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.513,
+      "confidence": 0.858,
       "basis": {
-        "today_usd": 80887,
-        "change_24h": 3.94,
+        "today_usd": 79611,
+        "change_24h": -1.76,
         "model": {
-          "p_event": 0.5133,
+          "p_event": 0.8579,
           "n_train": 39,
           "fallback": null,
           "features": [
-            3.94,
-            4.993509865005197,
-            2.744963544445289,
-            2.122446511798853
+            -1.76,
+            3.337227414330224,
+            1.124152122551636,
+            2.2452432258044004
           ],
           "weights": [
             -0.7567,
@@ -215,9 +215,9 @@
           "n_train": 40,
           "fallback": "laplace",
           "features": [
-            6.3,
-            238.0,
-            5.785714285714286,
+            5.5,
+            227.57142857142858,
+            5.671428571428572,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.945,
       "basis": {
-        "top_id": 49554643,
-        "top_title": "GPT-6 Astra",
+        "top_id": 49563355,
+        "top_title": "Discovery of a new OpenAI agent message board",
         "model": {
-          "p_event": 0.9944,
+          "p_event": 0.9447,
           "n_train": 40,
           "fallback": null,
           "features": [
-            0.3,
-            3.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.3671,
-            -0.1105,
-            -0.0642
+            0.2932,
+            -0.0957,
+            -0.0522
           ],
-          "bias": 2.5715
+          "bias": 2.9871
         }
       },
       "made_on": "2026-09-04",
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 29.9,
+        "forecast_c": 28.1,
         "for_date": "2026-09-05",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9916,
+          "p_event": 0.9867,
           "n_train": 37,
           "fallback": null,
           "features": [
-            1.1000000000000014,
+            2.099999999999998,
             1.1534296684236964,
             0.5,
             0.8999999999999986

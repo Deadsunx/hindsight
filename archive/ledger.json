@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T08:27:38.184366+00:00",
+  "updated": "2026-09-04T18:42:49.511772+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 15,
-      "rule_correct": 14,
-      "model_correct": 14,
-      "rule_accuracy": 0.9333,
-      "model_accuracy": 0.9333,
-      "rule_brier": 0.0651,
-      "model_brier": 0.0641,
-      "rule_log_loss": 0.2607,
-      "model_log_loss": 0.2597,
+      "rule_correct": 15,
+      "model_correct": 15,
+      "rule_accuracy": 1.0,
+      "model_accuracy": 1.0,
+      "rule_brier": 0.0144,
+      "model_brier": 0.0049,
+      "rule_log_loss": 0.1278,
+      "model_log_loss": 0.0714,
       "coin_flip": {
         "n": 15,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 55,
-        "rate": 0.9273,
-        "majority_accuracy": 0.9273
+        "rate": 0.9636,
+        "majority_accuracy": 0.9636
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 316,
-    "correct": 253,
-    "accuracy": 0.8006,
-    "brier": 0.1329,
-    "log_loss": 0.4168,
+    "correct": 255,
+    "accuracy": 0.807,
+    "brier": 0.1277,
+    "log_loss": 0.4016,
     "open": 14,
     "void": 5,
     "days": 41
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 316,
-      "rate": 0.75,
-      "majority_accuracy": 0.75
+      "rate": 0.7563,
+      "majority_accuracy": 0.7563
     }
   },
   "by_predictor": {
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 40,
-      "correct": 37,
-      "accuracy": 0.925,
-      "brier": 0.0714,
-      "log_loss": 0.2773,
-      "base_rate": 0.925,
-      "majority_accuracy": 0.925
+      "correct": 38,
+      "accuracy": 0.95,
+      "brier": 0.0524,
+      "log_loss": 0.2275,
+      "base_rate": 0.95,
+      "majority_accuracy": 0.95
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 15,
-      "correct": 14,
-      "accuracy": 0.9333,
-      "brier": 0.0641,
-      "log_loss": 0.2597,
-      "base_rate": 0.9333,
-      "majority_accuracy": 0.9333
+      "correct": 15,
+      "accuracy": 1.0,
+      "brier": 0.0049,
+      "log_loss": 0.0714,
+      "base_rate": 1.0,
+      "majority_accuracy": 1.0
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 88,
       "claimed": 0.8427,
-      "actual": 0.9205
+      "actual": 0.9318
     },
     {
       "label": "90\u2013100%",
       "n": 80,
       "claimed": 0.9449,
-      "actual": 0.975
+      "actual": 0.9875
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.559,
+      "call": false,
+      "confidence": 0.538,
       "basis": {
-        "today_usd": 80887,
-        "change_24h": 3.94
+        "today_usd": 79611,
+        "change_24h": -1.76
       },
       "made_on": "2026-09-04",
       "resolve_on": "2026-09-05"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49554643,
-        "top_title": "GPT-6 Astra"
+        "top_id": 49563355,
+        "top_title": "Discovery of a new OpenAI agent message board"
       },
       "made_on": "2026-09-04",
       "resolve_on": "2026-09-05"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 29.9,
+        "forecast_c": 28.1,
         "for_date": "2026-09-05",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.513,
+      "confidence": 0.858,
       "basis": {
-        "today_usd": 80887,
-        "change_24h": 3.94,
+        "today_usd": 79611,
+        "change_24h": -1.76,
         "model": {
-          "p_event": 0.5133,
+          "p_event": 0.8579,
           "n_train": 39,
           "fallback": null,
           "features": [
-            3.94,
-            4.993509865005197,
-            2.744963544445289,
-            2.122446511798853
+            -1.76,
+            3.337227414330224,
+            1.124152122551636,
+            2.2452432258044004
           ],
           "weights": [
             -0.7567,
@@ -572,9 +572,9 @@
           "n_train": 40,
           "fallback": "laplace",
           "features": [
-            6.3,
-            238.0,
-            5.785714285714286,
+            5.5,
+            227.57142857142858,
+            5.671428571428572,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.945,
       "basis": {
-        "top_id": 49554643,
-        "top_title": "GPT-6 Astra",
+        "top_id": 49563355,
+        "top_title": "Discovery of a new OpenAI agent message board",
         "model": {
-          "p_event": 0.9944,
+          "p_event": 0.9447,
           "n_train": 40,
           "fallback": null,
           "features": [
-            0.3,
-            3.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.3671,
-            -0.1105,
-            -0.0642
+            0.2932,
+            -0.0957,
+            -0.0522
           ],
-          "bias": 2.5715
+          "bias": 2.9871
         }
       },
       "made_on": "2026-09-04",
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 29.9,
+        "forecast_c": 28.1,
         "for_date": "2026-09-05",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9916,
+          "p_event": 0.9867,
           "n_train": 37,
           "fallback": null,
           "features": [
-            1.1000000000000014,
+            2.099999999999998,
             1.1534296684236964,
             0.5,
             0.8999999999999986
@@ -4721,8 +4721,8 @@
       "resolve_on": "2026-09-04",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -4786,8 +4786,8 @@
       "resolve_on": "2026-09-04",
       "call": true,
       "confidence": 0.944,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
