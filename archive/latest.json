@@ -1,20 +1,20 @@
 {
   "date": "2026-09-05",
-  "fetched_at": "2026-09-05T08:02:08.293008+00:00",
+  "fetched_at": "2026-09-05T17:48:37.310979+00:00",
   "observations": {
     "btc": {
-      "usd": 79711,
-      "usd_24h_change": -1.19
+      "usd": 80065,
+      "usd_24h_change": 0.74
     },
     "kp": {
       "max_kp": 2.67,
-      "latest_kp": 2.67,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.5,
-      "count": 261,
-      "strongest_place": "156 km E of Kuril\u2019sk, Russia"
+      "max_mag": 5.6,
+      "count": 217,
+      "strongest_place": "96 km ESE of Isangel, Vanuatu"
     },
     "wiki": {
       "top": "Killing_of_the_Clancy_children",
@@ -22,27 +22,27 @@
       "for_date": "2026-09-04"
     },
     "hn": {
-      "top_id": 49570669,
-      "top_title": "Actively exploited sandbox RCE in all Chromium versions",
+      "top_id": 49578310,
+      "top_title": "Flock used >100 times to track veteran who recorded traffic stop",
       "top10": [
-        49570669,
-        49529179,
+        49578310,
+        49576386,
         49563355,
-        49568506,
+        49570669,
         49571634,
-        49569896,
-        49570545,
-        49572875,
-        49569366,
-        49519850
+        49575150,
+        49577975,
+        49568506,
+        49535940,
+        49575859
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 30.2,
       "actual_prev_date": "2026-09-04",
-      "today": 29.1,
-      "forecast_next": 30.6,
+      "today": 27.9,
+      "forecast_next": 27.8,
       "forecast_next_date": "2026-09-06"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.532,
+      "call": true,
+      "confidence": 0.527,
       "basis": {
-        "today_usd": 79711,
-        "change_24h": -1.19
+        "today_usd": 80065,
+        "change_24h": 0.74
       },
       "made_on": "2026-09-05",
       "resolve_on": "2026-09-06"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49570669,
-        "top_title": "Actively exploited sandbox RCE in all Chromium versions"
+        "top_id": 49578310,
+        "top_title": "Flock used >100 times to track veteran who recorded traffic stop"
       },
       "made_on": "2026-09-05",
       "resolve_on": "2026-09-06"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.6,
+        "forecast_c": 27.8,
         "for_date": "2026-09-06",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.832,
+      "confidence": 0.722,
       "basis": {
-        "today_usd": 79711,
-        "change_24h": -1.19,
+        "today_usd": 80065,
+        "change_24h": 0.74,
         "model": {
-          "p_event": 0.8317,
+          "p_event": 0.7216,
           "n_train": 40,
           "fallback": null,
           "features": [
-            -1.19,
-            3.0723475787159726,
-            1.9674312102644143,
-            2.082872370431265
+            0.74,
+            3.530096334130728,
+            2.4202729842784487,
+            2.091211369165964
           ],
           "weights": [
             -0.7966,
@@ -215,9 +215,9 @@
           "n_train": 41,
           "fallback": "laplace",
           "features": [
-            5.5,
-            234.14285714285714,
-            5.728571428571429,
+            5.6,
+            227.85714285714286,
+            5.742857142857143,
             1.0
           ]
         }
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 49570669,
-        "top_title": "Actively exploited sandbox RCE in all Chromium versions",
+        "top_id": 49578310,
+        "top_title": "Flock used >100 times to track veteran who recorded traffic stop",
         "model": {
           "p_event": 0.9732,
           "n_train": 41,
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 30.6,
+        "forecast_c": 27.8,
         "for_date": "2026-09-06",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9782,
+          "p_event": 0.9876,
           "n_train": 39,
           "fallback": null,
           "features": [
-            1.5,
+            0.09999999999999787,
             1.5038616957685964,
             0.6999999999999993,
             1.5999999999999979
