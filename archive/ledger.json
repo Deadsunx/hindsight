@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T08:21:05.227985+00:00",
+  "updated": "2026-09-06T17:53:23.271384+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.522,
+      "call": false,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 79832,
-        "change_24h": 0.2
+        "today_usd": 79731,
+        "change_24h": -0.42
       },
       "made_on": "2026-09-06",
       "resolve_on": "2026-09-07"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 1.33
       },
       "made_on": "2026-09-06",
       "resolve_on": "2026-09-07"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49582000,
-        "top_title": "Cloud in a Bottle: making self-hosting accessible to everyone"
+        "top_id": 49586171,
+        "top_title": "QBittorrent breaks out of sandbox to commit crimes"
       },
       "made_on": "2026-09-06",
       "resolve_on": "2026-09-07"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.1,
+        "forecast_c": 31.7,
         "for_date": "2026-09-07",
         "city": "New Delhi"
       },
@@ -498,20 +498,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.508,
+      "call": true,
+      "confidence": 0.543,
       "basis": {
-        "today_usd": 79832,
-        "change_24h": 0.2,
+        "today_usd": 79731,
+        "change_24h": -0.42,
         "model": {
-          "p_event": 0.4923,
+          "p_event": 0.5429,
           "n_train": 41,
           "fallback": null,
           "features": [
-            0.2,
-            -1.713779178567909,
-            1.0250310040242017,
-            2.00946493576139
+            -0.42,
+            -1.8381266620703274,
+            0.8972184961150154,
+            2.013103018041318
           ],
           "weights": [
             -0.7624,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.728,
+      "confidence": 0.799,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 1.33,
         "model": {
-          "p_event": 0.2722,
+          "p_event": 0.2009,
           "n_train": 42,
           "fallback": null,
           "features": [
+            1.33,
             2.0,
-            2.223333333333333,
-            2.4757142857142855,
+            2.38,
             2.0
           ],
           "weights": [
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.6,
-            227.71428571428572,
+            227.85714285714286,
             5.714285714285714,
             1.0
           ]
@@ -623,8 +623,8 @@
       "call": true,
       "confidence": 0.899,
       "basis": {
-        "top_id": 49582000,
-        "top_title": "Cloud in a Bottle: making self-hosting accessible to everyone",
+        "top_id": 49586171,
+        "top_title": "QBittorrent breaks out of sandbox to commit crimes",
         "model": {
           "p_event": 0.8988,
           "n_train": 42,
@@ -652,17 +652,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.903,
       "basis": {
-        "forecast_c": 32.1,
+        "forecast_c": 31.7,
         "for_date": "2026-09-07",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9565,
+          "p_event": 0.9031,
           "n_train": 40,
           "fallback": null,
           "features": [
-            3.3000000000000007,
+            5.399999999999999,
             2.193991795791406,
             0.6166666666666666,
             1.5999999999999979
