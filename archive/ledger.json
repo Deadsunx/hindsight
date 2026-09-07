@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T08:54:27.203487+00:00",
+  "updated": "2026-09-07T19:29:38.094187+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -27,14 +27,14 @@
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "shared_days": 18,
-      "rule_correct": 15,
-      "model_correct": 13,
-      "rule_accuracy": 0.8333,
-      "model_accuracy": 0.7222,
-      "rule_brier": 0.1378,
-      "model_brier": 0.176,
-      "rule_log_loss": 0.449,
-      "model_log_loss": 0.5361,
+      "rule_correct": 14,
+      "model_correct": 12,
+      "rule_accuracy": 0.7778,
+      "model_accuracy": 0.6667,
+      "rule_brier": 0.1689,
+      "model_brier": 0.2093,
+      "rule_log_loss": 0.5193,
+      "model_log_loss": 0.6128,
       "coin_flip": {
         "n": 18,
         "accuracy": 0.5,
@@ -43,8 +43,8 @@
       },
       "base_rate": {
         "n": 61,
-        "rate": 0.3115,
-        "majority_accuracy": 0.6885
+        "rate": 0.3443,
+        "majority_accuracy": 0.6557
       }
     },
     "quake_m5": {
@@ -124,9 +124,9 @@
       "rule_accuracy": 1.0,
       "model_accuracy": 1.0,
       "rule_brier": 0.04,
-      "model_brier": 0.0028,
+      "model_brier": 0.0032,
       "rule_log_loss": 0.2231,
-      "model_log_loss": 0.0534,
+      "model_log_loss": 0.0568,
       "coin_flip": {
         "n": 15,
         "accuracy": 0.5,
@@ -142,12 +142,12 @@
   },
   "totals": {
     "graded": 354,
-    "correct": 281,
-    "accuracy": 0.7938,
-    "brier": 0.1331,
-    "log_loss": 0.4155,
-    "open": 14,
-    "void": 3,
+    "correct": 279,
+    "accuracy": 0.7881,
+    "brier": 0.1363,
+    "log_loss": 0.4231,
+    "open": 12,
+    "void": 5,
     "days": 44
   },
   "baselines": {
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 354,
-      "rate": 0.7373,
-      "majority_accuracy": 0.7373
+      "rate": 0.7429,
+      "majority_accuracy": 0.7429
     }
   },
   "by_predictor": {
@@ -183,12 +183,12 @@
       "family": "kp_storm",
       "variant": "rule",
       "graded": 43,
-      "correct": 33,
-      "accuracy": 0.7674,
-      "brier": 0.1736,
-      "log_loss": 0.5294,
-      "base_rate": 0.3256,
-      "majority_accuracy": 0.6744
+      "correct": 32,
+      "accuracy": 0.7442,
+      "brier": 0.1866,
+      "log_loss": 0.5588,
+      "base_rate": 0.3488,
+      "majority_accuracy": 0.6512
     },
     "quake_m5": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -261,12 +261,12 @@
       "family": "kp_storm",
       "variant": "model",
       "graded": 18,
-      "correct": 13,
-      "accuracy": 0.7222,
-      "brier": 0.176,
-      "log_loss": 0.5361,
-      "base_rate": 0.2778,
-      "majority_accuracy": 0.7222
+      "correct": 12,
+      "accuracy": 0.6667,
+      "brier": 0.2093,
+      "log_loss": 0.6128,
+      "base_rate": 0.3333,
+      "majority_accuracy": 0.6667
     },
     "quake_m5_ml": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -315,8 +315,8 @@
       "graded": 15,
       "correct": 15,
       "accuracy": 1.0,
-      "brier": 0.0028,
-      "log_loss": 0.0534,
+      "brier": 0.0032,
+      "log_loss": 0.0568,
       "base_rate": 1.0,
       "majority_accuracy": 1.0
     }
@@ -338,7 +338,7 @@
       "label": "70\u201380%",
       "n": 80,
       "claimed": 0.7366,
-      "actual": 0.725
+      "actual": 0.7
     },
     {
       "label": "80\u201390%",
@@ -349,61 +349,11 @@
     {
       "label": "90\u2013100%",
       "n": 92,
-      "claimed": 0.9455,
+      "claimed": 0.945,
       "actual": 0.9783
     }
   ],
   "open_bets": [
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 31.7,
-        "for_date": "2026-09-07",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-09-06",
-      "resolve_on": "2026-09-08"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.903,
-      "basis": {
-        "forecast_c": 31.7,
-        "for_date": "2026-09-07",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.9031,
-          "n_train": 40,
-          "fallback": null,
-          "features": [
-            5.399999999999999,
-            2.193991795791406,
-            0.6166666666666666,
-            1.5999999999999979
-          ],
-          "weights": [
-            -0.4617,
-            0.0121,
-            0.0445,
-            -0.5635
-          ],
-          "bias": 3.9598
-        }
-      },
-      "made_on": "2026-09-06",
-      "resolve_on": "2026-09-08"
-    },
     {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -411,10 +361,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.525,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 79434,
-        "change_24h": -0.47
+        "today_usd": 79214,
+        "change_24h": -0.79
       },
       "made_on": "2026-09-07",
       "resolve_on": "2026-09-08"
@@ -425,10 +375,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 4.0
       },
       "made_on": "2026-09-07",
       "resolve_on": "2026-09-08"
@@ -470,8 +420,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49593563,
-        "top_title": "Keep Our Servers Running"
+        "top_id": 49601655,
+        "top_title": "Watch Los Angeles get built, one building at a time (1880\u20132026)"
       },
       "made_on": "2026-09-07",
       "resolve_on": "2026-09-08"
@@ -485,8 +435,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.9,
-        "for_date": "2026-09-08",
+        "forecast_c": 33.4,
+        "for_date": "2026-09-09",
         "city": "New Delhi"
       },
       "made_on": "2026-09-07",
@@ -499,19 +449,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.602,
+      "confidence": 0.618,
       "basis": {
-        "today_usd": 79434,
-        "change_24h": -0.47,
+        "today_usd": 79214,
+        "change_24h": -0.79,
         "model": {
-          "p_event": 0.6019,
+          "p_event": 0.6179,
           "n_train": 42,
           "fallback": null,
           "features": [
-            -0.47,
-            -0.22233108490032905,
-            0.7815473622776459,
-            2.0000081475236495
+            -0.79,
+            -0.4986748062453694,
+            0.5024233043213533,
+            2.010599419872057
           ],
           "weights": [
             -0.7636,
@@ -531,27 +481,27 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": false,
-      "confidence": 0.612,
+      "call": true,
+      "confidence": 0.697,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.3879,
+          "p_event": 0.6973,
           "n_train": 43,
           "fallback": null,
           "features": [
-            2.0,
-            2.0,
-            2.19,
+            4.0,
+            2.6666666666666665,
+            2.4757142857142855,
             2.67
           ],
           "weights": [
-            1.1006,
-            -0.1137,
-            -0.7247,
-            0.111
+            0.9885,
+            -0.1336,
+            -0.742,
+            0.0578
           ],
-          "bias": -0.8874
+          "bias": -0.7442
         }
       },
       "made_on": "2026-09-07",
@@ -573,7 +523,7 @@
           "fallback": "laplace",
           "features": [
             5.5,
-            224.0,
+            224.71428571428572,
             5.714285714285714,
             1.0
           ]
@@ -623,8 +573,8 @@
       "call": true,
       "confidence": 0.937,
       "basis": {
-        "top_id": 49593563,
-        "top_title": "Keep Our Servers Running",
+        "top_id": 49601655,
+        "top_title": "Watch Los Angeles get built, one building at a time (1880\u20132026)",
         "model": {
           "p_event": 0.9375,
           "n_train": 43,
@@ -654,26 +604,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.9,
-        "for_date": "2026-09-08",
+        "forecast_c": 33.4,
+        "for_date": "2026-09-09",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9862,
+          "p_event": 0.9864,
           "n_train": 41,
           "fallback": null,
           "features": [
-            0.5,
-            2.602306669091865,
-            0.5666666666666664,
+            0.3999999999999986,
+            2.1273457640919586,
+            0.6399999999999999,
             1.5999999999999979
           ],
           "weights": [
-            -0.4709,
-            0.0151,
-            0.0442,
-            -0.5673
+            -0.3653,
+            0.074,
+            -0.0092,
+            -0.5944
           ],
-          "bias": 3.9924
+          "bias": 3.9444
         }
       },
       "made_on": "2026-09-07",
@@ -5063,19 +5013,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "made_on": "2026-09-05",
-      "resolve_on": "2026-09-07",
-      "call": true,
-      "confidence": 0.8,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -5141,19 +5078,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "made_on": "2026-09-05",
-      "resolve_on": "2026-09-07",
-      "call": true,
-      "confidence": 0.95,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -5176,8 +5100,8 @@
       "resolve_on": "2026-09-07",
       "call": false,
       "confidence": 0.78,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "quake_m5",
@@ -5219,6 +5143,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-09-06",
+      "resolve_on": "2026-09-08",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -5241,8 +5178,8 @@
       "resolve_on": "2026-09-07",
       "call": false,
       "confidence": 0.799,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "quake_m5_ml",
@@ -5280,6 +5217,19 @@
       "resolve_on": "2026-09-07",
       "call": true,
       "confidence": 0.899,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-09-06",
+      "resolve_on": "2026-09-08",
+      "call": true,
+      "confidence": 0.903,
       "actual": true,
       "correct": true
     }

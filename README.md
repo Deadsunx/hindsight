@@ -36,38 +36,38 @@ test.
 <!-- LEDGER:START -->
 ### Standing — 2026-09-07
 
-**281 right / 354 settled (79%)** · Brier 0.133 · log loss 0.415 · 14 still open
+**279 right / 354 settled (79%)** · Brier 0.136 · log loss 0.423 · 12 still open
 
 Saying "50%" to all 354 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
 
 | Call | Answered by | Settled | Right | Brier | Log loss |
 | --- | --- | --- | --- | --- | --- |
 | Bitcoin will be higher tomorrow than it is today. | momentum | n=43 | 21/43 (49%) | 0.255 | 0.703 |
-| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=43 | 33/43 (77%) | 0.174 | 0.529 |
+| Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=43 | 32/43 (74%) | 0.187 | 0.559 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=43 | 43/43 (100%) | 0.004 | 0.062 |
 | Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=40 | 23/40 (57%) | 0.243 | 0.679 |
 | The current #1 story on Hacker News will fall out of the top 10. | decay | n=43 | 40/43 (93%) | 0.067 | 0.267 |
 | Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=41 | 40/41 (98%) | 0.055 | 0.257 |
 | Bitcoin will be higher tomorrow than it is today. | logistic regression | n=17 | 8/17 (47%) | 0.312 | 0.888 |
-| Geomagnetic Kp will exceed 3 within the next 24 hours. | logistic regression | n=18 | 13/18 (72%) | 0.176 | 0.536 |
+| Geomagnetic Kp will exceed 3 within the next 24 hours. | logistic regression | n=18 | 12/18 (67%) | 0.209 | 0.613 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | logistic regression | n=18 | 18/18 (100%) | 0.003 | 0.051 |
 | Today's most-read Wikipedia article will still be #1 tomorrow. | logistic regression | n=15 | 10/15 (67%) | 0.273 | 0.779 |
 | The current #1 story on Hacker News will fall out of the top 10. | logistic regression | n=18 | 17/18 (94%) | 0.054 | 0.229 |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | logistic regression | n=15 | 15/15 (100%) | 0.003 | 0.053 |
+| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | logistic regression | n=15 | 15/15 (100%) | 0.003 | 0.057 |
 | _coin flip — the baseline_ | _50% to everything_ | n=354 | _50%_ | _0.250_ | _0.693_ |
 
 _Sample is 354 settled bets across 44 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
 
 **Open bets, placed today:**
 
-- **no** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
-- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(78% confident, persistence)_
+- **no** — Bitcoin will be higher tomorrow than it is today. _(53% confident, momentum)_
+- **yes** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(70% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **no** — Today's most-read Wikipedia article will still be #1 tomorrow. _(62% confident, persistence)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
 - **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(60% confident, logistic regression)_
-- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(61% confident, logistic regression)_
+- **yes** — Bitcoin will be higher tomorrow than it is today. _(62% confident, logistic regression)_
+- **yes** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(70% confident, logistic regression)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, logistic regression)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(72% confident, logistic regression)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(94% confident, logistic regression)_

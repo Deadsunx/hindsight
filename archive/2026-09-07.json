@@ -1,19 +1,19 @@
 {
   "date": "2026-09-07",
-  "fetched_at": "2026-09-07T08:54:25.783873+00:00",
+  "fetched_at": "2026-09-07T19:29:36.759862+00:00",
   "observations": {
     "btc": {
-      "usd": 79434,
-      "usd_24h_change": -0.47
+      "usd": 79214,
+      "usd_24h_change": -0.79
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 2.0,
+      "max_kp": 4.0,
+      "latest_kp": 3.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.5,
-      "count": 191,
+      "count": 196,
       "strongest_place": "southeast of the Loyalty Islands"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-09-06"
     },
     "hn": {
-      "top_id": 49593563,
-      "top_title": "Keep Our Servers Running",
+      "top_id": 49601655,
+      "top_title": "Watch Los Angeles get built, one building at a time (1880\u20132026)",
       "top10": [
+        49601655,
+        49598291,
         49593563,
-        49591876,
-        49595320,
-        49595360,
-        49589914,
-        49577129,
-        49590611,
-        49594008,
-        49588988,
-        49592840
+        49558685,
+        49600432,
+        49596055,
+        49589190,
+        49561002,
+        49599609,
+        49600997
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 27.6,
-      "actual_prev_date": "2026-09-06",
-      "today": 32.4,
-      "forecast_next": 32.9,
-      "forecast_next_date": "2026-09-08"
+      "actual_prev": 32.4,
+      "actual_prev_date": "2026-09-07",
+      "today": 33.0,
+      "forecast_next": 33.4,
+      "forecast_next_date": "2026-09-09"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.525,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 79434,
-        "change_24h": -0.47
+        "today_usd": 79214,
+        "change_24h": -0.79
       },
       "made_on": "2026-09-07",
       "resolve_on": "2026-09-08"
@@ -68,10 +68,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 4.0
       },
       "made_on": "2026-09-07",
       "resolve_on": "2026-09-08"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49593563,
-        "top_title": "Keep Our Servers Running"
+        "top_id": 49601655,
+        "top_title": "Watch Los Angeles get built, one building at a time (1880\u20132026)"
       },
       "made_on": "2026-09-07",
       "resolve_on": "2026-09-08"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.9,
-        "for_date": "2026-09-08",
+        "forecast_c": 33.4,
+        "for_date": "2026-09-09",
         "city": "New Delhi"
       },
       "made_on": "2026-09-07",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.602,
+      "confidence": 0.618,
       "basis": {
-        "today_usd": 79434,
-        "change_24h": -0.47,
+        "today_usd": 79214,
+        "change_24h": -0.79,
         "model": {
-          "p_event": 0.6019,
+          "p_event": 0.6179,
           "n_train": 42,
           "fallback": null,
           "features": [
-            -0.47,
-            -0.22233108490032905,
-            0.7815473622776459,
-            2.0000081475236495
+            -0.79,
+            -0.4986748062453694,
+            0.5024233043213533,
+            2.010599419872057
           ],
           "weights": [
             -0.7636,
@@ -174,27 +174,27 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": false,
-      "confidence": 0.612,
+      "call": true,
+      "confidence": 0.697,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.3879,
+          "p_event": 0.6973,
           "n_train": 43,
           "fallback": null,
           "features": [
-            2.0,
-            2.0,
-            2.19,
+            4.0,
+            2.6666666666666665,
+            2.4757142857142855,
             2.67
           ],
           "weights": [
-            1.1006,
-            -0.1137,
-            -0.7247,
-            0.111
+            0.9885,
+            -0.1336,
+            -0.742,
+            0.0578
           ],
-          "bias": -0.8874
+          "bias": -0.7442
         }
       },
       "made_on": "2026-09-07",
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.5,
-            224.0,
+            224.71428571428572,
             5.714285714285714,
             1.0
           ]
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.937,
       "basis": {
-        "top_id": 49593563,
-        "top_title": "Keep Our Servers Running",
+        "top_id": 49601655,
+        "top_title": "Watch Los Angeles get built, one building at a time (1880\u20132026)",
         "model": {
           "p_event": 0.9375,
           "n_train": 43,
@@ -297,26 +297,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.9,
-        "for_date": "2026-09-08",
+        "forecast_c": 33.4,
+        "for_date": "2026-09-09",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9862,
+          "p_event": 0.9864,
           "n_train": 41,
           "fallback": null,
           "features": [
-            0.5,
-            2.602306669091865,
-            0.5666666666666664,
+            0.3999999999999986,
+            2.1273457640919586,
+            0.6399999999999999,
             1.5999999999999979
           ],
           "weights": [
-            -0.4709,
-            0.0151,
-            0.0442,
-            -0.5673
+            -0.3653,
+            0.074,
+            -0.0092,
+            -0.5944
           ],
-          "bias": 3.9924
+          "bias": 3.9444
         }
       },
       "made_on": "2026-09-07",
