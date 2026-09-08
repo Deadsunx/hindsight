@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T08:35:35.350493+00:00",
+  "updated": "2026-09-08T19:08:22.974527+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.533,
+      "confidence": 0.529,
       "basis": {
         "today_usd": 78469,
-        "change_24h": -1.26
+        "change_24h": -0.88
       },
       "made_on": "2026-09-08",
       "resolve_on": "2026-09-09"
@@ -428,7 +428,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.33
+        "today_max_kp": 5.0
       },
       "made_on": "2026-09-08",
       "resolve_on": "2026-09-09"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49604637,
-        "top_title": "I've factored the RSA keys of a Certificate Authority from the 90s"
+        "top_id": 49614720,
+        "top_title": "ChatGPT Images 2.5"
       },
       "made_on": "2026-09-08",
       "resolve_on": "2026-09-09"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.3,
-        "for_date": "2026-09-09",
+        "forecast_c": 33.4,
+        "for_date": "2026-09-10",
         "city": "New Delhi"
       },
       "made_on": "2026-09-08",
@@ -498,17 +498,17 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.523,
+      "call": false,
+      "confidence": 0.511,
       "basis": {
         "today_usd": 78469,
-        "change_24h": -1.26,
+        "change_24h": -0.88,
         "model": {
-          "p_event": 0.5226,
+          "p_event": 0.4895,
           "n_train": 43,
           "fallback": null,
           "features": [
-            -1.26,
+            -0.88,
             -1.9933803784425108,
             1.8548805815161051,
             2.0085360709335256
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.675,
+      "confidence": 0.748,
       "basis": {
-        "today_max_kp": 4.33,
+        "today_max_kp": 5.0,
         "model": {
-          "p_event": 0.6746,
+          "p_event": 0.7476,
           "n_train": 44,
           "fallback": null,
           "features": [
-            4.33,
-            3.22,
-            2.712857142857143,
+            5.0,
+            3.4433333333333334,
+            2.8085714285714287,
             3.33
           ],
           "weights": [
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.3,
-            220.71428571428572,
+            224.14285714285714,
             5.671428571428572,
             1.0
           ]
@@ -623,8 +623,8 @@
       "call": true,
       "confidence": 0.936,
       "basis": {
-        "top_id": 49604637,
-        "top_title": "I've factored the RSA keys of a Certificate Authority from the 90s",
+        "top_id": 49614720,
+        "top_title": "ChatGPT Images 2.5",
         "model": {
           "p_event": 0.936,
           "n_train": 44,
@@ -654,17 +654,17 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 33.3,
-        "for_date": "2026-09-09",
+        "forecast_c": 33.4,
+        "for_date": "2026-09-10",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9861,
+          "p_event": 0.9868,
           "n_train": 41,
           "fallback": null,
           "features": [
-            0.3999999999999986,
+            0.19999999999999574,
             1.9819434906172273,
-            0.6499999999999998,
+            0.6399999999999999,
             1.5999999999999979
           ],
           "weights": [
