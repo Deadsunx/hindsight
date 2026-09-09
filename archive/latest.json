@@ -1,20 +1,20 @@
 {
   "date": "2026-09-09",
-  "fetched_at": "2026-09-09T08:36:15.114866+00:00",
+  "fetched_at": "2026-09-09T18:56:20.811932+00:00",
   "observations": {
     "btc": {
-      "usd": 79641,
-      "usd_24h_change": 1.48
+      "usd": 78474,
+      "usd_24h_change": 0.13
     },
     "kp": {
-      "max_kp": 5.0,
-      "latest_kp": 1.33,
+      "max_kp": 3.0,
+      "latest_kp": 3.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.3,
-      "count": 255,
-      "strongest_place": "26 km NW of Neiafu, Tonga"
+      "max_mag": 5.2,
+      "count": 261,
+      "strongest_place": "76 km ESE of Isangel, Vanuatu"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-09-08"
     },
     "hn": {
-      "top_id": 49622561,
-      "top_title": "How GPT\u20115.6 Sol helps run quantum computing experiments",
+      "top_id": 49626190,
+      "top_title": "Tailwind Labs is joining Shopify",
       "top10": [
-        49622561,
-        49615537,
-        49622305,
-        49546964,
-        49605915,
-        49580761,
-        49621102,
-        49617255,
-        49611251,
-        49622042
+        49626190,
+        49630964,
+        49614280,
+        49630026,
+        49627370,
+        49628576,
+        49630253,
+        49631121,
+        49628614,
+        49624823
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.4,
       "actual_prev_date": "2026-09-08",
-      "today": 33.6,
-      "forecast_next": 33.7,
+      "today": 33.5,
+      "forecast_next": 33.5,
       "forecast_next_date": "2026-09-10"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.535,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 79641,
-        "change_24h": 1.48
+        "today_usd": 78474,
+        "change_24h": 0.13
       },
       "made_on": "2026-09-09",
       "resolve_on": "2026-09-10"
@@ -68,10 +68,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 5.0
+        "today_max_kp": 3.0
       },
       "made_on": "2026-09-09",
       "resolve_on": "2026-09-10"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49622561,
-        "top_title": "How GPT\u20115.6 Sol helps run quantum computing experiments"
+        "top_id": 49626190,
+        "top_title": "Tailwind Labs is joining Shopify"
       },
       "made_on": "2026-09-09",
       "resolve_on": "2026-09-10"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.7,
+        "forecast_c": 33.5,
         "for_date": "2026-09-10",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.606,
+      "confidence": 0.541,
       "basis": {
-        "today_usd": 79641,
-        "change_24h": 1.48,
+        "today_usd": 78474,
+        "change_24h": 0.13,
         "model": {
-          "p_event": 0.3936,
+          "p_event": 0.4586,
           "n_train": 44,
           "fallback": null,
           "features": [
-            1.48,
-            -0.11287955751213552,
-            2.9818322880972303,
-            2.0638452844984068
+            0.13,
+            -1.5765511532528143,
+            1.4728130859248623,
+            2.0073303607021544
           ],
           "weights": [
             -0.7365,
@@ -174,27 +174,27 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": true,
-      "confidence": 0.557,
+      "call": false,
+      "confidence": 0.732,
       "basis": {
-        "today_max_kp": 5.0,
+        "today_max_kp": 3.0,
         "model": {
-          "p_event": 0.5573,
+          "p_event": 0.2682,
           "n_train": 45,
           "fallback": null,
           "features": [
-            5.0,
-            4.666666666666667,
-            3.19,
+            3.0,
+            4.0,
+            2.904285714285714,
             2.67
           ],
           "weights": [
-            1.1032,
-            -0.1356,
-            -0.7906,
-            0.0562
+            0.9205,
+            -0.1546,
+            -0.7052,
+            0.0432
           ],
-          "bias": -0.6194
+          "bias": -0.707
         }
       },
       "made_on": "2026-09-09",
@@ -215,9 +215,9 @@
           "n_train": 45,
           "fallback": "laplace",
           "features": [
-            5.3,
-            226.57142857142858,
-            5.585714285714286,
+            5.2,
+            227.42857142857142,
+            5.571428571428571,
             1.0
           ]
         }
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.933,
       "basis": {
-        "top_id": 49622561,
-        "top_title": "How GPT\u20115.6 Sol helps run quantum computing experiments",
+        "top_id": 49626190,
+        "top_title": "Tailwind Labs is joining Shopify",
         "model": {
-          "p_event": 0.9679,
+          "p_event": 0.9328,
           "n_train": 45,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             2.0
           ],
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 33.7,
+        "forecast_c": 33.5,
         "for_date": "2026-09-10",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9868,
+          "p_event": 0.9872,
           "n_train": 41,
           "fallback": null,
           "features": [
-            0.10000000000000142,
+            0.0,
             1.7904189453868051,
             0.6399999999999999,
             1.5999999999999979

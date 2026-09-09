@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09T08:36:16.979809+00:00",
+  "updated": "2026-09-09T18:56:22.579727+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -27,14 +27,14 @@
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "shared_days": 20,
-      "rule_correct": 16,
-      "model_correct": 14,
-      "rule_accuracy": 0.8,
-      "model_accuracy": 0.7,
-      "rule_brier": 0.161,
-      "model_brier": 0.1961,
-      "rule_log_loss": 0.503,
-      "model_log_loss": 0.5841,
+      "rule_correct": 15,
+      "model_correct": 13,
+      "rule_accuracy": 0.75,
+      "model_accuracy": 0.65,
+      "rule_brier": 0.181,
+      "model_brier": 0.2209,
+      "rule_log_loss": 0.5454,
+      "model_log_loss": 0.6385,
       "coin_flip": {
         "n": 20,
         "accuracy": 0.5,
@@ -43,8 +43,8 @@
       },
       "base_rate": {
         "n": 65,
-        "rate": 0.3846,
-        "majority_accuracy": 0.6154
+        "rate": 0.3538,
+        "majority_accuracy": 0.6462
       }
     },
     "quake_m5": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 374,
-    "correct": 295,
-    "accuracy": 0.7888,
-    "brier": 0.1347,
-    "log_loss": 0.4189,
+    "correct": 293,
+    "accuracy": 0.7834,
+    "brier": 0.1371,
+    "log_loss": 0.424,
     "open": 14,
     "void": 7,
     "days": 46
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 374,
-      "rate": 0.7513,
-      "majority_accuracy": 0.7513
+      "rate": 0.746,
+      "majority_accuracy": 0.746
     }
   },
   "by_predictor": {
@@ -183,12 +183,12 @@
       "family": "kp_storm",
       "variant": "rule",
       "graded": 45,
-      "correct": 34,
-      "accuracy": 0.7556,
-      "brier": 0.1823,
-      "log_loss": 0.5498,
-      "base_rate": 0.3778,
-      "majority_accuracy": 0.6222
+      "correct": 33,
+      "accuracy": 0.7333,
+      "brier": 0.1912,
+      "log_loss": 0.5687,
+      "base_rate": 0.3556,
+      "majority_accuracy": 0.6444
     },
     "quake_m5": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -261,12 +261,12 @@
       "family": "kp_storm",
       "variant": "model",
       "graded": 20,
-      "correct": 14,
-      "accuracy": 0.7,
-      "brier": 0.1961,
-      "log_loss": 0.5841,
-      "base_rate": 0.4,
-      "majority_accuracy": 0.6
+      "correct": 13,
+      "accuracy": 0.65,
+      "brier": 0.2209,
+      "log_loss": 0.6385,
+      "base_rate": 0.35,
+      "majority_accuracy": 0.65
     },
     "quake_m5_ml": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -338,7 +338,7 @@
       "label": "70\u201380%",
       "n": 85,
       "claimed": 0.7352,
-      "actual": 0.7176
+      "actual": 0.6941
     },
     {
       "label": "80\u201390%",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.535,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 79641,
-        "change_24h": 1.48
+        "today_usd": 78474,
+        "change_24h": 0.13
       },
       "made_on": "2026-09-09",
       "resolve_on": "2026-09-10"
@@ -425,10 +425,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 5.0
+        "today_max_kp": 3.0
       },
       "made_on": "2026-09-09",
       "resolve_on": "2026-09-10"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49622561,
-        "top_title": "How GPT\u20115.6 Sol helps run quantum computing experiments"
+        "top_id": 49626190,
+        "top_title": "Tailwind Labs is joining Shopify"
       },
       "made_on": "2026-09-09",
       "resolve_on": "2026-09-10"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.7,
+        "forecast_c": 33.5,
         "for_date": "2026-09-10",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.606,
+      "confidence": 0.541,
       "basis": {
-        "today_usd": 79641,
-        "change_24h": 1.48,
+        "today_usd": 78474,
+        "change_24h": 0.13,
         "model": {
-          "p_event": 0.3936,
+          "p_event": 0.4586,
           "n_train": 44,
           "fallback": null,
           "features": [
-            1.48,
-            -0.11287955751213552,
-            2.9818322880972303,
-            2.0638452844984068
+            0.13,
+            -1.5765511532528143,
+            1.4728130859248623,
+            2.0073303607021544
           ],
           "weights": [
             -0.7365,
@@ -531,27 +531,27 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": true,
-      "confidence": 0.557,
+      "call": false,
+      "confidence": 0.732,
       "basis": {
-        "today_max_kp": 5.0,
+        "today_max_kp": 3.0,
         "model": {
-          "p_event": 0.5573,
+          "p_event": 0.2682,
           "n_train": 45,
           "fallback": null,
           "features": [
-            5.0,
-            4.666666666666667,
-            3.19,
+            3.0,
+            4.0,
+            2.904285714285714,
             2.67
           ],
           "weights": [
-            1.1032,
-            -0.1356,
-            -0.7906,
-            0.0562
+            0.9205,
+            -0.1546,
+            -0.7052,
+            0.0432
           ],
-          "bias": -0.6194
+          "bias": -0.707
         }
       },
       "made_on": "2026-09-09",
@@ -572,9 +572,9 @@
           "n_train": 45,
           "fallback": "laplace",
           "features": [
-            5.3,
-            226.57142857142858,
-            5.585714285714286,
+            5.2,
+            227.42857142857142,
+            5.571428571428571,
             1.0
           ]
         }
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.933,
       "basis": {
-        "top_id": 49622561,
-        "top_title": "How GPT\u20115.6 Sol helps run quantum computing experiments",
+        "top_id": 49626190,
+        "top_title": "Tailwind Labs is joining Shopify",
         "model": {
-          "p_event": 0.9679,
+          "p_event": 0.9328,
           "n_train": 45,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             2.0
           ],
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 33.7,
+        "forecast_c": 33.5,
         "for_date": "2026-09-10",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9868,
+          "p_event": 0.9872,
           "n_train": 41,
           "fallback": null,
           "features": [
-            0.10000000000000142,
+            0.0,
             1.7904189453868051,
             0.6399999999999999,
             1.5999999999999979
@@ -5436,8 +5436,8 @@
       "resolve_on": "2026-09-09",
       "call": true,
       "confidence": 0.7,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "quake_m5",
@@ -5501,8 +5501,8 @@
       "resolve_on": "2026-09-09",
       "call": true,
       "confidence": 0.748,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "quake_m5_ml",
