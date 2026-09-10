@@ -1,19 +1,19 @@
 {
   "date": "2026-09-10",
-  "fetched_at": "2026-09-10T08:38:15.920433+00:00",
+  "fetched_at": "2026-09-10T18:49:47.382100+00:00",
   "observations": {
     "btc": {
-      "usd": 78091,
-      "usd_24h_change": -1.93
+      "usd": 77104,
+      "usd_24h_change": -1.79
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 2.67,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.3,
-      "count": 248,
+      "count": 259,
       "strongest_place": "126 km WSW of Alianza Cristiana, Peru"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-09-09"
     },
     "hn": {
-      "top_id": 49639090,
-      "top_title": "DeepSeek v4.1 Flash",
+      "top_id": 49643546,
+      "top_title": "Rust is tier-1 language at Microsoft",
       "top10": [
-        49639090,
-        49630931,
-        49637385,
-        49621018,
-        49626190,
-        49614280,
-        49629886,
-        49638280,
-        49628493,
-        49627370
+        49643546,
+        49645443,
+        49646181,
+        49639408,
+        49645437,
+        49643982,
+        49645686,
+        49645907,
+        49587121,
+        49647134
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.5,
       "actual_prev_date": "2026-09-09",
-      "today": 34.3,
-      "forecast_next": 32.0,
+      "today": 34.4,
+      "forecast_next": 32.3,
       "forecast_next_date": "2026-09-11"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.539,
+      "confidence": 0.538,
       "basis": {
-        "today_usd": 78091,
-        "change_24h": -1.93
+        "today_usd": 77104,
+        "change_24h": -1.79
       },
       "made_on": "2026-09-10",
       "resolve_on": "2026-09-11"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49639090,
-        "top_title": "DeepSeek v4.1 Flash"
+        "top_id": 49643546,
+        "top_title": "Rust is tier-1 language at Microsoft"
       },
       "made_on": "2026-09-10",
       "resolve_on": "2026-09-11"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 32.3,
         "for_date": "2026-09-11",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.704,
+      "confidence": 0.635,
       "basis": {
-        "today_usd": 78091,
-        "change_24h": -1.93,
+        "today_usd": 77104,
+        "change_24h": -1.79,
         "model": {
-          "p_event": 0.7045,
+          "p_event": 0.6352,
           "n_train": 45,
           "fallback": null,
           "features": [
-            -1.93,
-            -1.4176786931602958,
-            -3.8572343149807953,
-            1.8609587250064232
+            -1.79,
+            -2.6636705632842705,
+            -5.072392396336056,
+            1.9500407932064052
           ],
           "weights": [
             -0.7566,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.3,
-            224.85714285714286,
+            226.42857142857142,
             5.428571428571429,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.928,
       "basis": {
-        "top_id": 49639090,
-        "top_title": "DeepSeek v4.1 Flash",
+        "top_id": 49643546,
+        "top_title": "Rust is tier-1 language at Microsoft",
         "model": {
-          "p_event": 0.9956,
+          "p_event": 0.9284,
           "n_train": 46,
           "fallback": null,
           "features": [
-            0.3,
-            5.0,
+            0.0,
+            11.0,
             3.0
           ],
           "weights": [
-            0.4175,
-            -0.1755,
-            -0.0793
+            0.3732,
+            -0.1636,
+            -0.2009
           ],
-          "bias": 2.4346
+          "bias": 2.7424
         }
       },
       "made_on": "2026-09-10",
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 32.3,
         "for_date": "2026-09-11",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9759,
+          "p_event": 0.9773,
           "n_train": 42,
           "fallback": null,
           "features": [
-            2.299999999999997,
+            2.1000000000000014,
             1.691419522176565,
             0.4800000000000004,
             1.5999999999999979

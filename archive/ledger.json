@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-10T08:38:17.436118+00:00",
+  "updated": "2026-09-10T18:49:48.395052+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 21,
-      "rule_correct": 19,
-      "model_correct": 19,
-      "rule_accuracy": 0.9048,
-      "model_accuracy": 0.9048,
-      "rule_brier": 0.0868,
-      "model_brier": 0.0884,
-      "rule_log_loss": 0.3176,
-      "model_log_loss": 0.3316,
+      "rule_correct": 20,
+      "model_correct": 20,
+      "rule_accuracy": 0.9524,
+      "model_accuracy": 0.9524,
+      "rule_brier": 0.0506,
+      "model_brier": 0.0472,
+      "rule_log_loss": 0.2227,
+      "model_log_loss": 0.2061,
       "coin_flip": {
         "n": 21,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 67,
-        "rate": 0.9104,
-        "majority_accuracy": 0.9104
+        "rate": 0.9403,
+        "majority_accuracy": 0.9403
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 386,
-    "correct": 302,
-    "accuracy": 0.7824,
-    "brier": 0.1392,
-    "log_loss": 0.4309,
+    "correct": 304,
+    "accuracy": 0.7876,
+    "brier": 0.135,
+    "log_loss": 0.4189,
     "open": 14,
     "void": 7,
     "days": 47
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 386,
-      "rate": 0.7383,
-      "majority_accuracy": 0.7383
+      "rate": 0.7435,
+      "majority_accuracy": 0.7435
     }
   },
   "by_predictor": {
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 46,
-      "correct": 42,
-      "accuracy": 0.913,
-      "brier": 0.0805,
-      "log_loss": 0.3011,
-      "base_rate": 0.913,
-      "majority_accuracy": 0.913
+      "correct": 43,
+      "accuracy": 0.9348,
+      "brier": 0.064,
+      "log_loss": 0.2578,
+      "base_rate": 0.9348,
+      "majority_accuracy": 0.9348
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 21,
-      "correct": 19,
-      "accuracy": 0.9048,
-      "brier": 0.0884,
-      "log_loss": 0.3316,
-      "base_rate": 0.9048,
-      "majority_accuracy": 0.9048
+      "correct": 20,
+      "accuracy": 0.9524,
+      "brier": 0.0472,
+      "log_loss": 0.2061,
+      "base_rate": 0.9524,
+      "majority_accuracy": 0.9524
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 103,
       "claimed": 0.8434,
-      "actual": 0.9126
+      "actual": 0.9223
     },
     {
       "label": "90\u2013100%",
       "n": 102,
       "claimed": 0.945,
-      "actual": 0.9706
+      "actual": 0.9804
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.539,
+      "confidence": 0.538,
       "basis": {
-        "today_usd": 78091,
-        "change_24h": -1.93
+        "today_usd": 77104,
+        "change_24h": -1.79
       },
       "made_on": "2026-09-10",
       "resolve_on": "2026-09-11"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49639090,
-        "top_title": "DeepSeek v4.1 Flash"
+        "top_id": 49643546,
+        "top_title": "Rust is tier-1 language at Microsoft"
       },
       "made_on": "2026-09-10",
       "resolve_on": "2026-09-11"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 32.3,
         "for_date": "2026-09-11",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.704,
+      "confidence": 0.635,
       "basis": {
-        "today_usd": 78091,
-        "change_24h": -1.93,
+        "today_usd": 77104,
+        "change_24h": -1.79,
         "model": {
-          "p_event": 0.7045,
+          "p_event": 0.6352,
           "n_train": 45,
           "fallback": null,
           "features": [
-            -1.93,
-            -1.4176786931602958,
-            -3.8572343149807953,
-            1.8609587250064232
+            -1.79,
+            -2.6636705632842705,
+            -5.072392396336056,
+            1.9500407932064052
           ],
           "weights": [
             -0.7566,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.3,
-            224.85714285714286,
+            226.42857142857142,
             5.428571428571429,
             1.0
           ]
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.928,
       "basis": {
-        "top_id": 49639090,
-        "top_title": "DeepSeek v4.1 Flash",
+        "top_id": 49643546,
+        "top_title": "Rust is tier-1 language at Microsoft",
         "model": {
-          "p_event": 0.9956,
+          "p_event": 0.9284,
           "n_train": 46,
           "fallback": null,
           "features": [
-            0.3,
-            5.0,
+            0.0,
+            11.0,
             3.0
           ],
           "weights": [
-            0.4175,
-            -0.1755,
-            -0.0793
+            0.3732,
+            -0.1636,
+            -0.2009
           ],
-          "bias": 2.4346
+          "bias": 2.7424
         }
       },
       "made_on": "2026-09-10",
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 32.3,
         "for_date": "2026-09-11",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9759,
+          "p_event": 0.9773,
           "n_train": 42,
           "fallback": null,
           "features": [
-            2.299999999999997,
+            2.1000000000000014,
             1.691419522176565,
             0.4800000000000004,
             1.5999999999999979
@@ -5631,8 +5631,8 @@
       "resolve_on": "2026-09-10",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -5696,8 +5696,8 @@
       "resolve_on": "2026-09-10",
       "call": true,
       "confidence": 0.933,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
