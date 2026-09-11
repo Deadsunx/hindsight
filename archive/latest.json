@@ -1,20 +1,20 @@
 {
   "date": "2026-09-11",
-  "fetched_at": "2026-09-11T08:32:51.781660+00:00",
+  "fetched_at": "2026-09-11T18:52:41.056742+00:00",
   "observations": {
     "btc": {
-      "usd": 77414,
-      "usd_24h_change": -0.85
+      "usd": 77033,
+      "usd_24h_change": -0.17
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 3.0,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.4,
-      "count": 277,
-      "strongest_place": "southern East Pacific Rise"
+      "max_mag": 5.9,
+      "count": 287,
+      "strongest_place": "253 km ENE of Lospalos, Timor Leste"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-09-10"
     },
     "hn": {
-      "top_id": 49643982,
-      "top_title": "Shopify is moving from React Native back to Swift and Kotlin",
+      "top_id": 49662116,
+      "top_title": "A Misalignment of AI in Mathematics",
       "top10": [
-        49643982,
-        49645393,
-        49606281,
-        49651221,
-        49649213,
-        49649124,
-        49653882,
-        49653699,
-        49645437,
-        49652237
+        49662116,
+        49662698,
+        49662496,
+        49662214,
+        49662767,
+        49662672,
+        49662371,
+        49622406,
+        49601138,
+        49661645
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 34.4,
       "actual_prev_date": "2026-09-10",
-      "today": 31.4,
-      "forecast_next": 32.0,
+      "today": 31.1,
+      "forecast_next": 32.4,
       "forecast_next_date": "2026-09-12"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.528,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 77414,
-        "change_24h": -0.85
+        "today_usd": 77033,
+        "change_24h": -0.17
       },
       "made_on": "2026-09-11",
       "resolve_on": "2026-09-12"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49643982,
-        "top_title": "Shopify is moving from React Native back to Swift and Kotlin"
+        "top_id": 49662116,
+        "top_title": "A Misalignment of AI in Mathematics"
       },
       "made_on": "2026-09-11",
       "resolve_on": "2026-09-12"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 32.4,
         "for_date": "2026-09-12",
         "city": "New Delhi"
       },
@@ -141,28 +141,28 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.624,
+      "call": false,
+      "confidence": 0.535,
       "basis": {
-        "today_usd": 77414,
-        "change_24h": -0.85,
+        "today_usd": 77033,
+        "change_24h": -0.17,
         "model": {
-          "p_event": 0.6243,
+          "p_event": 0.4651,
           "n_train": 46,
           "fallback": null,
           "features": [
-            -0.85,
-            -1.344479985726843,
-            -2.759668889977518,
-            1.950437190159654
+            -0.17,
+            -1.8300220469229855,
+            -3.2382459710341482,
+            1.946140514947963
           ],
           "weights": [
-            -0.7854,
-            1.0072,
-            -0.482,
-            -0.2541
+            -0.714,
+            0.9887,
+            -0.3041,
+            -0.4034
           ],
-          "bias": 0.3665
+          "bias": 0.2702
         }
       },
       "made_on": "2026-09-11",
@@ -215,9 +215,9 @@
           "n_train": 47,
           "fallback": "laplace",
           "features": [
-            5.4,
-            227.42857142857142,
-            5.414285714285714,
+            5.9,
+            228.85714285714286,
+            5.485714285714286,
             1.0
           ]
         }
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.923,
       "basis": {
-        "top_id": 49643982,
-        "top_title": "Shopify is moving from React Native back to Swift and Kotlin",
+        "top_id": 49662116,
+        "top_title": "A Misalignment of AI in Mathematics",
         "model": {
-          "p_event": 0.9827,
+          "p_event": 0.9233,
           "n_train": 47,
           "fallback": null,
           "features": [
-            0.2,
+            0.0,
             11.0,
             4.0
           ],
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 32.4,
         "for_date": "2026-09-12",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.986,
+          "p_event": 0.9827,
           "n_train": 44,
           "fallback": null,
           "features": [
-            0.6000000000000014,
+            1.2999999999999972,
             1.7052858997833766,
             0.7166666666666668,
             1.5999999999999979

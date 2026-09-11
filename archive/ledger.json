@@ -1,17 +1,17 @@
 {
-  "updated": "2026-09-11T08:32:53.376831+00:00",
+  "updated": "2026-09-11T18:52:42.801167+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 21,
-      "rule_correct": 8,
-      "model_correct": 10,
-      "rule_accuracy": 0.381,
-      "model_accuracy": 0.4762,
-      "rule_brier": 0.2674,
-      "model_brier": 0.2998,
-      "rule_log_loss": 0.7281,
-      "model_log_loss": 0.8497,
+      "rule_correct": 9,
+      "model_correct": 9,
+      "rule_accuracy": 0.4286,
+      "model_accuracy": 0.4286,
+      "rule_brier": 0.2638,
+      "model_brier": 0.3127,
+      "rule_log_loss": 0.7209,
+      "model_log_loss": 0.876,
       "coin_flip": {
         "n": 21,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 68,
-        "rate": 0.5441,
-        "majority_accuracy": 0.5441
+        "rate": 0.5147,
+        "majority_accuracy": 0.5147
       }
     },
     "kp_storm": {
@@ -144,8 +144,8 @@
     "graded": 400,
     "correct": 317,
     "accuracy": 0.7925,
-    "brier": 0.1323,
-    "log_loss": 0.4127,
+    "brier": 0.1328,
+    "log_loss": 0.4137,
     "open": 14,
     "void": 5,
     "days": 48
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 400,
-      "rate": 0.7475,
-      "majority_accuracy": 0.7475
+      "rate": 0.7425,
+      "majority_accuracy": 0.7425
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 47,
-      "correct": 22,
-      "accuracy": 0.4681,
-      "brier": 0.2558,
-      "log_loss": 0.7048,
-      "base_rate": 0.5957,
-      "majority_accuracy": 0.5957
+      "correct": 23,
+      "accuracy": 0.4894,
+      "brier": 0.2542,
+      "log_loss": 0.7015,
+      "base_rate": 0.5745,
+      "majority_accuracy": 0.5745
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -248,12 +248,12 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 21,
-      "correct": 10,
-      "accuracy": 0.4762,
-      "brier": 0.2998,
-      "log_loss": 0.8497,
-      "base_rate": 0.4286,
-      "majority_accuracy": 0.5714
+      "correct": 9,
+      "accuracy": 0.4286,
+      "brier": 0.3127,
+      "log_loss": 0.876,
+      "base_rate": 0.381,
+      "majority_accuracy": 0.619
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -326,13 +326,13 @@
       "label": "50\u201360%",
       "n": 65,
       "claimed": 0.5382,
-      "actual": 0.4769
+      "actual": 0.4923
     },
     {
       "label": "60\u201370%",
       "n": 30,
       "claimed": 0.6387,
-      "actual": 0.5667
+      "actual": 0.5333
     },
     {
       "label": "70\u201380%",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.528,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 77414,
-        "change_24h": -0.85
+        "today_usd": 77033,
+        "change_24h": -0.17
       },
       "made_on": "2026-09-11",
       "resolve_on": "2026-09-12"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49643982,
-        "top_title": "Shopify is moving from React Native back to Swift and Kotlin"
+        "top_id": 49662116,
+        "top_title": "A Misalignment of AI in Mathematics"
       },
       "made_on": "2026-09-11",
       "resolve_on": "2026-09-12"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 32.4,
         "for_date": "2026-09-12",
         "city": "New Delhi"
       },
@@ -498,28 +498,28 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.624,
+      "call": false,
+      "confidence": 0.535,
       "basis": {
-        "today_usd": 77414,
-        "change_24h": -0.85,
+        "today_usd": 77033,
+        "change_24h": -0.17,
         "model": {
-          "p_event": 0.6243,
+          "p_event": 0.4651,
           "n_train": 46,
           "fallback": null,
           "features": [
-            -0.85,
-            -1.344479985726843,
-            -2.759668889977518,
-            1.950437190159654
+            -0.17,
+            -1.8300220469229855,
+            -3.2382459710341482,
+            1.946140514947963
           ],
           "weights": [
-            -0.7854,
-            1.0072,
-            -0.482,
-            -0.2541
+            -0.714,
+            0.9887,
+            -0.3041,
+            -0.4034
           ],
-          "bias": 0.3665
+          "bias": 0.2702
         }
       },
       "made_on": "2026-09-11",
@@ -572,9 +572,9 @@
           "n_train": 47,
           "fallback": "laplace",
           "features": [
-            5.4,
-            227.42857142857142,
-            5.414285714285714,
+            5.9,
+            228.85714285714286,
+            5.485714285714286,
             1.0
           ]
         }
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.923,
       "basis": {
-        "top_id": 49643982,
-        "top_title": "Shopify is moving from React Native back to Swift and Kotlin",
+        "top_id": 49662116,
+        "top_title": "A Misalignment of AI in Mathematics",
         "model": {
-          "p_event": 0.9827,
+          "p_event": 0.9233,
           "n_train": 47,
           "fallback": null,
           "features": [
-            0.2,
+            0.0,
             11.0,
             4.0
           ],
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 32.4,
         "for_date": "2026-09-12",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.986,
+          "p_event": 0.9827,
           "n_train": 44,
           "fallback": null,
           "features": [
-            0.6000000000000014,
+            1.2999999999999972,
             1.7052858997833766,
             0.7166666666666668,
             1.5999999999999979
@@ -5761,8 +5761,8 @@
       "resolve_on": "2026-09-11",
       "call": false,
       "confidence": 0.538,
-      "actual": true,
-      "correct": false
+      "actual": false,
+      "correct": true
     },
     {
       "id": "kp_storm",
@@ -5826,8 +5826,8 @@
       "resolve_on": "2026-09-11",
       "call": true,
       "confidence": 0.635,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm_ml",
