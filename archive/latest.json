@@ -1,20 +1,20 @@
 {
   "date": "2026-09-12",
-  "fetched_at": "2026-09-12T08:21:14.131488+00:00",
+  "fetched_at": "2026-09-12T17:58:49.214392+00:00",
   "observations": {
     "btc": {
-      "usd": 77294,
-      "usd_24h_change": 0.1
+      "usd": 77186,
+      "usd_24h_change": -0.46
     },
     "kp": {
-      "max_kp": 2.67,
-      "latest_kp": 2.33,
+      "max_kp": 3.0,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.6,
-      "count": 307,
-      "strongest_place": "115 km NNE of Teluknaga, Indonesia"
+      "max_mag": 6.5,
+      "count": 344,
+      "strongest_place": "126 km NNE of Teluknaga, Indonesia"
     },
     "wiki": {
       "top": "September_11_attacks",
@@ -22,27 +22,27 @@
       "for_date": "2026-09-11"
     },
     "hn": {
-      "top_id": 49670032,
-      "top_title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
+      "top_id": 49674050,
+      "top_title": "Make Your First Edit to OpenStreetMap in the Next 15 Minutes",
       "top10": [
-        49670032,
-        49668386,
-        49662371,
-        49668706,
-        49668777,
-        49662990,
-        49624456,
-        49626718,
-        49595505,
-        49649789
+        49674050,
+        49673098,
+        49674498,
+        49645480,
+        49639647,
+        49673580,
+        49672510,
+        49672641,
+        49672365,
+        49668386
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 31.1,
       "actual_prev_date": "2026-09-11",
-      "today": 31.8,
-      "forecast_next": 32.3,
+      "today": 31.0,
+      "forecast_next": 32.4,
       "forecast_next_date": "2026-09-13"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.521,
+      "call": false,
+      "confidence": 0.525,
       "basis": {
-        "today_usd": 77294,
-        "change_24h": 0.1
+        "today_usd": 77186,
+        "change_24h": -0.46
       },
       "made_on": "2026-09-12",
       "resolve_on": "2026-09-13"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.67
+        "today_max_kp": 3.0
       },
       "made_on": "2026-09-12",
       "resolve_on": "2026-09-13"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49670032,
-        "top_title": "Retrospectively Reverse-Engineering Apple's Neural Engine"
+        "top_id": 49674050,
+        "top_title": "Make Your First Edit to OpenStreetMap in the Next 15 Minutes"
       },
       "made_on": "2026-09-12",
       "resolve_on": "2026-09-13"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.3,
+        "forecast_c": 32.4,
         "for_date": "2026-09-13",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.635,
+      "confidence": 0.674,
       "basis": {
-        "today_usd": 77294,
-        "change_24h": 0.1,
+        "today_usd": 77186,
+        "change_24h": -0.46,
         "model": {
-          "p_event": 0.6345,
+          "p_event": 0.6737,
           "n_train": 47,
           "fallback": null,
           "features": [
-            0.1,
-            -1.5036827484262272,
-            -3.460937987884849,
-            0.8323708478121279
+            -0.46,
+            -1.6413079491296445,
+            -3.5958283894335863,
+            0.816831933731205
           ],
           "weights": [
             -0.6913,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.828,
+      "confidence": 0.807,
       "basis": {
-        "today_max_kp": 2.67,
+        "today_max_kp": 3.0,
         "model": {
-          "p_event": 0.1717,
+          "p_event": 0.193,
           "n_train": 48,
           "fallback": null,
           "features": [
-            2.67,
-            2.89,
-            3.142857142857143,
+            3.0,
+            3.0,
+            3.19,
             2.67
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 48,
           "fallback": "laplace",
           "features": [
-            6.6,
-            241.71428571428572,
-            5.628571428571428,
+            6.5,
+            247.0,
+            5.614285714285714,
             1.0
           ]
         }
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.919,
       "basis": {
-        "top_id": 49670032,
-        "top_title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
+        "top_id": 49674050,
+        "top_title": "Make Your First Edit to OpenStreetMap in the Next 15 Minutes",
         "model": {
-          "p_event": 0.9606,
+          "p_event": 0.9185,
           "n_train": 48,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             5.0
           ],
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.3,
+        "forecast_c": 32.4,
         "for_date": "2026-09-13",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9932,
+          "p_event": 0.9911,
           "n_train": 45,
           "fallback": null,
           "features": [
-            0.49999999999999645,
+            1.3999999999999986,
             1.7159254063041318,
             0.6499999999999998,
             1.1999999999999957
