@@ -1,19 +1,19 @@
 {
   "date": "2026-09-13",
-  "fetched_at": "2026-09-13T08:50:59.110370+00:00",
+  "fetched_at": "2026-09-13T18:25:44.622149+00:00",
   "observations": {
     "btc": {
-      "usd": 76826,
-      "usd_24h_change": -0.67
+      "usd": 77342,
+      "usd_24h_change": 0.22
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 3.0,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.2,
-      "count": 276,
+      "count": 213,
       "strongest_place": "43 km ESE of Port-Olry, Vanuatu"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-09-12"
     },
     "hn": {
-      "top_id": 49681152,
-      "top_title": "JetKVM Mini",
+      "top_id": 49686766,
+      "top_title": "I'm being cyberattacked by Tesla, Inc",
       "top10": [
+        49686766,
+        49686445,
+        49684393,
         49681152,
-        49678969,
-        49679459,
-        49674050,
-        49640913,
-        49679643,
-        49619848,
-        49673098,
-        49678683,
-        49625056
+        49684356,
+        49683262,
+        49638071,
+        49685991,
+        49684196,
+        49685253
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 31.0,
       "actual_prev_date": "2026-09-12",
-      "today": 32.4,
-      "forecast_next": 31.3,
+      "today": 32.5,
+      "forecast_next": 31.2,
       "forecast_next_date": "2026-09-14"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.527,
+      "call": true,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 76826,
-        "change_24h": -0.67
+        "today_usd": 77342,
+        "change_24h": 0.22
       },
       "made_on": "2026-09-13",
       "resolve_on": "2026-09-14"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49681152,
-        "top_title": "JetKVM Mini"
+        "top_id": 49686766,
+        "top_title": "I'm being cyberattacked by Tesla, Inc"
       },
       "made_on": "2026-09-13",
       "resolve_on": "2026-09-14"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.3,
+        "forecast_c": 31.2,
         "for_date": "2026-09-14",
         "city": "New Delhi"
       },
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.73,
+      "confidence": 0.742,
       "basis": {
-        "today_usd": 76826,
-        "change_24h": -0.67,
+        "today_usd": 77342,
+        "change_24h": 0.22,
         "model": {
-          "p_event": 0.7295,
+          "p_event": 0.7424,
           "n_train": 48,
           "fallback": null,
           "features": [
-            -0.67,
-            -0.36055198173895464,
-            -3.6435012730305694,
-            0.6436861100812575
+            0.22,
+            0.30867399875493806,
+            -2.9963251432943316,
+            0.6689805895862033
           ],
           "weights": [
-            -0.6784,
-            0.9585,
-            -0.3722,
-            -0.2639
+            -0.6936,
+            0.9607,
+            -0.3762,
+            -0.3713
           ],
-          "bias": 0.2588
+          "bias": 0.3498
         }
       },
       "made_on": "2026-09-13",
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.2,
-            261.7142857142857,
+            252.71428571428572,
             5.557142857142857,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.916,
       "basis": {
-        "top_id": 49681152,
-        "top_title": "JetKVM Mini",
+        "top_id": 49686766,
+        "top_title": "I'm being cyberattacked by Tesla, Inc",
         "model": {
-          "p_event": 0.9872,
+          "p_event": 0.9155,
           "n_train": 49,
           "fallback": null,
           "features": [
-            0.2,
-            4.0,
+            0.0,
+            11.0,
             6.0
           ],
           "weights": [
-            0.432,
-            -0.183,
-            -0.3784
+            0.3566,
+            -0.1568,
+            -0.1729
           ],
-          "bias": 2.5477
+          "bias": 2.8022
         }
       },
       "made_on": "2026-09-13",
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 31.3,
+        "forecast_c": 31.2,
         "for_date": "2026-09-14",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.989,
+          "p_event": 0.9883,
           "n_train": 46,
           "fallback": null,
           "features": [
-            1.0999999999999979,
+            1.3000000000000007,
             1.7189822570346676,
             0.7999999999999995,
             1.3999999999999986

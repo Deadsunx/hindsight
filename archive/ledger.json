@@ -1,17 +1,17 @@
 {
-  "updated": "2026-09-13T08:51:23.375318+00:00",
+  "updated": "2026-09-13T18:25:46.074752+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 23,
-      "rule_correct": 10,
-      "model_correct": 9,
-      "rule_accuracy": 0.4348,
-      "model_accuracy": 0.3913,
-      "rule_brier": 0.2625,
-      "model_brier": 0.3177,
-      "rule_log_loss": 0.7183,
-      "model_log_loss": 0.8819,
+      "rule_correct": 9,
+      "model_correct": 10,
+      "rule_accuracy": 0.3913,
+      "model_accuracy": 0.4348,
+      "rule_brier": 0.2647,
+      "model_brier": 0.3026,
+      "rule_log_loss": 0.7226,
+      "model_log_loss": 0.8503,
       "coin_flip": {
         "n": 23,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 72,
-        "rate": 0.5139,
-        "majority_accuracy": 0.5139
+        "rate": 0.5417,
+        "majority_accuracy": 0.5417
       }
     },
     "kp_storm": {
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 24,
-      "rule_correct": 22,
-      "model_correct": 22,
-      "rule_accuracy": 0.9167,
-      "model_accuracy": 0.9167,
-      "rule_brier": 0.0777,
-      "model_brier": 0.077,
-      "rule_log_loss": 0.2939,
-      "model_log_loss": 0.2916,
+      "rule_correct": 23,
+      "model_correct": 23,
+      "rule_accuracy": 0.9583,
+      "model_accuracy": 0.9583,
+      "rule_brier": 0.0461,
+      "model_brier": 0.042,
+      "rule_log_loss": 0.2109,
+      "model_log_loss": 0.1904,
       "coin_flip": {
         "n": 24,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 73,
-        "rate": 0.9178,
-        "majority_accuracy": 0.9178
+        "rate": 0.9452,
+        "majority_accuracy": 0.9452
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 424,
-    "correct": 333,
-    "accuracy": 0.7854,
-    "brier": 0.1363,
-    "log_loss": 0.4226,
+    "correct": 335,
+    "accuracy": 0.7901,
+    "brier": 0.1318,
+    "log_loss": 0.4107,
     "open": 14,
     "void": 5,
     "days": 50
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 424,
-      "rate": 0.7288,
-      "majority_accuracy": 0.7288
+      "rate": 0.7382,
+      "majority_accuracy": 0.7382
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 49,
-      "correct": 24,
-      "accuracy": 0.4898,
-      "brier": 0.254,
-      "log_loss": 0.7011,
-      "base_rate": 0.5714,
-      "majority_accuracy": 0.5714
+      "correct": 23,
+      "accuracy": 0.4694,
+      "brier": 0.255,
+      "log_loss": 0.7031,
+      "base_rate": 0.5918,
+      "majority_accuracy": 0.5918
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 49,
-      "correct": 45,
-      "accuracy": 0.9184,
-      "brier": 0.0764,
-      "log_loss": 0.2905,
-      "base_rate": 0.9184,
-      "majority_accuracy": 0.9184
+      "correct": 46,
+      "accuracy": 0.9388,
+      "brier": 0.0609,
+      "log_loss": 0.2498,
+      "base_rate": 0.9388,
+      "majority_accuracy": 0.9388
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -248,12 +248,12 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 23,
-      "correct": 9,
-      "accuracy": 0.3913,
-      "brier": 0.3177,
-      "log_loss": 0.8819,
-      "base_rate": 0.3913,
-      "majority_accuracy": 0.6087
+      "correct": 10,
+      "accuracy": 0.4348,
+      "brier": 0.3026,
+      "log_loss": 0.8503,
+      "base_rate": 0.4348,
+      "majority_accuracy": 0.5652
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 24,
-      "correct": 22,
-      "accuracy": 0.9167,
-      "brier": 0.077,
-      "log_loss": 0.2916,
-      "base_rate": 0.9167,
-      "majority_accuracy": 0.9167
+      "correct": 23,
+      "accuracy": 0.9583,
+      "brier": 0.042,
+      "log_loss": 0.1904,
+      "base_rate": 0.9583,
+      "majority_accuracy": 0.9583
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -326,13 +326,13 @@
       "label": "50\u201360%",
       "n": 69,
       "claimed": 0.538,
-      "actual": 0.4783
+      "actual": 0.4638
     },
     {
       "label": "60\u201370%",
       "n": 32,
       "claimed": 0.6392,
-      "actual": 0.5312
+      "actual": 0.5625
     },
     {
       "label": "70\u201380%",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 111,
       "claimed": 0.8425,
-      "actual": 0.9189
+      "actual": 0.9279
     },
     {
       "label": "90\u2013100%",
       "n": 115,
       "claimed": 0.9449,
-      "actual": 0.9739
+      "actual": 0.9826
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.527,
+      "call": true,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 76826,
-        "change_24h": -0.67
+        "today_usd": 77342,
+        "change_24h": 0.22
       },
       "made_on": "2026-09-13",
       "resolve_on": "2026-09-14"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49681152,
-        "top_title": "JetKVM Mini"
+        "top_id": 49686766,
+        "top_title": "I'm being cyberattacked by Tesla, Inc"
       },
       "made_on": "2026-09-13",
       "resolve_on": "2026-09-14"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.3,
+        "forecast_c": 31.2,
         "for_date": "2026-09-14",
         "city": "New Delhi"
       },
@@ -499,27 +499,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.73,
+      "confidence": 0.742,
       "basis": {
-        "today_usd": 76826,
-        "change_24h": -0.67,
+        "today_usd": 77342,
+        "change_24h": 0.22,
         "model": {
-          "p_event": 0.7295,
+          "p_event": 0.7424,
           "n_train": 48,
           "fallback": null,
           "features": [
-            -0.67,
-            -0.36055198173895464,
-            -3.6435012730305694,
-            0.6436861100812575
+            0.22,
+            0.30867399875493806,
+            -2.9963251432943316,
+            0.6689805895862033
           ],
           "weights": [
-            -0.6784,
-            0.9585,
-            -0.3722,
-            -0.2639
+            -0.6936,
+            0.9607,
+            -0.3762,
+            -0.3713
           ],
-          "bias": 0.2588
+          "bias": 0.3498
         }
       },
       "made_on": "2026-09-13",
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.2,
-            261.7142857142857,
+            252.71428571428572,
             5.557142857142857,
             1.0
           ]
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.916,
       "basis": {
-        "top_id": 49681152,
-        "top_title": "JetKVM Mini",
+        "top_id": 49686766,
+        "top_title": "I'm being cyberattacked by Tesla, Inc",
         "model": {
-          "p_event": 0.9872,
+          "p_event": 0.9155,
           "n_train": 49,
           "fallback": null,
           "features": [
-            0.2,
-            4.0,
+            0.0,
+            11.0,
             6.0
           ],
           "weights": [
-            0.432,
-            -0.183,
-            -0.3784
+            0.3566,
+            -0.1568,
+            -0.1729
           ],
-          "bias": 2.5477
+          "bias": 2.8022
         }
       },
       "made_on": "2026-09-13",
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 31.3,
+        "forecast_c": 31.2,
         "for_date": "2026-09-14",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.989,
+          "p_event": 0.9883,
           "n_train": 46,
           "fallback": null,
           "features": [
-            1.0999999999999979,
+            1.3000000000000007,
             1.7189822570346676,
             0.7999999999999995,
             1.3999999999999986
@@ -6073,8 +6073,8 @@
       "resolve_on": "2026-09-13",
       "call": false,
       "confidence": 0.525,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "kp_storm",
@@ -6125,8 +6125,8 @@
       "resolve_on": "2026-09-13",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -6138,8 +6138,8 @@
       "resolve_on": "2026-09-13",
       "call": true,
       "confidence": 0.674,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "kp_storm_ml",
@@ -6190,8 +6190,8 @@
       "resolve_on": "2026-09-13",
       "call": true,
       "confidence": 0.919,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
