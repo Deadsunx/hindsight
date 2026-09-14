@@ -1,20 +1,20 @@
 {
   "date": "2026-09-14",
-  "fetched_at": "2026-09-14T09:33:06.045774+00:00",
+  "fetched_at": "2026-09-14T20:03:43.896933+00:00",
   "observations": {
     "btc": {
-      "usd": 77797,
-      "usd_24h_change": 1.57
+      "usd": 78979,
+      "usd_24h_change": 2.21
     },
     "kp": {
-      "max_kp": 2.33,
-      "latest_kp": 1.33,
+      "max_kp": 4.0,
+      "latest_kp": 4.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.4,
-      "count": 217,
-      "strongest_place": "northern Mid-Atlantic Ridge"
+      "max_mag": 5.6,
+      "count": 231,
+      "strongest_place": "78 km NNE of Tobelo, Indonesia"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-09-13"
     },
     "hn": {
-      "top_id": 49688695,
-      "top_title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+      "top_id": 49700477,
+      "top_title": "Pion, an agent designed to run any company autonomously",
       "top10": [
-        49688695,
-        49693613,
-        49693610,
-        49638510,
-        49689048,
-        49693226,
-        49690174,
-        49690554,
-        49662246,
-        49688259
+        49700477,
+        49702779,
+        49699158,
+        49699648,
+        49698699,
+        49698607,
+        49700661,
+        49695876,
+        49700255,
+        49699489
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 32.5,
-      "actual_prev_date": "2026-09-13",
-      "today": 32.1,
-      "forecast_next": 30.6,
-      "forecast_next_date": "2026-09-15"
+      "actual_prev": 31.8,
+      "actual_prev_date": "2026-09-14",
+      "today": 31.7,
+      "forecast_next": 32.3,
+      "forecast_next_date": "2026-09-16"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.536,
+      "confidence": 0.542,
       "basis": {
-        "today_usd": 77797,
-        "change_24h": 1.57
+        "today_usd": 78979,
+        "change_24h": 2.21
       },
       "made_on": "2026-09-14",
       "resolve_on": "2026-09-15"
@@ -68,10 +68,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 2.33
+        "today_max_kp": 4.0
       },
       "made_on": "2026-09-14",
       "resolve_on": "2026-09-15"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49688695,
-        "top_title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher"
+        "top_id": 49700477,
+        "top_title": "Pion, an agent designed to run any company autonomously"
       },
       "made_on": "2026-09-14",
       "resolve_on": "2026-09-15"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.6,
-        "for_date": "2026-09-15",
+        "forecast_c": 32.3,
+        "for_date": "2026-09-16",
         "city": "New Delhi"
       },
       "made_on": "2026-09-14",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.682,
+      "confidence": 0.651,
       "basis": {
-        "today_usd": 77797,
-        "change_24h": 1.57,
+        "today_usd": 78979,
+        "change_24h": 2.21,
         "model": {
-          "p_event": 0.6823,
+          "p_event": 0.6512,
           "n_train": 49,
           "fallback": null,
           "features": [
-            1.57,
-            0.9917827424610337,
-            -1.7888252076653122,
-            0.6716597545145773
+            2.21,
+            2.526190074383705,
+            -0.29666473098189927,
+            0.9945317449654505
           ],
           "weights": [
             -0.6949,
@@ -175,26 +175,26 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.848,
+      "confidence": 0.694,
       "basis": {
-        "today_max_kp": 2.33,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.1522,
+          "p_event": 0.3059,
           "n_train": 50,
           "fallback": null,
           "features": [
-            2.33,
-            2.776666666666667,
-            3.19,
+            4.0,
+            3.3333333333333335,
+            3.4285714285714284,
             5.0
           ],
           "weights": [
-            0.9548,
-            -0.2477,
-            -0.7816,
-            0.1114
+            0.9165,
+            -0.2997,
+            -0.56,
+            0.0193
           ],
-          "bias": -0.9146
+          "bias": -0.7653
         }
       },
       "made_on": "2026-09-14",
@@ -215,9 +215,9 @@
           "n_train": 50,
           "fallback": "laplace",
           "features": [
-            5.4,
-            255.71428571428572,
-            5.542857142857143,
+            5.6,
+            257.7142857142857,
+            5.571428571428571,
             1.0
           ]
         }
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.947,
       "basis": {
-        "top_id": 49688695,
-        "top_title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+        "top_id": 49700477,
+        "top_title": "Pion, an agent designed to run any company autonomously",
         "model": {
           "p_event": 0.9469,
           "n_train": 50,
@@ -297,26 +297,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 30.6,
-        "for_date": "2026-09-15",
+        "forecast_c": 32.3,
+        "for_date": "2026-09-16",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9879,
+          "p_event": 0.9908,
           "n_train": 47,
           "fallback": null,
           "features": [
-            1.5,
-            1.735396208362805,
-            0.7833333333333327,
+            0.5999999999999979,
+            1.7189822570346676,
+            0.9199999999999988,
             1.3999999999999986
           ],
           "weights": [
-            -0.3929,
-            0.1174,
-            -0.0304,
-            -0.6246
+            -0.3942,
+            0.1192,
+            -0.0267,
+            -0.6258
           ],
-          "bias": 4.1215
+          "bias": 4.1199
         }
       },
       "made_on": "2026-09-14",

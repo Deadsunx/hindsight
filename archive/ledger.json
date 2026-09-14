@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T09:33:07.441510+00:00",
+  "updated": "2026-09-14T20:03:45.992180+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -27,14 +27,14 @@
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "shared_days": 25,
-      "rule_correct": 20,
-      "model_correct": 18,
-      "rule_accuracy": 0.8,
-      "model_accuracy": 0.72,
-      "rule_brier": 0.1545,
-      "model_brier": 0.1856,
-      "rule_log_loss": 0.486,
-      "model_log_loss": 0.5572,
+      "rule_correct": 19,
+      "model_correct": 17,
+      "rule_accuracy": 0.76,
+      "model_accuracy": 0.68,
+      "rule_brier": 0.1769,
+      "model_brier": 0.2157,
+      "rule_log_loss": 0.5366,
+      "model_log_loss": 0.6354,
       "coin_flip": {
         "n": 25,
         "accuracy": 0.5,
@@ -43,8 +43,8 @@
       },
       "base_rate": {
         "n": 75,
-        "rate": 0.3067,
-        "majority_accuracy": 0.6933
+        "rate": 0.3333,
+        "majority_accuracy": 0.6667
       }
     },
     "quake_m5": {
@@ -142,12 +142,12 @@
   },
   "totals": {
     "graded": 436,
-    "correct": 346,
-    "accuracy": 0.7936,
-    "brier": 0.1303,
-    "log_loss": 0.4068,
-    "open": 14,
-    "void": 5,
+    "correct": 344,
+    "accuracy": 0.789,
+    "brier": 0.1333,
+    "log_loss": 0.4142,
+    "open": 12,
+    "void": 7,
     "days": 51
   },
   "baselines": {
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 436,
-      "rate": 0.7408,
-      "majority_accuracy": 0.7408
+      "rate": 0.7454,
+      "majority_accuracy": 0.7454
     }
   },
   "by_predictor": {
@@ -183,12 +183,12 @@
       "family": "kp_storm",
       "variant": "rule",
       "graded": 50,
-      "correct": 38,
-      "accuracy": 0.76,
-      "brier": 0.1769,
-      "log_loss": 0.5366,
-      "base_rate": 0.32,
-      "majority_accuracy": 0.68
+      "correct": 37,
+      "accuracy": 0.74,
+      "brier": 0.1881,
+      "log_loss": 0.562,
+      "base_rate": 0.34,
+      "majority_accuracy": 0.66
     },
     "quake_m5": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -261,12 +261,12 @@
       "family": "kp_storm",
       "variant": "model",
       "graded": 25,
-      "correct": 18,
-      "accuracy": 0.72,
-      "brier": 0.1856,
-      "log_loss": 0.5572,
-      "base_rate": 0.28,
-      "majority_accuracy": 0.72
+      "correct": 17,
+      "accuracy": 0.68,
+      "brier": 0.2157,
+      "log_loss": 0.6354,
+      "base_rate": 0.32,
+      "majority_accuracy": 0.68
     },
     "quake_m5_ml": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -338,13 +338,13 @@
       "label": "70\u201380%",
       "n": 100,
       "claimed": 0.7373,
-      "actual": 0.72
+      "actual": 0.71
     },
     {
       "label": "80\u201390%",
       "n": 114,
       "claimed": 0.8428,
-      "actual": 0.9298
+      "actual": 0.9211
     },
     {
       "label": "90\u2013100%",
@@ -355,66 +355,16 @@
   ],
   "open_bets": [
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 31.2,
-        "for_date": "2026-09-14",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-09-13",
-      "resolve_on": "2026-09-15"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.95,
-      "basis": {
-        "forecast_c": 31.2,
-        "for_date": "2026-09-14",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.9883,
-          "n_train": 46,
-          "fallback": null,
-          "features": [
-            1.3000000000000007,
-            1.7189822570346676,
-            0.7999999999999995,
-            1.3999999999999986
-          ],
-          "weights": [
-            -0.3916,
-            0.1138,
-            -0.0297,
-            -0.6173
-          ],
-          "bias": 4.0918
-        }
-      },
-      "made_on": "2026-09-13",
-      "resolve_on": "2026-09-15"
-    },
-    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.536,
+      "confidence": 0.542,
       "basis": {
-        "today_usd": 77797,
-        "change_24h": 1.57
+        "today_usd": 78979,
+        "change_24h": 2.21
       },
       "made_on": "2026-09-14",
       "resolve_on": "2026-09-15"
@@ -425,10 +375,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 2.33
+        "today_max_kp": 4.0
       },
       "made_on": "2026-09-14",
       "resolve_on": "2026-09-15"
@@ -470,8 +420,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49688695,
-        "top_title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher"
+        "top_id": 49700477,
+        "top_title": "Pion, an agent designed to run any company autonomously"
       },
       "made_on": "2026-09-14",
       "resolve_on": "2026-09-15"
@@ -485,8 +435,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.6,
-        "for_date": "2026-09-15",
+        "forecast_c": 32.3,
+        "for_date": "2026-09-16",
         "city": "New Delhi"
       },
       "made_on": "2026-09-14",
@@ -499,19 +449,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.682,
+      "confidence": 0.651,
       "basis": {
-        "today_usd": 77797,
-        "change_24h": 1.57,
+        "today_usd": 78979,
+        "change_24h": 2.21,
         "model": {
-          "p_event": 0.6823,
+          "p_event": 0.6512,
           "n_train": 49,
           "fallback": null,
           "features": [
-            1.57,
-            0.9917827424610337,
-            -1.7888252076653122,
-            0.6716597545145773
+            2.21,
+            2.526190074383705,
+            -0.29666473098189927,
+            0.9945317449654505
           ],
           "weights": [
             -0.6949,
@@ -532,26 +482,26 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.848,
+      "confidence": 0.694,
       "basis": {
-        "today_max_kp": 2.33,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.1522,
+          "p_event": 0.3059,
           "n_train": 50,
           "fallback": null,
           "features": [
-            2.33,
-            2.776666666666667,
-            3.19,
+            4.0,
+            3.3333333333333335,
+            3.4285714285714284,
             5.0
           ],
           "weights": [
-            0.9548,
-            -0.2477,
-            -0.7816,
-            0.1114
+            0.9165,
+            -0.2997,
+            -0.56,
+            0.0193
           ],
-          "bias": -0.9146
+          "bias": -0.7653
         }
       },
       "made_on": "2026-09-14",
@@ -572,9 +522,9 @@
           "n_train": 50,
           "fallback": "laplace",
           "features": [
-            5.4,
-            255.71428571428572,
-            5.542857142857143,
+            5.6,
+            257.7142857142857,
+            5.571428571428571,
             1.0
           ]
         }
@@ -623,8 +573,8 @@
       "call": true,
       "confidence": 0.947,
       "basis": {
-        "top_id": 49688695,
-        "top_title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
+        "top_id": 49700477,
+        "top_title": "Pion, an agent designed to run any company autonomously",
         "model": {
           "p_event": 0.9469,
           "n_train": 50,
@@ -654,26 +604,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 30.6,
-        "for_date": "2026-09-15",
+        "forecast_c": 32.3,
+        "for_date": "2026-09-16",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9879,
+          "p_event": 0.9908,
           "n_train": 47,
           "fallback": null,
           "features": [
-            1.5,
-            1.735396208362805,
-            0.7833333333333327,
+            0.5999999999999979,
+            1.7189822570346676,
+            0.9199999999999988,
             1.3999999999999986
           ],
           "weights": [
-            -0.3929,
-            0.1174,
-            -0.0304,
-            -0.6246
+            -0.3942,
+            0.1192,
+            -0.0267,
+            -0.6258
           ],
-          "bias": 4.1215
+          "bias": 4.1199
         }
       },
       "made_on": "2026-09-14",
@@ -6129,19 +6079,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "made_on": "2026-09-12",
-      "resolve_on": "2026-09-14",
-      "call": true,
-      "confidence": 0.8,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -6207,19 +6144,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "made_on": "2026-09-12",
-      "resolve_on": "2026-09-14",
-      "call": true,
-      "confidence": 0.95,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -6242,8 +6166,8 @@
       "resolve_on": "2026-09-14",
       "call": false,
       "confidence": 0.78,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "quake_m5",
@@ -6285,6 +6209,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-09-13",
+      "resolve_on": "2026-09-15",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -6307,8 +6244,8 @@
       "resolve_on": "2026-09-14",
       "call": false,
       "confidence": 0.876,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "quake_m5_ml",
@@ -6346,6 +6283,19 @@
       "resolve_on": "2026-09-14",
       "call": true,
       "confidence": 0.916,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-09-13",
+      "resolve_on": "2026-09-15",
+      "call": true,
+      "confidence": 0.95,
       "actual": true,
       "correct": true
     }

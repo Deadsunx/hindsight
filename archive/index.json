@@ -680,8 +680,8 @@
       "weather"
     ],
     "made": 12,
-    "graded": 12,
-    "correct": 10
+    "graded": 10,
+    "correct": 8
   },
   {
     "date": "2026-09-13",
@@ -694,7 +694,7 @@
       "weather"
     ],
     "made": 12,
-    "graded": 10,
+    "graded": 12,
     "correct": 9
   },
   {
