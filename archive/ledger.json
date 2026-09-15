@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T09:11:05.765935+00:00",
+  "updated": "2026-09-15T19:22:29.931613+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -27,14 +27,14 @@
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "shared_days": 26,
-      "rule_correct": 20,
-      "model_correct": 17,
-      "rule_accuracy": 0.7692,
-      "model_accuracy": 0.6538,
-      "rule_brier": 0.1736,
-      "model_brier": 0.2259,
-      "rule_log_loss": 0.5297,
-      "model_log_loss": 0.6565,
+      "rule_correct": 19,
+      "model_correct": 18,
+      "rule_accuracy": 0.7308,
+      "model_accuracy": 0.6923,
+      "rule_brier": 0.189,
+      "model_brier": 0.211,
+      "rule_log_loss": 0.5623,
+      "model_log_loss": 0.625,
       "coin_flip": {
         "n": 26,
         "accuracy": 0.5,
@@ -43,8 +43,8 @@
       },
       "base_rate": {
         "n": 77,
-        "rate": 0.3506,
-        "majority_accuracy": 0.6494
+        "rate": 0.3247,
+        "majority_accuracy": 0.6753
       }
     },
     "quake_m5": {
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 26,
-      "rule_correct": 24,
-      "model_correct": 24,
-      "rule_accuracy": 0.9231,
-      "model_accuracy": 0.9231,
-      "rule_brier": 0.0729,
-      "model_brier": 0.0736,
-      "rule_log_loss": 0.2811,
-      "model_log_loss": 0.2921,
+      "rule_correct": 25,
+      "model_correct": 25,
+      "rule_accuracy": 0.9615,
+      "model_accuracy": 0.9615,
+      "rule_brier": 0.0436,
+      "model_brier": 0.0392,
+      "rule_log_loss": 0.2045,
+      "model_log_loss": 0.1812,
       "coin_flip": {
         "n": 26,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 77,
-        "rate": 0.9221,
-        "majority_accuracy": 0.9221
+        "rate": 0.9481,
+        "majority_accuracy": 0.9481
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 446,
-    "correct": 349,
-    "accuracy": 0.7825,
-    "brier": 0.1372,
-    "log_loss": 0.4252,
+    "correct": 351,
+    "accuracy": 0.787,
+    "brier": 0.1335,
+    "log_loss": 0.4143,
     "open": 14,
     "void": 7,
     "days": 52
@@ -183,12 +183,12 @@
       "family": "kp_storm",
       "variant": "rule",
       "graded": 51,
-      "correct": 38,
-      "accuracy": 0.7451,
-      "brier": 0.1862,
-      "log_loss": 0.5579,
-      "base_rate": 0.3529,
-      "majority_accuracy": 0.6471
+      "correct": 37,
+      "accuracy": 0.7255,
+      "brier": 0.194,
+      "log_loss": 0.5745,
+      "base_rate": 0.3333,
+      "majority_accuracy": 0.6667
     },
     "quake_m5": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 51,
-      "correct": 47,
-      "accuracy": 0.9216,
-      "brier": 0.074,
-      "log_loss": 0.2841,
-      "base_rate": 0.9216,
-      "majority_accuracy": 0.9216
+      "correct": 48,
+      "accuracy": 0.9412,
+      "brier": 0.0591,
+      "log_loss": 0.245,
+      "base_rate": 0.9412,
+      "majority_accuracy": 0.9412
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -261,12 +261,12 @@
       "family": "kp_storm",
       "variant": "model",
       "graded": 26,
-      "correct": 17,
-      "accuracy": 0.6538,
-      "brier": 0.2259,
-      "log_loss": 0.6565,
-      "base_rate": 0.3462,
-      "majority_accuracy": 0.6538
+      "correct": 18,
+      "accuracy": 0.6923,
+      "brier": 0.211,
+      "log_loss": 0.625,
+      "base_rate": 0.3077,
+      "majority_accuracy": 0.6923
     },
     "quake_m5_ml": {
       "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 26,
-      "correct": 24,
-      "accuracy": 0.9231,
-      "brier": 0.0736,
-      "log_loss": 0.2921,
-      "base_rate": 0.9231,
-      "majority_accuracy": 0.9231
+      "correct": 25,
+      "accuracy": 0.9615,
+      "brier": 0.0392,
+      "log_loss": 0.1812,
+      "base_rate": 0.9615,
+      "majority_accuracy": 0.9615
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -332,25 +332,25 @@
       "label": "60\u201370%",
       "n": 35,
       "claimed": 0.6406,
-      "actual": 0.5143
+      "actual": 0.5429
     },
     {
       "label": "70\u201380%",
       "n": 102,
       "claimed": 0.7366,
-      "actual": 0.7157
+      "actual": 0.7059
     },
     {
       "label": "80\u201390%",
       "n": 116,
       "claimed": 0.8432,
-      "actual": 0.9138
+      "actual": 0.9224
     },
     {
       "label": "90\u2013100%",
       "n": 122,
       "claimed": 0.9449,
-      "actual": 0.9754
+      "actual": 0.9836
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.531,
+      "confidence": 0.558,
       "basis": {
-        "today_usd": 76893,
-        "change_24h": -1.12
+        "today_usd": 76139,
+        "change_24h": -3.85
       },
       "made_on": "2026-09-15",
       "resolve_on": "2026-09-16"
@@ -425,10 +425,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 4.0
+        "today_max_kp": 3.0
       },
       "made_on": "2026-09-15",
       "resolve_on": "2026-09-16"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49708431,
-        "top_title": "I can't stop thinking about Papua New Guinea"
+        "top_id": 49711544,
+        "top_title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations"
       },
       "made_on": "2026-09-15",
       "resolve_on": "2026-09-16"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.9,
-        "for_date": "2026-09-16",
+        "forecast_c": 32.8,
+        "for_date": "2026-09-17",
         "city": "New Delhi"
       },
       "made_on": "2026-09-15",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.727,
+      "confidence": 0.849,
       "basis": {
-        "today_usd": 76893,
-        "change_24h": -1.12,
+        "today_usd": 76139,
+        "change_24h": -3.85,
         "model": {
-          "p_event": 0.727,
+          "p_event": 0.8486,
           "n_train": 50,
           "fallback": null,
           "features": [
-            -1.12,
-            -0.37960251859145977,
-            -2.0084364526118614,
-            1.2693684845392004
+            -3.85,
+            -1.356463607389946,
+            -2.9693254661076307,
+            1.4758394951004619
           ],
           "weights": [
             -0.7512,
@@ -532,26 +532,26 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.586,
+      "confidence": 0.8,
       "basis": {
-        "today_max_kp": 4.0,
+        "today_max_kp": 3.0,
         "model": {
-          "p_event": 0.414,
+          "p_event": 0.1999,
           "n_train": 51,
           "fallback": null,
           "features": [
-            4.0,
-            3.6666666666666665,
-            3.2857142857142856,
+            3.0,
+            3.3333333333333335,
+            3.142857142857143,
             5.33
           ],
           "weights": [
-            0.9285,
-            -0.3492,
-            -0.4924,
-            0.1372
+            0.9119,
+            -0.2759,
+            -0.5963,
+            -0.0357
           ],
-          "bias": -0.6975
+          "bias": -0.7991
         }
       },
       "made_on": "2026-09-15",
@@ -572,9 +572,9 @@
           "n_train": 51,
           "fallback": "laplace",
           "features": [
-            5.6,
-            255.28571428571428,
-            5.614285714285714,
+            5.3,
+            258.2857142857143,
+            5.571428571428571,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.945,
       "basis": {
-        "top_id": 49708431,
-        "top_title": "I can't stop thinking about Papua New Guinea",
+        "top_id": 49711544,
+        "top_title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
         "model": {
-          "p_event": 0.9696,
+          "p_event": 0.9454,
           "n_train": 51,
           "fallback": null,
           "features": [
-            0.1,
-            6.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.3724,
-            -0.1516,
-            0.1717
+            0.3474,
+            -0.1531,
+            -0.166
           ],
-          "bias": 2.5528
+          "bias": 2.8416
         }
       },
       "made_on": "2026-09-15",
@@ -654,17 +654,17 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 33.9,
-        "for_date": "2026-09-16",
+        "forecast_c": 32.8,
+        "for_date": "2026-09-17",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9918,
+          "p_event": 0.9855,
           "n_train": 47,
           "fallback": null,
           "features": [
-            0.20000000000000284,
-            1.643806557962341,
-            0.8666666666666659,
+            2.0,
+            1.672004784682149,
+            0.9199999999999988,
             1.3999999999999986
           ],
           "weights": [
@@ -6372,8 +6372,8 @@
       "resolve_on": "2026-09-15",
       "call": true,
       "confidence": 0.7,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "quake_m5",
@@ -6411,8 +6411,8 @@
       "resolve_on": "2026-09-15",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -6437,8 +6437,8 @@
       "resolve_on": "2026-09-15",
       "call": false,
       "confidence": 0.694,
-      "actual": true,
-      "correct": false
+      "actual": false,
+      "correct": true
     },
     {
       "id": "quake_m5_ml",
@@ -6476,8 +6476,8 @@
       "resolve_on": "2026-09-15",
       "call": true,
       "confidence": 0.947,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
