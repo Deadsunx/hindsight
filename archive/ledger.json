@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T09:03:39.113009+00:00",
+  "updated": "2026-09-16T19:13:07.808707+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -118,49 +118,49 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 21,
+      "shared_days": 22,
       "rule_correct": 21,
       "model_correct": 21,
-      "rule_accuracy": 1.0,
-      "model_accuracy": 1.0,
-      "rule_brier": 0.04,
-      "model_brier": 0.003,
-      "rule_log_loss": 0.2231,
-      "model_log_loss": 0.0552,
+      "rule_accuracy": 0.9545,
+      "model_accuracy": 0.9545,
+      "rule_brier": 0.0673,
+      "model_brier": 0.0439,
+      "rule_log_loss": 0.2862,
+      "model_log_loss": 0.1889,
       "coin_flip": {
-        "n": 21,
+        "n": 22,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 68,
-        "rate": 0.9853,
-        "majority_accuracy": 0.9853
+        "n": 70,
+        "rate": 0.9571,
+        "majority_accuracy": 0.9571
       }
     }
   },
   "totals": {
-    "graded": 456,
+    "graded": 458,
     "correct": 356,
-    "accuracy": 0.7807,
-    "brier": 0.1393,
-    "log_loss": 0.4301,
+    "accuracy": 0.7773,
+    "brier": 0.142,
+    "log_loss": 0.4383,
     "open": 14,
-    "void": 9,
+    "void": 7,
     "days": 53
   },
   "baselines": {
     "coin_flip": {
-      "n": 456,
+      "n": 458,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 456,
-      "rate": 0.739,
-      "majority_accuracy": 0.739
+      "n": 458,
+      "rate": 0.7358,
+      "majority_accuracy": 0.7358
     }
   },
   "by_predictor": {
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 47,
+      "graded": 48,
       "correct": 46,
-      "accuracy": 0.9787,
-      "brier": 0.0528,
-      "log_loss": 0.2526,
-      "base_rate": 0.9787,
-      "majority_accuracy": 0.9787
+      "accuracy": 0.9583,
+      "brier": 0.065,
+      "log_loss": 0.2809,
+      "base_rate": 0.9583,
+      "majority_accuracy": 0.9583
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 21,
+      "graded": 22,
       "correct": 21,
-      "accuracy": 1.0,
-      "brier": 0.003,
-      "log_loss": 0.0552,
-      "base_rate": 1.0,
-      "majority_accuracy": 1.0
+      "accuracy": 0.9545,
+      "brier": 0.0439,
+      "log_loss": 0.1889,
+      "base_rate": 0.9545,
+      "majority_accuracy": 0.9545
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 119,
-      "claimed": 0.8432,
-      "actual": 0.8992
+      "n": 120,
+      "claimed": 0.8428,
+      "actual": 0.8917
     },
     {
       "label": "90\u2013100%",
-      "n": 125,
+      "n": 126,
       "claimed": 0.945,
-      "actual": 0.976
+      "actual": 0.9683
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.535,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 75703,
-        "change_24h": -1.54
+        "today_usd": 75826,
+        "change_24h": -0.22
       },
       "made_on": "2026-09-16",
       "resolve_on": "2026-09-17"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49717558,
-        "top_title": "Introducing System One Models and Jev"
+        "top_id": 49731054,
+        "top_title": "We've created the first vectorized Quicksort"
       },
       "made_on": "2026-09-16",
       "resolve_on": "2026-09-17"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.7,
-        "for_date": "2026-09-17",
+        "forecast_c": 34.2,
+        "for_date": "2026-09-18",
         "city": "New Delhi"
       },
       "made_on": "2026-09-16",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.621,
+      "confidence": 0.54,
       "basis": {
-        "today_usd": 75703,
-        "change_24h": -1.54,
+        "today_usd": 75826,
+        "change_24h": -0.22,
         "model": {
-          "p_event": 0.6209,
+          "p_event": 0.5399,
           "n_train": 51,
           "fallback": null,
           "features": [
-            -1.54,
-            -2.1191590597605447,
-            -3.531105843973803,
-            1.475183973871183
+            -0.22,
+            -1.9601251583874268,
+            -3.374366032061571,
+            1.4750699829269542
           ],
           "weights": [
             -0.5605,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.1,
-            250.71428571428572,
+            251.57142857142858,
             5.557142857142857,
             1.0
           ]
@@ -623,15 +623,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 49717558,
-        "top_title": "Introducing System One Models and Jev",
+        "top_id": 49731054,
+        "top_title": "We've created the first vectorized Quicksort",
         "model": {
-          "p_event": 0.9962,
+          "p_event": 0.9699,
           "n_train": 52,
           "fallback": null,
           "features": [
-            0.3,
-            3.0,
+            0.1,
+            8.0,
             2.0
           ],
           "weights": [
@@ -654,26 +654,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 31.7,
-        "for_date": "2026-09-17",
+        "forecast_c": 34.2,
+        "for_date": "2026-09-18",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9743,
-          "n_train": 47,
+          "p_event": 0.9582,
+          "n_train": 48,
           "fallback": null,
           "features": [
-            3.3000000000000007,
-            0.9826494797230592,
+            1.8000000000000043,
+            1.2405240827972666,
             0.9199999999999988,
             1.3999999999999986
           ],
           "weights": [
-            -0.3942,
-            0.1192,
-            -0.0267,
-            -0.6258
+            -0.034,
+            -0.1602,
+            -0.316,
+            -0.0995
           ],
-          "bias": 4.1199
+          "bias": 3.2492
         }
       },
       "made_on": "2026-09-16",
@@ -6415,6 +6415,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-09-14",
+      "resolve_on": "2026-09-16",
+      "call": true,
+      "confidence": 0.8,
+      "actual": false,
+      "correct": false
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -6478,6 +6491,19 @@
       "confidence": 0.947,
       "actual": true,
       "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-09-14",
+      "resolve_on": "2026-09-16",
+      "call": true,
+      "confidence": 0.95,
+      "actual": false,
+      "correct": false
     },
     {
       "id": "btc_up",

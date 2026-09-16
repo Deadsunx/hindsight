@@ -1,19 +1,19 @@
 {
   "date": "2026-09-16",
-  "fetched_at": "2026-09-16T09:03:37.239257+00:00",
+  "fetched_at": "2026-09-16T19:13:06.406625+00:00",
   "observations": {
     "btc": {
-      "usd": 75703,
-      "usd_24h_change": -1.54
+      "usd": 75826,
+      "usd_24h_change": -0.22
     },
     "kp": {
       "max_kp": 3.67,
-      "latest_kp": 2.33,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.1,
-      "count": 208,
+      "count": 214,
       "strongest_place": "172 km ESE of Saipan, Northern Mariana Islands"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-09-15"
     },
     "hn": {
-      "top_id": 49717558,
-      "top_title": "Introducing System One Models and Jev",
+      "top_id": 49731054,
+      "top_title": "We've created the first vectorized Quicksort",
       "top10": [
-        49717558,
-        49721322,
+        49731054,
+        49729000,
+        49726955,
+        49731360,
+        49731353,
+        49723408,
+        49710903,
         49711544,
-        49693971,
-        49716176,
-        49705944,
-        49715947,
-        49721548,
-        49717638,
-        49722276
+        49730302,
+        49717298
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 32.9,
-      "actual_prev_date": "2026-09-15",
-      "today": 35.0,
-      "forecast_next": 31.7,
-      "forecast_next_date": "2026-09-17"
+      "actual_prev": 35.0,
+      "actual_prev_date": "2026-09-16",
+      "today": 32.4,
+      "forecast_next": 34.2,
+      "forecast_next_date": "2026-09-18"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.535,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 75703,
-        "change_24h": -1.54
+        "today_usd": 75826,
+        "change_24h": -0.22
       },
       "made_on": "2026-09-16",
       "resolve_on": "2026-09-17"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49717558,
-        "top_title": "Introducing System One Models and Jev"
+        "top_id": 49731054,
+        "top_title": "We've created the first vectorized Quicksort"
       },
       "made_on": "2026-09-16",
       "resolve_on": "2026-09-17"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.7,
-        "for_date": "2026-09-17",
+        "forecast_c": 34.2,
+        "for_date": "2026-09-18",
         "city": "New Delhi"
       },
       "made_on": "2026-09-16",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.621,
+      "confidence": 0.54,
       "basis": {
-        "today_usd": 75703,
-        "change_24h": -1.54,
+        "today_usd": 75826,
+        "change_24h": -0.22,
         "model": {
-          "p_event": 0.6209,
+          "p_event": 0.5399,
           "n_train": 51,
           "fallback": null,
           "features": [
-            -1.54,
-            -2.1191590597605447,
-            -3.531105843973803,
-            1.475183973871183
+            -0.22,
+            -1.9601251583874268,
+            -3.374366032061571,
+            1.4750699829269542
           ],
           "weights": [
             -0.5605,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.1,
-            250.71428571428572,
+            251.57142857142858,
             5.557142857142857,
             1.0
           ]
@@ -266,15 +266,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 49717558,
-        "top_title": "Introducing System One Models and Jev",
+        "top_id": 49731054,
+        "top_title": "We've created the first vectorized Quicksort",
         "model": {
-          "p_event": 0.9962,
+          "p_event": 0.9699,
           "n_train": 52,
           "fallback": null,
           "features": [
-            0.3,
-            3.0,
+            0.1,
+            8.0,
             2.0
           ],
           "weights": [
@@ -297,26 +297,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 31.7,
-        "for_date": "2026-09-17",
+        "forecast_c": 34.2,
+        "for_date": "2026-09-18",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9743,
-          "n_train": 47,
+          "p_event": 0.9582,
+          "n_train": 48,
           "fallback": null,
           "features": [
-            3.3000000000000007,
-            0.9826494797230592,
+            1.8000000000000043,
+            1.2405240827972666,
             0.9199999999999988,
             1.3999999999999986
           ],
           "weights": [
-            -0.3942,
-            0.1192,
-            -0.0267,
-            -0.6258
+            -0.034,
+            -0.1602,
+            -0.316,
+            -0.0995
           ],
-          "bias": 4.1199
+          "bias": 3.2492
         }
       },
       "made_on": "2026-09-16",
