@@ -1,20 +1,20 @@
 {
   "date": "2026-09-17",
-  "fetched_at": "2026-09-17T09:11:56.518099+00:00",
+  "fetched_at": "2026-09-17T19:25:27.459213+00:00",
   "observations": {
     "btc": {
-      "usd": 76579,
-      "usd_24h_change": 1.06
+      "usd": 76523,
+      "usd_24h_change": 1.5
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 1.67,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.3,
-      "count": 206,
-      "strongest_place": "191 km SE of Mata-Utu, Wallis and Futuna"
+      "max_mag": 6.5,
+      "count": 196,
+      "strongest_place": "165 km W of Nikolski, Alaska"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-09-16"
     },
     "hn": {
-      "top_id": 49737849,
-      "top_title": "One Year of Sponsored Servo Development",
+      "top_id": 49743097,
+      "top_title": "Hister: A private search engine for the pages you visit and the files you keep",
       "top10": [
-        49737849,
-        49724881,
-        49735930,
-        49685835,
-        49731285,
-        49718773,
-        49719751,
-        49732270,
-        49715318,
-        49738091
+        49743097,
+        49715813,
+        49742355,
+        49743527,
+        49742353,
+        49738091,
+        49743483,
+        49737922,
+        49743049,
+        49737849
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 35.0,
-      "actual_prev_date": "2026-09-16",
-      "today": 34.7,
-      "forecast_next": 34.3,
-      "forecast_next_date": "2026-09-18"
+      "actual_prev": 32.5,
+      "actual_prev_date": "2026-09-17",
+      "today": 33.4,
+      "forecast_next": 34.9,
+      "forecast_next_date": "2026-09-19"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.531,
+      "confidence": 0.535,
       "basis": {
-        "today_usd": 76579,
-        "change_24h": 1.06
+        "today_usd": 76523,
+        "change_24h": 1.5
       },
       "made_on": "2026-09-17",
       "resolve_on": "2026-09-18"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49737849,
-        "top_title": "One Year of Sponsored Servo Development"
+        "top_id": 49743097,
+        "top_title": "Hister: A private search engine for the pages you visit and the files you keep"
       },
       "made_on": "2026-09-17",
       "resolve_on": "2026-09-18"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.3,
-        "for_date": "2026-09-18",
+        "forecast_c": 34.9,
+        "for_date": "2026-09-19",
         "city": "New Delhi"
       },
       "made_on": "2026-09-17",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.613,
+      "confidence": 0.642,
       "basis": {
-        "today_usd": 76579,
-        "change_24h": 1.06,
+        "today_usd": 76523,
+        "change_24h": 1.5,
         "model": {
-          "p_event": 0.3872,
+          "p_event": 0.3582,
           "n_train": 52,
           "fallback": null,
           "features": [
-            1.06,
-            -3.0387824611605607,
-            -0.6808985266652856,
-            1.5311538000464546
+            1.5,
+            -3.1096873852543117,
+            -0.7535277028429155,
+            1.5246072346743842
           ],
           "weights": [
             -0.5457,
@@ -215,9 +215,9 @@
           "n_train": 53,
           "fallback": "laplace",
           "features": [
-            5.3,
-            244.0,
-            5.557142857142857,
+            6.5,
+            242.57142857142858,
+            5.728571428571429,
             1.0
           ]
         }
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.917,
       "basis": {
-        "top_id": 49737849,
-        "top_title": "One Year of Sponsored Servo Development",
+        "top_id": 49743097,
+        "top_title": "Hister: A private search engine for the pages you visit and the files you keep",
         "model": {
           "p_event": 0.917,
           "n_train": 53,
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.896,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 34.3,
-        "for_date": "2026-09-18",
+        "forecast_c": 34.9,
+        "for_date": "2026-09-19",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8956,
-          "n_train": 48,
+          "p_event": 0.95,
+          "n_train": 49,
           "fallback": null,
           "features": [
-            0.4000000000000057,
-            1.412975583653164,
-            1.439999999999999,
-            2.700000000000003
+            1.5,
+            1.2385475364312823,
+            1.1249999999999982,
+            1.3999999999999986
           ],
           "weights": [
-            -0.034,
-            -0.1602,
-            -0.316,
-            -0.0995
+            -0.0273,
+            -0.1495,
+            -0.3065,
+            -0.1195
           ],
-          "bias": 3.2492
+          "bias": 3.2699
         }
       },
       "made_on": "2026-09-17",
