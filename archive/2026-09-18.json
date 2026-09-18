@@ -1,20 +1,20 @@
 {
   "date": "2026-09-18",
-  "fetched_at": "2026-09-18T08:44:45.172268+00:00",
+  "fetched_at": "2026-09-18T18:44:50.688744+00:00",
   "observations": {
     "btc": {
-      "usd": 77901,
-      "usd_24h_change": 1.94
+      "usd": 80986,
+      "usd_24h_change": 5.84
     },
     "kp": {
-      "max_kp": 3.0,
-      "latest_kp": 2.0,
+      "max_kp": 2.33,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.5,
-      "count": 186,
-      "strongest_place": "165 km W of Nikolski, Alaska"
+      "max_mag": 5.2,
+      "count": 232,
+      "strongest_place": "28 km NE of Villa Presidente Frei, Chile"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-09-17"
     },
     "hn": {
-      "top_id": 49750152,
-      "top_title": "Jemalloc 5.4.0",
+      "top_id": 49754785,
+      "top_title": "Cloudflare Quick Tunnels",
       "top10": [
-        49750152,
-        49750094,
-        49745940,
-        49746618,
-        49746163,
-        49747925,
-        49726614,
-        49743097,
-        49749771,
-        49749656
+        49754785,
+        49757050,
+        49755160,
+        49748553,
+        49757520,
+        49752041,
+        49746406,
+        49744416,
+        49756762,
+        49757859
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.5,
       "actual_prev_date": "2026-09-17",
-      "today": 32.1,
-      "forecast_next": 33.5,
+      "today": 31.2,
+      "forecast_next": 32.9,
       "forecast_next_date": "2026-09-19"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.539,
+      "confidence": 0.578,
       "basis": {
-        "today_usd": 77901,
-        "change_24h": 1.94
+        "today_usd": 80986,
+        "change_24h": 5.84
       },
       "made_on": "2026-09-18",
       "resolve_on": "2026-09-19"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.0
+        "today_max_kp": 2.33
       },
       "made_on": "2026-09-18",
       "resolve_on": "2026-09-19"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49750152,
-        "top_title": "Jemalloc 5.4.0"
+        "top_id": 49754785,
+        "top_title": "Cloudflare Quick Tunnels"
       },
       "made_on": "2026-09-18",
       "resolve_on": "2026-09-19"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.5,
+        "forecast_c": 32.9,
         "for_date": "2026-09-19",
         "city": "New Delhi"
       },
@@ -141,20 +141,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.565,
+      "call": false,
+      "confidence": 0.621,
       "basis": {
-        "today_usd": 77901,
-        "change_24h": 1.94,
+        "today_usd": 80986,
+        "change_24h": 5.84,
         "model": {
-          "p_event": 0.5646,
+          "p_event": 0.379,
           "n_train": 53,
           "fallback": null,
           "features": [
-            1.94,
-            2.3141885236212634,
-            1.126789817351015,
-            1.6587345644391192
+            5.84,
+            6.365988520994503,
+            5.131566990770198,
+            2.45567970806117
           ],
           "weights": [
             -0.4458,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.828,
+      "confidence": 0.862,
       "basis": {
-        "today_max_kp": 3.0,
+        "today_max_kp": 2.33,
         "model": {
-          "p_event": 0.1725,
+          "p_event": 0.1377,
           "n_train": 54,
           "fallback": null,
           "features": [
+            2.33,
             3.0,
-            3.223333333333333,
-            3.238571428571429,
+            3.142857142857143,
             1.67
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 54,
           "fallback": "laplace",
           "features": [
-            6.5,
-            228.14285714285714,
-            5.814285714285715,
+            5.2,
+            234.71428571428572,
+            5.628571428571428,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.92,
       "basis": {
-        "top_id": 49750152,
-        "top_title": "Jemalloc 5.4.0",
+        "top_id": 49754785,
+        "top_title": "Cloudflare Quick Tunnels",
         "model": {
-          "p_event": 0.9703,
+          "p_event": 0.9204,
           "n_train": 54,
           "fallback": null,
           "features": [
-            0.1,
-            8.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.4459,
-            -0.1968,
-            0.0236
+            0.3985,
+            -0.1806,
+            0.0452
           ],
-          "bias": 2.3805
+          "bias": 2.6116
         }
       },
       "made_on": "2026-09-18",
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 33.5,
+        "forecast_c": 32.9,
         "for_date": "2026-09-19",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9587,
+          "p_event": 0.9585,
           "n_train": 49,
           "fallback": null,
           "features": [
-            1.3999999999999986,
+            1.6999999999999993,
             1.236486959090147,
             0.9499999999999975,
             1.3999999999999986

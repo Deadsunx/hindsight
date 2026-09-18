@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18T08:44:46.573742+00:00",
+  "updated": "2026-09-18T18:44:52.847426+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 29,
-      "rule_correct": 26,
-      "model_correct": 26,
-      "rule_accuracy": 0.8966,
-      "model_accuracy": 0.8966,
-      "rule_brier": 0.093,
-      "model_brier": 0.095,
-      "rule_log_loss": 0.3339,
-      "model_log_loss": 0.35,
+      "rule_correct": 27,
+      "model_correct": 27,
+      "rule_accuracy": 0.931,
+      "model_accuracy": 0.931,
+      "rule_brier": 0.0668,
+      "model_brier": 0.0662,
+      "rule_log_loss": 0.2652,
+      "model_log_loss": 0.2672,
       "coin_flip": {
         "n": 29,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 83,
-        "rate": 0.9036,
-        "majority_accuracy": 0.9036
+        "rate": 0.9277,
+        "majority_accuracy": 0.9277
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 480,
-    "correct": 373,
-    "accuracy": 0.7771,
-    "brier": 0.1438,
-    "log_loss": 0.4432,
+    "correct": 375,
+    "accuracy": 0.7812,
+    "brier": 0.1404,
+    "log_loss": 0.434,
     "open": 14,
     "void": 9,
     "days": 55
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 480,
-      "rate": 0.7354,
-      "majority_accuracy": 0.7354
+      "rate": 0.7396,
+      "majority_accuracy": 0.7396
     }
   },
   "by_predictor": {
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 54,
-      "correct": 49,
-      "accuracy": 0.9074,
-      "brier": 0.0848,
-      "log_loss": 0.3123,
-      "base_rate": 0.9074,
-      "majority_accuracy": 0.9074
+      "correct": 50,
+      "accuracy": 0.9259,
+      "brier": 0.0707,
+      "log_loss": 0.2754,
+      "base_rate": 0.9259,
+      "majority_accuracy": 0.9259
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 29,
-      "correct": 26,
-      "accuracy": 0.8966,
-      "brier": 0.095,
-      "log_loss": 0.35,
-      "base_rate": 0.8966,
-      "majority_accuracy": 0.8966
+      "correct": 27,
+      "accuracy": 0.931,
+      "brier": 0.0662,
+      "log_loss": 0.2672,
+      "base_rate": 0.931,
+      "majority_accuracy": 0.931
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 123,
       "claimed": 0.8431,
-      "actual": 0.8862
+      "actual": 0.8943
     },
     {
       "label": "90\u2013100%",
       "n": 133,
       "claimed": 0.945,
-      "actual": 0.9624
+      "actual": 0.9699
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.539,
+      "confidence": 0.578,
       "basis": {
-        "today_usd": 77901,
-        "change_24h": 1.94
+        "today_usd": 80986,
+        "change_24h": 5.84
       },
       "made_on": "2026-09-18",
       "resolve_on": "2026-09-19"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.0
+        "today_max_kp": 2.33
       },
       "made_on": "2026-09-18",
       "resolve_on": "2026-09-19"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49750152,
-        "top_title": "Jemalloc 5.4.0"
+        "top_id": 49754785,
+        "top_title": "Cloudflare Quick Tunnels"
       },
       "made_on": "2026-09-18",
       "resolve_on": "2026-09-19"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.5,
+        "forecast_c": 32.9,
         "for_date": "2026-09-19",
         "city": "New Delhi"
       },
@@ -498,20 +498,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.565,
+      "call": false,
+      "confidence": 0.621,
       "basis": {
-        "today_usd": 77901,
-        "change_24h": 1.94,
+        "today_usd": 80986,
+        "change_24h": 5.84,
         "model": {
-          "p_event": 0.5646,
+          "p_event": 0.379,
           "n_train": 53,
           "fallback": null,
           "features": [
-            1.94,
-            2.3141885236212634,
-            1.126789817351015,
-            1.6587345644391192
+            5.84,
+            6.365988520994503,
+            5.131566990770198,
+            2.45567970806117
           ],
           "weights": [
             -0.4458,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.828,
+      "confidence": 0.862,
       "basis": {
-        "today_max_kp": 3.0,
+        "today_max_kp": 2.33,
         "model": {
-          "p_event": 0.1725,
+          "p_event": 0.1377,
           "n_train": 54,
           "fallback": null,
           "features": [
+            2.33,
             3.0,
-            3.223333333333333,
-            3.238571428571429,
+            3.142857142857143,
             1.67
           ],
           "weights": [
@@ -572,9 +572,9 @@
           "n_train": 54,
           "fallback": "laplace",
           "features": [
-            6.5,
-            228.14285714285714,
-            5.814285714285715,
+            5.2,
+            234.71428571428572,
+            5.628571428571428,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.92,
       "basis": {
-        "top_id": 49750152,
-        "top_title": "Jemalloc 5.4.0",
+        "top_id": 49754785,
+        "top_title": "Cloudflare Quick Tunnels",
         "model": {
-          "p_event": 0.9703,
+          "p_event": 0.9204,
           "n_train": 54,
           "fallback": null,
           "features": [
-            0.1,
-            8.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.4459,
-            -0.1968,
-            0.0236
+            0.3985,
+            -0.1806,
+            0.0452
           ],
-          "bias": 2.3805
+          "bias": 2.6116
         }
       },
       "made_on": "2026-09-18",
@@ -654,15 +654,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 33.5,
+        "forecast_c": 32.9,
         "for_date": "2026-09-19",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9587,
+          "p_event": 0.9585,
           "n_train": 49,
           "fallback": null,
           "features": [
-            1.3999999999999986,
+            1.6999999999999993,
             1.236486959090147,
             0.9499999999999975,
             1.3999999999999986
@@ -6853,8 +6853,8 @@
       "resolve_on": "2026-09-18",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -6918,8 +6918,8 @@
       "resolve_on": "2026-09-18",
       "call": true,
       "confidence": 0.917,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
