@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19T08:31:13.308918+00:00",
+  "updated": "2026-09-19T18:18:04.915248+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 30,
-      "rule_correct": 27,
-      "model_correct": 27,
-      "rule_accuracy": 0.9,
-      "model_accuracy": 0.9,
-      "rule_brier": 0.0904,
-      "model_brier": 0.0923,
-      "rule_log_loss": 0.3271,
-      "model_log_loss": 0.3425,
+      "rule_correct": 28,
+      "model_correct": 28,
+      "rule_accuracy": 0.9333,
+      "model_accuracy": 0.9333,
+      "rule_brier": 0.0651,
+      "model_brier": 0.0643,
+      "rule_log_loss": 0.2607,
+      "model_log_loss": 0.2611,
       "coin_flip": {
         "n": 30,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 85,
-        "rate": 0.9059,
-        "majority_accuracy": 0.9059
+        "rate": 0.9294,
+        "majority_accuracy": 0.9294
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 492,
-    "correct": 381,
-    "accuracy": 0.7744,
-    "brier": 0.1462,
-    "log_loss": 0.4501,
+    "correct": 383,
+    "accuracy": 0.7785,
+    "brier": 0.1429,
+    "log_loss": 0.4411,
     "open": 14,
     "void": 9,
     "days": 56
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 492,
-      "rate": 0.7297,
-      "majority_accuracy": 0.7297
+      "rate": 0.7337,
+      "majority_accuracy": 0.7337
     }
   },
   "by_predictor": {
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 55,
-      "correct": 50,
-      "accuracy": 0.9091,
-      "brier": 0.0835,
-      "log_loss": 0.309,
-      "base_rate": 0.9091,
-      "majority_accuracy": 0.9091
+      "correct": 51,
+      "accuracy": 0.9273,
+      "brier": 0.0697,
+      "log_loss": 0.2727,
+      "base_rate": 0.9273,
+      "majority_accuracy": 0.9273
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 30,
-      "correct": 27,
-      "accuracy": 0.9,
-      "brier": 0.0923,
-      "log_loss": 0.3425,
-      "base_rate": 0.9,
-      "majority_accuracy": 0.9
+      "correct": 28,
+      "accuracy": 0.9333,
+      "brier": 0.0643,
+      "log_loss": 0.2611,
+      "base_rate": 0.9333,
+      "majority_accuracy": 0.9333
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 126,
       "claimed": 0.8432,
-      "actual": 0.881
+      "actual": 0.8889
     },
     {
       "label": "90\u2013100%",
       "n": 137,
       "claimed": 0.945,
-      "actual": 0.9562
+      "actual": 0.9635
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.563,
+      "confidence": 0.526,
       "basis": {
-        "today_usd": 81240,
-        "change_24h": 4.32
+        "today_usd": 81345,
+        "change_24h": 0.65
       },
       "made_on": "2026-09-19",
       "resolve_on": "2026-09-20"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49763697,
-        "top_title": "Human brain is two separate organs, Stanford Medicine-led research finds"
+        "top_id": 49765348,
+        "top_title": "I Built Non-Autoregressive Decision Models with RL a Year Ago"
       },
       "made_on": "2026-09-19",
       "resolve_on": "2026-09-20"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.6,
+        "forecast_c": 33.1,
         "for_date": "2026-09-20",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.587,
+      "confidence": 0.718,
       "basis": {
-        "today_usd": 81240,
-        "change_24h": 4.32,
+        "today_usd": 81345,
+        "change_24h": 0.65,
         "model": {
-          "p_event": 0.587,
+          "p_event": 0.7184,
           "n_train": 54,
           "fallback": null,
           "features": [
-            4.32,
-            7.140031123888901,
-            5.2522478169616305,
-            2.3401237717878502
+            0.65,
+            7.278506053332623,
+            5.388282849221371,
+            2.3386581925606107
           ],
           "weights": [
             -0.3334,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.5,
-            226.57142857142858,
+            220.0,
             5.485714285714286,
             1.0
           ]
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.924,
       "basis": {
-        "top_id": 49763697,
-        "top_title": "Human brain is two separate organs, Stanford Medicine-led research finds",
+        "top_id": 49765348,
+        "top_title": "I Built Non-Autoregressive Decision Models with RL a Year Ago",
         "model": {
-          "p_event": 0.9656,
+          "p_event": 0.9244,
           "n_train": 55,
           "fallback": null,
           "features": [
-            0.1,
-            9.0,
+            0.0,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4468,
-            -0.1982,
-            -0.0573
+            0.3938,
+            -0.1785,
+            0.0554
           ],
-          "bias": 2.3985
+          "bias": 2.6304
         }
       },
       "made_on": "2026-09-19",
@@ -652,17 +652,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.885,
+      "confidence": 0.888,
       "basis": {
-        "forecast_c": 33.6,
+        "forecast_c": 33.1,
         "for_date": "2026-09-20",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8847,
+          "p_event": 0.8882,
           "n_train": 50,
           "fallback": null,
           "features": [
-            0.8999999999999986,
+            0.30000000000000426,
             1.3163965967746951,
             1.4749999999999988,
             3.0000000000000036
@@ -7009,8 +7009,8 @@
       "resolve_on": "2026-09-19",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -7074,8 +7074,8 @@
       "resolve_on": "2026-09-19",
       "call": true,
       "confidence": 0.92,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
