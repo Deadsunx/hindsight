@@ -1,20 +1,20 @@
 {
   "date": "2026-09-20",
-  "fetched_at": "2026-09-20T09:03:21.306201+00:00",
+  "fetched_at": "2026-09-20T18:23:13.578314+00:00",
   "observations": {
     "btc": {
-      "usd": 80226,
-      "usd_24h_change": -1.29
+      "usd": 81190,
+      "usd_24h_change": -0.31
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 2.0,
+      "latest_kp": 0.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.3,
-      "count": 246,
-      "strongest_place": "108 km ESE of Yigo Village, Guam"
+      "max_mag": 6.4,
+      "count": 217,
+      "strongest_place": "49 km NNE of Kainantu, Papua New Guinea"
     },
     "wiki": {
       "top": "Lizzie_Borden",
@@ -22,27 +22,27 @@
       "for_date": "2026-09-19"
     },
     "hn": {
-      "top_id": 49771110,
-      "top_title": "Exfiltrate Your Weights",
+      "top_id": 49776699,
+      "top_title": "Pirate Face Rescues LLM Models from Deletion",
       "top10": [
-        49771110,
-        49735159,
-        49772677,
-        49772532,
-        49771966,
-        49769944,
-        49754055,
-        49756319,
-        49772662,
-        49766966
+        49776699,
+        49778029,
+        49775499,
+        49776729,
+        49778195,
+        49776627,
+        49778162,
+        49777539,
+        49778022,
+        49777111
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.8,
       "actual_prev_date": "2026-09-19",
-      "today": 34.0,
-      "forecast_next": 34.6,
+      "today": 33.7,
+      "forecast_next": 33.8,
       "forecast_next_date": "2026-09-21"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.533,
+      "confidence": 0.523,
       "basis": {
-        "today_usd": 80226,
-        "change_24h": -1.29
+        "today_usd": 81190,
+        "change_24h": -0.31
       },
       "made_on": "2026-09-20",
       "resolve_on": "2026-09-21"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49771110,
-        "top_title": "Exfiltrate Your Weights"
+        "top_id": 49776699,
+        "top_title": "Pirate Face Rescues LLM Models from Deletion"
       },
       "made_on": "2026-09-20",
       "resolve_on": "2026-09-21"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.6,
+        "forecast_c": 33.8,
         "for_date": "2026-09-21",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.649,
+      "confidence": 0.652,
       "basis": {
-        "today_usd": 80226,
-        "change_24h": -1.29,
+        "today_usd": 81190,
+        "change_24h": -0.31,
         "model": {
-          "p_event": 0.6486,
+          "p_event": 0.6523,
           "n_train": 55,
           "fallback": null,
           "features": [
-            -1.29,
-            4.839067992629675,
-            3.728892451707999,
-            2.415820411556196
+            -0.31,
+            6.098819962625623,
+            4.975304491737997,
+            2.342208502386678
           ],
           "weights": [
             -0.2639,
@@ -215,9 +215,9 @@
           "n_train": 56,
           "fallback": "laplace",
           "features": [
-            5.3,
-            224.71428571428572,
-            5.5,
+            6.4,
+            220.57142857142858,
+            5.6571428571428575,
             1.0
           ]
         }
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.93,
       "basis": {
-        "top_id": 49771110,
-        "top_title": "Exfiltrate Your Weights",
+        "top_id": 49776699,
+        "top_title": "Pirate Face Rescues LLM Models from Deletion",
         "model": {
           "p_event": 0.9295,
           "n_train": 56,
@@ -295,17 +295,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.895,
+      "confidence": 0.896,
       "basis": {
-        "forecast_c": 34.6,
+        "forecast_c": 33.8,
         "for_date": "2026-09-21",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8954,
+          "p_event": 0.8958,
           "n_train": 52,
           "fallback": null,
           "features": [
-            0.6000000000000014,
+            0.09999999999999432,
             1.2843675486401853,
             1.3800000000000003,
             3.0000000000000036
