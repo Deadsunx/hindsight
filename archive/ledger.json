@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T09:35:17.677745+00:00",
+  "updated": "2026-09-21T20:11:59.857488+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -124,9 +124,9 @@
       "rule_accuracy": 0.8889,
       "model_accuracy": 0.8889,
       "rule_brier": 0.1067,
-      "model_brier": 0.1033,
+      "model_brier": 0.1032,
       "rule_log_loss": 0.3772,
-      "model_log_loss": 0.384,
+      "model_log_loss": 0.3837,
       "coin_flip": {
         "n": 27,
         "accuracy": 0.5,
@@ -145,9 +145,9 @@
     "correct": 403,
     "accuracy": 0.778,
     "brier": 0.1428,
-    "log_loss": 0.4418,
-    "open": 14,
-    "void": 7,
+    "log_loss": 0.4417,
+    "open": 12,
+    "void": 9,
     "days": 58
   },
   "baselines": {
@@ -315,8 +315,8 @@
       "graded": 27,
       "correct": 24,
       "accuracy": 0.8889,
-      "brier": 0.1033,
-      "log_loss": 0.384,
+      "brier": 0.1032,
+      "log_loss": 0.3837,
       "base_rate": 0.8889,
       "majority_accuracy": 0.8889
     }
@@ -343,7 +343,7 @@
     {
       "label": "80\u201390%",
       "n": 134,
-      "claimed": 0.8429,
+      "claimed": 0.843,
       "actual": 0.8881
     },
     {
@@ -355,66 +355,16 @@
   ],
   "open_bets": [
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 33.8,
-        "for_date": "2026-09-21",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-09-20",
-      "resolve_on": "2026-09-22"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.896,
-      "basis": {
-        "forecast_c": 33.8,
-        "for_date": "2026-09-21",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.8958,
-          "n_train": 52,
-          "fallback": null,
-          "features": [
-            0.09999999999999432,
-            1.2843675486401853,
-            1.3800000000000003,
-            3.0000000000000036
-          ],
-          "weights": [
-            -0.0088,
-            0.0468,
-            -0.7112,
-            0.2745
-          ],
-          "bias": 2.6343
-        }
-      },
-      "made_on": "2026-09-20",
-      "resolve_on": "2026-09-22"
-    },
-    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.57,
+      "confidence": 0.588,
       "basis": {
-        "today_usd": 84386,
-        "change_24h": 4.97
+        "today_usd": 86703,
+        "change_24h": 6.82
       },
       "made_on": "2026-09-21",
       "resolve_on": "2026-09-22"
@@ -470,8 +420,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49783495,
-        "top_title": "Grim Fandango Puzzle Document (1996) [pdf]"
+        "top_id": 49791939,
+        "top_title": "The NASA/ESA Mars Sample Return mission has been canceled"
       },
       "made_on": "2026-09-21",
       "resolve_on": "2026-09-22"
@@ -485,8 +435,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.0,
-        "for_date": "2026-09-22",
+        "forecast_c": 36.0,
+        "for_date": "2026-09-23",
         "city": "New Delhi"
       },
       "made_on": "2026-09-21",
@@ -499,19 +449,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.603,
+      "confidence": 0.649,
       "basis": {
-        "today_usd": 84386,
-        "change_24h": 4.97,
+        "today_usd": 86703,
+        "change_24h": 6.82,
         "model": {
-          "p_event": 0.3968,
+          "p_event": 0.3511,
           "n_train": 56,
           "fallback": null,
           "features": [
-            4.97,
-            4.198256488775831,
-            6.846123653122982,
-            2.553793355817636
+            6.82,
+            7.059244807744558,
+            9.779814887501747,
+            3.0283116393966747
           ],
           "weights": [
             -0.3009,
@@ -573,7 +523,7 @@
           "fallback": "laplace",
           "features": [
             5.7,
-            218.42857142857142,
+            223.0,
             5.671428571428572,
             1.0
           ]
@@ -621,16 +571,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.913,
       "basis": {
-        "top_id": 49783495,
-        "top_title": "Grim Fandango Puzzle Document (1996) [pdf]",
+        "top_id": 49791939,
+        "top_title": "The NASA/ESA Mars Sample Return mission has been canceled",
         "model": {
-          "p_event": 0.9829,
+          "p_event": 0.9127,
           "n_train": 57,
           "fallback": null,
           "features": [
-            0.2,
+            0.0,
             11.0,
             0.0
           ],
@@ -652,28 +602,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.925,
       "basis": {
-        "forecast_c": 35.0,
-        "for_date": "2026-09-22",
+        "forecast_c": 36.0,
+        "for_date": "2026-09-23",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.951,
+          "p_event": 0.9249,
           "n_train": 53,
           "fallback": null,
           "features": [
-            0.7999999999999972,
+            0.7000000000000028,
             1.1960351165413163,
-            1.220000000000001,
+            1.3750000000000009,
             3.0000000000000036
           ],
           "weights": [
-            -0.0519,
-            0.0006,
-            -0.7038,
-            0.3906
+            -0.0467,
+            0.0072,
+            -0.7068,
+            0.3796
           ],
-          "bias": 2.634
+          "bias": 2.6391
         }
       },
       "made_on": "2026-09-21",
@@ -7195,19 +7145,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "made_on": "2026-09-19",
-      "resolve_on": "2026-09-21",
-      "call": true,
-      "confidence": 0.8,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -7269,19 +7206,6 @@
       "resolve_on": "2026-09-20",
       "call": true,
       "confidence": 0.924,
-      "actual": true,
-      "correct": true
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "made_on": "2026-09-19",
-      "resolve_on": "2026-09-21",
-      "call": true,
-      "confidence": 0.888,
       "actual": true,
       "correct": true
     },
@@ -7351,6 +7275,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-09-20",
+      "resolve_on": "2026-09-22",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -7412,6 +7349,19 @@
       "resolve_on": "2026-09-21",
       "call": true,
       "confidence": 0.93,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-09-20",
+      "resolve_on": "2026-09-22",
+      "call": true,
+      "confidence": 0.896,
       "actual": true,
       "correct": true
     }

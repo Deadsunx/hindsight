@@ -1,10 +1,10 @@
 {
   "date": "2026-09-21",
-  "fetched_at": "2026-09-21T09:35:15.763928+00:00",
+  "fetched_at": "2026-09-21T20:11:57.992912+00:00",
   "observations": {
     "btc": {
-      "usd": 84386,
-      "usd_24h_change": 4.97
+      "usd": 86703,
+      "usd_24h_change": 6.82
     },
     "kp": {
       "max_kp": 1.67,
@@ -13,7 +13,7 @@
     },
     "quakes": {
       "max_mag": 5.7,
-      "count": 216,
+      "count": 248,
       "strongest_place": "south of Africa"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-09-20"
     },
     "hn": {
-      "top_id": 49783495,
-      "top_title": "Grim Fandango Puzzle Document (1996) [pdf]",
+      "top_id": 49791939,
+      "top_title": "The NASA/ESA Mars Sample Return mission has been canceled",
       "top10": [
-        49783495,
-        49780797,
-        49778029,
-        49780820,
-        49775499,
-        49783999,
-        49768336,
-        49783133,
-        49781436,
-        49772961
+        49791939,
+        49787436,
+        49787726,
+        49791378,
+        49791797,
+        49791997,
+        49790409,
+        49788838,
+        49791509,
+        49792067
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.7,
-      "actual_prev_date": "2026-09-20",
-      "today": 34.2,
-      "forecast_next": 35.0,
-      "forecast_next_date": "2026-09-22"
+      "actual_prev_date": "2026-09-21",
+      "today": 35.3,
+      "forecast_next": 36.0,
+      "forecast_next_date": "2026-09-23"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.57,
+      "confidence": 0.588,
       "basis": {
-        "today_usd": 84386,
-        "change_24h": 4.97
+        "today_usd": 86703,
+        "change_24h": 6.82
       },
       "made_on": "2026-09-21",
       "resolve_on": "2026-09-22"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49783495,
-        "top_title": "Grim Fandango Puzzle Document (1996) [pdf]"
+        "top_id": 49791939,
+        "top_title": "The NASA/ESA Mars Sample Return mission has been canceled"
       },
       "made_on": "2026-09-21",
       "resolve_on": "2026-09-22"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.0,
-        "for_date": "2026-09-22",
+        "forecast_c": 36.0,
+        "for_date": "2026-09-23",
         "city": "New Delhi"
       },
       "made_on": "2026-09-21",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.603,
+      "confidence": 0.649,
       "basis": {
-        "today_usd": 84386,
-        "change_24h": 4.97,
+        "today_usd": 86703,
+        "change_24h": 6.82,
         "model": {
-          "p_event": 0.3968,
+          "p_event": 0.3511,
           "n_train": 56,
           "fallback": null,
           "features": [
-            4.97,
-            4.198256488775831,
-            6.846123653122982,
-            2.553793355817636
+            6.82,
+            7.059244807744558,
+            9.779814887501747,
+            3.0283116393966747
           ],
           "weights": [
             -0.3009,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.7,
-            218.42857142857142,
+            223.0,
             5.671428571428572,
             1.0
           ]
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.913,
       "basis": {
-        "top_id": 49783495,
-        "top_title": "Grim Fandango Puzzle Document (1996) [pdf]",
+        "top_id": 49791939,
+        "top_title": "The NASA/ESA Mars Sample Return mission has been canceled",
         "model": {
-          "p_event": 0.9829,
+          "p_event": 0.9127,
           "n_train": 57,
           "fallback": null,
           "features": [
-            0.2,
+            0.0,
             11.0,
             0.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.925,
       "basis": {
-        "forecast_c": 35.0,
-        "for_date": "2026-09-22",
+        "forecast_c": 36.0,
+        "for_date": "2026-09-23",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.951,
+          "p_event": 0.9249,
           "n_train": 53,
           "fallback": null,
           "features": [
-            0.7999999999999972,
+            0.7000000000000028,
             1.1960351165413163,
-            1.220000000000001,
+            1.3750000000000009,
             3.0000000000000036
           ],
           "weights": [
-            -0.0519,
-            0.0006,
-            -0.7038,
-            0.3906
+            -0.0467,
+            0.0072,
+            -0.7068,
+            0.3796
           ],
-          "bias": 2.634
+          "bias": 2.6391
         }
       },
       "made_on": "2026-09-21",
