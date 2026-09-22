@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T09:00:03.712189+00:00",
+  "updated": "2026-09-22T19:24:18.597772+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -72,25 +72,25 @@
     },
     "wiki_hold": {
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "shared_days": 29,
-      "rule_correct": 17,
-      "model_correct": 22,
-      "rule_accuracy": 0.5862,
-      "model_accuracy": 0.7586,
-      "rule_brier": 0.2393,
-      "model_brier": 0.2078,
-      "rule_log_loss": 0.6709,
-      "model_log_loss": 0.6194,
+      "shared_days": 30,
+      "rule_correct": 18,
+      "model_correct": 23,
+      "rule_accuracy": 0.6,
+      "model_accuracy": 0.7667,
+      "rule_brier": 0.2343,
+      "model_brier": 0.2026,
+      "rule_log_loss": 0.6605,
+      "model_log_loss": 0.6074,
       "coin_flip": {
-        "n": 29,
+        "n": 30,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 83,
-        "rate": 0.6988,
-        "majority_accuracy": 0.6988
+        "n": 85,
+        "rate": 0.7059,
+        "majority_accuracy": 0.7059
       }
     },
     "hn_fade": {
@@ -141,26 +141,26 @@
     }
   },
   "totals": {
-    "graded": 526,
-    "correct": 410,
-    "accuracy": 0.7795,
-    "brier": 0.1417,
-    "log_loss": 0.439,
+    "graded": 528,
+    "correct": 412,
+    "accuracy": 0.7803,
+    "brier": 0.1414,
+    "log_loss": 0.4385,
     "open": 14,
-    "void": 11,
+    "void": 9,
     "days": 59
   },
   "baselines": {
     "coin_flip": {
-      "n": 526,
+      "n": 528,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 526,
-      "rate": 0.7281,
-      "majority_accuracy": 0.7281
+      "n": 528,
+      "rate": 0.7292,
+      "majority_accuracy": 0.7292
     }
   },
   "by_predictor": {
@@ -208,13 +208,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "graded": 54,
-      "correct": 32,
-      "accuracy": 0.5926,
-      "brier": 0.2355,
-      "log_loss": 0.6628,
-      "base_rate": 0.7037,
-      "majority_accuracy": 0.7037
+      "graded": 55,
+      "correct": 33,
+      "accuracy": 0.6,
+      "brier": 0.2329,
+      "log_loss": 0.6573,
+      "base_rate": 0.7091,
+      "majority_accuracy": 0.7091
     },
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -286,13 +286,13 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "graded": 29,
-      "correct": 22,
-      "accuracy": 0.7586,
-      "brier": 0.2078,
-      "log_loss": 0.6194,
-      "base_rate": 0.6897,
-      "majority_accuracy": 0.6897
+      "graded": 30,
+      "correct": 23,
+      "accuracy": 0.7667,
+      "brier": 0.2026,
+      "log_loss": 0.6074,
+      "base_rate": 0.7,
+      "majority_accuracy": 0.7
     },
     "hn_fade_ml": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -336,9 +336,9 @@
     },
     {
       "label": "70\u201380%",
-      "n": 120,
+      "n": 122,
       "claimed": 0.7372,
-      "actual": 0.7167
+      "actual": 0.7213
     },
     {
       "label": "80\u201390%",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.549,
+      "confidence": 0.523,
       "basis": {
-        "today_usd": 86206,
-        "change_24h": 2.93
+        "today_usd": 86491,
+        "change_24h": 0.3
       },
       "made_on": "2026-09-22",
       "resolve_on": "2026-09-23"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49797323,
-        "top_title": "Can gzip be a language model?"
+        "top_id": 49805509,
+        "top_title": "GPT-6 Sol and Luna"
       },
       "made_on": "2026-09-22",
       "resolve_on": "2026-09-23"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 36.5,
-        "for_date": "2026-09-23",
+        "forecast_c": 35.2,
+        "for_date": "2026-09-24",
         "city": "New Delhi"
       },
       "made_on": "2026-09-22",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.628,
+      "confidence": 0.505,
       "basis": {
-        "today_usd": 86206,
-        "change_24h": 2.93,
+        "today_usd": 86491,
+        "change_24h": 0.3,
         "model": {
-          "p_event": 0.3721,
+          "p_event": 0.495,
           "n_train": 57,
           "fallback": null,
           "features": [
-            2.93,
-            5.975782162394738,
-            13.221870526274305,
-            3.070338689992244
+            0.3,
+            6.326141741963243,
+            13.596185923114312,
+            3.050215706771315
           ],
           "weights": [
             -0.394,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.3,
-            227.28571428571428,
+            228.85714285714286,
             5.671428571428572,
             1.0
           ]
@@ -589,26 +589,26 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.768,
+      "confidence": 0.673,
       "basis": {
         "today_top": "Lizzie_Borden",
         "model": {
-          "p_event": 0.7679,
-          "n_train": 54,
+          "p_event": 0.6725,
+          "n_train": 55,
           "fallback": null,
           "features": [
-            3.0,
-            13.837893187523841,
-            1.2486780922384875,
+            4.0,
+            13.59989112931227,
+            1.0228538745735305,
             0.0
           ],
           "weights": [
-            -0.998,
-            -0.4208,
-            0.1716,
-            -0.756
+            -1.011,
+            -0.4287,
+            0.191,
+            -0.7877
           ],
-          "bias": 0.95
+          "bias": 0.9807
         }
       },
       "made_on": "2026-09-22",
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.92,
       "basis": {
-        "top_id": 49797323,
-        "top_title": "Can gzip be a language model?",
+        "top_id": 49805509,
+        "top_title": "GPT-6 Sol and Luna",
         "model": {
-          "p_event": 0.9933,
+          "p_event": 0.9199,
           "n_train": 58,
           "fallback": null,
           "features": [
-            0.3,
+            0.0,
             11.0,
             1.0
           ],
@@ -652,19 +652,19 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.923,
       "basis": {
-        "forecast_c": 36.5,
-        "for_date": "2026-09-23",
+        "forecast_c": 35.2,
+        "for_date": "2026-09-24",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9596,
+          "p_event": 0.923,
           "n_train": 53,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            1.156243918902928,
-            1.1199999999999997,
+            1.5,
+            1.4661514246489,
+            1.3750000000000009,
             3.0000000000000036
           ],
           "weights": [
@@ -7455,6 +7455,19 @@
       "correct": true
     },
     {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "made_on": "2026-09-21",
+      "resolve_on": "2026-09-22",
+      "call": true,
+      "confidence": 0.7,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "hn_fade",
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "decay",
@@ -7503,6 +7516,19 @@
       "resolve_on": "2026-09-22",
       "call": true,
       "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "made_on": "2026-09-21",
+      "resolve_on": "2026-09-22",
+      "call": true,
+      "confidence": 0.772,
       "actual": true,
       "correct": true
     },

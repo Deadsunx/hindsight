@@ -1,10 +1,10 @@
 {
   "date": "2026-09-22",
-  "fetched_at": "2026-09-22T08:59:58.171341+00:00",
+  "fetched_at": "2026-09-22T19:24:16.639213+00:00",
   "observations": {
     "btc": {
-      "usd": 86206,
-      "usd_24h_change": 2.93
+      "usd": 86491,
+      "usd_24h_change": 0.3
     },
     "kp": {
       "max_kp": 2.0,
@@ -13,37 +13,37 @@
     },
     "quakes": {
       "max_mag": 5.3,
-      "count": 243,
+      "count": 254,
       "strongest_place": "97 km S of Sarangani, Philippines"
     },
     "wiki": {
       "top": "Lizzie_Borden",
-      "views": 1022634,
-      "for_date": "2026-09-20"
+      "views": 806041,
+      "for_date": "2026-09-21"
     },
     "hn": {
-      "top_id": 49797323,
-      "top_title": "Can gzip be a language model?",
+      "top_id": 49805509,
+      "top_title": "GPT-6 Sol and Luna",
       "top10": [
-        49797323,
-        49792730,
-        49794615,
-        49792342,
-        49787726,
-        49796660,
-        49787436,
-        49794330,
-        49792067,
-        49785202
+        49805509,
+        49803892,
+        49801324,
+        49804316,
+        49803959,
+        49802161,
+        49804683,
+        49803635,
+        49805748,
+        49803085
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 33.7,
-      "actual_prev_date": "2026-09-21",
-      "today": 36.1,
-      "forecast_next": 36.5,
-      "forecast_next_date": "2026-09-23"
+      "actual_prev": 35.8,
+      "actual_prev_date": "2026-09-22",
+      "today": 36.7,
+      "forecast_next": 35.2,
+      "forecast_next_date": "2026-09-24"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.549,
+      "confidence": 0.523,
       "basis": {
-        "today_usd": 86206,
-        "change_24h": 2.93
+        "today_usd": 86491,
+        "change_24h": 0.3
       },
       "made_on": "2026-09-22",
       "resolve_on": "2026-09-23"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49797323,
-        "top_title": "Can gzip be a language model?"
+        "top_id": 49805509,
+        "top_title": "GPT-6 Sol and Luna"
       },
       "made_on": "2026-09-22",
       "resolve_on": "2026-09-23"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 36.5,
-        "for_date": "2026-09-23",
+        "forecast_c": 35.2,
+        "for_date": "2026-09-24",
         "city": "New Delhi"
       },
       "made_on": "2026-09-22",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.628,
+      "confidence": 0.505,
       "basis": {
-        "today_usd": 86206,
-        "change_24h": 2.93,
+        "today_usd": 86491,
+        "change_24h": 0.3,
         "model": {
-          "p_event": 0.3721,
+          "p_event": 0.495,
           "n_train": 57,
           "fallback": null,
           "features": [
-            2.93,
-            5.975782162394738,
-            13.221870526274305,
-            3.070338689992244
+            0.3,
+            6.326141741963243,
+            13.596185923114312,
+            3.050215706771315
           ],
           "weights": [
             -0.394,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.3,
-            227.28571428571428,
+            228.85714285714286,
             5.671428571428572,
             1.0
           ]
@@ -232,26 +232,26 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.768,
+      "confidence": 0.673,
       "basis": {
         "today_top": "Lizzie_Borden",
         "model": {
-          "p_event": 0.7679,
-          "n_train": 54,
+          "p_event": 0.6725,
+          "n_train": 55,
           "fallback": null,
           "features": [
-            3.0,
-            13.837893187523841,
-            1.2486780922384875,
+            4.0,
+            13.59989112931227,
+            1.0228538745735305,
             0.0
           ],
           "weights": [
-            -0.998,
-            -0.4208,
-            0.1716,
-            -0.756
+            -1.011,
+            -0.4287,
+            0.191,
+            -0.7877
           ],
-          "bias": 0.95
+          "bias": 0.9807
         }
       },
       "made_on": "2026-09-22",
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.92,
       "basis": {
-        "top_id": 49797323,
-        "top_title": "Can gzip be a language model?",
+        "top_id": 49805509,
+        "top_title": "GPT-6 Sol and Luna",
         "model": {
-          "p_event": 0.9933,
+          "p_event": 0.9199,
           "n_train": 58,
           "fallback": null,
           "features": [
-            0.3,
+            0.0,
             11.0,
             1.0
           ],
@@ -295,19 +295,19 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.923,
       "basis": {
-        "forecast_c": 36.5,
-        "for_date": "2026-09-23",
+        "forecast_c": 35.2,
+        "for_date": "2026-09-24",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9596,
+          "p_event": 0.923,
           "n_train": 53,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            1.156243918902928,
-            1.1199999999999997,
+            1.5,
+            1.4661514246489,
+            1.3750000000000009,
             3.0000000000000036
           ],
           "weights": [
