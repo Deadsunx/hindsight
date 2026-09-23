@@ -1,20 +1,20 @@
 {
   "date": "2026-09-23",
-  "fetched_at": "2026-09-23T09:03:40.330722+00:00",
+  "fetched_at": "2026-09-23T19:20:14.253628+00:00",
   "observations": {
     "btc": {
-      "usd": 85895,
-      "usd_24h_change": -0.22
+      "usd": 84324,
+      "usd_24h_change": -2.56
     },
     "kp": {
-      "max_kp": 0.67,
-      "latest_kp": 0.33,
+      "max_kp": 1.0,
+      "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.1,
-      "count": 244,
-      "strongest_place": "88 km NNW of Uken, Japan"
+      "max_mag": 5.7,
+      "count": 243,
+      "strongest_place": "180 km NW of Hihifo, Tonga"
     },
     "wiki": {
       "top": "Lizzie_Borden",
@@ -22,28 +22,28 @@
       "for_date": "2026-09-22"
     },
     "hn": {
-      "top_id": 49812769,
-      "top_title": "Jev in 25 Lines of Python",
+      "top_id": 49820134,
+      "top_title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
       "top10": [
+        49820134,
+        49817469,
+        49820065,
+        49819221,
+        49817524,
+        49817615,
         49812769,
         49805509,
-        49803892,
-        49811065,
-        49801324,
-        49811429,
-        49805278,
-        49808023,
-        49781862,
-        49800513
+        49820267,
+        49803892
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 35.8,
-      "actual_prev_date": "2026-09-22",
-      "today": 36.6,
-      "forecast_next": 35.2,
-      "forecast_next_date": "2026-09-24"
+      "actual_prev": 36.9,
+      "actual_prev_date": "2026-09-23",
+      "today": 34.6,
+      "forecast_next": 33.0,
+      "forecast_next_date": "2026-09-25"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.522,
+      "confidence": 0.546,
       "basis": {
-        "today_usd": 85895,
-        "change_24h": -0.22
+        "today_usd": 84324,
+        "change_24h": -2.56
       },
       "made_on": "2026-09-23",
       "resolve_on": "2026-09-24"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 0.67
+        "today_max_kp": 1.0
       },
       "made_on": "2026-09-23",
       "resolve_on": "2026-09-24"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49812769,
-        "top_title": "Jev in 25 Lines of Python"
+        "top_id": 49820134,
+        "top_title": "Claude discovers a novel enzyme system with CRISPR-like repeats"
       },
       "made_on": "2026-09-23",
       "resolve_on": "2026-09-24"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.2,
-        "for_date": "2026-09-24",
+        "forecast_c": 33.0,
+        "for_date": "2026-09-25",
         "city": "New Delhi"
       },
       "made_on": "2026-09-23",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.553,
+      "confidence": 0.526,
       "basis": {
-        "today_usd": 85895,
-        "change_24h": -0.22,
+        "today_usd": 84324,
+        "change_24h": -2.56,
         "model": {
-          "p_event": 0.4474,
+          "p_event": 0.4738,
           "n_train": 58,
           "fallback": null,
           "features": [
-            -0.22,
-            5.795048651311729,
-            13.279086329227452,
-            3.093436440190592
+            -2.56,
+            3.8600812907993554,
+            11.207237622978926,
+            3.251218855098363
           ],
           "weights": [
             -0.3518,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.795,
+      "confidence": 0.772,
       "basis": {
-        "today_max_kp": 0.67,
+        "today_max_kp": 1.0,
         "model": {
-          "p_event": 0.2046,
+          "p_event": 0.2282,
           "n_train": 59,
           "fallback": null,
           "features": [
-            0.67,
-            1.4466666666666665,
-            2.1914285714285713,
+            1.0,
+            1.5566666666666666,
+            2.2385714285714284,
             1.33
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 59,
           "fallback": "laplace",
           "features": [
-            5.1,
-            233.14285714285714,
-            5.671428571428572,
+            5.7,
+            233.0,
+            5.757142857142857,
             1.0
           ]
         }
@@ -266,15 +266,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 49812769,
-        "top_title": "Jev in 25 Lines of Python",
+        "top_id": 49820134,
+        "top_title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
         "model": {
-          "p_event": 0.9974,
+          "p_event": 0.9877,
           "n_train": 59,
           "fallback": null,
           "features": [
-            0.3,
-            2.0,
+            0.2,
+            8.0,
             2.0
           ],
           "weights": [
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.923,
+      "confidence": 0.933,
       "basis": {
-        "forecast_c": 35.2,
-        "for_date": "2026-09-24",
+        "forecast_c": 33.0,
+        "for_date": "2026-09-25",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9234,
-          "n_train": 53,
+          "p_event": 0.9331,
+          "n_train": 54,
           "fallback": null,
           "features": [
-            1.3999999999999986,
-            1.5427248620541507,
+            1.6000000000000014,
+            1.7369225659193903,
             1.3750000000000009,
             3.0000000000000036
           ],
           "weights": [
-            -0.0467,
-            0.0072,
-            -0.7068,
-            0.3796
+            -0.0642,
+            -0.0172,
+            -0.7031,
+            0.4516
           ],
-          "bias": 2.6391
+          "bias": 2.6486
         }
       },
       "made_on": "2026-09-23",

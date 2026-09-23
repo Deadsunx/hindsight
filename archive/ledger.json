@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T09:03:42.035069+00:00",
+  "updated": "2026-09-23T19:20:16.162029+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -118,49 +118,49 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 27,
-      "rule_correct": 24,
-      "model_correct": 24,
-      "rule_accuracy": 0.8889,
-      "model_accuracy": 0.8889,
-      "rule_brier": 0.1067,
-      "model_brier": 0.1032,
-      "rule_log_loss": 0.3772,
-      "model_log_loss": 0.3837,
+      "shared_days": 28,
+      "rule_correct": 25,
+      "model_correct": 25,
+      "rule_accuracy": 0.8929,
+      "model_accuracy": 0.8929,
+      "rule_brier": 0.1043,
+      "model_brier": 0.0997,
+      "rule_log_loss": 0.3717,
+      "model_log_loss": 0.3728,
       "coin_flip": {
-        "n": 27,
+        "n": 28,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 80,
-        "rate": 0.9125,
-        "majority_accuracy": 0.9125
+        "n": 82,
+        "rate": 0.9146,
+        "majority_accuracy": 0.9146
       }
     }
   },
   "totals": {
-    "graded": 538,
-    "correct": 419,
-    "accuracy": 0.7788,
-    "brier": 0.1433,
-    "log_loss": 0.4441,
+    "graded": 540,
+    "correct": 421,
+    "accuracy": 0.7796,
+    "brier": 0.1429,
+    "log_loss": 0.4431,
     "open": 14,
-    "void": 11,
+    "void": 9,
     "days": 60
   },
   "baselines": {
     "coin_flip": {
-      "n": 538,
+      "n": 540,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 538,
-      "rate": 0.723,
-      "majority_accuracy": 0.723
+      "n": 540,
+      "rate": 0.7241,
+      "majority_accuracy": 0.7241
     }
   },
   "by_predictor": {
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 53,
-      "correct": 49,
-      "accuracy": 0.9245,
-      "brier": 0.0853,
-      "log_loss": 0.3278,
-      "base_rate": 0.9245,
-      "majority_accuracy": 0.9245
+      "graded": 54,
+      "correct": 50,
+      "accuracy": 0.9259,
+      "brier": 0.0844,
+      "log_loss": 0.3258,
+      "base_rate": 0.9259,
+      "majority_accuracy": 0.9259
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 27,
-      "correct": 24,
-      "accuracy": 0.8889,
-      "brier": 0.1032,
-      "log_loss": 0.3837,
-      "base_rate": 0.8889,
-      "majority_accuracy": 0.8889
+      "graded": 28,
+      "correct": 25,
+      "accuracy": 0.8929,
+      "brier": 0.0997,
+      "log_loss": 0.3728,
+      "base_rate": 0.8929,
+      "majority_accuracy": 0.8929
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 137,
-      "claimed": 0.8433,
-      "actual": 0.8832
+      "n": 138,
+      "claimed": 0.843,
+      "actual": 0.8841
     },
     {
       "label": "90\u2013100%",
-      "n": 151,
-      "claimed": 0.9447,
-      "actual": 0.9536
+      "n": 152,
+      "claimed": 0.9445,
+      "actual": 0.9539
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.522,
+      "confidence": 0.546,
       "basis": {
-        "today_usd": 85895,
-        "change_24h": -0.22
+        "today_usd": 84324,
+        "change_24h": -2.56
       },
       "made_on": "2026-09-23",
       "resolve_on": "2026-09-24"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 0.67
+        "today_max_kp": 1.0
       },
       "made_on": "2026-09-23",
       "resolve_on": "2026-09-24"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49812769,
-        "top_title": "Jev in 25 Lines of Python"
+        "top_id": 49820134,
+        "top_title": "Claude discovers a novel enzyme system with CRISPR-like repeats"
       },
       "made_on": "2026-09-23",
       "resolve_on": "2026-09-24"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.2,
-        "for_date": "2026-09-24",
+        "forecast_c": 33.0,
+        "for_date": "2026-09-25",
         "city": "New Delhi"
       },
       "made_on": "2026-09-23",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.553,
+      "confidence": 0.526,
       "basis": {
-        "today_usd": 85895,
-        "change_24h": -0.22,
+        "today_usd": 84324,
+        "change_24h": -2.56,
         "model": {
-          "p_event": 0.4474,
+          "p_event": 0.4738,
           "n_train": 58,
           "fallback": null,
           "features": [
-            -0.22,
-            5.795048651311729,
-            13.279086329227452,
-            3.093436440190592
+            -2.56,
+            3.8600812907993554,
+            11.207237622978926,
+            3.251218855098363
           ],
           "weights": [
             -0.3518,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.795,
+      "confidence": 0.772,
       "basis": {
-        "today_max_kp": 0.67,
+        "today_max_kp": 1.0,
         "model": {
-          "p_event": 0.2046,
+          "p_event": 0.2282,
           "n_train": 59,
           "fallback": null,
           "features": [
-            0.67,
-            1.4466666666666665,
-            2.1914285714285713,
+            1.0,
+            1.5566666666666666,
+            2.2385714285714284,
             1.33
           ],
           "weights": [
@@ -572,9 +572,9 @@
           "n_train": 59,
           "fallback": "laplace",
           "features": [
-            5.1,
-            233.14285714285714,
-            5.671428571428572,
+            5.7,
+            233.0,
+            5.757142857142857,
             1.0
           ]
         }
@@ -623,15 +623,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 49812769,
-        "top_title": "Jev in 25 Lines of Python",
+        "top_id": 49820134,
+        "top_title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
         "model": {
-          "p_event": 0.9974,
+          "p_event": 0.9877,
           "n_train": 59,
           "fallback": null,
           "features": [
-            0.3,
-            2.0,
+            0.2,
+            8.0,
             2.0
           ],
           "weights": [
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.923,
+      "confidence": 0.933,
       "basis": {
-        "forecast_c": 35.2,
-        "for_date": "2026-09-24",
+        "forecast_c": 33.0,
+        "for_date": "2026-09-25",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9234,
-          "n_train": 53,
+          "p_event": 0.9331,
+          "n_train": 54,
           "fallback": null,
           "features": [
-            1.3999999999999986,
-            1.5427248620541507,
+            1.6000000000000014,
+            1.7369225659193903,
             1.3750000000000009,
             3.0000000000000036
           ],
           "weights": [
-            -0.0467,
-            0.0072,
-            -0.7068,
-            0.3796
+            -0.0642,
+            -0.0172,
+            -0.7031,
+            0.4516
           ],
-          "bias": 2.6391
+          "bias": 2.6486
         }
       },
       "made_on": "2026-09-23",
@@ -7481,6 +7481,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-09-21",
+      "resolve_on": "2026-09-23",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -7542,6 +7555,19 @@
       "resolve_on": "2026-09-22",
       "call": true,
       "confidence": 0.913,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-09-21",
+      "resolve_on": "2026-09-23",
+      "call": true,
+      "confidence": 0.925,
       "actual": true,
       "correct": true
     },
