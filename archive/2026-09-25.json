@@ -1,20 +1,20 @@
 {
   "date": "2026-09-25",
-  "fetched_at": "2026-09-25T09:21:54.959986+00:00",
+  "fetched_at": "2026-09-25T19:43:14.341407+00:00",
   "observations": {
     "btc": {
-      "usd": 84569,
-      "usd_24h_change": 1.33
+      "usd": 83957,
+      "usd_24h_change": -0.57
     },
     "kp": {
-      "max_kp": 4.33,
-      "latest_kp": 4.0,
+      "max_kp": 4.0,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.3,
-      "count": 221,
-      "strongest_place": "72 km NW of Finschhafen, Papua New Guinea"
+      "count": 201,
+      "strongest_place": "Vanuatu region"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-09-24"
     },
     "hn": {
-      "top_id": 49841563,
-      "top_title": "Dutch governments builds alternative for Microsoft based on NixOS",
+      "top_id": 49848269,
+      "top_title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
       "top10": [
-        49841563,
-        49841115,
+        49848269,
+        49848295,
+        49848680,
+        49843269,
+        49844736,
+        49843174,
+        49845977,
         49841285,
-        49831968,
-        49823738,
-        49833867,
-        49832938,
-        49801436,
-        49840300,
-        49800085
+        49842270,
+        49848095
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 34.6,
-      "actual_prev_date": "2026-09-24",
-      "today": 32.1,
-      "forecast_next": 28.8,
-      "forecast_next_date": "2026-09-26"
+      "actual_prev": 31.2,
+      "actual_prev_date": "2026-09-25",
+      "today": 30.6,
+      "forecast_next": 30.0,
+      "forecast_next_date": "2026-09-27"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.533,
+      "call": false,
+      "confidence": 0.526,
       "basis": {
-        "today_usd": 84569,
-        "change_24h": 1.33
+        "today_usd": 83957,
+        "change_24h": -0.57
       },
       "made_on": "2026-09-25",
       "resolve_on": "2026-09-26"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.33
+        "today_max_kp": 4.0
       },
       "made_on": "2026-09-25",
       "resolve_on": "2026-09-26"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49841563,
-        "top_title": "Dutch governments builds alternative for Microsoft based on NixOS"
+        "top_id": 49848269,
+        "top_title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models"
       },
       "made_on": "2026-09-25",
       "resolve_on": "2026-09-26"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.8,
-        "for_date": "2026-09-26",
+        "forecast_c": 30.0,
+        "for_date": "2026-09-27",
         "city": "New Delhi"
       },
       "made_on": "2026-09-25",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.741,
+      "confidence": 0.683,
       "basis": {
-        "today_usd": 84569,
-        "change_24h": 1.33,
+        "today_usd": 83957,
+        "change_24h": -0.57,
         "model": {
-          "p_event": 0.2586,
+          "p_event": 0.3171,
           "n_train": 60,
           "fallback": null,
           "features": [
-            1.33,
-            -2.2221965291186363,
-            4.424221470377598,
-            2.854907016860634
+            -0.57,
+            -2.9297846018660922,
+            3.668535302397946,
+            2.89948167282747
           ],
           "weights": [
             -0.4494,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.658,
+      "confidence": 0.631,
       "basis": {
-        "today_max_kp": 4.33,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.6579,
+          "p_event": 0.6305,
           "n_train": 61,
           "fallback": null,
           "features": [
-            4.33,
-            3.22,
-            2.7142857142857144,
+            4.0,
+            3.11,
+            2.6671428571428573,
             4.33
           ],
           "weights": [
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.3,
-            238.71428571428572,
+            235.85714285714286,
             5.6000000000000005,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.92,
       "basis": {
-        "top_id": 49841563,
-        "top_title": "Dutch governments builds alternative for Microsoft based on NixOS",
+        "top_id": 49848269,
+        "top_title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
         "model": {
-          "p_event": 0.999,
+          "p_event": 0.9203,
           "n_train": 61,
           "fallback": null,
           "features": [
-            0.4,
-            4.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.4724,
-            -0.2129,
-            0.1813
+            0.4316,
+            -0.198,
+            0.2197
           ],
-          "bias": 2.3425
+          "bias": 2.5383
         }
       },
       "made_on": "2026-09-25",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.922,
+      "confidence": 0.888,
       "basis": {
-        "forecast_c": 28.8,
-        "for_date": "2026-09-26",
+        "forecast_c": 30.0,
+        "for_date": "2026-09-27",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9221,
-          "n_train": 55,
+          "p_event": 0.8879,
+          "n_train": 56,
           "fallback": null,
           "features": [
-            3.3000000000000007,
-            1.649969696691427,
-            1.450000000000002,
+            0.6000000000000014,
+            1.8241710446117707,
+            1.7333333333333354,
             3.0000000000000036
           ],
           "weights": [
-            -0.0697,
-            -0.0257,
-            -0.6999,
-            0.5083
+            -0.0735,
+            -0.0236,
+            -0.6958,
+            0.5541
           ],
-          "bias": 2.6598
+          "bias": 2.6724
         }
       },
       "made_on": "2026-09-25",

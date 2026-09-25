@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T09:21:56.371228+00:00",
+  "updated": "2026-09-25T19:43:15.913967+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 36,
-      "rule_correct": 32,
-      "model_correct": 32,
-      "rule_accuracy": 0.8889,
-      "model_accuracy": 0.8889,
-      "rule_brier": 0.0988,
-      "model_brier": 0.1006,
-      "rule_log_loss": 0.3492,
-      "model_log_loss": 0.3628,
+      "rule_correct": 33,
+      "model_correct": 33,
+      "rule_accuracy": 0.9167,
+      "model_accuracy": 0.9167,
+      "rule_brier": 0.0777,
+      "model_brier": 0.0779,
+      "rule_log_loss": 0.2939,
+      "model_log_loss": 0.2985,
       "coin_flip": {
         "n": 36,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 97,
-        "rate": 0.8969,
-        "majority_accuracy": 0.8969
+        "rate": 0.9175,
+        "majority_accuracy": 0.9175
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 29,
-      "rule_correct": 26,
-      "model_correct": 26,
-      "rule_accuracy": 0.8966,
-      "model_accuracy": 0.8966,
-      "rule_brier": 0.1021,
-      "model_brier": 0.0965,
-      "rule_log_loss": 0.3666,
-      "model_log_loss": 0.3627,
+      "shared_days": 30,
+      "rule_correct": 27,
+      "model_correct": 27,
+      "rule_accuracy": 0.9,
+      "model_accuracy": 0.9,
+      "rule_brier": 0.1,
+      "model_brier": 0.0934,
+      "rule_log_loss": 0.3618,
+      "model_log_loss": 0.3529,
       "coin_flip": {
-        "n": 29,
+        "n": 30,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 84,
-        "rate": 0.9167,
-        "majority_accuracy": 0.9167
+        "n": 86,
+        "rate": 0.9186,
+        "majority_accuracy": 0.9186
       }
     }
   },
   "totals": {
-    "graded": 562,
-    "correct": 433,
-    "accuracy": 0.7705,
-    "brier": 0.1465,
-    "log_loss": 0.4518,
+    "graded": 564,
+    "correct": 437,
+    "accuracy": 0.7748,
+    "brier": 0.1433,
+    "log_loss": 0.4431,
     "open": 14,
-    "void": 11,
+    "void": 9,
     "days": 62
   },
   "baselines": {
     "coin_flip": {
-      "n": 562,
+      "n": 564,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 562,
-      "rate": 0.7242,
-      "majority_accuracy": 0.7242
+      "n": 564,
+      "rate": 0.7287,
+      "majority_accuracy": 0.7287
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 61,
-      "correct": 55,
-      "accuracy": 0.9016,
-      "brier": 0.0892,
-      "log_loss": 0.3238,
-      "base_rate": 0.9016,
-      "majority_accuracy": 0.9016
+      "correct": 56,
+      "accuracy": 0.918,
+      "brier": 0.0767,
+      "log_loss": 0.2911,
+      "base_rate": 0.918,
+      "majority_accuracy": 0.918
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 55,
-      "correct": 51,
-      "accuracy": 0.9273,
-      "brier": 0.0836,
-      "log_loss": 0.324,
-      "base_rate": 0.9273,
-      "majority_accuracy": 0.9273
+      "graded": 56,
+      "correct": 52,
+      "accuracy": 0.9286,
+      "brier": 0.0829,
+      "log_loss": 0.3222,
+      "base_rate": 0.9286,
+      "majority_accuracy": 0.9286
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 36,
-      "correct": 32,
-      "accuracy": 0.8889,
-      "brier": 0.1006,
-      "log_loss": 0.3628,
-      "base_rate": 0.8889,
-      "majority_accuracy": 0.8889
+      "correct": 33,
+      "accuracy": 0.9167,
+      "brier": 0.0779,
+      "log_loss": 0.2985,
+      "base_rate": 0.9167,
+      "majority_accuracy": 0.9167
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 29,
-      "correct": 26,
-      "accuracy": 0.8966,
-      "brier": 0.0965,
-      "log_loss": 0.3627,
-      "base_rate": 0.8966,
-      "majority_accuracy": 0.8966
+      "graded": 30,
+      "correct": 27,
+      "accuracy": 0.9,
+      "brier": 0.0934,
+      "log_loss": 0.3529,
+      "base_rate": 0.9,
+      "majority_accuracy": 0.9
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 141,
-      "claimed": 0.8432,
-      "actual": 0.8794
+      "n": 142,
+      "claimed": 0.8429,
+      "actual": 0.8873
     },
     {
       "label": "90\u2013100%",
-      "n": 159,
-      "claimed": 0.9444,
-      "actual": 0.9497
+      "n": 160,
+      "claimed": 0.9443,
+      "actual": 0.9563
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.533,
+      "call": false,
+      "confidence": 0.526,
       "basis": {
-        "today_usd": 84569,
-        "change_24h": 1.33
+        "today_usd": 83957,
+        "change_24h": -0.57
       },
       "made_on": "2026-09-25",
       "resolve_on": "2026-09-26"
@@ -428,7 +428,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.33
+        "today_max_kp": 4.0
       },
       "made_on": "2026-09-25",
       "resolve_on": "2026-09-26"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49841563,
-        "top_title": "Dutch governments builds alternative for Microsoft based on NixOS"
+        "top_id": 49848269,
+        "top_title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models"
       },
       "made_on": "2026-09-25",
       "resolve_on": "2026-09-26"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.8,
-        "for_date": "2026-09-26",
+        "forecast_c": 30.0,
+        "for_date": "2026-09-27",
         "city": "New Delhi"
       },
       "made_on": "2026-09-25",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.741,
+      "confidence": 0.683,
       "basis": {
-        "today_usd": 84569,
-        "change_24h": 1.33,
+        "today_usd": 83957,
+        "change_24h": -0.57,
         "model": {
-          "p_event": 0.2586,
+          "p_event": 0.3171,
           "n_train": 60,
           "fallback": null,
           "features": [
-            1.33,
-            -2.2221965291186363,
-            4.424221470377598,
-            2.854907016860634
+            -0.57,
+            -2.9297846018660922,
+            3.668535302397946,
+            2.89948167282747
           ],
           "weights": [
             -0.4494,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.658,
+      "confidence": 0.631,
       "basis": {
-        "today_max_kp": 4.33,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.6579,
+          "p_event": 0.6305,
           "n_train": 61,
           "fallback": null,
           "features": [
-            4.33,
-            3.22,
-            2.7142857142857144,
+            4.0,
+            3.11,
+            2.6671428571428573,
             4.33
           ],
           "weights": [
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.3,
-            238.71428571428572,
+            235.85714285714286,
             5.6000000000000005,
             1.0
           ]
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.92,
       "basis": {
-        "top_id": 49841563,
-        "top_title": "Dutch governments builds alternative for Microsoft based on NixOS",
+        "top_id": 49848269,
+        "top_title": "Ollaya \u2013 Ollama for open-source, Jev-style decision models",
         "model": {
-          "p_event": 0.999,
+          "p_event": 0.9203,
           "n_train": 61,
           "fallback": null,
           "features": [
-            0.4,
-            4.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.4724,
-            -0.2129,
-            0.1813
+            0.4316,
+            -0.198,
+            0.2197
           ],
-          "bias": 2.3425
+          "bias": 2.5383
         }
       },
       "made_on": "2026-09-25",
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.922,
+      "confidence": 0.888,
       "basis": {
-        "forecast_c": 28.8,
-        "for_date": "2026-09-26",
+        "forecast_c": 30.0,
+        "for_date": "2026-09-27",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9221,
-          "n_train": 55,
+          "p_event": 0.8879,
+          "n_train": 56,
           "fallback": null,
           "features": [
-            3.3000000000000007,
-            1.649969696691427,
-            1.450000000000002,
+            0.6000000000000014,
+            1.8241710446117707,
+            1.7333333333333354,
             3.0000000000000036
           ],
           "weights": [
-            -0.0697,
-            -0.0257,
-            -0.6999,
-            0.5083
+            -0.0735,
+            -0.0236,
+            -0.6958,
+            0.5541
           ],
-          "bias": 2.6598
+          "bias": 2.6724
         }
       },
       "made_on": "2026-09-25",
@@ -7793,6 +7793,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-09-23",
+      "resolve_on": "2026-09-25",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -7858,6 +7871,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-09-23",
+      "resolve_on": "2026-09-25",
+      "call": true,
+      "confidence": 0.933,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -7919,8 +7945,8 @@
       "resolve_on": "2026-09-25",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -7984,8 +8010,8 @@
       "resolve_on": "2026-09-25",
       "call": true,
       "confidence": 0.91,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
