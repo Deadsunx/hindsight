@@ -1,19 +1,19 @@
 {
   "date": "2026-09-26",
-  "fetched_at": "2026-09-26T09:05:26.713851+00:00",
+  "fetched_at": "2026-09-26T18:52:16.295733+00:00",
   "observations": {
     "btc": {
-      "usd": 84190,
-      "usd_24h_change": -0.35
+      "usd": 83998,
+      "usd_24h_change": 0.06
     },
     "kp": {
       "max_kp": 4.0,
-      "latest_kp": 2.67,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.6,
-      "count": 205,
+      "count": 200,
       "strongest_place": "80 km ENE of Tadine, New Caledonia"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-09-25"
     },
     "hn": {
-      "top_id": 49854399,
-      "top_title": "CAPTCHAs don't prove you're human \u2013 they prove you're American",
+      "top_id": 49842764,
+      "top_title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
       "top10": [
-        49854399,
+        49842764,
+        49857528,
+        49857729,
+        49854693,
+        49827900,
+        49829202,
         49849985,
-        49853175,
-        49852717,
-        49840054,
-        49848269,
-        49845172,
-        49850305,
-        49854161,
-        49838040
+        49855315,
+        49832768,
+        49852717
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 31.2,
       "actual_prev_date": "2026-09-25",
-      "today": 30.5,
-      "forecast_next": 30.6,
+      "today": 29.6,
+      "forecast_next": 30.0,
       "forecast_next_date": "2026-09-27"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.523,
+      "call": true,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 84190,
-        "change_24h": -0.35
+        "today_usd": 83998,
+        "change_24h": 0.06
       },
       "made_on": "2026-09-26",
       "resolve_on": "2026-09-27"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49854399,
-        "top_title": "CAPTCHAs don't prove you're human \u2013 they prove you're American"
+        "top_id": 49842764,
+        "top_title": "PipePipe: NewPipe hard fork implementing SponsorBlock"
       },
       "made_on": "2026-09-26",
       "resolve_on": "2026-09-27"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.6,
+        "forecast_c": 30.0,
         "for_date": "2026-09-27",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.531,
+      "confidence": 0.556,
       "basis": {
-        "today_usd": 84190,
-        "change_24h": -0.35,
+        "today_usd": 83998,
+        "change_24h": 0.06,
         "model": {
-          "p_event": 0.4692,
+          "p_event": 0.4442,
           "n_train": 61,
           "fallback": null,
           "features": [
-            -0.35,
-            -0.15891086760589923,
-            3.4974491363943594,
-            2.9128533535650067
+            0.06,
+            -0.3866040510412172,
+            3.2614174196324397,
+            2.9209710730605063
           ],
           "weights": [
             -0.4293,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.6,
-            230.71428571428572,
+            230.0,
             5.757142857142857,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.93,
       "basis": {
-        "top_id": 49854399,
-        "top_title": "CAPTCHAs don't prove you're human \u2013 they prove you're American",
+        "top_id": 49842764,
+        "top_title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
         "model": {
-          "p_event": 0.9788,
+          "p_event": 0.93,
           "n_train": 62,
           "fallback": null,
           "features": [
-            0.1,
-            6.0,
+            0.0,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4709,
-            -0.2143,
-            0.1118
+            0.4276,
+            -0.1959,
+            0.2296
           ],
-          "bias": 2.3498
+          "bias": 2.5562
         }
       },
       "made_on": "2026-09-26",
@@ -295,17 +295,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.884,
+      "confidence": 0.882,
       "basis": {
-        "forecast_c": 30.6,
+        "forecast_c": 30.0,
         "for_date": "2026-09-27",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8838,
+          "p_event": 0.8818,
           "n_train": 56,
           "fallback": null,
           "features": [
-            0.10000000000000142,
+            0.3999999999999986,
             1.8916659324521334,
             1.3333333333333346,
             2.1000000000000014

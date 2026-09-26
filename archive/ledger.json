@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T09:05:32.157635+00:00",
+  "updated": "2026-09-26T18:52:17.520906+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 37,
-      "rule_correct": 33,
-      "model_correct": 33,
-      "rule_accuracy": 0.8919,
-      "model_accuracy": 0.8919,
-      "rule_brier": 0.0966,
-      "model_brier": 0.0986,
-      "rule_log_loss": 0.3432,
-      "model_log_loss": 0.3587,
+      "rule_correct": 34,
+      "model_correct": 34,
+      "rule_accuracy": 0.9189,
+      "model_accuracy": 0.9189,
+      "rule_brier": 0.076,
+      "model_brier": 0.0759,
+      "rule_log_loss": 0.2894,
+      "model_log_loss": 0.2927,
       "coin_flip": {
         "n": 37,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 99,
-        "rate": 0.899,
-        "majority_accuracy": 0.899
+        "rate": 0.9192,
+        "majority_accuracy": 0.9192
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 574,
-    "correct": 443,
-    "accuracy": 0.7718,
-    "brier": 0.1455,
-    "log_loss": 0.4492,
+    "correct": 445,
+    "accuracy": 0.7753,
+    "brier": 0.1427,
+    "log_loss": 0.4414,
     "open": 14,
     "void": 11,
     "days": 63
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 574,
-      "rate": 0.73,
-      "majority_accuracy": 0.73
+      "rate": 0.7334,
+      "majority_accuracy": 0.7334
     }
   },
   "by_predictor": {
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 62,
-      "correct": 56,
-      "accuracy": 0.9032,
-      "brier": 0.0879,
-      "log_loss": 0.3206,
-      "base_rate": 0.9032,
-      "majority_accuracy": 0.9032
+      "correct": 57,
+      "accuracy": 0.9194,
+      "brier": 0.0757,
+      "log_loss": 0.2885,
+      "base_rate": 0.9194,
+      "majority_accuracy": 0.9194
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 37,
-      "correct": 33,
-      "accuracy": 0.8919,
-      "brier": 0.0986,
-      "log_loss": 0.3587,
-      "base_rate": 0.8919,
-      "majority_accuracy": 0.8919
+      "correct": 34,
+      "accuracy": 0.9189,
+      "brier": 0.0759,
+      "log_loss": 0.2927,
+      "base_rate": 0.9189,
+      "majority_accuracy": 0.9189
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 143,
       "claimed": 0.8432,
-      "actual": 0.8811
+      "actual": 0.8881
     },
     {
       "label": "90\u2013100%",
       "n": 164,
       "claimed": 0.944,
-      "actual": 0.9512
+      "actual": 0.9573
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.523,
+      "call": true,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 84190,
-        "change_24h": -0.35
+        "today_usd": 83998,
+        "change_24h": 0.06
       },
       "made_on": "2026-09-26",
       "resolve_on": "2026-09-27"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49854399,
-        "top_title": "CAPTCHAs don't prove you're human \u2013 they prove you're American"
+        "top_id": 49842764,
+        "top_title": "PipePipe: NewPipe hard fork implementing SponsorBlock"
       },
       "made_on": "2026-09-26",
       "resolve_on": "2026-09-27"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.6,
+        "forecast_c": 30.0,
         "for_date": "2026-09-27",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.531,
+      "confidence": 0.556,
       "basis": {
-        "today_usd": 84190,
-        "change_24h": -0.35,
+        "today_usd": 83998,
+        "change_24h": 0.06,
         "model": {
-          "p_event": 0.4692,
+          "p_event": 0.4442,
           "n_train": 61,
           "fallback": null,
           "features": [
-            -0.35,
-            -0.15891086760589923,
-            3.4974491363943594,
-            2.9128533535650067
+            0.06,
+            -0.3866040510412172,
+            3.2614174196324397,
+            2.9209710730605063
           ],
           "weights": [
             -0.4293,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             6.6,
-            230.71428571428572,
+            230.0,
             5.757142857142857,
             1.0
           ]
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.93,
       "basis": {
-        "top_id": 49854399,
-        "top_title": "CAPTCHAs don't prove you're human \u2013 they prove you're American",
+        "top_id": 49842764,
+        "top_title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
         "model": {
-          "p_event": 0.9788,
+          "p_event": 0.93,
           "n_train": 62,
           "fallback": null,
           "features": [
-            0.1,
-            6.0,
+            0.0,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4709,
-            -0.2143,
-            0.1118
+            0.4276,
+            -0.1959,
+            0.2296
           ],
-          "bias": 2.3498
+          "bias": 2.5562
         }
       },
       "made_on": "2026-09-26",
@@ -652,17 +652,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.884,
+      "confidence": 0.882,
       "basis": {
-        "forecast_c": 30.6,
+        "forecast_c": 30.0,
         "for_date": "2026-09-27",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8838,
+          "p_event": 0.8818,
           "n_train": 56,
           "fallback": null,
           "features": [
-            0.10000000000000142,
+            0.3999999999999986,
             1.8916659324521334,
             1.3333333333333346,
             2.1000000000000014
@@ -8075,8 +8075,8 @@
       "resolve_on": "2026-09-26",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -8140,8 +8140,8 @@
       "resolve_on": "2026-09-26",
       "call": true,
       "confidence": 0.92,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
