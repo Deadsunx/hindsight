@@ -1,20 +1,20 @@
 {
   "date": "2026-09-27",
-  "fetched_at": "2026-09-27T09:48:04.161717+00:00",
+  "fetched_at": "2026-09-27T19:25:12.356741+00:00",
   "observations": {
     "btc": {
-      "usd": 84777,
-      "usd_24h_change": 0.91
+      "usd": 84771,
+      "usd_24h_change": 0.9
     },
     "kp": {
       "max_kp": 4.0,
-      "latest_kp": 2.0,
+      "latest_kp": 0.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.6,
-      "count": 182,
-      "strongest_place": "74 km ESE of Kokopo, Papua New Guinea"
+      "max_mag": 5.1,
+      "count": 196,
+      "strongest_place": "90 km ENE of Tadine, New Caledonia"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-09-26"
     },
     "hn": {
-      "top_id": 49863864,
-      "top_title": "OpenAI Feared \"Optics\" of what might appear on Hacker News",
+      "top_id": 49868830,
+      "top_title": "Ember-1",
       "top10": [
-        49863864,
-        49864642,
-        49844657,
-        49854219,
-        49856988,
-        49842764,
-        49859112,
-        49856193,
-        49858513,
-        49845114
+        49868830,
+        49869574,
+        49866951,
+        49849409,
+        49866515,
+        49867775,
+        49867486,
+        49868831,
+        49867067,
+        49866988
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 29.6,
-      "actual_prev_date": "2026-09-26",
-      "today": 28.7,
-      "forecast_next": 30.2,
-      "forecast_next_date": "2026-09-28"
+      "actual_prev": 28.6,
+      "actual_prev_date": "2026-09-27",
+      "today": 28.1,
+      "forecast_next": 30.9,
+      "forecast_next_date": "2026-09-29"
     }
   },
   "predictions": [
@@ -56,8 +56,8 @@
       "call": true,
       "confidence": 0.529,
       "basis": {
-        "today_usd": 84777,
-        "change_24h": 0.91
+        "today_usd": 84771,
+        "change_24h": 0.9
       },
       "made_on": "2026-09-27",
       "resolve_on": "2026-09-28"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49863864,
-        "top_title": "OpenAI Feared \"Optics\" of what might appear on Hacker News"
+        "top_id": 49868830,
+        "top_title": "Ember-1"
       },
       "made_on": "2026-09-27",
       "resolve_on": "2026-09-28"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.2,
-        "for_date": "2026-09-28",
+        "forecast_c": 30.9,
+        "for_date": "2026-09-29",
         "city": "New Delhi"
       },
       "made_on": "2026-09-27",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.52,
+      "confidence": 0.519,
       "basis": {
-        "today_usd": 84777,
-        "change_24h": 0.91,
+        "today_usd": 84771,
+        "change_24h": 0.9,
         "model": {
-          "p_event": 0.4805,
+          "p_event": 0.4808,
           "n_train": 62,
           "fallback": null,
           "features": [
-            0.91,
-            0.23173053049738712,
-            4.418031777312481,
-            2.393931423596079
+            0.9,
+            0.22463673874746348,
+            4.410641704643425,
+            2.393803161221952
           ],
           "weights": [
             -0.4202,
@@ -215,9 +215,9 @@
           "n_train": 63,
           "fallback": "laplace",
           "features": [
-            5.6,
-            225.0,
-            5.642857142857143,
+            5.1,
+            227.0,
+            5.571428571428571,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.94,
       "basis": {
-        "top_id": 49863864,
-        "top_title": "OpenAI Feared \"Optics\" of what might appear on Hacker News",
+        "top_id": 49868830,
+        "top_title": "Ember-1",
         "model": {
-          "p_event": 0.9785,
+          "p_event": 0.9396,
           "n_train": 63,
           "fallback": null,
           "features": [
-            0.1,
-            6.0,
+            0.0,
+            11.0,
             6.0
           ],
           "weights": [
-            0.4694,
-            -0.2151,
-            0.0502
+            0.424,
+            -0.1938,
+            0.2453
           ],
-          "bias": 2.3611
+          "bias": 2.5752
         }
       },
       "made_on": "2026-09-27",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.92,
       "basis": {
-        "forecast_c": 30.2,
-        "for_date": "2026-09-28",
+        "forecast_c": 30.9,
+        "for_date": "2026-09-29",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9551,
-          "n_train": 57,
+          "p_event": 0.9199,
+          "n_train": 58,
           "fallback": null,
           "features": [
-            1.5,
-            2.182773465112676,
-            0.7000000000000005,
+            2.799999999999997,
+            2.3504254933947593,
+            0.9500000000000011,
             1.8000000000000007
           ],
           "weights": [
-            -0.0586,
-            -0.0235,
-            -0.6951,
-            0.5986
+            -0.1244,
+            -0.0047,
+            -0.6471,
+            0.5914
           ],
-          "bias": 2.6844
+          "bias": 2.6938
         }
       },
       "made_on": "2026-09-27",
