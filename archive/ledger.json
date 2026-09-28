@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T10:32:40.156764+00:00",
+  "updated": "2026-09-28T21:28:34.172515+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 39,
-      "rule_correct": 35,
-      "model_correct": 35,
-      "rule_accuracy": 0.8974,
-      "model_accuracy": 0.8974,
-      "rule_brier": 0.0923,
-      "model_brier": 0.0948,
-      "rule_log_loss": 0.3322,
-      "model_log_loss": 0.3517,
+      "rule_correct": 36,
+      "model_correct": 36,
+      "rule_accuracy": 0.9231,
+      "model_accuracy": 0.9231,
+      "rule_brier": 0.0729,
+      "model_brier": 0.0722,
+      "rule_log_loss": 0.2811,
+      "model_log_loss": 0.2811,
       "coin_flip": {
         "n": 39,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 103,
-        "rate": 0.9029,
-        "majority_accuracy": 0.9029
+        "rate": 0.9223,
+        "majority_accuracy": 0.9223
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 598,
-    "correct": 463,
-    "accuracy": 0.7742,
-    "brier": 0.144,
-    "log_loss": 0.4455,
+    "correct": 465,
+    "accuracy": 0.7776,
+    "brier": 0.1412,
+    "log_loss": 0.4376,
     "open": 14,
     "void": 11,
     "days": 65
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 598,
-      "rate": 0.7341,
-      "majority_accuracy": 0.7341
+      "rate": 0.7375,
+      "majority_accuracy": 0.7375
     }
   },
   "by_predictor": {
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 64,
-      "correct": 58,
-      "accuracy": 0.9062,
-      "brier": 0.0857,
-      "log_loss": 0.3146,
-      "base_rate": 0.9062,
-      "majority_accuracy": 0.9062
+      "correct": 59,
+      "accuracy": 0.9219,
+      "brier": 0.0738,
+      "log_loss": 0.2835,
+      "base_rate": 0.9219,
+      "majority_accuracy": 0.9219
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 39,
-      "correct": 35,
-      "accuracy": 0.8974,
-      "brier": 0.0948,
-      "log_loss": 0.3517,
-      "base_rate": 0.8974,
-      "majority_accuracy": 0.8974
+      "correct": 36,
+      "accuracy": 0.9231,
+      "brier": 0.0722,
+      "log_loss": 0.2811,
+      "base_rate": 0.9231,
+      "majority_accuracy": 0.9231
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 150,
       "claimed": 0.8436,
-      "actual": 0.8867
+      "actual": 0.8933
     },
     {
       "label": "90\u2013100%",
       "n": 170,
       "claimed": 0.944,
-      "actual": 0.9529
+      "actual": 0.9588
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.545,
+      "confidence": 0.534,
       "basis": {
-        "today_usd": 82773,
-        "change_24h": -2.5
+        "today_usd": 83459,
+        "change_24h": -1.39
       },
       "made_on": "2026-09-28",
       "resolve_on": "2026-09-29"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49872723,
-        "top_title": "Owed a billion dollars in Nvidia stock"
+        "top_id": 49883760,
+        "top_title": "World Labs Is Joining AMD"
       },
       "made_on": "2026-09-28",
       "resolve_on": "2026-09-29"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.7,
-        "for_date": "2026-09-29",
+        "forecast_c": 30.9,
+        "for_date": "2026-09-30",
         "city": "New Delhi"
       },
       "made_on": "2026-09-28",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.681,
+      "confidence": 0.651,
       "basis": {
-        "today_usd": 82773,
-        "change_24h": -2.5,
+        "today_usd": 83459,
+        "change_24h": -1.39,
         "model": {
-          "p_event": 0.6807,
+          "p_event": 0.6508,
           "n_train": 63,
           "fallback": null,
           "features": [
-            -2.5,
-            -1.4102457210238617,
-            -4.532715130964327,
-            2.5617935628783814
+            -1.39,
+            -0.5931607846873965,
+            -3.741508367645874,
+            2.4825540009642677
           ],
           "weights": [
             -0.4363,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.4,
-            220.28571428571428,
+            226.28571428571428,
             5.528571428571429,
             1.0
           ]
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.881,
       "basis": {
-        "top_id": 49872723,
-        "top_title": "Owed a billion dollars in Nvidia stock",
+        "top_id": 49883760,
+        "top_title": "World Labs Is Joining AMD",
         "model": {
-          "p_event": 0.9826,
+          "p_event": 0.8806,
           "n_train": 64,
           "fallback": null,
           "features": [
-            0.1,
-            4.0,
+            0.0,
+            11.0,
             0.0
           ],
           "weights": [
-            0.4675,
-            -0.2152,
-            -0.0031
+            0.4208,
+            -0.1917,
+            0.2657
           ],
-          "bias": 2.3752
+          "bias": 2.5951
         }
       },
       "made_on": "2026-09-28",
@@ -652,19 +652,19 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.788,
+      "confidence": 0.736,
       "basis": {
-        "forecast_c": 30.7,
-        "for_date": "2026-09-29",
+        "forecast_c": 30.9,
+        "for_date": "2026-09-30",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.788,
+          "p_event": 0.736,
           "n_train": 58,
           "fallback": null,
           "features": [
-            2.599999999999998,
-            2.6770132610803397,
-            1.5333333333333325,
+            0.3999999999999986,
+            2.7367133572955713,
+            1.8000000000000007,
             1.8000000000000007
           ],
           "weights": [
@@ -8387,8 +8387,8 @@
       "resolve_on": "2026-09-28",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -8452,8 +8452,8 @@
       "resolve_on": "2026-09-28",
       "call": true,
       "confidence": 0.94,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
