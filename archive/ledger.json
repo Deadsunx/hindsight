@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T10:23:44.125321+00:00",
+  "updated": "2026-09-29T20:20:31.530961+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -118,49 +118,49 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 32,
-      "rule_correct": 29,
-      "model_correct": 29,
-      "rule_accuracy": 0.9062,
-      "model_accuracy": 0.9062,
-      "rule_brier": 0.0963,
-      "model_brier": 0.0884,
-      "rule_log_loss": 0.3531,
-      "model_log_loss": 0.3385,
+      "shared_days": 33,
+      "rule_correct": 30,
+      "model_correct": 30,
+      "rule_accuracy": 0.9091,
+      "model_accuracy": 0.9091,
+      "rule_brier": 0.0945,
+      "model_brier": 0.0859,
+      "rule_log_loss": 0.3492,
+      "model_log_loss": 0.3308,
       "coin_flip": {
-        "n": 32,
+        "n": 33,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 90,
-        "rate": 0.9222,
-        "majority_accuracy": 0.9222
+        "n": 92,
+        "rate": 0.9239,
+        "majority_accuracy": 0.9239
       }
     }
   },
   "totals": {
-    "graded": 606,
-    "correct": 471,
-    "accuracy": 0.7772,
-    "brier": 0.1409,
-    "log_loss": 0.4364,
+    "graded": 608,
+    "correct": 473,
+    "accuracy": 0.778,
+    "brier": 0.1405,
+    "log_loss": 0.4355,
     "open": 12,
-    "void": 15,
+    "void": 13,
     "days": 66
   },
   "baselines": {
     "coin_flip": {
-      "n": 606,
+      "n": 608,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 606,
-      "rate": 0.7343,
-      "majority_accuracy": 0.7343
+      "n": 608,
+      "rate": 0.7352,
+      "majority_accuracy": 0.7352
     }
   },
   "by_predictor": {
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 58,
-      "correct": 54,
-      "accuracy": 0.931,
-      "brier": 0.0814,
-      "log_loss": 0.3188,
-      "base_rate": 0.931,
-      "majority_accuracy": 0.931
+      "graded": 59,
+      "correct": 55,
+      "accuracy": 0.9322,
+      "brier": 0.0807,
+      "log_loss": 0.3171,
+      "base_rate": 0.9322,
+      "majority_accuracy": 0.9322
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 32,
-      "correct": 29,
-      "accuracy": 0.9062,
-      "brier": 0.0884,
-      "log_loss": 0.3385,
-      "base_rate": 0.9062,
-      "majority_accuracy": 0.9062
+      "graded": 33,
+      "correct": 30,
+      "accuracy": 0.9091,
+      "brier": 0.0859,
+      "log_loss": 0.3308,
+      "base_rate": 0.9091,
+      "majority_accuracy": 0.9091
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 153,
-      "claimed": 0.8444,
-      "actual": 0.8954
+      "n": 154,
+      "claimed": 0.8441,
+      "actual": 0.8961
     },
     {
       "label": "90\u2013100%",
-      "n": 172,
-      "claimed": 0.9441,
-      "actual": 0.9593
+      "n": 173,
+      "claimed": 0.9439,
+      "actual": 0.9595
     }
   ],
   "open_bets": [
@@ -455,8 +455,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49890051,
-        "top_title": "Using any C++ library in Godot"
+        "top_id": 49896586,
+        "top_title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price"
       },
       "made_on": "2026-09-29",
       "resolve_on": "2026-09-30"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.6,
-        "for_date": "2026-09-30",
+        "forecast_c": 34.0,
+        "for_date": "2026-10-01",
         "city": "New Delhi"
       },
       "made_on": "2026-09-29",
@@ -524,9 +524,9 @@
           "n_train": 65,
           "fallback": "laplace",
           "features": [
-            5.4,
-            221.57142857142858,
-            5.542857142857143,
+            5.6,
+            217.28571428571428,
+            5.571428571428571,
             1.0
           ]
         }
@@ -573,16 +573,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.898,
       "basis": {
-        "top_id": 49890051,
-        "top_title": "Using any C++ library in Godot",
+        "top_id": 49896586,
+        "top_title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
         "model": {
-          "p_event": 0.9543,
+          "p_event": 0.8981,
           "n_train": 65,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             1.0
           ],
@@ -604,28 +604,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.718,
+      "confidence": 0.724,
       "basis": {
-        "forecast_c": 31.6,
-        "for_date": "2026-09-30",
+        "forecast_c": 34.0,
+        "for_date": "2026-10-01",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7183,
-          "n_train": 58,
+          "p_event": 0.7237,
+          "n_train": 59,
           "fallback": null,
           "features": [
-            1.2000000000000028,
-            3.0052620518018056,
+            2.0,
+            2.757099925646511,
             1.8000000000000007,
             1.8000000000000007
           ],
           "weights": [
-            -0.1244,
-            -0.0047,
-            -0.6471,
-            0.5914
+            -0.1074,
+            0.0343,
+            -0.6529,
+            0.5872
           ],
-          "bias": 2.6938
+          "bias": 2.7116
         }
       },
       "made_on": "2026-09-29",
@@ -8343,6 +8343,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-09-27",
+      "resolve_on": "2026-09-29",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -8404,6 +8417,19 @@
       "resolve_on": "2026-09-28",
       "call": true,
       "confidence": 0.94,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-09-27",
+      "resolve_on": "2026-09-29",
+      "call": true,
+      "confidence": 0.92,
       "actual": true,
       "correct": true
     },

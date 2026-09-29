@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "fetched_at": "2026-09-29T10:23:38.321468+00:00",
+  "fetched_at": "2026-09-29T20:20:26.602632+00:00",
   "observations": {
     "btc": {
       "error": "HTTP Error 403: Forbidden"
@@ -11,9 +11,9 @@
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.4,
-      "count": 221,
-      "strongest_place": "north of Svalbard"
+      "max_mag": 5.6,
+      "count": 191,
+      "strongest_place": "southern Mid-Atlantic Ridge"
     },
     "wiki": {
       "top": "Pac_(wrestler)",
@@ -21,28 +21,28 @@
       "for_date": "2026-09-28"
     },
     "hn": {
-      "top_id": 49890051,
-      "top_title": "Using any C++ library in Godot",
+      "top_id": 49896586,
+      "top_title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
       "top10": [
-        49890051,
-        49890226,
-        49880411,
-        49876052,
-        49870376,
-        49880036,
-        49866783,
-        49889934,
-        49883539,
-        49886482
+        49896586,
+        49898877,
+        49896712,
+        49892245,
+        49895304,
+        49899090,
+        49896050,
+        49898952,
+        49871018,
+        49896604
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.2,
-      "actual_prev_date": "2026-09-28",
-      "today": 30.4,
-      "forecast_next": 31.6,
-      "forecast_next_date": "2026-09-30"
+      "actual_prev": 30.8,
+      "actual_prev_date": "2026-09-29",
+      "today": 32.0,
+      "forecast_next": 34.0,
+      "forecast_next_date": "2026-10-01"
     }
   },
   "predictions": [
@@ -97,8 +97,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49890051,
-        "top_title": "Using any C++ library in Godot"
+        "top_id": 49896586,
+        "top_title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price"
       },
       "made_on": "2026-09-29",
       "resolve_on": "2026-09-30"
@@ -112,8 +112,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.6,
-        "for_date": "2026-09-30",
+        "forecast_c": 34.0,
+        "for_date": "2026-10-01",
         "city": "New Delhi"
       },
       "made_on": "2026-09-29",
@@ -166,9 +166,9 @@
           "n_train": 65,
           "fallback": "laplace",
           "features": [
-            5.4,
-            221.57142857142858,
-            5.542857142857143,
+            5.6,
+            217.28571428571428,
+            5.571428571428571,
             1.0
           ]
         }
@@ -215,16 +215,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.898,
       "basis": {
-        "top_id": 49890051,
-        "top_title": "Using any C++ library in Godot",
+        "top_id": 49896586,
+        "top_title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
         "model": {
-          "p_event": 0.9543,
+          "p_event": 0.8981,
           "n_train": 65,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             1.0
           ],
@@ -246,28 +246,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.718,
+      "confidence": 0.724,
       "basis": {
-        "forecast_c": 31.6,
-        "for_date": "2026-09-30",
+        "forecast_c": 34.0,
+        "for_date": "2026-10-01",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7183,
-          "n_train": 58,
+          "p_event": 0.7237,
+          "n_train": 59,
           "fallback": null,
           "features": [
-            1.2000000000000028,
-            3.0052620518018056,
+            2.0,
+            2.757099925646511,
             1.8000000000000007,
             1.8000000000000007
           ],
           "weights": [
-            -0.1244,
-            -0.0047,
-            -0.6471,
-            0.5914
+            -0.1074,
+            0.0343,
+            -0.6529,
+            0.5872
           ],
-          "bias": 2.6938
+          "bias": 2.7116
         }
       },
       "made_on": "2026-09-29",
