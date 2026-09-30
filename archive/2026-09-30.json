@@ -1,10 +1,10 @@
 {
   "date": "2026-09-30",
-  "fetched_at": "2026-09-30T10:16:39.752722+00:00",
+  "fetched_at": "2026-09-30T20:24:35.744020+00:00",
   "observations": {
     "btc": {
-      "usd": 83712,
-      "usd_24h_change": -0.57
+      "usd": 83637,
+      "usd_24h_change": 0.05
     },
     "kp": {
       "max_kp": 1.33,
@@ -13,7 +13,7 @@
     },
     "quakes": {
       "max_mag": 5.6,
-      "count": 230,
+      "count": 225,
       "strongest_place": "74 km S of Yonakuni, Japan"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-09-29"
     },
     "hn": {
-      "top_id": 49901736,
-      "top_title": "Livenerf: Has Opus 5.5 been nerfed yet?",
+      "top_id": 49913571,
+      "top_title": "Gemini 4 Argon",
       "top10": [
-        49901736,
-        49905487,
+        49913571,
+        49913192,
+        49912955,
+        49911995,
+        49912444,
+        49913350,
+        49909583,
+        49911757,
         49906637,
-        49887343,
-        49896604,
-        49897993,
-        49899090,
-        49893509,
-        49890733,
-        49883913
+        49883970
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 30.8,
-      "actual_prev_date": "2026-09-29",
-      "today": 32.0,
-      "forecast_next": 33.7,
-      "forecast_next_date": "2026-10-01"
+      "actual_prev": 32.5,
+      "actual_prev_date": "2026-09-30",
+      "today": 33.9,
+      "forecast_next": 34.8,
+      "forecast_next_date": "2026-10-02"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.526,
+      "call": true,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 83712,
-        "change_24h": -0.57
+        "today_usd": 83637,
+        "change_24h": 0.05
       },
       "made_on": "2026-09-30",
       "resolve_on": "2026-10-01"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49901736,
-        "top_title": "Livenerf: Has Opus 5.5 been nerfed yet?"
+        "top_id": 49913571,
+        "top_title": "Gemini 4 Argon"
       },
       "made_on": "2026-09-30",
       "resolve_on": "2026-10-01"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.7,
-        "for_date": "2026-10-01",
+        "forecast_c": 34.8,
+        "for_date": "2026-10-02",
         "city": "New Delhi"
       },
       "made_on": "2026-09-30",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.695,
+      "confidence": 0.667,
       "basis": {
-        "today_usd": 83712,
-        "change_24h": -0.57,
+        "today_usd": 83637,
+        "change_24h": 0.05,
         "model": {
-          "p_event": 0.6954,
+          "p_event": 0.6673,
           "n_train": 63,
           "fallback": null,
           "features": [
-            -0.57,
-            -0.3404842972451694,
-            -3.2130510688973435,
-            1.049747215849541
+            0.05,
+            -0.4297721374318386,
+            -3.2997652934987465,
+            1.0422715087445282
           ],
           "weights": [
             -0.4363,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.6,
-            215.42857142857142,
+            214.71428571428572,
             5.557142857142857,
             1.0
           ]
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.911,
       "basis": {
-        "top_id": 49901736,
-        "top_title": "Livenerf: Has Opus 5.5 been nerfed yet?",
+        "top_id": 49913571,
+        "top_title": "Gemini 4 Argon",
         "model": {
-          "p_event": 0.9827,
+          "p_event": 0.9105,
           "n_train": 66,
           "fallback": null,
           "features": [
-            0.2,
+            0.0,
             11.0,
             2.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.937,
+      "confidence": 0.848,
       "basis": {
-        "forecast_c": 33.7,
-        "for_date": "2026-10-01",
+        "forecast_c": 34.8,
+        "for_date": "2026-10-02",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9366,
-          "n_train": 59,
+          "p_event": 0.8482,
+          "n_train": 60,
           "fallback": null,
           "features": [
-            1.7000000000000028,
-            2.7917019898262776,
-            0.9499999999999993,
+            0.8999999999999986,
+            2.7539970951328177,
+            1.8000000000000007,
             1.8000000000000007
           ],
           "weights": [
-            -0.1074,
-            0.0343,
-            -0.6529,
-            0.5872
+            -0.1539,
+            0.133,
+            -0.5593,
+            0.4911
           ],
-          "bias": 2.7116
+          "bias": 2.7222
         }
       },
       "made_on": "2026-09-30",
