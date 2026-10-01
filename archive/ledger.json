@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T10:42:50.468307+00:00",
+  "updated": "2026-10-01T20:42:00.225309+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 42,
-      "rule_correct": 38,
-      "model_correct": 38,
-      "rule_accuracy": 0.9048,
-      "model_accuracy": 0.9048,
-      "rule_brier": 0.0868,
-      "model_brier": 0.0874,
-      "rule_log_loss": 0.3176,
-      "model_log_loss": 0.3242,
+      "rule_correct": 39,
+      "model_correct": 39,
+      "rule_accuracy": 0.9286,
+      "model_accuracy": 0.9286,
+      "rule_brier": 0.0687,
+      "model_brier": 0.0679,
+      "rule_log_loss": 0.2701,
+      "model_log_loss": 0.2688,
       "coin_flip": {
         "n": 42,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 109,
-        "rate": 0.9083,
-        "majority_accuracy": 0.9083
+        "rate": 0.9266,
+        "majority_accuracy": 0.9266
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 34,
-      "rule_correct": 31,
-      "model_correct": 31,
-      "rule_accuracy": 0.9118,
-      "model_accuracy": 0.9118,
-      "rule_brier": 0.0929,
-      "model_brier": 0.0854,
-      "rule_log_loss": 0.3455,
-      "model_log_loss": 0.33,
+      "shared_days": 35,
+      "rule_correct": 32,
+      "model_correct": 32,
+      "rule_accuracy": 0.9143,
+      "model_accuracy": 0.9143,
+      "rule_brier": 0.0914,
+      "model_brier": 0.0852,
+      "rule_log_loss": 0.342,
+      "model_log_loss": 0.3298,
       "coin_flip": {
-        "n": 34,
+        "n": 35,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 94,
-        "rate": 0.9255,
-        "majority_accuracy": 0.9255
+        "n": 96,
+        "rate": 0.9271,
+        "majority_accuracy": 0.9271
       }
     }
   },
   "totals": {
-    "graded": 628,
-    "correct": 489,
-    "accuracy": 0.7787,
-    "brier": 0.1417,
-    "log_loss": 0.439,
+    "graded": 630,
+    "correct": 493,
+    "accuracy": 0.7825,
+    "brier": 0.1389,
+    "log_loss": 0.4316,
     "open": 14,
-    "void": 15,
+    "void": 13,
     "days": 68
   },
   "baselines": {
     "coin_flip": {
-      "n": 628,
+      "n": 630,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 628,
-      "rate": 0.7277,
-      "majority_accuracy": 0.7277
+      "n": 630,
+      "rate": 0.7317,
+      "majority_accuracy": 0.7317
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 67,
-      "correct": 61,
-      "accuracy": 0.9104,
-      "brier": 0.0825,
-      "log_loss": 0.3063,
-      "base_rate": 0.9104,
-      "majority_accuracy": 0.9104
+      "correct": 62,
+      "accuracy": 0.9254,
+      "brier": 0.0711,
+      "log_loss": 0.2765,
+      "base_rate": 0.9254,
+      "majority_accuracy": 0.9254
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 60,
-      "correct": 56,
-      "accuracy": 0.9333,
-      "brier": 0.08,
-      "log_loss": 0.3156,
-      "base_rate": 0.9333,
-      "majority_accuracy": 0.9333
+      "graded": 61,
+      "correct": 57,
+      "accuracy": 0.9344,
+      "brier": 0.0793,
+      "log_loss": 0.314,
+      "base_rate": 0.9344,
+      "majority_accuracy": 0.9344
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 42,
-      "correct": 38,
-      "accuracy": 0.9048,
-      "brier": 0.0874,
-      "log_loss": 0.3242,
-      "base_rate": 0.9048,
-      "majority_accuracy": 0.9048
+      "correct": 39,
+      "accuracy": 0.9286,
+      "brier": 0.0679,
+      "log_loss": 0.2688,
+      "base_rate": 0.9286,
+      "majority_accuracy": 0.9286
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 34,
-      "correct": 31,
-      "accuracy": 0.9118,
-      "brier": 0.0854,
-      "log_loss": 0.33,
-      "base_rate": 0.9118,
-      "majority_accuracy": 0.9118
+      "graded": 35,
+      "correct": 32,
+      "accuracy": 0.9143,
+      "brier": 0.0852,
+      "log_loss": 0.3298,
+      "base_rate": 0.9143,
+      "majority_accuracy": 0.9143
     }
   },
   "calibration": [
@@ -336,21 +336,21 @@
     },
     {
       "label": "70\u201380%",
-      "n": 146,
-      "claimed": 0.7369,
-      "actual": 0.7192
+      "n": 147,
+      "claimed": 0.7368,
+      "actual": 0.7211
     },
     {
       "label": "80\u201390%",
-      "n": 160,
-      "claimed": 0.845,
-      "actual": 0.8938
+      "n": 161,
+      "claimed": 0.8448,
+      "actual": 0.9006
     },
     {
       "label": "90\u2013100%",
       "n": 178,
       "claimed": 0.9439,
-      "actual": 0.9551
+      "actual": 0.9607
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.522,
+      "call": true,
+      "confidence": 0.532,
       "basis": {
-        "today_usd": 83697,
-        "change_24h": -0.17
+        "today_usd": 84666,
+        "change_24h": 1.17
       },
       "made_on": "2026-10-01",
       "resolve_on": "2026-10-02"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49906100,
-        "top_title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network"
+        "top_id": 49926069,
+        "top_title": "Pi 1.0"
       },
       "made_on": "2026-10-01",
       "resolve_on": "2026-10-02"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.2,
-        "for_date": "2026-10-02",
+        "forecast_c": 35.6,
+        "for_date": "2026-10-03",
         "city": "New Delhi"
       },
       "made_on": "2026-10-01",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.629,
+      "confidence": 0.578,
       "basis": {
-        "today_usd": 83697,
-        "change_24h": -0.17,
+        "today_usd": 84666,
+        "change_24h": 1.17,
         "model": {
-          "p_event": 0.6285,
+          "p_event": 0.5779,
           "n_train": 64,
           "fallback": null,
           "features": [
-            -0.17,
-            -1.2669427044626147,
-            -0.7435605521559752,
-            1.0549901859481965
+            1.17,
+            -0.12386311356478164,
+            0.4055784829941622,
+            1.1822076030313005
           ],
           "weights": [
             -0.4352,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.6,
-            218.71428571428572,
+            220.71428571428572,
             5.6,
             1.0
           ]
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.921,
       "basis": {
-        "top_id": 49906100,
-        "top_title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
+        "top_id": 49926069,
+        "top_title": "Pi 1.0",
         "model": {
-          "p_event": 0.9992,
+          "p_event": 0.9206,
           "n_train": 67,
           "fallback": null,
           "features": [
-            0.4,
-            2.0,
+            0.0,
+            11.0,
             3.0
           ],
           "weights": [
-            0.4448,
-            -0.1987,
-            0.2631
+            0.409,
+            -0.1885,
+            0.2214
           ],
-          "bias": 2.4511
+          "bias": 2.6311
         }
       },
       "made_on": "2026-10-01",
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.871,
+      "confidence": 0.888,
       "basis": {
-        "forecast_c": 34.2,
-        "for_date": "2026-10-02",
+        "forecast_c": 35.6,
+        "for_date": "2026-10-03",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8713,
-          "n_train": 60,
+          "p_event": 0.8876,
+          "n_train": 61,
           "fallback": null,
           "features": [
-            0.6000000000000014,
-            2.7184738365487346,
-            1.700000000000001,
+            1.0,
+            2.740729829808111,
+            1.8000000000000007,
             1.8000000000000007
           ],
           "weights": [
-            -0.1539,
-            0.133,
-            -0.5593,
-            0.4911
+            -0.1475,
+            0.1965,
+            -0.5068,
+            0.4354
           ],
-          "bias": 2.7222
+          "bias": 2.732
         }
       },
       "made_on": "2026-10-01",
@@ -8664,6 +8664,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-09-29",
+      "resolve_on": "2026-10-01",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "kp_storm_ml",
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
       "rule": "logistic regression",
@@ -8712,6 +8725,19 @@
       "resolve_on": "2026-09-30",
       "call": true,
       "confidence": 0.898,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-09-29",
+      "resolve_on": "2026-10-01",
+      "call": true,
+      "confidence": 0.724,
       "actual": true,
       "correct": true
     },
@@ -8777,8 +8803,8 @@
       "resolve_on": "2026-10-01",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -8842,8 +8868,8 @@
       "resolve_on": "2026-10-01",
       "call": true,
       "confidence": 0.911,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }

@@ -1,19 +1,19 @@
 {
   "date": "2026-10-01",
-  "fetched_at": "2026-10-01T10:42:48.892236+00:00",
+  "fetched_at": "2026-10-01T20:41:58.648126+00:00",
   "observations": {
     "btc": {
-      "usd": 83697,
-      "usd_24h_change": -0.17
+      "usd": 84666,
+      "usd_24h_change": 1.17
     },
     "kp": {
       "max_kp": 1.33,
-      "latest_kp": 0.67,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.6,
-      "count": 275,
+      "count": 289,
       "strongest_place": "94 km SW of Tamarindo, Costa Rica"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-09-30"
     },
     "hn": {
-      "top_id": 49906100,
-      "top_title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
+      "top_id": 49926069,
+      "top_title": "Pi 1.0",
       "top10": [
-        49906100,
-        49913571,
-        49894430,
-        49915082,
-        49890732,
-        49912955,
-        49919680,
-        49912792,
-        49911995,
-        49913350
+        49926069,
+        49923692,
+        49923466,
+        49925742,
+        49920160,
+        49925036,
+        49922569,
+        49922515,
+        49925969,
+        49921923
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 32.5,
-      "actual_prev_date": "2026-09-30",
-      "today": 33.6,
-      "forecast_next": 34.2,
-      "forecast_next_date": "2026-10-02"
+      "actual_prev": 33.4,
+      "actual_prev_date": "2026-10-01",
+      "today": 34.6,
+      "forecast_next": 35.6,
+      "forecast_next_date": "2026-10-03"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.522,
+      "call": true,
+      "confidence": 0.532,
       "basis": {
-        "today_usd": 83697,
-        "change_24h": -0.17
+        "today_usd": 84666,
+        "change_24h": 1.17
       },
       "made_on": "2026-10-01",
       "resolve_on": "2026-10-02"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49906100,
-        "top_title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network"
+        "top_id": 49926069,
+        "top_title": "Pi 1.0"
       },
       "made_on": "2026-10-01",
       "resolve_on": "2026-10-02"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.2,
-        "for_date": "2026-10-02",
+        "forecast_c": 35.6,
+        "for_date": "2026-10-03",
         "city": "New Delhi"
       },
       "made_on": "2026-10-01",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.629,
+      "confidence": 0.578,
       "basis": {
-        "today_usd": 83697,
-        "change_24h": -0.17,
+        "today_usd": 84666,
+        "change_24h": 1.17,
         "model": {
-          "p_event": 0.6285,
+          "p_event": 0.5779,
           "n_train": 64,
           "fallback": null,
           "features": [
-            -0.17,
-            -1.2669427044626147,
-            -0.7435605521559752,
-            1.0549901859481965
+            1.17,
+            -0.12386311356478164,
+            0.4055784829941622,
+            1.1822076030313005
           ],
           "weights": [
             -0.4352,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.6,
-            218.71428571428572,
+            220.71428571428572,
             5.6,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.921,
       "basis": {
-        "top_id": 49906100,
-        "top_title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
+        "top_id": 49926069,
+        "top_title": "Pi 1.0",
         "model": {
-          "p_event": 0.9992,
+          "p_event": 0.9206,
           "n_train": 67,
           "fallback": null,
           "features": [
-            0.4,
-            2.0,
+            0.0,
+            11.0,
             3.0
           ],
           "weights": [
-            0.4448,
-            -0.1987,
-            0.2631
+            0.409,
+            -0.1885,
+            0.2214
           ],
-          "bias": 2.4511
+          "bias": 2.6311
         }
       },
       "made_on": "2026-10-01",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.871,
+      "confidence": 0.888,
       "basis": {
-        "forecast_c": 34.2,
-        "for_date": "2026-10-02",
+        "forecast_c": 35.6,
+        "for_date": "2026-10-03",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8713,
-          "n_train": 60,
+          "p_event": 0.8876,
+          "n_train": 61,
           "fallback": null,
           "features": [
-            0.6000000000000014,
-            2.7184738365487346,
-            1.700000000000001,
+            1.0,
+            2.740729829808111,
+            1.8000000000000007,
             1.8000000000000007
           ],
           "weights": [
-            -0.1539,
-            0.133,
-            -0.5593,
-            0.4911
+            -0.1475,
+            0.1965,
+            -0.5068,
+            0.4354
           ],
-          "bias": 2.7222
+          "bias": 2.732
         }
       },
       "made_on": "2026-10-01",
