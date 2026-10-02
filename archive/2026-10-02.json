@@ -1,10 +1,10 @@
 {
   "date": "2026-10-02",
-  "fetched_at": "2026-10-02T10:17:57.796801+00:00",
+  "fetched_at": "2026-10-02T20:15:05.884659+00:00",
   "observations": {
     "btc": {
-      "usd": 86325,
-      "usd_24h_change": 3.33
+      "usd": 84384,
+      "usd_24h_change": -0.44
     },
     "kp": {
       "max_kp": 2.0,
@@ -12,9 +12,9 @@
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.3,
-      "count": 230,
-      "strongest_place": "0 km NNE of Y\u014dkaichiba, Japan"
+      "max_mag": 5.8,
+      "count": 227,
+      "strongest_place": "165 km SSE of Vilyuchinsk, Russia"
     },
     "wiki": {
       "top": "Christa_Pike",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-01"
     },
     "hn": {
-      "top_id": 49926069,
-      "top_title": "Pi 1.0",
+      "top_id": 49937276,
+      "top_title": "Apple Pass Designer",
       "top10": [
-        49926069,
-        49930047,
-        49929113,
-        49928121,
-        49923692,
-        49929489,
-        49926536,
-        49931031,
-        49925969,
-        49922569
+        49937276,
+        49927754,
+        49933740,
+        49932147,
+        49937631,
+        49929391,
+        49926411,
+        49925184,
+        49936575,
+        49932340
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 33.4,
-      "actual_prev_date": "2026-10-01",
-      "today": 33.9,
-      "forecast_next": 35.0,
-      "forecast_next_date": "2026-10-03"
+      "actual_prev": 34.5,
+      "actual_prev_date": "2026-10-02",
+      "today": 35.6,
+      "forecast_next": 35.4,
+      "forecast_next_date": "2026-10-04"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.553,
+      "call": false,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 86325,
-        "change_24h": 3.33
+        "today_usd": 84384,
+        "change_24h": -0.44
       },
       "made_on": "2026-10-02",
       "resolve_on": "2026-10-03"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49926069,
-        "top_title": "Pi 1.0"
+        "top_id": 49937276,
+        "top_title": "Apple Pass Designer"
       },
       "made_on": "2026-10-02",
       "resolve_on": "2026-10-03"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.0,
-        "for_date": "2026-10-03",
+        "forecast_c": 35.4,
+        "for_date": "2026-10-04",
         "city": "New Delhi"
       },
       "made_on": "2026-10-02",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.595,
+      "confidence": 0.705,
       "basis": {
-        "today_usd": 86325,
-        "change_24h": 3.33,
+        "today_usd": 84384,
+        "change_24h": -0.44,
         "model": {
-          "p_event": 0.5953,
+          "p_event": 0.7051,
           "n_train": 65,
           "fallback": null,
           "features": [
-            3.33,
-            3.4340214955846493,
-            2.061928801976798,
-            1.0347450030954668
+            -0.44,
+            1.108328640410261,
+            -0.2329128291223781,
+            0.8329681405946995
           ],
           "weights": [
-            -0.4144,
-            0.5556,
-            -0.4014,
-            -0.2294
+            -0.4594,
+            0.5955,
+            -0.4285,
+            -0.1675
           ],
-          "bias": 0.3542
+          "bias": 0.2869
         }
       },
       "made_on": "2026-10-02",
@@ -215,9 +215,9 @@
           "n_train": 68,
           "fallback": "laplace",
           "features": [
-            5.3,
-            224.85714285714286,
-            5.6,
+            5.8,
+            224.42857142857142,
+            5.671428571428571,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.93,
       "basis": {
-        "top_id": 49926069,
-        "top_title": "Pi 1.0",
+        "top_id": 49937276,
+        "top_title": "Apple Pass Designer",
         "model": {
-          "p_event": 0.9994,
+          "p_event": 0.9295,
           "n_train": 68,
           "fallback": null,
           "features": [
-            0.4,
-            1.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.4436,
-            -0.2008,
-            0.1857
+            0.4055,
+            -0.1868,
+            0.2238
           ],
-          "bias": 2.4511
+          "bias": 2.6462
         }
       },
       "made_on": "2026-10-02",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.943,
+      "confidence": 0.912,
       "basis": {
-        "forecast_c": 35.0,
-        "for_date": "2026-10-03",
+        "forecast_c": 35.4,
+        "for_date": "2026-10-04",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9428,
-          "n_train": 61,
+          "p_event": 0.9124,
+          "n_train": 62,
           "fallback": null,
           "features": [
-            1.1000000000000014,
-            2.5218247361781505,
-            1.200000000000001,
+            0.20000000000000284,
+            2.5997884529322763,
+            1.8000000000000007,
             1.8000000000000007
           ],
           "weights": [
-            -0.1475,
-            0.1965,
-            -0.5068,
-            0.4354
+            -0.1624,
+            0.2338,
+            -0.4727,
+            0.4011
           ],
-          "bias": 2.732
+          "bias": 2.7457
         }
       },
       "made_on": "2026-10-02",
