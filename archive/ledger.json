@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T09:39:44.958664+00:00",
+  "updated": "2026-10-03T18:54:03.271881+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 44,
-      "rule_correct": 40,
-      "model_correct": 40,
-      "rule_accuracy": 0.9091,
-      "model_accuracy": 0.9091,
-      "rule_brier": 0.0835,
-      "model_brier": 0.0846,
-      "rule_log_loss": 0.309,
-      "model_log_loss": 0.3189,
+      "rule_correct": 41,
+      "model_correct": 41,
+      "rule_accuracy": 0.9318,
+      "model_accuracy": 0.9318,
+      "rule_brier": 0.0662,
+      "model_brier": 0.065,
+      "rule_log_loss": 0.2637,
+      "model_log_loss": 0.2601,
       "coin_flip": {
         "n": 44,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 113,
-        "rate": 0.9115,
-        "majority_accuracy": 0.9115
+        "rate": 0.9292,
+        "majority_accuracy": 0.9292
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 652,
-    "correct": 509,
-    "accuracy": 0.7807,
-    "brier": 0.14,
-    "log_loss": 0.4349,
+    "correct": 511,
+    "accuracy": 0.7837,
+    "brier": 0.1375,
+    "log_loss": 0.4279,
     "open": 14,
     "void": 15,
     "days": 70
@@ -159,8 +159,8 @@
     },
     "base_rate": {
       "n": 652,
-      "rate": 0.7285,
-      "majority_accuracy": 0.7285
+      "rate": 0.7316,
+      "majority_accuracy": 0.7316
     }
   },
   "by_predictor": {
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 69,
-      "correct": 63,
-      "accuracy": 0.913,
-      "brier": 0.0805,
-      "log_loss": 0.3011,
-      "base_rate": 0.913,
-      "majority_accuracy": 0.913
+      "correct": 64,
+      "accuracy": 0.9275,
+      "brier": 0.0695,
+      "log_loss": 0.2722,
+      "base_rate": 0.9275,
+      "majority_accuracy": 0.9275
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 44,
-      "correct": 40,
-      "accuracy": 0.9091,
-      "brier": 0.0846,
-      "log_loss": 0.3189,
-      "base_rate": 0.9091,
-      "majority_accuracy": 0.9091
+      "correct": 41,
+      "accuracy": 0.9318,
+      "brier": 0.065,
+      "log_loss": 0.2601,
+      "base_rate": 0.9318,
+      "majority_accuracy": 0.9318
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -344,13 +344,13 @@
       "label": "80\u201390%",
       "n": 166,
       "claimed": 0.8448,
-      "actual": 0.8976
+      "actual": 0.9036
     },
     {
       "label": "90\u2013100%",
       "n": 184,
       "claimed": 0.9438,
-      "actual": 0.9565
+      "actual": 0.962
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.54,
+      "call": true,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 84576,
-        "change_24h": -2.02
+        "today_usd": 84926,
+        "change_24h": 0.88
       },
       "made_on": "2026-10-03",
       "resolve_on": "2026-10-04"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49940394,
-        "top_title": "Newgrounds.com \u2013 A community of games, music, and art"
+        "top_id": 49946403,
+        "top_title": "ADHD, autism or complex trauma? [pdf]"
       },
       "made_on": "2026-10-03",
       "resolve_on": "2026-10-04"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.9,
+        "forecast_c": 35.3,
         "for_date": "2026-10-04",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.773,
+      "confidence": 0.65,
       "basis": {
-        "today_usd": 84576,
-        "change_24h": -2.02,
+        "today_usd": 84926,
+        "change_24h": 0.88,
         "model": {
-          "p_event": 0.7735,
+          "p_event": 0.6502,
           "n_train": 66,
           "fallback": null,
           "features": [
-            -2.02,
-            1.1227088489544013,
-            0.7372821801636453,
-            0.8299648912646067
+            0.88,
+            1.5411839257744697,
+            1.1541622497230675,
+            0.8549679176203879
           ],
           "weights": [
             -0.4713,
@@ -572,9 +572,9 @@
           "n_train": 69,
           "fallback": "laplace",
           "features": [
-            5.8,
-            227.0,
-            5.557142857142857,
+            5.1,
+            224.14285714285714,
+            5.457142857142856,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.938,
       "basis": {
-        "top_id": 49940394,
-        "top_title": "Newgrounds.com \u2013 A community of games, music, and art",
+        "top_id": 49946403,
+        "top_title": "ADHD, autism or complex trauma? [pdf]",
         "model": {
-          "p_event": 0.9997,
+          "p_event": 0.9381,
           "n_train": 69,
           "fallback": null,
           "features": [
-            0.5,
-            3.0,
+            0.0,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4427,
-            -0.2023,
-            0.1157
+            0.4022,
+            -0.1851,
+            0.2324
           ],
-          "bias": 2.4564
+          "bias": 2.6624
         }
       },
       "made_on": "2026-10-03",
@@ -652,17 +652,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.948,
+      "confidence": 0.947,
       "basis": {
-        "forecast_c": 34.9,
+        "forecast_c": 35.3,
         "for_date": "2026-10-04",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9476,
+          "p_event": 0.9469,
           "n_train": 62,
           "fallback": null,
           "features": [
-            0.10000000000000142,
+            0.20000000000000284,
             2.2397544508271436,
             0.29999999999999716,
             0.29999999999999716
@@ -9089,8 +9089,8 @@
       "resolve_on": "2026-10-03",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -9154,8 +9154,8 @@
       "resolve_on": "2026-10-03",
       "call": true,
       "confidence": 0.93,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }

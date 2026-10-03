@@ -1,20 +1,20 @@
 {
   "date": "2026-10-03",
-  "fetched_at": "2026-10-03T09:39:40.626516+00:00",
+  "fetched_at": "2026-10-03T18:54:01.990231+00:00",
   "observations": {
     "btc": {
-      "usd": 84576,
-      "usd_24h_change": -2.02
+      "usd": 84926,
+      "usd_24h_change": 0.88
     },
     "kp": {
       "max_kp": 2.67,
-      "latest_kp": 2.67,
+      "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.8,
-      "count": 218,
-      "strongest_place": "165 km SSE of Vilyuchinsk, Russia"
+      "max_mag": 5.1,
+      "count": 198,
+      "strongest_place": "199 km SSE of Vilyuchinsk, Russia"
     },
     "wiki": {
       "top": "Christa_Pike",
@@ -22,27 +22,27 @@
       "for_date": "2026-10-02"
     },
     "hn": {
-      "top_id": 49940394,
-      "top_title": "Newgrounds.com \u2013 A community of games, music, and art",
+      "top_id": 49946403,
+      "top_title": "ADHD, autism or complex trauma? [pdf]",
       "top10": [
-        49940394,
-        49927754,
-        49937276,
-        49925184,
-        49938306,
-        49941091,
-        49932147,
-        49933869,
-        49941447,
-        49926411
+        49946403,
+        49946069,
+        49946393,
+        49944912,
+        49942706,
+        49938399,
+        49937304,
+        49928361,
+        49913106,
+        49945904
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 34.5,
       "actual_prev_date": "2026-10-02",
-      "today": 35.0,
-      "forecast_next": 34.9,
+      "today": 35.5,
+      "forecast_next": 35.3,
       "forecast_next_date": "2026-10-04"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.54,
+      "call": true,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 84576,
-        "change_24h": -2.02
+        "today_usd": 84926,
+        "change_24h": 0.88
       },
       "made_on": "2026-10-03",
       "resolve_on": "2026-10-04"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49940394,
-        "top_title": "Newgrounds.com \u2013 A community of games, music, and art"
+        "top_id": 49946403,
+        "top_title": "ADHD, autism or complex trauma? [pdf]"
       },
       "made_on": "2026-10-03",
       "resolve_on": "2026-10-04"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.9,
+        "forecast_c": 35.3,
         "for_date": "2026-10-04",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.773,
+      "confidence": 0.65,
       "basis": {
-        "today_usd": 84576,
-        "change_24h": -2.02,
+        "today_usd": 84926,
+        "change_24h": 0.88,
         "model": {
-          "p_event": 0.7735,
+          "p_event": 0.6502,
           "n_train": 66,
           "fallback": null,
           "features": [
-            -2.02,
-            1.1227088489544013,
-            0.7372821801636453,
-            0.8299648912646067
+            0.88,
+            1.5411839257744697,
+            1.1541622497230675,
+            0.8549679176203879
           ],
           "weights": [
             -0.4713,
@@ -215,9 +215,9 @@
           "n_train": 69,
           "fallback": "laplace",
           "features": [
-            5.8,
-            227.0,
-            5.557142857142857,
+            5.1,
+            224.14285714285714,
+            5.457142857142856,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.938,
       "basis": {
-        "top_id": 49940394,
-        "top_title": "Newgrounds.com \u2013 A community of games, music, and art",
+        "top_id": 49946403,
+        "top_title": "ADHD, autism or complex trauma? [pdf]",
         "model": {
-          "p_event": 0.9997,
+          "p_event": 0.9381,
           "n_train": 69,
           "fallback": null,
           "features": [
-            0.5,
-            3.0,
+            0.0,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4427,
-            -0.2023,
-            0.1157
+            0.4022,
+            -0.1851,
+            0.2324
           ],
-          "bias": 2.4564
+          "bias": 2.6624
         }
       },
       "made_on": "2026-10-03",
@@ -295,17 +295,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.948,
+      "confidence": 0.947,
       "basis": {
-        "forecast_c": 34.9,
+        "forecast_c": 35.3,
         "for_date": "2026-10-04",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9476,
+          "p_event": 0.9469,
           "n_train": 62,
           "fallback": null,
           "features": [
-            0.10000000000000142,
+            0.20000000000000284,
             2.2397544508271436,
             0.29999999999999716,
             0.29999999999999716
