@@ -1,13 +1,13 @@
 {
   "date": "2026-10-04",
-  "fetched_at": "2026-10-04T10:23:31.329115+00:00",
+  "fetched_at": "2026-10-04T18:53:47.976567+00:00",
   "observations": {
     "btc": {
-      "usd": 85356,
-      "usd_24h_change": 0.94
+      "usd": 85324,
+      "usd_24h_change": 0.47
     },
     "kp": {
-      "max_kp": 4.33,
+      "max_kp": 5.0,
       "latest_kp": 4.33,
       "samples": 8
     },
@@ -22,27 +22,27 @@
       "for_date": "2026-10-03"
     },
     "hn": {
-      "top_id": 49949438,
-      "top_title": "Tell HN: Bob Cringely has died",
+      "top_id": 49953495,
+      "top_title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
       "top10": [
+        49953495,
+        49933461,
+        49956358,
+        49956416,
+        49954882,
+        49956183,
+        49947565,
         49949438,
-        49950554,
-        49952029,
-        49951648,
-        49910462,
-        49946895,
-        49951881,
-        49946355,
-        49945933,
-        49946393
+        49930439,
+        49952111
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 35.5,
       "actual_prev_date": "2026-10-03",
-      "today": 34.4,
-      "forecast_next": 35.0,
+      "today": 35.2,
+      "forecast_next": 35.1,
       "forecast_next_date": "2026-10-05"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.529,
+      "confidence": 0.525,
       "basis": {
-        "today_usd": 85356,
-        "change_24h": 0.94
+        "today_usd": 85324,
+        "change_24h": 0.47
       },
       "made_on": "2026-10-04",
       "resolve_on": "2026-10-05"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.33
+        "today_max_kp": 5.0
       },
       "made_on": "2026-10-04",
       "resolve_on": "2026-10-05"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49949438,
-        "top_title": "Tell HN: Bob Cringely has died"
+        "top_id": 49953495,
+        "top_title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s"
       },
       "made_on": "2026-10-04",
       "resolve_on": "2026-10-05"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 35.0,
+        "forecast_c": 35.1,
         "for_date": "2026-10-05",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.635,
+      "confidence": 0.658,
       "basis": {
-        "today_usd": 85356,
-        "change_24h": 0.94,
+        "today_usd": 85324,
+        "change_24h": 0.47,
         "model": {
-          "p_event": 0.6348,
+          "p_event": 0.6577,
           "n_train": 67,
           "fallback": null,
           "features": [
-            0.94,
-            0.8149670469846271,
-            1.6167051596466475,
-            0.8085966044691375
+            0.47,
+            0.7771714737911273,
+            1.578609014500354,
+            0.8069653280608287
           ],
           "weights": [
             -0.4665,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.882,
+      "confidence": 0.909,
       "basis": {
-        "today_max_kp": 4.33,
+        "today_max_kp": 5.0,
         "model": {
-          "p_event": 0.8815,
+          "p_event": 0.9089,
           "n_train": 70,
           "fallback": null,
           "features": [
-            4.33,
-            3.0,
-            2.19,
+            5.0,
+            3.223333333333333,
+            2.2857142857142856,
             4.0
           ],
           "weights": [
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.946,
       "basis": {
-        "top_id": 49949438,
-        "top_title": "Tell HN: Bob Cringely has died",
+        "top_id": 49953495,
+        "top_title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
         "model": {
-          "p_event": 0.9765,
+          "p_event": 0.9464,
           "n_train": 70,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             6.0
           ],
@@ -297,15 +297,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 35.0,
+        "forecast_c": 35.1,
         "for_date": "2026-10-05",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9546,
+          "p_event": 0.9578,
           "n_train": 63,
           "fallback": null,
           "features": [
-            0.6000000000000014,
+            0.10000000000000142,
             2.3593219364893803,
             0.1999999999999993,
             0.29999999999999716
