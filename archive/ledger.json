@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05T11:10:06.530240+00:00",
+  "updated": "2026-10-05T22:15:38.118791+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 46,
-      "rule_correct": 42,
-      "model_correct": 42,
-      "rule_accuracy": 0.913,
-      "model_accuracy": 0.913,
-      "rule_brier": 0.0805,
-      "model_brier": 0.0817,
-      "rule_log_loss": 0.3011,
-      "model_log_loss": 0.3137,
+      "rule_correct": 43,
+      "model_correct": 43,
+      "rule_accuracy": 0.9348,
+      "model_accuracy": 0.9348,
+      "rule_brier": 0.064,
+      "model_brier": 0.0624,
+      "rule_log_loss": 0.2578,
+      "model_log_loss": 0.2514,
       "coin_flip": {
         "n": 46,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 117,
-        "rate": 0.9145,
-        "majority_accuracy": 0.9145
+        "rate": 0.9316,
+        "majority_accuracy": 0.9316
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 39,
-      "rule_correct": 36,
-      "model_correct": 36,
-      "rule_accuracy": 0.9231,
-      "model_accuracy": 0.9231,
-      "rule_brier": 0.0862,
-      "model_brier": 0.0776,
-      "rule_log_loss": 0.3298,
-      "model_log_loss": 0.307,
+      "shared_days": 38,
+      "rule_correct": 35,
+      "model_correct": 35,
+      "rule_accuracy": 0.9211,
+      "model_accuracy": 0.9211,
+      "rule_brier": 0.0874,
+      "model_brier": 0.0795,
+      "rule_log_loss": 0.3326,
+      "model_log_loss": 0.3126,
       "coin_flip": {
-        "n": 39,
+        "n": 38,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 104,
-        "rate": 0.9327,
-        "majority_accuracy": 0.9327
+        "n": 102,
+        "rate": 0.9314,
+        "majority_accuracy": 0.9314
       }
     }
   },
   "totals": {
-    "graded": 678,
+    "graded": 676,
     "correct": 531,
-    "accuracy": 0.7832,
-    "brier": 0.1396,
-    "log_loss": 0.4337,
-    "open": 14,
-    "void": 13,
+    "accuracy": 0.7855,
+    "brier": 0.1375,
+    "log_loss": 0.4274,
+    "open": 12,
+    "void": 17,
     "days": 72
   },
   "baselines": {
     "coin_flip": {
-      "n": 678,
+      "n": 676,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 678,
-      "rate": 0.733,
-      "majority_accuracy": 0.733
+      "n": 676,
+      "rate": 0.7352,
+      "majority_accuracy": 0.7352
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 71,
-      "correct": 65,
-      "accuracy": 0.9155,
-      "brier": 0.0786,
-      "log_loss": 0.2962,
-      "base_rate": 0.9155,
-      "majority_accuracy": 0.9155
+      "correct": 66,
+      "accuracy": 0.9296,
+      "brier": 0.0679,
+      "log_loss": 0.2681,
+      "base_rate": 0.9296,
+      "majority_accuracy": 0.9296
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 65,
-      "correct": 61,
-      "accuracy": 0.9385,
-      "brier": 0.0769,
-      "log_loss": 0.3085,
-      "base_rate": 0.9385,
-      "majority_accuracy": 0.9385
+      "graded": 64,
+      "correct": 60,
+      "accuracy": 0.9375,
+      "brier": 0.0775,
+      "log_loss": 0.3098,
+      "base_rate": 0.9375,
+      "majority_accuracy": 0.9375
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 46,
-      "correct": 42,
-      "accuracy": 0.913,
-      "brier": 0.0817,
-      "log_loss": 0.3137,
-      "base_rate": 0.913,
-      "majority_accuracy": 0.913
+      "correct": 43,
+      "accuracy": 0.9348,
+      "brier": 0.0624,
+      "log_loss": 0.2514,
+      "base_rate": 0.9348,
+      "majority_accuracy": 0.9348
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 39,
-      "correct": 36,
-      "accuracy": 0.9231,
-      "brier": 0.0776,
-      "log_loss": 0.307,
-      "base_rate": 0.9231,
-      "majority_accuracy": 0.9231
+      "graded": 38,
+      "correct": 35,
+      "accuracy": 0.9211,
+      "brier": 0.0795,
+      "log_loss": 0.3126,
+      "base_rate": 0.9211,
+      "majority_accuracy": 0.9211
     }
   },
   "calibration": [
@@ -342,79 +342,29 @@
     },
     {
       "label": "80\u201390%",
-      "n": 172,
-      "claimed": 0.8446,
-      "actual": 0.9012
+      "n": 171,
+      "claimed": 0.8449,
+      "actual": 0.9064
     },
     {
       "label": "90\u2013100%",
-      "n": 193,
-      "claimed": 0.9436,
-      "actual": 0.9585
+      "n": 192,
+      "claimed": 0.9438,
+      "actual": 0.9635
     }
   ],
   "open_bets": [
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 35.1,
-        "for_date": "2026-10-05",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-10-04",
-      "resolve_on": "2026-10-06"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.95,
-      "basis": {
-        "forecast_c": 35.1,
-        "for_date": "2026-10-05",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.9578,
-          "n_train": 63,
-          "fallback": null,
-          "features": [
-            0.10000000000000142,
-            2.3593219364893803,
-            0.1999999999999993,
-            0.29999999999999716
-          ],
-          "weights": [
-            -0.1723,
-            0.2631,
-            -0.4446,
-            0.3748
-          ],
-          "bias": 2.7603
-        }
-      },
-      "made_on": "2026-10-04",
-      "resolve_on": "2026-10-06"
-    },
     {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.528,
+      "call": false,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 85970,
-        "change_24h": 0.85
+        "today_usd": 85955,
+        "change_24h": -0.4
       },
       "made_on": "2026-10-05",
       "resolve_on": "2026-10-06"
@@ -428,7 +378,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 5.67
+        "today_max_kp": 5.33
       },
       "made_on": "2026-10-05",
       "resolve_on": "2026-10-06"
@@ -470,8 +420,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49962012,
-        "top_title": "Denmark Data Breach Exposes 8.8M People's Personal Data"
+        "top_id": 49969183,
+        "top_title": "Beam: Reflection's 501B open-weight model"
       },
       "made_on": "2026-10-05",
       "resolve_on": "2026-10-06"
@@ -485,8 +435,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.6,
-        "for_date": "2026-10-06",
+        "forecast_c": 33.7,
+        "for_date": "2026-10-07",
         "city": "New Delhi"
       },
       "made_on": "2026-10-05",
@@ -499,19 +449,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.691,
+      "confidence": 0.746,
       "basis": {
-        "today_usd": 85970,
-        "change_24h": 0.85,
+        "today_usd": 85955,
+        "change_24h": -0.4,
         "model": {
-          "p_event": 0.6912,
+          "p_event": 0.7465,
           "n_train": 68,
           "fallback": null,
           "features": [
-            0.85,
-            1.8795032233598796,
-            1.4143987920397283,
-            0.8236179565996219
+            -0.4,
+            1.861727341676156,
+            1.3967040615304738,
+            0.8224016526741584
           ],
           "weights": [
             -0.4642,
@@ -532,17 +482,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.827,
+      "confidence": 0.804,
       "basis": {
-        "today_max_kp": 5.67,
+        "today_max_kp": 5.33,
         "model": {
-          "p_event": 0.827,
+          "p_event": 0.8044,
           "n_train": 71,
           "fallback": null,
           "features": [
-            5.67,
-            4.446666666666666,
-            2.857142857142857,
+            5.33,
+            4.333333333333333,
+            2.8085714285714287,
             5.0
           ],
           "weights": [
@@ -572,9 +522,9 @@
           "n_train": 71,
           "fallback": "laplace",
           "features": [
-            5.5,
-            217.14285714285714,
-            5.585714285714286,
+            5.3,
+            221.14285714285714,
+            5.557142857142857,
             1.0
           ]
         }
@@ -621,25 +571,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.893,
       "basis": {
-        "top_id": 49962012,
-        "top_title": "Denmark Data Breach Exposes 8.8M People's Personal Data",
+        "top_id": 49969183,
+        "top_title": "Beam: Reflection's 501B open-weight model",
         "model": {
-          "p_event": 0.9843,
+          "p_event": 0.8932,
           "n_train": 71,
           "fallback": null,
           "features": [
-            0.1,
-            4.0,
+            0.0,
+            11.0,
             0.0
           ],
           "weights": [
-            0.4405,
-            -0.2036,
-            -0.0027
+            0.3966,
+            -0.1815,
+            0.2643
           ],
-          "bias": 2.4782
+          "bias": 2.6974
         }
       },
       "made_on": "2026-10-05",
@@ -654,26 +604,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 34.6,
-        "for_date": "2026-10-06",
+        "forecast_c": 33.7,
+        "for_date": "2026-10-07",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9674,
-          "n_train": 65,
+          "p_event": 0.9605,
+          "n_train": 64,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            2.5168233946783,
-            0.17499999999999716,
+            1.3999999999999986,
+            2.5754417096878743,
+            0.1999999999999993,
             0.29999999999999716
           ],
           "weights": [
-            -0.1973,
-            0.3078,
-            -0.4302,
-            0.3307
+            -0.18,
+            0.2906,
+            -0.4575,
+            0.3545
           ],
-          "bias": 2.7932
+          "bias": 2.778
         }
       },
       "made_on": "2026-10-05",
@@ -9119,19 +9069,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "made_on": "2026-10-02",
-      "resolve_on": "2026-10-04",
-      "call": true,
-      "confidence": 0.8,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -9193,19 +9130,6 @@
       "resolve_on": "2026-10-03",
       "call": true,
       "confidence": 0.93,
-      "actual": true,
-      "correct": true
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "made_on": "2026-10-02",
-      "resolve_on": "2026-10-04",
-      "call": true,
-      "confidence": 0.912,
       "actual": true,
       "correct": true
     },
@@ -9275,19 +9199,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "made_on": "2026-10-03",
-      "resolve_on": "2026-10-05",
-      "call": true,
-      "confidence": 0.8,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -9353,19 +9264,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "made_on": "2026-10-03",
-      "resolve_on": "2026-10-05",
-      "call": true,
-      "confidence": 0.947,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -9427,8 +9325,21 @@
       "resolve_on": "2026-10-05",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-10-04",
+      "resolve_on": "2026-10-06",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -9492,8 +9403,21 @@
       "resolve_on": "2026-10-05",
       "call": true,
       "confidence": 0.946,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-10-04",
+      "resolve_on": "2026-10-06",
+      "call": true,
+      "confidence": 0.95,
+      "actual": true,
+      "correct": true
     }
   ]
 }

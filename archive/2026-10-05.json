@@ -1,20 +1,20 @@
 {
   "date": "2026-10-05",
-  "fetched_at": "2026-10-05T11:10:04.593070+00:00",
+  "fetched_at": "2026-10-05T22:15:36.170155+00:00",
   "observations": {
     "btc": {
-      "usd": 85970,
-      "usd_24h_change": 0.85
+      "usd": 85955,
+      "usd_24h_change": -0.4
     },
     "kp": {
-      "max_kp": 5.67,
-      "latest_kp": 2.33,
+      "max_kp": 5.33,
+      "latest_kp": 3.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.5,
-      "count": 193,
-      "strongest_place": "Volcano Islands, Japan region"
+      "max_mag": 5.3,
+      "count": 221,
+      "strongest_place": "central Mid-Atlantic Ridge"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-04"
     },
     "hn": {
-      "top_id": 49962012,
-      "top_title": "Denmark Data Breach Exposes 8.8M People's Personal Data",
+      "top_id": 49969183,
+      "top_title": "Beam: Reflection's 501B open-weight model",
       "top10": [
-        49962012,
-        49962857,
-        49961861,
-        49953495,
-        49963094,
-        49957812,
-        49948300,
-        49956681,
-        49932236,
-        49943637
+        49969183,
+        49970667,
+        49970871,
+        49971230,
+        49963171,
+        49944049,
+        49938270,
+        49965308,
+        49970073,
+        49951693
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 35.2,
-      "actual_prev_date": "2026-10-04",
-      "today": 35.0,
-      "forecast_next": 34.6,
-      "forecast_next_date": "2026-10-06"
+      "actual_prev": 35.7,
+      "actual_prev_date": "2026-10-05",
+      "today": 35.1,
+      "forecast_next": 33.7,
+      "forecast_next_date": "2026-10-07"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.528,
+      "call": false,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 85970,
-        "change_24h": 0.85
+        "today_usd": 85955,
+        "change_24h": -0.4
       },
       "made_on": "2026-10-05",
       "resolve_on": "2026-10-06"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 5.67
+        "today_max_kp": 5.33
       },
       "made_on": "2026-10-05",
       "resolve_on": "2026-10-06"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49962012,
-        "top_title": "Denmark Data Breach Exposes 8.8M People's Personal Data"
+        "top_id": 49969183,
+        "top_title": "Beam: Reflection's 501B open-weight model"
       },
       "made_on": "2026-10-05",
       "resolve_on": "2026-10-06"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 34.6,
-        "for_date": "2026-10-06",
+        "forecast_c": 33.7,
+        "for_date": "2026-10-07",
         "city": "New Delhi"
       },
       "made_on": "2026-10-05",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.691,
+      "confidence": 0.746,
       "basis": {
-        "today_usd": 85970,
-        "change_24h": 0.85,
+        "today_usd": 85955,
+        "change_24h": -0.4,
         "model": {
-          "p_event": 0.6912,
+          "p_event": 0.7465,
           "n_train": 68,
           "fallback": null,
           "features": [
-            0.85,
-            1.8795032233598796,
-            1.4143987920397283,
-            0.8236179565996219
+            -0.4,
+            1.861727341676156,
+            1.3967040615304738,
+            0.8224016526741584
           ],
           "weights": [
             -0.4642,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.827,
+      "confidence": 0.804,
       "basis": {
-        "today_max_kp": 5.67,
+        "today_max_kp": 5.33,
         "model": {
-          "p_event": 0.827,
+          "p_event": 0.8044,
           "n_train": 71,
           "fallback": null,
           "features": [
-            5.67,
-            4.446666666666666,
-            2.857142857142857,
+            5.33,
+            4.333333333333333,
+            2.8085714285714287,
             5.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 71,
           "fallback": "laplace",
           "features": [
-            5.5,
-            217.14285714285714,
-            5.585714285714286,
+            5.3,
+            221.14285714285714,
+            5.557142857142857,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.893,
       "basis": {
-        "top_id": 49962012,
-        "top_title": "Denmark Data Breach Exposes 8.8M People's Personal Data",
+        "top_id": 49969183,
+        "top_title": "Beam: Reflection's 501B open-weight model",
         "model": {
-          "p_event": 0.9843,
+          "p_event": 0.8932,
           "n_train": 71,
           "fallback": null,
           "features": [
-            0.1,
-            4.0,
+            0.0,
+            11.0,
             0.0
           ],
           "weights": [
-            0.4405,
-            -0.2036,
-            -0.0027
+            0.3966,
+            -0.1815,
+            0.2643
           ],
-          "bias": 2.4782
+          "bias": 2.6974
         }
       },
       "made_on": "2026-10-05",
@@ -297,26 +297,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 34.6,
-        "for_date": "2026-10-06",
+        "forecast_c": 33.7,
+        "for_date": "2026-10-07",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9674,
-          "n_train": 65,
+          "p_event": 0.9605,
+          "n_train": 64,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            2.5168233946783,
-            0.17499999999999716,
+            1.3999999999999986,
+            2.5754417096878743,
+            0.1999999999999993,
             0.29999999999999716
           ],
           "weights": [
-            -0.1973,
-            0.3078,
-            -0.4302,
-            0.3307
+            -0.18,
+            0.2906,
+            -0.4575,
+            0.3545
           ],
-          "bias": 2.7932
+          "bias": 2.778
         }
       },
       "made_on": "2026-10-05",
