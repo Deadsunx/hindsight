@@ -1,20 +1,20 @@
 {
   "date": "2026-10-06",
-  "fetched_at": "2026-10-06T11:00:37.354058+00:00",
+  "fetched_at": "2026-10-06T20:40:07.480670+00:00",
   "observations": {
     "btc": {
-      "usd": 86132,
-      "usd_24h_change": 0.04
+      "usd": 85618,
+      "usd_24h_change": -0.2
     },
     "kp": {
       "max_kp": 4.0,
-      "latest_kp": 2.33,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5,
-      "count": 220,
-      "strongest_place": "south of the Fiji Islands"
+      "max_mag": 5.9,
+      "count": 219,
+      "strongest_place": "264 km SSW of Severo-Kuril\u2019sk, Russia"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-05"
     },
     "hn": {
-      "top_id": 49976265,
-      "top_title": "Nobel Prize in Physics goes to Francis Halzen",
+      "top_id": 49977979,
+      "top_title": "Mistral Large 4",
       "top10": [
+        49977979,
         49976265,
-        49969183,
-        49971230,
-        49951155,
-        49970871,
-        49971719,
-        49970667,
-        49963171,
-        49973878,
-        49971921
+        49983226,
+        49982735,
+        49982921,
+        49978563,
+        49967427,
+        49979845,
+        49975619,
+        49977819
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 35.7,
-      "actual_prev_date": "2026-10-05",
-      "today": 34.8,
-      "forecast_next": 32.3,
-      "forecast_next_date": "2026-10-07"
+      "actual_prev": 35.2,
+      "actual_prev_date": "2026-10-06",
+      "today": 32.5,
+      "forecast_next": 33.0,
+      "forecast_next_date": "2026-10-08"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.52,
+      "call": false,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 86132,
-        "change_24h": 0.04
+        "today_usd": 85618,
+        "change_24h": -0.2
       },
       "made_on": "2026-10-06",
       "resolve_on": "2026-10-07"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49976265,
-        "top_title": "Nobel Prize in Physics goes to Francis Halzen"
+        "top_id": 49977979,
+        "top_title": "Mistral Large 4"
       },
       "made_on": "2026-10-06",
       "resolve_on": "2026-10-07"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.3,
-        "for_date": "2026-10-07",
+        "forecast_c": 33.0,
+        "for_date": "2026-10-08",
         "city": "New Delhi"
       },
       "made_on": "2026-10-06",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.708,
+      "confidence": 0.66,
       "basis": {
-        "today_usd": 86132,
-        "change_24h": 0.04,
+        "today_usd": 85618,
+        "change_24h": -0.2,
         "model": {
-          "p_event": 0.7084,
+          "p_event": 0.66,
           "n_train": 69,
           "fallback": null,
           "features": [
-            0.04,
-            1.4200598167816603,
-            3.2027702225044585,
-            0.78734000892648
+            -0.2,
+            0.8148270258813595,
+            2.5868989563737843,
+            0.8114736728818626
           ],
           "weights": [
-            -0.4759,
-            0.6206,
-            -0.376,
-            -0.3058
+            -0.4239,
+            0.5633,
+            -0.4086,
+            -0.1965
           ],
-          "bias": 0.3989
+          "bias": 0.3317
         }
       },
       "made_on": "2026-10-06",
@@ -215,9 +215,9 @@
           "n_train": 72,
           "fallback": "laplace",
           "features": [
-            5.0,
-            225.28571428571428,
-            5.471428571428571,
+            5.9,
+            225.14285714285714,
+            5.6000000000000005,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.909,
       "basis": {
-        "top_id": 49976265,
-        "top_title": "Nobel Prize in Physics goes to Francis Halzen",
+        "top_id": 49977979,
+        "top_title": "Mistral Large 4",
         "model": {
-          "p_event": 0.9995,
+          "p_event": 0.9086,
           "n_train": 72,
           "fallback": null,
           "features": [
-            0.5,
-            2.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.4245,
-            -0.1822,
-            0.4463
+            0.393,
+            -0.1809,
+            0.2418
           ],
-          "bias": 2.5769
+          "bias": 2.7063
         }
       },
       "made_on": "2026-10-06",
@@ -297,18 +297,18 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.3,
-        "for_date": "2026-10-07",
+        "forecast_c": 33.0,
+        "for_date": "2026-10-08",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9581,
+          "p_event": 0.9669,
           "n_train": 64,
           "fallback": null,
           "features": [
-            2.5,
-            2.7008146919031675,
-            0.3333333333333333,
-            0.6000000000000014
+            0.5,
+            2.653469426995533,
+            0.1999999999999993,
+            0.29999999999999716
           ],
           "weights": [
             -0.18,

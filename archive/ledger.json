@@ -1,17 +1,17 @@
 {
-  "updated": "2026-10-06T11:00:39.448687+00:00",
+  "updated": "2026-10-06T20:40:09.310090+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 44,
-      "rule_correct": 17,
-      "model_correct": 22,
-      "rule_accuracy": 0.3864,
-      "model_accuracy": 0.5,
-      "rule_brier": 0.2615,
-      "model_brier": 0.2813,
-      "rule_log_loss": 0.7163,
-      "model_log_loss": 0.7877,
+      "rule_correct": 18,
+      "model_correct": 21,
+      "rule_accuracy": 0.4091,
+      "model_accuracy": 0.4773,
+      "rule_brier": 0.2604,
+      "model_brier": 0.2925,
+      "rule_log_loss": 0.7141,
+      "model_log_loss": 0.8122,
       "coin_flip": {
         "n": 44,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 114,
-        "rate": 0.5702,
-        "majority_accuracy": 0.5702
+        "rate": 0.5526,
+        "majority_accuracy": 0.5526
       }
     },
     "kp_storm": {
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 47,
-      "rule_correct": 43,
-      "model_correct": 43,
-      "rule_accuracy": 0.9149,
-      "model_accuracy": 0.9149,
-      "rule_brier": 0.0791,
-      "model_brier": 0.078,
-      "rule_log_loss": 0.2974,
-      "model_log_loss": 0.2936,
+      "rule_correct": 44,
+      "model_correct": 44,
+      "rule_accuracy": 0.9362,
+      "model_accuracy": 0.9362,
+      "rule_brier": 0.0629,
+      "model_brier": 0.0613,
+      "rule_log_loss": 0.255,
+      "model_log_loss": 0.2485,
       "coin_flip": {
         "n": 47,
         "accuracy": 0.5,
@@ -112,8 +112,8 @@
       },
       "base_rate": {
         "n": 119,
-        "rate": 0.916,
-        "majority_accuracy": 0.916
+        "rate": 0.9328,
+        "majority_accuracy": 0.9328
       }
     },
     "forecast_hit": {
@@ -142,10 +142,10 @@
   },
   "totals": {
     "graded": 686,
-    "correct": 537,
-    "accuracy": 0.7828,
-    "brier": 0.1392,
-    "log_loss": 0.432,
+    "correct": 539,
+    "accuracy": 0.7857,
+    "brier": 0.1376,
+    "log_loss": 0.4274,
     "open": 14,
     "void": 17,
     "days": 73
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 70,
-      "correct": 31,
-      "accuracy": 0.4429,
-      "brier": 0.2559,
-      "log_loss": 0.705,
-      "base_rate": 0.6,
-      "majority_accuracy": 0.6
+      "correct": 32,
+      "accuracy": 0.4571,
+      "brier": 0.2552,
+      "log_loss": 0.7037,
+      "base_rate": 0.5857,
+      "majority_accuracy": 0.5857
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -222,12 +222,12 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 72,
-      "correct": 66,
-      "accuracy": 0.9167,
-      "brier": 0.0777,
-      "log_loss": 0.2939,
-      "base_rate": 0.9167,
-      "majority_accuracy": 0.9167
+      "correct": 67,
+      "accuracy": 0.9306,
+      "brier": 0.0672,
+      "log_loss": 0.2662,
+      "base_rate": 0.9306,
+      "majority_accuracy": 0.9306
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -248,12 +248,12 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 44,
-      "correct": 22,
-      "accuracy": 0.5,
-      "brier": 0.2813,
-      "log_loss": 0.7877,
-      "base_rate": 0.5227,
-      "majority_accuracy": 0.5227
+      "correct": 21,
+      "accuracy": 0.4773,
+      "brier": 0.2925,
+      "log_loss": 0.8122,
+      "base_rate": 0.5,
+      "majority_accuracy": 0.5
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -300,12 +300,12 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 47,
-      "correct": 43,
-      "accuracy": 0.9149,
-      "brier": 0.078,
-      "log_loss": 0.2936,
-      "base_rate": 0.9149,
-      "majority_accuracy": 0.9149
+      "correct": 44,
+      "accuracy": 0.9362,
+      "brier": 0.0613,
+      "log_loss": 0.2485,
+      "base_rate": 0.9362,
+      "majority_accuracy": 0.9362
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 104,
       "claimed": 0.5388,
-      "actual": 0.4615
+      "actual": 0.4712
     },
     {
       "label": "60\u201370%",
@@ -338,13 +338,13 @@
       "label": "70\u201380%",
       "n": 158,
       "claimed": 0.7369,
-      "actual": 0.7215
+      "actual": 0.7152
     },
     {
       "label": "80\u201390%",
       "n": 174,
       "claimed": 0.8451,
-      "actual": 0.8966
+      "actual": 0.908
     },
     {
       "label": "90\u2013100%",
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.52,
+      "call": false,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 86132,
-        "change_24h": 0.04
+        "today_usd": 85618,
+        "change_24h": -0.2
       },
       "made_on": "2026-10-06",
       "resolve_on": "2026-10-07"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49976265,
-        "top_title": "Nobel Prize in Physics goes to Francis Halzen"
+        "top_id": 49977979,
+        "top_title": "Mistral Large 4"
       },
       "made_on": "2026-10-06",
       "resolve_on": "2026-10-07"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.3,
-        "for_date": "2026-10-07",
+        "forecast_c": 33.0,
+        "for_date": "2026-10-08",
         "city": "New Delhi"
       },
       "made_on": "2026-10-06",
@@ -499,27 +499,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.708,
+      "confidence": 0.66,
       "basis": {
-        "today_usd": 86132,
-        "change_24h": 0.04,
+        "today_usd": 85618,
+        "change_24h": -0.2,
         "model": {
-          "p_event": 0.7084,
+          "p_event": 0.66,
           "n_train": 69,
           "fallback": null,
           "features": [
-            0.04,
-            1.4200598167816603,
-            3.2027702225044585,
-            0.78734000892648
+            -0.2,
+            0.8148270258813595,
+            2.5868989563737843,
+            0.8114736728818626
           ],
           "weights": [
-            -0.4759,
-            0.6206,
-            -0.376,
-            -0.3058
+            -0.4239,
+            0.5633,
+            -0.4086,
+            -0.1965
           ],
-          "bias": 0.3989
+          "bias": 0.3317
         }
       },
       "made_on": "2026-10-06",
@@ -572,9 +572,9 @@
           "n_train": 72,
           "fallback": "laplace",
           "features": [
-            5.0,
-            225.28571428571428,
-            5.471428571428571,
+            5.9,
+            225.14285714285714,
+            5.6000000000000005,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.909,
       "basis": {
-        "top_id": 49976265,
-        "top_title": "Nobel Prize in Physics goes to Francis Halzen",
+        "top_id": 49977979,
+        "top_title": "Mistral Large 4",
         "model": {
-          "p_event": 0.9995,
+          "p_event": 0.9086,
           "n_train": 72,
           "fallback": null,
           "features": [
-            0.5,
-            2.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.4245,
-            -0.1822,
-            0.4463
+            0.393,
+            -0.1809,
+            0.2418
           ],
-          "bias": 2.5769
+          "bias": 2.7063
         }
       },
       "made_on": "2026-10-06",
@@ -654,18 +654,18 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.3,
-        "for_date": "2026-10-07",
+        "forecast_c": 33.0,
+        "for_date": "2026-10-08",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9581,
+          "p_event": 0.9669,
           "n_train": 64,
           "fallback": null,
           "features": [
-            2.5,
-            2.7008146919031675,
-            0.3333333333333333,
-            0.6000000000000014
+            0.5,
+            2.653469426995533,
+            0.1999999999999993,
+            0.29999999999999716
           ],
           "weights": [
             -0.18,
@@ -9479,8 +9479,8 @@
       "resolve_on": "2026-10-06",
       "call": false,
       "confidence": 0.524,
-      "actual": true,
-      "correct": false
+      "actual": false,
+      "correct": true
     },
     {
       "id": "kp_storm",
@@ -9531,8 +9531,8 @@
       "resolve_on": "2026-10-06",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -9544,8 +9544,8 @@
       "resolve_on": "2026-10-06",
       "call": true,
       "confidence": 0.746,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm_ml",
@@ -9596,8 +9596,8 @@
       "resolve_on": "2026-10-06",
       "call": true,
       "confidence": 0.893,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
