@@ -1,19 +1,20 @@
 {
   "date": "2026-10-07",
-  "fetched_at": "2026-10-07T10:50:10.877514+00:00",
+  "fetched_at": "2026-10-07T20:54:21.552644+00:00",
   "observations": {
     "btc": {
-      "error": "HTTP Error 429: Too Many Requests"
+      "usd": 83352,
+      "usd_24h_change": -2.65
     },
     "kp": {
       "max_kp": 2.67,
-      "latest_kp": 1.0,
+      "latest_kp": 2.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.9,
-      "count": 277,
-      "strongest_place": "264 km SSW of Severo-Kuril\u2019sk, Russia"
+      "max_mag": 5.2,
+      "count": 261,
+      "strongest_place": "Chagos Archipelago region"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -21,31 +22,46 @@
       "for_date": "2026-10-06"
     },
     "hn": {
-      "top_id": 49990470,
-      "top_title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
+      "top_id": 49996437,
+      "top_title": "Claude Haiku 5.5",
       "top10": [
-        49990470,
-        49990224,
-        49984923,
-        49987076,
-        49984025,
-        49977979,
-        49980487,
-        49986862,
-        49978333,
-        49956219
+        49996437,
+        49996425,
+        49997718,
+        49996259,
+        49997073,
+        49994443,
+        49991227,
+        49997161,
+        49994145,
+        49980626
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 35.2,
-      "actual_prev_date": "2026-10-06",
-      "today": 35.0,
-      "forecast_next": 33.4,
-      "forecast_next_date": "2026-10-08"
+      "actual_prev": 34.7,
+      "actual_prev_date": "2026-10-07",
+      "today": 33.5,
+      "forecast_next": 31.4,
+      "forecast_next_date": "2026-10-09"
     }
   },
   "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.546,
+      "basis": {
+        "today_usd": 83352,
+        "change_24h": -2.65
+      },
+      "made_on": "2026-10-07",
+      "resolve_on": "2026-10-08"
+    },
     {
       "id": "kp_storm",
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -97,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49990470,
-        "top_title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai"
+        "top_id": 49996437,
+        "top_title": "Claude Haiku 5.5"
       },
       "made_on": "2026-10-07",
       "resolve_on": "2026-10-08"
@@ -112,12 +128,45 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.4,
-        "for_date": "2026-10-08",
+        "forecast_c": 31.4,
+        "for_date": "2026-10-09",
         "city": "New Delhi"
       },
       "made_on": "2026-10-07",
       "resolve_on": "2026-10-09"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.67,
+      "basis": {
+        "today_usd": 83352,
+        "change_24h": -2.65,
+        "model": {
+          "p_event": 0.6702,
+          "n_train": 70,
+          "fallback": null,
+          "features": [
+            -2.65,
+            -2.311190286437581,
+            -0.3407582768391926,
+            1.1184171939112473
+          ],
+          "weights": [
+            -0.4061,
+            0.5614,
+            -0.4585,
+            -0.1209
+          ],
+          "bias": 0.2945
+        }
+      },
+      "made_on": "2026-10-07",
+      "resolve_on": "2026-10-08"
     },
     {
       "id": "kp_storm_ml",
@@ -166,9 +215,9 @@
           "n_train": 73,
           "fallback": "laplace",
           "features": [
-            5.9,
-            232.57142857142858,
-            5.642857142857143,
+            5.2,
+            230.28571428571428,
+            5.542857142857143,
             1.0
           ]
         }
@@ -215,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.92,
       "basis": {
-        "top_id": 49990470,
-        "top_title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
+        "top_id": 49996437,
+        "top_title": "Claude Haiku 5.5",
         "model": {
-          "p_event": 0.9765,
+          "p_event": 0.9197,
           "n_train": 73,
           "fallback": null,
           "features": [
-            0.1,
-            6.0,
+            0.0,
+            11.0,
             2.0
           ],
           "weights": [
-            0.4218,
-            -0.1857,
-            0.3509
+            0.3897,
+            -0.1799,
+            0.2294
           ],
-          "bias": 2.5593
+          "bias": 2.7174
         }
       },
       "made_on": "2026-10-07",
@@ -248,26 +297,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 33.4,
-        "for_date": "2026-10-08",
+        "forecast_c": 31.4,
+        "for_date": "2026-10-09",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9533,
-          "n_train": 64,
+          "p_event": 0.9547,
+          "n_train": 65,
           "fallback": null,
           "features": [
-            1.6000000000000014,
-            2.3018470844085197,
+            2.1000000000000014,
+            2.2706827167175963,
             0.1999999999999993,
             0.29999999999999716
           ],
           "weights": [
-            -0.18,
-            0.2906,
-            -0.4575,
-            0.3545
+            -0.1779,
+            0.3189,
+            -0.4702,
+            0.337
           ],
-          "bias": 2.778
+          "bias": 2.7964
         }
       },
       "made_on": "2026-10-07",
