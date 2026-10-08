@@ -1,19 +1,19 @@
 {
   "date": "2026-10-08",
-  "fetched_at": "2026-10-08T11:07:50.230412+00:00",
+  "fetched_at": "2026-10-08T20:55:35.704965+00:00",
   "observations": {
     "btc": {
-      "usd": 82589,
-      "usd_24h_change": -1.37
+      "usd": 81726,
+      "usd_24h_change": -1.95
     },
     "kp": {
-      "max_kp": 2.67,
-      "latest_kp": 1.0,
+      "max_kp": 2.33,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.3,
-      "count": 217,
+      "count": 219,
       "strongest_place": "102 km NE of Norsup, Vanuatu"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-10-07"
     },
     "hn": {
-      "top_id": 50002008,
-      "top_title": "\u201cMath 2.0\u201d will need to value mathematical progress more holistically",
+      "top_id": 50008427,
+      "top_title": "Whistle: Speech to Text in 16.9 MB",
       "top10": [
-        50002008,
-        49996437,
-        49959280,
-        49970767,
-        49998895,
-        49996425,
-        50002426,
-        49969073,
-        49998066,
-        49997718
+        50008427,
+        50000488,
+        50009295,
+        50010470,
+        50009904,
+        49995495,
+        50007764,
+        49984159,
+        49986882,
+        49996639
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 34.7,
-      "actual_prev_date": "2026-10-07",
-      "today": 33.1,
-      "forecast_next": 32.0,
-      "forecast_next_date": "2026-10-09"
+      "actual_prev": 33.5,
+      "actual_prev_date": "2026-10-08",
+      "today": 30.4,
+      "forecast_next": 31.6,
+      "forecast_next_date": "2026-10-10"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.534,
+      "confidence": 0.539,
       "basis": {
-        "today_usd": 82589,
-        "change_24h": -1.37
+        "today_usd": 81726,
+        "change_24h": -1.95
       },
       "made_on": "2026-10-08",
       "resolve_on": "2026-10-09"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.67
+        "today_max_kp": 2.33
       },
       "made_on": "2026-10-08",
       "resolve_on": "2026-10-09"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50002008,
-        "top_title": "\u201cMath 2.0\u201d will need to value mathematical progress more holistically"
+        "top_id": 50008427,
+        "top_title": "Whistle: Speech to Text in 16.9 MB"
       },
       "made_on": "2026-10-08",
       "resolve_on": "2026-10-09"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.0,
-        "for_date": "2026-10-09",
+        "forecast_c": 31.6,
+        "for_date": "2026-10-10",
         "city": "New Delhi"
       },
       "made_on": "2026-10-08",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.566,
+      "confidence": 0.569,
       "basis": {
-        "today_usd": 82589,
-        "change_24h": -1.37,
+        "today_usd": 81726,
+        "change_24h": -1.95,
         "model": {
-          "p_event": 0.5664,
+          "p_event": 0.5691,
           "n_train": 71,
           "fallback": null,
           "features": [
-            -1.37,
-            -3.916002559478793,
-            -2.4531689225899433,
-            1.1520716506053867
+            -1.95,
+            -4.920016287592343,
+            -3.472468287151864,
+            1.281572350208168
           ],
           "weights": [
             -0.3531,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.926,
+      "confidence": 0.936,
       "basis": {
-        "today_max_kp": 2.67,
+        "today_max_kp": 2.33,
         "model": {
-          "p_event": 0.074,
+          "p_event": 0.0643,
           "n_train": 74,
           "fallback": null,
           "features": [
-            2.67,
-            3.1133333333333333,
-            3.4771428571428573,
+            2.33,
+            3.0,
+            3.4285714285714284,
             3.0
           ],
           "weights": [
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.3,
-            220.0,
+            220.28571428571428,
             5.642857142857143,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.929,
       "basis": {
-        "top_id": 50002008,
-        "top_title": "\u201cMath 2.0\u201d will need to value mathematical progress more holistically",
+        "top_id": 50008427,
+        "top_title": "Whistle: Speech to Text in 16.9 MB",
         "model": {
-          "p_event": 0.9981,
+          "p_event": 0.9288,
           "n_train": 74,
           "fallback": null,
           "features": [
-            0.3,
-            2.0,
+            0.0,
+            11.0,
             3.0
           ],
           "weights": [
-            0.4203,
-            -0.1884,
-            0.2661
+            0.3866,
+            -0.1787,
+            0.2248
           ],
-          "bias": 2.5508
+          "bias": 2.7299
         }
       },
       "made_on": "2026-10-08",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.945,
+      "confidence": 0.942,
       "basis": {
-        "forecast_c": 32.0,
-        "for_date": "2026-10-09",
+        "forecast_c": 31.6,
+        "for_date": "2026-10-10",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9452,
-          "n_train": 65,
+          "p_event": 0.9416,
+          "n_train": 66,
           "fallback": null,
           "features": [
-            1.1000000000000014,
-            1.4382280764885664,
-            0.4666666666666662,
-            1.0
+            1.2000000000000028,
+            1.4373934743138366,
+            0.1999999999999993,
+            0.29999999999999716
           ],
           "weights": [
-            -0.1779,
-            0.3189,
-            -0.4702,
-            0.337
+            -0.181,
+            0.3398,
+            -0.478,
+            0.3251
           ],
-          "bias": 2.7964
+          "bias": 2.8176
         }
       },
       "made_on": "2026-10-08",
