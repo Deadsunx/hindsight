@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T11:06:50.825993+00:00",
+  "updated": "2026-10-09T20:24:31.715686+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 50,
-      "rule_correct": 46,
-      "model_correct": 46,
-      "rule_accuracy": 0.92,
-      "model_accuracy": 0.92,
-      "rule_brier": 0.0752,
-      "model_brier": 0.0751,
-      "rule_log_loss": 0.2872,
-      "model_log_loss": 0.2901,
+      "rule_correct": 47,
+      "model_correct": 47,
+      "rule_accuracy": 0.94,
+      "model_accuracy": 0.94,
+      "rule_brier": 0.06,
+      "model_brier": 0.058,
+      "rule_log_loss": 0.2474,
+      "model_log_loss": 0.2386,
       "coin_flip": {
         "n": 50,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 125,
-        "rate": 0.92,
-        "majority_accuracy": 0.92
+        "rate": 0.936,
+        "majority_accuracy": 0.936
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 40,
+      "shared_days": 41,
       "rule_correct": 37,
       "model_correct": 37,
-      "rule_accuracy": 0.925,
-      "model_accuracy": 0.925,
-      "rule_brier": 0.085,
-      "model_brier": 0.0756,
-      "rule_log_loss": 0.3271,
-      "model_log_loss": 0.2995,
+      "rule_accuracy": 0.9024,
+      "model_accuracy": 0.9024,
+      "rule_brier": 0.0985,
+      "model_brier": 0.0958,
+      "rule_log_loss": 0.3584,
+      "model_log_loss": 0.3653,
       "coin_flip": {
-        "n": 40,
+        "n": 41,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 106,
-        "rate": 0.934,
-        "majority_accuracy": 0.934
+        "n": 108,
+        "rate": 0.9167,
+        "majority_accuracy": 0.9167
       }
     }
   },
   "totals": {
-    "graded": 720,
-    "correct": 562,
-    "accuracy": 0.7806,
-    "brier": 0.1416,
-    "log_loss": 0.4377,
+    "graded": 722,
+    "correct": 564,
+    "accuracy": 0.7812,
+    "brier": 0.1411,
+    "log_loss": 0.4365,
     "open": 14,
-    "void": 19,
+    "void": 17,
     "days": 76
   },
   "baselines": {
     "coin_flip": {
-      "n": 720,
+      "n": 722,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 720,
-      "rate": 0.7292,
-      "majority_accuracy": 0.7292
+      "n": 722,
+      "rate": 0.7299,
+      "majority_accuracy": 0.7299
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 75,
-      "correct": 69,
-      "accuracy": 0.92,
-      "brier": 0.0752,
-      "log_loss": 0.2872,
-      "base_rate": 0.92,
-      "majority_accuracy": 0.92
+      "correct": 70,
+      "accuracy": 0.9333,
+      "brier": 0.0651,
+      "log_loss": 0.2607,
+      "base_rate": 0.9333,
+      "majority_accuracy": 0.9333
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 66,
+      "graded": 67,
       "correct": 62,
-      "accuracy": 0.9394,
-      "brier": 0.0764,
-      "log_loss": 0.3072,
-      "base_rate": 0.9394,
-      "majority_accuracy": 0.9394
+      "accuracy": 0.9254,
+      "brier": 0.0848,
+      "log_loss": 0.3266,
+      "base_rate": 0.9254,
+      "majority_accuracy": 0.9254
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 50,
-      "correct": 46,
-      "accuracy": 0.92,
-      "brier": 0.0751,
-      "log_loss": 0.2901,
-      "base_rate": 0.92,
-      "majority_accuracy": 0.92
+      "correct": 47,
+      "accuracy": 0.94,
+      "brier": 0.058,
+      "log_loss": 0.2386,
+      "base_rate": 0.94,
+      "majority_accuracy": 0.94
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 40,
+      "graded": 41,
       "correct": 37,
-      "accuracy": 0.925,
-      "brier": 0.0756,
-      "log_loss": 0.2995,
-      "base_rate": 0.925,
-      "majority_accuracy": 0.925
+      "accuracy": 0.9024,
+      "brier": 0.0958,
+      "log_loss": 0.3653,
+      "base_rate": 0.9024,
+      "majority_accuracy": 0.9024
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 181,
-      "claimed": 0.8453,
-      "actual": 0.9006
+      "n": 182,
+      "claimed": 0.845,
+      "actual": 0.9011
     },
     {
       "label": "90\u2013100%",
-      "n": 207,
-      "claimed": 0.9435,
-      "actual": 0.9565
+      "n": 208,
+      "claimed": 0.9436,
+      "actual": 0.9567
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.521,
+      "call": true,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 82457,
-        "change_24h": -0.12
+        "today_usd": 82398,
+        "change_24h": 0.86
       },
       "made_on": "2026-10-09",
       "resolve_on": "2026-10-10"
@@ -428,7 +428,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 3.33
+        "today_max_kp": 4.0
       },
       "made_on": "2026-10-09",
       "resolve_on": "2026-10-10"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50018420,
-        "top_title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay"
+        "top_id": 50019911,
+        "top_title": "Cloudflare acquires Deno"
       },
       "made_on": "2026-10-09",
       "resolve_on": "2026-10-10"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.6,
-        "for_date": "2026-10-10",
+        "forecast_c": 29.3,
+        "for_date": "2026-10-11",
         "city": "New Delhi"
       },
       "made_on": "2026-10-09",
@@ -498,20 +498,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.532,
+      "call": false,
+      "confidence": 0.511,
       "basis": {
-        "today_usd": 82457,
-        "change_24h": -0.12,
+        "today_usd": 82398,
+        "change_24h": 0.86,
         "model": {
-          "p_event": 0.5324,
+          "p_event": 0.4894,
           "n_train": 72,
           "fallback": null,
           "features": [
-            -0.12,
-            -3.6919806582727976,
-            -2.2836082669700386,
-            1.2634149233302434
+            0.86,
+            -3.760891401340838,
+            -2.353526734926048,
+            1.2569729236318818
           ],
           "weights": [
             -0.3615,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.858,
+      "confidence": 0.82,
       "basis": {
-        "today_max_kp": 3.33,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.1419,
+          "p_event": 0.18,
           "n_train": 75,
           "fallback": null,
           "features": [
-            3.33,
-            2.776666666666667,
-            3.6185714285714283,
+            4.0,
+            3.0,
+            3.7142857142857144,
             3.0
           ],
           "weights": [
@@ -572,9 +572,9 @@
           "n_train": 75,
           "fallback": "laplace",
           "features": [
-            5.2,
-            219.28571428571428,
-            5.557142857142857,
+            7.7,
+            222.0,
+            5.914285714285714,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.937,
       "basis": {
-        "top_id": 50018420,
-        "top_title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay",
+        "top_id": 50019911,
+        "top_title": "Cloudflare acquires Deno",
         "model": {
-          "p_event": 0.9999,
+          "p_event": 0.9368,
           "n_train": 75,
           "fallback": null,
           "features": [
-            0.6,
-            3.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.4195,
-            -0.1905,
-            0.1891
+            0.3837,
+            -0.1773,
+            0.227
           ],
-          "bias": 2.549
+          "bias": 2.7436
         }
       },
       "made_on": "2026-10-09",
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.932,
+      "confidence": 0.785,
       "basis": {
-        "forecast_c": 32.6,
-        "for_date": "2026-10-10",
+        "forecast_c": 29.3,
+        "for_date": "2026-10-11",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9324,
-          "n_train": 66,
+          "p_event": 0.7852,
+          "n_train": 67,
           "fallback": null,
           "features": [
-            0.5,
-            0.9889388252060901,
-            0.29999999999999954,
-            0.5
+            2.3000000000000007,
+            0.9594269122762826,
+            0.1999999999999993,
+            0.29999999999999716
           ],
           "weights": [
-            -0.181,
-            0.3398,
-            -0.478,
-            0.3251
+            -0.3032,
+            0.0364,
+            -0.2813,
+            0.6873
           ],
-          "bias": 2.8176
+          "bias": 2.6541
         }
       },
       "made_on": "2026-10-09",
@@ -9847,6 +9847,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-10-07",
+      "resolve_on": "2026-10-09",
+      "call": true,
+      "confidence": 0.8,
+      "actual": false,
+      "correct": false
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -9912,6 +9925,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-10-07",
+      "resolve_on": "2026-10-09",
+      "call": true,
+      "confidence": 0.95,
+      "actual": false,
+      "correct": false
+    },
+    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -9973,8 +9999,8 @@
       "resolve_on": "2026-10-09",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -10038,8 +10064,8 @@
       "resolve_on": "2026-10-09",
       "call": true,
       "confidence": 0.929,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }

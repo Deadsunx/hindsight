@@ -1,20 +1,20 @@
 {
   "date": "2026-10-09",
-  "fetched_at": "2026-10-09T11:06:49.564241+00:00",
+  "fetched_at": "2026-10-09T20:24:30.010131+00:00",
   "observations": {
     "btc": {
-      "usd": 82457,
-      "usd_24h_change": -0.12
+      "usd": 82398,
+      "usd_24h_change": 0.86
     },
     "kp": {
-      "max_kp": 3.33,
-      "latest_kp": 2.0,
+      "max_kp": 4.0,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.2,
-      "count": 220,
-      "strongest_place": "117 km SE of Bitung, Indonesia"
+      "max_mag": 7.7,
+      "count": 239,
+      "strongest_place": "12 km WSW of Pitaloza Arriba, Panama"
     },
     "wiki": {
       "top": "Nana_Patekar",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-08"
     },
     "hn": {
-      "top_id": 50018420,
-      "top_title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay",
+      "top_id": 50019911,
+      "top_title": "Cloudflare acquires Deno",
       "top10": [
-        50018420,
-        50000488,
-        50008427,
-        50016489,
-        49995495,
-        50015515,
-        49986882,
-        50003796,
-        50009295,
-        50010470
+        50019911,
+        50024499,
+        50020014,
+        50022292,
+        50023450,
+        50019056,
+        50018088,
+        50024571,
+        50018817,
+        50025935
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 33.5,
-      "actual_prev_date": "2026-10-08",
-      "today": 32.1,
-      "forecast_next": 32.6,
-      "forecast_next_date": "2026-10-10"
+      "actual_prev": 34.0,
+      "actual_prev_date": "2026-10-09",
+      "today": 31.6,
+      "forecast_next": 29.3,
+      "forecast_next_date": "2026-10-11"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.521,
+      "call": true,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 82457,
-        "change_24h": -0.12
+        "today_usd": 82398,
+        "change_24h": 0.86
       },
       "made_on": "2026-10-09",
       "resolve_on": "2026-10-10"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 3.33
+        "today_max_kp": 4.0
       },
       "made_on": "2026-10-09",
       "resolve_on": "2026-10-10"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50018420,
-        "top_title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay"
+        "top_id": 50019911,
+        "top_title": "Cloudflare acquires Deno"
       },
       "made_on": "2026-10-09",
       "resolve_on": "2026-10-10"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.6,
-        "for_date": "2026-10-10",
+        "forecast_c": 29.3,
+        "for_date": "2026-10-11",
         "city": "New Delhi"
       },
       "made_on": "2026-10-09",
@@ -141,20 +141,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.532,
+      "call": false,
+      "confidence": 0.511,
       "basis": {
-        "today_usd": 82457,
-        "change_24h": -0.12,
+        "today_usd": 82398,
+        "change_24h": 0.86,
         "model": {
-          "p_event": 0.5324,
+          "p_event": 0.4894,
           "n_train": 72,
           "fallback": null,
           "features": [
-            -0.12,
-            -3.6919806582727976,
-            -2.2836082669700386,
-            1.2634149233302434
+            0.86,
+            -3.760891401340838,
+            -2.353526734926048,
+            1.2569729236318818
           ],
           "weights": [
             -0.3615,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.858,
+      "confidence": 0.82,
       "basis": {
-        "today_max_kp": 3.33,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.1419,
+          "p_event": 0.18,
           "n_train": 75,
           "fallback": null,
           "features": [
-            3.33,
-            2.776666666666667,
-            3.6185714285714283,
+            4.0,
+            3.0,
+            3.7142857142857144,
             3.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 75,
           "fallback": "laplace",
           "features": [
-            5.2,
-            219.28571428571428,
-            5.557142857142857,
+            7.7,
+            222.0,
+            5.914285714285714,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.937,
       "basis": {
-        "top_id": 50018420,
-        "top_title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay",
+        "top_id": 50019911,
+        "top_title": "Cloudflare acquires Deno",
         "model": {
-          "p_event": 0.9999,
+          "p_event": 0.9368,
           "n_train": 75,
           "fallback": null,
           "features": [
-            0.6,
-            3.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.4195,
-            -0.1905,
-            0.1891
+            0.3837,
+            -0.1773,
+            0.227
           ],
-          "bias": 2.549
+          "bias": 2.7436
         }
       },
       "made_on": "2026-10-09",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.932,
+      "confidence": 0.785,
       "basis": {
-        "forecast_c": 32.6,
-        "for_date": "2026-10-10",
+        "forecast_c": 29.3,
+        "for_date": "2026-10-11",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9324,
-          "n_train": 66,
+          "p_event": 0.7852,
+          "n_train": 67,
           "fallback": null,
           "features": [
-            0.5,
-            0.9889388252060901,
-            0.29999999999999954,
-            0.5
+            2.3000000000000007,
+            0.9594269122762826,
+            0.1999999999999993,
+            0.29999999999999716
           ],
           "weights": [
-            -0.181,
-            0.3398,
-            -0.478,
-            0.3251
+            -0.3032,
+            0.0364,
+            -0.2813,
+            0.6873
           ],
-          "bias": 2.8176
+          "bias": 2.6541
         }
       },
       "made_on": "2026-10-09",
