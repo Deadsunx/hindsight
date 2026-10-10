@@ -36,9 +36,9 @@ test.
 <!-- LEDGER:START -->
 ### Standing — 2026-10-10
 
-**569 right / 732 settled (78%)** · Brier 0.144 · log loss 0.444 · 14 still open
+**573 right / 734 settled (78%)** · Brier 0.141 · log loss 0.437 · 14 still open
 
-Saying "50%" to all 732 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
+Saying "50%" to all 734 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
 
 | Call | Answered by | Settled | Right | Brier | Log loss |
 | --- | --- | --- | --- | --- | --- |
@@ -46,32 +46,32 @@ Saying "50%" to all 732 of them instead would score Brier 0.250, log loss 0.693.
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=76 | 55/76 (72%) | 0.196 | 0.580 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=76 | 76/76 (100%) | 0.004 | 0.057 |
 | Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=73 | 44/73 (60%) | 0.235 | 0.663 |
-| The current #1 story on Hacker News will fall out of the top 10. | decay | n=76 | 70/76 (92%) | 0.074 | 0.285 |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=67 | 62/67 (93%) | 0.085 | 0.327 |
+| The current #1 story on Hacker News will fall out of the top 10. | decay | n=76 | 71/76 (93%) | 0.064 | 0.259 |
+| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=68 | 63/68 (93%) | 0.084 | 0.325 |
 | Bitcoin will be higher tomorrow than it is today. | logistic regression | n=48 | 22/48 (46%) | 0.296 | 0.817 |
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | logistic regression | n=51 | 38/51 (75%) | 0.195 | 0.591 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | logistic regression | n=51 | 51/51 (100%) | 0.003 | 0.051 |
 | Today's most-read Wikipedia article will still be #1 tomorrow. | logistic regression | n=48 | 32/48 (67%) | 0.224 | 0.645 |
-| The current #1 story on Hacker News will fall out of the top 10. | logistic regression | n=51 | 47/51 (92%) | 0.074 | 0.288 |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | logistic regression | n=41 | 37/41 (90%) | 0.096 | 0.365 |
-| _coin flip — the baseline_ | _50% to everything_ | n=732 | _50%_ | _0.250_ | _0.693_ |
+| The current #1 story on Hacker News will fall out of the top 10. | logistic regression | n=51 | 48/51 (94%) | 0.057 | 0.235 |
+| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | logistic regression | n=42 | 38/42 (90%) | 0.094 | 0.358 |
+| _coin flip — the baseline_ | _50% to everything_ | n=734 | _50%_ | _0.250_ | _0.693_ |
 
-_Sample is 732 settled bets across 77 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
+_Sample is 734 settled bets across 77 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
 
 **Open bets, placed today:**
 
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
+- **yes** — Bitcoin will be higher tomorrow than it is today. _(53% confident, momentum)_
 - **yes** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(70% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **no** — Today's most-read Wikipedia article will still be #1 tomorrow. _(62% confident, persistence)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
 - **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(63% confident, logistic regression)_
-- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(83% confident, logistic regression)_
+- **yes** — Bitcoin will be higher tomorrow than it is today. _(62% confident, logistic regression)_
+- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(52% confident, logistic regression)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, logistic regression)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(62% confident, logistic regression)_
-- **yes** — The current #1 story on Hacker News will fall out of the top 10. _(95% confident, logistic regression)_
-- **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(95% confident, logistic regression)_
+- **yes** — The current #1 story on Hacker News will fall out of the top 10. _(94% confident, logistic regression)_
+- **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(82% confident, logistic regression)_
 
 <!-- LEDGER:END -->
 
@@ -94,14 +94,14 @@ weather service**, which nobody publishes.
 <!-- VERDICT:START -->
 ## Where it does not beat the baseline
 
-Judged against the coin flip's Brier of 0.250, over 732 settled bets:
+Judged against the coin flip's Brier of 0.250, over 734 settled bets:
 
 - **Bitcoin will be higher tomorrow than it is today.** scores Brier **0.254** against the coin flip's 0.250 over n=74. It is worse than shrugging.
 - **A magnitude 5.0+ earthquake will strike somewhere tomorrow.** is effectively one-sided: the event happened 100% of the time, so always calling the majority side would have scored 100% against this rule's 100%. Accuracy here measures the question, not the predictor.
-- **The current #1 story on Hacker News will fall out of the top 10.** is effectively one-sided: the event happened 92% of the time, so always calling the majority side would have scored 92% against this rule's 92%. Accuracy here measures the question, not the predictor.
+- **The current #1 story on Hacker News will fall out of the top 10.** is effectively one-sided: the event happened 93% of the time, so always calling the majority side would have scored 93% against this rule's 93%. Accuracy here measures the question, not the predictor.
 - **Tomorrow's high in New Delhi will land within 2°C of today's forecast.** is effectively one-sided: the event happened 93% of the time, so always calling the majority side would have scored 93% against this rule's 93%. Accuracy here measures the question, not the predictor.
 
-_Derived from the 732 settled bets in the ledger on every run, not written by hand. At this sample size none of it is significant; it is published daily so that one day it might be._
+_Derived from the 734 settled bets in the ledger on every run, not written by hand. At this sample size none of it is significant; it is published daily so that one day it might be._
 
 <!-- VERDICT:END -->
 

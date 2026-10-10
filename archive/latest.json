@@ -1,20 +1,20 @@
 {
   "date": "2026-10-10",
-  "fetched_at": "2026-10-10T10:24:36.272070+00:00",
+  "fetched_at": "2026-10-10T19:38:23.565317+00:00",
   "observations": {
     "btc": {
-      "usd": 82757,
-      "usd_24h_change": 0.21
+      "usd": 83010,
+      "usd_24h_change": 0.8
     },
     "kp": {
-      "max_kp": 4.0,
-      "latest_kp": 3.0,
+      "max_kp": 7.0,
+      "latest_kp": 7.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 7.7,
-      "count": 221,
-      "strongest_place": "12 km WSW of Pitaloza Arriba, Panama"
+      "max_mag": 6.6,
+      "count": 213,
+      "strongest_place": "14 km W of R\u00edo Grande, Panama"
     },
     "wiki": {
       "top": "Nidal_Hasan",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-09"
     },
     "hn": {
-      "top_id": 50031269,
-      "top_title": "`123456' password used in Danish CPR data breach",
+      "top_id": 49991852,
+      "top_title": "2D Vehicles",
       "top10": [
-        50031269,
-        49998801,
+        49991852,
+        50034081,
+        50031614,
+        49980880,
+        50035886,
+        50016956,
+        50031653,
+        50035530,
         50028275,
-        50029123,
-        50019911,
-        50022292,
-        49997481,
-        50029982,
-        50010986,
-        50029830
+        50024242
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 34.0,
-      "actual_prev_date": "2026-10-09",
-      "today": 32.8,
-      "forecast_next": 32.3,
-      "forecast_next_date": "2026-10-11"
+      "actual_prev": 33.2,
+      "actual_prev_date": "2026-10-10",
+      "today": 32.1,
+      "forecast_next": 33.5,
+      "forecast_next_date": "2026-10-12"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.522,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 82757,
-        "change_24h": 0.21
+        "today_usd": 83010,
+        "change_24h": 0.8
       },
       "made_on": "2026-10-10",
       "resolve_on": "2026-10-11"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.0
+        "today_max_kp": 7.0
       },
       "made_on": "2026-10-10",
       "resolve_on": "2026-10-11"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50031269,
-        "top_title": "`123456' password used in Danish CPR data breach"
+        "top_id": 49991852,
+        "top_title": "2D Vehicles"
       },
       "made_on": "2026-10-10",
       "resolve_on": "2026-10-11"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.3,
-        "for_date": "2026-10-11",
+        "forecast_c": 33.5,
+        "for_date": "2026-10-12",
         "city": "New Delhi"
       },
       "made_on": "2026-10-10",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.634,
+      "confidence": 0.615,
       "basis": {
-        "today_usd": 82757,
-        "change_24h": 0.21,
+        "today_usd": 83010,
+        "change_24h": 0.8,
         "model": {
-          "p_event": 0.6336,
+          "p_event": 0.6155,
           "n_train": 73,
           "fallback": null,
           "features": [
-            0.21,
-            -0.713840099817642,
-            -2.553988177943145,
-            1.1820489713884341
+            0.8,
+            -0.4103080909876211,
+            -2.256081765301554,
+            1.2054316270228116
           ],
           "weights": [
             -0.3198,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.826,
+      "confidence": 0.522,
       "basis": {
-        "today_max_kp": 4.0,
+        "today_max_kp": 7.0,
         "model": {
-          "p_event": 0.174,
+          "p_event": 0.4777,
           "n_train": 76,
           "fallback": null,
           "features": [
-            4.0,
-            3.4433333333333334,
-            3.904285714285714,
+            7.0,
+            4.443333333333333,
+            4.332857142857143,
             3.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 76,
           "fallback": "laplace",
           "features": [
-            7.7,
-            225.28571428571428,
-            6.285714285714286,
+            6.6,
+            224.14285714285714,
+            6.128571428571428,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.944,
       "basis": {
-        "top_id": 50031269,
-        "top_title": "`123456' password used in Danish CPR data breach",
+        "top_id": 49991852,
+        "top_title": "2D Vehicles",
         "model": {
-          "p_event": 0.994,
+          "p_event": 0.9445,
           "n_train": 76,
           "fallback": null,
           "features": [
-            0.2,
-            5.0,
+            0.0,
+            11.0,
             5.0
           ],
           "weights": [
-            0.419,
-            -0.1921,
-            0.1187
+            0.3809,
+            -0.1758,
+            0.2347
           ],
-          "bias": 2.5526
+          "bias": 2.7583
         }
       },
       "made_on": "2026-10-10",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.825,
       "basis": {
-        "forecast_c": 32.3,
-        "for_date": "2026-10-11",
+        "forecast_c": 33.5,
+        "for_date": "2026-10-12",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9749,
-          "n_train": 67,
+          "p_event": 0.8253,
+          "n_train": 68,
           "fallback": null,
           "features": [
-            0.5,
-            0.7536577472566719,
-            1.3500000000000014,
-            2.6000000000000014
+            1.3999999999999986,
+            0.8400000000000006,
+            0.10000000000000142,
+            0.10000000000000142
           ],
           "weights": [
             -0.3032,
-            0.0364,
-            -0.2813,
-            0.6873
+            0.0286,
+            -0.2825,
+            0.6387
           ],
-          "bias": 2.6541
+          "bias": 2.654
         }
       },
       "made_on": "2026-10-10",
