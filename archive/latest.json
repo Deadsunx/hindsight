@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-10",
-  "fetched_at": "2026-10-10T19:38:23.565317+00:00",
+  "date": "2026-10-11",
+  "fetched_at": "2026-10-11T10:35:48.153683+00:00",
   "observations": {
     "btc": {
-      "usd": 83010,
-      "usd_24h_change": 0.8
+      "usd": 82913,
+      "usd_24h_change": 0.21
     },
     "kp": {
       "max_kp": 7.0,
-      "latest_kp": 7.0,
+      "latest_kp": 2.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.6,
-      "count": 213,
-      "strongest_place": "14 km W of R\u00edo Grande, Panama"
+      "max_mag": 5.3,
+      "count": 177,
+      "strongest_place": "southeast of Easter Island"
     },
     "wiki": {
-      "top": "Nidal_Hasan",
-      "views": 787247,
-      "for_date": "2026-10-09"
+      "top": "Wikipedia:Featured_pictures",
+      "views": 574846,
+      "for_date": "2026-10-10"
     },
     "hn": {
-      "top_id": 49991852,
-      "top_title": "2D Vehicles",
+      "top_id": 50041540,
+      "top_title": "IRCv3",
       "top10": [
+        50041540,
+        50040276,
+        50037949,
         49991852,
-        50034081,
-        50031614,
-        49980880,
-        50035886,
-        50016956,
-        50031653,
-        50035530,
-        50028275,
-        50024242
+        50036864,
+        50029487,
+        50017548,
+        50039063,
+        50001234,
+        50028647
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 33.2,
       "actual_prev_date": "2026-10-10",
-      "today": 32.1,
-      "forecast_next": 33.5,
+      "today": 31.0,
+      "forecast_next": 32.1,
       "forecast_next_date": "2026-10-12"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.528,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 83010,
-        "change_24h": 0.8
+        "today_usd": 82913,
+        "change_24h": 0.21
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "kp_storm",
@@ -73,8 +73,8 @@
       "basis": {
         "today_max_kp": 7.0
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "wiki_hold",
@@ -99,10 +99,10 @@
       "call": false,
       "confidence": 0.62,
       "basis": {
-        "today_top": "Nidal_Hasan"
+        "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 49991852,
-        "top_title": "2D Vehicles"
+        "top_id": 50041540,
+        "top_title": "IRCv3"
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 33.5,
+        "forecast_c": 32.1,
         "for_date": "2026-10-12",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.615,
+      "confidence": 0.682,
       "basis": {
-        "today_usd": 83010,
-        "change_24h": 0.8,
+        "today_usd": 82913,
+        "change_24h": 0.21,
         "model": {
-          "p_event": 0.6155,
-          "n_train": 73,
+          "p_event": 0.6817,
+          "n_train": 74,
           "fallback": null,
           "features": [
-            0.8,
-            -0.4103080909876211,
-            -2.256081765301554,
-            1.2054316270228116
+            0.21,
+            1.4524141644030042,
+            -2.825699685903149,
+            1.2049316868430044
           ],
           "weights": [
-            -0.3198,
-            0.4786,
-            -0.4645,
-            -0.0956
+            -0.3369,
+            0.4807,
+            -0.4417,
+            -0.0843
           ],
-          "bias": 0.3098
+          "bias": 0.2768
         }
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.522,
+      "confidence": 0.624,
       "basis": {
         "today_max_kp": 7.0,
         "model": {
-          "p_event": 0.4777,
-          "n_train": 76,
+          "p_event": 0.3758,
+          "n_train": 77,
           "fallback": null,
           "features": [
             7.0,
-            4.443333333333333,
-            4.332857142857143,
-            3.0
+            6.0,
+            4.618571428571428,
+            4.0
           ],
           "weights": [
-            1.0149,
-            -0.388,
-            -0.6162,
-            0.2091
+            1.1715,
+            -0.43,
+            -0.5555,
+            0.1611
           ],
-          "bias": -0.7038
+          "bias": -0.6571
         }
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9872,
-          "n_train": 76,
+          "p_event": 0.9873,
+          "n_train": 77,
           "fallback": "laplace",
           "features": [
-            6.6,
-            224.14285714285714,
-            6.128571428571428,
+            5.3,
+            221.28571428571428,
+            6.042857142857143,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.625,
+      "confidence": 0.643,
       "basis": {
-        "today_top": "Nidal_Hasan",
+        "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.6249,
-          "n_train": 73,
+          "p_event": 0.6428,
+          "n_train": 74,
           "fallback": null,
           "features": [
             1.0,
-            13.576298598471,
-            0.962364644990306,
+            13.26185919741555,
+            0.7448336345550273,
             1.0
           ],
           "weights": [
-            -1.0839,
-            -0.5494,
-            0.3864,
-            -1.0312
+            -1.0711,
+            -0.5242,
+            0.3824,
+            -1.0745
           ],
-          "bias": 0.7352
+          "bias": 0.6947
         }
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.944,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 49991852,
-        "top_title": "2D Vehicles",
+        "top_id": 50041540,
+        "top_title": "IRCv3",
         "model": {
-          "p_event": 0.9445,
-          "n_train": 76,
+          "p_event": 0.9865,
+          "n_train": 77,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            5.0
+            0.1,
+            4.0,
+            6.0
           ],
           "weights": [
-            0.3809,
-            -0.1758,
-            0.2347
+            0.4184,
+            -0.1932,
+            0.0548
           ],
-          "bias": 2.7583
+          "bias": 2.5604
         }
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-11"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-12"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.825,
+      "confidence": 0.9,
       "basis": {
-        "forecast_c": 33.5,
+        "forecast_c": 32.1,
         "for_date": "2026-10-12",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8253,
+          "p_event": 0.9003,
           "n_train": 68,
           "fallback": null,
           "features": [
-            1.3999999999999986,
-            0.8400000000000006,
-            0.10000000000000142,
-            0.10000000000000142
+            1.1000000000000014,
+            0.8660254037844386,
+            1.6000000000000014,
+            1.6000000000000014
           ],
           "weights": [
             -0.3032,
@@ -319,8 +319,8 @@
           "bias": 2.654
         }
       },
-      "made_on": "2026-10-10",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-11",
+      "resolve_on": "2026-10-13"
     }
   ]
 }
