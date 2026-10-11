@@ -1,20 +1,20 @@
 {
   "date": "2026-10-11",
-  "fetched_at": "2026-10-11T10:35:48.153683+00:00",
+  "fetched_at": "2026-10-11T19:48:35.164601+00:00",
   "observations": {
     "btc": {
-      "usd": 82913,
-      "usd_24h_change": 0.21
+      "usd": 83645,
+      "usd_24h_change": 0.76
     },
     "kp": {
-      "max_kp": 7.0,
-      "latest_kp": 2.67,
+      "max_kp": 6.67,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.3,
-      "count": 177,
-      "strongest_place": "southeast of Easter Island"
+      "max_mag": 6.2,
+      "count": 174,
+      "strongest_place": "79 km SSE of Panguna, Papua New Guinea"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-10"
     },
     "hn": {
-      "top_id": 50041540,
-      "top_title": "IRCv3",
+      "top_id": 50045984,
+      "top_title": "Total Annihilation, rebuilt for modern computers",
       "top10": [
-        50041540,
+        50045984,
+        50043026,
+        50045946,
+        50046241,
+        50045273,
+        50008566,
         50040276,
-        50037949,
-        49991852,
-        50036864,
-        50029487,
-        50017548,
-        50039063,
-        50001234,
-        50028647
+        50042425,
+        50044272,
+        50042362
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 33.2,
-      "actual_prev_date": "2026-10-10",
-      "today": 31.0,
-      "forecast_next": 32.1,
-      "forecast_next_date": "2026-10-12"
+      "actual_prev": 29.8,
+      "actual_prev_date": "2026-10-11",
+      "today": 31.3,
+      "forecast_next": 32.4,
+      "forecast_next_date": "2026-10-13"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.522,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 82913,
-        "change_24h": 0.21
+        "today_usd": 83645,
+        "change_24h": 0.76
       },
       "made_on": "2026-10-11",
       "resolve_on": "2026-10-12"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 7.0
+        "today_max_kp": 6.67
       },
       "made_on": "2026-10-11",
       "resolve_on": "2026-10-12"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50041540,
-        "top_title": "IRCv3"
+        "top_id": 50045984,
+        "top_title": "Total Annihilation, rebuilt for modern computers"
       },
       "made_on": "2026-10-11",
       "resolve_on": "2026-10-12"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.1,
-        "for_date": "2026-10-12",
+        "forecast_c": 32.4,
+        "for_date": "2026-10-13",
         "city": "New Delhi"
       },
       "made_on": "2026-10-11",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.682,
+      "confidence": 0.694,
       "basis": {
-        "today_usd": 82913,
-        "change_24h": 0.21,
+        "today_usd": 83645,
+        "change_24h": 0.76,
         "model": {
-          "p_event": 0.6817,
+          "p_event": 0.6936,
           "n_train": 74,
           "fallback": null,
           "features": [
-            0.21,
-            1.4524141644030042,
-            -2.825699685903149,
-            1.2049316868430044
+            0.76,
+            2.3480899591317383,
+            -1.9677933523979174,
+            1.2420056615233952
           ],
           "weights": [
-            -0.3369,
-            0.4807,
-            -0.4417,
-            -0.0843
+            -0.3069,
+            0.4749,
+            -0.4778,
+            -0.102
           ],
-          "bias": 0.2768
+          "bias": 0.3342
         }
       },
       "made_on": "2026-10-11",
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.624,
+      "confidence": 0.668,
       "basis": {
-        "today_max_kp": 7.0,
+        "today_max_kp": 6.67,
         "model": {
-          "p_event": 0.3758,
+          "p_event": 0.3322,
           "n_train": 77,
           "fallback": null,
           "features": [
-            7.0,
-            6.0,
-            4.618571428571428,
+            6.67,
+            5.890000000000001,
+            4.571428571428571,
             4.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 77,
           "fallback": "laplace",
           "features": [
-            5.3,
-            221.28571428571428,
-            6.042857142857143,
+            6.2,
+            220.85714285714286,
+            6.171428571428572,
             1.0
           ]
         }
@@ -266,23 +266,23 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50041540,
-        "top_title": "IRCv3",
+        "top_id": 50045984,
+        "top_title": "Total Annihilation, rebuilt for modern computers",
         "model": {
-          "p_event": 0.9865,
+          "p_event": 0.9519,
           "n_train": 77,
           "fallback": null,
           "features": [
-            0.1,
-            4.0,
+            0.0,
+            11.0,
             6.0
           ],
           "weights": [
-            0.4184,
-            -0.1932,
-            0.0548
+            0.3783,
+            -0.1743,
+            0.2471
           ],
-          "bias": 2.5604
+          "bias": 2.7739
         }
       },
       "made_on": "2026-10-11",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.9,
+      "confidence": 0.947,
       "basis": {
-        "forecast_c": 32.1,
-        "for_date": "2026-10-12",
+        "forecast_c": 32.4,
+        "for_date": "2026-10-13",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9003,
-          "n_train": 68,
+          "p_event": 0.9472,
+          "n_train": 69,
           "fallback": null,
           "features": [
-            1.1000000000000014,
-            0.8660254037844386,
-            1.6000000000000014,
-            1.6000000000000014
+            1.0999999999999979,
+            1.6144348856488455,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.3032,
-            0.0286,
-            -0.2825,
-            0.6387
+            -0.2818,
+            -0.0006,
+            -0.279,
+            0.5807
           ],
-          "bias": 2.654
+          "bias": 2.6516
         }
       },
       "made_on": "2026-10-11",
