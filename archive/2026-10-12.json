@@ -1,20 +1,20 @@
 {
   "date": "2026-10-12",
-  "fetched_at": "2026-10-12T11:38:43.001280+00:00",
+  "fetched_at": "2026-10-12T22:39:51.400709+00:00",
   "observations": {
     "btc": {
-      "usd": 83369,
-      "usd_24h_change": 0.48
+      "usd": 82535,
+      "usd_24h_change": -1.26
     },
     "kp": {
       "max_kp": 3.33,
-      "latest_kp": 3.33,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.2,
-      "count": 206,
-      "strongest_place": "79 km SSE of Panguna, Papua New Guinea"
+      "max_mag": 5.5,
+      "count": 255,
+      "strongest_place": "122 km W of Neiafu, Tonga"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-11"
     },
     "hn": {
-      "top_id": 50054751,
-      "top_title": "QGIS bans AI assisted contributions",
+      "top_id": 50063427,
+      "top_title": "AI Is a Tool. Using It Well Takes Skill.",
       "top10": [
-        50054751,
-        50054207,
-        50051573,
-        50048642,
-        50037711,
-        50045984,
-        50052251,
-        50034206,
-        50041573,
-        50052163
+        50063427,
+        50058507,
+        50058528,
+        50063417,
+        50063138,
+        50061859,
+        50055304,
+        50060694,
+        50059096,
+        50061791
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 29.8,
-      "actual_prev_date": "2026-10-11",
-      "today": 29.0,
-      "forecast_next": 31.3,
-      "forecast_next_date": "2026-10-13"
+      "actual_prev": 29.0,
+      "actual_prev_date": "2026-10-12",
+      "today": 31.6,
+      "forecast_next": 32.0,
+      "forecast_next_date": "2026-10-14"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.525,
+      "call": false,
+      "confidence": 0.533,
       "basis": {
-        "today_usd": 83369,
-        "change_24h": 0.48
+        "today_usd": 82535,
+        "change_24h": -1.26
       },
       "made_on": "2026-10-12",
       "resolve_on": "2026-10-13"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50054751,
-        "top_title": "QGIS bans AI assisted contributions"
+        "top_id": 50063427,
+        "top_title": "AI Is a Tool. Using It Well Takes Skill."
       },
       "made_on": "2026-10-12",
       "resolve_on": "2026-10-13"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.3,
-        "for_date": "2026-10-13",
+        "forecast_c": 32.0,
+        "for_date": "2026-10-14",
         "city": "New Delhi"
       },
       "made_on": "2026-10-12",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.669,
+      "confidence": 0.712,
       "basis": {
-        "today_usd": 83369,
-        "change_24h": 0.48,
+        "today_usd": 82535,
+        "change_24h": -1.26,
         "model": {
-          "p_event": 0.6687,
+          "p_event": 0.7115,
           "n_train": 75,
           "fallback": null,
           "features": [
-            0.48,
-            1.1784266608412919,
-            -3.00855098598104,
-            1.2156249892753117
+            -1.26,
+            0.1662661715090108,
+            -3.978826129951718,
+            1.266960573707048
           ],
           "weights": [
             -0.3008,
@@ -215,9 +215,9 @@
           "n_train": 78,
           "fallback": "laplace",
           "features": [
+            5.5,
+            225.71428571428572,
             6.2,
-            218.71428571428572,
-            6.3,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.903,
       "basis": {
-        "top_id": 50054751,
-        "top_title": "QGIS bans AI assisted contributions",
+        "top_id": 50063427,
+        "top_title": "AI Is a Tool. Using It Well Takes Skill.",
         "model": {
-          "p_event": 0.9817,
+          "p_event": 0.9034,
           "n_train": 78,
           "fallback": null,
           "features": [
-            0.1,
-            6.0,
+            0.0,
+            11.0,
             0.0
           ],
           "weights": [
-            0.4176,
-            -0.1937,
-            -0.0023
+            0.3761,
+            -0.1728,
+            0.2632
           ],
-          "bias": 2.5715
+          "bias": 2.7902
         }
       },
       "made_on": "2026-10-12",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.838,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 31.3,
-        "for_date": "2026-10-13",
+        "forecast_c": 32.0,
+        "for_date": "2026-10-14",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8383,
-          "n_train": 69,
+          "p_event": 0.9655,
+          "n_train": 70,
           "fallback": null,
           "features": [
-            2.3000000000000007,
-            2.0447249203743767,
-            0.5,
-            0.5
+            0.3999999999999986,
+            2.2011133546457806,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.2818,
-            -0.0006,
-            -0.279,
-            0.5807
+            -0.2777,
+            0.127,
+            -0.2785,
+            0.8585
           ],
-          "bias": 2.6516
+          "bias": 2.5755
         }
       },
       "made_on": "2026-10-12",
