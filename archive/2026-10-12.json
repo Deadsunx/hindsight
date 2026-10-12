@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-12",
+  "fetched_at": "2026-10-12T11:38:43.001280+00:00",
+  "observations": {
+    "btc": {
+      "usd": 83369,
+      "usd_24h_change": 0.48
+    },
+    "kp": {
+      "max_kp": 3.33,
+      "latest_kp": 3.33,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6.2,
+      "count": 206,
+      "strongest_place": "79 km SSE of Panguna, Papua New Guinea"
+    },
+    "wiki": {
+      "top": "Wikipedia:Featured_pictures",
+      "views": 580293,
+      "for_date": "2026-10-11"
+    },
+    "hn": {
+      "top_id": 50054751,
+      "top_title": "QGIS bans AI assisted contributions",
+      "top10": [
+        50054751,
+        50054207,
+        50051573,
+        50048642,
+        50037711,
+        50045984,
+        50052251,
+        50034206,
+        50041573,
+        50052163
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 29.8,
+      "actual_prev_date": "2026-10-11",
+      "today": 29.0,
+      "forecast_next": 31.3,
+      "forecast_next_date": "2026-10-13"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.525,
+      "basis": {
+        "today_usd": 83369,
+        "change_24h": 0.48
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_max_kp": 3.33
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures"
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50054751,
+        "top_title": "QGIS bans AI assisted contributions"
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 31.3,
+        "for_date": "2026-10-13",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.669,
+      "basis": {
+        "today_usd": 83369,
+        "change_24h": 0.48,
+        "model": {
+          "p_event": 0.6687,
+          "n_train": 75,
+          "fallback": null,
+          "features": [
+            0.48,
+            1.1784266608412919,
+            -3.00855098598104,
+            1.2156249892753117
+          ],
+          "weights": [
+            -0.3008,
+            0.4178,
+            -0.419,
+            -0.0932
+          ],
+          "bias": 0.301
+        }
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.949,
+      "basis": {
+        "today_max_kp": 3.33,
+        "model": {
+          "p_event": 0.0506,
+          "n_train": 78,
+          "fallback": null,
+          "features": [
+            3.33,
+            5.666666666666667,
+            4.285714285714286,
+            3.0
+          ],
+          "weights": [
+            1.2393,
+            -0.3817,
+            -0.5057,
+            0.1349
+          ],
+          "bias": -0.6083
+        }
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9875,
+          "n_train": 78,
+          "fallback": "laplace",
+          "features": [
+            6.2,
+            218.71428571428572,
+            6.3,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.895,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures",
+        "model": {
+          "p_event": 0.8954,
+          "n_train": 75,
+          "fallback": null,
+          "features": [
+            2.0,
+            13.271290150645667,
+            0.7520748451341444,
+            0.0
+          ],
+          "weights": [
+            -1.0825,
+            -0.559,
+            0.3952,
+            -1.0595
+          ],
+          "bias": 0.7149
+        }
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50054751,
+        "top_title": "QGIS bans AI assisted contributions",
+        "model": {
+          "p_event": 0.9817,
+          "n_train": 78,
+          "fallback": null,
+          "features": [
+            0.1,
+            6.0,
+            0.0
+          ],
+          "weights": [
+            0.4176,
+            -0.1937,
+            -0.0023
+          ],
+          "bias": 2.5715
+        }
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.838,
+      "basis": {
+        "forecast_c": 31.3,
+        "for_date": "2026-10-13",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.8383,
+          "n_train": 69,
+          "fallback": null,
+          "features": [
+            2.3000000000000007,
+            2.0447249203743767,
+            0.5,
+            0.5
+          ],
+          "weights": [
+            -0.2818,
+            -0.0006,
+            -0.279,
+            0.5807
+          ],
+          "bias": 2.6516
+        }
+      },
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-14"
+    }
+  ]
+}

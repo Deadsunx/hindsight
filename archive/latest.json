@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-11",
-  "fetched_at": "2026-10-11T19:48:35.164601+00:00",
+  "date": "2026-10-12",
+  "fetched_at": "2026-10-12T11:38:43.001280+00:00",
   "observations": {
     "btc": {
-      "usd": 83645,
-      "usd_24h_change": 0.76
+      "usd": 83369,
+      "usd_24h_change": 0.48
     },
     "kp": {
-      "max_kp": 6.67,
-      "latest_kp": 2.33,
+      "max_kp": 3.33,
+      "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.2,
-      "count": 174,
+      "count": 206,
       "strongest_place": "79 km SSE of Panguna, Papua New Guinea"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 574846,
-      "for_date": "2026-10-10"
+      "views": 580293,
+      "for_date": "2026-10-11"
     },
     "hn": {
-      "top_id": 50045984,
-      "top_title": "Total Annihilation, rebuilt for modern computers",
+      "top_id": 50054751,
+      "top_title": "QGIS bans AI assisted contributions",
       "top10": [
+        50054751,
+        50054207,
+        50051573,
+        50048642,
+        50037711,
         50045984,
-        50043026,
-        50045946,
-        50046241,
-        50045273,
-        50008566,
-        50040276,
-        50042425,
-        50044272,
-        50042362
+        50052251,
+        50034206,
+        50041573,
+        50052163
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 29.8,
       "actual_prev_date": "2026-10-11",
-      "today": 31.3,
-      "forecast_next": 32.4,
+      "today": 29.0,
+      "forecast_next": 31.3,
       "forecast_next_date": "2026-10-13"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.528,
+      "confidence": 0.525,
       "basis": {
-        "today_usd": 83645,
-        "change_24h": 0.76
+        "today_usd": 83369,
+        "change_24h": 0.48
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 6.67
+        "today_max_kp": 3.33
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50045984,
-        "top_title": "Total Annihilation, rebuilt for modern computers"
+        "top_id": 50054751,
+        "top_title": "QGIS bans AI assisted contributions"
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.4,
+        "forecast_c": 31.3,
         "for_date": "2026-10-13",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.694,
+      "confidence": 0.669,
       "basis": {
-        "today_usd": 83645,
-        "change_24h": 0.76,
+        "today_usd": 83369,
+        "change_24h": 0.48,
         "model": {
-          "p_event": 0.6936,
-          "n_train": 74,
+          "p_event": 0.6687,
+          "n_train": 75,
           "fallback": null,
           "features": [
-            0.76,
-            2.3480899591317383,
-            -1.9677933523979174,
-            1.2420056615233952
+            0.48,
+            1.1784266608412919,
+            -3.00855098598104,
+            1.2156249892753117
           ],
           "weights": [
-            -0.3069,
-            0.4749,
-            -0.4778,
-            -0.102
+            -0.3008,
+            0.4178,
+            -0.419,
+            -0.0932
           ],
-          "bias": 0.3342
+          "bias": 0.301
         }
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.668,
+      "confidence": 0.949,
       "basis": {
-        "today_max_kp": 6.67,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.3322,
-          "n_train": 77,
+          "p_event": 0.0506,
+          "n_train": 78,
           "fallback": null,
           "features": [
-            6.67,
-            5.890000000000001,
-            4.571428571428571,
-            4.0
+            3.33,
+            5.666666666666667,
+            4.285714285714286,
+            3.0
           ],
           "weights": [
-            1.1715,
-            -0.43,
-            -0.5555,
-            0.1611
+            1.2393,
+            -0.3817,
+            -0.5057,
+            0.1349
           ],
-          "bias": -0.6571
+          "bias": -0.6083
         }
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9873,
-          "n_train": 77,
+          "p_event": 0.9875,
+          "n_train": 78,
           "fallback": "laplace",
           "features": [
             6.2,
-            220.85714285714286,
-            6.171428571428572,
+            218.71428571428572,
+            6.3,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.643,
+      "confidence": 0.895,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.6428,
-          "n_train": 74,
+          "p_event": 0.8954,
+          "n_train": 75,
           "fallback": null,
           "features": [
-            1.0,
-            13.26185919741555,
-            0.7448336345550273,
-            1.0
+            2.0,
+            13.271290150645667,
+            0.7520748451341444,
+            0.0
           ],
           "weights": [
-            -1.0711,
-            -0.5242,
-            0.3824,
-            -1.0745
+            -1.0825,
+            -0.559,
+            0.3952,
+            -1.0595
           ],
-          "bias": 0.6947
+          "bias": 0.7149
         }
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "hn_fade_ml",
@@ -266,27 +266,27 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50045984,
-        "top_title": "Total Annihilation, rebuilt for modern computers",
+        "top_id": 50054751,
+        "top_title": "QGIS bans AI assisted contributions",
         "model": {
-          "p_event": 0.9519,
-          "n_train": 77,
+          "p_event": 0.9817,
+          "n_train": 78,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            6.0
+            0.1,
+            6.0,
+            0.0
           ],
           "weights": [
-            0.3783,
-            -0.1743,
-            0.2471
+            0.4176,
+            -0.1937,
+            -0.0023
           ],
-          "bias": 2.7739
+          "bias": 2.5715
         }
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-12"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-13"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.947,
+      "confidence": 0.838,
       "basis": {
-        "forecast_c": 32.4,
+        "forecast_c": 31.3,
         "for_date": "2026-10-13",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9472,
+          "p_event": 0.8383,
           "n_train": 69,
           "fallback": null,
           "features": [
-            1.0999999999999979,
-            1.6144348856488455,
-            1.2,
-            2.0
+            2.3000000000000007,
+            2.0447249203743767,
+            0.5,
+            0.5
           ],
           "weights": [
             -0.2818,
@@ -319,8 +319,8 @@
           "bias": 2.6516
         }
       },
-      "made_on": "2026-10-11",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-12",
+      "resolve_on": "2026-10-14"
     }
   ]
 }
