@@ -1,19 +1,19 @@
 {
   "date": "2026-10-13",
-  "fetched_at": "2026-10-13T11:24:07.839883+00:00",
+  "fetched_at": "2026-10-13T20:54:18.397493+00:00",
   "observations": {
     "btc": {
-      "usd": 83279,
-      "usd_24h_change": -0.06
+      "usd": 83339,
+      "usd_24h_change": 0.33
     },
     "kp": {
       "max_kp": 3.33,
-      "latest_kp": 2.0,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.7,
-      "count": 224,
+      "max_mag": 6.8,
+      "count": 246,
       "strongest_place": "central Mid-Atlantic Ridge"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-10-12"
     },
     "hn": {
-      "top_id": 50069499,
-      "top_title": "11 year old unsoundness bugs found in Rust borrow checker",
+      "top_id": 50073879,
+      "top_title": "Gemini 4 Argon",
       "top10": [
+        50073879,
+        50077020,
+        50054092,
+        50071017,
+        50073633,
+        50072913,
         50069499,
-        50069337,
-        50067414,
-        50041866,
-        50058507,
-        50063365,
-        50055304,
-        50069329,
-        50058528,
-        50068443
+        50073221,
+        50070302,
+        50071310
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 29.0,
-      "actual_prev_date": "2026-10-12",
-      "today": 30.4,
-      "forecast_next": 31.5,
-      "forecast_next_date": "2026-10-14"
+      "actual_prev": 31.1,
+      "actual_prev_date": "2026-10-13",
+      "today": 31.6,
+      "forecast_next": 30.9,
+      "forecast_next_date": "2026-10-15"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.521,
+      "call": true,
+      "confidence": 0.523,
       "basis": {
-        "today_usd": 83279,
-        "change_24h": -0.06
+        "today_usd": 83339,
+        "change_24h": 0.33
       },
       "made_on": "2026-10-13",
       "resolve_on": "2026-10-14"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50069499,
-        "top_title": "11 year old unsoundness bugs found in Rust borrow checker"
+        "top_id": 50073879,
+        "top_title": "Gemini 4 Argon"
       },
       "made_on": "2026-10-13",
       "resolve_on": "2026-10-14"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.5,
-        "for_date": "2026-10-14",
+        "forecast_c": 30.9,
+        "for_date": "2026-10-15",
         "city": "New Delhi"
       },
       "made_on": "2026-10-13",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.668,
+      "confidence": 0.655,
       "basis": {
-        "today_usd": 83279,
-        "change_24h": -0.06,
+        "today_usd": 83339,
+        "change_24h": 0.33,
         "model": {
-          "p_event": 0.668,
+          "p_event": 0.6551,
           "n_train": 76,
           "fallback": null,
           "features": [
-            -0.06,
-            0.3240573424888593,
-            -2.7319021701044166,
-            1.3032464501448997
+            0.33,
+            0.3963377906276433,
+            -2.661823448340306,
+            1.310628086676285
           ],
           "weights": [
             -0.3175,
@@ -215,9 +215,9 @@
           "n_train": 79,
           "fallback": "laplace",
           "features": [
-            6.7,
-            226.42857142857142,
-            6.314285714285715,
+            6.8,
+            229.57142857142858,
+            6.328571428571428,
             1.0
           ]
         }
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.917,
       "basis": {
-        "top_id": 50069499,
-        "top_title": "11 year old unsoundness bugs found in Rust borrow checker",
+        "top_id": 50073879,
+        "top_title": "Gemini 4 Argon",
         "model": {
-          "p_event": 0.9928,
+          "p_event": 0.9171,
           "n_train": 79,
           "fallback": null,
           "features": [
-            0.3,
+            0.0,
             11.0,
             1.0
           ],
@@ -297,26 +297,26 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 31.5,
-        "for_date": "2026-10-14",
+        "forecast_c": 30.9,
+        "for_date": "2026-10-15",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9883,
-          "n_train": 70,
+          "p_event": 0.9645,
+          "n_train": 71,
           "fallback": null,
           "features": [
-            1.1000000000000014,
-            2.5452701231892862,
-            4.5,
-            4.5
+            0.7000000000000028,
+            2.2830024091095487,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.2777,
-            0.127,
-            -0.2785,
-            0.8585
+            -0.2805,
+            0.1262,
+            -0.2747,
+            0.8643
           ],
-          "bias": 2.5755
+          "bias": 2.5968
         }
       },
       "made_on": "2026-10-13",
