@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-12",
-  "fetched_at": "2026-10-12T22:39:51.400709+00:00",
+  "date": "2026-10-13",
+  "fetched_at": "2026-10-13T11:24:07.839883+00:00",
   "observations": {
     "btc": {
-      "usd": 82535,
-      "usd_24h_change": -1.26
+      "usd": 83279,
+      "usd_24h_change": -0.06
     },
     "kp": {
       "max_kp": 3.33,
@@ -12,37 +12,37 @@
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.5,
-      "count": 255,
-      "strongest_place": "122 km W of Neiafu, Tonga"
+      "max_mag": 6.7,
+      "count": 224,
+      "strongest_place": "central Mid-Atlantic Ridge"
     },
     "wiki": {
-      "top": "Wikipedia:Featured_pictures",
-      "views": 580293,
-      "for_date": "2026-10-11"
+      "top": "RJ_Mitte",
+      "views": 1406448,
+      "for_date": "2026-10-12"
     },
     "hn": {
-      "top_id": 50063427,
-      "top_title": "AI Is a Tool. Using It Well Takes Skill.",
+      "top_id": 50069499,
+      "top_title": "11 year old unsoundness bugs found in Rust borrow checker",
       "top10": [
-        50063427,
+        50069499,
+        50069337,
+        50067414,
+        50041866,
         50058507,
-        50058528,
-        50063417,
-        50063138,
-        50061859,
+        50063365,
         50055304,
-        50060694,
-        50059096,
-        50061791
+        50069329,
+        50058528,
+        50068443
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 29.0,
       "actual_prev_date": "2026-10-12",
-      "today": 31.6,
-      "forecast_next": 32.0,
+      "today": 30.4,
+      "forecast_next": 31.5,
       "forecast_next_date": "2026-10-14"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.533,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 82535,
-        "change_24h": -1.26
+        "today_usd": 83279,
+        "change_24h": -0.06
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "kp_storm",
@@ -73,8 +73,8 @@
       "basis": {
         "today_max_kp": 3.33
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Wikipedia:Featured_pictures"
+        "today_top": "RJ_Mitte"
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50063427,
-        "top_title": "AI Is a Tool. Using It Well Takes Skill."
+        "top_id": 50069499,
+        "top_title": "11 year old unsoundness bugs found in Rust borrow checker"
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 31.5,
         "for_date": "2026-10-14",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.712,
+      "confidence": 0.668,
       "basis": {
-        "today_usd": 82535,
-        "change_24h": -1.26,
+        "today_usd": 83279,
+        "change_24h": -0.06,
         "model": {
-          "p_event": 0.7115,
-          "n_train": 75,
+          "p_event": 0.668,
+          "n_train": 76,
           "fallback": null,
           "features": [
-            -1.26,
-            0.1662661715090108,
-            -3.978826129951718,
-            1.266960573707048
+            -0.06,
+            0.3240573424888593,
+            -2.7319021701044166,
+            1.3032464501448997
           ],
           "weights": [
-            -0.3008,
-            0.4178,
-            -0.419,
-            -0.0932
+            -0.3175,
+            0.4385,
+            -0.4451,
+            -0.091
           ],
-          "bias": 0.301
+          "bias": 0.3255
         }
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.949,
+      "confidence": 0.825,
       "basis": {
         "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.0506,
-          "n_train": 78,
+          "p_event": 0.1752,
+          "n_train": 79,
           "fallback": null,
           "features": [
             3.33,
-            5.666666666666667,
-            4.285714285714286,
-            3.0
+            4.443333333333333,
+            4.1899999999999995,
+            3.67
           ],
           "weights": [
-            1.2393,
-            -0.3817,
-            -0.5057,
-            0.1349
+            1.053,
+            -0.162,
+            -0.4126,
+            0.0757
           ],
-          "bias": -0.6083
+          "bias": -0.5541
         }
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9875,
-          "n_train": 78,
+          "p_event": 0.9877,
+          "n_train": 79,
           "fallback": "laplace",
           "features": [
-            5.5,
-            225.71428571428572,
-            6.2,
+            6.7,
+            226.42857142857142,
+            6.314285714285715,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.895,
+      "confidence": 0.56,
       "basis": {
-        "today_top": "Wikipedia:Featured_pictures",
+        "today_top": "RJ_Mitte",
         "model": {
-          "p_event": 0.8954,
-          "n_train": 75,
+          "p_event": 0.5597,
+          "n_train": 76,
           "fallback": null,
           "features": [
-            2.0,
-            13.271290150645667,
-            0.7520748451341444,
-            0.0
+            1.0,
+            14.156578646034225,
+            1.5795844458727448,
+            1.0
           ],
           "weights": [
-            -1.0825,
-            -0.559,
-            0.3952,
-            -1.0595
+            -0.9334,
+            -0.4472,
+            0.3186,
+            -0.906
           ],
-          "bias": 0.7149
+          "bias": 0.6551
         }
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.903,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50063427,
-        "top_title": "AI Is a Tool. Using It Well Takes Skill.",
+        "top_id": 50069499,
+        "top_title": "11 year old unsoundness bugs found in Rust borrow checker",
         "model": {
-          "p_event": 0.9034,
-          "n_train": 78,
+          "p_event": 0.9928,
+          "n_train": 79,
           "fallback": null,
           "features": [
-            0.0,
+            0.3,
             11.0,
-            0.0
+            1.0
           ],
           "weights": [
-            0.3761,
-            -0.1728,
-            0.2632
+            0.373,
+            -0.1723,
+            0.2429
           ],
-          "bias": 2.7902
+          "bias": 2.7983
         }
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-13"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
     },
     {
       "id": "forecast_hit_ml",
@@ -297,18 +297,18 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "forecast_c": 32.0,
+        "forecast_c": 31.5,
         "for_date": "2026-10-14",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9655,
+          "p_event": 0.9883,
           "n_train": 70,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            2.2011133546457806,
-            1.2,
-            2.0
+            1.1000000000000014,
+            2.5452701231892862,
+            4.5,
+            4.5
           ],
           "weights": [
             -0.2777,
@@ -319,8 +319,8 @@
           "bias": 2.5755
         }
       },
-      "made_on": "2026-10-12",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-15"
     }
   ]
 }

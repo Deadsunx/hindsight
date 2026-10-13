@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-13",
+  "fetched_at": "2026-10-13T11:24:07.839883+00:00",
+  "observations": {
+    "btc": {
+      "usd": 83279,
+      "usd_24h_change": -0.06
+    },
+    "kp": {
+      "max_kp": 3.33,
+      "latest_kp": 2.0,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6.7,
+      "count": 224,
+      "strongest_place": "central Mid-Atlantic Ridge"
+    },
+    "wiki": {
+      "top": "RJ_Mitte",
+      "views": 1406448,
+      "for_date": "2026-10-12"
+    },
+    "hn": {
+      "top_id": 50069499,
+      "top_title": "11 year old unsoundness bugs found in Rust borrow checker",
+      "top10": [
+        50069499,
+        50069337,
+        50067414,
+        50041866,
+        50058507,
+        50063365,
+        50055304,
+        50069329,
+        50058528,
+        50068443
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 29.0,
+      "actual_prev_date": "2026-10-12",
+      "today": 30.4,
+      "forecast_next": 31.5,
+      "forecast_next_date": "2026-10-14"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.521,
+      "basis": {
+        "today_usd": 83279,
+        "change_24h": -0.06
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_max_kp": 3.33
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "RJ_Mitte"
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50069499,
+        "top_title": "11 year old unsoundness bugs found in Rust borrow checker"
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 31.5,
+        "for_date": "2026-10-14",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.668,
+      "basis": {
+        "today_usd": 83279,
+        "change_24h": -0.06,
+        "model": {
+          "p_event": 0.668,
+          "n_train": 76,
+          "fallback": null,
+          "features": [
+            -0.06,
+            0.3240573424888593,
+            -2.7319021701044166,
+            1.3032464501448997
+          ],
+          "weights": [
+            -0.3175,
+            0.4385,
+            -0.4451,
+            -0.091
+          ],
+          "bias": 0.3255
+        }
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.825,
+      "basis": {
+        "today_max_kp": 3.33,
+        "model": {
+          "p_event": 0.1752,
+          "n_train": 79,
+          "fallback": null,
+          "features": [
+            3.33,
+            4.443333333333333,
+            4.1899999999999995,
+            3.67
+          ],
+          "weights": [
+            1.053,
+            -0.162,
+            -0.4126,
+            0.0757
+          ],
+          "bias": -0.5541
+        }
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9877,
+          "n_train": 79,
+          "fallback": "laplace",
+          "features": [
+            6.7,
+            226.42857142857142,
+            6.314285714285715,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.56,
+      "basis": {
+        "today_top": "RJ_Mitte",
+        "model": {
+          "p_event": 0.5597,
+          "n_train": 76,
+          "fallback": null,
+          "features": [
+            1.0,
+            14.156578646034225,
+            1.5795844458727448,
+            1.0
+          ],
+          "weights": [
+            -0.9334,
+            -0.4472,
+            0.3186,
+            -0.906
+          ],
+          "bias": 0.6551
+        }
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50069499,
+        "top_title": "11 year old unsoundness bugs found in Rust borrow checker",
+        "model": {
+          "p_event": 0.9928,
+          "n_train": 79,
+          "fallback": null,
+          "features": [
+            0.3,
+            11.0,
+            1.0
+          ],
+          "weights": [
+            0.373,
+            -0.1723,
+            0.2429
+          ],
+          "bias": 2.7983
+        }
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-14"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "forecast_c": 31.5,
+        "for_date": "2026-10-14",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.9883,
+          "n_train": 70,
+          "fallback": null,
+          "features": [
+            1.1000000000000014,
+            2.5452701231892862,
+            4.5,
+            4.5
+          ],
+          "weights": [
+            -0.2777,
+            0.127,
+            -0.2785,
+            0.8585
+          ],
+          "bias": 2.5755
+        }
+      },
+      "made_on": "2026-10-13",
+      "resolve_on": "2026-10-15"
+    }
+  ]
+}
