@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-13",
-  "fetched_at": "2026-10-13T20:54:18.397493+00:00",
+  "date": "2026-10-14",
+  "fetched_at": "2026-10-14T09:16:30.029049+00:00",
   "observations": {
     "btc": {
-      "usd": 83339,
-      "usd_24h_change": 0.33
+      "usd": 83402,
+      "usd_24h_change": -0.05
     },
     "kp": {
       "max_kp": 3.33,
-      "latest_kp": 2.33,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.8,
-      "count": 246,
+      "count": 239,
       "strongest_place": "central Mid-Atlantic Ridge"
     },
     "wiki": {
       "top": "RJ_Mitte",
-      "views": 1406448,
-      "for_date": "2026-10-12"
+      "views": 2140567,
+      "for_date": "2026-10-13"
     },
     "hn": {
       "top_id": 50073879,
       "top_title": "Gemini 4 Argon",
       "top10": [
         50073879,
-        50077020,
+        50045147,
         50054092,
-        50071017,
+        50083130,
+        50080007,
+        50077020,
         50073633,
-        50072913,
-        50069499,
-        50073221,
-        50070302,
-        50071310
+        50053487,
+        50082470,
+        50084240
       ]
     },
     "weather": {
@@ -42,7 +42,7 @@
       "actual_prev": 31.1,
       "actual_prev_date": "2026-10-13",
       "today": 31.6,
-      "forecast_next": 30.9,
+      "forecast_next": 27.1,
       "forecast_next_date": "2026-10-15"
     }
   },
@@ -53,14 +53,14 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.523,
+      "call": false,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 83339,
-        "change_24h": 0.33
+        "today_usd": 83402,
+        "change_24h": -0.05
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "kp_storm",
@@ -73,8 +73,8 @@
       "basis": {
         "today_max_kp": 3.33
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "RJ_Mitte"
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "hn_fade",
@@ -116,8 +116,8 @@
         "top_id": 50073879,
         "top_title": "Gemini 4 Argon"
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.9,
+        "forecast_c": 27.1,
         "for_date": "2026-10-15",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.655,
+      "confidence": 0.617,
       "basis": {
-        "today_usd": 83339,
-        "change_24h": 0.33,
+        "today_usd": 83402,
+        "change_24h": -0.05,
         "model": {
-          "p_event": 0.6551,
-          "n_train": 76,
+          "p_event": 0.617,
+          "n_train": 77,
           "fallback": null,
           "features": [
-            0.33,
-            0.3963377906276433,
-            -2.661823448340306,
-            1.310628086676285
+            -0.05,
+            -0.29051347958635176,
+            0.05998656300989502,
+            1.270791259724967
           ],
           "weights": [
-            -0.3175,
-            0.4385,
-            -0.4451,
-            -0.091
+            -0.3155,
+            0.4482,
+            -0.4672,
+            -0.0903
           ],
-          "bias": 0.3255
+          "bias": 0.3489
         }
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.825,
+      "confidence": 0.749,
       "basis": {
         "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.1752,
-          "n_train": 79,
+          "p_event": 0.2512,
+          "n_train": 80,
           "fallback": null,
           "features": [
             3.33,
-            4.443333333333333,
-            4.1899999999999995,
-            3.67
+            3.33,
+            4.284285714285715,
+            3.0
           ],
           "weights": [
-            1.053,
-            -0.162,
-            -0.4126,
-            0.0757
+            0.9763,
+            -0.133,
+            -0.2962,
+            0.087
           ],
-          "bias": -0.5541
+          "bias": -0.5076
         }
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9877,
-          "n_train": 79,
+          "p_event": 0.9878,
+          "n_train": 80,
           "fallback": "laplace",
           "features": [
             6.8,
-            229.57142857142858,
-            6.328571428571428,
+            226.42857142857142,
+            6.557142857142857,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.56,
+      "confidence": 0.793,
       "basis": {
         "today_top": "RJ_Mitte",
         "model": {
-          "p_event": 0.5597,
-          "n_train": 76,
+          "p_event": 0.793,
+          "n_train": 77,
           "fallback": null,
           "features": [
-            1.0,
-            14.156578646034225,
-            1.5795844458727448,
-            1.0
+            2.0,
+            14.576581772340976,
+            1.9214416741095328,
+            0.0
           ],
           "weights": [
-            -0.9334,
-            -0.4472,
-            0.3186,
-            -0.906
+            -0.9311,
+            -0.4309,
+            0.3161,
+            -0.8821
           ],
-          "bias": 0.6551
+          "bias": 0.6735
         }
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.917,
+      "confidence": 0.95,
       "basis": {
         "top_id": 50073879,
         "top_title": "Gemini 4 Argon",
         "model": {
-          "p_event": 0.9171,
-          "n_train": 79,
+          "p_event": 0.9992,
+          "n_train": 80,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            1.0
+            0.4,
+            1.0,
+            2.0
           ],
           "weights": [
-            0.373,
-            -0.1723,
-            0.2429
+            0.4006,
+            -0.1769,
+            0.3525
           ],
-          "bias": 2.7983
+          "bias": 2.6513
         }
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-14"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.786,
       "basis": {
-        "forecast_c": 30.9,
+        "forecast_c": 27.1,
         "for_date": "2026-10-15",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9645,
+          "p_event": 0.7862,
           "n_train": 71,
           "fallback": null,
           "features": [
-            0.7000000000000028,
-            2.2830024091095487,
-            1.2,
-            2.0
+            4.5,
+            2.21452026407527,
+            1.2999999999999972,
+            1.2999999999999972
           ],
           "weights": [
             -0.2805,
@@ -319,8 +319,8 @@
           "bias": 2.5968
         }
       },
-      "made_on": "2026-10-13",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-16"
     }
   ]
 }

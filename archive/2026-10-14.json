@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-14",
+  "fetched_at": "2026-10-14T09:16:30.029049+00:00",
+  "observations": {
+    "btc": {
+      "usd": 83402,
+      "usd_24h_change": -0.05
+    },
+    "kp": {
+      "max_kp": 3.33,
+      "latest_kp": 1.67,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6.8,
+      "count": 239,
+      "strongest_place": "central Mid-Atlantic Ridge"
+    },
+    "wiki": {
+      "top": "RJ_Mitte",
+      "views": 2140567,
+      "for_date": "2026-10-13"
+    },
+    "hn": {
+      "top_id": 50073879,
+      "top_title": "Gemini 4 Argon",
+      "top10": [
+        50073879,
+        50045147,
+        50054092,
+        50083130,
+        50080007,
+        50077020,
+        50073633,
+        50053487,
+        50082470,
+        50084240
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 31.1,
+      "actual_prev_date": "2026-10-13",
+      "today": 31.6,
+      "forecast_next": 27.1,
+      "forecast_next_date": "2026-10-15"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.52,
+      "basis": {
+        "today_usd": 83402,
+        "change_24h": -0.05
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_max_kp": 3.33
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_top": "RJ_Mitte"
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50073879,
+        "top_title": "Gemini 4 Argon"
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 27.1,
+        "for_date": "2026-10-15",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.617,
+      "basis": {
+        "today_usd": 83402,
+        "change_24h": -0.05,
+        "model": {
+          "p_event": 0.617,
+          "n_train": 77,
+          "fallback": null,
+          "features": [
+            -0.05,
+            -0.29051347958635176,
+            0.05998656300989502,
+            1.270791259724967
+          ],
+          "weights": [
+            -0.3155,
+            0.4482,
+            -0.4672,
+            -0.0903
+          ],
+          "bias": 0.3489
+        }
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.749,
+      "basis": {
+        "today_max_kp": 3.33,
+        "model": {
+          "p_event": 0.2512,
+          "n_train": 80,
+          "fallback": null,
+          "features": [
+            3.33,
+            3.33,
+            4.284285714285715,
+            3.0
+          ],
+          "weights": [
+            0.9763,
+            -0.133,
+            -0.2962,
+            0.087
+          ],
+          "bias": -0.5076
+        }
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9878,
+          "n_train": 80,
+          "fallback": "laplace",
+          "features": [
+            6.8,
+            226.42857142857142,
+            6.557142857142857,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.793,
+      "basis": {
+        "today_top": "RJ_Mitte",
+        "model": {
+          "p_event": 0.793,
+          "n_train": 77,
+          "fallback": null,
+          "features": [
+            2.0,
+            14.576581772340976,
+            1.9214416741095328,
+            0.0
+          ],
+          "weights": [
+            -0.9311,
+            -0.4309,
+            0.3161,
+            -0.8821
+          ],
+          "bias": 0.6735
+        }
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50073879,
+        "top_title": "Gemini 4 Argon",
+        "model": {
+          "p_event": 0.9992,
+          "n_train": 80,
+          "fallback": null,
+          "features": [
+            0.4,
+            1.0,
+            2.0
+          ],
+          "weights": [
+            0.4006,
+            -0.1769,
+            0.3525
+          ],
+          "bias": 2.6513
+        }
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-15"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.786,
+      "basis": {
+        "forecast_c": 27.1,
+        "for_date": "2026-10-15",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.7862,
+          "n_train": 71,
+          "fallback": null,
+          "features": [
+            4.5,
+            2.21452026407527,
+            1.2999999999999972,
+            1.2999999999999972
+          ],
+          "weights": [
+            -0.2805,
+            0.1262,
+            -0.2747,
+            0.8643
+          ],
+          "bias": 2.5968
+        }
+      },
+      "made_on": "2026-10-14",
+      "resolve_on": "2026-10-16"
+    }
+  ]
+}
