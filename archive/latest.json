@@ -1,20 +1,20 @@
 {
   "date": "2026-10-14",
-  "fetched_at": "2026-10-14T09:16:30.029049+00:00",
+  "fetched_at": "2026-10-14T19:51:16.590796+00:00",
   "observations": {
     "btc": {
-      "usd": 83402,
-      "usd_24h_change": -0.05
+      "usd": 81670,
+      "usd_24h_change": -1.73
     },
     "kp": {
       "max_kp": 3.33,
-      "latest_kp": 1.67,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.8,
-      "count": 239,
-      "strongest_place": "central Mid-Atlantic Ridge"
+      "max_mag": 5.9,
+      "count": 223,
+      "strongest_place": "Fiji region"
     },
     "wiki": {
       "top": "RJ_Mitte",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-13"
     },
     "hn": {
-      "top_id": 50073879,
-      "top_title": "Gemini 4 Argon",
+      "top_id": 50091788,
+      "top_title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
       "top10": [
-        50073879,
-        50045147,
-        50054092,
-        50083130,
-        50080007,
-        50077020,
-        50073633,
-        50053487,
-        50082470,
-        50084240
+        50091788,
+        50090369,
+        50092730,
+        50084240,
+        50089229,
+        50091794,
+        50092664,
+        50054465,
+        50092470,
+        50065572
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 31.1,
-      "actual_prev_date": "2026-10-13",
-      "today": 31.6,
-      "forecast_next": 27.1,
-      "forecast_next_date": "2026-10-15"
+      "actual_prev": 32.4,
+      "actual_prev_date": "2026-10-14",
+      "today": 28.1,
+      "forecast_next": 30.0,
+      "forecast_next_date": "2026-10-16"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.52,
+      "confidence": 0.537,
       "basis": {
-        "today_usd": 83402,
-        "change_24h": -0.05
+        "today_usd": 81670,
+        "change_24h": -1.73
       },
       "made_on": "2026-10-14",
       "resolve_on": "2026-10-15"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50073879,
-        "top_title": "Gemini 4 Argon"
+        "top_id": 50091788,
+        "top_title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics"
       },
       "made_on": "2026-10-14",
       "resolve_on": "2026-10-15"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.1,
-        "for_date": "2026-10-15",
+        "forecast_c": 30.0,
+        "for_date": "2026-10-16",
         "city": "New Delhi"
       },
       "made_on": "2026-10-14",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.617,
+      "confidence": 0.637,
       "basis": {
-        "today_usd": 83402,
-        "change_24h": -0.05,
+        "today_usd": 81670,
+        "change_24h": -1.73,
         "model": {
-          "p_event": 0.617,
+          "p_event": 0.6371,
           "n_train": 77,
           "fallback": null,
           "features": [
-            -0.05,
-            -0.29051347958635176,
-            0.05998656300989502,
-            1.270791259724967
+            -1.73,
+            -2.361169227090676,
+            -2.017947979652557,
+            1.3623064930503983
           ],
           "weights": [
-            -0.3155,
-            0.4482,
-            -0.4672,
-            -0.0903
+            -0.3172,
+            0.4157,
+            -0.4024,
+            -0.0906
           ],
-          "bias": 0.3489
+          "bias": 0.2932
         }
       },
       "made_on": "2026-10-14",
@@ -215,9 +215,9 @@
           "n_train": 80,
           "fallback": "laplace",
           "features": [
-            6.8,
-            226.42857142857142,
-            6.557142857142857,
+            5.9,
+            224.14285714285714,
+            6.428571428571429,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.927,
       "basis": {
-        "top_id": 50073879,
-        "top_title": "Gemini 4 Argon",
+        "top_id": 50091788,
+        "top_title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
         "model": {
-          "p_event": 0.9992,
+          "p_event": 0.9272,
           "n_train": 80,
           "fallback": null,
           "features": [
-            0.4,
-            1.0,
+            0.0,
+            11.0,
             2.0
           ],
           "weights": [
-            0.4006,
-            -0.1769,
-            0.3525
+            0.3702,
+            -0.1714,
+            0.2317
           ],
-          "bias": 2.6513
+          "bias": 2.8084
         }
       },
       "made_on": "2026-10-14",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.786,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 27.1,
-        "for_date": "2026-10-15",
+        "forecast_c": 30.0,
+        "for_date": "2026-10-16",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7862,
-          "n_train": 71,
+          "p_event": 0.9519,
+          "n_train": 72,
           "fallback": null,
           "features": [
-            4.5,
-            2.21452026407527,
-            1.2999999999999972,
-            1.2999999999999972
+            1.8999999999999986,
+            2.1523010941780436,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.2805,
-            0.1262,
-            -0.2747,
-            0.8643
+            -0.2857,
+            0.1313,
+            -0.2737,
+            0.8691
           ],
-          "bias": 2.5968
+          "bias": 2.6197
         }
       },
       "made_on": "2026-10-14",
