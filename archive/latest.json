@@ -1,20 +1,20 @@
 {
   "date": "2026-10-15",
-  "fetched_at": "2026-10-15T08:50:04.968783+00:00",
+  "fetched_at": "2026-10-15T19:34:31.624881+00:00",
   "observations": {
     "btc": {
-      "usd": 81215,
-      "usd_24h_change": -2.52
+      "usd": 82376,
+      "usd_24h_change": 0.83
     },
     "kp": {
-      "max_kp": 2.67,
-      "latest_kp": 0.67,
+      "max_kp": 3.0,
+      "latest_kp": 3.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.9,
-      "count": 194,
-      "strongest_place": "Fiji region"
+      "max_mag": 5.6,
+      "count": 188,
+      "strongest_place": "43 km NNW of Lake Minchumina, Alaska"
     },
     "wiki": {
       "top": "Katie_Zacharia",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-14"
     },
     "hn": {
-      "top_id": 50093568,
-      "top_title": "Things to know when you get cancer",
+      "top_id": 50107379,
+      "top_title": "Muse Spark Open",
       "top10": [
-        50093568,
-        50070625,
-        50094994,
-        50081045,
-        50096142,
-        50097369,
-        50050553,
-        50064470,
-        50053384,
-        50089921
+        50107379,
+        50105647,
+        50105648,
+        50103338,
+        50104726,
+        50097843,
+        50080155,
+        50102923,
+        50084674,
+        50106023
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 32.4,
-      "actual_prev_date": "2026-10-14",
-      "today": 25.6,
+      "actual_prev": 25.5,
+      "actual_prev_date": "2026-10-15",
+      "today": 28.1,
       "forecast_next": 29.0,
-      "forecast_next_date": "2026-10-16"
+      "forecast_next_date": "2026-10-17"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.545,
+      "call": true,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 81215,
-        "change_24h": -2.52
+        "today_usd": 82376,
+        "change_24h": 0.83
       },
       "made_on": "2026-10-15",
       "resolve_on": "2026-10-16"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.67
+        "today_max_kp": 3.0
       },
       "made_on": "2026-10-15",
       "resolve_on": "2026-10-16"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50093568,
-        "top_title": "Things to know when you get cancer"
+        "top_id": 50107379,
+        "top_title": "Muse Spark Open"
       },
       "made_on": "2026-10-15",
       "resolve_on": "2026-10-16"
@@ -129,7 +129,7 @@
       "confidence": 0.8,
       "basis": {
         "forecast_c": 29.0,
-        "for_date": "2026-10-16",
+        "for_date": "2026-10-17",
         "city": "New Delhi"
       },
       "made_on": "2026-10-15",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.646,
+      "confidence": 0.559,
       "basis": {
-        "today_usd": 81215,
-        "change_24h": -2.52,
+        "today_usd": 82376,
+        "change_24h": 0.83,
         "model": {
-          "p_event": 0.6464,
+          "p_event": 0.5594,
           "n_train": 78,
           "fallback": null,
           "features": [
-            -2.52,
-            -1.599321499969708,
-            -0.6252600151726462,
-            1.3610700232472153
+            0.83,
+            -0.19264554431452918,
+            0.7953405281061032,
+            1.4345495672675899
           ],
           "weights": [
-            -0.2905,
-            0.4226,
-            -0.3955,
-            -0.0881
+            -0.3329,
+            0.4113,
+            -0.4049,
+            -0.0912
           ],
-          "bias": 0.2616
+          "bias": 0.3168
         }
       },
       "made_on": "2026-10-15",
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.858,
+      "confidence": 0.832,
       "basis": {
-        "today_max_kp": 2.67,
+        "today_max_kp": 3.0,
         "model": {
-          "p_event": 0.1416,
+          "p_event": 0.1683,
           "n_train": 81,
           "fallback": null,
           "features": [
-            2.67,
-            3.11,
-            4.332857142857143,
+            3.0,
+            3.22,
+            4.38,
             2.33
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 81,
           "fallback": "laplace",
           "features": [
-            5.9,
-            220.57142857142858,
-            6.371428571428572,
+            5.6,
+            219.71428571428572,
+            6.328571428571428,
             1.0
           ]
         }
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.935,
       "basis": {
-        "top_id": 50093568,
-        "top_title": "Things to know when you get cancer",
+        "top_id": 50107379,
+        "top_title": "Muse Spark Open",
         "model": {
           "p_event": 0.9354,
           "n_train": 81,
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.706,
+      "confidence": 0.936,
       "basis": {
         "forecast_c": 29.0,
-        "for_date": "2026-10-16",
+        "for_date": "2026-10-17",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7055,
-          "n_train": 72,
+          "p_event": 0.9356,
+          "n_train": 73,
           "fallback": null,
           "features": [
-            3.3999999999999986,
-            1.9334166648707676,
-            0.3999999999999986,
-            0.3999999999999986
+            0.8999999999999986,
+            2.863983240174426,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.2857,
-            0.1313,
-            -0.2737,
-            0.8691
+            -0.1822,
+            -0.0046,
+            -0.2982,
+            0.7215
           ],
-          "bias": 2.6197
+          "bias": 2.3626
         }
       },
       "made_on": "2026-10-15",
