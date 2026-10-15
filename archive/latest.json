@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-14",
-  "fetched_at": "2026-10-14T19:51:16.590796+00:00",
+  "date": "2026-10-15",
+  "fetched_at": "2026-10-15T08:50:04.968783+00:00",
   "observations": {
     "btc": {
-      "usd": 81670,
-      "usd_24h_change": -1.73
+      "usd": 81215,
+      "usd_24h_change": -2.52
     },
     "kp": {
-      "max_kp": 3.33,
-      "latest_kp": 2.0,
+      "max_kp": 2.67,
+      "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.9,
-      "count": 223,
+      "count": 194,
       "strongest_place": "Fiji region"
     },
     "wiki": {
-      "top": "RJ_Mitte",
-      "views": 2140567,
-      "for_date": "2026-10-13"
+      "top": "Katie_Zacharia",
+      "views": 906890,
+      "for_date": "2026-10-14"
     },
     "hn": {
-      "top_id": 50091788,
-      "top_title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
+      "top_id": 50093568,
+      "top_title": "Things to know when you get cancer",
       "top10": [
-        50091788,
-        50090369,
-        50092730,
-        50084240,
-        50089229,
-        50091794,
-        50092664,
-        50054465,
-        50092470,
-        50065572
+        50093568,
+        50070625,
+        50094994,
+        50081045,
+        50096142,
+        50097369,
+        50050553,
+        50064470,
+        50053384,
+        50089921
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 32.4,
       "actual_prev_date": "2026-10-14",
-      "today": 28.1,
-      "forecast_next": 30.0,
+      "today": 25.6,
+      "forecast_next": 29.0,
       "forecast_next_date": "2026-10-16"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.537,
+      "confidence": 0.545,
       "basis": {
-        "today_usd": 81670,
-        "change_24h": -1.73
+        "today_usd": 81215,
+        "change_24h": -2.52
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "kp_storm",
@@ -68,13 +68,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.33
+        "today_max_kp": 2.67
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "RJ_Mitte"
+        "today_top": "Katie_Zacharia"
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50091788,
-        "top_title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics"
+        "top_id": 50093568,
+        "top_title": "Things to know when you get cancer"
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.0,
+        "forecast_c": 29.0,
         "for_date": "2026-10-16",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-16"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-17"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.637,
+      "confidence": 0.646,
       "basis": {
-        "today_usd": 81670,
-        "change_24h": -1.73,
+        "today_usd": 81215,
+        "change_24h": -2.52,
         "model": {
-          "p_event": 0.6371,
-          "n_train": 77,
+          "p_event": 0.6464,
+          "n_train": 78,
           "fallback": null,
           "features": [
-            -1.73,
-            -2.361169227090676,
-            -2.017947979652557,
-            1.3623064930503983
+            -2.52,
+            -1.599321499969708,
+            -0.6252600151726462,
+            1.3610700232472153
           ],
           "weights": [
-            -0.3172,
-            0.4157,
-            -0.4024,
-            -0.0906
+            -0.2905,
+            0.4226,
+            -0.3955,
+            -0.0881
           ],
-          "bias": 0.2932
+          "bias": 0.2616
         }
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.749,
+      "confidence": 0.858,
       "basis": {
-        "today_max_kp": 3.33,
+        "today_max_kp": 2.67,
         "model": {
-          "p_event": 0.2512,
-          "n_train": 80,
+          "p_event": 0.1416,
+          "n_train": 81,
           "fallback": null,
           "features": [
-            3.33,
-            3.33,
-            4.284285714285715,
-            3.0
+            2.67,
+            3.11,
+            4.332857142857143,
+            2.33
           ],
           "weights": [
-            0.9763,
-            -0.133,
-            -0.2962,
-            0.087
+            0.9736,
+            -0.1067,
+            -0.3607,
+            0.0894
           ],
-          "bias": -0.5076
+          "bias": -0.5324
         }
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9878,
-          "n_train": 80,
+          "p_event": 0.988,
+          "n_train": 81,
           "fallback": "laplace",
           "features": [
             5.9,
-            224.14285714285714,
-            6.428571428571429,
+            220.57142857142858,
+            6.371428571428572,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.793,
+      "confidence": 0.579,
       "basis": {
-        "today_top": "RJ_Mitte",
+        "today_top": "Katie_Zacharia",
         "model": {
-          "p_event": 0.793,
-          "n_train": 77,
+          "p_event": 0.5793,
+          "n_train": 78,
           "fallback": null,
           "features": [
-            2.0,
-            14.576581772340976,
-            1.9214416741095328,
-            0.0
+            1.0,
+            13.717777545469778,
+            0.7874109605420685,
+            1.0
           ],
           "weights": [
-            -0.9311,
-            -0.4309,
-            0.3161,
-            -0.8821
+            -0.8534,
+            -0.4945,
+            0.309,
+            -0.7721
           ],
-          "bias": 0.6735
+          "bias": 0.6251
         }
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.927,
+      "confidence": 0.935,
       "basis": {
-        "top_id": 50091788,
-        "top_title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
+        "top_id": 50093568,
+        "top_title": "Things to know when you get cancer",
         "model": {
-          "p_event": 0.9272,
-          "n_train": 80,
+          "p_event": 0.9354,
+          "n_train": 81,
           "fallback": null,
           "features": [
             0.0,
             11.0,
-            2.0
+            3.0
           ],
           "weights": [
-            0.3702,
-            -0.1714,
-            0.2317
+            0.3676,
+            -0.1704,
+            0.2276
           ],
-          "bias": 2.8084
+          "bias": 2.8199
         }
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-15"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.706,
       "basis": {
-        "forecast_c": 30.0,
+        "forecast_c": 29.0,
         "for_date": "2026-10-16",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9519,
+          "p_event": 0.7055,
           "n_train": 72,
           "fallback": null,
           "features": [
-            1.8999999999999986,
-            2.1523010941780436,
-            1.2,
-            2.0
+            3.3999999999999986,
+            1.9334166648707676,
+            0.3999999999999986,
+            0.3999999999999986
           ],
           "weights": [
             -0.2857,
@@ -319,8 +319,8 @@
           "bias": 2.6197
         }
       },
-      "made_on": "2026-10-14",
-      "resolve_on": "2026-10-16"
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-17"
     }
   ]
 }

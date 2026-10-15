@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-15",
+  "fetched_at": "2026-10-15T08:50:04.968783+00:00",
+  "observations": {
+    "btc": {
+      "usd": 81215,
+      "usd_24h_change": -2.52
+    },
+    "kp": {
+      "max_kp": 2.67,
+      "latest_kp": 0.67,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.9,
+      "count": 194,
+      "strongest_place": "Fiji region"
+    },
+    "wiki": {
+      "top": "Katie_Zacharia",
+      "views": 906890,
+      "for_date": "2026-10-14"
+    },
+    "hn": {
+      "top_id": 50093568,
+      "top_title": "Things to know when you get cancer",
+      "top10": [
+        50093568,
+        50070625,
+        50094994,
+        50081045,
+        50096142,
+        50097369,
+        50050553,
+        50064470,
+        50053384,
+        50089921
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 32.4,
+      "actual_prev_date": "2026-10-14",
+      "today": 25.6,
+      "forecast_next": 29.0,
+      "forecast_next_date": "2026-10-16"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.545,
+      "basis": {
+        "today_usd": 81215,
+        "change_24h": -2.52
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 2.67
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Katie_Zacharia"
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50093568,
+        "top_title": "Things to know when you get cancer"
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 29.0,
+        "for_date": "2026-10-16",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-17"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.646,
+      "basis": {
+        "today_usd": 81215,
+        "change_24h": -2.52,
+        "model": {
+          "p_event": 0.6464,
+          "n_train": 78,
+          "fallback": null,
+          "features": [
+            -2.52,
+            -1.599321499969708,
+            -0.6252600151726462,
+            1.3610700232472153
+          ],
+          "weights": [
+            -0.2905,
+            0.4226,
+            -0.3955,
+            -0.0881
+          ],
+          "bias": 0.2616
+        }
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.858,
+      "basis": {
+        "today_max_kp": 2.67,
+        "model": {
+          "p_event": 0.1416,
+          "n_train": 81,
+          "fallback": null,
+          "features": [
+            2.67,
+            3.11,
+            4.332857142857143,
+            2.33
+          ],
+          "weights": [
+            0.9736,
+            -0.1067,
+            -0.3607,
+            0.0894
+          ],
+          "bias": -0.5324
+        }
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.988,
+          "n_train": 81,
+          "fallback": "laplace",
+          "features": [
+            5.9,
+            220.57142857142858,
+            6.371428571428572,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.579,
+      "basis": {
+        "today_top": "Katie_Zacharia",
+        "model": {
+          "p_event": 0.5793,
+          "n_train": 78,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.717777545469778,
+            0.7874109605420685,
+            1.0
+          ],
+          "weights": [
+            -0.8534,
+            -0.4945,
+            0.309,
+            -0.7721
+          ],
+          "bias": 0.6251
+        }
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.935,
+      "basis": {
+        "top_id": 50093568,
+        "top_title": "Things to know when you get cancer",
+        "model": {
+          "p_event": 0.9354,
+          "n_train": 81,
+          "fallback": null,
+          "features": [
+            0.0,
+            11.0,
+            3.0
+          ],
+          "weights": [
+            0.3676,
+            -0.1704,
+            0.2276
+          ],
+          "bias": 2.8199
+        }
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-16"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.706,
+      "basis": {
+        "forecast_c": 29.0,
+        "for_date": "2026-10-16",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.7055,
+          "n_train": 72,
+          "fallback": null,
+          "features": [
+            3.3999999999999986,
+            1.9334166648707676,
+            0.3999999999999986,
+            0.3999999999999986
+          ],
+          "weights": [
+            -0.2857,
+            0.1313,
+            -0.2737,
+            0.8691
+          ],
+          "bias": 2.6197
+        }
+      },
+      "made_on": "2026-10-15",
+      "resolve_on": "2026-10-17"
+    }
+  ]
+}
