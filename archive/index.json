@@ -1127,8 +1127,8 @@
       "weather"
     ],
     "made": 12,
-    "graded": 10,
-    "correct": 6
+    "graded": 12,
+    "correct": 8
   },
   {
     "date": "2026-10-15",
@@ -1142,7 +1142,7 @@
     ],
     "made": 12,
     "graded": 10,
-    "correct": 3
+    "correct": 5
   },
   {
     "date": "2026-10-16",

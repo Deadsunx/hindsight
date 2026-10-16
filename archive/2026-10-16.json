@@ -1,19 +1,19 @@
 {
   "date": "2026-10-16",
-  "fetched_at": "2026-10-16T08:44:17.624185+00:00",
+  "fetched_at": "2026-10-16T19:08:25.576600+00:00",
   "observations": {
     "btc": {
-      "usd": 82238,
-      "usd_24h_change": 1.34
+      "usd": 81055,
+      "usd_24h_change": -1.67
     },
     "kp": {
       "max_kp": 3.33,
-      "latest_kp": 2.0,
+      "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.9,
-      "count": 157,
+      "count": 182,
       "strongest_place": "76 km NE of Ozernovskiy, Russia"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-10-15"
     },
     "hn": {
-      "top_id": 50111852,
-      "top_title": "Meta\u2019s new commercial terms will allow the scraping of news sites: experts",
+      "top_id": 50122034,
+      "top_title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
       "top10": [
-        50111852,
-        50107379,
-        50082113,
-        50065859,
-        50114359,
-        50112330,
-        50114342,
-        50105647,
-        50072119,
-        50109715
+        50122034,
+        50122431,
+        50120224,
+        50121179,
+        50118320,
+        50121939,
+        50118688,
+        50118977,
+        50118828,
+        50121188
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 25.5,
-      "actual_prev_date": "2026-10-15",
-      "today": 27.8,
-      "forecast_next": 28.8,
-      "forecast_next_date": "2026-10-17"
+      "actual_prev": 28.6,
+      "actual_prev_date": "2026-10-16",
+      "today": 28.9,
+      "forecast_next": 29.1,
+      "forecast_next_date": "2026-10-18"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.533,
+      "call": false,
+      "confidence": 0.537,
       "basis": {
-        "today_usd": 82238,
-        "change_24h": 1.34
+        "today_usd": 81055,
+        "change_24h": -1.67
       },
       "made_on": "2026-10-16",
       "resolve_on": "2026-10-17"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50111852,
-        "top_title": "Meta\u2019s new commercial terms will allow the scraping of news sites: experts"
+        "top_id": 50122034,
+        "top_title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear"
       },
       "made_on": "2026-10-16",
       "resolve_on": "2026-10-17"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.8,
-        "for_date": "2026-10-17",
+        "forecast_c": 29.1,
+        "for_date": "2026-10-18",
         "city": "New Delhi"
       },
       "made_on": "2026-10-16",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.518,
+      "confidence": 0.625,
       "basis": {
-        "today_usd": 82238,
-        "change_24h": 1.34,
+        "today_usd": 81055,
+        "change_24h": -1.67,
         "model": {
-          "p_event": 0.5179,
+          "p_event": 0.6248,
           "n_train": 79,
           "fallback": null,
           "features": [
-            1.34,
-            -1.3211101645088097,
-            -0.19417947037549954,
-            1.1987264327686316
+            -1.67,
+            -2.740613638272593,
+            -1.62989392946431,
+            1.2840293538063163
           ],
           "weights": [
             -0.3492,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.9,
-            208.0,
+            211.57142857142858,
             6.214285714285714,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.943,
       "basis": {
-        "top_id": 50111852,
-        "top_title": "Meta\u2019s new commercial terms will allow the scraping of news sites: experts",
+        "top_id": 50122034,
+        "top_title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
         "model": {
-          "p_event": 0.996,
+          "p_event": 0.9428,
           "n_train": 82,
           "fallback": null,
           "features": [
-            0.2,
-            2.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.3989,
-            -0.1817,
-            0.1918
+            0.365,
+            -0.1692,
+            0.2295
           ],
-          "bias": 2.6382
+          "bias": 2.8324
         }
       },
       "made_on": "2026-10-16",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.944,
       "basis": {
-        "forecast_c": 28.8,
-        "for_date": "2026-10-17",
+        "forecast_c": 29.1,
+        "for_date": "2026-10-18",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9731,
-          "n_train": 73,
+          "p_event": 0.9443,
+          "n_train": 74,
           "fallback": null,
           "features": [
-            1.0,
-            3.1862360239003014,
-            5.399999999999999,
-            5.399999999999999
+            0.20000000000000284,
+            2.772652159936403,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.1822,
-            -0.0046,
-            -0.2982,
-            0.7215
+            -0.1781,
+            0.0033,
+            -0.298,
+            0.73
           ],
-          "bias": 2.3626
+          "bias": 2.3803
         }
       },
       "made_on": "2026-10-16",
