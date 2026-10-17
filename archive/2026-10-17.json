@@ -1,19 +1,19 @@
 {
   "date": "2026-10-17",
-  "fetched_at": "2026-10-17T08:15:05.294499+00:00",
+  "fetched_at": "2026-10-17T18:02:50.459520+00:00",
   "observations": {
     "btc": {
-      "usd": 81625,
-      "usd_24h_change": -0.7
+      "usd": 81306,
+      "usd_24h_change": 0.21
     },
     "kp": {
       "max_kp": 3.67,
-      "latest_kp": 1.0,
+      "latest_kp": 3.0,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.7,
-      "count": 195,
+      "count": 182,
       "strongest_place": "48 km WNW of Khuzdar, Pakistan"
     },
     "wiki": {
@@ -22,27 +22,27 @@
       "for_date": "2026-10-15"
     },
     "hn": {
-      "top_id": 50106747,
-      "top_title": "Ultramarine 1\u00a0Flash",
+      "top_id": 50132950,
+      "top_title": "Linux bugs fixed per release over time: >2\u00d7 rise since 2026-04",
       "top10": [
-        50106747,
-        50112657,
-        50127979,
-        50122431,
-        50122800,
-        50103255,
-        50122878,
-        50088937,
-        50088767,
-        50123580
+        50132950,
+        50131213,
+        50100994,
+        50129045,
+        50100366,
+        50131256,
+        50119315,
+        50132839,
+        50132502,
+        50132328
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.5,
+      "actual_prev": 28.6,
       "actual_prev_date": "2026-10-16",
-      "today": 28.4,
-      "forecast_next": 28.9,
+      "today": 29.2,
+      "forecast_next": 29.2,
       "forecast_next_date": "2026-10-18"
     }
   },
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.527,
+      "call": true,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 81625,
-        "change_24h": -0.7
+        "today_usd": 81306,
+        "change_24h": 0.21
       },
       "made_on": "2026-10-17",
       "resolve_on": "2026-10-18"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50106747,
-        "top_title": "Ultramarine 1\u00a0Flash"
+        "top_id": 50132950,
+        "top_title": "Linux bugs fixed per release over time: >2\u00d7 rise since 2026-04"
       },
       "made_on": "2026-10-17",
       "resolve_on": "2026-10-18"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.9,
+        "forecast_c": 29.2,
         "for_date": "2026-10-18",
         "city": "New Delhi"
       },
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.665,
+      "confidence": 0.624,
       "basis": {
-        "today_usd": 81625,
-        "change_24h": -0.7,
+        "today_usd": 81306,
+        "change_24h": 0.21,
         "model": {
-          "p_event": 0.6645,
+          "p_event": 0.6235,
           "n_train": 80,
           "fallback": null,
           "features": [
-            -0.7,
-            -0.05509979184522562,
-            -1.6684736778701414,
-            1.1712557439462454
+            0.21,
+            -0.44569609403697363,
+            -2.0527647271413096,
+            1.1511025470345422
           ],
           "weights": [
             -0.3624,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.7,
-            209.0,
+            207.14285714285714,
             6.085714285714286,
             1.0
           ]
@@ -266,14 +266,14 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50106747,
-        "top_title": "Ultramarine 1\u00a0Flash",
+        "top_id": 50132950,
+        "top_title": "Linux bugs fixed per release over time: >2\u00d7 rise since 2026-04",
         "model": {
-          "p_event": 0.9776,
+          "p_event": 0.9497,
           "n_train": 83,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             5.0
           ],
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.88,
+      "confidence": 0.884,
       "basis": {
-        "forecast_c": 28.9,
+        "forecast_c": 29.2,
         "for_date": "2026-10-18",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8803,
+          "p_event": 0.8842,
           "n_train": 74,
           "fallback": null,
           "features": [
-            0.5,
-            2.6043041297052847,
-            1.5,
-            1.5
+            0.0,
+            2.596555410539124,
+            1.3999999999999986,
+            1.3999999999999986
           ],
           "weights": [
             -0.1781,
