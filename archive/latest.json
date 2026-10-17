@@ -1,20 +1,20 @@
 {
-  "date": "2026-10-16",
-  "fetched_at": "2026-10-16T19:08:25.576600+00:00",
+  "date": "2026-10-17",
+  "fetched_at": "2026-10-17T08:15:05.294499+00:00",
   "observations": {
     "btc": {
-      "usd": 81055,
-      "usd_24h_change": -1.67
+      "usd": 81625,
+      "usd_24h_change": -0.7
     },
     "kp": {
-      "max_kp": 3.33,
-      "latest_kp": 3.33,
+      "max_kp": 3.67,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.9,
-      "count": 182,
-      "strongest_place": "76 km NE of Ozernovskiy, Russia"
+      "max_mag": 5.7,
+      "count": 195,
+      "strongest_place": "48 km WNW of Khuzdar, Pakistan"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,27 +22,27 @@
       "for_date": "2026-10-15"
     },
     "hn": {
-      "top_id": 50122034,
-      "top_title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
+      "top_id": 50106747,
+      "top_title": "Ultramarine 1\u00a0Flash",
       "top10": [
-        50122034,
+        50106747,
+        50112657,
+        50127979,
         50122431,
-        50120224,
-        50121179,
-        50118320,
-        50121939,
-        50118688,
-        50118977,
-        50118828,
-        50121188
+        50122800,
+        50103255,
+        50122878,
+        50088937,
+        50088767,
+        50123580
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.6,
+      "actual_prev": 28.5,
       "actual_prev_date": "2026-10-16",
-      "today": 28.9,
-      "forecast_next": 29.1,
+      "today": 28.4,
+      "forecast_next": 28.9,
       "forecast_next_date": "2026-10-18"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.537,
+      "confidence": 0.527,
       "basis": {
-        "today_usd": 81055,
-        "change_24h": -1.67
+        "today_usd": 81625,
+        "change_24h": -0.7
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 3.33
+        "today_max_kp": 3.67
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50122034,
-        "top_title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear"
+        "top_id": 50106747,
+        "top_title": "Ultramarine 1\u00a0Flash"
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 29.1,
+        "forecast_c": 28.9,
         "for_date": "2026-10-18",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.625,
+      "confidence": 0.665,
       "basis": {
-        "today_usd": 81055,
-        "change_24h": -1.67,
+        "today_usd": 81625,
+        "change_24h": -0.7,
         "model": {
-          "p_event": 0.6248,
-          "n_train": 79,
+          "p_event": 0.6645,
+          "n_train": 80,
           "fallback": null,
           "features": [
-            -1.67,
-            -2.740613638272593,
-            -1.62989392946431,
-            1.2840293538063163
+            -0.7,
+            -0.05509979184522562,
+            -1.6684736778701414,
+            1.1712557439462454
           ],
           "weights": [
-            -0.3492,
-            0.4287,
-            -0.4086,
-            -0.0816
+            -0.3624,
+            0.4184,
+            -0.4031,
+            -0.087
           ],
-          "bias": 0.2858
+          "bias": 0.3089
         }
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.68,
+      "confidence": 0.536,
       "basis": {
-        "today_max_kp": 3.33,
+        "today_max_kp": 3.67,
         "model": {
-          "p_event": 0.3199,
-          "n_train": 82,
+          "p_event": 0.4641,
+          "n_train": 83,
           "fallback": null,
           "features": [
-            3.33,
-            3.22,
-            4.284285714285715,
-            2.67
+            3.67,
+            3.3333333333333335,
+            3.8085714285714287,
+            3.0
           ],
           "weights": [
-            0.9601,
-            -0.1881,
-            -0.1837,
-            0.0497
+            0.9675,
+            -0.2501,
+            -0.0646,
+            0.0333
           ],
-          "bias": -0.4868
+          "bias": -0.4486
         }
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9881,
-          "n_train": 82,
+          "p_event": 0.9882,
+          "n_train": 83,
           "fallback": "laplace",
           "features": [
-            6.9,
-            211.57142857142858,
-            6.214285714285714,
+            5.7,
+            209.0,
+            6.085714285714286,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,17 +232,17 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.636,
+      "confidence": 0.638,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.6359,
+          "p_event": 0.638,
           "n_train": 79,
           "fallback": null,
           "features": [
             1.0,
             13.240951422287154,
-            0.566248944030263,
+            0.5851068189390624,
             1.0
           ],
           "weights": [
@@ -254,8 +254,8 @@
           "bias": 0.5906
         }
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.943,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50122034,
-        "top_title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
+        "top_id": 50106747,
+        "top_title": "Ultramarine 1\u00a0Flash",
         "model": {
-          "p_event": 0.9428,
-          "n_train": 82,
+          "p_event": 0.9776,
+          "n_train": 83,
           "fallback": null,
           "features": [
-            0.0,
+            0.1,
             11.0,
-            4.0
+            5.0
           ],
           "weights": [
-            0.365,
-            -0.1692,
-            0.2295
+            0.3626,
+            -0.1679,
+            0.2365
           ],
-          "bias": 2.8324
+          "bias": 2.8459
         }
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-17"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-18"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.944,
+      "confidence": 0.88,
       "basis": {
-        "forecast_c": 29.1,
+        "forecast_c": 28.9,
         "for_date": "2026-10-18",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9443,
+          "p_event": 0.8803,
           "n_train": 74,
           "fallback": null,
           "features": [
-            0.20000000000000284,
-            2.772652159936403,
-            1.2,
-            2.0
+            0.5,
+            2.6043041297052847,
+            1.5,
+            1.5
           ],
           "weights": [
             -0.1781,
@@ -319,8 +319,8 @@
           "bias": 2.3803
         }
       },
-      "made_on": "2026-10-16",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-17",
+      "resolve_on": "2026-10-19"
     }
   ]
 }
