@@ -1,19 +1,19 @@
 {
   "date": "2026-10-18",
-  "fetched_at": "2026-10-18T08:32:14.295484+00:00",
+  "fetched_at": "2026-10-18T18:22:02.714860+00:00",
   "observations": {
     "btc": {
-      "usd": 81620,
-      "usd_24h_change": 0.02
+      "usd": 81069,
+      "usd_24h_change": -0.46
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 2.33,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.2,
-      "count": 205,
+      "count": 216,
       "strongest_place": "55 km NNW of Ruteng, Indonesia"
     },
     "wiki": {
@@ -22,26 +22,26 @@
       "for_date": "2026-10-15"
     },
     "hn": {
-      "top_id": 50138531,
-      "top_title": "DeepSeek search and fetch \u2013 $0.75 per 1000 successful requests",
+      "top_id": 50141076,
+      "top_title": "RepRapMicron",
       "top10": [
+        50141076,
+        50142573,
+        50142449,
+        50141579,
+        50096110,
+        50139692,
         50138531,
-        50137950,
-        50137620,
-        50126253,
-        50114758,
-        50138087,
-        50126312,
-        50129045,
-        50132193,
-        50138002
+        50140769,
+        50140001,
+        50141909
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 29.2,
       "actual_prev_date": "2026-10-17",
-      "today": 28.8,
+      "today": 29.4,
       "forecast_next": 29.4,
       "forecast_next_date": "2026-10-19"
     }
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.52,
+      "call": false,
+      "confidence": 0.525,
       "basis": {
-        "today_usd": 81620,
-        "change_24h": 0.02
+        "today_usd": 81069,
+        "change_24h": -0.46
       },
       "made_on": "2026-10-18",
       "resolve_on": "2026-10-19"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50138531,
-        "top_title": "DeepSeek search and fetch \u2013 $0.75 per 1000 successful requests"
+        "top_id": 50141076,
+        "top_title": "RepRapMicron"
       },
       "made_on": "2026-10-18",
       "resolve_on": "2026-10-19"
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.633,
+      "confidence": 0.626,
       "basis": {
-        "today_usd": 81620,
-        "change_24h": 0.02,
+        "today_usd": 81069,
+        "change_24h": -0.46,
         "model": {
-          "p_event": 0.6331,
+          "p_event": 0.6261,
           "n_train": 81,
           "fallback": null,
           "features": [
-            0.02,
-            -0.9177430319510571,
-            -2.4209456632195536,
-            1.1221576539696945
+            -0.46,
+            -1.5866271729629955,
+            -3.079681989359795,
+            1.1097409183447664
           ],
           "weights": [
-            -0.3576,
-            0.418,
-            -0.4109,
-            -0.0957
+            -0.3661,
+            0.4157,
+            -0.3884,
+            -0.0716
           ],
-          "bias": 0.3313
+          "bias": 0.2785
         }
       },
       "made_on": "2026-10-18",
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.2,
-            211.57142857142858,
+            213.14285714285714,
             5.942857142857143,
             1.0
           ]
@@ -266,14 +266,14 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50138531,
-        "top_title": "DeepSeek search and fetch \u2013 $0.75 per 1000 successful requests",
+        "top_id": 50141076,
+        "top_title": "RepRapMicron",
         "model": {
-          "p_event": 0.9806,
+          "p_event": 0.9563,
           "n_train": 84,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             6.0
           ],
@@ -295,17 +295,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.916,
+      "confidence": 0.923,
       "basis": {
         "forecast_c": 29.4,
         "for_date": "2026-10-19",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9159,
+          "p_event": 0.9234,
           "n_train": 75,
           "fallback": null,
           "features": [
-            0.5999999999999979,
+            0.0,
             2.42619042945932,
             0.7999999999999989,
             1.3999999999999986

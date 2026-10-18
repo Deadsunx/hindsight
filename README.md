@@ -36,19 +36,19 @@ test.
 <!-- LEDGER:START -->
 ### Standing — 2026-10-18
 
-**633 right / 824 settled (77%)** · Brier 0.147 · log loss 0.451 · 14 still open
+**631 right / 824 settled (77%)** · Brier 0.147 · log loss 0.452 · 14 still open
 
 Saying "50%" to all 824 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
 
 | Call | Answered by | Settled | Right | Brier | Log loss |
 | --- | --- | --- | --- | --- | --- |
-| Bitcoin will be higher tomorrow than it is today. | momentum | n=82 | 37/82 (45%) | 0.256 | 0.704 |
+| Bitcoin will be higher tomorrow than it is today. | momentum | n=82 | 36/82 (44%) | 0.256 | 0.705 |
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=84 | 60/84 (71%) | 0.202 | 0.593 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=84 | 84/84 (100%) | 0.004 | 0.057 |
 | Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=79 | 46/79 (58%) | 0.243 | 0.680 |
 | The current #1 story on Hacker News will fall out of the top 10. | decay | n=84 | 79/84 (94%) | 0.060 | 0.246 |
 | Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=75 | 68/75 (91%) | 0.096 | 0.352 |
-| Bitcoin will be higher tomorrow than it is today. | logistic regression | n=56 | 27/56 (48%) | 0.287 | 0.794 |
+| Bitcoin will be higher tomorrow than it is today. | logistic regression | n=56 | 26/56 (46%) | 0.291 | 0.803 |
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | logistic regression | n=59 | 40/59 (68%) | 0.231 | 0.687 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | logistic regression | n=59 | 59/59 (100%) | 0.003 | 0.051 |
 | Today's most-read Wikipedia article will still be #1 tomorrow. | logistic regression | n=54 | 34/54 (63%) | 0.245 | 0.697 |
@@ -60,7 +60,7 @@ _Sample is 824 settled bets across 85 days. Nothing here is significant yet, and
 
 **Open bets, placed today:**
 
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
+- **no** — Bitcoin will be higher tomorrow than it is today. _(52% confident, momentum)_
 - **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(78% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
