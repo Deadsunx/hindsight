@@ -1,20 +1,20 @@
 {
-  "date": "2026-10-17",
-  "fetched_at": "2026-10-17T18:02:50.459520+00:00",
+  "date": "2026-10-18",
+  "fetched_at": "2026-10-18T08:32:14.295484+00:00",
   "observations": {
     "btc": {
-      "usd": 81306,
-      "usd_24h_change": 0.21
+      "usd": 81620,
+      "usd_24h_change": 0.02
     },
     "kp": {
-      "max_kp": 3.67,
-      "latest_kp": 3.0,
+      "max_kp": 3.0,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.7,
-      "count": 182,
-      "strongest_place": "48 km WNW of Khuzdar, Pakistan"
+      "max_mag": 5.2,
+      "count": 205,
+      "strongest_place": "55 km NNW of Ruteng, Indonesia"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-15"
     },
     "hn": {
-      "top_id": 50132950,
-      "top_title": "Linux bugs fixed per release over time: >2\u00d7 rise since 2026-04",
+      "top_id": 50138531,
+      "top_title": "DeepSeek search and fetch \u2013 $0.75 per 1000 successful requests",
       "top10": [
-        50132950,
-        50131213,
-        50100994,
+        50138531,
+        50137950,
+        50137620,
+        50126253,
+        50114758,
+        50138087,
+        50126312,
         50129045,
-        50100366,
-        50131256,
-        50119315,
-        50132839,
-        50132502,
-        50132328
+        50132193,
+        50138002
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.6,
-      "actual_prev_date": "2026-10-16",
-      "today": 29.2,
-      "forecast_next": 29.2,
-      "forecast_next_date": "2026-10-18"
+      "actual_prev": 29.2,
+      "actual_prev_date": "2026-10-17",
+      "today": 28.8,
+      "forecast_next": 29.4,
+      "forecast_next_date": "2026-10-19"
     }
   },
   "predictions": [
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.522,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 81306,
-        "change_24h": 0.21
+        "today_usd": 81620,
+        "change_24h": 0.02
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "kp_storm",
@@ -68,13 +68,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.67
+        "today_max_kp": 3.0
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50132950,
-        "top_title": "Linux bugs fixed per release over time: >2\u00d7 rise since 2026-04"
+        "top_id": 50138531,
+        "top_title": "DeepSeek search and fetch \u2013 $0.75 per 1000 successful requests"
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 29.2,
-        "for_date": "2026-10-18",
+        "forecast_c": 29.4,
+        "for_date": "2026-10-19",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-19"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-20"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.624,
+      "confidence": 0.633,
       "basis": {
-        "today_usd": 81306,
-        "change_24h": 0.21,
+        "today_usd": 81620,
+        "change_24h": 0.02,
         "model": {
-          "p_event": 0.6235,
-          "n_train": 80,
+          "p_event": 0.6331,
+          "n_train": 81,
           "fallback": null,
           "features": [
-            0.21,
-            -0.44569609403697363,
-            -2.0527647271413096,
-            1.1511025470345422
+            0.02,
+            -0.9177430319510571,
+            -2.4209456632195536,
+            1.1221576539696945
           ],
           "weights": [
-            -0.3624,
-            0.4184,
-            -0.4031,
-            -0.087
+            -0.3576,
+            0.418,
+            -0.4109,
+            -0.0957
           ],
-          "bias": 0.3089
+          "bias": 0.3313
         }
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.536,
+      "confidence": 0.665,
       "basis": {
-        "today_max_kp": 3.67,
+        "today_max_kp": 3.0,
         "model": {
-          "p_event": 0.4641,
-          "n_train": 83,
+          "p_event": 0.3355,
+          "n_train": 84,
           "fallback": null,
           "features": [
-            3.67,
+            3.0,
             3.3333333333333335,
-            3.8085714285714287,
-            3.0
+            3.2842857142857147,
+            1.67
           ],
           "weights": [
-            0.9675,
-            -0.2501,
-            -0.0646,
-            0.0333
+            0.9499,
+            -0.2257,
+            -0.1111,
+            0.0369
           ],
-          "bias": -0.4486
+          "bias": -0.4715
         }
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9882,
-          "n_train": 83,
+          "p_event": 0.9884,
+          "n_train": 84,
           "fallback": "laplace",
           "features": [
-            5.7,
-            207.14285714285714,
-            6.085714285714286,
+            5.2,
+            211.57142857142858,
+            5.942857142857143,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "wiki_hold_ml",
@@ -236,13 +236,13 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.638,
+          "p_event": 0.6381,
           "n_train": 79,
           "fallback": null,
           "features": [
             1.0,
             13.240951422287154,
-            0.5851068189390624,
+            0.5861419527494499,
             1.0
           ],
           "weights": [
@@ -254,8 +254,8 @@
           "bias": 0.5906
         }
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "hn_fade_ml",
@@ -266,27 +266,27 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50132950,
-        "top_title": "Linux bugs fixed per release over time: >2\u00d7 rise since 2026-04",
+        "top_id": 50138531,
+        "top_title": "DeepSeek search and fetch \u2013 $0.75 per 1000 successful requests",
         "model": {
-          "p_event": 0.9497,
-          "n_train": 83,
+          "p_event": 0.9806,
+          "n_train": 84,
           "fallback": null,
           "features": [
-            0.0,
+            0.1,
             11.0,
-            5.0
+            6.0
           ],
           "weights": [
-            0.3626,
-            -0.1679,
-            0.2365
+            0.3604,
+            -0.1666,
+            0.2476
           ],
-          "bias": 2.8459
+          "bias": 2.8601
         }
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-18"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-19"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,32 +295,32 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.884,
+      "confidence": 0.916,
       "basis": {
-        "forecast_c": 29.2,
-        "for_date": "2026-10-18",
+        "forecast_c": 29.4,
+        "for_date": "2026-10-19",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8842,
-          "n_train": 74,
+          "p_event": 0.9159,
+          "n_train": 75,
           "fallback": null,
           "features": [
-            0.0,
-            2.596555410539124,
-            1.3999999999999986,
+            0.5999999999999979,
+            2.42619042945932,
+            0.7999999999999989,
             1.3999999999999986
           ],
           "weights": [
-            -0.1781,
-            0.0033,
-            -0.298,
-            0.73
+            -0.1809,
+            0.0195,
+            -0.3016,
+            0.7385
           ],
-          "bias": 2.3803
+          "bias": 2.399
         }
       },
-      "made_on": "2026-10-17",
-      "resolve_on": "2026-10-19"
+      "made_on": "2026-10-18",
+      "resolve_on": "2026-10-20"
     }
   ]
 }
