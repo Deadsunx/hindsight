@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-19",
+  "fetched_at": "2026-10-19T09:34:42.372289+00:00",
+  "observations": {
+    "btc": {
+      "usd": 82918,
+      "usd_24h_change": 1.07
+    },
+    "kp": {
+      "max_kp": 1.67,
+      "latest_kp": 0.33,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6,
+      "count": 222,
+      "strongest_place": "186 km NW of Port-Olry, Vanuatu"
+    },
+    "wiki": {
+      "top": "Ying",
+      "views": 886855,
+      "for_date": "2026-10-17"
+    },
+    "hn": {
+      "top_id": 50149392,
+      "top_title": "Linux 7.3 Released",
+      "top10": [
+        50149392,
+        50145337,
+        50131315,
+        50104874,
+        50146625,
+        50136150,
+        50145507,
+        50148601,
+        50148855,
+        50142573
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 29.4,
+      "actual_prev_date": "2026-10-18",
+      "today": 29.3,
+      "forecast_next": 29.4,
+      "forecast_next_date": "2026-10-20"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.531,
+      "basis": {
+        "today_usd": 82918,
+        "change_24h": 1.07
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 1.67
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Ying"
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50149392,
+        "top_title": "Linux 7.3 Released"
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 29.4,
+        "for_date": "2026-10-20",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.611,
+      "basis": {
+        "today_usd": 82918,
+        "change_24h": 1.07,
+        "model": {
+          "p_event": 0.6108,
+          "n_train": 82,
+          "fallback": null,
+          "features": [
+            1.07,
+            2.298439331318236,
+            0.4640455564306034,
+            1.333640236597992
+          ],
+          "weights": [
+            -0.3661,
+            0.4124,
+            -0.3956,
+            -0.0791
+          ],
+          "bias": 0.3008
+        }
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.822,
+      "basis": {
+        "today_max_kp": 1.67,
+        "model": {
+          "p_event": 0.1784,
+          "n_train": 85,
+          "fallback": null,
+          "features": [
+            1.67,
+            2.78,
+            3.0471428571428567,
+            2.0
+          ],
+          "weights": [
+            0.9456,
+            -0.2388,
+            -0.118,
+            0.0659
+          ],
+          "bias": -0.4943
+        }
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9885,
+          "n_train": 85,
+          "fallback": "laplace",
+          "features": [
+            6.0,
+            208.42857142857142,
+            6.014285714285714,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.571,
+      "basis": {
+        "today_top": "Ying",
+        "model": {
+          "p_event": 0.5712,
+          "n_train": 79,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.695437903129255,
+            0.8831186511468052,
+            1.0
+          ],
+          "weights": [
+            -0.8532,
+            -0.5229,
+            0.3534,
+            -0.8161
+          ],
+          "bias": 0.5906
+        }
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50149392,
+        "top_title": "Linux 7.3 Released",
+        "model": {
+          "p_event": 0.9598,
+          "n_train": 85,
+          "fallback": null,
+          "features": [
+            0.1,
+            11.0,
+            0.0
+          ],
+          "weights": [
+            0.3585,
+            -0.1653,
+            0.2623
+          ],
+          "bias": 2.8751
+        }
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-20"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.938,
+      "basis": {
+        "forecast_c": 29.4,
+        "for_date": "2026-10-20",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.9379,
+          "n_train": 77,
+          "fallback": null,
+          "features": [
+            0.09999999999999787,
+            2.059028897320288,
+            0.5249999999999986,
+            1.3999999999999986
+          ],
+          "weights": [
+            -0.2056,
+            0.0457,
+            -0.2771,
+            0.7224
+          ],
+          "bias": 2.4344
+        }
+      },
+      "made_on": "2026-10-19",
+      "resolve_on": "2026-10-21"
+    }
+  ]
+}
