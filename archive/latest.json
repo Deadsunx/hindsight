@@ -1,10 +1,10 @@
 {
   "date": "2026-10-19",
-  "fetched_at": "2026-10-19T09:34:42.372289+00:00",
+  "fetched_at": "2026-10-19T20:48:04.884002+00:00",
   "observations": {
     "btc": {
-      "usd": 82918,
-      "usd_24h_change": 1.07
+      "usd": 81947,
+      "usd_24h_change": 1.43
     },
     "kp": {
       "max_kp": 1.67,
@@ -13,37 +13,37 @@
     },
     "quakes": {
       "max_mag": 6,
-      "count": 222,
+      "count": 204,
       "strongest_place": "186 km NW of Port-Olry, Vanuatu"
     },
     "wiki": {
-      "top": "Ying",
-      "views": 886855,
-      "for_date": "2026-10-17"
+      "top": "Wikipedia:Featured_pictures",
+      "views": 564391,
+      "for_date": "2026-10-18"
     },
     "hn": {
-      "top_id": 50149392,
-      "top_title": "Linux 7.3 Released",
+      "top_id": 50154540,
+      "top_title": "MiniMax M3.1 Flash",
       "top10": [
-        50149392,
-        50145337,
-        50131315,
-        50104874,
-        50146625,
-        50136150,
-        50145507,
-        50148601,
-        50148855,
-        50142573
+        50154540,
+        50150089,
+        50156206,
+        50152307,
+        50154624,
+        50134472,
+        50136126,
+        50134359,
+        50150434,
+        50147233
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 29.4,
-      "actual_prev_date": "2026-10-18",
-      "today": 29.3,
-      "forecast_next": 29.4,
-      "forecast_next_date": "2026-10-20"
+      "actual_prev": 29.8,
+      "actual_prev_date": "2026-10-19",
+      "today": 29.8,
+      "forecast_next": 30.3,
+      "forecast_next_date": "2026-10-21"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.531,
+      "confidence": 0.534,
       "basis": {
-        "today_usd": 82918,
-        "change_24h": 1.07
+        "today_usd": 81947,
+        "change_24h": 1.43
       },
       "made_on": "2026-10-19",
       "resolve_on": "2026-10-20"
@@ -96,10 +96,10 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_top": "Ying"
+        "today_top": "Wikipedia:Featured_pictures"
       },
       "made_on": "2026-10-19",
       "resolve_on": "2026-10-20"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50149392,
-        "top_title": "Linux 7.3 Released"
+        "top_id": 50154540,
+        "top_title": "MiniMax M3.1 Flash"
       },
       "made_on": "2026-10-19",
       "resolve_on": "2026-10-20"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 29.4,
-        "for_date": "2026-10-20",
+        "forecast_c": 30.3,
+        "for_date": "2026-10-21",
         "city": "New Delhi"
       },
       "made_on": "2026-10-19",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.611,
+      "confidence": 0.586,
       "basis": {
-        "today_usd": 82918,
-        "change_24h": 1.07,
+        "today_usd": 81947,
+        "change_24h": 1.43,
         "model": {
-          "p_event": 0.6108,
+          "p_event": 0.586,
           "n_train": 82,
           "fallback": null,
           "features": [
-            1.07,
-            2.298439331318236,
-            0.4640455564306034,
-            1.333640236597992
+            1.43,
+            1.100487323422361,
+            -0.7124250318046865,
+            1.1455608738443548
           ],
           "weights": [
             -0.3661,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.0,
-            208.42857142857142,
+            205.85714285714286,
             6.014285714285714,
             1.0
           ]
@@ -232,18 +232,18 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.571,
+      "confidence": 0.844,
       "basis": {
-        "today_top": "Ying",
+        "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.5712,
+          "p_event": 0.8435,
           "n_train": 79,
           "fallback": null,
           "features": [
-            1.0,
-            13.695437903129255,
-            0.8831186511468052,
-            1.0
+            2.0,
+            13.243504324515902,
+            0.5890334675582125,
+            0.0
           ],
           "weights": [
             -0.8532,
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.912,
       "basis": {
-        "top_id": 50149392,
-        "top_title": "Linux 7.3 Released",
+        "top_id": 50154540,
+        "top_title": "MiniMax M3.1 Flash",
         "model": {
-          "p_event": 0.9598,
+          "p_event": 0.9119,
           "n_train": 85,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             0.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.938,
+      "confidence": 0.919,
       "basis": {
-        "forecast_c": 29.4,
-        "for_date": "2026-10-20",
+        "forecast_c": 30.3,
+        "for_date": "2026-10-21",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9379,
-          "n_train": 77,
+          "p_event": 0.9188,
+          "n_train": 76,
           "fallback": null,
           "features": [
-            0.09999999999999787,
-            2.059028897320288,
-            0.5249999999999986,
+            0.5,
+            2.0570853166555834,
+            0.7999999999999989,
             1.3999999999999986
           ],
           "weights": [
-            -0.2056,
-            0.0457,
-            -0.2771,
-            0.7224
+            -0.1932,
+            0.0333,
+            -0.3072,
+            0.7408
           ],
-          "bias": 2.4344
+          "bias": 2.4159
         }
       },
       "made_on": "2026-10-19",
