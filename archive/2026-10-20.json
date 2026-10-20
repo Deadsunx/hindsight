@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-20",
+  "fetched_at": "2026-10-20T09:06:22.128891+00:00",
+  "observations": {
+    "btc": {
+      "usd": 81403,
+      "usd_24h_change": -1.64
+    },
+    "kp": {
+      "max_kp": 1.0,
+      "latest_kp": 1.0,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6.3,
+      "count": 211,
+      "strongest_place": "197 km NW of Port-Olry, Vanuatu"
+    },
+    "wiki": {
+      "top": "Wikipedia:Featured_pictures",
+      "views": 560168,
+      "for_date": "2026-10-19"
+    },
+    "hn": {
+      "top_id": 50141581,
+      "top_title": "Nordwand Mono \u2013 A monospace font for coders and adventurers",
+      "top10": [
+        50141581,
+        50160494,
+        50140111,
+        50159341,
+        50162860,
+        50154244,
+        50154540,
+        50159616,
+        50140584,
+        50158942
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 29.8,
+      "actual_prev_date": "2026-10-19",
+      "today": 29.2,
+      "forecast_next": 30.0,
+      "forecast_next_date": "2026-10-21"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.536,
+      "basis": {
+        "today_usd": 81403,
+        "change_24h": -1.64
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 1.0
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures"
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50141581,
+        "top_title": "Nordwand Mono \u2013 A monospace font for coders and adventurers"
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 30.0,
+        "for_date": "2026-10-21",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-22"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.705,
+      "basis": {
+        "today_usd": 81403,
+        "change_24h": -1.64,
+        "model": {
+          "p_event": 0.7053,
+          "n_train": 83,
+          "fallback": null,
+          "features": [
+            -1.64,
+            0.11930238850761388,
+            -2.3230420331417423,
+            1.108020240386536
+          ],
+          "weights": [
+            -0.3866,
+            0.4071,
+            -0.3838,
+            -0.0595
+          ],
+          "bias": 0.2716
+        }
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.862,
+      "basis": {
+        "today_max_kp": 1.0,
+        "model": {
+          "p_event": 0.138,
+          "n_train": 86,
+          "fallback": null,
+          "features": [
+            1.0,
+            1.89,
+            2.7142857142857144,
+            1.0
+          ],
+          "weights": [
+            0.9612,
+            -0.2439,
+            -0.1203,
+            0.0723
+          ],
+          "bias": -0.5175
+        }
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9886,
+          "n_train": 86,
+          "fallback": "laplace",
+          "features": [
+            6.3,
+            200.85714285714286,
+            5.942857142857143,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.768,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures",
+        "model": {
+          "p_event": 0.7682,
+          "n_train": 80,
+          "fallback": null,
+          "features": [
+            3.0,
+            13.235993802897468,
+            0.6690431048485618,
+            0.0
+          ],
+          "weights": [
+            -0.8714,
+            -0.5378,
+            0.3604,
+            -0.8377
+          ],
+          "bias": 0.6162
+        }
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50141581,
+        "top_title": "Nordwand Mono \u2013 A monospace font for coders and adventurers",
+        "model": {
+          "p_event": 0.9715,
+          "n_train": 86,
+          "fallback": null,
+          "features": [
+            0.1,
+            7.0,
+            1.0
+          ],
+          "weights": [
+            0.3841,
+            -0.1659,
+            0.4458
+          ],
+          "bias": 2.7554
+        }
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-21"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.921,
+      "basis": {
+        "forecast_c": 30.0,
+        "for_date": "2026-10-21",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.9205,
+          "n_train": 76,
+          "fallback": null,
+          "features": [
+            0.8000000000000007,
+            1.704582060213001,
+            0.6666666666666666,
+            1.3999999999999986
+          ],
+          "weights": [
+            -0.1932,
+            0.0333,
+            -0.3072,
+            0.7408
+          ],
+          "bias": 2.4159
+        }
+      },
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-22"
+    }
+  ]
+}
