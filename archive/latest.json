@@ -1,20 +1,20 @@
 {
   "date": "2026-10-21",
-  "fetched_at": "2026-10-21T09:06:27.763069+00:00",
+  "fetched_at": "2026-10-21T19:47:28.999880+00:00",
   "observations": {
     "btc": {
-      "usd": 83191,
-      "usd_24h_change": 2.22
+      "usd": 84485,
+      "usd_24h_change": 2.37
     },
     "kp": {
       "max_kp": 4.0,
-      "latest_kp": 2.0,
+      "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.4,
-      "count": 176,
-      "strongest_place": "192 km S of Burica, Panama"
+      "max_mag": 5.2,
+      "count": 185,
+      "strongest_place": "68 km NE of Cabatuan, Philippines"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-20"
     },
     "hn": {
-      "top_id": 50175070,
-      "top_title": "The Future of CSS",
+      "top_id": 50186129,
+      "top_title": "Mistral Large 4",
       "top10": [
-        50175070,
-        50170593,
-        50172041,
-        50174687,
-        50149861,
-        50168396,
-        50166579,
-        50173487,
-        50175185,
-        50175059
+        50186129,
+        50182987,
+        50181114,
+        50159726,
+        50177916,
+        50181136,
+        50184586,
+        50186010,
+        50162044,
+        50181175
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 29.7,
-      "actual_prev_date": "2026-10-20",
-      "today": 29.6,
-      "forecast_next": 30.2,
-      "forecast_next_date": "2026-10-22"
+      "actual_prev": 30.2,
+      "actual_prev_date": "2026-10-21",
+      "today": 30.3,
+      "forecast_next": 31.0,
+      "forecast_next_date": "2026-10-23"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.542,
+      "confidence": 0.544,
       "basis": {
-        "today_usd": 83191,
-        "change_24h": 2.22
+        "today_usd": 84485,
+        "change_24h": 2.37
       },
       "made_on": "2026-10-21",
       "resolve_on": "2026-10-22"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50175070,
-        "top_title": "The Future of CSS"
+        "top_id": 50186129,
+        "top_title": "Mistral Large 4"
       },
       "made_on": "2026-10-21",
       "resolve_on": "2026-10-22"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.2,
-        "for_date": "2026-10-22",
+        "forecast_c": 31.0,
+        "for_date": "2026-10-23",
         "city": "New Delhi"
       },
       "made_on": "2026-10-21",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.575,
+      "confidence": 0.58,
       "basis": {
-        "today_usd": 83191,
-        "change_24h": 2.22,
+        "today_usd": 84485,
+        "change_24h": 2.37,
         "model": {
-          "p_event": 0.5747,
+          "p_event": 0.5803,
           "n_train": 84,
           "fallback": null,
           "features": [
-            2.22,
-            2.6175233443116452,
-            1.862372964368797,
-            1.0908978159567413
+            2.37,
+            4.213694507148236,
+            3.4467980898738926,
+            1.3011855823669984
           ],
           "weights": [
             -0.3486,
@@ -215,9 +215,9 @@
           "n_train": 87,
           "fallback": "laplace",
           "features": [
-            5.4,
-            195.71428571428572,
-            5.871428571428572,
+            5.2,
+            197.0,
+            5.8428571428571425,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.933,
       "basis": {
-        "top_id": 50175070,
-        "top_title": "The Future of CSS",
+        "top_id": 50186129,
+        "top_title": "Mistral Large 4",
         "model": {
-          "p_event": 0.9979,
+          "p_event": 0.9334,
           "n_train": 87,
           "fallback": null,
           "features": [
-            0.3,
-            2.0,
+            0.0,
+            11.0,
             2.0
           ],
           "weights": [
-            0.3823,
-            -0.1692,
-            0.3537
+            0.3533,
+            -0.1641,
+            0.2336
           ],
-          "bias": 2.7355
+          "bias": 2.8919
         }
       },
       "made_on": "2026-10-21",
@@ -297,26 +297,26 @@
       "call": true,
       "confidence": 0.916,
       "basis": {
-        "forecast_c": 30.2,
-        "for_date": "2026-10-22",
+        "forecast_c": 31.0,
+        "for_date": "2026-10-23",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9159,
-          "n_train": 76,
+          "p_event": 0.9162,
+          "n_train": 77,
           "fallback": null,
           "features": [
-            0.5999999999999979,
-            1.7001176429882725,
+            0.6999999999999993,
+            1.7166537216340396,
             0.7999999999999989,
             1.3999999999999986
           ],
           "weights": [
-            -0.1932,
-            0.0333,
-            -0.3072,
-            0.7408
+            -0.2012,
+            0.0412,
+            -0.3104,
+            0.7421
           ],
-          "bias": 2.4159
+          "bias": 2.432
         }
       },
       "made_on": "2026-10-21",
