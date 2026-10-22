@@ -1,20 +1,20 @@
 {
   "date": "2026-10-22",
-  "fetched_at": "2026-10-22T09:08:48.680720+00:00",
+  "fetched_at": "2026-10-22T19:38:45.908710+00:00",
   "observations": {
     "btc": {
-      "usd": 81717,
-      "usd_24h_change": -1.83
+      "usd": 81388,
+      "usd_24h_change": -3.67
     },
     "kp": {
       "max_kp": 4.67,
-      "latest_kp": 3.0,
+      "latest_kp": 3.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.3,
-      "count": 199,
-      "strongest_place": "Reykjanes Ridge"
+      "max_mag": 7,
+      "count": 250,
+      "strongest_place": "191 km ENE of Nagqu, China"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-21"
     },
     "hn": {
-      "top_id": 50190363,
-      "top_title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+      "top_id": 50195959,
+      "top_title": "Quad9 (DNS Resolver) to Exit France",
       "top10": [
-        50190363,
-        50190455,
-        50188228,
-        50192900,
-        50191507,
-        50186037,
-        50192585,
-        50186010,
-        50181114,
-        50185869
+        50195959,
+        50198675,
+        50195110,
+        50196718,
+        50197404,
+        50195543,
+        50199232,
+        50199290,
+        50150163,
+        50199230
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 30.2,
-      "actual_prev_date": "2026-10-21",
-      "today": 29.8,
-      "forecast_next": 30.8,
-      "forecast_next_date": "2026-10-23"
+      "actual_prev": 30.3,
+      "actual_prev_date": "2026-10-22",
+      "today": 31.4,
+      "forecast_next": 31.3,
+      "forecast_next_date": "2026-10-24"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.538,
+      "confidence": 0.557,
       "basis": {
-        "today_usd": 81717,
-        "change_24h": -1.83
+        "today_usd": 81388,
+        "change_24h": -3.67
       },
       "made_on": "2026-10-22",
       "resolve_on": "2026-10-23"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50190363,
-        "top_title": "WorldTUI: I trained a 360M model to pretend to be a terminal"
+        "top_id": 50195959,
+        "top_title": "Quad9 (DNS Resolver) to Exit France"
       },
       "made_on": "2026-10-22",
       "resolve_on": "2026-10-23"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.8,
-        "for_date": "2026-10-23",
+        "forecast_c": 31.3,
+        "for_date": "2026-10-24",
         "city": "New Delhi"
       },
       "made_on": "2026-10-22",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.684,
+      "confidence": 0.748,
       "basis": {
-        "today_usd": 81717,
-        "change_24h": -1.83,
+        "today_usd": 81388,
+        "change_24h": -3.67,
         "model": {
-          "p_event": 0.6837,
+          "p_event": 0.7477,
           "n_train": 85,
           "fallback": null,
           "features": [
-            -1.83,
-            -0.2806692130279287,
-            -0.7999902884335275,
-            1.6765132633434745
+            -3.67,
+            -0.6821482177505,
+            -1.1993784597455592,
+            1.758278877167443
           ],
           "weights": [
             -0.3695,
@@ -215,9 +215,9 @@
           "n_train": 88,
           "fallback": "laplace",
           "features": [
-            5.3,
-            198.57142857142858,
-            5.8,
+            7.0,
+            205.85714285714286,
+            6.042857142857143,
             1.0
           ]
         }
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.941,
       "basis": {
-        "top_id": 50190363,
-        "top_title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+        "top_id": 50195959,
+        "top_title": "Quad9 (DNS Resolver) to Exit France",
         "model": {
-          "p_event": 0.9883,
+          "p_event": 0.9409,
           "n_train": 88,
           "fallback": null,
           "features": [
-            0.2,
+            0.0,
             11.0,
             3.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.925,
+      "confidence": 0.926,
       "basis": {
-        "forecast_c": 30.8,
-        "for_date": "2026-10-23",
+        "forecast_c": 31.3,
+        "for_date": "2026-10-24",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9247,
-          "n_train": 77,
+          "p_event": 0.9264,
+          "n_train": 78,
           "fallback": null,
           "features": [
-            1.0,
-            1.7257172421923583,
-            0.5666666666666664,
+            0.09999999999999787,
+            1.7298554852934966,
+            0.7999999999999989,
             1.3999999999999986
           ],
           "weights": [
-            -0.2012,
-            0.0412,
-            -0.3104,
-            0.7421
+            -0.2124,
+            0.0418,
+            -0.3106,
+            0.7425
           ],
-          "bias": 2.432
+          "bias": 2.4483
         }
       },
       "made_on": "2026-10-22",

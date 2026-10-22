@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T09:08:49.858550+00:00",
+  "updated": "2026-10-22T19:38:47.316223+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -118,49 +118,49 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 51,
-      "rule_correct": 45,
-      "model_correct": 45,
-      "rule_accuracy": 0.8824,
-      "model_accuracy": 0.8824,
-      "rule_brier": 0.1106,
-      "model_brier": 0.1095,
-      "rule_log_loss": 0.3862,
-      "model_log_loss": 0.4001,
+      "shared_days": 52,
+      "rule_correct": 46,
+      "model_correct": 46,
+      "rule_accuracy": 0.8846,
+      "model_accuracy": 0.8846,
+      "rule_brier": 0.1092,
+      "model_brier": 0.1075,
+      "rule_log_loss": 0.3831,
+      "model_log_loss": 0.394,
       "coin_flip": {
-        "n": 51,
+        "n": 52,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 128,
-        "rate": 0.8984,
-        "majority_accuracy": 0.8984
+        "n": 130,
+        "rate": 0.9,
+        "majority_accuracy": 0.9
       }
     }
   },
   "totals": {
-    "graded": 866,
-    "correct": 668,
-    "accuracy": 0.7714,
-    "brier": 0.145,
-    "log_loss": 0.4454,
+    "graded": 868,
+    "correct": 670,
+    "accuracy": 0.7719,
+    "brier": 0.1447,
+    "log_loss": 0.4447,
     "open": 14,
-    "void": 29,
+    "void": 27,
     "days": 89
   },
   "baselines": {
     "coin_flip": {
-      "n": 866,
+      "n": 868,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 866,
-      "rate": 0.7379,
-      "majority_accuracy": 0.7379
+      "n": 868,
+      "rate": 0.7385,
+      "majority_accuracy": 0.7385
     }
   },
   "by_predictor": {
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 77,
-      "correct": 70,
-      "accuracy": 0.9091,
-      "brier": 0.0945,
-      "log_loss": 0.3492,
-      "base_rate": 0.9091,
-      "majority_accuracy": 0.9091
+      "graded": 78,
+      "correct": 71,
+      "accuracy": 0.9103,
+      "brier": 0.0938,
+      "log_loss": 0.3476,
+      "base_rate": 0.9103,
+      "majority_accuracy": 0.9103
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 51,
-      "correct": 45,
-      "accuracy": 0.8824,
-      "brier": 0.1095,
-      "log_loss": 0.4001,
-      "base_rate": 0.8824,
-      "majority_accuracy": 0.8824
+      "graded": 52,
+      "correct": 46,
+      "accuracy": 0.8846,
+      "brier": 0.1075,
+      "log_loss": 0.394,
+      "base_rate": 0.8846,
+      "majority_accuracy": 0.8846
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 212,
-      "claimed": 0.8448,
-      "actual": 0.8821
+      "n": 213,
+      "claimed": 0.8446,
+      "actual": 0.8826
     },
     {
       "label": "90\u2013100%",
-      "n": 256,
-      "claimed": 0.9436,
-      "actual": 0.957
+      "n": 257,
+      "claimed": 0.9435,
+      "actual": 0.9572
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.538,
+      "confidence": 0.557,
       "basis": {
-        "today_usd": 81717,
-        "change_24h": -1.83
+        "today_usd": 81388,
+        "change_24h": -3.67
       },
       "made_on": "2026-10-22",
       "resolve_on": "2026-10-23"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50190363,
-        "top_title": "WorldTUI: I trained a 360M model to pretend to be a terminal"
+        "top_id": 50195959,
+        "top_title": "Quad9 (DNS Resolver) to Exit France"
       },
       "made_on": "2026-10-22",
       "resolve_on": "2026-10-23"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.8,
-        "for_date": "2026-10-23",
+        "forecast_c": 31.3,
+        "for_date": "2026-10-24",
         "city": "New Delhi"
       },
       "made_on": "2026-10-22",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.684,
+      "confidence": 0.748,
       "basis": {
-        "today_usd": 81717,
-        "change_24h": -1.83,
+        "today_usd": 81388,
+        "change_24h": -3.67,
         "model": {
-          "p_event": 0.6837,
+          "p_event": 0.7477,
           "n_train": 85,
           "fallback": null,
           "features": [
-            -1.83,
-            -0.2806692130279287,
-            -0.7999902884335275,
-            1.6765132633434745
+            -3.67,
+            -0.6821482177505,
+            -1.1993784597455592,
+            1.758278877167443
           ],
           "weights": [
             -0.3695,
@@ -572,9 +572,9 @@
           "n_train": 88,
           "fallback": "laplace",
           "features": [
-            5.3,
-            198.57142857142858,
-            5.8,
+            7.0,
+            205.85714285714286,
+            6.042857142857143,
             1.0
           ]
         }
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.941,
       "basis": {
-        "top_id": 50190363,
-        "top_title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+        "top_id": 50195959,
+        "top_title": "Quad9 (DNS Resolver) to Exit France",
         "model": {
-          "p_event": 0.9883,
+          "p_event": 0.9409,
           "n_train": 88,
           "fallback": null,
           "features": [
-            0.2,
+            0.0,
             11.0,
             3.0
           ],
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.925,
+      "confidence": 0.926,
       "basis": {
-        "forecast_c": 30.8,
-        "for_date": "2026-10-23",
+        "forecast_c": 31.3,
+        "for_date": "2026-10-24",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9247,
-          "n_train": 77,
+          "p_event": 0.9264,
+          "n_train": 78,
           "fallback": null,
           "features": [
-            1.0,
-            1.7257172421923583,
-            0.5666666666666664,
+            0.09999999999999787,
+            1.7298554852934966,
+            0.7999999999999989,
             1.3999999999999986
           ],
           "weights": [
-            -0.2012,
-            0.0412,
-            -0.3104,
-            0.7421
+            -0.2124,
+            0.0418,
+            -0.3106,
+            0.7425
           ],
-          "bias": 2.432
+          "bias": 2.4483
         }
       },
       "made_on": "2026-10-22",
@@ -11745,6 +11745,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-22",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -11806,6 +11819,19 @@
       "resolve_on": "2026-10-21",
       "call": true,
       "confidence": 0.924,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-10-20",
+      "resolve_on": "2026-10-22",
+      "call": true,
+      "confidence": 0.921,
       "actual": true,
       "correct": true
     },
