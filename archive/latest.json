@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-21",
-  "fetched_at": "2026-10-21T19:47:28.999880+00:00",
+  "date": "2026-10-22",
+  "fetched_at": "2026-10-22T09:08:48.680720+00:00",
   "observations": {
     "btc": {
-      "usd": 84485,
-      "usd_24h_change": 2.37
+      "usd": 81717,
+      "usd_24h_change": -1.83
     },
     "kp": {
-      "max_kp": 4.0,
-      "latest_kp": 3.33,
+      "max_kp": 4.67,
+      "latest_kp": 3.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.2,
-      "count": 185,
-      "strongest_place": "68 km NE of Cabatuan, Philippines"
+      "max_mag": 5.3,
+      "count": 199,
+      "strongest_place": "Reykjanes Ridge"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 558650,
-      "for_date": "2026-10-20"
+      "views": 570358,
+      "for_date": "2026-10-21"
     },
     "hn": {
-      "top_id": 50186129,
-      "top_title": "Mistral Large 4",
+      "top_id": 50190363,
+      "top_title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
       "top10": [
-        50186129,
-        50182987,
-        50181114,
-        50159726,
-        50177916,
-        50181136,
-        50184586,
+        50190363,
+        50190455,
+        50188228,
+        50192900,
+        50191507,
+        50186037,
+        50192585,
         50186010,
-        50162044,
-        50181175
+        50181114,
+        50185869
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 30.2,
       "actual_prev_date": "2026-10-21",
-      "today": 30.3,
-      "forecast_next": 31.0,
+      "today": 29.8,
+      "forecast_next": 30.8,
       "forecast_next_date": "2026-10-23"
     }
   },
@@ -53,14 +53,14 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.544,
+      "call": false,
+      "confidence": 0.538,
       "basis": {
-        "today_usd": 84485,
-        "change_24h": 2.37
+        "today_usd": 81717,
+        "change_24h": -1.83
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.0
+        "today_max_kp": 4.67
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50186129,
-        "top_title": "Mistral Large 4"
+        "top_id": 50190363,
+        "top_title": "WorldTUI: I trained a 360M model to pretend to be a terminal"
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.0,
+        "forecast_c": 30.8,
         "for_date": "2026-10-23",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.58,
+      "confidence": 0.684,
       "basis": {
-        "today_usd": 84485,
-        "change_24h": 2.37,
+        "today_usd": 81717,
+        "change_24h": -1.83,
         "model": {
-          "p_event": 0.5803,
-          "n_train": 84,
+          "p_event": 0.6837,
+          "n_train": 85,
           "fallback": null,
           "features": [
-            2.37,
-            4.213694507148236,
-            3.4467980898738926,
-            1.3011855823669984
+            -1.83,
+            -0.2806692130279287,
+            -0.7999902884335275,
+            1.6765132633434745
           ],
           "weights": [
-            -0.3486,
-            0.4267,
-            -0.4126,
-            -0.1028
+            -0.3695,
+            0.4055,
+            -0.4113,
+            -0.0759
           ],
-          "bias": 0.3441
+          "bias": 0.3148
         }
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.585,
+      "confidence": 0.645,
       "basis": {
-        "today_max_kp": 4.0,
+        "today_max_kp": 4.67,
         "model": {
-          "p_event": 0.5847,
-          "n_train": 87,
+          "p_event": 0.6445,
+          "n_train": 88,
           "fallback": null,
           "features": [
-            4.0,
-            2.78,
-            3.0485714285714285,
-            4.33
+            4.67,
+            3.78,
+            3.287142857142857,
+            4.0
           ],
           "weights": [
-            0.9806,
-            -0.2587,
-            -0.1076,
-            0.001
+            1.0033,
+            -0.296,
+            -0.0983,
+            0.0341
           ],
-          "bias": -0.4799
+          "bias": -0.4496
         }
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9888,
-          "n_train": 87,
+          "p_event": 0.9889,
+          "n_train": 88,
           "fallback": "laplace",
           "features": [
-            5.2,
-            197.0,
-            5.8428571428571425,
+            5.3,
+            198.57142857142858,
+            5.8,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.685,
+      "confidence": 0.569,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.6846,
-          "n_train": 81,
+          "p_event": 0.5688,
+          "n_train": 82,
           "fallback": null,
           "features": [
-            4.0,
-            13.233280228003418,
-            0.9139030440843617,
+            5.0,
+            13.254021266115888,
+            1.0127036089227361,
             0.0
           ],
           "weights": [
-            -0.8816,
-            -0.5577,
-            0.3715,
-            -0.8562
+            -0.8779,
+            -0.5916,
+            0.399,
+            -0.8643
           ],
-          "bias": 0.6394
+          "bias": 0.6607
         }
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.933,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50186129,
-        "top_title": "Mistral Large 4",
+        "top_id": 50190363,
+        "top_title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
         "model": {
-          "p_event": 0.9334,
-          "n_train": 87,
+          "p_event": 0.9883,
+          "n_train": 88,
           "fallback": null,
           "features": [
-            0.0,
+            0.2,
             11.0,
-            2.0
+            3.0
           ],
           "weights": [
-            0.3533,
-            -0.1641,
-            0.2336
+            0.351,
+            -0.1631,
+            0.2299
           ],
-          "bias": 2.8919
+          "bias": 2.9024
         }
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-22"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-23"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,19 +295,19 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.916,
+      "confidence": 0.925,
       "basis": {
-        "forecast_c": 31.0,
+        "forecast_c": 30.8,
         "for_date": "2026-10-23",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9162,
+          "p_event": 0.9247,
           "n_train": 77,
           "fallback": null,
           "features": [
-            0.6999999999999993,
-            1.7166537216340396,
-            0.7999999999999989,
+            1.0,
+            1.7257172421923583,
+            0.5666666666666664,
             1.3999999999999986
           ],
           "weights": [
@@ -319,8 +319,8 @@
           "bias": 2.432
         }
       },
-      "made_on": "2026-10-21",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-22",
+      "resolve_on": "2026-10-24"
     }
   ]
 }
