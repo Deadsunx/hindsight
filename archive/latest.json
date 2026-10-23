@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-22",
-  "fetched_at": "2026-10-22T19:38:45.908710+00:00",
+  "date": "2026-10-23",
+  "fetched_at": "2026-10-23T09:05:27.933917+00:00",
   "observations": {
     "btc": {
-      "usd": 81388,
-      "usd_24h_change": -3.67
+      "usd": 81688,
+      "usd_24h_change": -0.05
     },
     "kp": {
-      "max_kp": 4.67,
-      "latest_kp": 3.67,
+      "max_kp": 4.33,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 7,
-      "count": 250,
+      "count": 267,
       "strongest_place": "191 km ENE of Nagqu, China"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 570358,
-      "for_date": "2026-10-21"
+      "views": 568584,
+      "for_date": "2026-10-22"
     },
     "hn": {
-      "top_id": 50195959,
-      "top_title": "Quad9 (DNS Resolver) to Exit France",
+      "top_id": 50202285,
+      "top_title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
       "top10": [
-        50195959,
+        50202285,
+        50202681,
+        50201445,
+        50195002,
+        50203161,
+        50200164,
         50198675,
-        50195110,
-        50196718,
-        50197404,
-        50195543,
-        50199232,
-        50199290,
-        50150163,
-        50199230
+        50197313,
+        50203759,
+        50195488
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 30.3,
       "actual_prev_date": "2026-10-22",
-      "today": 31.4,
-      "forecast_next": 31.3,
+      "today": 29.9,
+      "forecast_next": 30.6,
       "forecast_next_date": "2026-10-24"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.557,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 81388,
-        "change_24h": -3.67
+        "today_usd": 81688,
+        "change_24h": -0.05
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.67
+        "today_max_kp": 4.33
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50195959,
-        "top_title": "Quad9 (DNS Resolver) to Exit France"
+        "top_id": 50202285,
+        "top_title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you"
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.3,
+        "forecast_c": 30.6,
         "for_date": "2026-10-24",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.748,
+      "confidence": 0.57,
       "basis": {
-        "today_usd": 81388,
-        "change_24h": -3.67,
+        "today_usd": 81688,
+        "change_24h": -0.05,
         "model": {
-          "p_event": 0.7477,
-          "n_train": 85,
+          "p_event": 0.5703,
+          "n_train": 86,
           "fallback": null,
           "features": [
-            -3.67,
-            -0.6821482177505,
-            -1.1993784597455592,
-            1.758278877167443
+            -0.05,
+            -0.981841984048093,
+            0.7809512059712587,
+            1.64981589163963
           ],
           "weights": [
-            -0.3695,
-            0.4055,
-            -0.4113,
-            -0.0759
+            -0.4087,
+            0.4238,
+            -0.425,
+            -0.0657
           ],
-          "bias": 0.3148
+          "bias": 0.3371
         }
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.645,
+      "confidence": 0.542,
       "basis": {
-        "today_max_kp": 4.67,
+        "today_max_kp": 4.33,
         "model": {
-          "p_event": 0.6445,
-          "n_train": 88,
+          "p_event": 0.5419,
+          "n_train": 89,
           "fallback": null,
           "features": [
-            4.67,
-            3.78,
-            3.287142857142857,
+            4.33,
+            4.333333333333333,
+            3.4299999999999997,
             4.0
           ],
           "weights": [
-            1.0033,
-            -0.296,
-            -0.0983,
-            0.0341
+            1.0296,
+            -0.297,
+            -0.0966,
+            0.0452
           ],
-          "bias": -0.4496
+          "bias": -0.4196
         }
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9889,
-          "n_train": 88,
+          "p_event": 0.989,
+          "n_train": 89,
           "fallback": "laplace",
           "features": [
             7.0,
-            205.85714285714286,
-            6.042857142857143,
+            218.0,
+            6.057142857142857,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "wiki_hold_ml",
@@ -231,31 +231,31 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "call": true,
-      "confidence": 0.569,
+      "call": false,
+      "confidence": 0.543,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.5688,
-          "n_train": 82,
+          "p_event": 0.4567,
+          "n_train": 83,
           "fallback": null,
           "features": [
-            5.0,
-            13.254021266115888,
-            1.0127036089227361,
+            6.0,
+            13.250906097267173,
+            1.008113615438488,
             0.0
           ],
           "weights": [
-            -0.8779,
-            -0.5916,
-            0.399,
-            -0.8643
+            -0.8473,
+            -0.6289,
+            0.4344,
+            -0.8498
           ],
-          "bias": 0.6607
+          "bias": 0.6792
         }
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.941,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50195959,
-        "top_title": "Quad9 (DNS Resolver) to Exit France",
+        "top_id": 50202285,
+        "top_title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
         "model": {
-          "p_event": 0.9409,
-          "n_train": 88,
+          "p_event": 0.9765,
+          "n_train": 89,
           "fallback": null,
           "features": [
-            0.0,
+            0.1,
             11.0,
-            3.0
+            4.0
           ],
           "weights": [
-            0.351,
-            -0.1631,
-            0.2299
+            0.3488,
+            -0.1621,
+            0.2316
           ],
-          "bias": 2.9024
+          "bias": 2.914
         }
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-23"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-24"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,19 +295,19 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.926,
+      "confidence": 0.921,
       "basis": {
-        "forecast_c": 31.3,
+        "forecast_c": 30.6,
         "for_date": "2026-10-24",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9264,
+          "p_event": 0.9212,
           "n_train": 78,
           "fallback": null,
           "features": [
-            0.09999999999999787,
-            1.7298554852934966,
-            0.7999999999999989,
+            0.7000000000000028,
+            1.6734395716607156,
+            0.733333333333332,
             1.3999999999999986
           ],
           "weights": [
@@ -319,8 +319,8 @@
           "bias": 2.4483
         }
       },
-      "made_on": "2026-10-22",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-23",
+      "resolve_on": "2026-10-25"
     }
   ]
 }
