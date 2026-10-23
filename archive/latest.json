@@ -1,20 +1,20 @@
 {
   "date": "2026-10-23",
-  "fetched_at": "2026-10-23T09:05:27.933917+00:00",
+  "fetched_at": "2026-10-23T19:38:52.433380+00:00",
   "observations": {
     "btc": {
-      "usd": 81688,
-      "usd_24h_change": -0.05
+      "usd": 81200,
+      "usd_24h_change": -0.18
     },
     "kp": {
-      "max_kp": 4.33,
-      "latest_kp": 1.67,
+      "max_kp": 3.67,
+      "latest_kp": 2.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 7,
-      "count": 267,
-      "strongest_place": "191 km ENE of Nagqu, China"
+      "max_mag": 5.7,
+      "count": 234,
+      "strongest_place": "61 km WNW of Leni, Italy"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-22"
     },
     "hn": {
-      "top_id": 50202285,
-      "top_title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+      "top_id": 50212065,
+      "top_title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
       "top10": [
+        50212065,
+        50211474,
+        50207910,
+        50213337,
+        50211746,
         50202285,
-        50202681,
-        50201445,
-        50195002,
-        50203161,
-        50200164,
-        50198675,
-        50197313,
-        50203759,
-        50195488
+        50169499,
+        50211719,
+        50202114,
+        50211729
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 30.3,
-      "actual_prev_date": "2026-10-22",
-      "today": 29.9,
-      "forecast_next": 30.6,
-      "forecast_next_date": "2026-10-24"
+      "actual_prev": 30.4,
+      "actual_prev_date": "2026-10-23",
+      "today": 31.7,
+      "forecast_next": 31.4,
+      "forecast_next_date": "2026-10-25"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.52,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 81688,
-        "change_24h": -0.05
+        "today_usd": 81200,
+        "change_24h": -0.18
       },
       "made_on": "2026-10-23",
       "resolve_on": "2026-10-24"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.33
+        "today_max_kp": 3.67
       },
       "made_on": "2026-10-23",
       "resolve_on": "2026-10-24"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50202285,
-        "top_title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you"
+        "top_id": 50212065,
+        "top_title": "Kimi K3.1 Pro and K3.1 Pro Highspeed"
       },
       "made_on": "2026-10-23",
       "resolve_on": "2026-10-24"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.6,
-        "for_date": "2026-10-24",
+        "forecast_c": 31.4,
+        "for_date": "2026-10-25",
         "city": "New Delhi"
       },
       "made_on": "2026-10-23",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.57,
+      "confidence": 0.558,
       "basis": {
-        "today_usd": 81688,
-        "change_24h": -0.05,
+        "today_usd": 81200,
+        "change_24h": -0.18,
         "model": {
-          "p_event": 0.5703,
+          "p_event": 0.5582,
           "n_train": 86,
           "fallback": null,
           "features": [
-            -0.05,
-            -0.981841984048093,
-            0.7809512059712587,
-            1.64981589163963
+            -0.18,
+            -1.5733714756721362,
+            0.17889087656528524,
+            1.6463429118917075
           ],
           "weights": [
-            -0.4087,
-            0.4238,
-            -0.425,
-            -0.0657
+            -0.279,
+            0.3461,
+            -0.3682,
+            -0.1027
           ],
-          "bias": 0.3371
+          "bias": 0.2853
         }
       },
       "made_on": "2026-10-23",
@@ -174,18 +174,18 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": true,
-      "confidence": 0.542,
+      "call": false,
+      "confidence": 0.57,
       "basis": {
-        "today_max_kp": 4.33,
+        "today_max_kp": 3.67,
         "model": {
-          "p_event": 0.5419,
+          "p_event": 0.4299,
           "n_train": 89,
           "fallback": null,
           "features": [
-            4.33,
-            4.333333333333333,
-            3.4299999999999997,
+            3.67,
+            4.113333333333333,
+            3.335714285714286,
             4.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 89,
           "fallback": "laplace",
           "features": [
-            7.0,
-            218.0,
-            6.057142857142857,
+            5.7,
+            213.28571428571428,
+            5.871428571428572,
             1.0
           ]
         }
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.948,
       "basis": {
-        "top_id": 50202285,
-        "top_title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+        "top_id": 50212065,
+        "top_title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
         "model": {
-          "p_event": 0.9765,
+          "p_event": 0.9477,
           "n_train": 89,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             4.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.921,
+      "confidence": 0.925,
       "basis": {
-        "forecast_c": 30.6,
-        "for_date": "2026-10-24",
+        "forecast_c": 31.4,
+        "for_date": "2026-10-25",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9212,
-          "n_train": 78,
+          "p_event": 0.9249,
+          "n_train": 79,
           "fallback": null,
           "features": [
-            0.7000000000000028,
-            1.6734395716607156,
-            0.733333333333332,
+            0.3000000000000007,
+            1.678719750285913,
+            0.7999999999999989,
             1.3999999999999986
           ],
           "weights": [
-            -0.2124,
-            0.0418,
-            -0.3106,
-            0.7425
+            -0.2187,
+            0.0433,
+            -0.3113,
+            0.743
           ],
-          "bias": 2.4483
+          "bias": 2.4637
         }
       },
       "made_on": "2026-10-23",
