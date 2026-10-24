@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24T08:37:38.171241+00:00",
+  "updated": "2026-10-24T18:27:24.936630+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.532,
+      "confidence": 0.536,
       "basis": {
-        "today_usd": 80730,
-        "change_24h": -1.24
+        "today_usd": 80221,
+        "change_24h": -1.56
       },
       "made_on": "2026-10-24",
       "resolve_on": "2026-10-25"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50218430,
-        "top_title": "OBS Studio 33"
+        "top_id": 50222622,
+        "top_title": "Roku developer repositories moved from GitHub to GitLab"
       },
       "made_on": "2026-10-24",
       "resolve_on": "2026-10-25"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.0,
+        "forecast_c": 30.6,
         "for_date": "2026-10-25",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.529,
+      "confidence": 0.533,
       "basis": {
-        "today_usd": 80730,
-        "change_24h": -1.24,
+        "today_usd": 80221,
+        "change_24h": -1.56,
         "model": {
-          "p_event": 0.5291,
+          "p_event": 0.5334,
           "n_train": 87,
           "fallback": null,
           "features": [
-            -1.24,
-            -4.444575960229624,
-            -0.7084348018596365,
-            1.6194913219993052
+            -1.56,
+            -5.047049772148904,
+            -1.3344648611418597,
+            1.6470664566040714
           ],
           "weights": [
             -0.2838,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             6.9,
-            220.85714285714286,
+            215.28571428571428,
             6.042857142857143,
             1.0
           ]
@@ -623,15 +623,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50218430,
-        "top_title": "OBS Studio 33",
+        "top_id": 50222622,
+        "top_title": "Roku developer repositories moved from GitHub to GitLab",
         "model": {
-          "p_event": 0.9994,
+          "p_event": 0.9794,
           "n_train": 90,
           "fallback": null,
           "features": [
-            0.4,
-            2.0,
+            0.1,
+            9.0,
             5.0
           ],
           "weights": [
@@ -652,17 +652,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.869,
+      "confidence": 0.861,
       "basis": {
-        "forecast_c": 30.0,
+        "forecast_c": 30.6,
         "for_date": "2026-10-25",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8686,
+          "p_event": 0.8615,
           "n_train": 79,
           "fallback": null,
           "features": [
-            0.0,
+            0.29999999999999716,
             1.4163685960935448,
             0.40000000000000036,
             0.6000000000000014
