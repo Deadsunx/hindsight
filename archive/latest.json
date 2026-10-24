@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-23",
-  "fetched_at": "2026-10-23T19:38:52.433380+00:00",
+  "date": "2026-10-24",
+  "fetched_at": "2026-10-24T08:37:36.720729+00:00",
   "observations": {
     "btc": {
-      "usd": 81200,
-      "usd_24h_change": -0.18
+      "usd": 80730,
+      "usd_24h_change": -1.24
     },
     "kp": {
-      "max_kp": 3.67,
-      "latest_kp": 2.67,
+      "max_kp": 4.33,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.7,
-      "count": 234,
-      "strongest_place": "61 km WNW of Leni, Italy"
+      "max_mag": 6.9,
+      "count": 235,
+      "strongest_place": "197 km WNW of Port-Olry, Vanuatu"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 568584,
-      "for_date": "2026-10-22"
+      "views": 555054,
+      "for_date": "2026-10-23"
     },
     "hn": {
-      "top_id": 50212065,
-      "top_title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+      "top_id": 50218430,
+      "top_title": "OBS Studio 33",
       "top10": [
+        50218430,
         50212065,
+        50217500,
         50211474,
+        50218195,
         50207910,
-        50213337,
-        50211746,
+        50186450,
         50202285,
-        50169499,
-        50211719,
-        50202114,
-        50211729
+        50171379,
+        50172962
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 30.4,
       "actual_prev_date": "2026-10-23",
-      "today": 31.7,
-      "forecast_next": 31.4,
+      "today": 30.0,
+      "forecast_next": 30.0,
       "forecast_next_date": "2026-10-25"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.522,
+      "confidence": 0.532,
       "basis": {
-        "today_usd": 81200,
-        "change_24h": -0.18
+        "today_usd": 80730,
+        "change_24h": -1.24
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 3.67
+        "today_max_kp": 4.33
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50212065,
-        "top_title": "Kimi K3.1 Pro and K3.1 Pro Highspeed"
+        "top_id": 50218430,
+        "top_title": "OBS Studio 33"
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 31.4,
+        "forecast_c": 30.0,
         "for_date": "2026-10-25",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.558,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 81200,
-        "change_24h": -0.18,
+        "today_usd": 80730,
+        "change_24h": -1.24,
         "model": {
-          "p_event": 0.5582,
-          "n_train": 86,
+          "p_event": 0.5291,
+          "n_train": 87,
           "fallback": null,
           "features": [
-            -0.18,
-            -1.5733714756721362,
-            0.17889087656528524,
-            1.6463429118917075
+            -1.24,
+            -4.444575960229624,
+            -0.7084348018596365,
+            1.6194913219993052
           ],
           "weights": [
-            -0.279,
-            0.3461,
-            -0.3682,
-            -0.1027
+            -0.2838,
+            0.3698,
+            -0.3686,
+            -0.1096
           ],
-          "bias": 0.2853
+          "bias": 0.2576
         }
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "kp_storm_ml",
@@ -174,31 +174,31 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": false,
-      "confidence": 0.57,
+      "call": true,
+      "confidence": 0.572,
       "basis": {
-        "today_max_kp": 3.67,
+        "today_max_kp": 4.33,
         "model": {
-          "p_event": 0.4299,
-          "n_train": 89,
+          "p_event": 0.5722,
+          "n_train": 90,
           "fallback": null,
           "features": [
-            3.67,
-            4.113333333333333,
-            3.335714285714286,
+            4.33,
+            4.223333333333334,
+            3.4299999999999997,
             4.0
           ],
           "weights": [
-            1.0296,
-            -0.297,
-            -0.0966,
-            0.0452
+            1.008,
+            -0.2584,
+            -0.1001,
+            0.0677
           ],
-          "bias": -0.4196
+          "bias": -0.3879
         }
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.989,
-          "n_train": 89,
+          "p_event": 0.9891,
+          "n_train": 90,
           "fallback": "laplace",
           "features": [
-            5.7,
-            213.28571428571428,
-            5.871428571428572,
+            6.9,
+            220.85714285714286,
+            6.042857142857143,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": false,
-      "confidence": 0.543,
+      "confidence": 0.611,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.4567,
-          "n_train": 83,
+          "p_event": 0.3894,
+          "n_train": 84,
           "fallback": null,
           "features": [
-            6.0,
-            13.250906097267173,
-            1.008113615438488,
+            7.0,
+            13.22682248691768,
+            0.9860972545002648,
             0.0
           ],
           "weights": [
-            -0.8473,
-            -0.6289,
-            0.4344,
-            -0.8498
+            -0.7792,
+            -0.6567,
+            0.4648,
+            -0.8025
           ],
-          "bias": 0.6792
+          "bias": 0.6937
         }
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.948,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50212065,
-        "top_title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+        "top_id": 50218430,
+        "top_title": "OBS Studio 33",
         "model": {
-          "p_event": 0.9477,
-          "n_train": 89,
+          "p_event": 0.9994,
+          "n_train": 90,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            4.0
+            0.4,
+            2.0,
+            5.0
           ],
           "weights": [
-            0.3488,
-            -0.1621,
-            0.2316
+            0.3811,
+            -0.1757,
+            0.1232
           ],
-          "bias": 2.914
+          "bias": 2.7211
         }
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-24"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-25"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.925,
+      "confidence": 0.869,
       "basis": {
-        "forecast_c": 31.4,
+        "forecast_c": 30.0,
         "for_date": "2026-10-25",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9249,
+          "p_event": 0.8686,
           "n_train": 79,
           "fallback": null,
           "features": [
-            0.3000000000000007,
-            1.678719750285913,
-            0.7999999999999989,
-            1.3999999999999986
+            0.0,
+            1.4163685960935448,
+            0.40000000000000036,
+            0.6000000000000014
           ],
           "weights": [
             -0.2187,
@@ -319,8 +319,8 @@
           "bias": 2.4637
         }
       },
-      "made_on": "2026-10-23",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-24",
+      "resolve_on": "2026-10-26"
     }
   ]
 }
