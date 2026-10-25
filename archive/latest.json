@@ -1,49 +1,49 @@
 {
-  "date": "2026-10-24",
-  "fetched_at": "2026-10-24T18:27:23.035882+00:00",
+  "date": "2026-10-25",
+  "fetched_at": "2026-10-25T08:56:15.927568+00:00",
   "observations": {
     "btc": {
-      "usd": 80221,
-      "usd_24h_change": -1.56
+      "usd": 80334,
+      "usd_24h_change": -0.37
     },
     "kp": {
-      "max_kp": 4.33,
-      "latest_kp": 1.67,
+      "max_kp": 2.0,
+      "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.9,
-      "count": 196,
-      "strongest_place": "197 km WNW of Port-Olry, Vanuatu"
+      "max_mag": 6.5,
+      "count": 184,
+      "strongest_place": "Bonin Islands, Japan region"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 555054,
-      "for_date": "2026-10-23"
+      "views": 560950,
+      "for_date": "2026-10-24"
     },
     "hn": {
-      "top_id": 50222622,
-      "top_title": "Roku developer repositories moved from GitHub to GitLab",
+      "top_id": 50225695,
+      "top_title": "We should be more ambitious with the software we build",
       "top10": [
-        50222622,
-        50222927,
-        50222133,
-        50222525,
-        50217495,
-        50219177,
-        50218430,
-        50192975,
-        50212065,
-        50186450
+        50225695,
+        50227356,
+        50193936,
+        50224100,
+        50224210,
+        50225674,
+        50226577,
+        50226419,
+        50172432,
+        50219666
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 30.4,
-      "actual_prev_date": "2026-10-23",
-      "today": 30.9,
-      "forecast_next": 30.6,
-      "forecast_next_date": "2026-10-25"
+      "actual_prev": 30.9,
+      "actual_prev_date": "2026-10-24",
+      "today": 29.3,
+      "forecast_next": 29.6,
+      "forecast_next_date": "2026-10-26"
     }
   },
   "predictions": [
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.536,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 80221,
-        "change_24h": -1.56
+        "today_usd": 80334,
+        "change_24h": -0.37
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "kp_storm",
@@ -68,13 +68,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 4.33
+        "today_max_kp": 2.0
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50222622,
-        "top_title": "Roku developer repositories moved from GitHub to GitLab"
+        "top_id": 50225695,
+        "top_title": "We should be more ambitious with the software we build"
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 30.6,
-        "for_date": "2026-10-25",
+        "forecast_c": 29.6,
+        "for_date": "2026-10-26",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.533,
+      "confidence": 0.589,
       "basis": {
-        "today_usd": 80221,
-        "change_24h": -1.56,
+        "today_usd": 80334,
+        "change_24h": -0.37,
         "model": {
-          "p_event": 0.5334,
-          "n_train": 87,
+          "p_event": 0.5886,
+          "n_train": 88,
           "fallback": null,
           "features": [
-            -1.56,
-            -5.047049772148904,
-            -1.3344648611418597,
-            1.6470664566040714
+            -0.37,
+            -1.2950312085319715,
+            -0.9066350886282049,
+            1.5812783141106939
           ],
           "weights": [
-            -0.2838,
-            0.3698,
-            -0.3686,
-            -0.1096
+            -0.2828,
+            0.3272,
+            -0.3533,
+            -0.0997
           ],
-          "bias": 0.2576
+          "bias": 0.2787
         }
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "kp_storm_ml",
@@ -174,31 +174,31 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": true,
-      "confidence": 0.572,
+      "call": false,
+      "confidence": 0.813,
       "basis": {
-        "today_max_kp": 4.33,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.5722,
-          "n_train": 90,
+          "p_event": 0.1868,
+          "n_train": 91,
           "fallback": null,
           "features": [
-            4.33,
-            4.223333333333334,
-            3.4299999999999997,
-            4.0
+            2.0,
+            3.3333333333333335,
+            3.287142857142857,
+            1.67
           ],
           "weights": [
-            1.008,
-            -0.2584,
-            -0.1001,
-            0.0677
+            0.999,
+            -0.2868,
+            -0.1008,
+            0.0526
           ],
-          "bias": -0.3879
+          "bias": -0.4097
         }
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9891,
-          "n_train": 90,
+          "p_event": 0.9892,
+          "n_train": 91,
           "fallback": "laplace",
           "features": [
-            6.9,
-            215.28571428571428,
-            6.042857142857143,
+            6.5,
+            210.71428571428572,
+            6.228571428571429,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": false,
-      "confidence": 0.611,
+      "confidence": 0.63,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.3894,
-          "n_train": 84,
+          "p_event": 0.3703,
+          "n_train": 85,
           "fallback": null,
           "features": [
-            7.0,
-            13.22682248691768,
-            0.9860972545002648,
+            8.0,
+            13.237388836661601,
+            0.9970785812137917,
             0.0
           ],
           "weights": [
-            -0.7792,
-            -0.6567,
-            0.4648,
-            -0.8025
+            -0.6775,
+            -0.6697,
+            0.4838,
+            -0.7262
           ],
-          "bias": 0.6937
+          "bias": 0.7048
         }
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.941,
       "basis": {
-        "top_id": 50222622,
-        "top_title": "Roku developer repositories moved from GitHub to GitLab",
+        "top_id": 50225695,
+        "top_title": "We should be more ambitious with the software we build",
         "model": {
-          "p_event": 0.9794,
-          "n_train": 90,
+          "p_event": 0.9409,
+          "n_train": 91,
           "fallback": null,
           "features": [
-            0.1,
-            9.0,
-            5.0
+            0.0,
+            11.0,
+            6.0
           ],
           "weights": [
-            0.3811,
-            -0.1757,
-            0.1232
+            0.4002,
+            -0.1886,
+            0.1263
           ],
-          "bias": 2.7211
+          "bias": 2.7429
         }
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-25"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-26"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,32 +295,32 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.861,
+      "confidence": 0.848,
       "basis": {
-        "forecast_c": 30.6,
-        "for_date": "2026-10-25",
+        "forecast_c": 29.6,
+        "for_date": "2026-10-26",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8615,
-          "n_train": 79,
+          "p_event": 0.8481,
+          "n_train": 80,
           "fallback": null,
           "features": [
-            0.29999999999999716,
-            1.4163685960935448,
-            0.40000000000000036,
+            0.3000000000000007,
+            0.7475961476626259,
+            0.5000000000000018,
             0.6000000000000014
           ],
           "weights": [
-            -0.2187,
-            0.0433,
-            -0.3113,
-            0.743
+            -0.23,
+            0.0443,
+            -0.3116,
+            0.7434
           ],
-          "bias": 2.4637
+          "bias": 2.4797
         }
       },
-      "made_on": "2026-10-24",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-25",
+      "resolve_on": "2026-10-27"
     }
   ]
 }
