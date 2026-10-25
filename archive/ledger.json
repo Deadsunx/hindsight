@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T08:56:17.528046+00:00",
+  "updated": "2026-10-25T18:37:45.329994+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
+      "call": true,
       "confidence": 0.524,
       "basis": {
-        "today_usd": 80334,
-        "change_24h": -0.37
+        "today_usd": 80591,
+        "change_24h": 0.38
       },
       "made_on": "2026-10-25",
       "resolve_on": "2026-10-26"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 1.67
       },
       "made_on": "2026-10-25",
       "resolve_on": "2026-10-26"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50225695,
-        "top_title": "We should be more ambitious with the software we build"
+        "top_id": 50234474,
+        "top_title": "Dolly Parton's Imagination Library"
       },
       "made_on": "2026-10-25",
       "resolve_on": "2026-10-26"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 29.6,
+        "forecast_c": 29.5,
         "for_date": "2026-10-26",
         "city": "New Delhi"
       },
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.589,
+      "confidence": 0.565,
       "basis": {
-        "today_usd": 80334,
-        "change_24h": -0.37,
+        "today_usd": 80591,
+        "change_24h": 0.38,
         "model": {
-          "p_event": 0.5886,
+          "p_event": 0.565,
           "n_train": 88,
           "fallback": null,
           "features": [
-            -0.37,
-            -1.2950312085319715,
-            -0.9066350886282049,
-            1.5812783141106939
+            0.38,
+            -0.9792598417457166,
+            -0.5896211868901768,
+            1.589582098222441
           ],
           "weights": [
             -0.2828,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.813,
+      "confidence": 0.844,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 1.67,
         "model": {
-          "p_event": 0.1868,
+          "p_event": 0.1558,
           "n_train": 91,
           "fallback": null,
           "features": [
-            2.0,
-            3.3333333333333335,
-            3.287142857142857,
+            1.67,
+            3.223333333333333,
+            3.2399999999999998,
             1.67
           ],
           "weights": [
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             6.5,
-            210.71428571428572,
+            214.14285714285714,
             6.228571428571429,
             1.0
           ]
@@ -623,8 +623,8 @@
       "call": true,
       "confidence": 0.941,
       "basis": {
-        "top_id": 50225695,
-        "top_title": "We should be more ambitious with the software we build",
+        "top_id": 50234474,
+        "top_title": "Dolly Parton's Imagination Library",
         "model": {
           "p_event": 0.9409,
           "n_train": 91,
@@ -652,17 +652,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.848,
+      "confidence": 0.845,
       "basis": {
-        "forecast_c": 29.6,
+        "forecast_c": 29.5,
         "for_date": "2026-10-26",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8481,
+          "p_event": 0.8454,
           "n_train": 80,
           "fallback": null,
           "features": [
-            0.3000000000000007,
+            0.3999999999999986,
             0.7475961476626259,
             0.5000000000000018,
             0.6000000000000014
