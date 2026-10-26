@@ -1,20 +1,20 @@
 {
   "date": "2026-10-26",
-  "fetched_at": "2026-10-26T09:40:59.946228+00:00",
+  "fetched_at": "2026-10-26T20:48:31.713741+00:00",
   "observations": {
     "btc": {
-      "usd": 80444,
-      "usd_24h_change": 0.38
+      "usd": 79729,
+      "usd_24h_change": -0.85
     },
     "kp": {
       "max_kp": 2.0,
-      "latest_kp": 1.0,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.9,
-      "count": 193,
-      "strongest_place": "218 km ENE of Nagqu, China"
+      "max_mag": 5.5,
+      "count": 200,
+      "strongest_place": "283 km E of Levuka, Fiji"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-25"
     },
     "hn": {
-      "top_id": 50240922,
-      "top_title": "Switzerland. Block by block. At 1:1 scale",
+      "top_id": 50248371,
+      "top_title": "Type Server Protocol",
       "top10": [
-        50240922,
-        50238708,
-        50239748,
-        50238739,
-        50238763,
-        50209278,
-        50234474,
-        50228115,
-        50197108,
-        50237224
+        50248371,
+        50245138,
+        50250016,
+        50248055,
+        50245831,
+        50248124,
+        50247493,
+        50246238,
+        50247928,
+        50249275
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 29.1,
-      "actual_prev_date": "2026-10-25",
-      "today": 29.0,
-      "forecast_next": 28.6,
-      "forecast_next_date": "2026-10-27"
+      "actual_prev": 29.7,
+      "actual_prev_date": "2026-10-26",
+      "today": 29.2,
+      "forecast_next": 29.0,
+      "forecast_next_date": "2026-10-28"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.524,
+      "call": false,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 80444,
-        "change_24h": 0.38
+        "today_usd": 79729,
+        "change_24h": -0.85
       },
       "made_on": "2026-10-26",
       "resolve_on": "2026-10-27"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50240922,
-        "top_title": "Switzerland. Block by block. At 1:1 scale"
+        "top_id": 50248371,
+        "top_title": "Type Server Protocol"
       },
       "made_on": "2026-10-26",
       "resolve_on": "2026-10-27"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.6,
-        "for_date": "2026-10-27",
+        "forecast_c": 29.0,
+        "for_date": "2026-10-28",
         "city": "New Delhi"
       },
       "made_on": "2026-10-26",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.573,
+      "confidence": 0.607,
       "basis": {
-        "today_usd": 80444,
-        "change_24h": 0.38,
+        "today_usd": 79729,
+        "change_24h": -0.85,
         "model": {
-          "p_event": 0.5728,
+          "p_event": 0.6075,
           "n_train": 89,
           "fallback": null,
           "features": [
-            0.38,
-            -0.9310344827586192,
-            -1.8341122920912278,
-            1.584691343817549
+            -0.85,
+            -1.8115763546798003,
+            -2.706627454330235,
+            1.6137264382201495
           ],
           "weights": [
             -0.2944,
@@ -215,9 +215,9 @@
           "n_train": 92,
           "fallback": "laplace",
           "features": [
-            5.9,
-            212.57142857142858,
-            6.214285714285714,
+            5.5,
+            213.57142857142858,
+            6.1571428571428575,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.915,
       "basis": {
-        "top_id": 50240922,
-        "top_title": "Switzerland. Block by block. At 1:1 scale",
+        "top_id": 50248371,
+        "top_title": "Type Server Protocol",
         "model": {
-          "p_event": 0.9845,
+          "p_event": 0.9152,
           "n_train": 92,
           "fallback": null,
           "features": [
-            0.1,
-            7.0,
+            0.0,
+            11.0,
             0.0
           ],
           "weights": [
-            0.4375,
-            -0.206,
-            -0.0771
+            0.3974,
+            -0.1871,
+            0.1415
           ],
-          "bias": 2.59
+          "bias": 2.7555
         }
       },
       "made_on": "2026-10-26",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.865,
       "basis": {
-        "forecast_c": 28.6,
-        "for_date": "2026-10-27",
+        "forecast_c": 29.0,
+        "for_date": "2026-10-28",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9506,
-          "n_train": 82,
+          "p_event": 0.8648,
+          "n_train": 81,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            0.6785278181474942,
-            1.2000000000000002,
-            2.299999999999997
+            0.1999999999999993,
+            0.6337191807101937,
+            0.5000000000000018,
+            0.6000000000000014
           ],
           "weights": [
-            -0.1337,
-            0.0391,
-            -0.3133,
-            0.7031
+            -0.248,
+            0.015,
+            -0.289,
+            0.7135
           ],
-          "bias": 2.3263
+          "bias": 2.4872
         }
       },
       "made_on": "2026-10-26",
