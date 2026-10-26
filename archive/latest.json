@@ -1,49 +1,49 @@
 {
-  "date": "2026-10-25",
-  "fetched_at": "2026-10-25T18:37:44.108496+00:00",
+  "date": "2026-10-26",
+  "fetched_at": "2026-10-26T09:40:59.946228+00:00",
   "observations": {
     "btc": {
-      "usd": 80591,
+      "usd": 80444,
       "usd_24h_change": 0.38
     },
     "kp": {
-      "max_kp": 1.67,
-      "latest_kp": 0.33,
+      "max_kp": 2.0,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.5,
-      "count": 208,
-      "strongest_place": "Bonin Islands, Japan region"
+      "max_mag": 5.9,
+      "count": 193,
+      "strongest_place": "218 km ENE of Nagqu, China"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 560950,
-      "for_date": "2026-10-24"
+      "views": 595088,
+      "for_date": "2026-10-25"
     },
     "hn": {
-      "top_id": 50234474,
-      "top_title": "Dolly Parton's Imagination Library",
+      "top_id": 50240922,
+      "top_title": "Switzerland. Block by block. At 1:1 scale",
       "top10": [
+        50240922,
+        50238708,
+        50239748,
+        50238739,
+        50238763,
+        50209278,
         50234474,
-        50233929,
-        50234232,
-        50233779,
-        50223435,
-        50225695,
-        50231166,
-        50185534,
-        50233304,
-        50195769
+        50228115,
+        50197108,
+        50237224
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 30.9,
-      "actual_prev_date": "2026-10-24",
-      "today": 29.1,
-      "forecast_next": 29.5,
-      "forecast_next_date": "2026-10-26"
+      "actual_prev": 29.1,
+      "actual_prev_date": "2026-10-25",
+      "today": 29.0,
+      "forecast_next": 28.6,
+      "forecast_next_date": "2026-10-27"
     }
   },
   "predictions": [
@@ -56,11 +56,11 @@
       "call": true,
       "confidence": 0.524,
       "basis": {
-        "today_usd": 80591,
+        "today_usd": 80444,
         "change_24h": 0.38
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.67
+        "today_max_kp": 2.0
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50234474,
-        "top_title": "Dolly Parton's Imagination Library"
+        "top_id": 50240922,
+        "top_title": "Switzerland. Block by block. At 1:1 scale"
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 29.5,
-        "for_date": "2026-10-26",
+        "forecast_c": 28.6,
+        "for_date": "2026-10-27",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.565,
+      "confidence": 0.573,
       "basis": {
-        "today_usd": 80591,
+        "today_usd": 80444,
         "change_24h": 0.38,
         "model": {
-          "p_event": 0.565,
-          "n_train": 88,
+          "p_event": 0.5728,
+          "n_train": 89,
           "fallback": null,
           "features": [
             0.38,
-            -0.9792598417457166,
-            -0.5896211868901768,
-            1.589582098222441
+            -0.9310344827586192,
+            -1.8341122920912278,
+            1.584691343817549
           ],
           "weights": [
-            -0.2828,
-            0.3272,
-            -0.3533,
-            -0.0997
+            -0.2944,
+            0.3425,
+            -0.3425,
+            -0.1073
           ],
-          "bias": 0.2787
+          "bias": 0.2519
         }
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.844,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.67,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.1558,
-          "n_train": 91,
+          "p_event": 0.2197,
+          "n_train": 92,
           "fallback": null,
           "features": [
-            1.67,
-            3.223333333333333,
-            3.2399999999999998,
-            1.67
+            2.0,
+            2.6666666666666665,
+            3.287142857142857,
+            2.0
           ],
           "weights": [
-            0.999,
-            -0.2868,
-            -0.1008,
-            0.0526
+            1.0154,
+            -0.2975,
+            -0.1033,
+            0.0618
           ],
-          "bias": -0.4097
+          "bias": -0.4328
         }
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9892,
-          "n_train": 91,
+          "p_event": 0.9894,
+          "n_train": 92,
           "fallback": "laplace",
           "features": [
-            6.5,
-            214.14285714285714,
-            6.228571428571429,
+            5.9,
+            212.57142857142858,
+            6.214285714285714,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": false,
-      "confidence": 0.63,
+      "confidence": 0.607,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.3703,
-          "n_train": 85,
+          "p_event": 0.3933,
+          "n_train": 86,
           "fallback": null,
           "features": [
-            8.0,
-            13.237388836661601,
-            0.9970785812137917,
+            9.0,
+            13.296466253173753,
+            1.0495770565392712,
             0.0
           ],
           "weights": [
-            -0.6775,
-            -0.6697,
-            0.4838,
-            -0.7262
+            -0.5555,
+            -0.6649,
+            0.489,
+            -0.6353
           ],
-          "bias": 0.7048
+          "bias": 0.7149
         }
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.941,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50234474,
-        "top_title": "Dolly Parton's Imagination Library",
+        "top_id": 50240922,
+        "top_title": "Switzerland. Block by block. At 1:1 scale",
         "model": {
-          "p_event": 0.9409,
-          "n_train": 91,
+          "p_event": 0.9845,
+          "n_train": 92,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            6.0
+            0.1,
+            7.0,
+            0.0
           ],
           "weights": [
-            0.4002,
-            -0.1886,
-            0.1263
+            0.4375,
+            -0.206,
+            -0.0771
           ],
-          "bias": 2.7429
+          "bias": 2.59
         }
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-26"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-27"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,32 +295,32 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.845,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 29.5,
-        "for_date": "2026-10-26",
+        "forecast_c": 28.6,
+        "for_date": "2026-10-27",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8454,
-          "n_train": 80,
+          "p_event": 0.9506,
+          "n_train": 82,
           "fallback": null,
           "features": [
             0.3999999999999986,
-            0.7475961476626259,
-            0.5000000000000018,
-            0.6000000000000014
+            0.6785278181474942,
+            1.2000000000000002,
+            2.299999999999997
           ],
           "weights": [
-            -0.23,
-            0.0443,
-            -0.3116,
-            0.7434
+            -0.1337,
+            0.0391,
+            -0.3133,
+            0.7031
           ],
-          "bias": 2.4797
+          "bias": 2.3263
         }
       },
-      "made_on": "2026-10-25",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-26",
+      "resolve_on": "2026-10-28"
     }
   ]
 }
