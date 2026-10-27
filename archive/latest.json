@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-26",
-  "fetched_at": "2026-10-26T20:48:31.713741+00:00",
+  "date": "2026-10-27",
+  "fetched_at": "2026-10-27T09:35:11.172245+00:00",
   "observations": {
     "btc": {
-      "usd": 79729,
-      "usd_24h_change": -0.85
+      "usd": 79611,
+      "usd_24h_change": -0.99
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 1.33,
+      "max_kp": 2.67,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.5,
-      "count": 200,
-      "strongest_place": "283 km E of Levuka, Fiji"
+      "max_mag": 5.8,
+      "count": 185,
+      "strongest_place": "196 km NW of Port-Olry, Vanuatu"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 595088,
-      "for_date": "2026-10-25"
+      "views": 581731,
+      "for_date": "2026-10-26"
     },
     "hn": {
-      "top_id": 50248371,
-      "top_title": "Type Server Protocol",
+      "top_id": 50251344,
+      "top_title": "Three new discoveries in mathematics, computer science, and physics",
       "top10": [
-        50248371,
+        50251344,
+        50255298,
+        50251661,
+        50196212,
         50245138,
-        50250016,
+        50255177,
         50248055,
-        50245831,
-        50248124,
-        50247493,
-        50246238,
-        50247928,
-        50249275
+        50253939,
+        50248371,
+        50245831
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 29.7,
       "actual_prev_date": "2026-10-26",
-      "today": 29.2,
-      "forecast_next": 29.0,
+      "today": 28.4,
+      "forecast_next": 28.3,
       "forecast_next_date": "2026-10-28"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.528,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 79729,
-        "change_24h": -0.85
+        "today_usd": 79611,
+        "change_24h": -0.99
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 2.67
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50248371,
-        "top_title": "Type Server Protocol"
+        "top_id": 50251344,
+        "top_title": "Three new discoveries in mathematics, computer science, and physics"
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 29.0,
+        "forecast_c": 28.3,
         "for_date": "2026-10-28",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.607,
+      "confidence": 0.631,
       "basis": {
-        "today_usd": 79729,
-        "change_24h": -0.85,
+        "today_usd": 79611,
+        "change_24h": -0.99,
         "model": {
-          "p_event": 0.6075,
-          "n_train": 89,
+          "p_event": 0.6309,
+          "n_train": 90,
           "fallback": null,
           "features": [
-            -0.85,
-            -1.8115763546798003,
-            -2.706627454330235,
-            1.6137264382201495
+            -0.99,
+            -0.7603993966667111,
+            -3.4994787752430367,
+            1.613494620128044
           ],
           "weights": [
-            -0.2944,
-            0.3425,
-            -0.3425,
-            -0.1073
+            -0.2864,
+            0.3445,
+            -0.3133,
+            -0.1262
           ],
-          "bias": 0.2519
+          "bias": 0.2257
         }
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.78,
+      "confidence": 0.65,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 2.67,
         "model": {
-          "p_event": 0.2197,
-          "n_train": 92,
+          "p_event": 0.3499,
+          "n_train": 93,
           "fallback": null,
           "features": [
-            2.0,
-            2.6666666666666665,
+            2.67,
+            2.1133333333333333,
             3.287142857142857,
-            2.0
+            1.33
           ],
           "weights": [
-            1.0154,
-            -0.2975,
-            -0.1033,
-            0.0618
+            1.0246,
+            -0.2937,
+            -0.1144,
+            0.0687
           ],
-          "bias": -0.4328
+          "bias": -0.4542
         }
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9894,
-          "n_train": 92,
+          "p_event": 0.9895,
+          "n_train": 93,
           "fallback": "laplace",
           "features": [
-            5.5,
-            213.57142857142858,
-            6.1571428571428575,
+            5.8,
+            208.28571428571428,
+            6.085714285714286,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": false,
-      "confidence": 0.607,
+      "confidence": 0.536,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.3933,
-          "n_train": 86,
+          "p_event": 0.4639,
+          "n_train": 87,
           "fallback": null,
           "features": [
-            9.0,
-            13.296466253173753,
-            1.0495770565392712,
+            10.0,
+            13.273765139559938,
+            1.020474562169599,
             0.0
           ],
           "weights": [
-            -0.5555,
-            -0.6649,
-            0.489,
-            -0.6353
+            -0.4285,
+            -0.644,
+            0.4822,
+            -0.5455
           ],
-          "bias": 0.7149
+          "bias": 0.7262
         }
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.915,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50248371,
-        "top_title": "Type Server Protocol",
+        "top_id": 50251344,
+        "top_title": "Three new discoveries in mathematics, computer science, and physics",
         "model": {
-          "p_event": 0.9152,
-          "n_train": 92,
+          "p_event": 0.9983,
+          "n_train": 93,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            0.0
+            0.4,
+            9.0,
+            1.0
           ],
           "weights": [
-            0.3974,
+            0.416,
             -0.1871,
-            0.1415
+            0.3104
           ],
-          "bias": 2.7555
+          "bias": 2.6412
         }
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-27"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-28"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,19 +295,19 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.865,
+      "confidence": 0.875,
       "basis": {
-        "forecast_c": 29.0,
+        "forecast_c": 28.3,
         "for_date": "2026-10-28",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8648,
+          "p_event": 0.8749,
           "n_train": 81,
           "fallback": null,
           "features": [
-            0.1999999999999993,
-            0.6337191807101937,
-            0.5000000000000018,
+            0.09999999999999787,
+            0.4691481642295958,
+            0.40000000000000097,
             0.6000000000000014
           ],
           "weights": [
@@ -319,8 +319,8 @@
           "bias": 2.4872
         }
       },
-      "made_on": "2026-10-26",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-27",
+      "resolve_on": "2026-10-29"
     }
   ]
 }
