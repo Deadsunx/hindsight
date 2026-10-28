@@ -1,19 +1,19 @@
 {
   "date": "2026-10-28",
-  "fetched_at": "2026-10-28T10:20:26.379945+00:00",
+  "fetched_at": "2026-10-28T20:41:15.169436+00:00",
   "observations": {
     "btc": {
-      "usd": 81412,
-      "usd_24h_change": 2.46
+      "usd": 81094,
+      "usd_24h_change": 0.64
     },
     "kp": {
       "max_kp": 2.33,
-      "latest_kp": 2.33,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6,
-      "count": 190,
+      "count": 239,
       "strongest_place": "214 km NW of Port-Olry, Vanuatu"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-10-27"
     },
     "hn": {
-      "top_id": 50268380,
-      "top_title": "Git for the US Code",
+      "top_id": 50276998,
+      "top_title": "Why Is This Fingerprinting Script Creating Bioweapons?",
       "top10": [
-        50268380,
+        50276998,
+        50276792,
+        50274409,
+        50276940,
+        50275626,
+        50243060,
         50208960,
-        50261319,
-        50261998,
-        50234796,
-        50227400,
-        50264853,
-        50264857,
-        50265609,
-        50223739
+        50280197,
+        50274251,
+        50271640
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 29.1,
-      "actual_prev_date": "2026-10-27",
-      "today": 28.7,
-      "forecast_next": 23.9,
-      "forecast_next_date": "2026-10-29"
+      "actual_prev": 29.2,
+      "actual_prev_date": "2026-10-28",
+      "today": 23.4,
+      "forecast_next": 27.4,
+      "forecast_next_date": "2026-10-30"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.545,
+      "confidence": 0.526,
       "basis": {
-        "today_usd": 81412,
-        "change_24h": 2.46
+        "today_usd": 81094,
+        "change_24h": 0.64
       },
       "made_on": "2026-10-28",
       "resolve_on": "2026-10-29"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50268380,
-        "top_title": "Git for the US Code"
+        "top_id": 50276998,
+        "top_title": "Why Is This Fingerprinting Script Creating Bioweapons?"
       },
       "made_on": "2026-10-28",
       "resolve_on": "2026-10-29"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 23.9,
-        "for_date": "2026-10-29",
+        "forecast_c": 27.4,
+        "for_date": "2026-10-30",
         "city": "New Delhi"
       },
       "made_on": "2026-10-28",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.583,
+      "confidence": 0.643,
       "basis": {
-        "today_usd": 81412,
-        "change_24h": 2.46,
+        "today_usd": 81094,
+        "change_24h": 0.64,
         "model": {
-          "p_event": 0.5829,
+          "p_event": 0.6426,
           "n_train": 91,
           "fallback": null,
           "features": [
-            2.46,
-            1.0187241751560272,
-            -3.6373320707817958,
-            1.6589354927193638
+            0.64,
+            0.6241391718678324,
+            -4.0137302479730135,
+            1.6378877663044051
           ],
           "weights": [
             -0.2863,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.0,
-            211.71428571428572,
+            218.71428571428572,
             6.2,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.928,
       "basis": {
-        "top_id": 50268380,
-        "top_title": "Git for the US Code",
+        "top_id": 50276998,
+        "top_title": "Why Is This Fingerprinting Script Creating Bioweapons?",
         "model": {
-          "p_event": 0.9994,
+          "p_event": 0.9281,
           "n_train": 94,
           "fallback": null,
           "features": [
-            0.4,
-            3.0,
+            0.0,
+            11.0,
             2.0
           ],
           "weights": [
-            0.4162,
-            -0.1902,
-            0.2309
+            0.3934,
+            -0.186,
+            0.1149
           ],
-          "bias": 2.6333
+          "bias": 2.7735
         }
       },
       "made_on": "2026-10-28",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.687,
+      "confidence": 0.735,
       "basis": {
-        "forecast_c": 23.9,
-        "for_date": "2026-10-29",
+        "forecast_c": 27.4,
+        "for_date": "2026-10-30",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.6871,
-          "n_train": 81,
+          "p_event": 0.7354,
+          "n_train": 82,
           "fallback": null,
           "features": [
-            4.800000000000001,
-            0.555337735076592,
+            4.0,
+            0.5404627646748659,
             0.5000000000000018,
             0.6000000000000014
           ],
           "weights": [
-            -0.248,
-            0.015,
-            -0.289,
-            0.7135
+            -0.2655,
+            -0.0127,
+            -0.2697,
+            0.6896
           ],
-          "bias": 2.4872
+          "bias": 2.4961
         }
       },
       "made_on": "2026-10-28",
