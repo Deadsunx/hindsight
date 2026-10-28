@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-27",
-  "fetched_at": "2026-10-27T20:19:13.663546+00:00",
+  "date": "2026-10-28",
+  "fetched_at": "2026-10-28T10:20:26.379945+00:00",
   "observations": {
     "btc": {
-      "usd": 80679,
-      "usd_24h_change": 1.04
+      "usd": 81412,
+      "usd_24h_change": 2.46
     },
     "kp": {
-      "max_kp": 2.67,
-      "latest_kp": 1.0,
+      "max_kp": 2.33,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.8,
-      "count": 204,
-      "strongest_place": "196 km NW of Port-Olry, Vanuatu"
+      "max_mag": 6,
+      "count": 190,
+      "strongest_place": "214 km NW of Port-Olry, Vanuatu"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 595088,
-      "for_date": "2026-10-25"
+      "views": 571258,
+      "for_date": "2026-10-27"
     },
     "hn": {
-      "top_id": 50261319,
-      "top_title": "Genie 4",
+      "top_id": 50268380,
+      "top_title": "Git for the US Code",
       "top10": [
+        50268380,
+        50208960,
         50261319,
         50261998,
-        50264857,
+        50234796,
+        50227400,
         50264853,
-        50261352,
-        50263701,
-        50261647,
-        50257419,
-        50258538,
-        50257326
+        50264857,
+        50265609,
+        50223739
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 29.1,
       "actual_prev_date": "2026-10-27",
-      "today": 28.9,
-      "forecast_next": 27.3,
+      "today": 28.7,
+      "forecast_next": 23.9,
       "forecast_next_date": "2026-10-29"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.53,
+      "confidence": 0.545,
       "basis": {
-        "today_usd": 80679,
-        "change_24h": 1.04
+        "today_usd": 81412,
+        "change_24h": 2.46
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.67
+        "today_max_kp": 2.33
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50261319,
-        "top_title": "Genie 4"
+        "top_id": 50268380,
+        "top_title": "Git for the US Code"
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.3,
+        "forecast_c": 23.9,
         "for_date": "2026-10-29",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-29"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-30"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.591,
+      "confidence": 0.583,
       "basis": {
-        "today_usd": 80679,
-        "change_24h": 1.04,
+        "today_usd": 81412,
+        "change_24h": 2.46,
         "model": {
-          "p_event": 0.5906,
-          "n_train": 90,
+          "p_event": 0.5829,
+          "n_train": 91,
           "fallback": null,
           "features": [
-            1.04,
-            0.5709228256940202,
-            -2.2049019370166567,
-            1.6711030504536788
+            2.46,
+            1.0187241751560272,
+            -3.6373320707817958,
+            1.6589354927193638
           ],
           "weights": [
-            -0.2983,
-            0.3404,
-            -0.3606,
-            -0.094
+            -0.2863,
+            0.3468,
+            -0.392,
+            -0.0773
           ],
-          "bias": 0.2723
+          "bias": 0.2922
         }
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.65,
+      "confidence": 0.73,
       "basis": {
-        "today_max_kp": 2.67,
+        "today_max_kp": 2.33,
         "model": {
-          "p_event": 0.3499,
-          "n_train": 93,
+          "p_event": 0.2701,
+          "n_train": 94,
           "fallback": null,
           "features": [
-            2.67,
-            2.1133333333333333,
-            3.287142857142857,
+            2.33,
+            2.3333333333333335,
+            3.0485714285714285,
             1.33
           ],
           "weights": [
-            1.0246,
-            -0.2937,
-            -0.1144,
-            0.0687
+            1.0044,
+            -0.262,
+            -0.1404,
+            0.094
           ],
-          "bias": -0.4542
+          "bias": -0.4753
         }
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9895,
-          "n_train": 93,
+          "p_event": 0.9896,
+          "n_train": 94,
           "fallback": "laplace",
           "features": [
-            5.8,
-            211.0,
-            6.085714285714286,
+            6.0,
+            211.71428571428572,
+            6.2,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,17 +232,17 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": false,
-      "confidence": 0.608,
+      "confidence": 0.678,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.3918,
+          "p_event": 0.3216,
           "n_train": 86,
           "fallback": null,
           "features": [
-            9.0,
-            13.296466253173753,
-            1.0404228812230067,
+            10.0,
+            13.255597975989858,
+            0.9956244180082561,
             0.0
           ],
           "weights": [
@@ -254,8 +254,8 @@
           "bias": 0.7149
         }
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.923,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50261319,
-        "top_title": "Genie 4",
+        "top_id": 50268380,
+        "top_title": "Git for the US Code",
         "model": {
-          "p_event": 0.9227,
-          "n_train": 93,
+          "p_event": 0.9994,
+          "n_train": 94,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            1.0
+            0.4,
+            3.0,
+            2.0
           ],
           "weights": [
-            0.3955,
-            -0.1866,
-            0.1249
+            0.4162,
+            -0.1902,
+            0.2309
           ],
-          "bias": 2.7641
+          "bias": 2.6333
         }
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-28"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-29"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,18 +295,18 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.822,
+      "confidence": 0.687,
       "basis": {
-        "forecast_c": 27.3,
+        "forecast_c": 23.9,
         "for_date": "2026-10-29",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8218,
+          "p_event": 0.6871,
           "n_train": 81,
           "fallback": null,
           "features": [
-            1.5999999999999979,
-            0.5404627646748659,
+            4.800000000000001,
+            0.555337735076592,
             0.5000000000000018,
             0.6000000000000014
           ],
@@ -319,8 +319,8 @@
           "bias": 2.4872
         }
       },
-      "made_on": "2026-10-27",
-      "resolve_on": "2026-10-29"
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-30"
     }
   ]
 }
