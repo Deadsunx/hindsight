@@ -1,14 +1,14 @@
 {
   "date": "2026-10-29",
-  "fetched_at": "2026-10-29T10:42:09.698626+00:00",
+  "fetched_at": "2026-10-29T20:44:42.618282+00:00",
   "observations": {
     "btc": {
-      "usd": 80164,
-      "usd_24h_change": -1.53
+      "usd": 79556,
+      "usd_24h_change": -1.81
     },
     "kp": {
       "max_kp": 2.33,
-      "latest_kp": 0.67,
+      "latest_kp": 0.33,
       "samples": 8
     },
     "quakes": {
@@ -22,28 +22,28 @@
       "for_date": "2026-10-28"
     },
     "hn": {
-      "top_id": 50282838,
-      "top_title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+      "top_id": 50294702,
+      "top_title": "Patrick Stewart has died",
       "top10": [
-        50282838,
-        50285452,
-        50276998,
-        50243757,
-        50285319,
-        50251200,
-        50282454,
-        50280974,
-        50259697,
-        50256409
+        50294702,
+        50289418,
+        50294507,
+        50293047,
+        50294506,
+        50291054,
+        50293023,
+        50290177,
+        50287919,
+        50292727
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 29.2,
-      "actual_prev_date": "2026-10-28",
+      "actual_prev": 24.8,
+      "actual_prev_date": "2026-10-29",
       "today": 26.8,
-      "forecast_next": 26.3,
-      "forecast_next_date": "2026-10-30"
+      "forecast_next": 28.2,
+      "forecast_next_date": "2026-10-31"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.535,
+      "confidence": 0.538,
       "basis": {
-        "today_usd": 80164,
-        "change_24h": -1.53
+        "today_usd": 79556,
+        "change_24h": -1.81
       },
       "made_on": "2026-10-29",
       "resolve_on": "2026-10-30"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50282838,
-        "top_title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5"
+        "top_id": 50294702,
+        "top_title": "Patrick Stewart has died"
       },
       "made_on": "2026-10-29",
       "resolve_on": "2026-10-30"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 26.3,
-        "for_date": "2026-10-30",
+        "forecast_c": 28.2,
+        "for_date": "2026-10-31",
         "city": "New Delhi"
       },
       "made_on": "2026-10-29",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.664,
+      "confidence": 0.666,
       "basis": {
-        "today_usd": 80164,
-        "change_24h": -1.53,
+        "today_usd": 79556,
+        "change_24h": -1.81,
         "model": {
-          "p_event": 0.6644,
+          "p_event": 0.6656,
           "n_train": 92,
           "fallback": null,
           "features": [
-            -1.53,
-            0.5455982139497495,
-            -1.5039072099080952,
-            1.6420157465956773
+            -1.81,
+            -0.2169850368122006,
+            -2.250946085417993,
+            1.7005952378528346
           ],
           "weights": [
             -0.292,
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.933,
       "basis": {
-        "top_id": 50282838,
-        "top_title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+        "top_id": 50294702,
+        "top_title": "Patrick Stewart has died",
         "model": {
-          "p_event": 0.9899,
+          "p_event": 0.9326,
           "n_train": 95,
           "fallback": null,
           "features": [
-            0.1,
-            3.0,
+            0.0,
+            11.0,
             3.0
           ],
           "weights": [
-            0.417,
-            -0.1927,
-            0.1587
+            0.3912,
+            -0.1851,
+            0.1107
           ],
-          "bias": 2.6315
+          "bias": 2.7835
         }
       },
       "made_on": "2026-10-29",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.876,
+      "confidence": 0.808,
       "basis": {
-        "forecast_c": 26.3,
-        "for_date": "2026-10-30",
+        "forecast_c": 28.2,
+        "for_date": "2026-10-31",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8762,
-          "n_train": 82,
+          "p_event": 0.8083,
+          "n_train": 83,
           "fallback": null,
           "features": [
-            0.5,
-            0.5872818744010405,
-            0.40000000000000097,
+            1.3999999999999986,
+            1.6468454693747068,
+            0.5000000000000018,
             0.6000000000000014
           ],
           "weights": [
-            -0.2655,
-            -0.0127,
-            -0.2697,
-            0.6896
+            -0.2787,
+            0.1436,
+            -0.3615,
+            0.8497
           ],
-          "bias": 2.4961
+          "bias": 2.4219
         }
       },
       "made_on": "2026-10-29",
