@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-29",
+  "fetched_at": "2026-10-29T10:42:09.698626+00:00",
+  "observations": {
+    "btc": {
+      "usd": 80164,
+      "usd_24h_change": -1.53
+    },
+    "kp": {
+      "max_kp": 2.33,
+      "latest_kp": 0.67,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6.4,
+      "count": 205,
+      "strongest_place": "southeast of Easter Island"
+    },
+    "wiki": {
+      "top": "2026_Israeli_legislative_election",
+      "views": 925801,
+      "for_date": "2026-10-28"
+    },
+    "hn": {
+      "top_id": 50282838,
+      "top_title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+      "top10": [
+        50282838,
+        50285452,
+        50276998,
+        50243757,
+        50285319,
+        50251200,
+        50282454,
+        50280974,
+        50259697,
+        50256409
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 29.2,
+      "actual_prev_date": "2026-10-28",
+      "today": 26.8,
+      "forecast_next": 26.3,
+      "forecast_next_date": "2026-10-30"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.535,
+      "basis": {
+        "today_usd": 80164,
+        "change_24h": -1.53
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 2.33
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "2026_Israeli_legislative_election"
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50282838,
+        "top_title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5"
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 26.3,
+        "for_date": "2026-10-30",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-31"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.664,
+      "basis": {
+        "today_usd": 80164,
+        "change_24h": -1.53,
+        "model": {
+          "p_event": 0.6644,
+          "n_train": 92,
+          "fallback": null,
+          "features": [
+            -1.53,
+            0.5455982139497495,
+            -1.5039072099080952,
+            1.6420157465956773
+          ],
+          "weights": [
+            -0.292,
+            0.3168,
+            -0.3224,
+            -0.1081
+          ],
+          "bias": 0.2662
+        }
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.713,
+      "basis": {
+        "today_max_kp": 2.33,
+        "model": {
+          "p_event": 0.2873,
+          "n_train": 95,
+          "fallback": null,
+          "features": [
+            2.33,
+            2.4433333333333334,
+            2.7142857142857144,
+            2.0
+          ],
+          "weights": [
+            0.9998,
+            -0.2531,
+            -0.1482,
+            0.1133
+          ],
+          "bias": -0.4961
+        }
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9897,
+          "n_train": 95,
+          "fallback": "laplace",
+          "features": [
+            6.4,
+            212.28571428571428,
+            6.114285714285714,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.648,
+      "basis": {
+        "today_top": "2026_Israeli_legislative_election",
+        "model": {
+          "p_event": 0.6476,
+          "n_train": 87,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.738415667870774,
+            1.4823580460599617,
+            1.0
+          ],
+          "weights": [
+            -0.6982,
+            -0.6751,
+            0.4915,
+            -0.6816
+          ],
+          "bias": 0.6858
+        }
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50282838,
+        "top_title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+        "model": {
+          "p_event": 0.9899,
+          "n_train": 95,
+          "fallback": null,
+          "features": [
+            0.1,
+            3.0,
+            3.0
+          ],
+          "weights": [
+            0.417,
+            -0.1927,
+            0.1587
+          ],
+          "bias": 2.6315
+        }
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-30"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.876,
+      "basis": {
+        "forecast_c": 26.3,
+        "for_date": "2026-10-30",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.8762,
+          "n_train": 82,
+          "fallback": null,
+          "features": [
+            0.5,
+            0.5872818744010405,
+            0.40000000000000097,
+            0.6000000000000014
+          ],
+          "weights": [
+            -0.2655,
+            -0.0127,
+            -0.2697,
+            0.6896
+          ],
+          "bias": 2.4961
+        }
+      },
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-31"
+    }
+  ]
+}
