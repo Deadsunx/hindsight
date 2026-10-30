@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-29",
-  "fetched_at": "2026-10-29T20:44:42.618282+00:00",
+  "date": "2026-10-30",
+  "fetched_at": "2026-10-30T10:42:08.061404+00:00",
   "observations": {
     "btc": {
-      "usd": 79556,
-      "usd_24h_change": -1.81
+      "usd": 77563,
+      "usd_24h_change": -3.23
     },
     "kp": {
       "max_kp": 2.33,
-      "latest_kp": 0.33,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.4,
-      "count": 205,
-      "strongest_place": "southeast of Easter Island"
+      "max_mag": 6.2,
+      "count": 198,
+      "strongest_place": "43 km ESE of Port-Olry, Vanuatu"
     },
     "wiki": {
-      "top": "2026_Israeli_legislative_election",
-      "views": 925801,
-      "for_date": "2026-10-28"
+      "top": "Patrick_Stewart",
+      "views": 2356552,
+      "for_date": "2026-10-29"
     },
     "hn": {
-      "top_id": 50294702,
-      "top_title": "Patrick Stewart has died",
+      "top_id": 50296470,
+      "top_title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance",
       "top10": [
-        50294702,
+        50296470,
         50289418,
-        50294507,
-        50293047,
-        50294506,
-        50291054,
-        50293023,
-        50290177,
-        50287919,
-        50292727
+        50301717,
+        50263127,
+        50255343,
+        50273104,
+        50298436,
+        50270651,
+        50296486,
+        50273340
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 24.8,
       "actual_prev_date": "2026-10-29",
-      "today": 26.8,
-      "forecast_next": 28.2,
+      "today": 22.9,
+      "forecast_next": 27.3,
       "forecast_next_date": "2026-10-31"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.538,
+      "confidence": 0.552,
       "basis": {
-        "today_usd": 79556,
-        "change_24h": -1.81
+        "today_usd": 77563,
+        "change_24h": -3.23
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "kp_storm",
@@ -73,8 +73,8 @@
       "basis": {
         "today_max_kp": 2.33
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "wiki_hold",
@@ -99,10 +99,10 @@
       "call": false,
       "confidence": 0.62,
       "basis": {
-        "today_top": "2026_Israeli_legislative_election"
+        "today_top": "Patrick_Stewart"
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50294702,
-        "top_title": "Patrick Stewart has died"
+        "top_id": 50296470,
+        "top_title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance"
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.2,
+        "forecast_c": 27.3,
         "for_date": "2026-10-31",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.666,
+      "confidence": 0.655,
       "basis": {
-        "today_usd": 79556,
-        "change_24h": -1.81,
+        "today_usd": 77563,
+        "change_24h": -3.23,
         "model": {
-          "p_event": 0.6656,
-          "n_train": 92,
+          "p_event": 0.6547,
+          "n_train": 93,
           "fallback": null,
           "features": [
-            -1.81,
-            -0.2169850368122006,
-            -2.250946085417993,
-            1.7005952378528346
+            -3.23,
+            -3.8622194127344134,
+            -4.479064039408865,
+            1.4909445106813053
           ],
           "weights": [
-            -0.292,
-            0.3168,
-            -0.3224,
-            -0.1081
+            -0.2512,
+            0.2792,
+            -0.2776,
+            -0.131
           ],
-          "bias": 0.2662
+          "bias": 0.2405
         }
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.713,
+      "confidence": 0.684,
       "basis": {
         "today_max_kp": 2.33,
         "model": {
-          "p_event": 0.2873,
-          "n_train": 95,
+          "p_event": 0.3157,
+          "n_train": 96,
           "fallback": null,
           "features": [
             2.33,
-            2.4433333333333334,
-            2.7142857142857144,
-            2.0
+            2.33,
+            2.5228571428571427,
+            2.67
           ],
           "weights": [
-            0.9998,
-            -0.2531,
-            -0.1482,
-            0.1133
+            1.0004,
+            -0.2515,
+            -0.1429,
+            0.1226
           ],
-          "bias": -0.4961
+          "bias": -0.5162
         }
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9897,
-          "n_train": 95,
+          "p_event": 0.9898,
+          "n_train": 96,
           "fallback": "laplace",
           "features": [
-            6.4,
-            212.28571428571428,
-            6.114285714285714,
+            6.2,
+            207.14285714285714,
+            6.185714285714285,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.648,
+      "confidence": 0.547,
       "basis": {
-        "today_top": "2026_Israeli_legislative_election",
+        "today_top": "Patrick_Stewart",
         "model": {
-          "p_event": 0.6476,
-          "n_train": 87,
+          "p_event": 0.5468,
+          "n_train": 88,
           "fallback": null,
           "features": [
             1.0,
-            13.738415667870774,
-            1.4823580460599617,
+            14.672710516075393,
+            2.677990860404192,
             1.0
           ],
           "weights": [
-            -0.6982,
-            -0.6751,
-            0.4915,
-            -0.6816
+            -0.6811,
+            -0.6212,
+            0.439,
+            -0.7131
           ],
-          "bias": 0.6858
+          "bias": 0.6521
         }
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.933,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50294702,
-        "top_title": "Patrick Stewart has died",
+        "top_id": 50296470,
+        "top_title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance",
         "model": {
-          "p_event": 0.9326,
-          "n_train": 95,
+          "p_event": 0.9742,
+          "n_train": 96,
           "fallback": null,
           "features": [
-            0.0,
+            0.1,
             11.0,
-            3.0
+            4.0
           ],
           "weights": [
-            0.3912,
-            -0.1851,
-            0.1107
+            0.3888,
+            -0.184,
+            0.1117
           ],
-          "bias": 2.7835
+          "bias": 2.7939
         }
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-30"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-10-31"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.808,
+      "confidence": 0.94,
       "basis": {
-        "forecast_c": 28.2,
+        "forecast_c": 27.3,
         "for_date": "2026-10-31",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8083,
+          "p_event": 0.9404,
           "n_train": 83,
           "fallback": null,
           "features": [
-            1.3999999999999986,
-            1.6468454693747068,
-            0.5000000000000018,
-            0.6000000000000014
+            4.400000000000002,
+            2.1558293067866012,
+            1.1666666666666679,
+            2.5
           ],
           "weights": [
             -0.2787,
@@ -319,8 +319,8 @@
           "bias": 2.4219
         }
       },
-      "made_on": "2026-10-29",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-30",
+      "resolve_on": "2026-11-01"
     }
   ]
 }
