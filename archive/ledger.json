@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T10:42:09.988156+00:00",
+  "updated": "2026-10-30T20:15:53.143660+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -118,49 +118,49 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 57,
+      "shared_days": 58,
       "rule_correct": 50,
       "model_correct": 50,
-      "rule_accuracy": 0.8772,
-      "model_accuracy": 0.8772,
-      "rule_brier": 0.1137,
-      "model_brier": 0.1109,
-      "rule_log_loss": 0.3934,
-      "model_log_loss": 0.3981,
+      "rule_accuracy": 0.8621,
+      "model_accuracy": 0.8621,
+      "rule_brier": 0.1228,
+      "model_brier": 0.1183,
+      "rule_log_loss": 0.4144,
+      "model_log_loss": 0.4141,
       "coin_flip": {
-        "n": 57,
+        "n": 58,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 140,
-        "rate": 0.8929,
-        "majority_accuracy": 0.8929
+        "n": 142,
+        "rate": 0.8803,
+        "majority_accuracy": 0.8803
       }
     }
   },
   "totals": {
-    "graded": 954,
+    "graded": 956,
     "correct": 735,
-    "accuracy": 0.7704,
-    "brier": 0.145,
-    "log_loss": 0.4454,
+    "accuracy": 0.7688,
+    "brier": 0.1459,
+    "log_loss": 0.4476,
     "open": 14,
-    "void": 37,
+    "void": 35,
     "days": 97
   },
   "baselines": {
     "coin_flip": {
-      "n": 954,
+      "n": 956,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 954,
-      "rate": 0.7306,
-      "majority_accuracy": 0.7306
+      "n": 956,
+      "rate": 0.7291,
+      "majority_accuracy": 0.7291
     }
   },
   "by_predictor": {
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 83,
+      "graded": 84,
       "correct": 75,
-      "accuracy": 0.9036,
-      "brier": 0.0978,
-      "log_loss": 0.3568,
-      "base_rate": 0.9036,
-      "majority_accuracy": 0.9036
+      "accuracy": 0.8929,
+      "brier": 0.1043,
+      "log_loss": 0.3717,
+      "base_rate": 0.8929,
+      "majority_accuracy": 0.8929
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 57,
+      "graded": 58,
       "correct": 50,
-      "accuracy": 0.8772,
-      "brier": 0.1109,
-      "log_loss": 0.3981,
-      "base_rate": 0.8772,
-      "majority_accuracy": 0.8772
+      "accuracy": 0.8621,
+      "brier": 0.1183,
+      "log_loss": 0.4141,
+      "base_rate": 0.8621,
+      "majority_accuracy": 0.8621
     }
   },
   "calibration": [
@@ -336,15 +336,15 @@
     },
     {
       "label": "70\u201380%",
-      "n": 203,
+      "n": 204,
       "claimed": 0.7354,
-      "actual": 0.7143
+      "actual": 0.7108
     },
     {
       "label": "80\u201390%",
-      "n": 230,
-      "claimed": 0.8448,
-      "actual": 0.8783
+      "n": 231,
+      "claimed": 0.8447,
+      "actual": 0.8745
     },
     {
       "label": "90\u2013100%",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.552,
+      "confidence": 0.562,
       "basis": {
-        "today_usd": 77563,
-        "change_24h": -3.23
+        "today_usd": 76891,
+        "change_24h": -4.23
       },
       "made_on": "2026-10-30",
       "resolve_on": "2026-10-31"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50296470,
-        "top_title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance"
+        "top_id": 50307190,
+        "top_title": "My favourite PowerMac is a Nintendo Wii"
       },
       "made_on": "2026-10-30",
       "resolve_on": "2026-10-31"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.3,
-        "for_date": "2026-10-31",
+        "forecast_c": 27.6,
+        "for_date": "2026-11-01",
         "city": "New Delhi"
       },
       "made_on": "2026-10-30",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.655,
+      "confidence": 0.672,
       "basis": {
-        "today_usd": 77563,
-        "change_24h": -3.23,
+        "today_usd": 76891,
+        "change_24h": -4.23,
         "model": {
-          "p_event": 0.6547,
+          "p_event": 0.6721,
           "n_train": 93,
           "fallback": null,
           "features": [
-            -3.23,
-            -3.8622194127344134,
-            -4.479064039408865,
-            1.4909445106813053
+            -4.23,
+            -4.695149915095631,
+            -5.306650246305422,
+            1.6088167825347597
           ],
           "weights": [
             -0.2512,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             6.2,
-            207.14285714285714,
+            210.0,
             6.185714285714285,
             1.0
           ]
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.937,
       "basis": {
-        "top_id": 50296470,
-        "top_title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance",
+        "top_id": 50307190,
+        "top_title": "My favourite PowerMac is a Nintendo Wii",
         "model": {
-          "p_event": 0.9742,
+          "p_event": 0.9367,
           "n_train": 96,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             4.0
           ],
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.94,
+      "confidence": 0.892,
       "basis": {
-        "forecast_c": 27.3,
-        "for_date": "2026-10-31",
+        "forecast_c": 27.6,
+        "for_date": "2026-11-01",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9404,
-          "n_train": 83,
+          "p_event": 0.8922,
+          "n_train": 84,
           "fallback": null,
           "features": [
-            4.400000000000002,
-            2.1558293067866012,
-            1.1666666666666679,
-            2.5
+            0.6000000000000014,
+            2.9704545106767752,
+            0.5000000000000018,
+            0.6000000000000014
           ],
           "weights": [
-            -0.2787,
-            0.1436,
-            -0.3615,
-            0.8497
+            -0.4112,
+            0.2217,
+            -0.4029,
+            0.9524
           ],
-          "bias": 2.4219
+          "bias": 2.4007
         }
       },
       "made_on": "2026-10-30",
@@ -12889,6 +12889,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-30",
+      "call": true,
+      "confidence": 0.8,
+      "actual": false,
+      "correct": false
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -12952,6 +12965,19 @@
       "confidence": 0.928,
       "actual": true,
       "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-10-28",
+      "resolve_on": "2026-10-30",
+      "call": true,
+      "confidence": 0.735,
+      "actual": false,
+      "correct": false
     },
     {
       "id": "btc_up",

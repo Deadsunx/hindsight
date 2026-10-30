@@ -1,19 +1,19 @@
 {
   "date": "2026-10-30",
-  "fetched_at": "2026-10-30T10:42:08.061404+00:00",
+  "fetched_at": "2026-10-30T20:15:51.271745+00:00",
   "observations": {
     "btc": {
-      "usd": 77563,
-      "usd_24h_change": -3.23
+      "usd": 76891,
+      "usd_24h_change": -4.23
     },
     "kp": {
       "max_kp": 2.33,
-      "latest_kp": 2.33,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.2,
-      "count": 198,
+      "count": 218,
       "strongest_place": "43 km ESE of Port-Olry, Vanuatu"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-10-29"
     },
     "hn": {
-      "top_id": 50296470,
-      "top_title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance",
+      "top_id": 50307190,
+      "top_title": "My favourite PowerMac is a Nintendo Wii",
       "top10": [
-        50296470,
-        50289418,
-        50301717,
-        50263127,
-        50255343,
-        50273104,
-        50298436,
-        50270651,
-        50296486,
-        50273340
+        50307190,
+        50305025,
+        50300683,
+        50306442,
+        50263837,
+        50308697,
+        50305637,
+        50305573,
+        50296730,
+        50307219
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 24.8,
-      "actual_prev_date": "2026-10-29",
-      "today": 22.9,
-      "forecast_next": 27.3,
-      "forecast_next_date": "2026-10-31"
+      "actual_prev": 21.2,
+      "actual_prev_date": "2026-10-30",
+      "today": 27.0,
+      "forecast_next": 27.6,
+      "forecast_next_date": "2026-11-01"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.552,
+      "confidence": 0.562,
       "basis": {
-        "today_usd": 77563,
-        "change_24h": -3.23
+        "today_usd": 76891,
+        "change_24h": -4.23
       },
       "made_on": "2026-10-30",
       "resolve_on": "2026-10-31"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50296470,
-        "top_title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance"
+        "top_id": 50307190,
+        "top_title": "My favourite PowerMac is a Nintendo Wii"
       },
       "made_on": "2026-10-30",
       "resolve_on": "2026-10-31"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.3,
-        "for_date": "2026-10-31",
+        "forecast_c": 27.6,
+        "for_date": "2026-11-01",
         "city": "New Delhi"
       },
       "made_on": "2026-10-30",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.655,
+      "confidence": 0.672,
       "basis": {
-        "today_usd": 77563,
-        "change_24h": -3.23,
+        "today_usd": 76891,
+        "change_24h": -4.23,
         "model": {
-          "p_event": 0.6547,
+          "p_event": 0.6721,
           "n_train": 93,
           "fallback": null,
           "features": [
-            -3.23,
-            -3.8622194127344134,
-            -4.479064039408865,
-            1.4909445106813053
+            -4.23,
+            -4.695149915095631,
+            -5.306650246305422,
+            1.6088167825347597
           ],
           "weights": [
             -0.2512,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.2,
-            207.14285714285714,
+            210.0,
             6.185714285714285,
             1.0
           ]
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.937,
       "basis": {
-        "top_id": 50296470,
-        "top_title": "Binance-hacker-1029 \u2013 $5.6B stolen from Binance",
+        "top_id": 50307190,
+        "top_title": "My favourite PowerMac is a Nintendo Wii",
         "model": {
-          "p_event": 0.9742,
+          "p_event": 0.9367,
           "n_train": 96,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             4.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.94,
+      "confidence": 0.892,
       "basis": {
-        "forecast_c": 27.3,
-        "for_date": "2026-10-31",
+        "forecast_c": 27.6,
+        "for_date": "2026-11-01",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9404,
-          "n_train": 83,
+          "p_event": 0.8922,
+          "n_train": 84,
           "fallback": null,
           "features": [
-            4.400000000000002,
-            2.1558293067866012,
-            1.1666666666666679,
-            2.5
+            0.6000000000000014,
+            2.9704545106767752,
+            0.5000000000000018,
+            0.6000000000000014
           ],
           "weights": [
-            -0.2787,
-            0.1436,
-            -0.3615,
-            0.8497
+            -0.4112,
+            0.2217,
+            -0.4029,
+            0.9524
           ],
-          "bias": 2.4219
+          "bias": 2.4007
         }
       },
       "made_on": "2026-10-30",
