@@ -1,40 +1,40 @@
 {
-  "date": "2026-10-30",
-  "fetched_at": "2026-10-30T20:15:51.271745+00:00",
+  "date": "2026-10-31",
+  "fetched_at": "2026-10-31T10:10:17.895950+00:00",
   "observations": {
     "btc": {
-      "usd": 76891,
-      "usd_24h_change": -4.23
+      "usd": 77333,
+      "usd_24h_change": -0.1
     },
     "kp": {
-      "max_kp": 2.33,
-      "latest_kp": 1.67,
+      "max_kp": 4.33,
+      "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.2,
-      "count": 218,
-      "strongest_place": "43 km ESE of Port-Olry, Vanuatu"
+      "max_mag": 5.1,
+      "count": 213,
+      "strongest_place": "Balleny Islands region"
     },
     "wiki": {
       "top": "Patrick_Stewart",
-      "views": 2356552,
-      "for_date": "2026-10-29"
+      "views": 1882386,
+      "for_date": "2026-10-30"
     },
     "hn": {
-      "top_id": 50307190,
-      "top_title": "My favourite PowerMac is a Nintendo Wii",
+      "top_id": 50314085,
+      "top_title": "Switch Lowering in GCC",
       "top10": [
+        50314085,
+        50260753,
+        50313661,
         50307190,
+        50277379,
+        50303172,
         50305025,
-        50300683,
-        50306442,
+        50312756,
         50263837,
-        50308697,
-        50305637,
-        50305573,
-        50296730,
-        50307219
+        50290652
       ]
     },
     "weather": {
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.562,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 76891,
-        "change_24h": -4.23
+        "today_usd": 77333,
+        "change_24h": -0.1
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "kp_storm",
@@ -68,13 +68,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 2.33
+        "today_max_kp": 4.33
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Patrick_Stewart"
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50307190,
-        "top_title": "My favourite PowerMac is a Nintendo Wii"
+        "top_id": 50314085,
+        "top_title": "Switch Lowering in GCC"
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "forecast_hit",
@@ -132,8 +132,8 @@
         "for_date": "2026-11-01",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.672,
+      "confidence": 0.548,
       "basis": {
-        "today_usd": 76891,
-        "change_24h": -4.23,
+        "today_usd": 77333,
+        "change_24h": -0.1,
         "model": {
-          "p_event": 0.6721,
-          "n_train": 93,
+          "p_event": 0.5479,
+          "n_train": 94,
           "fallback": null,
           "features": [
-            -4.23,
-            -4.695149915095631,
-            -5.306650246305422,
-            1.6088167825347597
+            -0.1,
+            -4.6378277061188244,
+            -3.6000548484810713,
+            1.370615817806511
           ],
           "weights": [
-            -0.2512,
-            0.2792,
-            -0.2776,
-            -0.131
+            -0.2859,
+            0.2824,
+            -0.2918,
+            -0.1176
           ],
-          "bias": 0.2405
+          "bias": 0.2604
         }
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "kp_storm_ml",
@@ -174,31 +174,31 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": false,
-      "confidence": 0.684,
+      "call": true,
+      "confidence": 0.73,
       "basis": {
-        "today_max_kp": 2.33,
+        "today_max_kp": 4.33,
         "model": {
-          "p_event": 0.3157,
-          "n_train": 96,
+          "p_event": 0.73,
+          "n_train": 97,
           "fallback": null,
           "features": [
-            2.33,
-            2.33,
+            4.33,
+            2.9966666666666666,
             2.5228571428571427,
-            2.67
+            5.0
           ],
           "weights": [
-            1.0004,
-            -0.2515,
-            -0.1429,
-            0.1226
+            0.9853,
+            -0.2616,
+            -0.1663,
+            0.1278
           ],
-          "bias": -0.5162
+          "bias": -0.4833
         }
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9898,
-          "n_train": 96,
+          "p_event": 0.9899,
+          "n_train": 97,
           "fallback": "laplace",
           "features": [
-            6.2,
-            210.0,
-            6.185714285714285,
+            5.1,
+            212.42857142857142,
+            5.928571428571429,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.547,
+      "confidence": 0.74,
       "basis": {
         "today_top": "Patrick_Stewart",
         "model": {
-          "p_event": 0.5468,
-          "n_train": 88,
+          "p_event": 0.7397,
+          "n_train": 89,
           "fallback": null,
           "features": [
-            1.0,
-            14.672710516075393,
-            2.677990860404192,
-            1.0
+            2.0,
+            14.448051210294095,
+            1.7599152571688752,
+            0.0
           ],
           "weights": [
-            -0.6811,
-            -0.6212,
-            0.439,
-            -0.7131
+            -0.6802,
+            -0.632,
+            0.4945,
+            -0.6996
           ],
-          "bias": 0.6521
+          "bias": 0.668
         }
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.937,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50307190,
-        "top_title": "My favourite PowerMac is a Nintendo Wii",
+        "top_id": 50314085,
+        "top_title": "Switch Lowering in GCC",
         "model": {
-          "p_event": 0.9367,
-          "n_train": 96,
+          "p_event": 0.9986,
+          "n_train": 97,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            4.0
+            0.3,
+            4.0,
+            5.0
           ],
           "weights": [
-            0.3888,
-            -0.184,
-            0.1117
+            0.4189,
+            -0.1963,
+            0.031
           ],
-          "bias": 2.7939
+          "bias": 2.6409
         }
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-10-31"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-01"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.892,
+      "confidence": 0.95,
       "basis": {
         "forecast_c": 27.6,
         "for_date": "2026-11-01",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8922,
+          "p_event": 0.9997,
           "n_train": 84,
           "fallback": null,
           "features": [
             0.6000000000000014,
-            2.9704545106767752,
-            0.5000000000000018,
-            0.6000000000000014
+            3.6427462167985296,
+            3.3000000000000007,
+            6.199999999999999
           ],
           "weights": [
             -0.4112,
@@ -319,8 +319,8 @@
           "bias": 2.4007
         }
       },
-      "made_on": "2026-10-30",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-10-31",
+      "resolve_on": "2026-11-02"
     }
   ]
 }
