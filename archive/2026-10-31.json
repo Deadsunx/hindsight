@@ -1,10 +1,10 @@
 {
   "date": "2026-10-31",
-  "fetched_at": "2026-10-31T10:10:17.895950+00:00",
+  "fetched_at": "2026-10-31T19:38:12.720633+00:00",
   "observations": {
     "btc": {
-      "usd": 77333,
-      "usd_24h_change": -0.1
+      "usd": 77498,
+      "usd_24h_change": 1.48
     },
     "kp": {
       "max_kp": 4.33,
@@ -12,9 +12,9 @@
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.1,
-      "count": 213,
-      "strongest_place": "Balleny Islands region"
+      "max_mag": 5.2,
+      "count": 214,
+      "strongest_place": "4 km S of Bajo Corral, Panama"
     },
     "wiki": {
       "top": "Patrick_Stewart",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-30"
     },
     "hn": {
-      "top_id": 50314085,
-      "top_title": "Switch Lowering in GCC",
+      "top_id": 50318871,
+      "top_title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
       "top10": [
-        50314085,
-        50260753,
-        50313661,
-        50307190,
-        50277379,
-        50303172,
-        50305025,
-        50312756,
-        50263837,
-        50290652
+        50318871,
+        50319061,
+        50314666,
+        50318720,
+        50314699,
+        50316100,
+        50274186,
+        50318182,
+        50317363,
+        50318442
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 21.2,
-      "actual_prev_date": "2026-10-30",
-      "today": 27.0,
-      "forecast_next": 27.6,
-      "forecast_next_date": "2026-11-01"
+      "actual_prev": 27.1,
+      "actual_prev_date": "2026-10-31",
+      "today": 27.7,
+      "forecast_next": 27.9,
+      "forecast_next_date": "2026-11-02"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.521,
+      "call": true,
+      "confidence": 0.535,
       "basis": {
-        "today_usd": 77333,
-        "change_24h": -0.1
+        "today_usd": 77498,
+        "change_24h": 1.48
       },
       "made_on": "2026-10-31",
       "resolve_on": "2026-11-01"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50314085,
-        "top_title": "Switch Lowering in GCC"
+        "top_id": 50318871,
+        "top_title": "GPT-5.6 Sol can beat Factorio on peaceful mode"
       },
       "made_on": "2026-10-31",
       "resolve_on": "2026-11-01"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.6,
-        "for_date": "2026-11-01",
+        "forecast_c": 27.9,
+        "for_date": "2026-11-02",
         "city": "New Delhi"
       },
       "made_on": "2026-10-31",
@@ -141,20 +141,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.548,
+      "call": false,
+      "confidence": 0.507,
       "basis": {
-        "today_usd": 77333,
-        "change_24h": -0.1,
+        "today_usd": 77498,
+        "change_24h": 1.48,
         "model": {
-          "p_event": 0.5479,
+          "p_event": 0.4926,
           "n_train": 94,
           "fallback": null,
           "features": [
-            -0.1,
-            -4.6378277061188244,
-            -3.6000548484810713,
-            1.370615817806511
+            1.48,
+            -4.434360125286707,
+            -3.3943730444646714,
+            1.3917963041204702
           ],
           "weights": [
             -0.2859,
@@ -215,9 +215,9 @@
           "n_train": 97,
           "fallback": "laplace",
           "features": [
-            5.1,
-            212.42857142857142,
-            5.928571428571429,
+            5.2,
+            212.57142857142858,
+            5.942857142857143,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.941,
       "basis": {
-        "top_id": 50314085,
-        "top_title": "Switch Lowering in GCC",
+        "top_id": 50318871,
+        "top_title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
         "model": {
-          "p_event": 0.9986,
+          "p_event": 0.941,
           "n_train": 97,
           "fallback": null,
           "features": [
-            0.3,
-            4.0,
+            0.0,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4189,
-            -0.1963,
-            0.031
+            0.3864,
+            -0.1828,
+            0.1176
           ],
-          "bias": 2.6409
+          "bias": 2.8047
         }
       },
       "made_on": "2026-10-31",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.897,
       "basis": {
-        "forecast_c": 27.6,
-        "for_date": "2026-11-01",
+        "forecast_c": 27.9,
+        "for_date": "2026-11-02",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9997,
-          "n_train": 84,
+          "p_event": 0.8969,
+          "n_train": 85,
           "fallback": null,
           "features": [
-            0.6000000000000014,
-            3.6427462167985296,
-            3.3000000000000007,
-            6.199999999999999
+            0.1999999999999993,
+            2.9510845463998483,
+            0.40000000000000213,
+            0.40000000000000213
           ],
           "weights": [
-            -0.4112,
-            0.2217,
-            -0.4029,
-            0.9524
+            -0.4105,
+            0.2354,
+            -0.3958,
+            0.9218
           ],
-          "bias": 2.4007
+          "bias": 2.4056
         }
       },
       "made_on": "2026-10-31",

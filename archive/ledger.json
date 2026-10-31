@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T10:10:19.247204+00:00",
+  "updated": "2026-10-31T19:38:14.846972+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 72,
-      "rule_correct": 67,
-      "model_correct": 67,
-      "rule_accuracy": 0.9306,
-      "model_accuracy": 0.9306,
-      "rule_brier": 0.0672,
-      "model_brier": 0.0662,
-      "rule_log_loss": 0.2662,
-      "model_log_loss": 0.2645,
+      "rule_correct": 68,
+      "model_correct": 68,
+      "rule_accuracy": 0.9444,
+      "model_accuracy": 0.9444,
+      "rule_brier": 0.0566,
+      "model_brier": 0.0541,
+      "rule_log_loss": 0.2385,
+      "model_log_loss": 0.227,
       "coin_flip": {
         "n": 72,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 169,
-        "rate": 0.929,
-        "majority_accuracy": 0.929
+        "rate": 0.9408,
+        "majority_accuracy": 0.9408
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 58,
-      "rule_correct": 50,
-      "model_correct": 50,
-      "rule_accuracy": 0.8621,
-      "model_accuracy": 0.8621,
-      "rule_brier": 0.1228,
-      "model_brier": 0.1183,
-      "rule_log_loss": 0.4144,
-      "model_log_loss": 0.4141,
+      "shared_days": 59,
+      "rule_correct": 51,
+      "model_correct": 51,
+      "rule_accuracy": 0.8644,
+      "model_accuracy": 0.8644,
+      "rule_brier": 0.1214,
+      "model_brier": 0.1169,
+      "rule_log_loss": 0.4111,
+      "model_log_loss": 0.4107,
       "coin_flip": {
-        "n": 58,
+        "n": 59,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 142,
-        "rate": 0.8803,
-        "majority_accuracy": 0.8803
+        "n": 144,
+        "rate": 0.8819,
+        "majority_accuracy": 0.8819
       }
     }
   },
   "totals": {
-    "graded": 966,
-    "correct": 739,
-    "accuracy": 0.765,
-    "brier": 0.1483,
-    "log_loss": 0.4537,
+    "graded": 968,
+    "correct": 743,
+    "accuracy": 0.7676,
+    "brier": 0.1464,
+    "log_loss": 0.4484,
     "open": 14,
-    "void": 37,
+    "void": 35,
     "days": 98
   },
   "baselines": {
     "coin_flip": {
-      "n": 966,
+      "n": 968,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 966,
-      "rate": 0.7298,
-      "majority_accuracy": 0.7298
+      "n": 968,
+      "rate": 0.7324,
+      "majority_accuracy": 0.7324
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 97,
-      "correct": 90,
-      "accuracy": 0.9278,
-      "brier": 0.0692,
-      "log_loss": 0.2716,
-      "base_rate": 0.9278,
-      "majority_accuracy": 0.9278
+      "correct": 91,
+      "accuracy": 0.9381,
+      "brier": 0.0614,
+      "log_loss": 0.2511,
+      "base_rate": 0.9381,
+      "majority_accuracy": 0.9381
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 84,
-      "correct": 75,
-      "accuracy": 0.8929,
-      "brier": 0.1043,
-      "log_loss": 0.3717,
-      "base_rate": 0.8929,
-      "majority_accuracy": 0.8929
+      "graded": 85,
+      "correct": 76,
+      "accuracy": 0.8941,
+      "brier": 0.1035,
+      "log_loss": 0.3699,
+      "base_rate": 0.8941,
+      "majority_accuracy": 0.8941
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 72,
-      "correct": 67,
-      "accuracy": 0.9306,
-      "brier": 0.0662,
-      "log_loss": 0.2645,
-      "base_rate": 0.9306,
-      "majority_accuracy": 0.9306
+      "correct": 68,
+      "accuracy": 0.9444,
+      "brier": 0.0541,
+      "log_loss": 0.227,
+      "base_rate": 0.9444,
+      "majority_accuracy": 0.9444
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 58,
-      "correct": 50,
-      "accuracy": 0.8621,
-      "brier": 0.1183,
-      "log_loss": 0.4141,
-      "base_rate": 0.8621,
-      "majority_accuracy": 0.8621
+      "graded": 59,
+      "correct": 51,
+      "accuracy": 0.8644,
+      "brier": 0.1169,
+      "log_loss": 0.4107,
+      "base_rate": 0.8644,
+      "majority_accuracy": 0.8644
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 232,
-      "claimed": 0.8448,
-      "actual": 0.8707
+      "n": 234,
+      "claimed": 0.8445,
+      "actual": 0.8761
     },
     {
       "label": "90\u2013100%",
       "n": 286,
       "claimed": 0.9435,
-      "actual": 0.9545
+      "actual": 0.958
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.521,
+      "call": true,
+      "confidence": 0.535,
       "basis": {
-        "today_usd": 77333,
-        "change_24h": -0.1
+        "today_usd": 77498,
+        "change_24h": 1.48
       },
       "made_on": "2026-10-31",
       "resolve_on": "2026-11-01"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50314085,
-        "top_title": "Switch Lowering in GCC"
+        "top_id": 50318871,
+        "top_title": "GPT-5.6 Sol can beat Factorio on peaceful mode"
       },
       "made_on": "2026-10-31",
       "resolve_on": "2026-11-01"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.6,
-        "for_date": "2026-11-01",
+        "forecast_c": 27.9,
+        "for_date": "2026-11-02",
         "city": "New Delhi"
       },
       "made_on": "2026-10-31",
@@ -498,20 +498,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.548,
+      "call": false,
+      "confidence": 0.507,
       "basis": {
-        "today_usd": 77333,
-        "change_24h": -0.1,
+        "today_usd": 77498,
+        "change_24h": 1.48,
         "model": {
-          "p_event": 0.5479,
+          "p_event": 0.4926,
           "n_train": 94,
           "fallback": null,
           "features": [
-            -0.1,
-            -4.6378277061188244,
-            -3.6000548484810713,
-            1.370615817806511
+            1.48,
+            -4.434360125286707,
+            -3.3943730444646714,
+            1.3917963041204702
           ],
           "weights": [
             -0.2859,
@@ -572,9 +572,9 @@
           "n_train": 97,
           "fallback": "laplace",
           "features": [
-            5.1,
-            212.42857142857142,
-            5.928571428571429,
+            5.2,
+            212.57142857142858,
+            5.942857142857143,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.941,
       "basis": {
-        "top_id": 50314085,
-        "top_title": "Switch Lowering in GCC",
+        "top_id": 50318871,
+        "top_title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
         "model": {
-          "p_event": 0.9986,
+          "p_event": 0.941,
           "n_train": 97,
           "fallback": null,
           "features": [
-            0.3,
-            4.0,
+            0.0,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4189,
-            -0.1963,
-            0.031
+            0.3864,
+            -0.1828,
+            0.1176
           ],
-          "bias": 2.6409
+          "bias": 2.8047
         }
       },
       "made_on": "2026-10-31",
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.897,
       "basis": {
-        "forecast_c": 27.6,
-        "for_date": "2026-11-01",
+        "forecast_c": 27.9,
+        "for_date": "2026-11-02",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9997,
-          "n_train": 84,
+          "p_event": 0.8969,
+          "n_train": 85,
           "fallback": null,
           "features": [
-            0.6000000000000014,
-            3.6427462167985296,
-            3.3000000000000007,
-            6.199999999999999
+            0.1999999999999993,
+            2.9510845463998483,
+            0.40000000000000213,
+            0.40000000000000213
           ],
           "weights": [
-            -0.4112,
-            0.2217,
-            -0.4029,
-            0.9524
+            -0.4105,
+            0.2354,
+            -0.3958,
+            0.9218
           ],
-          "bias": 2.4007
+          "bias": 2.4056
         }
       },
       "made_on": "2026-10-31",
@@ -13045,6 +13045,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-31",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -13110,6 +13123,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-10-29",
+      "resolve_on": "2026-10-31",
+      "call": true,
+      "confidence": 0.808,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -13171,8 +13197,8 @@
       "resolve_on": "2026-10-31",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -13236,8 +13262,8 @@
       "resolve_on": "2026-10-31",
       "call": true,
       "confidence": 0.937,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
