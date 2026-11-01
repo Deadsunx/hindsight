@@ -1,20 +1,20 @@
 {
   "date": "2026-11-01",
-  "fetched_at": "2026-11-01T11:00:49.473102+00:00",
+  "fetched_at": "2026-11-01T19:58:53.236877+00:00",
   "observations": {
     "btc": {
-      "usd": 77931,
-      "usd_24h_change": 0.78
+      "usd": 77707,
+      "usd_24h_change": 0.28
     },
     "kp": {
       "max_kp": 6.0,
-      "latest_kp": 3.33,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6,
-      "count": 216,
-      "strongest_place": "58 km SSE of Shima, Japan"
+      "count": 207,
+      "strongest_place": "165 km NW of Port-Olry, Vanuatu"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-10-31"
     },
     "hn": {
-      "top_id": 50319510,
-      "top_title": "HackerTube: YouTube built from videos recommended by HN",
+      "top_id": 50326821,
+      "top_title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
       "top10": [
+        50326821,
+        50328487,
         50319510,
-        50290480,
-        50320963,
-        50324118,
-        50322173,
-        50303984,
-        50319143,
-        50323848,
-        50320995,
-        50322022
+        50327650,
+        50308754,
+        50326118,
+        50325454,
+        50328251,
+        50319749,
+        50327058
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 27.1,
-      "actual_prev_date": "2026-10-31",
-      "today": 27.5,
-      "forecast_next": 27.7,
-      "forecast_next_date": "2026-11-02"
+      "actual_prev": 27.7,
+      "actual_prev_date": "2026-11-01",
+      "today": 27.9,
+      "forecast_next": 28.0,
+      "forecast_next_date": "2026-11-03"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.528,
+      "confidence": 0.523,
       "basis": {
-        "today_usd": 77931,
-        "change_24h": 0.78
+        "today_usd": 77707,
+        "change_24h": 0.28
       },
       "made_on": "2026-11-01",
       "resolve_on": "2026-11-02"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50319510,
-        "top_title": "HackerTube: YouTube built from videos recommended by HN"
+        "top_id": 50326821,
+        "top_title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN"
       },
       "made_on": "2026-11-01",
       "resolve_on": "2026-11-02"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.7,
-        "for_date": "2026-11-02",
+        "forecast_c": 28.0,
+        "for_date": "2026-11-03",
         "city": "New Delhi"
       },
       "made_on": "2026-11-01",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.577,
+      "confidence": 0.592,
       "basis": {
-        "today_usd": 77931,
-        "change_24h": 0.78,
+        "today_usd": 77707,
+        "change_24h": 0.28,
         "model": {
-          "p_event": 0.5774,
+          "p_event": 0.5915,
           "n_train": 95,
           "fallback": null,
           "features": [
-            0.78,
-            -2.0425863542661737,
-            -3.3006166941718096,
-            1.4323667432326797
+            0.28,
+            -2.3241490271004084,
+            -3.5785633631546965,
+            1.4126024618606075
           ],
           "weights": [
             -0.2378,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.0,
-            213.71428571428572,
+            212.42857142857142,
             5.871428571428572,
             1.0
           ]
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.946,
       "basis": {
-        "top_id": 50319510,
-        "top_title": "HackerTube: YouTube built from videos recommended by HN",
+        "top_id": 50326821,
+        "top_title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
         "model": {
           "p_event": 0.9456,
           "n_train": 98,
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.923,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 27.7,
-        "for_date": "2026-11-02",
+        "forecast_c": 28.0,
+        "for_date": "2026-11-03",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9225,
-          "n_train": 85,
+          "p_event": 0.9777,
+          "n_train": 86,
           "fallback": null,
           "features": [
-            0.1999999999999993,
-            2.8908303305451875,
-            1.0999999999999979,
-            1.0999999999999979
+            0.10000000000000142,
+            2.877933286231632,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4105,
-            0.2354,
-            -0.3958,
-            0.9218
+            -0.4138,
+            0.2707,
+            -0.398,
+            0.9086
           ],
-          "bias": 2.4056
+          "bias": 2.4172
         }
       },
       "made_on": "2026-11-01",
