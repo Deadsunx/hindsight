@@ -1,48 +1,48 @@
 {
-  "date": "2026-10-31",
-  "fetched_at": "2026-10-31T19:38:12.720633+00:00",
+  "date": "2026-11-01",
+  "fetched_at": "2026-11-01T11:00:49.473102+00:00",
   "observations": {
     "btc": {
-      "usd": 77498,
-      "usd_24h_change": 1.48
+      "usd": 77931,
+      "usd_24h_change": 0.78
     },
     "kp": {
-      "max_kp": 4.33,
+      "max_kp": 6.0,
       "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.2,
-      "count": 214,
-      "strongest_place": "4 km S of Bajo Corral, Panama"
+      "max_mag": 6,
+      "count": 216,
+      "strongest_place": "58 km SSE of Shima, Japan"
     },
     "wiki": {
-      "top": "Patrick_Stewart",
-      "views": 1882386,
-      "for_date": "2026-10-30"
+      "top": "Wikipedia:Featured_pictures",
+      "views": 562223,
+      "for_date": "2026-10-31"
     },
     "hn": {
-      "top_id": 50318871,
-      "top_title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
+      "top_id": 50319510,
+      "top_title": "HackerTube: YouTube built from videos recommended by HN",
       "top10": [
-        50318871,
-        50319061,
-        50314666,
-        50318720,
-        50314699,
-        50316100,
-        50274186,
-        50318182,
-        50317363,
-        50318442
+        50319510,
+        50290480,
+        50320963,
+        50324118,
+        50322173,
+        50303984,
+        50319143,
+        50323848,
+        50320995,
+        50322022
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 27.1,
       "actual_prev_date": "2026-10-31",
-      "today": 27.7,
-      "forecast_next": 27.9,
+      "today": 27.5,
+      "forecast_next": 27.7,
       "forecast_next_date": "2026-11-02"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.535,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 77498,
-        "change_24h": 1.48
+        "today_usd": 77931,
+        "change_24h": 0.78
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.33
+        "today_max_kp": 6.0
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Patrick_Stewart"
+        "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50318871,
-        "top_title": "GPT-5.6 Sol can beat Factorio on peaceful mode"
+        "top_id": 50319510,
+        "top_title": "HackerTube: YouTube built from videos recommended by HN"
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.9,
+        "forecast_c": 27.7,
         "for_date": "2026-11-02",
         "city": "New Delhi"
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "btc_up_ml",
@@ -141,32 +141,32 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.507,
+      "call": true,
+      "confidence": 0.577,
       "basis": {
-        "today_usd": 77498,
-        "change_24h": 1.48,
+        "today_usd": 77931,
+        "change_24h": 0.78,
         "model": {
-          "p_event": 0.4926,
-          "n_train": 94,
+          "p_event": 0.5774,
+          "n_train": 95,
           "fallback": null,
           "features": [
-            1.48,
-            -4.434360125286707,
-            -3.3943730444646714,
-            1.3917963041204702
+            0.78,
+            -2.0425863542661737,
+            -3.3006166941718096,
+            1.4323667432326797
           ],
           "weights": [
-            -0.2859,
-            0.2824,
-            -0.2918,
-            -0.1176
+            -0.2378,
+            0.2237,
+            -0.2881,
+            -0.1119
           ],
-          "bias": 0.2604
+          "bias": 0.2795
         }
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.73,
+      "confidence": 0.871,
       "basis": {
-        "today_max_kp": 4.33,
+        "today_max_kp": 6.0,
         "model": {
-          "p_event": 0.73,
-          "n_train": 97,
+          "p_event": 0.8712,
+          "n_train": 98,
           "fallback": null,
           "features": [
-            4.33,
-            2.9966666666666666,
-            2.5228571428571427,
-            5.0
+            6.0,
+            4.22,
+            3.141428571428572,
+            5.33
           ],
           "weights": [
-            0.9853,
-            -0.2616,
-            -0.1663,
-            0.1278
+            1.0014,
+            -0.2726,
+            -0.1813,
+            0.1567
           ],
-          "bias": -0.4833
+          "bias": -0.4567
         }
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9899,
-          "n_train": 97,
+          "p_event": 0.99,
+          "n_train": 98,
           "fallback": "laplace",
           "features": [
-            5.2,
-            212.57142857142858,
-            5.942857142857143,
+            6.0,
+            213.71428571428572,
+            5.871428571428572,
             1.0
           ]
         }
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.74,
+      "confidence": 0.629,
       "basis": {
-        "today_top": "Patrick_Stewart",
+        "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.7397,
-          "n_train": 89,
+          "p_event": 0.6285,
+          "n_train": 90,
           "fallback": null,
           "features": [
-            2.0,
-            14.448051210294095,
-            1.7599152571688752,
-            0.0
+            1.0,
+            13.239655625977765,
+            0.5255546047511377,
+            1.0
           ],
           "weights": [
-            -0.6802,
-            -0.632,
-            0.4945,
-            -0.6996
+            -0.6324,
+            -0.6817,
+            0.492,
+            -0.6264
           ],
-          "bias": 0.668
+          "bias": 0.6296
         }
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.941,
+      "confidence": 0.946,
       "basis": {
-        "top_id": 50318871,
-        "top_title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
+        "top_id": 50319510,
+        "top_title": "HackerTube: YouTube built from videos recommended by HN",
         "model": {
-          "p_event": 0.941,
-          "n_train": 97,
+          "p_event": 0.9456,
+          "n_train": 98,
           "fallback": null,
           "features": [
             0.0,
             11.0,
-            5.0
+            6.0
           ],
           "weights": [
-            0.3864,
-            -0.1828,
-            0.1176
+            0.3839,
+            -0.1814,
+            0.1278
           ],
-          "bias": 2.8047
+          "bias": 2.816
         }
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-01"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.897,
+      "confidence": 0.923,
       "basis": {
-        "forecast_c": 27.9,
+        "forecast_c": 27.7,
         "for_date": "2026-11-02",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8969,
+          "p_event": 0.9225,
           "n_train": 85,
           "fallback": null,
           "features": [
             0.1999999999999993,
-            2.9510845463998483,
-            0.40000000000000213,
-            0.40000000000000213
+            2.8908303305451875,
+            1.0999999999999979,
+            1.0999999999999979
           ],
           "weights": [
             -0.4105,
@@ -319,8 +319,8 @@
           "bias": 2.4056
         }
       },
-      "made_on": "2026-10-31",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-03"
     }
   ]
 }

@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-01",
+  "fetched_at": "2026-11-01T11:00:49.473102+00:00",
+  "observations": {
+    "btc": {
+      "usd": 77931,
+      "usd_24h_change": 0.78
+    },
+    "kp": {
+      "max_kp": 6.0,
+      "latest_kp": 3.33,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6,
+      "count": 216,
+      "strongest_place": "58 km SSE of Shima, Japan"
+    },
+    "wiki": {
+      "top": "Wikipedia:Featured_pictures",
+      "views": 562223,
+      "for_date": "2026-10-31"
+    },
+    "hn": {
+      "top_id": 50319510,
+      "top_title": "HackerTube: YouTube built from videos recommended by HN",
+      "top10": [
+        50319510,
+        50290480,
+        50320963,
+        50324118,
+        50322173,
+        50303984,
+        50319143,
+        50323848,
+        50320995,
+        50322022
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 27.1,
+      "actual_prev_date": "2026-10-31",
+      "today": 27.5,
+      "forecast_next": 27.7,
+      "forecast_next_date": "2026-11-02"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.528,
+      "basis": {
+        "today_usd": 77931,
+        "change_24h": 0.78
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_max_kp": 6.0
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures"
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50319510,
+        "top_title": "HackerTube: YouTube built from videos recommended by HN"
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 27.7,
+        "for_date": "2026-11-02",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-03"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.577,
+      "basis": {
+        "today_usd": 77931,
+        "change_24h": 0.78,
+        "model": {
+          "p_event": 0.5774,
+          "n_train": 95,
+          "fallback": null,
+          "features": [
+            0.78,
+            -2.0425863542661737,
+            -3.3006166941718096,
+            1.4323667432326797
+          ],
+          "weights": [
+            -0.2378,
+            0.2237,
+            -0.2881,
+            -0.1119
+          ],
+          "bias": 0.2795
+        }
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.871,
+      "basis": {
+        "today_max_kp": 6.0,
+        "model": {
+          "p_event": 0.8712,
+          "n_train": 98,
+          "fallback": null,
+          "features": [
+            6.0,
+            4.22,
+            3.141428571428572,
+            5.33
+          ],
+          "weights": [
+            1.0014,
+            -0.2726,
+            -0.1813,
+            0.1567
+          ],
+          "bias": -0.4567
+        }
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.99,
+          "n_train": 98,
+          "fallback": "laplace",
+          "features": [
+            6.0,
+            213.71428571428572,
+            5.871428571428572,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.629,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures",
+        "model": {
+          "p_event": 0.6285,
+          "n_train": 90,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.239655625977765,
+            0.5255546047511377,
+            1.0
+          ],
+          "weights": [
+            -0.6324,
+            -0.6817,
+            0.492,
+            -0.6264
+          ],
+          "bias": 0.6296
+        }
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.946,
+      "basis": {
+        "top_id": 50319510,
+        "top_title": "HackerTube: YouTube built from videos recommended by HN",
+        "model": {
+          "p_event": 0.9456,
+          "n_train": 98,
+          "fallback": null,
+          "features": [
+            0.0,
+            11.0,
+            6.0
+          ],
+          "weights": [
+            0.3839,
+            -0.1814,
+            0.1278
+          ],
+          "bias": 2.816
+        }
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-02"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.923,
+      "basis": {
+        "forecast_c": 27.7,
+        "for_date": "2026-11-02",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.9225,
+          "n_train": 85,
+          "fallback": null,
+          "features": [
+            0.1999999999999993,
+            2.8908303305451875,
+            1.0999999999999979,
+            1.0999999999999979
+          ],
+          "weights": [
+            -0.4105,
+            0.2354,
+            -0.3958,
+            0.9218
+          ],
+          "bias": 2.4056
+        }
+      },
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-03"
+    }
+  ]
+}
