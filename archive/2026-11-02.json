@@ -1,20 +1,20 @@
 {
   "date": "2026-11-02",
-  "fetched_at": "2026-11-02T11:58:57.391079+00:00",
+  "fetched_at": "2026-11-02T23:15:27.878765+00:00",
   "observations": {
     "btc": {
-      "usd": 77816,
-      "usd_24h_change": -0.05
+      "usd": 76693,
+      "usd_24h_change": -1.78
     },
     "kp": {
-      "max_kp": 3.33,
-      "latest_kp": 3.0,
+      "max_kp": 3.0,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.1,
-      "count": 200,
-      "strongest_place": "19 km WNW of Tomohon, Indonesia"
+      "max_mag": 5.3,
+      "count": 286,
+      "strongest_place": "81 km SSE of Palekastro, Greece"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-01"
     },
     "hn": {
-      "top_id": 50326821,
-      "top_title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
+      "top_id": 50341174,
+      "top_title": "Astra can read and write weights to improve Qwen",
       "top10": [
-        50326821,
-        50312408,
-        50333339,
-        50319510,
-        50334704,
-        50332163,
-        50331957,
-        50328896,
-        50315217,
-        50331784
+        50341174,
+        50344958,
+        50340088,
+        50344670,
+        50339397,
+        50344222,
+        50339913,
+        50336518,
+        50339221,
+        50344919
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 27.7,
-      "actual_prev_date": "2026-11-01",
-      "today": 27.7,
-      "forecast_next": 27.8,
-      "forecast_next_date": "2026-11-03"
+      "actual_prev": 28.3,
+      "actual_prev_date": "2026-11-02",
+      "today": 28.3,
+      "forecast_next": 28.1,
+      "forecast_next_date": "2026-11-04"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.52,
+      "confidence": 0.538,
       "basis": {
-        "today_usd": 77816,
-        "change_24h": -0.05
+        "today_usd": 76693,
+        "change_24h": -1.78
       },
       "made_on": "2026-11-02",
       "resolve_on": "2026-11-03"
@@ -68,10 +68,10 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.33
+        "today_max_kp": 3.0
       },
       "made_on": "2026-11-02",
       "resolve_on": "2026-11-03"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50326821,
-        "top_title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN"
+        "top_id": 50341174,
+        "top_title": "Astra can read and write weights to improve Qwen"
       },
       "made_on": "2026-11-02",
       "resolve_on": "2026-11-03"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.8,
-        "for_date": "2026-11-03",
+        "forecast_c": 28.1,
+        "for_date": "2026-11-04",
         "city": "New Delhi"
       },
       "made_on": "2026-11-02",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.643,
+      "confidence": 0.673,
       "basis": {
-        "today_usd": 77816,
-        "change_24h": -0.05,
+        "today_usd": 76693,
+        "change_24h": -1.78,
         "model": {
-          "p_event": 0.643,
+          "p_event": 0.6726,
           "n_train": 96,
           "fallback": null,
           "features": [
-            -0.05,
-            1.203001651688762,
-            -2.399377892611221,
-            1.3987502272971777
+            -1.78,
+            -0.25750738057770395,
+            -3.807899258738978,
+            1.4186195429970654
           ],
           "weights": [
-            -0.2245,
-            0.2096,
-            -0.3008,
-            -0.1057
+            -0.2547,
+            0.2436,
+            -0.269,
+            -0.1196
           ],
-          "bias": 0.2982
+          "bias": 0.2547
         }
       },
       "made_on": "2026-11-02",
@@ -175,26 +175,26 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.647,
+      "confidence": 0.712,
       "basis": {
-        "today_max_kp": 3.33,
+        "today_max_kp": 3.0,
         "model": {
-          "p_event": 0.3529,
+          "p_event": 0.2878,
           "n_train": 99,
           "fallback": null,
           "features": [
-            3.33,
-            4.553333333333334,
-            3.3314285714285714,
+            3.0,
+            4.443333333333333,
+            3.2842857142857147,
             4.0
           ],
           "weights": [
-            1.0352,
-            -0.2727,
-            -0.1845,
-            0.1702
+            0.9265,
+            -0.2615,
+            -0.1558,
+            0.0999
           ],
-          "bias": -0.427
+          "bias": -0.4694
         }
       },
       "made_on": "2026-11-02",
@@ -215,9 +215,9 @@
           "n_train": 99,
           "fallback": "laplace",
           "features": [
-            5.1,
-            212.42857142857142,
-            5.814285714285715,
+            5.3,
+            224.71428571428572,
+            5.8428571428571425,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.922,
       "basis": {
-        "top_id": 50326821,
-        "top_title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
+        "top_id": 50341174,
+        "top_title": "Astra can read and write weights to improve Qwen",
         "model": {
-          "p_event": 0.9978,
+          "p_event": 0.9216,
           "n_train": 99,
           "fallback": null,
           "features": [
-            0.2,
-            1.0,
+            0.0,
+            11.0,
             0.0
           ],
           "weights": [
-            0.4199,
-            -0.1982,
-            -0.0759
+            0.3815,
+            -0.18,
+            0.1417
           ],
-          "bias": 2.6624
+          "bias": 2.8277
         }
       },
       "made_on": "2026-11-02",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.892,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 27.8,
-        "for_date": "2026-11-03",
+        "forecast_c": 28.1,
+        "for_date": "2026-11-04",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8915,
-          "n_train": 86,
+          "p_event": 0.9769,
+          "n_train": 87,
           "fallback": null,
           "features": [
-            0.10000000000000142,
-            2.7694042680692177,
-            0.09999999999999787,
-            0.09999999999999787
+            0.1999999999999993,
+            2.7735176220821094,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4138,
-            0.2707,
-            -0.398,
-            0.9086
+            -0.4202,
+            0.303,
+            -0.3989,
+            0.8957
           ],
-          "bias": 2.4172
+          "bias": 2.4281
         }
       },
       "made_on": "2026-11-02",
