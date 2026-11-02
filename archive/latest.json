@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-01",
-  "fetched_at": "2026-11-01T19:58:53.236877+00:00",
+  "date": "2026-11-02",
+  "fetched_at": "2026-11-02T11:58:57.391079+00:00",
   "observations": {
     "btc": {
-      "usd": 77707,
-      "usd_24h_change": 0.28
+      "usd": 77816,
+      "usd_24h_change": -0.05
     },
     "kp": {
-      "max_kp": 6.0,
-      "latest_kp": 2.33,
+      "max_kp": 3.33,
+      "latest_kp": 3.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6,
-      "count": 207,
-      "strongest_place": "165 km NW of Port-Olry, Vanuatu"
+      "max_mag": 5.1,
+      "count": 200,
+      "strongest_place": "19 km WNW of Tomohon, Indonesia"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 562223,
-      "for_date": "2026-10-31"
+      "views": 565855,
+      "for_date": "2026-11-01"
     },
     "hn": {
       "top_id": 50326821,
       "top_title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
       "top10": [
         50326821,
-        50328487,
+        50312408,
+        50333339,
         50319510,
-        50327650,
-        50308754,
-        50326118,
-        50325454,
-        50328251,
-        50319749,
-        50327058
+        50334704,
+        50332163,
+        50331957,
+        50328896,
+        50315217,
+        50331784
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 27.7,
       "actual_prev_date": "2026-11-01",
-      "today": 27.9,
-      "forecast_next": 28.0,
+      "today": 27.7,
+      "forecast_next": 27.8,
       "forecast_next_date": "2026-11-03"
     }
   },
@@ -53,14 +53,14 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.523,
+      "call": false,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 77707,
-        "change_24h": 0.28
+        "today_usd": 77816,
+        "change_24h": -0.05
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 6.0
+        "today_max_kp": 3.33
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "hn_fade",
@@ -116,8 +116,8 @@
         "top_id": 50326821,
         "top_title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN"
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.0,
+        "forecast_c": 27.8,
         "for_date": "2026-11-03",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.592,
+      "confidence": 0.643,
       "basis": {
-        "today_usd": 77707,
-        "change_24h": 0.28,
+        "today_usd": 77816,
+        "change_24h": -0.05,
         "model": {
-          "p_event": 0.5915,
-          "n_train": 95,
+          "p_event": 0.643,
+          "n_train": 96,
           "fallback": null,
           "features": [
-            0.28,
-            -2.3241490271004084,
-            -3.5785633631546965,
-            1.4126024618606075
+            -0.05,
+            1.203001651688762,
+            -2.399377892611221,
+            1.3987502272971777
           ],
           "weights": [
-            -0.2378,
-            0.2237,
-            -0.2881,
-            -0.1119
+            -0.2245,
+            0.2096,
+            -0.3008,
+            -0.1057
           ],
-          "bias": 0.2795
+          "bias": 0.2982
         }
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "kp_storm_ml",
@@ -174,31 +174,31 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": true,
-      "confidence": 0.871,
+      "call": false,
+      "confidence": 0.647,
       "basis": {
-        "today_max_kp": 6.0,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.8712,
-          "n_train": 98,
+          "p_event": 0.3529,
+          "n_train": 99,
           "fallback": null,
           "features": [
-            6.0,
-            4.22,
-            3.141428571428572,
-            5.33
+            3.33,
+            4.553333333333334,
+            3.3314285714285714,
+            4.0
           ],
           "weights": [
-            1.0014,
-            -0.2726,
-            -0.1813,
-            0.1567
+            1.0352,
+            -0.2727,
+            -0.1845,
+            0.1702
           ],
-          "bias": -0.4567
+          "bias": -0.427
         }
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.99,
-          "n_train": 98,
+          "p_event": 0.9901,
+          "n_train": 99,
           "fallback": "laplace",
           "features": [
-            6.0,
+            5.1,
             212.42857142857142,
-            5.871428571428572,
+            5.814285714285715,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.629,
+      "confidence": 0.819,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.6285,
-          "n_train": 90,
+          "p_event": 0.8192,
+          "n_train": 91,
           "fallback": null,
           "features": [
-            1.0,
-            13.239655625977765,
-            0.5255546047511377,
-            1.0
+            2.0,
+            13.246094907854705,
+            0.5310227166238357,
+            0.0
           ],
           "weights": [
-            -0.6324,
-            -0.6817,
-            0.492,
-            -0.6264
+            -0.6393,
+            -0.6978,
+            0.4864,
+            -0.6074
           ],
-          "bias": 0.6296
+          "bias": 0.6466
         }
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.946,
+      "confidence": 0.95,
       "basis": {
         "top_id": 50326821,
         "top_title": "Show HN: HackerBooks \u2013 HackerTube, but for books mentioned on HN",
         "model": {
-          "p_event": 0.9456,
-          "n_train": 98,
+          "p_event": 0.9978,
+          "n_train": 99,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            6.0
+            0.2,
+            1.0,
+            0.0
           ],
           "weights": [
-            0.3839,
-            -0.1814,
-            0.1278
+            0.4199,
+            -0.1982,
+            -0.0759
           ],
-          "bias": 2.816
+          "bias": 2.6624
         }
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-02"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-03"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.892,
       "basis": {
-        "forecast_c": 28.0,
+        "forecast_c": 27.8,
         "for_date": "2026-11-03",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9777,
+          "p_event": 0.8915,
           "n_train": 86,
           "fallback": null,
           "features": [
             0.10000000000000142,
-            2.877933286231632,
-            1.2,
-            2.0
+            2.7694042680692177,
+            0.09999999999999787,
+            0.09999999999999787
           ],
           "weights": [
             -0.4138,
@@ -319,8 +319,8 @@
           "bias": 2.4172
         }
       },
-      "made_on": "2026-11-01",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-02",
+      "resolve_on": "2026-11-04"
     }
   ]
 }
