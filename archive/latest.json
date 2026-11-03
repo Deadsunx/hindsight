@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-02",
-  "fetched_at": "2026-11-02T23:15:27.878765+00:00",
+  "date": "2026-11-03",
+  "fetched_at": "2026-11-03T11:36:35.416294+00:00",
   "observations": {
     "btc": {
-      "usd": 76693,
-      "usd_24h_change": -1.78
+      "usd": 77056,
+      "usd_24h_change": -0.94
     },
     "kp": {
-      "max_kp": 3.0,
-      "latest_kp": 1.0,
+      "max_kp": 2.33,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.3,
-      "count": 286,
-      "strongest_place": "81 km SSE of Palekastro, Greece"
+      "max_mag": 5.4,
+      "count": 245,
+      "strongest_place": "24 km NNW of Rioblanco, Colombia"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 565855,
-      "for_date": "2026-11-01"
+      "views": 558870,
+      "for_date": "2026-11-02"
     },
     "hn": {
       "top_id": 50341174,
       "top_title": "Astra can read and write weights to improve Qwen",
       "top10": [
         50341174,
-        50344958,
+        50348962,
+        50321605,
+        50346849,
+        50346981,
+        50350004,
         50340088,
-        50344670,
-        50339397,
-        50344222,
-        50339913,
-        50336518,
-        50339221,
-        50344919
+        50334523,
+        50332342,
+        50336518
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.3,
       "actual_prev_date": "2026-11-02",
-      "today": 28.3,
-      "forecast_next": 28.1,
+      "today": 27.9,
+      "forecast_next": 27.9,
       "forecast_next_date": "2026-11-04"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.538,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 76693,
-        "change_24h": -1.78
+        "today_usd": 77056,
+        "change_24h": -0.94
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.0
+        "today_max_kp": 2.33
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "hn_fade",
@@ -116,8 +116,8 @@
         "top_id": 50341174,
         "top_title": "Astra can read and write weights to improve Qwen"
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.1,
+        "forecast_c": 27.9,
         "for_date": "2026-11-04",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.673,
+      "confidence": 0.659,
       "basis": {
-        "today_usd": 76693,
-        "change_24h": -1.78,
+        "today_usd": 77056,
+        "change_24h": -0.94,
         "model": {
-          "p_event": 0.6726,
-          "n_train": 96,
+          "p_event": 0.6591,
+          "n_train": 97,
           "fallback": null,
           "features": [
-            -1.78,
-            -0.25750738057770395,
-            -3.807899258738978,
-            1.4186195429970654
+            -0.94,
+            -0.5703372990270683,
+            -4.490635729248005,
+            1.4195234587515326
           ],
           "weights": [
-            -0.2547,
-            0.2436,
-            -0.269,
-            -0.1196
+            -0.2734,
+            0.2632,
+            -0.291,
+            -0.1142
           ],
-          "bias": 0.2547
+          "bias": 0.2738
         }
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.712,
+      "confidence": 0.797,
       "basis": {
-        "today_max_kp": 3.0,
+        "today_max_kp": 2.33,
         "model": {
-          "p_event": 0.2878,
-          "n_train": 99,
+          "p_event": 0.2026,
+          "n_train": 100,
           "fallback": null,
           "features": [
-            3.0,
-            4.443333333333333,
-            3.2842857142857147,
-            4.0
+            2.33,
+            3.776666666666667,
+            3.2357142857142853,
+            2.67
           ],
           "weights": [
-            0.9265,
-            -0.2615,
-            -0.1558,
-            0.0999
+            0.9508,
+            -0.3004,
+            -0.1486,
+            0.0888
           ],
-          "bias": -0.4694
+          "bias": -0.4884
         }
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9901,
-          "n_train": 99,
+          "p_event": 0.9902,
+          "n_train": 100,
           "fallback": "laplace",
           "features": [
-            5.3,
-            224.71428571428572,
-            5.8428571428571425,
+            5.4,
+            230.57142857142858,
+            5.785714285714286,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.819,
+      "confidence": 0.77,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.8192,
-          "n_train": 91,
+          "p_event": 0.7699,
+          "n_train": 92,
           "fallback": null,
           "features": [
-            2.0,
-            13.246094907854705,
-            0.5310227166238357,
+            3.0,
+            13.233673956275151,
+            0.52702667202842,
             0.0
           ],
           "weights": [
-            -0.6393,
-            -0.6978,
-            0.4864,
-            -0.6074
+            -0.6557,
+            -0.7104,
+            0.4913,
+            -0.6246
           ],
-          "bias": 0.6466
+          "bias": 0.6672
         }
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.922,
+      "confidence": 0.95,
       "basis": {
         "top_id": 50341174,
         "top_title": "Astra can read and write weights to improve Qwen",
         "model": {
-          "p_event": 0.9216,
-          "n_train": 99,
+          "p_event": 0.9985,
+          "n_train": 100,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            0.0
+            0.3,
+            1.0,
+            1.0
           ],
           "weights": [
-            0.3815,
-            -0.18,
-            0.1417
+            0.3995,
+            -0.1801,
+            0.3111
           ],
-          "bias": 2.8277
+          "bias": 2.7134
         }
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-03"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-04"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.911,
       "basis": {
-        "forecast_c": 28.1,
+        "forecast_c": 27.9,
         "for_date": "2026-11-04",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9769,
+          "p_event": 0.911,
           "n_train": 87,
           "fallback": null,
           "features": [
-            0.1999999999999993,
-            2.7735176220821094,
-            1.2,
-            2.0
+            0.0,
+            2.64841462010766,
+            0.40000000000000213,
+            0.40000000000000213
           ],
           "weights": [
             -0.4202,
@@ -319,8 +319,8 @@
           "bias": 2.4281
         }
       },
-      "made_on": "2026-11-02",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-03",
+      "resolve_on": "2026-11-05"
     }
   ]
 }
