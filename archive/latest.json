@@ -1,19 +1,19 @@
 {
   "date": "2026-11-03",
-  "fetched_at": "2026-11-03T11:36:35.416294+00:00",
+  "fetched_at": "2026-11-03T21:22:30.990548+00:00",
   "observations": {
     "btc": {
-      "usd": 77056,
-      "usd_24h_change": -0.94
+      "usd": 77832,
+      "usd_24h_change": 1.33
     },
     "kp": {
-      "max_kp": 2.33,
-      "latest_kp": 2.0,
+      "max_kp": 2.0,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.4,
-      "count": 245,
+      "count": 207,
       "strongest_place": "24 km NNW of Rioblanco, Colombia"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-11-02"
     },
     "hn": {
-      "top_id": 50341174,
-      "top_title": "Astra can read and write weights to improve Qwen",
+      "top_id": 50339288,
+      "top_title": "Jailbreaking my car's navigation system just so I can change the time",
       "top10": [
-        50341174,
-        50348962,
-        50321605,
-        50346849,
-        50346981,
-        50350004,
-        50340088,
-        50334523,
-        50332342,
-        50336518
+        50339288,
+        50354358,
+        50355251,
+        50354960,
+        50336918,
+        50356913,
+        50356994,
+        50346755,
+        50358314,
+        50352758
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.3,
-      "actual_prev_date": "2026-11-02",
-      "today": 27.9,
-      "forecast_next": 27.9,
-      "forecast_next_date": "2026-11-04"
+      "actual_prev": 28.5,
+      "actual_prev_date": "2026-11-03",
+      "today": 28.1,
+      "forecast_next": 28.5,
+      "forecast_next_date": "2026-11-05"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.529,
+      "call": true,
+      "confidence": 0.533,
       "basis": {
-        "today_usd": 77056,
-        "change_24h": -0.94
+        "today_usd": 77832,
+        "change_24h": 1.33
       },
       "made_on": "2026-11-03",
       "resolve_on": "2026-11-04"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.33
+        "today_max_kp": 2.0
       },
       "made_on": "2026-11-03",
       "resolve_on": "2026-11-04"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50341174,
-        "top_title": "Astra can read and write weights to improve Qwen"
+        "top_id": 50339288,
+        "top_title": "Jailbreaking my car's navigation system just so I can change the time"
       },
       "made_on": "2026-11-03",
       "resolve_on": "2026-11-04"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.9,
-        "for_date": "2026-11-04",
+        "forecast_c": 28.5,
+        "for_date": "2026-11-05",
         "city": "New Delhi"
       },
       "made_on": "2026-11-03",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.659,
+      "confidence": 0.588,
       "basis": {
-        "today_usd": 77056,
-        "change_24h": -0.94,
+        "today_usd": 77832,
+        "change_24h": 1.33,
         "model": {
-          "p_event": 0.6591,
+          "p_event": 0.5883,
           "n_train": 97,
           "fallback": null,
           "features": [
-            -0.94,
-            -0.5703372990270683,
-            -4.490635729248005,
-            1.4195234587515326
+            1.33,
+            0.43097886397067686,
+            -3.528799315807085,
+            1.5271143908834803
           ],
           "weights": [
             -0.2734,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.797,
+      "confidence": 0.828,
       "basis": {
-        "today_max_kp": 2.33,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.2026,
+          "p_event": 0.1723,
           "n_train": 100,
           "fallback": null,
           "features": [
-            2.33,
-            3.776666666666667,
-            3.2357142857142853,
+            2.0,
+            3.6666666666666665,
+            3.1885714285714286,
             2.67
           ],
           "weights": [
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.4,
-            230.57142857142858,
+            225.14285714285714,
             5.785714285714286,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.928,
       "basis": {
-        "top_id": 50341174,
-        "top_title": "Astra can read and write weights to improve Qwen",
+        "top_id": 50339288,
+        "top_title": "Jailbreaking my car's navigation system just so I can change the time",
         "model": {
-          "p_event": 0.9985,
+          "p_event": 0.9283,
           "n_train": 100,
           "fallback": null,
           "features": [
-            0.3,
-            1.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.3995,
-            -0.1801,
-            0.3111
+            0.3798,
+            -0.1797,
+            0.1264
           ],
-          "bias": 2.7134
+          "bias": 2.8357
         }
       },
       "made_on": "2026-11-03",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.911,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 27.9,
-        "for_date": "2026-11-04",
+        "forecast_c": 28.5,
+        "for_date": "2026-11-05",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.911,
-          "n_train": 87,
+          "p_event": 0.9741,
+          "n_train": 88,
           "fallback": null,
           "features": [
-            0.0,
-            2.64841462010766,
-            0.40000000000000213,
-            0.40000000000000213
+            0.3999999999999986,
+            2.6541476974727685,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4202,
-            0.303,
-            -0.3989,
-            0.8957
+            -0.4231,
+            0.3113,
+            -0.3986,
+            0.8975
           ],
-          "bias": 2.4281
+          "bias": 2.4504
         }
       },
       "made_on": "2026-11-03",

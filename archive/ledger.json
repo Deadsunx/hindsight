@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03T11:36:37.296505+00:00",
+  "updated": "2026-11-03T21:22:32.297869+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 75,
-      "rule_correct": 70,
-      "model_correct": 70,
-      "rule_accuracy": 0.9333,
-      "model_accuracy": 0.9333,
-      "rule_brier": 0.0651,
-      "model_brier": 0.0634,
-      "rule_log_loss": 0.2607,
-      "model_log_loss": 0.2535,
+      "rule_correct": 71,
+      "model_correct": 71,
+      "rule_accuracy": 0.9467,
+      "model_accuracy": 0.9467,
+      "rule_brier": 0.0549,
+      "model_brier": 0.0521,
+      "rule_log_loss": 0.2341,
+      "model_log_loss": 0.2206,
       "coin_flip": {
         "n": 75,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 175,
-        "rate": 0.9314,
-        "majority_accuracy": 0.9314
+        "rate": 0.9429,
+        "majority_accuracy": 0.9429
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 61,
-      "rule_correct": 53,
-      "model_correct": 53,
-      "rule_accuracy": 0.8689,
-      "model_accuracy": 0.8689,
-      "rule_brier": 0.1187,
-      "model_brier": 0.1134,
-      "rule_log_loss": 0.405,
-      "model_log_loss": 0.4009,
+      "shared_days": 62,
+      "rule_correct": 54,
+      "model_correct": 54,
+      "rule_accuracy": 0.871,
+      "model_accuracy": 0.871,
+      "rule_brier": 0.1174,
+      "model_brier": 0.1117,
+      "rule_log_loss": 0.402,
+      "model_log_loss": 0.3953,
       "coin_flip": {
-        "n": 61,
+        "n": 62,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 148,
-        "rate": 0.8851,
-        "majority_accuracy": 0.8851
+        "n": 150,
+        "rate": 0.8867,
+        "majority_accuracy": 0.8867
       }
     }
   },
   "totals": {
-    "graded": 1002,
-    "correct": 766,
-    "accuracy": 0.7645,
-    "brier": 0.1479,
-    "log_loss": 0.4524,
+    "graded": 1004,
+    "correct": 770,
+    "accuracy": 0.7669,
+    "brier": 0.1461,
+    "log_loss": 0.4473,
     "open": 14,
-    "void": 37,
+    "void": 35,
     "days": 101
   },
   "baselines": {
     "coin_flip": {
-      "n": 1002,
+      "n": 1004,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 1002,
-      "rate": 0.7315,
-      "majority_accuracy": 0.7315
+      "n": 1004,
+      "rate": 0.7341,
+      "majority_accuracy": 0.7341
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 100,
-      "correct": 93,
-      "accuracy": 0.93,
-      "brier": 0.0676,
-      "log_loss": 0.2673,
-      "base_rate": 0.93,
-      "majority_accuracy": 0.93
+      "correct": 94,
+      "accuracy": 0.94,
+      "brier": 0.06,
+      "log_loss": 0.2474,
+      "base_rate": 0.94,
+      "majority_accuracy": 0.94
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 87,
-      "correct": 78,
-      "accuracy": 0.8966,
-      "brier": 0.1021,
-      "log_loss": 0.3666,
-      "base_rate": 0.8966,
-      "majority_accuracy": 0.8966
+      "graded": 88,
+      "correct": 79,
+      "accuracy": 0.8977,
+      "brier": 0.1014,
+      "log_loss": 0.3649,
+      "base_rate": 0.8977,
+      "majority_accuracy": 0.8977
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 75,
-      "correct": 70,
-      "accuracy": 0.9333,
-      "brier": 0.0634,
-      "log_loss": 0.2535,
-      "base_rate": 0.9333,
-      "majority_accuracy": 0.9333
+      "correct": 71,
+      "accuracy": 0.9467,
+      "brier": 0.0521,
+      "log_loss": 0.2206,
+      "base_rate": 0.9467,
+      "majority_accuracy": 0.9467
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 61,
-      "correct": 53,
-      "accuracy": 0.8689,
-      "brier": 0.1134,
-      "log_loss": 0.4009,
-      "base_rate": 0.8689,
-      "majority_accuracy": 0.8689
+      "graded": 62,
+      "correct": 54,
+      "accuracy": 0.871,
+      "brier": 0.1117,
+      "log_loss": 0.3953,
+      "base_rate": 0.871,
+      "majority_accuracy": 0.871
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 243,
-      "claimed": 0.8449,
-      "actual": 0.8724
+      "n": 244,
+      "claimed": 0.8448,
+      "actual": 0.877
     },
     {
       "label": "90\u2013100%",
-      "n": 295,
+      "n": 296,
       "claimed": 0.9435,
-      "actual": 0.9559
+      "actual": 0.9595
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.529,
+      "call": true,
+      "confidence": 0.533,
       "basis": {
-        "today_usd": 77056,
-        "change_24h": -0.94
+        "today_usd": 77832,
+        "change_24h": 1.33
       },
       "made_on": "2026-11-03",
       "resolve_on": "2026-11-04"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.33
+        "today_max_kp": 2.0
       },
       "made_on": "2026-11-03",
       "resolve_on": "2026-11-04"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50341174,
-        "top_title": "Astra can read and write weights to improve Qwen"
+        "top_id": 50339288,
+        "top_title": "Jailbreaking my car's navigation system just so I can change the time"
       },
       "made_on": "2026-11-03",
       "resolve_on": "2026-11-04"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.9,
-        "for_date": "2026-11-04",
+        "forecast_c": 28.5,
+        "for_date": "2026-11-05",
         "city": "New Delhi"
       },
       "made_on": "2026-11-03",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.659,
+      "confidence": 0.588,
       "basis": {
-        "today_usd": 77056,
-        "change_24h": -0.94,
+        "today_usd": 77832,
+        "change_24h": 1.33,
         "model": {
-          "p_event": 0.6591,
+          "p_event": 0.5883,
           "n_train": 97,
           "fallback": null,
           "features": [
-            -0.94,
-            -0.5703372990270683,
-            -4.490635729248005,
-            1.4195234587515326
+            1.33,
+            0.43097886397067686,
+            -3.528799315807085,
+            1.5271143908834803
           ],
           "weights": [
             -0.2734,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.797,
+      "confidence": 0.828,
       "basis": {
-        "today_max_kp": 2.33,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.2026,
+          "p_event": 0.1723,
           "n_train": 100,
           "fallback": null,
           "features": [
-            2.33,
-            3.776666666666667,
-            3.2357142857142853,
+            2.0,
+            3.6666666666666665,
+            3.1885714285714286,
             2.67
           ],
           "weights": [
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.4,
-            230.57142857142858,
+            225.14285714285714,
             5.785714285714286,
             1.0
           ]
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.928,
       "basis": {
-        "top_id": 50341174,
-        "top_title": "Astra can read and write weights to improve Qwen",
+        "top_id": 50339288,
+        "top_title": "Jailbreaking my car's navigation system just so I can change the time",
         "model": {
-          "p_event": 0.9985,
+          "p_event": 0.9283,
           "n_train": 100,
           "fallback": null,
           "features": [
-            0.3,
-            1.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.3995,
-            -0.1801,
-            0.3111
+            0.3798,
+            -0.1797,
+            0.1264
           ],
-          "bias": 2.7134
+          "bias": 2.8357
         }
       },
       "made_on": "2026-11-03",
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.911,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 27.9,
-        "for_date": "2026-11-04",
+        "forecast_c": 28.5,
+        "for_date": "2026-11-05",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.911,
-          "n_train": 87,
+          "p_event": 0.9741,
+          "n_train": 88,
           "fallback": null,
           "features": [
-            0.0,
-            2.64841462010766,
-            0.40000000000000213,
-            0.40000000000000213
+            0.3999999999999986,
+            2.6541476974727685,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4202,
-            0.303,
-            -0.3989,
-            0.8957
+            -0.4231,
+            0.3113,
+            -0.3986,
+            0.8975
           ],
-          "bias": 2.4281
+          "bias": 2.4504
         }
       },
       "made_on": "2026-11-03",
@@ -13513,6 +13513,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-03",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -13578,6 +13591,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-11-01",
+      "resolve_on": "2026-11-03",
+      "call": true,
+      "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -13639,8 +13665,8 @@
       "resolve_on": "2026-11-03",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -13704,8 +13730,8 @@
       "resolve_on": "2026-11-03",
       "call": true,
       "confidence": 0.922,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
