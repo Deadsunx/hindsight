@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-04",
+  "fetched_at": "2026-11-04T11:50:41.949573+00:00",
+  "observations": {
+    "btc": {
+      "usd": 78558,
+      "usd_24h_change": 1.98
+    },
+    "kp": {
+      "max_kp": 3.33,
+      "latest_kp": 3.33,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.2,
+      "count": 172,
+      "strongest_place": "91 km ESE of Kyzyl-Eshme, Kyrgyzstan"
+    },
+    "wiki": {
+      "top": "Jes\u00fas_de_Miguel",
+      "views": 585060,
+      "for_date": "2026-11-03"
+    },
+    "hn": {
+      "top_id": 50362905,
+      "top_title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+      "top10": [
+        50362905,
+        50362980,
+        50363019,
+        50363378,
+        50361268,
+        50363461,
+        50339288,
+        50354358,
+        50362466,
+        50358702
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 28.5,
+      "actual_prev_date": "2026-11-03",
+      "today": 27.9,
+      "forecast_next": 28.3,
+      "forecast_next_date": "2026-11-05"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.54,
+      "basis": {
+        "today_usd": 78558,
+        "change_24h": 1.98
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_max_kp": 3.33
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Jes\u00fas_de_Miguel"
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50362905,
+        "top_title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux"
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 28.3,
+        "for_date": "2026-11-05",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.586,
+      "basis": {
+        "today_usd": 78558,
+        "change_24h": 1.98,
+        "model": {
+          "p_event": 0.5856,
+          "n_train": 98,
+          "fallback": null,
+          "features": [
+            1.98,
+            1.0951394340278142,
+            -3.127235060547018,
+            1.5552463581661629
+          ],
+          "weights": [
+            -0.2579,
+            0.2701,
+            -0.3234,
+            -0.1016
+          ],
+          "bias": 0.2922
+        }
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.583,
+      "basis": {
+        "today_max_kp": 3.33,
+        "model": {
+          "p_event": 0.4174,
+          "n_train": 101,
+          "fallback": null,
+          "features": [
+            3.33,
+            2.776666666666667,
+            3.3314285714285714,
+            2.33
+          ],
+          "weights": [
+            0.8665,
+            -0.2194,
+            -0.1534,
+            0.0821
+          ],
+          "bias": -0.4557
+        }
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9903,
+          "n_train": 101,
+          "fallback": "laplace",
+          "features": [
+            5.2,
+            215.57142857142858,
+            5.671428571428572,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.632,
+      "basis": {
+        "today_top": "Jes\u00fas_de_Miguel",
+        "model": {
+          "p_event": 0.632,
+          "n_train": 93,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.279471394282163,
+            0.550700460833211,
+            1.0
+          ],
+          "weights": [
+            -0.6169,
+            -0.6741,
+            0.4833,
+            -0.5767
+          ],
+          "bias": 0.6295
+        }
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50362905,
+        "top_title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+        "model": {
+          "p_event": 0.993,
+          "n_train": 101,
+          "fallback": null,
+          "features": [
+            0.2,
+            7.0,
+            2.0
+          ],
+          "weights": [
+            0.3999,
+            -0.1831,
+            0.2327
+          ],
+          "bias": 2.7048
+        }
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.893,
+      "basis": {
+        "forecast_c": 28.3,
+        "for_date": "2026-11-05",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.8932,
+          "n_train": 88,
+          "fallback": null,
+          "features": [
+            0.40000000000000213,
+            2.450081631293129,
+            0.5,
+            0.5
+          ],
+          "weights": [
+            -0.4231,
+            0.3113,
+            -0.3986,
+            0.8975
+          ],
+          "bias": 2.4504
+        }
+      },
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-06"
+    }
+  ]
+}

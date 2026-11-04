@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-03",
-  "fetched_at": "2026-11-03T21:22:30.990548+00:00",
+  "date": "2026-11-04",
+  "fetched_at": "2026-11-04T11:50:41.949573+00:00",
   "observations": {
     "btc": {
-      "usd": 77832,
-      "usd_24h_change": 1.33
+      "usd": 78558,
+      "usd_24h_change": 1.98
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 1.67,
+      "max_kp": 3.33,
+      "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.4,
-      "count": 207,
-      "strongest_place": "24 km NNW of Rioblanco, Colombia"
+      "max_mag": 5.2,
+      "count": 172,
+      "strongest_place": "91 km ESE of Kyzyl-Eshme, Kyrgyzstan"
     },
     "wiki": {
-      "top": "Wikipedia:Featured_pictures",
-      "views": 558870,
-      "for_date": "2026-11-02"
+      "top": "Jes\u00fas_de_Miguel",
+      "views": 585060,
+      "for_date": "2026-11-03"
     },
     "hn": {
-      "top_id": 50339288,
-      "top_title": "Jailbreaking my car's navigation system just so I can change the time",
+      "top_id": 50362905,
+      "top_title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
       "top10": [
+        50362905,
+        50362980,
+        50363019,
+        50363378,
+        50361268,
+        50363461,
         50339288,
         50354358,
-        50355251,
-        50354960,
-        50336918,
-        50356913,
-        50356994,
-        50346755,
-        50358314,
-        50352758
+        50362466,
+        50358702
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.5,
       "actual_prev_date": "2026-11-03",
-      "today": 28.1,
-      "forecast_next": 28.5,
+      "today": 27.9,
+      "forecast_next": 28.3,
       "forecast_next_date": "2026-11-05"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.533,
+      "confidence": 0.54,
       "basis": {
-        "today_usd": 77832,
-        "change_24h": 1.33
+        "today_usd": 78558,
+        "change_24h": 1.98
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "kp_storm",
@@ -68,13 +68,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 3.33
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Wikipedia:Featured_pictures"
+        "today_top": "Jes\u00fas_de_Miguel"
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50339288,
-        "top_title": "Jailbreaking my car's navigation system just so I can change the time"
+        "top_id": 50362905,
+        "top_title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux"
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.5,
+        "forecast_c": 28.3,
         "for_date": "2026-11-05",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.588,
+      "confidence": 0.586,
       "basis": {
-        "today_usd": 77832,
-        "change_24h": 1.33,
+        "today_usd": 78558,
+        "change_24h": 1.98,
         "model": {
-          "p_event": 0.5883,
-          "n_train": 97,
+          "p_event": 0.5856,
+          "n_train": 98,
           "fallback": null,
           "features": [
-            1.33,
-            0.43097886397067686,
-            -3.528799315807085,
-            1.5271143908834803
+            1.98,
+            1.0951394340278142,
+            -3.127235060547018,
+            1.5552463581661629
           ],
           "weights": [
-            -0.2734,
-            0.2632,
-            -0.291,
-            -0.1142
+            -0.2579,
+            0.2701,
+            -0.3234,
+            -0.1016
           ],
-          "bias": 0.2738
+          "bias": 0.2922
         }
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.828,
+      "confidence": 0.583,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.1723,
-          "n_train": 100,
+          "p_event": 0.4174,
+          "n_train": 101,
           "fallback": null,
           "features": [
-            2.0,
-            3.6666666666666665,
-            3.1885714285714286,
-            2.67
+            3.33,
+            2.776666666666667,
+            3.3314285714285714,
+            2.33
           ],
           "weights": [
-            0.9508,
-            -0.3004,
-            -0.1486,
-            0.0888
+            0.8665,
+            -0.2194,
+            -0.1534,
+            0.0821
           ],
-          "bias": -0.4884
+          "bias": -0.4557
         }
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9902,
-          "n_train": 100,
+          "p_event": 0.9903,
+          "n_train": 101,
           "fallback": "laplace",
           "features": [
-            5.4,
-            225.14285714285714,
-            5.785714285714286,
+            5.2,
+            215.57142857142858,
+            5.671428571428572,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.77,
+      "confidence": 0.632,
       "basis": {
-        "today_top": "Wikipedia:Featured_pictures",
+        "today_top": "Jes\u00fas_de_Miguel",
         "model": {
-          "p_event": 0.7699,
-          "n_train": 92,
+          "p_event": 0.632,
+          "n_train": 93,
           "fallback": null,
           "features": [
-            3.0,
-            13.233673956275151,
-            0.52702667202842,
-            0.0
+            1.0,
+            13.279471394282163,
+            0.550700460833211,
+            1.0
           ],
           "weights": [
-            -0.6557,
-            -0.7104,
-            0.4913,
-            -0.6246
+            -0.6169,
+            -0.6741,
+            0.4833,
+            -0.5767
           ],
-          "bias": 0.6672
+          "bias": 0.6295
         }
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.928,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50339288,
-        "top_title": "Jailbreaking my car's navigation system just so I can change the time",
+        "top_id": 50362905,
+        "top_title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
         "model": {
-          "p_event": 0.9283,
-          "n_train": 100,
+          "p_event": 0.993,
+          "n_train": 101,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            1.0
+            0.2,
+            7.0,
+            2.0
           ],
           "weights": [
-            0.3798,
-            -0.1797,
-            0.1264
+            0.3999,
+            -0.1831,
+            0.2327
           ],
-          "bias": 2.8357
+          "bias": 2.7048
         }
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-04"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-05"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.893,
       "basis": {
-        "forecast_c": 28.5,
+        "forecast_c": 28.3,
         "for_date": "2026-11-05",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9741,
+          "p_event": 0.8932,
           "n_train": 88,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            2.6541476974727685,
-            1.2,
-            2.0
+            0.40000000000000213,
+            2.450081631293129,
+            0.5,
+            0.5
           ],
           "weights": [
             -0.4231,
@@ -319,8 +319,8 @@
           "bias": 2.4504
         }
       },
-      "made_on": "2026-11-03",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-04",
+      "resolve_on": "2026-11-06"
     }
   ]
 }
