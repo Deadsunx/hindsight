@@ -1,20 +1,20 @@
 {
   "date": "2026-11-05",
-  "fetched_at": "2026-11-05T11:50:50.114423+00:00",
+  "fetched_at": "2026-11-05T21:41:42.532518+00:00",
   "observations": {
     "btc": {
-      "usd": 80299,
-      "usd_24h_change": 2.19
+      "usd": 75968,
+      "usd_24h_change": -5.22
     },
     "kp": {
-      "max_kp": 3.0,
-      "latest_kp": 1.67,
+      "max_kp": 2.0,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.1,
-      "count": 190,
-      "strongest_place": "19 km NNW of Masumbwe, Tanzania"
+      "max_mag": 6.1,
+      "count": 225,
+      "strongest_place": "Fiji region"
     },
     "wiki": {
       "top": "Abdul_El-Sayed",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-04"
     },
     "hn": {
-      "top_id": 50377078,
-      "top_title": "Baidu released ERNIE 5.5 Flash Base",
+      "top_id": 50378228,
+      "top_title": "sshole",
       "top10": [
-        50377078,
-        50371246,
-        50375354,
-        50377821,
-        50372929,
-        50372945,
-        50340195,
-        50364284,
-        50366999,
-        50369925
+        50378228,
+        50383740,
+        50384233,
+        50379704,
+        50383057,
+        50383963,
+        50381383,
+        50383739,
+        50380810,
+        50383877
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.4,
-      "actual_prev_date": "2026-11-04",
-      "today": 27.9,
-      "forecast_next": 28.1,
-      "forecast_next_date": "2026-11-06"
+      "actual_prev": 28.6,
+      "actual_prev_date": "2026-11-05",
+      "today": 28.6,
+      "forecast_next": 28.0,
+      "forecast_next_date": "2026-11-07"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.542,
+      "call": false,
+      "confidence": 0.572,
       "basis": {
-        "today_usd": 80299,
-        "change_24h": 2.19
+        "today_usd": 75968,
+        "change_24h": -5.22
       },
       "made_on": "2026-11-05",
       "resolve_on": "2026-11-06"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.0
+        "today_max_kp": 2.0
       },
       "made_on": "2026-11-05",
       "resolve_on": "2026-11-06"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50377078,
-        "top_title": "Baidu released ERNIE 5.5 Flash Base"
+        "top_id": 50378228,
+        "top_title": "sshole"
       },
       "made_on": "2026-11-05",
       "resolve_on": "2026-11-06"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.1,
-        "for_date": "2026-11-06",
+        "forecast_c": 28.0,
+        "for_date": "2026-11-07",
         "city": "New Delhi"
       },
       "made_on": "2026-11-05",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.602,
+      "confidence": 0.744,
       "basis": {
-        "today_usd": 80299,
-        "change_24h": 2.19,
+        "today_usd": 75968,
+        "change_24h": -5.22,
         "model": {
-          "p_event": 0.6016,
+          "p_event": 0.7442,
           "n_train": 99,
           "fallback": null,
           "features": [
-            2.19,
-            4.701863273049689,
-            0.9339333299813957,
-            1.7729518145235454
+            -5.22,
+            -0.9453274744761542,
+            -4.510030670219722,
+            2.3877136110174875
           ],
           "weights": [
-            -0.2339,
-            0.287,
-            -0.3644,
-            -0.0814
+            -0.291,
+            0.2476,
+            -0.2693,
+            -0.1261
           ],
-          "bias": 0.3099
+          "bias": 0.2683
         }
       },
       "made_on": "2026-11-05",
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.619,
+      "confidence": 0.739,
       "basis": {
-        "today_max_kp": 3.0,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.3812,
+          "p_event": 0.2609,
           "n_train": 102,
           "fallback": null,
           "features": [
-            3.0,
-            2.776666666666667,
-            3.4271428571428575,
+            2.0,
+            2.4433333333333334,
+            3.2842857142857147,
             4.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 102,
           "fallback": "laplace",
           "features": [
-            5.1,
-            216.28571428571428,
-            5.457142857142857,
+            6.1,
+            221.28571428571428,
+            5.6000000000000005,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.938,
       "basis": {
-        "top_id": 50377078,
-        "top_title": "Baidu released ERNIE 5.5 Flash Base",
+        "top_id": 50378228,
+        "top_title": "sshole",
         "model": {
-          "p_event": 0.9969,
+          "p_event": 0.9376,
           "n_train": 102,
           "fallback": null,
           "features": [
-            0.2,
-            2.0,
+            0.0,
+            11.0,
             3.0
           ],
           "weights": [
-            0.4007,
-            -0.1856,
-            0.1611
+            0.376,
+            -0.1783,
+            0.1133
           ],
-          "bias": 2.7021
+          "bias": 2.8537
         }
       },
       "made_on": "2026-11-05",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.889,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 28.1,
-        "for_date": "2026-11-06",
+        "forecast_c": 28.0,
+        "for_date": "2026-11-07",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8888,
-          "n_train": 89,
+          "p_event": 0.9689,
+          "n_train": 90,
           "fallback": null,
           "features": [
-            0.20000000000000284,
-            2.3528918377180026,
-            0.29999999999999716,
-            0.29999999999999716
+            0.6000000000000014,
+            2.3632393023136697,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4255,
-            0.3185,
-            -0.3983,
-            0.8994
+            -0.4272,
+            0.3247,
+            -0.3978,
+            0.9016
           ],
-          "bias": 2.4719
+          "bias": 2.4925
         }
       },
       "made_on": "2026-11-05",
