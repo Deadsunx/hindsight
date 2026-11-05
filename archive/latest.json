@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-04",
-  "fetched_at": "2026-11-04T21:38:00.652938+00:00",
+  "date": "2026-11-05",
+  "fetched_at": "2026-11-05T11:50:50.114423+00:00",
   "observations": {
     "btc": {
-      "usd": 80109,
-      "usd_24h_change": 2.87
+      "usd": 80299,
+      "usd_24h_change": 2.19
     },
     "kp": {
-      "max_kp": 3.33,
+      "max_kp": 3.0,
       "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5,
-      "count": 192,
-      "strongest_place": "207 km ESE of Sarangani, Philippines"
+      "max_mag": 5.1,
+      "count": 190,
+      "strongest_place": "19 km NNW of Masumbwe, Tanzania"
     },
     "wiki": {
-      "top": "Jes\u00fas_de_Miguel",
-      "views": 585060,
-      "for_date": "2026-11-03"
+      "top": "Abdul_El-Sayed",
+      "views": 1413749,
+      "for_date": "2026-11-04"
     },
     "hn": {
-      "top_id": 50371246,
-      "top_title": "Residential proxies detected on White House network",
+      "top_id": 50377078,
+      "top_title": "Baidu released ERNIE 5.5 Flash Base",
       "top10": [
+        50377078,
         50371246,
-        50370610,
-        50369925,
-        50364336,
-        50369106,
-        50368626,
-        50370654,
-        50362905,
-        50369895,
-        50368804
+        50375354,
+        50377821,
+        50372929,
+        50372945,
+        50340195,
+        50364284,
+        50366999,
+        50369925
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.4,
       "actual_prev_date": "2026-11-04",
-      "today": 28.7,
-      "forecast_next": 28.3,
+      "today": 27.9,
+      "forecast_next": 28.1,
       "forecast_next_date": "2026-11-06"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.549,
+      "confidence": 0.542,
       "basis": {
-        "today_usd": 80109,
-        "change_24h": 2.87
+        "today_usd": 80299,
+        "change_24h": 2.19
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "kp_storm",
@@ -68,13 +68,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.33
+        "today_max_kp": 3.0
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "wiki_hold",
@@ -99,10 +99,10 @@
       "call": false,
       "confidence": 0.62,
       "basis": {
-        "today_top": "Jes\u00fas_de_Miguel"
+        "today_top": "Abdul_El-Sayed"
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50371246,
-        "top_title": "Residential proxies detected on White House network"
+        "top_id": 50377078,
+        "top_title": "Baidu released ERNIE 5.5 Flash Base"
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.3,
+        "forecast_c": 28.1,
         "for_date": "2026-11-06",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.559,
+      "confidence": 0.602,
       "basis": {
-        "today_usd": 80109,
-        "change_24h": 2.87,
+        "today_usd": 80299,
+        "change_24h": 2.19,
         "model": {
-          "p_event": 0.5595,
-          "n_train": 98,
+          "p_event": 0.6016,
+          "n_train": 99,
           "fallback": null,
           "features": [
-            2.87,
-            3.091098614024479,
-            -1.2146398007250814,
-            1.814218739140023
+            2.19,
+            4.701863273049689,
+            0.9339333299813957,
+            1.7729518145235454
           ],
           "weights": [
-            -0.2579,
-            0.2701,
-            -0.3234,
-            -0.1016
+            -0.2339,
+            0.287,
+            -0.3644,
+            -0.0814
           ],
-          "bias": 0.2922
+          "bias": 0.3099
         }
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.583,
+      "confidence": 0.619,
       "basis": {
-        "today_max_kp": 3.33,
+        "today_max_kp": 3.0,
         "model": {
-          "p_event": 0.4174,
-          "n_train": 101,
+          "p_event": 0.3812,
+          "n_train": 102,
           "fallback": null,
           "features": [
-            3.33,
+            3.0,
             2.776666666666667,
-            3.3314285714285714,
-            2.33
+            3.4271428571428575,
+            4.0
           ],
           "weights": [
-            0.8665,
-            -0.2194,
-            -0.1534,
-            0.0821
+            0.8475,
+            -0.1977,
+            -0.1732,
+            0.0939
           ],
-          "bias": -0.4557
+          "bias": -0.4741
         }
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9903,
-          "n_train": 101,
+          "p_event": 0.9904,
+          "n_train": 102,
           "fallback": "laplace",
           "features": [
-            5.0,
-            218.42857142857142,
-            5.642857142857143,
+            5.1,
+            216.28571428571428,
+            5.457142857142857,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "wiki_hold_ml",
@@ -231,31 +231,31 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "call": true,
-      "confidence": 0.632,
+      "call": false,
+      "confidence": 0.53,
       "basis": {
-        "today_top": "Jes\u00fas_de_Miguel",
+        "today_top": "Abdul_El-Sayed",
         "model": {
-          "p_event": 0.632,
-          "n_train": 93,
+          "p_event": 0.4696,
+          "n_train": 94,
           "fallback": null,
           "features": [
             1.0,
-            13.279471394282163,
-            0.550700460833211,
+            14.161756306412467,
+            1.248785347574891,
             1.0
           ],
           "weights": [
-            -0.6169,
-            -0.6741,
-            0.4833,
-            -0.5767
+            -0.6065,
+            -0.6512,
+            0.494,
+            -0.6152
           ],
-          "bias": 0.6295
+          "bias": 0.5993
         }
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.933,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50371246,
-        "top_title": "Residential proxies detected on White House network",
+        "top_id": 50377078,
+        "top_title": "Baidu released ERNIE 5.5 Flash Base",
         "model": {
-          "p_event": 0.9334,
-          "n_train": 101,
+          "p_event": 0.9969,
+          "n_train": 102,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            2.0
+            0.2,
+            2.0,
+            3.0
           ],
           "weights": [
-            0.3779,
-            -0.1791,
-            0.1172
+            0.4007,
+            -0.1856,
+            0.1611
           ],
-          "bias": 2.8445
+          "bias": 2.7021
         }
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-05"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.889,
       "basis": {
-        "forecast_c": 28.3,
+        "forecast_c": 28.1,
         "for_date": "2026-11-06",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9718,
+          "p_event": 0.8888,
           "n_train": 89,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            2.445812748351762,
-            1.2,
-            2.0
+            0.20000000000000284,
+            2.3528918377180026,
+            0.29999999999999716,
+            0.29999999999999716
           ],
           "weights": [
             -0.4255,
@@ -319,8 +319,8 @@
           "bias": 2.4719
         }
       },
-      "made_on": "2026-11-04",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-07"
     }
   ]
 }

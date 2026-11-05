@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-05",
+  "fetched_at": "2026-11-05T11:50:50.114423+00:00",
+  "observations": {
+    "btc": {
+      "usd": 80299,
+      "usd_24h_change": 2.19
+    },
+    "kp": {
+      "max_kp": 3.0,
+      "latest_kp": 1.67,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.1,
+      "count": 190,
+      "strongest_place": "19 km NNW of Masumbwe, Tanzania"
+    },
+    "wiki": {
+      "top": "Abdul_El-Sayed",
+      "views": 1413749,
+      "for_date": "2026-11-04"
+    },
+    "hn": {
+      "top_id": 50377078,
+      "top_title": "Baidu released ERNIE 5.5 Flash Base",
+      "top10": [
+        50377078,
+        50371246,
+        50375354,
+        50377821,
+        50372929,
+        50372945,
+        50340195,
+        50364284,
+        50366999,
+        50369925
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 28.4,
+      "actual_prev_date": "2026-11-04",
+      "today": 27.9,
+      "forecast_next": 28.1,
+      "forecast_next_date": "2026-11-06"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.542,
+      "basis": {
+        "today_usd": 80299,
+        "change_24h": 2.19
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 3.0
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Abdul_El-Sayed"
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50377078,
+        "top_title": "Baidu released ERNIE 5.5 Flash Base"
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 28.1,
+        "for_date": "2026-11-06",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-07"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.602,
+      "basis": {
+        "today_usd": 80299,
+        "change_24h": 2.19,
+        "model": {
+          "p_event": 0.6016,
+          "n_train": 99,
+          "fallback": null,
+          "features": [
+            2.19,
+            4.701863273049689,
+            0.9339333299813957,
+            1.7729518145235454
+          ],
+          "weights": [
+            -0.2339,
+            0.287,
+            -0.3644,
+            -0.0814
+          ],
+          "bias": 0.3099
+        }
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.619,
+      "basis": {
+        "today_max_kp": 3.0,
+        "model": {
+          "p_event": 0.3812,
+          "n_train": 102,
+          "fallback": null,
+          "features": [
+            3.0,
+            2.776666666666667,
+            3.4271428571428575,
+            4.0
+          ],
+          "weights": [
+            0.8475,
+            -0.1977,
+            -0.1732,
+            0.0939
+          ],
+          "bias": -0.4741
+        }
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9904,
+          "n_train": 102,
+          "fallback": "laplace",
+          "features": [
+            5.1,
+            216.28571428571428,
+            5.457142857142857,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.53,
+      "basis": {
+        "today_top": "Abdul_El-Sayed",
+        "model": {
+          "p_event": 0.4696,
+          "n_train": 94,
+          "fallback": null,
+          "features": [
+            1.0,
+            14.161756306412467,
+            1.248785347574891,
+            1.0
+          ],
+          "weights": [
+            -0.6065,
+            -0.6512,
+            0.494,
+            -0.6152
+          ],
+          "bias": 0.5993
+        }
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50377078,
+        "top_title": "Baidu released ERNIE 5.5 Flash Base",
+        "model": {
+          "p_event": 0.9969,
+          "n_train": 102,
+          "fallback": null,
+          "features": [
+            0.2,
+            2.0,
+            3.0
+          ],
+          "weights": [
+            0.4007,
+            -0.1856,
+            0.1611
+          ],
+          "bias": 2.7021
+        }
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-06"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.889,
+      "basis": {
+        "forecast_c": 28.1,
+        "for_date": "2026-11-06",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.8888,
+          "n_train": 89,
+          "fallback": null,
+          "features": [
+            0.20000000000000284,
+            2.3528918377180026,
+            0.29999999999999716,
+            0.29999999999999716
+          ],
+          "weights": [
+            -0.4255,
+            0.3185,
+            -0.3983,
+            0.8994
+          ],
+          "bias": 2.4719
+        }
+      },
+      "made_on": "2026-11-05",
+      "resolve_on": "2026-11-07"
+    }
+  ]
+}
