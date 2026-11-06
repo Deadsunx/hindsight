@@ -1,20 +1,20 @@
 {
   "date": "2026-11-06",
-  "fetched_at": "2026-11-06T11:47:48.190271+00:00",
+  "fetched_at": "2026-11-06T21:09:43.023182+00:00",
   "observations": {
     "btc": {
-      "usd": 76093,
-      "usd_24h_change": -5.26
+      "usd": 75801,
+      "usd_24h_change": -0.21
     },
     "kp": {
       "max_kp": 2.67,
-      "latest_kp": 2.67,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.1,
-      "count": 187,
-      "strongest_place": "156 km SE of Hasaki, Japan"
+      "count": 207,
+      "strongest_place": "144 km SE of Hasaki, Japan"
     },
     "wiki": {
       "top": "Abdul_El-Sayed",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-05"
     },
     "hn": {
-      "top_id": 50390124,
-      "top_title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
+      "top_id": 50397429,
+      "top_title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
       "top10": [
-        50390124,
+        50397429,
+        50397219,
+        50388001,
+        50391456,
+        50394855,
         50389333,
-        50385272,
-        50390525,
-        50389370,
-        50378228,
-        50384233,
-        50387796,
-        50389260,
-        50388122
+        50397176,
+        50397017,
+        50395919,
+        50395869
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.6,
-      "actual_prev_date": "2026-11-05",
-      "today": 28.0,
-      "forecast_next": 28.0,
-      "forecast_next_date": "2026-11-07"
+      "actual_prev_date": "2026-11-06",
+      "today": 28.4,
+      "forecast_next": 28.4,
+      "forecast_next_date": "2026-11-08"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.573,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 76093,
-        "change_24h": -5.26
+        "today_usd": 75801,
+        "change_24h": -0.21
       },
       "made_on": "2026-11-06",
       "resolve_on": "2026-11-07"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50390124,
-        "top_title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS"
+        "top_id": 50397429,
+        "top_title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost"
       },
       "made_on": "2026-11-06",
       "resolve_on": "2026-11-07"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.0,
-        "for_date": "2026-11-07",
+        "forecast_c": 28.4,
+        "for_date": "2026-11-08",
         "city": "New Delhi"
       },
       "made_on": "2026-11-06",
@@ -141,28 +141,28 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.726,
+      "call": false,
+      "confidence": 0.501,
       "basis": {
-        "today_usd": 76093,
-        "change_24h": -5.26,
+        "today_usd": 75801,
+        "change_24h": -0.21,
         "model": {
-          "p_event": 0.7257,
+          "p_event": 0.4995,
           "n_train": 100,
           "fallback": null,
           "features": [
-            -5.26,
-            -2.2342995169082114,
-            -1.0378327762676998,
-            2.371439168345206
+            -0.21,
+            -2.6094665433240793,
+            -1.4175911355035042,
+            2.359342901361427
           ],
           "weights": [
-            -0.3363,
-            0.2738,
-            -0.3018,
-            -0.0998
+            -0.1952,
+            0.1691,
+            -0.1792,
+            -0.2007
           ],
-          "bias": 0.2878
+          "bias": 0.2445
         }
       },
       "made_on": "2026-11-06",
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.1,
-            216.85714285714286,
+            219.71428571428572,
             5.585714285714286,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.941,
       "basis": {
-        "top_id": 50390124,
-        "top_title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
+        "top_id": 50397429,
+        "top_title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
         "model": {
-          "p_event": 0.9951,
+          "p_event": 0.9414,
           "n_train": 103,
           "fallback": null,
           "features": [
-            0.2,
-            6.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.4018,
-            -0.1876,
-            0.0949
+            0.3739,
+            -0.1773,
+            0.1142
           ],
-          "bias": 2.7041
+          "bias": 2.8635
         }
       },
       "made_on": "2026-11-06",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.888,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 28.0,
-        "for_date": "2026-11-07",
+        "forecast_c": 28.4,
+        "for_date": "2026-11-08",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8876,
-          "n_train": 90,
+          "p_event": 0.9753,
+          "n_train": 91,
           "fallback": null,
           "features": [
             0.0,
             2.3294634575369497,
-            0.10000000000000142,
-            0.10000000000000142
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4272,
-            0.3247,
-            -0.3978,
-            0.9016
+            -0.4291,
+            0.3288,
+            -0.3971,
+            0.904
           ],
-          "bias": 2.4925
+          "bias": 2.5123
         }
       },
       "made_on": "2026-11-06",
