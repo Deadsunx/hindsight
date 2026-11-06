@@ -1,47 +1,47 @@
 {
-  "date": "2026-11-05",
-  "fetched_at": "2026-11-05T21:41:42.532518+00:00",
+  "date": "2026-11-06",
+  "fetched_at": "2026-11-06T11:47:48.190271+00:00",
   "observations": {
     "btc": {
-      "usd": 75968,
-      "usd_24h_change": -5.22
+      "usd": 76093,
+      "usd_24h_change": -5.26
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 2.0,
+      "max_kp": 2.67,
+      "latest_kp": 2.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.1,
-      "count": 225,
-      "strongest_place": "Fiji region"
+      "count": 187,
+      "strongest_place": "156 km SE of Hasaki, Japan"
     },
     "wiki": {
       "top": "Abdul_El-Sayed",
-      "views": 1413749,
-      "for_date": "2026-11-04"
+      "views": 808705,
+      "for_date": "2026-11-05"
     },
     "hn": {
-      "top_id": 50378228,
-      "top_title": "sshole",
+      "top_id": 50390124,
+      "top_title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
       "top10": [
+        50390124,
+        50389333,
+        50385272,
+        50390525,
+        50389370,
         50378228,
-        50383740,
         50384233,
-        50379704,
-        50383057,
-        50383963,
-        50381383,
-        50383739,
-        50380810,
-        50383877
+        50387796,
+        50389260,
+        50388122
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.6,
       "actual_prev_date": "2026-11-05",
-      "today": 28.6,
+      "today": 28.0,
       "forecast_next": 28.0,
       "forecast_next_date": "2026-11-07"
     }
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.572,
+      "confidence": 0.573,
       "basis": {
-        "today_usd": 75968,
-        "change_24h": -5.22
+        "today_usd": 76093,
+        "change_24h": -5.26
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 2.67
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Abdul_El-Sayed"
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50378228,
-        "top_title": "sshole"
+        "top_id": 50390124,
+        "top_title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS"
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "forecast_hit",
@@ -132,8 +132,8 @@
         "for_date": "2026-11-07",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.744,
+      "confidence": 0.726,
       "basis": {
-        "today_usd": 75968,
-        "change_24h": -5.22,
+        "today_usd": 76093,
+        "change_24h": -5.26,
         "model": {
-          "p_event": 0.7442,
-          "n_train": 99,
+          "p_event": 0.7257,
+          "n_train": 100,
           "fallback": null,
           "features": [
-            -5.22,
-            -0.9453274744761542,
-            -4.510030670219722,
-            2.3877136110174875
+            -5.26,
+            -2.2342995169082114,
+            -1.0378327762676998,
+            2.371439168345206
           ],
           "weights": [
-            -0.291,
-            0.2476,
-            -0.2693,
-            -0.1261
+            -0.3363,
+            0.2738,
+            -0.3018,
+            -0.0998
           ],
-          "bias": 0.2683
+          "bias": 0.2878
         }
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.739,
+      "confidence": 0.625,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 2.67,
         "model": {
-          "p_event": 0.2609,
-          "n_train": 102,
+          "p_event": 0.3751,
+          "n_train": 103,
           "fallback": null,
           "features": [
-            2.0,
-            2.4433333333333334,
-            3.2842857142857147,
-            4.0
+            2.67,
+            2.6666666666666665,
+            3.3328571428571427,
+            7.0
           ],
           "weights": [
-            0.8475,
-            -0.1977,
-            -0.1732,
-            0.0939
+            0.8643,
+            -0.1792,
+            -0.1897,
+            0.0703
           ],
-          "bias": -0.4741
+          "bias": -0.4921
         }
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9904,
-          "n_train": 102,
+          "p_event": 0.9905,
+          "n_train": 103,
           "fallback": "laplace",
           "features": [
             6.1,
-            221.28571428571428,
-            5.6000000000000005,
+            216.85714285714286,
+            5.585714285714286,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "wiki_hold_ml",
@@ -231,31 +231,31 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "call": false,
-      "confidence": 0.53,
+      "call": true,
+      "confidence": 0.774,
       "basis": {
         "today_top": "Abdul_El-Sayed",
         "model": {
-          "p_event": 0.4696,
-          "n_train": 94,
+          "p_event": 0.7739,
+          "n_train": 95,
           "fallback": null,
           "features": [
-            1.0,
-            14.161756306412467,
-            1.248785347574891,
-            1.0
+            2.0,
+            13.60319071837134,
+            0.8877324659455581,
+            0.0
           ],
           "weights": [
-            -0.6065,
-            -0.6512,
-            0.494,
-            -0.6152
+            -0.5938,
+            -0.5999,
+            0.4505,
+            -0.5826
           ],
-          "bias": 0.5993
+          "bias": 0.6136
         }
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.938,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50378228,
-        "top_title": "sshole",
+        "top_id": 50390124,
+        "top_title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
         "model": {
-          "p_event": 0.9376,
-          "n_train": 102,
+          "p_event": 0.9951,
+          "n_train": 103,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            3.0
+            0.2,
+            6.0,
+            4.0
           ],
           "weights": [
-            0.376,
-            -0.1783,
-            0.1133
+            0.4018,
+            -0.1876,
+            0.0949
           ],
-          "bias": 2.8537
+          "bias": 2.7041
         }
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-06"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-07"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.888,
       "basis": {
         "forecast_c": 28.0,
         "for_date": "2026-11-07",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9689,
+          "p_event": 0.8876,
           "n_train": 90,
           "fallback": null,
           "features": [
-            0.6000000000000014,
-            2.3632393023136697,
-            1.2,
-            2.0
+            0.0,
+            2.3294634575369497,
+            0.10000000000000142,
+            0.10000000000000142
           ],
           "weights": [
             -0.4272,
@@ -319,8 +319,8 @@
           "bias": 2.4925
         }
       },
-      "made_on": "2026-11-05",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-06",
+      "resolve_on": "2026-11-08"
     }
   ]
 }
