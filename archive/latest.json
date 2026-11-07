@@ -1,20 +1,20 @@
 {
   "date": "2026-11-07",
-  "fetched_at": "2026-11-07T10:52:08.993507+00:00",
+  "fetched_at": "2026-11-07T19:44:40.825194+00:00",
   "observations": {
     "btc": {
-      "usd": 75916,
-      "usd_24h_change": -0.22
+      "usd": 75695,
+      "usd_24h_change": -0.04
     },
     "kp": {
       "max_kp": 3.33,
-      "latest_kp": 3.33,
+      "latest_kp": 3.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 4.8,
-      "count": 175,
-      "strongest_place": "36 km WNW of Poso, Indonesia"
+      "max_mag": 5.5,
+      "count": 173,
+      "strongest_place": "10 km NW of Hamakita, Japan"
     },
     "wiki": {
       "top": "Ramayana:_Part_1",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-06"
     },
     "hn": {
-      "top_id": 50399933,
-      "top_title": "Libghostty 1.0",
+      "top_id": 50406563,
+      "top_title": "The end of Microsoft Research's AI Frontiers group",
       "top10": [
-        50399933,
-        50403214,
-        50401740,
-        50397429,
-        50391456,
-        50402212,
-        50403097,
-        50361765,
-        50399991,
-        50388001
+        50406563,
+        50406670,
+        50406292,
+        50406111,
+        50406222,
+        50404599,
+        50406319,
+        50403052,
+        50370787,
+        50405789
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.6,
-      "actual_prev_date": "2026-11-06",
-      "today": 27.8,
-      "forecast_next": 28.1,
-      "forecast_next_date": "2026-11-08"
+      "actual_prev_date": "2026-11-07",
+      "today": 28.3,
+      "forecast_next": 27.8,
+      "forecast_next_date": "2026-11-09"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.522,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 75916,
-        "change_24h": -0.22
+        "today_usd": 75695,
+        "change_24h": -0.04
       },
       "made_on": "2026-11-07",
       "resolve_on": "2026-11-08"
@@ -85,7 +85,7 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "base_rate": 0.99
+        "base_rate": 1.0
       },
       "made_on": "2026-11-07",
       "resolve_on": "2026-11-08"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50399933,
-        "top_title": "Libghostty 1.0"
+        "top_id": 50406563,
+        "top_title": "The end of Microsoft Research's AI Frontiers group"
       },
       "made_on": "2026-11-07",
       "resolve_on": "2026-11-08"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.1,
-        "for_date": "2026-11-08",
+        "forecast_c": 27.8,
+        "for_date": "2026-11-09",
         "city": "New Delhi"
       },
       "made_on": "2026-11-07",
@@ -141,28 +141,28 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.505,
+      "call": false,
+      "confidence": 0.558,
       "basis": {
-        "today_usd": 75916,
-        "change_24h": -0.22,
+        "today_usd": 75695,
+        "change_24h": -0.04,
         "model": {
-          "p_event": 0.5046,
+          "p_event": 0.4421,
           "n_train": 101,
           "fallback": null,
           "features": [
-            -0.22,
-            -5.2341185135253205,
-            -2.0413430024000645,
-            2.3334193207868306
+            -0.04,
+            -5.5099926350347666,
+            -2.3265116519135987,
+            2.3262795213860215
           ],
           "weights": [
-            -0.1816,
-            0.1445,
-            -0.2023,
-            -0.1578
+            -0.2074,
+            0.1937,
+            -0.1553,
+            -0.2438
           ],
-          "bias": 0.2623
+          "bias": 0.2218
         }
       },
       "made_on": "2026-11-07",
@@ -209,24 +209,17 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "base_rate": 0.99,
+        "base_rate": 1.0,
         "model": {
-          "p_event": 0.9869,
+          "p_event": 0.9906,
           "n_train": 104,
-          "fallback": null,
+          "fallback": "laplace",
           "features": [
-            4.8,
-            214.14285714285714,
-            5.528571428571429,
-            0.8571428571428571
-          ],
-          "weights": [
-            -0.3624,
-            0.3474,
-            0.6131,
-            0.0
-          ],
-          "bias": 4.7791
+            5.5,
+            213.85714285714286,
+            5.628571428571428,
+            1.0
+          ]
         }
       },
       "made_on": "2026-11-07",
@@ -271,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.945,
       "basis": {
-        "top_id": 50399933,
-        "top_title": "Libghostty 1.0",
+        "top_id": 50406563,
+        "top_title": "The end of Microsoft Research's AI Frontiers group",
         "model": {
-          "p_event": 0.9987,
+          "p_event": 0.9454,
           "n_train": 104,
           "fallback": null,
           "features": [
-            0.3,
-            4.0,
+            0.0,
+            11.0,
             5.0
           ],
           "weights": [
-            0.4029,
-            -0.1893,
-            0.0334
+            0.3717,
+            -0.1762,
+            0.1196
           ],
-          "bias": 2.7099
+          "bias": 2.8736
         }
       },
       "made_on": "2026-11-07",
@@ -302,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.883,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 28.1,
-        "for_date": "2026-11-08",
+        "forecast_c": 27.8,
+        "for_date": "2026-11-09",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8825,
-          "n_train": 91,
+          "p_event": 0.9699,
+          "n_train": 92,
           "fallback": null,
           "features": [
-            0.3000000000000007,
+            0.5,
             2.2855196345689093,
-            0.3000000000000007,
-            0.3000000000000007
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4291,
-            0.3288,
-            -0.3971,
-            0.904
+            -0.4304,
+            0.3325,
+            -0.3962,
+            0.9067
           ],
-          "bias": 2.5123
+          "bias": 2.5313
         }
       },
       "made_on": "2026-11-07",
