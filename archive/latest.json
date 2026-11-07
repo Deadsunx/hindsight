@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-06",
-  "fetched_at": "2026-11-06T21:09:43.023182+00:00",
+  "date": "2026-11-07",
+  "fetched_at": "2026-11-07T10:52:08.993507+00:00",
   "observations": {
     "btc": {
-      "usd": 75801,
-      "usd_24h_change": -0.21
+      "usd": 75916,
+      "usd_24h_change": -0.22
     },
     "kp": {
-      "max_kp": 2.67,
-      "latest_kp": 2.33,
+      "max_kp": 3.33,
+      "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.1,
-      "count": 207,
-      "strongest_place": "144 km SE of Hasaki, Japan"
+      "max_mag": 4.8,
+      "count": 175,
+      "strongest_place": "36 km WNW of Poso, Indonesia"
     },
     "wiki": {
-      "top": "Abdul_El-Sayed",
-      "views": 808705,
-      "for_date": "2026-11-05"
+      "top": "Ramayana:_Part_1",
+      "views": 785245,
+      "for_date": "2026-11-06"
     },
     "hn": {
-      "top_id": 50397429,
-      "top_title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+      "top_id": 50399933,
+      "top_title": "Libghostty 1.0",
       "top10": [
+        50399933,
+        50403214,
+        50401740,
         50397429,
-        50397219,
-        50388001,
         50391456,
-        50394855,
-        50389333,
-        50397176,
-        50397017,
-        50395919,
-        50395869
+        50402212,
+        50403097,
+        50361765,
+        50399991,
+        50388001
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.6,
       "actual_prev_date": "2026-11-06",
-      "today": 28.4,
-      "forecast_next": 28.4,
+      "today": 27.8,
+      "forecast_next": 28.1,
       "forecast_next_date": "2026-11-08"
     }
   },
@@ -56,11 +56,11 @@
       "call": false,
       "confidence": 0.522,
       "basis": {
-        "today_usd": 75801,
-        "change_24h": -0.21
+        "today_usd": 75916,
+        "change_24h": -0.22
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "kp_storm",
@@ -68,13 +68,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 2.67
+        "today_max_kp": 3.33
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "quake_m5",
@@ -85,10 +85,10 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "base_rate": 1.0
+        "base_rate": 0.99
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Abdul_El-Sayed"
+        "today_top": "Ramayana:_Part_1"
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50397429,
-        "top_title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost"
+        "top_id": 50399933,
+        "top_title": "Libghostty 1.0"
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.4,
+        "forecast_c": 28.1,
         "for_date": "2026-11-08",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "btc_up_ml",
@@ -141,32 +141,32 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.501,
+      "call": true,
+      "confidence": 0.505,
       "basis": {
-        "today_usd": 75801,
-        "change_24h": -0.21,
+        "today_usd": 75916,
+        "change_24h": -0.22,
         "model": {
-          "p_event": 0.4995,
-          "n_train": 100,
+          "p_event": 0.5046,
+          "n_train": 101,
           "fallback": null,
           "features": [
-            -0.21,
-            -2.6094665433240793,
-            -1.4175911355035042,
-            2.359342901361427
+            -0.22,
+            -5.2341185135253205,
+            -2.0413430024000645,
+            2.3334193207868306
           ],
           "weights": [
-            -0.1952,
-            0.1691,
-            -0.1792,
-            -0.2007
+            -0.1816,
+            0.1445,
+            -0.2023,
+            -0.1578
           ],
-          "bias": 0.2445
+          "bias": 0.2623
         }
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "kp_storm_ml",
@@ -174,31 +174,31 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": false,
-      "confidence": 0.625,
+      "call": true,
+      "confidence": 0.611,
       "basis": {
-        "today_max_kp": 2.67,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.3751,
-          "n_train": 103,
+          "p_event": 0.6109,
+          "n_train": 104,
           "fallback": null,
           "features": [
-            2.67,
+            3.33,
             2.6666666666666665,
-            3.3328571428571427,
-            7.0
+            3.19,
+            6.67
           ],
           "weights": [
-            0.8643,
-            -0.1792,
-            -0.1897,
-            0.0703
+            0.8191,
+            -0.2361,
+            -0.1529,
+            0.2009
           ],
-          "bias": -0.4921
+          "bias": -0.4667
         }
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "quake_m5_ml",
@@ -209,21 +209,28 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "base_rate": 1.0,
+        "base_rate": 0.99,
         "model": {
-          "p_event": 0.9905,
-          "n_train": 103,
-          "fallback": "laplace",
+          "p_event": 0.9869,
+          "n_train": 104,
+          "fallback": null,
           "features": [
-            6.1,
-            219.71428571428572,
-            5.585714285714286,
-            1.0
-          ]
+            4.8,
+            214.14285714285714,
+            5.528571428571429,
+            0.8571428571428571
+          ],
+          "weights": [
+            -0.3624,
+            0.3474,
+            0.6131,
+            0.0
+          ],
+          "bias": 4.7791
         }
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +239,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.774,
+      "confidence": 0.615,
       "basis": {
-        "today_top": "Abdul_El-Sayed",
+        "today_top": "Ramayana:_Part_1",
         "model": {
-          "p_event": 0.7739,
-          "n_train": 95,
+          "p_event": 0.6146,
+          "n_train": 96,
           "fallback": null,
           "features": [
-            2.0,
-            13.60319071837134,
-            0.8877324659455581,
-            0.0
+            1.0,
+            13.573752323468785,
+            1.041102280865207,
+            1.0
           ],
           "weights": [
-            -0.5938,
-            -0.5999,
-            0.4505,
-            -0.5826
+            -0.531,
+            -0.5802,
+            0.4383,
+            -0.514
           ],
-          "bias": 0.6136
+          "bias": 0.5784
         }
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +271,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.941,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50397429,
-        "top_title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+        "top_id": 50399933,
+        "top_title": "Libghostty 1.0",
         "model": {
-          "p_event": 0.9414,
-          "n_train": 103,
+          "p_event": 0.9987,
+          "n_train": 104,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            4.0
+            0.3,
+            4.0,
+            5.0
           ],
           "weights": [
-            0.3739,
-            -0.1773,
-            0.1142
+            0.4029,
+            -0.1893,
+            0.0334
           ],
-          "bias": 2.8635
+          "bias": 2.7099
         }
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-07"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-08"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +302,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.883,
       "basis": {
-        "forecast_c": 28.4,
+        "forecast_c": 28.1,
         "for_date": "2026-11-08",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9753,
+          "p_event": 0.8825,
           "n_train": 91,
           "fallback": null,
           "features": [
-            0.0,
-            2.3294634575369497,
-            1.2,
-            2.0
+            0.3000000000000007,
+            2.2855196345689093,
+            0.3000000000000007,
+            0.3000000000000007
           ],
           "weights": [
             -0.4291,
@@ -319,8 +326,8 @@
           "bias": 2.5123
         }
       },
-      "made_on": "2026-11-06",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-09"
     }
   ]
 }
