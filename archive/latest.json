@@ -1,20 +1,20 @@
 {
-  "date": "2026-11-07",
-  "fetched_at": "2026-11-07T19:44:40.825194+00:00",
+  "date": "2026-11-08",
+  "fetched_at": "2026-11-08T11:01:20.046126+00:00",
   "observations": {
     "btc": {
-      "usd": 75695,
-      "usd_24h_change": -0.04
+      "usd": 75811,
+      "usd_24h_change": -0.14
     },
     "kp": {
-      "max_kp": 3.33,
+      "max_kp": 5.33,
       "latest_kp": 3.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.5,
-      "count": 173,
-      "strongest_place": "10 km NW of Hamakita, Japan"
+      "max_mag": 5.8,
+      "count": 201,
+      "strongest_place": "central Mid-Atlantic Ridge"
     },
     "wiki": {
       "top": "Ramayana:_Part_1",
@@ -22,27 +22,27 @@
       "for_date": "2026-11-06"
     },
     "hn": {
-      "top_id": 50406563,
-      "top_title": "The end of Microsoft Research's AI Frontiers group",
+      "top_id": 50411467,
+      "top_title": "Agent memory needs its OpenTelemetry moment",
       "top10": [
-        50406563,
+        50411467,
+        50410107,
+        50366902,
+        50411818,
         50406670,
-        50406292,
-        50406111,
-        50406222,
-        50404599,
-        50406319,
-        50403052,
-        50370787,
-        50405789
+        50407882,
+        50411083,
+        50371360,
+        50410359,
+        50411522
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.6,
       "actual_prev_date": "2026-11-07",
-      "today": 28.3,
-      "forecast_next": 27.8,
+      "today": 27.9,
+      "forecast_next": 27.5,
       "forecast_next_date": "2026-11-09"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.52,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 75695,
-        "change_24h": -0.04
+        "today_usd": 75811,
+        "change_24h": -0.14
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 3.33
+        "today_max_kp": 5.33
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Ramayana:_Part_1"
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50406563,
-        "top_title": "The end of Microsoft Research's AI Frontiers group"
+        "top_id": 50411467,
+        "top_title": "Agent memory needs its OpenTelemetry moment"
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.8,
+        "forecast_c": 27.5,
         "for_date": "2026-11-09",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "btc_up_ml",
@@ -141,32 +141,32 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.558,
+      "call": true,
+      "confidence": 0.551,
       "basis": {
-        "today_usd": 75695,
-        "change_24h": -0.04,
+        "today_usd": 75811,
+        "change_24h": -0.14,
         "model": {
-          "p_event": 0.4421,
-          "n_train": 101,
+          "p_event": 0.5515,
+          "n_train": 102,
           "fallback": null,
           "features": [
-            -0.04,
-            -5.5099926350347666,
-            -2.3265116519135987,
-            2.3262795213860215
+            -0.14,
+            -0.2066659646166813,
+            -2.4399346262241495,
+            2.103232115142293
           ],
           "weights": [
-            -0.2074,
-            0.1937,
-            -0.1553,
-            -0.2438
+            -0.1765,
+            0.1341,
+            -0.1648,
+            -0.1981
           ],
-          "bias": 0.2218
+          "bias": 0.2396
         }
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.611,
+      "confidence": 0.709,
       "basis": {
-        "today_max_kp": 3.33,
+        "today_max_kp": 5.33,
         "model": {
-          "p_event": 0.6109,
-          "n_train": 104,
+          "p_event": 0.7092,
+          "n_train": 105,
           "fallback": null,
           "features": [
-            3.33,
-            2.6666666666666665,
-            3.19,
-            6.67
+            5.33,
+            3.776666666666667,
+            3.0942857142857143,
+            3.33
           ],
           "weights": [
-            0.8191,
-            -0.2361,
-            -0.1529,
-            0.2009
+            0.8107,
+            -0.2685,
+            -0.1393,
+            0.2716
           ],
-          "bias": -0.4667
+          "bias": -0.4431
         }
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9906,
-          "n_train": 104,
+          "p_event": 0.9907,
+          "n_train": 105,
           "fallback": "laplace",
           "features": [
-            5.5,
-            213.85714285714286,
-            5.628571428571428,
+            5.8,
+            213.0,
+            5.6000000000000005,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,17 +232,17 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.615,
+      "confidence": 0.608,
       "basis": {
         "today_top": "Ramayana:_Part_1",
         "model": {
-          "p_event": 0.6146,
+          "p_event": 0.6084,
           "n_train": 96,
           "fallback": null,
           "features": [
             1.0,
             13.573752323468785,
-            1.041102280865207,
+            0.9989070877377388,
             1.0
           ],
           "weights": [
@@ -254,8 +254,8 @@
           "bias": 0.5784
         }
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.945,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50406563,
-        "top_title": "The end of Microsoft Research's AI Frontiers group",
+        "top_id": 50411467,
+        "top_title": "Agent memory needs its OpenTelemetry moment",
         "model": {
-          "p_event": 0.9454,
-          "n_train": 104,
+          "p_event": 0.9795,
+          "n_train": 105,
           "fallback": null,
           "features": [
-            0.0,
+            0.1,
             11.0,
-            5.0
+            6.0
           ],
           "weights": [
-            0.3717,
-            -0.1762,
-            0.1196
+            0.3695,
+            -0.175,
+            0.129
           ],
-          "bias": 2.8736
+          "bias": 2.8841
         }
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-08"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-09"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.887,
       "basis": {
-        "forecast_c": 27.8,
+        "forecast_c": 27.5,
         "for_date": "2026-11-09",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9699,
+          "p_event": 0.8866,
           "n_train": 92,
           "fallback": null,
           "features": [
-            0.5,
-            2.2855196345689093,
-            1.2,
-            2.0
+            0.3999999999999986,
+            2.171266911275535,
+            0.6000000000000014,
+            0.6000000000000014
           ],
           "weights": [
             -0.4304,
@@ -319,8 +319,8 @@
           "bias": 2.5313
         }
       },
-      "made_on": "2026-11-07",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-10"
     }
   ]
 }
