@@ -1,14 +1,14 @@
 {
   "date": "2026-11-08",
-  "fetched_at": "2026-11-08T11:01:20.046126+00:00",
+  "fetched_at": "2026-11-08T20:03:07.332418+00:00",
   "observations": {
     "btc": {
-      "usd": 75811,
-      "usd_24h_change": -0.14
+      "usd": 75851,
+      "usd_24h_change": 0.17
     },
     "kp": {
       "max_kp": 5.33,
-      "latest_kp": 3.0,
+      "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
@@ -22,28 +22,28 @@
       "for_date": "2026-11-06"
     },
     "hn": {
-      "top_id": 50411467,
-      "top_title": "Agent memory needs its OpenTelemetry moment",
+      "top_id": 50415628,
+      "top_title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders",
       "top10": [
-        50411467,
-        50410107,
-        50366902,
-        50411818,
-        50406670,
-        50407882,
-        50411083,
-        50371360,
-        50410359,
-        50411522
+        50415628,
+        50416158,
+        50416053,
+        50416363,
+        50368481,
+        50411961,
+        50412067,
+        50415817,
+        50389923,
+        50413769
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.6,
-      "actual_prev_date": "2026-11-07",
+      "actual_prev": 28.5,
+      "actual_prev_date": "2026-11-08",
       "today": 27.9,
-      "forecast_next": 27.5,
-      "forecast_next_date": "2026-11-09"
+      "forecast_next": 27.7,
+      "forecast_next_date": "2026-11-10"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.521,
+      "call": true,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 75811,
-        "change_24h": -0.14
+        "today_usd": 75851,
+        "change_24h": 0.17
       },
       "made_on": "2026-11-08",
       "resolve_on": "2026-11-09"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50411467,
-        "top_title": "Agent memory needs its OpenTelemetry moment"
+        "top_id": 50415628,
+        "top_title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders"
       },
       "made_on": "2026-11-08",
       "resolve_on": "2026-11-09"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.5,
-        "for_date": "2026-11-09",
+        "forecast_c": 27.7,
+        "for_date": "2026-11-10",
         "city": "New Delhi"
       },
       "made_on": "2026-11-08",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.551,
+      "confidence": 0.545,
       "basis": {
-        "today_usd": 75811,
-        "change_24h": -0.14,
+        "today_usd": 75851,
+        "change_24h": 0.17,
         "model": {
-          "p_event": 0.5515,
+          "p_event": 0.5449,
           "n_train": 102,
           "fallback": null,
           "features": [
-            -0.14,
-            -0.2066659646166813,
-            -2.4399346262241495,
-            2.103232115142293
+            0.17,
+            -0.1540122156697521,
+            -2.388459212168792,
+            2.104100868203927
           ],
           "weights": [
             -0.1765,
@@ -266,14 +266,14 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50411467,
-        "top_title": "Agent memory needs its OpenTelemetry moment",
+        "top_id": 50415628,
+        "top_title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders",
         "model": {
-          "p_event": 0.9795,
+          "p_event": 0.9496,
           "n_train": 105,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             6.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.887,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 27.5,
-        "for_date": "2026-11-09",
+        "forecast_c": 27.7,
+        "for_date": "2026-11-10",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8866,
-          "n_train": 92,
+          "p_event": 0.972,
+          "n_train": 93,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            2.171266911275535,
-            0.6000000000000014,
-            0.6000000000000014
+            0.1999999999999993,
+            2.166679487141557,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4304,
-            0.3325,
-            -0.3962,
-            0.9067
+            -0.4341,
+            0.3349,
+            -0.3954,
+            0.9087
           ],
-          "bias": 2.5313
+          "bias": 2.5512
         }
       },
       "made_on": "2026-11-08",
