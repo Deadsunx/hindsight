@@ -1,49 +1,49 @@
 {
   "date": "2026-11-09",
-  "fetched_at": "2026-11-09T12:30:45.129025+00:00",
+  "fetched_at": "2026-11-09T23:54:29.635188+00:00",
   "observations": {
     "btc": {
-      "usd": 74673,
-      "usd_24h_change": -1.61
+      "usd": 75220,
+      "usd_24h_change": 0.69
     },
     "kp": {
-      "max_kp": 4.0,
+      "max_kp": 3.33,
       "latest_kp": 2.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.4,
-      "count": 176,
+      "count": 200,
       "strongest_place": "30 km WSW of Lata, Solomon Islands"
     },
     "wiki": {
       "top": "Ramayana:_Part_1",
-      "views": 726004,
-      "for_date": "2026-11-07"
+      "views": 716434,
+      "for_date": "2026-11-08"
     },
     "hn": {
-      "top_id": 50424581,
-      "top_title": "Fold Epic Paper Airplanes",
+      "top_id": 50431058,
+      "top_title": "USPS now offers official ZIP Code boundary polygons",
       "top10": [
+        50431058,
+        50432831,
+        50433978,
+        50431144,
+        50429426,
+        50429734,
+        50427362,
+        50429024,
         50424581,
-        50423569,
-        50422168,
-        50424366,
-        50392256,
-        50418176,
-        50419215,
-        50418975,
-        50368481,
-        50424147
+        50430621
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.5,
-      "actual_prev_date": "2026-11-08",
-      "today": 27.8,
-      "forecast_next": 27.8,
-      "forecast_next_date": "2026-11-10"
+      "actual_prev": 28.2,
+      "actual_prev_date": "2026-11-09",
+      "today": 27.9,
+      "forecast_next": 27.9,
+      "forecast_next_date": "2026-11-11"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.536,
+      "call": true,
+      "confidence": 0.527,
       "basis": {
-        "today_usd": 74673,
-        "change_24h": -1.61
+        "today_usd": 75220,
+        "change_24h": 0.69
       },
       "made_on": "2026-11-09",
       "resolve_on": "2026-11-10"
@@ -71,7 +71,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.0
+        "today_max_kp": 3.33
       },
       "made_on": "2026-11-09",
       "resolve_on": "2026-11-10"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50424581,
-        "top_title": "Fold Epic Paper Airplanes"
+        "top_id": 50431058,
+        "top_title": "USPS now offers official ZIP Code boundary polygons"
       },
       "made_on": "2026-11-09",
       "resolve_on": "2026-11-10"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.8,
-        "for_date": "2026-11-10",
+        "forecast_c": 27.9,
+        "for_date": "2026-11-11",
         "city": "New Delhi"
       },
       "made_on": "2026-11-09",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.556,
+      "confidence": 0.51,
       "basis": {
-        "today_usd": 74673,
-        "change_24h": -1.61,
+        "today_usd": 75220,
+        "change_24h": 0.69,
         "model": {
-          "p_event": 0.556,
+          "p_event": 0.5104,
           "n_train": 103,
           "fallback": null,
           "features": [
-            -1.61,
-            -1.488107017057827,
-            -2.6338779288852976,
-            2.119263027267219
+            0.69,
+            -0.7664806532895363,
+            -1.9206446481425998,
+            2.08712328300434
           ],
           "weights": [
             -0.1813,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.531,
+      "confidence": 0.619,
       "basis": {
-        "today_max_kp": 4.0,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.469,
+          "p_event": 0.3814,
           "n_train": 106,
           "fallback": null,
           "features": [
-            4.0,
-            4.22,
-            3.237142857142857,
+            3.33,
+            3.9966666666666666,
+            3.141428571428572,
             3.33
           ],
           "weights": [
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.4,
-            197.28571428571428,
+            200.71428571428572,
             5.757142857142857,
             1.0
           ]
@@ -236,22 +236,22 @@
       "basis": {
         "today_top": "Ramayana:_Part_1",
         "model": {
-          "p_event": 0.7763,
-          "n_train": 97,
+          "p_event": 0.7764,
+          "n_train": 96,
           "fallback": null,
           "features": [
             2.0,
-            13.495312180835558,
-            0.8974284807124575,
+            13.48204280336336,
+            0.887097961052184,
             0.0
           ],
           "weights": [
-            -0.5356,
-            -0.5915,
-            0.4416,
-            -0.4962
+            -0.531,
+            -0.5802,
+            0.4383,
+            -0.514
           ],
-          "bias": 0.5944
+          "bias": 0.5784
         }
       },
       "made_on": "2026-11-09",
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.927,
       "basis": {
-        "top_id": 50424581,
-        "top_title": "Fold Epic Paper Airplanes",
+        "top_id": 50431058,
+        "top_title": "USPS now offers official ZIP Code boundary polygons",
         "model": {
-          "p_event": 0.9698,
+          "p_event": 0.927,
           "n_train": 106,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             0.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.755,
+      "confidence": 0.941,
       "basis": {
-        "forecast_c": 27.8,
-        "for_date": "2026-11-10",
+        "forecast_c": 27.9,
+        "for_date": "2026-11-11",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7554,
-          "n_train": 93,
+          "p_event": 0.9409,
+          "n_train": 94,
           "fallback": null,
           "features": [
             0.0,
-            0.46861498055439926,
-            0.10000000000000142,
-            0.10000000000000142
+            0.46314144707637644,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4341,
-            0.3349,
-            -0.3954,
-            0.9087
+            -0.4357,
+            0.3375,
+            -0.3944,
+            0.9112
           ],
-          "bias": 2.5512
+          "bias": 2.5698
         }
       },
       "made_on": "2026-11-09",

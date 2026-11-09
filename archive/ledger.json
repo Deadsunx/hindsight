@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T12:30:50.087459+00:00",
+  "updated": "2026-11-09T23:54:30.927272+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -72,25 +72,25 @@
     },
     "wiki_hold": {
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "shared_days": 72,
-      "rule_correct": 42,
-      "model_correct": 43,
-      "rule_accuracy": 0.5833,
-      "model_accuracy": 0.5972,
-      "rule_brier": 0.2452,
-      "model_brier": 0.2517,
-      "rule_log_loss": 0.684,
-      "model_log_loss": 0.7084,
+      "shared_days": 71,
+      "rule_correct": 41,
+      "model_correct": 42,
+      "rule_accuracy": 0.5775,
+      "model_accuracy": 0.5915,
+      "rule_brier": 0.2474,
+      "model_brier": 0.2531,
+      "rule_log_loss": 0.6886,
+      "model_log_loss": 0.7114,
       "coin_flip": {
-        "n": 72,
+        "n": 71,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 169,
-        "rate": 0.6272,
-        "majority_accuracy": 0.6272
+        "n": 167,
+        "rate": 0.6228,
+        "majority_accuracy": 0.6228
       }
     },
     "hn_fade": {
@@ -118,25 +118,25 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 67,
-      "rule_correct": 59,
-      "model_correct": 59,
-      "rule_accuracy": 0.8806,
-      "model_accuracy": 0.8806,
-      "rule_brier": 0.1116,
-      "model_brier": 0.1035,
-      "rule_log_loss": 0.3887,
-      "model_log_loss": 0.3696,
+      "shared_days": 68,
+      "rule_correct": 60,
+      "model_correct": 60,
+      "rule_accuracy": 0.8824,
+      "model_accuracy": 0.8824,
+      "rule_brier": 0.1106,
+      "model_brier": 0.102,
+      "rule_log_loss": 0.3862,
+      "model_log_loss": 0.3649,
       "coin_flip": {
-        "n": 67,
+        "n": 68,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 160,
-        "rate": 0.8938,
-        "majority_accuracy": 0.8938
+        "n": 162,
+        "rate": 0.8951,
+        "majority_accuracy": 0.8951
       }
     }
   },
@@ -144,8 +144,8 @@
     "graded": 1072,
     "correct": 819,
     "accuracy": 0.764,
-    "brier": 0.1469,
-    "log_loss": 0.4481,
+    "brier": 0.1467,
+    "log_loss": 0.4475,
     "open": 14,
     "void": 39,
     "days": 107
@@ -208,13 +208,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "graded": 97,
-      "correct": 57,
-      "accuracy": 0.5876,
-      "brier": 0.2416,
-      "log_loss": 0.6761,
-      "base_rate": 0.6392,
-      "majority_accuracy": 0.6392
+      "graded": 96,
+      "correct": 56,
+      "accuracy": 0.5833,
+      "brier": 0.2432,
+      "log_loss": 0.6794,
+      "base_rate": 0.6354,
+      "majority_accuracy": 0.6354
     },
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 93,
-      "correct": 84,
-      "accuracy": 0.9032,
-      "brier": 0.0981,
-      "log_loss": 0.3573,
-      "base_rate": 0.9032,
-      "majority_accuracy": 0.9032
+      "graded": 94,
+      "correct": 85,
+      "accuracy": 0.9043,
+      "brier": 0.0974,
+      "log_loss": 0.3559,
+      "base_rate": 0.9043,
+      "majority_accuracy": 0.9043
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -286,13 +286,13 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "graded": 72,
-      "correct": 43,
-      "accuracy": 0.5972,
-      "brier": 0.2517,
-      "log_loss": 0.7084,
-      "base_rate": 0.6111,
-      "majority_accuracy": 0.6111
+      "graded": 71,
+      "correct": 42,
+      "accuracy": 0.5915,
+      "brier": 0.2531,
+      "log_loss": 0.7114,
+      "base_rate": 0.6056,
+      "majority_accuracy": 0.6056
     },
     "hn_fade_ml": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 67,
-      "correct": 59,
-      "accuracy": 0.8806,
-      "brier": 0.1035,
-      "log_loss": 0.3696,
-      "base_rate": 0.8806,
-      "majority_accuracy": 0.8806
+      "graded": 68,
+      "correct": 60,
+      "accuracy": 0.8824,
+      "brier": 0.102,
+      "log_loss": 0.3649,
+      "base_rate": 0.8824,
+      "majority_accuracy": 0.8824
     }
   },
   "calibration": [
@@ -330,27 +330,27 @@
     },
     {
       "label": "60\u201370%",
-      "n": 103,
-      "claimed": 0.6415,
-      "actual": 0.5437
+      "n": 102,
+      "claimed": 0.6419,
+      "actual": 0.5392
     },
     {
       "label": "70\u201380%",
-      "n": 227,
-      "claimed": 0.735,
-      "actual": 0.6872
+      "n": 226,
+      "claimed": 0.7352,
+      "actual": 0.6858
     },
     {
       "label": "80\u201390%",
-      "n": 256,
-      "claimed": 0.8446,
-      "actual": 0.8789
+      "n": 257,
+      "claimed": 0.8445,
+      "actual": 0.8794
     },
     {
       "label": "90\u2013100%",
-      "n": 319,
+      "n": 320,
       "claimed": 0.9438,
-      "actual": 0.9624
+      "actual": 0.9625
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.536,
+      "call": true,
+      "confidence": 0.527,
       "basis": {
-        "today_usd": 74673,
-        "change_24h": -1.61
+        "today_usd": 75220,
+        "change_24h": 0.69
       },
       "made_on": "2026-11-09",
       "resolve_on": "2026-11-10"
@@ -428,7 +428,7 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 4.0
+        "today_max_kp": 3.33
       },
       "made_on": "2026-11-09",
       "resolve_on": "2026-11-10"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50424581,
-        "top_title": "Fold Epic Paper Airplanes"
+        "top_id": 50431058,
+        "top_title": "USPS now offers official ZIP Code boundary polygons"
       },
       "made_on": "2026-11-09",
       "resolve_on": "2026-11-10"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.8,
-        "for_date": "2026-11-10",
+        "forecast_c": 27.9,
+        "for_date": "2026-11-11",
         "city": "New Delhi"
       },
       "made_on": "2026-11-09",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.556,
+      "confidence": 0.51,
       "basis": {
-        "today_usd": 74673,
-        "change_24h": -1.61,
+        "today_usd": 75220,
+        "change_24h": 0.69,
         "model": {
-          "p_event": 0.556,
+          "p_event": 0.5104,
           "n_train": 103,
           "fallback": null,
           "features": [
-            -1.61,
-            -1.488107017057827,
-            -2.6338779288852976,
-            2.119263027267219
+            0.69,
+            -0.7664806532895363,
+            -1.9206446481425998,
+            2.08712328300434
           ],
           "weights": [
             -0.1813,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.531,
+      "confidence": 0.619,
       "basis": {
-        "today_max_kp": 4.0,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.469,
+          "p_event": 0.3814,
           "n_train": 106,
           "fallback": null,
           "features": [
-            4.0,
-            4.22,
-            3.237142857142857,
+            3.33,
+            3.9966666666666666,
+            3.141428571428572,
             3.33
           ],
           "weights": [
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             6.4,
-            197.28571428571428,
+            200.71428571428572,
             5.757142857142857,
             1.0
           ]
@@ -593,22 +593,22 @@
       "basis": {
         "today_top": "Ramayana:_Part_1",
         "model": {
-          "p_event": 0.7763,
-          "n_train": 97,
+          "p_event": 0.7764,
+          "n_train": 96,
           "fallback": null,
           "features": [
             2.0,
-            13.495312180835558,
-            0.8974284807124575,
+            13.48204280336336,
+            0.887097961052184,
             0.0
           ],
           "weights": [
-            -0.5356,
-            -0.5915,
-            0.4416,
-            -0.4962
+            -0.531,
+            -0.5802,
+            0.4383,
+            -0.514
           ],
-          "bias": 0.5944
+          "bias": 0.5784
         }
       },
       "made_on": "2026-11-09",
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.927,
       "basis": {
-        "top_id": 50424581,
-        "top_title": "Fold Epic Paper Airplanes",
+        "top_id": 50431058,
+        "top_title": "USPS now offers official ZIP Code boundary polygons",
         "model": {
-          "p_event": 0.9698,
+          "p_event": 0.927,
           "n_train": 106,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             0.0
           ],
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.755,
+      "confidence": 0.941,
       "basis": {
-        "forecast_c": 27.8,
-        "for_date": "2026-11-10",
+        "forecast_c": 27.9,
+        "for_date": "2026-11-11",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7554,
-          "n_train": 93,
+          "p_event": 0.9409,
+          "n_train": 94,
           "fallback": null,
           "features": [
             0.0,
-            0.46861498055439926,
-            0.10000000000000142,
-            0.10000000000000142
+            0.46314144707637644,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4341,
-            0.3349,
-            -0.3954,
-            0.9087
+            -0.4357,
+            0.3375,
+            -0.3944,
+            0.9112
           ],
-          "bias": 2.5512
+          "bias": 2.5698
         }
       },
       "made_on": "2026-11-09",
@@ -14436,6 +14436,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-09",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -14488,6 +14501,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-11-07",
+      "resolve_on": "2026-11-09",
+      "call": true,
+      "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -14523,19 +14549,6 @@
       "resolve_on": "2026-11-09",
       "call": true,
       "confidence": 0.95,
-      "actual": true,
-      "correct": true
-    },
-    {
-      "id": "wiki_hold",
-      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "rule": "persistence",
-      "family": "wiki_hold",
-      "variant": "rule",
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09",
-      "call": true,
-      "confidence": 0.7,
       "actual": true,
       "correct": true
     },
@@ -14588,19 +14601,6 @@
       "resolve_on": "2026-11-09",
       "call": true,
       "confidence": 0.95,
-      "actual": true,
-      "correct": true
-    },
-    {
-      "id": "wiki_hold_ml",
-      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "rule": "logistic regression",
-      "family": "wiki_hold",
-      "variant": "model",
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09",
-      "call": true,
-      "confidence": 0.608,
       "actual": true,
       "correct": true
     },

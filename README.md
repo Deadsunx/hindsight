@@ -45,33 +45,33 @@ Saying "50%" to all 1072 of them instead would score Brier 0.250, log loss 0.693
 | Bitcoin will be higher tomorrow than it is today. | momentum | n=104 | 46/104 (44%) | 0.255 | 0.704 |
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=106 | 75/106 (71%) | 0.206 | 0.602 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=106 | 106/106 (100%) | 0.003 | 0.056 |
-| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=97 | 57/97 (59%) | 0.242 | 0.676 |
+| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=96 | 56/96 (58%) | 0.243 | 0.679 |
 | The current #1 story on Hacker News will fall out of the top 10. | decay | n=106 | 100/106 (94%) | 0.057 | 0.241 |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=93 | 84/93 (90%) | 0.098 | 0.357 |
+| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=94 | 85/94 (90%) | 0.097 | 0.356 |
 | Bitcoin will be higher tomorrow than it is today. | logistic regression | n=78 | 36/78 (46%) | 0.287 | 0.789 |
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | logistic regression | n=81 | 55/81 (68%) | 0.228 | 0.676 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | logistic regression | n=81 | 81/81 (100%) | 0.003 | 0.051 |
-| Today's most-read Wikipedia article will still be #1 tomorrow. | logistic regression | n=72 | 43/72 (60%) | 0.252 | 0.708 |
+| Today's most-read Wikipedia article will still be #1 tomorrow. | logistic regression | n=71 | 42/71 (59%) | 0.253 | 0.711 |
 | The current #1 story on Hacker News will fall out of the top 10. | logistic regression | n=81 | 77/81 (95%) | 0.049 | 0.209 |
-| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | logistic regression | n=67 | 59/67 (88%) | 0.103 | 0.370 |
+| Tomorrow's high in New Delhi will land within 2°C of today's forecast. | logistic regression | n=68 | 60/68 (88%) | 0.102 | 0.365 |
 | _coin flip — the baseline_ | _50% to everything_ | n=1072 | _50%_ | _0.250_ | _0.693_ |
 
 _Sample is 1072 settled bets across 107 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
 
 **Open bets, placed today:**
 
-- **no** — Bitcoin will be higher tomorrow than it is today. _(54% confident, momentum)_
+- **yes** — Bitcoin will be higher tomorrow than it is today. _(53% confident, momentum)_
 - **yes** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(70% confident, persistence)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, base rate)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
 - **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
-- **yes** — Bitcoin will be higher tomorrow than it is today. _(56% confident, logistic regression)_
-- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(53% confident, logistic regression)_
+- **yes** — Bitcoin will be higher tomorrow than it is today. _(51% confident, logistic regression)_
+- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(62% confident, logistic regression)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, logistic regression)_
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(78% confident, logistic regression)_
-- **yes** — The current #1 story on Hacker News will fall out of the top 10. _(95% confident, logistic regression)_
-- **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(76% confident, logistic regression)_
+- **yes** — The current #1 story on Hacker News will fall out of the top 10. _(93% confident, logistic regression)_
+- **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(94% confident, logistic regression)_
 
 <!-- LEDGER:END -->
 
