@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-09",
+  "fetched_at": "2026-11-09T12:30:45.129025+00:00",
+  "observations": {
+    "btc": {
+      "usd": 74673,
+      "usd_24h_change": -1.61
+    },
+    "kp": {
+      "max_kp": 4.0,
+      "latest_kp": 2.67,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6.4,
+      "count": 176,
+      "strongest_place": "30 km WSW of Lata, Solomon Islands"
+    },
+    "wiki": {
+      "top": "Ramayana:_Part_1",
+      "views": 726004,
+      "for_date": "2026-11-07"
+    },
+    "hn": {
+      "top_id": 50424581,
+      "top_title": "Fold Epic Paper Airplanes",
+      "top10": [
+        50424581,
+        50423569,
+        50422168,
+        50424366,
+        50392256,
+        50418176,
+        50419215,
+        50418975,
+        50368481,
+        50424147
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 28.5,
+      "actual_prev_date": "2026-11-08",
+      "today": 27.8,
+      "forecast_next": 27.8,
+      "forecast_next_date": "2026-11-10"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.536,
+      "basis": {
+        "today_usd": 74673,
+        "change_24h": -1.61
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_max_kp": 4.0
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_top": "Ramayana:_Part_1"
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50424581,
+        "top_title": "Fold Epic Paper Airplanes"
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 27.8,
+        "for_date": "2026-11-10",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-11"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.556,
+      "basis": {
+        "today_usd": 74673,
+        "change_24h": -1.61,
+        "model": {
+          "p_event": 0.556,
+          "n_train": 103,
+          "fallback": null,
+          "features": [
+            -1.61,
+            -1.488107017057827,
+            -2.6338779288852976,
+            2.119263027267219
+          ],
+          "weights": [
+            -0.1813,
+            0.1249,
+            -0.1227,
+            -0.2327
+          ],
+          "bias": 0.2174
+        }
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.531,
+      "basis": {
+        "today_max_kp": 4.0,
+        "model": {
+          "p_event": 0.469,
+          "n_train": 106,
+          "fallback": null,
+          "features": [
+            4.0,
+            4.22,
+            3.237142857142857,
+            3.33
+          ],
+          "weights": [
+            0.8484,
+            -0.2687,
+            -0.1446,
+            0.2649
+          ],
+          "bias": -0.4182
+        }
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9907,
+          "n_train": 106,
+          "fallback": "laplace",
+          "features": [
+            6.4,
+            197.28571428571428,
+            5.757142857142857,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.776,
+      "basis": {
+        "today_top": "Ramayana:_Part_1",
+        "model": {
+          "p_event": 0.7763,
+          "n_train": 97,
+          "fallback": null,
+          "features": [
+            2.0,
+            13.495312180835558,
+            0.8974284807124575,
+            0.0
+          ],
+          "weights": [
+            -0.5356,
+            -0.5915,
+            0.4416,
+            -0.4962
+          ],
+          "bias": 0.5944
+        }
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50424581,
+        "top_title": "Fold Epic Paper Airplanes",
+        "model": {
+          "p_event": 0.9698,
+          "n_train": 106,
+          "fallback": null,
+          "features": [
+            0.1,
+            11.0,
+            0.0
+          ],
+          "weights": [
+            0.3674,
+            -0.1738,
+            0.1418
+          ],
+          "bias": 2.895
+        }
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.755,
+      "basis": {
+        "forecast_c": 27.8,
+        "for_date": "2026-11-10",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.7554,
+          "n_train": 93,
+          "fallback": null,
+          "features": [
+            0.0,
+            0.46861498055439926,
+            0.10000000000000142,
+            0.10000000000000142
+          ],
+          "weights": [
+            -0.4341,
+            0.3349,
+            -0.3954,
+            0.9087
+          ],
+          "bias": 2.5512
+        }
+      },
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-11"
+    }
+  ]
+}

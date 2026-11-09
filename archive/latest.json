@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-08",
-  "fetched_at": "2026-11-08T20:03:07.332418+00:00",
+  "date": "2026-11-09",
+  "fetched_at": "2026-11-09T12:30:45.129025+00:00",
   "observations": {
     "btc": {
-      "usd": 75851,
-      "usd_24h_change": 0.17
+      "usd": 74673,
+      "usd_24h_change": -1.61
     },
     "kp": {
-      "max_kp": 5.33,
-      "latest_kp": 3.33,
+      "max_kp": 4.0,
+      "latest_kp": 2.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.8,
-      "count": 201,
-      "strongest_place": "central Mid-Atlantic Ridge"
+      "max_mag": 6.4,
+      "count": 176,
+      "strongest_place": "30 km WSW of Lata, Solomon Islands"
     },
     "wiki": {
       "top": "Ramayana:_Part_1",
-      "views": 785245,
-      "for_date": "2026-11-06"
+      "views": 726004,
+      "for_date": "2026-11-07"
     },
     "hn": {
-      "top_id": 50415628,
-      "top_title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders",
+      "top_id": 50424581,
+      "top_title": "Fold Epic Paper Airplanes",
       "top10": [
-        50415628,
-        50416158,
-        50416053,
-        50416363,
+        50424581,
+        50423569,
+        50422168,
+        50424366,
+        50392256,
+        50418176,
+        50419215,
+        50418975,
         50368481,
-        50411961,
-        50412067,
-        50415817,
-        50389923,
-        50413769
+        50424147
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.5,
       "actual_prev_date": "2026-11-08",
-      "today": 27.9,
-      "forecast_next": 27.7,
+      "today": 27.8,
+      "forecast_next": 27.8,
       "forecast_next_date": "2026-11-10"
     }
   },
@@ -53,14 +53,14 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.522,
+      "call": false,
+      "confidence": 0.536,
       "basis": {
-        "today_usd": 75851,
-        "change_24h": 0.17
+        "today_usd": 74673,
+        "change_24h": -1.61
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 5.33
+        "today_max_kp": 4.0
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Ramayana:_Part_1"
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50415628,
-        "top_title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders"
+        "top_id": 50424581,
+        "top_title": "Fold Epic Paper Airplanes"
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.7,
+        "forecast_c": 27.8,
         "for_date": "2026-11-10",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.545,
+      "confidence": 0.556,
       "basis": {
-        "today_usd": 75851,
-        "change_24h": 0.17,
+        "today_usd": 74673,
+        "change_24h": -1.61,
         "model": {
-          "p_event": 0.5449,
-          "n_train": 102,
+          "p_event": 0.556,
+          "n_train": 103,
           "fallback": null,
           "features": [
-            0.17,
-            -0.1540122156697521,
-            -2.388459212168792,
-            2.104100868203927
+            -1.61,
+            -1.488107017057827,
+            -2.6338779288852976,
+            2.119263027267219
           ],
           "weights": [
-            -0.1765,
-            0.1341,
-            -0.1648,
-            -0.1981
+            -0.1813,
+            0.1249,
+            -0.1227,
+            -0.2327
           ],
-          "bias": 0.2396
+          "bias": 0.2174
         }
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "kp_storm_ml",
@@ -174,31 +174,31 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": true,
-      "confidence": 0.709,
+      "call": false,
+      "confidence": 0.531,
       "basis": {
-        "today_max_kp": 5.33,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.7092,
-          "n_train": 105,
+          "p_event": 0.469,
+          "n_train": 106,
           "fallback": null,
           "features": [
-            5.33,
-            3.776666666666667,
-            3.0942857142857143,
+            4.0,
+            4.22,
+            3.237142857142857,
             3.33
           ],
           "weights": [
-            0.8107,
-            -0.2685,
-            -0.1393,
-            0.2716
+            0.8484,
+            -0.2687,
+            -0.1446,
+            0.2649
           ],
-          "bias": -0.4431
+          "bias": -0.4182
         }
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "quake_m5_ml",
@@ -212,18 +212,18 @@
         "base_rate": 1.0,
         "model": {
           "p_event": 0.9907,
-          "n_train": 105,
+          "n_train": 106,
           "fallback": "laplace",
           "features": [
-            5.8,
-            213.0,
-            5.6000000000000005,
+            6.4,
+            197.28571428571428,
+            5.757142857142857,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.608,
+      "confidence": 0.776,
       "basis": {
         "today_top": "Ramayana:_Part_1",
         "model": {
-          "p_event": 0.6084,
-          "n_train": 96,
+          "p_event": 0.7763,
+          "n_train": 97,
           "fallback": null,
           "features": [
-            1.0,
-            13.573752323468785,
-            0.9989070877377388,
-            1.0
+            2.0,
+            13.495312180835558,
+            0.8974284807124575,
+            0.0
           ],
           "weights": [
-            -0.531,
-            -0.5802,
-            0.4383,
-            -0.514
+            -0.5356,
+            -0.5915,
+            0.4416,
+            -0.4962
           ],
-          "bias": 0.5784
+          "bias": 0.5944
         }
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "hn_fade_ml",
@@ -266,27 +266,27 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50415628,
-        "top_title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders",
+        "top_id": 50424581,
+        "top_title": "Fold Epic Paper Airplanes",
         "model": {
-          "p_event": 0.9496,
-          "n_train": 105,
+          "p_event": 0.9698,
+          "n_train": 106,
           "fallback": null,
           "features": [
-            0.0,
+            0.1,
             11.0,
-            6.0
+            0.0
           ],
           "weights": [
-            0.3695,
-            -0.175,
-            0.129
+            0.3674,
+            -0.1738,
+            0.1418
           ],
-          "bias": 2.8841
+          "bias": 2.895
         }
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-09"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-10"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.755,
       "basis": {
-        "forecast_c": 27.7,
+        "forecast_c": 27.8,
         "for_date": "2026-11-10",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.972,
+          "p_event": 0.7554,
           "n_train": 93,
           "fallback": null,
           "features": [
-            0.1999999999999993,
-            2.166679487141557,
-            1.2,
-            2.0
+            0.0,
+            0.46861498055439926,
+            0.10000000000000142,
+            0.10000000000000142
           ],
           "weights": [
             -0.4341,
@@ -319,8 +319,8 @@
           "bias": 2.5512
         }
       },
-      "made_on": "2026-11-08",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-11"
     }
   ]
 }
