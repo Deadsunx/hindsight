@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-09",
-  "fetched_at": "2026-11-09T23:54:29.635188+00:00",
+  "date": "2026-11-10",
+  "fetched_at": "2026-11-10T12:05:06.535235+00:00",
   "observations": {
     "btc": {
-      "usd": 75220,
-      "usd_24h_change": 0.69
+      "usd": 74303,
+      "usd_24h_change": -0.06
     },
     "kp": {
-      "max_kp": 3.33,
+      "max_kp": 3.0,
       "latest_kp": 2.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.4,
-      "count": 200,
-      "strongest_place": "30 km WSW of Lata, Solomon Islands"
+      "max_mag": 5.4,
+      "count": 184,
+      "strongest_place": "Pulau Pulau Tanimbar, Indonesia"
     },
     "wiki": {
-      "top": "Ramayana:_Part_1",
-      "views": 716434,
-      "for_date": "2026-11-08"
+      "top": "Russell_Brand",
+      "views": 1010049,
+      "for_date": "2026-11-09"
     },
     "hn": {
-      "top_id": 50431058,
-      "top_title": "USPS now offers official ZIP Code boundary polygons",
+      "top_id": 50436640,
+      "top_title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
       "top10": [
+        50436640,
+        50429068,
+        50437790,
         50431058,
-        50432831,
-        50433978,
-        50431144,
-        50429426,
-        50429734,
-        50427362,
-        50429024,
-        50424581,
-        50430621
+        50437752,
+        50436410,
+        50437106,
+        50434310,
+        50392733,
+        50408336
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.2,
       "actual_prev_date": "2026-11-09",
-      "today": 27.9,
-      "forecast_next": 27.9,
+      "today": 27.8,
+      "forecast_next": 27.4,
       "forecast_next_date": "2026-11-11"
     }
   },
@@ -53,14 +53,14 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.527,
+      "call": false,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 75220,
-        "change_24h": 0.69
+        "today_usd": 74303,
+        "change_24h": -0.06
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "kp_storm",
@@ -68,13 +68,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.33
+        "today_max_kp": 3.0
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Ramayana:_Part_1"
+        "today_top": "Russell_Brand"
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50431058,
-        "top_title": "USPS now offers official ZIP Code boundary polygons"
+        "top_id": 50436640,
+        "top_title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider"
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.9,
+        "forecast_c": 27.4,
         "for_date": "2026-11-11",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-11"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-12"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.51,
+      "confidence": 0.513,
       "basis": {
-        "today_usd": 75220,
-        "change_24h": 0.69,
+        "today_usd": 74303,
+        "change_24h": -0.06,
         "model": {
-          "p_event": 0.5104,
-          "n_train": 103,
+          "p_event": 0.5129,
+          "n_train": 104,
           "fallback": null,
           "features": [
-            0.69,
-            -0.7664806532895363,
-            -1.9206446481425998,
-            2.08712328300434
+            -0.06,
+            -1.8389589801175776,
+            -4.534124781580839,
+            2.0937063678921923
           ],
           "weights": [
-            -0.1813,
-            0.1249,
-            -0.1227,
-            -0.2327
+            -0.1957,
+            0.13,
+            -0.0926,
+            -0.262
           ],
-          "bias": 0.2174
+          "bias": 0.1956
         }
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.619,
+      "confidence": 0.681,
       "basis": {
-        "today_max_kp": 3.33,
+        "today_max_kp": 3.0,
         "model": {
-          "p_event": 0.3814,
-          "n_train": 106,
+          "p_event": 0.3193,
+          "n_train": 107,
           "fallback": null,
           "features": [
-            3.33,
-            3.9966666666666666,
-            3.141428571428572,
+            3.0,
+            3.8866666666666667,
+            3.2842857142857147,
             3.33
           ],
           "weights": [
-            0.8484,
-            -0.2687,
-            -0.1446,
-            0.2649
+            0.8584,
+            -0.3001,
+            -0.1347,
+            0.2636
           ],
-          "bias": -0.4182
+          "bias": -0.4364
         }
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9907,
-          "n_train": 106,
+          "p_event": 0.9908,
+          "n_train": 107,
           "fallback": "laplace",
           "features": [
-            6.4,
-            200.71428571428572,
+            5.4,
+            197.42857142857142,
             5.757142857142857,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.776,
+      "confidence": 0.568,
       "basis": {
-        "today_top": "Ramayana:_Part_1",
+        "today_top": "Russell_Brand",
         "model": {
-          "p_event": 0.7764,
-          "n_train": 96,
+          "p_event": 0.5678,
+          "n_train": 97,
           "fallback": null,
           "features": [
-            2.0,
-            13.48204280336336,
-            0.887097961052184,
-            0.0
+            1.0,
+            13.825510392542608,
+            1.1582206662083152,
+            1.0
           ],
           "weights": [
-            -0.531,
-            -0.5802,
-            0.4383,
-            -0.514
+            -0.4654,
+            -0.5351,
+            0.4049,
+            -0.4464
           ],
-          "bias": 0.5784
+          "bias": 0.5448
         }
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.927,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50431058,
-        "top_title": "USPS now offers official ZIP Code boundary polygons",
+        "top_id": 50436640,
+        "top_title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
         "model": {
-          "p_event": 0.927,
-          "n_train": 106,
+          "p_event": 0.9857,
+          "n_train": 107,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            0.0
+            0.1,
+            4.0,
+            1.0
           ],
           "weights": [
-            0.3674,
-            -0.1738,
-            0.1418
+            0.3847,
+            -0.1739,
+            0.3116
           ],
-          "bias": 2.895
+          "bias": 2.7808
         }
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-10"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-11"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.941,
+      "confidence": 0.73,
       "basis": {
-        "forecast_c": 27.9,
+        "forecast_c": 27.4,
         "for_date": "2026-11-11",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9409,
+          "p_event": 0.7298,
           "n_train": 94,
           "fallback": null,
           "features": [
-            0.0,
-            0.46314144707637644,
-            1.2,
-            2.0
+            0.40000000000000213,
+            0.2653299832284326,
+            0.3999999999999986,
+            0.3999999999999986
           ],
           "weights": [
             -0.4357,
@@ -319,8 +319,8 @@
           "bias": 2.5698
         }
       },
-      "made_on": "2026-11-09",
-      "resolve_on": "2026-11-11"
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-12"
     }
   ]
 }
