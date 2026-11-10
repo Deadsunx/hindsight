@@ -1,20 +1,20 @@
 {
   "date": "2026-11-10",
-  "fetched_at": "2026-11-10T12:05:06.535235+00:00",
+  "fetched_at": "2026-11-10T21:34:31.589968+00:00",
   "observations": {
     "btc": {
-      "usd": 74303,
-      "usd_24h_change": -0.06
+      "usd": 73905,
+      "usd_24h_change": -1.33
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 2.67,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.4,
-      "count": 184,
-      "strongest_place": "Pulau Pulau Tanimbar, Indonesia"
+      "max_mag": 5.6,
+      "count": 212,
+      "strongest_place": "43 km S of Puerto San Jos\u00e9, Guatemala"
     },
     "wiki": {
       "top": "Russell_Brand",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-09"
     },
     "hn": {
-      "top_id": 50436640,
-      "top_title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+      "top_id": 50442736,
+      "top_title": ".name Grandfathered",
       "top10": [
-        50436640,
-        50429068,
-        50437790,
-        50431058,
-        50437752,
-        50436410,
-        50437106,
-        50434310,
-        50392733,
-        50408336
+        50442736,
+        50441707,
+        50446219,
+        50443824,
+        50446246,
+        50445401,
+        50443427,
+        50443812,
+        50445013,
+        50439193
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.2,
-      "actual_prev_date": "2026-11-09",
-      "today": 27.8,
-      "forecast_next": 27.4,
-      "forecast_next_date": "2026-11-11"
+      "actual_prev": 28.3,
+      "actual_prev_date": "2026-11-10",
+      "today": 27.7,
+      "forecast_next": 28.3,
+      "forecast_next_date": "2026-11-12"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.521,
+      "confidence": 0.533,
       "basis": {
-        "today_usd": 74303,
-        "change_24h": -0.06
+        "today_usd": 73905,
+        "change_24h": -1.33
       },
       "made_on": "2026-11-10",
       "resolve_on": "2026-11-11"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50436640,
-        "top_title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider"
+        "top_id": 50442736,
+        "top_title": ".name Grandfathered"
       },
       "made_on": "2026-11-10",
       "resolve_on": "2026-11-11"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.4,
-        "for_date": "2026-11-11",
+        "forecast_c": 28.3,
+        "for_date": "2026-11-12",
         "city": "New Delhi"
       },
       "made_on": "2026-11-10",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.513,
+      "confidence": 0.538,
       "basis": {
-        "today_usd": 74303,
-        "change_24h": -0.06,
+        "today_usd": 73905,
+        "change_24h": -1.33,
         "model": {
-          "p_event": 0.5129,
+          "p_event": 0.5381,
           "n_train": 104,
           "fallback": null,
           "features": [
-            -0.06,
-            -1.8389589801175776,
-            -4.534124781580839,
-            2.0937063678921923
+            -1.33,
+            -2.364753286214416,
+            -5.045482577860005,
+            2.121046760524732
           ],
           "weights": [
             -0.1957,
@@ -215,9 +215,9 @@
           "n_train": 107,
           "fallback": "laplace",
           "features": [
-            5.4,
-            197.42857142857142,
-            5.757142857142857,
+            5.6,
+            201.42857142857142,
+            5.785714285714286,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.933,
       "basis": {
-        "top_id": 50436640,
-        "top_title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+        "top_id": 50442736,
+        "top_title": ".name Grandfathered",
         "model": {
-          "p_event": 0.9857,
+          "p_event": 0.9332,
           "n_train": 107,
           "fallback": null,
           "features": [
-            0.1,
-            4.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.3847,
-            -0.1739,
-            0.3116
+            0.3658,
+            -0.1734,
+            0.1276
           ],
-          "bias": 2.7808
+          "bias": 2.9025
         }
       },
       "made_on": "2026-11-10",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.73,
+      "confidence": 0.919,
       "basis": {
-        "forecast_c": 27.4,
-        "for_date": "2026-11-11",
+        "forecast_c": 28.3,
+        "for_date": "2026-11-12",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7298,
-          "n_train": 94,
+          "p_event": 0.9191,
+          "n_train": 95,
           "fallback": null,
           "features": [
-            0.40000000000000213,
-            0.2653299832284326,
-            0.3999999999999986,
-            0.3999999999999986
+            0.6000000000000014,
+            0.2609597670139983,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4357,
-            0.3375,
-            -0.3944,
-            0.9112
+            -0.4386,
+            0.3387,
+            -0.3933,
+            0.9134
           ],
-          "bias": 2.5698
+          "bias": 2.5885
         }
       },
       "made_on": "2026-11-10",

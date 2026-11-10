@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T12:05:08.060278+00:00",
+  "updated": "2026-11-10T21:34:33.394990+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 82,
-      "rule_correct": 77,
-      "model_correct": 77,
-      "rule_accuracy": 0.939,
-      "model_accuracy": 0.939,
-      "rule_brier": 0.0607,
-      "model_brier": 0.0584,
-      "rule_log_loss": 0.2493,
-      "model_log_loss": 0.2383,
+      "rule_correct": 78,
+      "model_correct": 78,
+      "rule_accuracy": 0.9512,
+      "model_accuracy": 0.9512,
+      "rule_brier": 0.0515,
+      "model_brier": 0.048,
+      "rule_log_loss": 0.225,
+      "model_log_loss": 0.2073,
       "coin_flip": {
         "n": 82,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 189,
-        "rate": 0.9365,
-        "majority_accuracy": 0.9365
+        "rate": 0.9471,
+        "majority_accuracy": 0.9471
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 68,
-      "rule_correct": 60,
-      "model_correct": 60,
-      "rule_accuracy": 0.8824,
-      "model_accuracy": 0.8824,
-      "rule_brier": 0.1106,
-      "model_brier": 0.102,
-      "rule_log_loss": 0.3862,
-      "model_log_loss": 0.3649,
+      "shared_days": 69,
+      "rule_correct": 61,
+      "model_correct": 61,
+      "rule_accuracy": 0.8841,
+      "model_accuracy": 0.8841,
+      "rule_brier": 0.1096,
+      "model_brier": 0.1006,
+      "rule_log_loss": 0.3839,
+      "model_log_loss": 0.3604,
       "coin_flip": {
-        "n": 68,
+        "n": 69,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 162,
-        "rate": 0.8951,
-        "majority_accuracy": 0.8951
+        "n": 164,
+        "rate": 0.8963,
+        "majority_accuracy": 0.8963
       }
     }
   },
   "totals": {
-    "graded": 1082,
-    "correct": 822,
-    "accuracy": 0.7597,
-    "brier": 0.149,
-    "log_loss": 0.4533,
+    "graded": 1084,
+    "correct": 826,
+    "accuracy": 0.762,
+    "brier": 0.1472,
+    "log_loss": 0.4485,
     "open": 14,
-    "void": 41,
+    "void": 39,
     "days": 108
   },
   "baselines": {
     "coin_flip": {
-      "n": 1082,
+      "n": 1084,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 1082,
-      "rate": 0.7292,
-      "majority_accuracy": 0.7292
+      "n": 1084,
+      "rate": 0.7315,
+      "majority_accuracy": 0.7315
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 107,
-      "correct": 100,
-      "accuracy": 0.9346,
-      "brier": 0.0641,
-      "log_loss": 0.2582,
-      "base_rate": 0.9346,
-      "majority_accuracy": 0.9346
+      "correct": 101,
+      "accuracy": 0.9439,
+      "brier": 0.057,
+      "log_loss": 0.2396,
+      "base_rate": 0.9439,
+      "majority_accuracy": 0.9439
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 94,
-      "correct": 85,
-      "accuracy": 0.9043,
-      "brier": 0.0974,
-      "log_loss": 0.3559,
-      "base_rate": 0.9043,
-      "majority_accuracy": 0.9043
+      "graded": 95,
+      "correct": 86,
+      "accuracy": 0.9053,
+      "brier": 0.0968,
+      "log_loss": 0.3545,
+      "base_rate": 0.9053,
+      "majority_accuracy": 0.9053
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 82,
-      "correct": 77,
-      "accuracy": 0.939,
-      "brier": 0.0584,
-      "log_loss": 0.2383,
-      "base_rate": 0.939,
-      "majority_accuracy": 0.939
+      "correct": 78,
+      "accuracy": 0.9512,
+      "brier": 0.048,
+      "log_loss": 0.2073,
+      "base_rate": 0.9512,
+      "majority_accuracy": 0.9512
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 68,
-      "correct": 60,
-      "accuracy": 0.8824,
-      "brier": 0.102,
-      "log_loss": 0.3649,
-      "base_rate": 0.8824,
-      "majority_accuracy": 0.8824
+      "graded": 69,
+      "correct": 61,
+      "accuracy": 0.8841,
+      "brier": 0.1006,
+      "log_loss": 0.3604,
+      "base_rate": 0.8841,
+      "majority_accuracy": 0.8841
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 258,
-      "claimed": 0.8446,
-      "actual": 0.876
+      "n": 259,
+      "claimed": 0.8444,
+      "actual": 0.8803
     },
     {
       "label": "90\u2013100%",
-      "n": 323,
+      "n": 324,
       "claimed": 0.9438,
-      "actual": 0.9598
+      "actual": 0.963
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.521,
+      "confidence": 0.533,
       "basis": {
-        "today_usd": 74303,
-        "change_24h": -0.06
+        "today_usd": 73905,
+        "change_24h": -1.33
       },
       "made_on": "2026-11-10",
       "resolve_on": "2026-11-11"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50436640,
-        "top_title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider"
+        "top_id": 50442736,
+        "top_title": ".name Grandfathered"
       },
       "made_on": "2026-11-10",
       "resolve_on": "2026-11-11"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.4,
-        "for_date": "2026-11-11",
+        "forecast_c": 28.3,
+        "for_date": "2026-11-12",
         "city": "New Delhi"
       },
       "made_on": "2026-11-10",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.513,
+      "confidence": 0.538,
       "basis": {
-        "today_usd": 74303,
-        "change_24h": -0.06,
+        "today_usd": 73905,
+        "change_24h": -1.33,
         "model": {
-          "p_event": 0.5129,
+          "p_event": 0.5381,
           "n_train": 104,
           "fallback": null,
           "features": [
-            -0.06,
-            -1.8389589801175776,
-            -4.534124781580839,
-            2.0937063678921923
+            -1.33,
+            -2.364753286214416,
+            -5.045482577860005,
+            2.121046760524732
           ],
           "weights": [
             -0.1957,
@@ -572,9 +572,9 @@
           "n_train": 107,
           "fallback": "laplace",
           "features": [
-            5.4,
-            197.42857142857142,
-            5.757142857142857,
+            5.6,
+            201.42857142857142,
+            5.785714285714286,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.933,
       "basis": {
-        "top_id": 50436640,
-        "top_title": "Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+        "top_id": 50442736,
+        "top_title": ".name Grandfathered",
         "model": {
-          "p_event": 0.9857,
+          "p_event": 0.9332,
           "n_train": 107,
           "fallback": null,
           "features": [
-            0.1,
-            4.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.3847,
-            -0.1739,
-            0.3116
+            0.3658,
+            -0.1734,
+            0.1276
           ],
-          "bias": 2.7808
+          "bias": 2.9025
         }
       },
       "made_on": "2026-11-10",
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.73,
+      "confidence": 0.919,
       "basis": {
-        "forecast_c": 27.4,
-        "for_date": "2026-11-11",
+        "forecast_c": 28.3,
+        "for_date": "2026-11-12",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7298,
-          "n_train": 94,
+          "p_event": 0.9191,
+          "n_train": 95,
           "fallback": null,
           "features": [
-            0.40000000000000213,
-            0.2653299832284326,
-            0.3999999999999986,
-            0.3999999999999986
+            0.6000000000000014,
+            0.2609597670139983,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4357,
-            0.3375,
-            -0.3944,
-            0.9112
+            -0.4386,
+            0.3387,
+            -0.3933,
+            0.9134
           ],
-          "bias": 2.5698
+          "bias": 2.5885
         }
       },
       "made_on": "2026-11-10",
@@ -14566,6 +14566,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-10",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -14612,6 +14625,19 @@
       "variant": "model",
       "made_on": "2026-11-08",
       "resolve_on": "2026-11-09",
+      "call": true,
+      "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-11-08",
+      "resolve_on": "2026-11-10",
       "call": true,
       "confidence": 0.95,
       "actual": true,
@@ -14679,8 +14705,8 @@
       "resolve_on": "2026-11-10",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -14744,8 +14770,8 @@
       "resolve_on": "2026-11-10",
       "call": true,
       "confidence": 0.927,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
