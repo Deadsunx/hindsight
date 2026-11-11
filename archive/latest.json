@@ -1,20 +1,20 @@
 {
   "date": "2026-11-11",
-  "fetched_at": "2026-11-11T11:40:16.229973+00:00",
+  "fetched_at": "2026-11-11T22:22:08.157166+00:00",
   "observations": {
     "btc": {
-      "usd": 73993,
-      "usd_24h_change": -0.29
+      "usd": 74446,
+      "usd_24h_change": 0.87
     },
     "kp": {
-      "max_kp": 3.0,
-      "latest_kp": 1.67,
+      "max_kp": 2.67,
+      "latest_kp": 2.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.6,
-      "count": 197,
-      "strongest_place": "43 km S of Puerto San Jos\u00e9, Guatemala"
+      "max_mag": 5.1,
+      "count": 203,
+      "strongest_place": "80 km W of Panguna, Papua New Guinea"
     },
     "wiki": {
       "top": "Ramayana:_Part_1",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-10"
     },
     "hn": {
-      "top_id": 50449748,
-      "top_title": "Protecting SSH Keys with macOS Secure Enclave",
+      "top_id": 50458900,
+      "top_title": "United Airlines bans AI agents from booking flights on behalf of travelers",
       "top10": [
-        50449748,
-        50424188,
-        50441707,
-        50442736,
-        50445401,
-        50450007,
-        50448921,
-        50446520,
-        50449275,
-        50446246
+        50458900,
+        50456631,
+        50450488,
+        50455394,
+        50458532,
+        50456791,
+        50457230,
+        50458208,
+        50458710,
+        50458166
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.3,
-      "actual_prev_date": "2026-11-10",
-      "today": 27.3,
-      "forecast_next": 27.9,
-      "forecast_next_date": "2026-11-12"
+      "actual_prev": 27.9,
+      "actual_prev_date": "2026-11-11",
+      "today": 28.7,
+      "forecast_next": 28.8,
+      "forecast_next_date": "2026-11-13"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.523,
+      "call": true,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 73993,
-        "change_24h": -0.29
+        "today_usd": 74446,
+        "change_24h": 0.87
       },
       "made_on": "2026-11-11",
       "resolve_on": "2026-11-12"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.0
+        "today_max_kp": 2.67
       },
       "made_on": "2026-11-11",
       "resolve_on": "2026-11-12"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50449748,
-        "top_title": "Protecting SSH Keys with macOS Secure Enclave"
+        "top_id": 50458900,
+        "top_title": "United Airlines bans AI agents from booking flights on behalf of travelers"
       },
       "made_on": "2026-11-11",
       "resolve_on": "2026-11-12"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.9,
-        "for_date": "2026-11-12",
+        "forecast_c": 28.8,
+        "for_date": "2026-11-13",
         "city": "New Delhi"
       },
       "made_on": "2026-11-11",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.546,
+      "confidence": 0.517,
       "basis": {
-        "today_usd": 73993,
-        "change_24h": -0.29,
+        "today_usd": 74446,
+        "change_24h": 0.87,
         "model": {
-          "p_event": 0.5456,
+          "p_event": 0.5172,
           "n_train": 105,
           "fallback": null,
           "features": [
-            -0.29,
-            -2.4495392282237516,
-            -7.634597860415182,
-            2.110651696922346
+            0.87,
+            -1.8523157242488542,
+            -7.069118326280444,
+            2.1352346969868186
           ],
           "weights": [
             -0.2012,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.639,
+      "confidence": 0.679,
       "basis": {
-        "today_max_kp": 3.0,
+        "today_max_kp": 2.67,
         "model": {
-          "p_event": 0.3608,
+          "p_event": 0.3206,
           "n_train": 108,
           "fallback": null,
           "features": [
+            2.67,
             3.0,
-            3.11,
-            3.237142857142857,
+            3.19,
             3.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 108,
           "fallback": "laplace",
           "features": [
-            5.6,
-            202.14285714285714,
-            5.871428571428572,
+            5.1,
+            203.0,
+            5.8,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.938,
       "basis": {
-        "top_id": 50449748,
-        "top_title": "Protecting SSH Keys with macOS Secure Enclave",
+        "top_id": 50458900,
+        "top_title": "United Airlines bans AI agents from booking flights on behalf of travelers",
         "model": {
-          "p_event": 0.9994,
+          "p_event": 0.9379,
           "n_train": 108,
           "fallback": null,
           "features": [
-            0.4,
-            4.0,
+            0.0,
+            11.0,
             2.0
           ],
           "weights": [
-            0.3853,
-            -0.1768,
-            0.2342
+            0.3641,
+            -0.1729,
+            0.1191
           ],
-          "bias": 2.7715
+          "bias": 2.9107
         }
       },
       "made_on": "2026-11-11",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.719,
+      "confidence": 0.936,
       "basis": {
-        "forecast_c": 27.9,
-        "for_date": "2026-11-12",
+        "forecast_c": 28.8,
+        "for_date": "2026-11-13",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7189,
-          "n_train": 95,
+          "p_event": 0.9359,
+          "n_train": 96,
           "fallback": null,
           "features": [
-            0.5999999999999979,
-            0.1417744687875787,
-            0.6000000000000014,
-            0.6000000000000014
+            0.10000000000000142,
+            0.21189620100417164,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4386,
-            0.3387,
-            -0.3933,
-            0.9134
+            -0.4493,
+            0.3266,
+            -0.3847,
+            0.9198
           ],
-          "bias": 2.5885
+          "bias": 2.6035
         }
       },
       "made_on": "2026-11-11",

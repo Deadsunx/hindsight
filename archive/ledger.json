@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-11T11:40:18.573141+00:00",
+  "updated": "2026-11-11T22:22:09.822529+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 83,
-      "rule_correct": 78,
-      "model_correct": 78,
-      "rule_accuracy": 0.9398,
-      "model_accuracy": 0.9398,
-      "rule_brier": 0.0602,
-      "model_brier": 0.0579,
-      "rule_log_loss": 0.2479,
-      "model_log_loss": 0.2373,
+      "rule_correct": 79,
+      "model_correct": 79,
+      "rule_accuracy": 0.9518,
+      "model_accuracy": 0.9518,
+      "rule_brier": 0.051,
+      "model_brier": 0.0475,
+      "rule_log_loss": 0.2239,
+      "model_log_loss": 0.2056,
       "coin_flip": {
         "n": 83,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 191,
-        "rate": 0.9372,
-        "majority_accuracy": 0.9372
+        "rate": 0.9476,
+        "majority_accuracy": 0.9476
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 69,
-      "rule_correct": 61,
-      "model_correct": 61,
-      "rule_accuracy": 0.8841,
-      "model_accuracy": 0.8841,
-      "rule_brier": 0.1096,
-      "model_brier": 0.1006,
-      "rule_log_loss": 0.3839,
-      "model_log_loss": 0.3604,
+      "shared_days": 70,
+      "rule_correct": 62,
+      "model_correct": 62,
+      "rule_accuracy": 0.8857,
+      "model_accuracy": 0.8857,
+      "rule_brier": 0.1086,
+      "model_brier": 0.0992,
+      "rule_log_loss": 0.3816,
+      "model_log_loss": 0.3561,
       "coin_flip": {
-        "n": 69,
+        "n": 70,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 164,
-        "rate": 0.8963,
-        "majority_accuracy": 0.8963
+        "n": 166,
+        "rate": 0.8976,
+        "majority_accuracy": 0.8976
       }
     }
   },
   "totals": {
-    "graded": 1094,
-    "correct": 832,
-    "accuracy": 0.7605,
-    "brier": 0.1484,
-    "log_loss": 0.452,
+    "graded": 1096,
+    "correct": 836,
+    "accuracy": 0.7628,
+    "brier": 0.1467,
+    "log_loss": 0.4472,
     "open": 14,
-    "void": 41,
+    "void": 39,
     "days": 109
   },
   "baselines": {
     "coin_flip": {
-      "n": 1094,
+      "n": 1096,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 1094,
-      "rate": 0.7285,
-      "majority_accuracy": 0.7285
+      "n": 1096,
+      "rate": 0.7308,
+      "majority_accuracy": 0.7308
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 108,
-      "correct": 101,
-      "accuracy": 0.9352,
-      "brier": 0.0637,
-      "log_loss": 0.257,
-      "base_rate": 0.9352,
-      "majority_accuracy": 0.9352
+      "correct": 102,
+      "accuracy": 0.9444,
+      "brier": 0.0566,
+      "log_loss": 0.2385,
+      "base_rate": 0.9444,
+      "majority_accuracy": 0.9444
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 95,
-      "correct": 86,
-      "accuracy": 0.9053,
-      "brier": 0.0968,
-      "log_loss": 0.3545,
-      "base_rate": 0.9053,
-      "majority_accuracy": 0.9053
+      "graded": 96,
+      "correct": 87,
+      "accuracy": 0.9062,
+      "brier": 0.0962,
+      "log_loss": 0.3531,
+      "base_rate": 0.9062,
+      "majority_accuracy": 0.9062
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 83,
-      "correct": 78,
-      "accuracy": 0.9398,
-      "brier": 0.0579,
-      "log_loss": 0.2373,
-      "base_rate": 0.9398,
-      "majority_accuracy": 0.9398
+      "correct": 79,
+      "accuracy": 0.9518,
+      "brier": 0.0475,
+      "log_loss": 0.2056,
+      "base_rate": 0.9518,
+      "majority_accuracy": 0.9518
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 69,
-      "correct": 61,
-      "accuracy": 0.8841,
-      "brier": 0.1006,
-      "log_loss": 0.3604,
-      "base_rate": 0.8841,
-      "majority_accuracy": 0.8841
+      "graded": 70,
+      "correct": 62,
+      "accuracy": 0.8857,
+      "brier": 0.0992,
+      "log_loss": 0.3561,
+      "base_rate": 0.8857,
+      "majority_accuracy": 0.8857
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 260,
-      "claimed": 0.8446,
-      "actual": 0.8769
+      "n": 261,
+      "claimed": 0.8444,
+      "actual": 0.8812
     },
     {
       "label": "90\u2013100%",
-      "n": 327,
+      "n": 328,
       "claimed": 0.9438,
-      "actual": 0.9602
+      "actual": 0.9634
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.523,
+      "call": true,
+      "confidence": 0.529,
       "basis": {
-        "today_usd": 73993,
-        "change_24h": -0.29
+        "today_usd": 74446,
+        "change_24h": 0.87
       },
       "made_on": "2026-11-11",
       "resolve_on": "2026-11-12"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.0
+        "today_max_kp": 2.67
       },
       "made_on": "2026-11-11",
       "resolve_on": "2026-11-12"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50449748,
-        "top_title": "Protecting SSH Keys with macOS Secure Enclave"
+        "top_id": 50458900,
+        "top_title": "United Airlines bans AI agents from booking flights on behalf of travelers"
       },
       "made_on": "2026-11-11",
       "resolve_on": "2026-11-12"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 27.9,
-        "for_date": "2026-11-12",
+        "forecast_c": 28.8,
+        "for_date": "2026-11-13",
         "city": "New Delhi"
       },
       "made_on": "2026-11-11",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.546,
+      "confidence": 0.517,
       "basis": {
-        "today_usd": 73993,
-        "change_24h": -0.29,
+        "today_usd": 74446,
+        "change_24h": 0.87,
         "model": {
-          "p_event": 0.5456,
+          "p_event": 0.5172,
           "n_train": 105,
           "fallback": null,
           "features": [
-            -0.29,
-            -2.4495392282237516,
-            -7.634597860415182,
-            2.110651696922346
+            0.87,
+            -1.8523157242488542,
+            -7.069118326280444,
+            2.1352346969868186
           ],
           "weights": [
             -0.2012,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.639,
+      "confidence": 0.679,
       "basis": {
-        "today_max_kp": 3.0,
+        "today_max_kp": 2.67,
         "model": {
-          "p_event": 0.3608,
+          "p_event": 0.3206,
           "n_train": 108,
           "fallback": null,
           "features": [
+            2.67,
             3.0,
-            3.11,
-            3.237142857142857,
+            3.19,
             3.0
           ],
           "weights": [
@@ -572,9 +572,9 @@
           "n_train": 108,
           "fallback": "laplace",
           "features": [
-            5.6,
-            202.14285714285714,
-            5.871428571428572,
+            5.1,
+            203.0,
+            5.8,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.938,
       "basis": {
-        "top_id": 50449748,
-        "top_title": "Protecting SSH Keys with macOS Secure Enclave",
+        "top_id": 50458900,
+        "top_title": "United Airlines bans AI agents from booking flights on behalf of travelers",
         "model": {
-          "p_event": 0.9994,
+          "p_event": 0.9379,
           "n_train": 108,
           "fallback": null,
           "features": [
-            0.4,
-            4.0,
+            0.0,
+            11.0,
             2.0
           ],
           "weights": [
-            0.3853,
-            -0.1768,
-            0.2342
+            0.3641,
+            -0.1729,
+            0.1191
           ],
-          "bias": 2.7715
+          "bias": 2.9107
         }
       },
       "made_on": "2026-11-11",
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.719,
+      "confidence": 0.936,
       "basis": {
-        "forecast_c": 27.9,
-        "for_date": "2026-11-12",
+        "forecast_c": 28.8,
+        "for_date": "2026-11-13",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7189,
-          "n_train": 95,
+          "p_event": 0.9359,
+          "n_train": 96,
           "fallback": null,
           "features": [
-            0.5999999999999979,
-            0.1417744687875787,
-            0.6000000000000014,
-            0.6000000000000014
+            0.10000000000000142,
+            0.21189620100417164,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4386,
-            0.3387,
-            -0.3933,
-            0.9134
+            -0.4493,
+            0.3266,
+            -0.3847,
+            0.9198
           ],
-          "bias": 2.5885
+          "bias": 2.6035
         }
       },
       "made_on": "2026-11-11",
@@ -14709,6 +14709,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-11",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -14774,6 +14787,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-11-09",
+      "resolve_on": "2026-11-11",
+      "call": true,
+      "confidence": 0.941,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -14835,8 +14861,8 @@
       "resolve_on": "2026-11-11",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -14900,8 +14926,8 @@
       "resolve_on": "2026-11-11",
       "call": true,
       "confidence": 0.933,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
