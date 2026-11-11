@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-11",
+  "fetched_at": "2026-11-11T11:40:16.229973+00:00",
+  "observations": {
+    "btc": {
+      "usd": 73993,
+      "usd_24h_change": -0.29
+    },
+    "kp": {
+      "max_kp": 3.0,
+      "latest_kp": 1.67,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.6,
+      "count": 197,
+      "strongest_place": "43 km S of Puerto San Jos\u00e9, Guatemala"
+    },
+    "wiki": {
+      "top": "Ramayana:_Part_1",
+      "views": 840888,
+      "for_date": "2026-11-10"
+    },
+    "hn": {
+      "top_id": 50449748,
+      "top_title": "Protecting SSH Keys with macOS Secure Enclave",
+      "top10": [
+        50449748,
+        50424188,
+        50441707,
+        50442736,
+        50445401,
+        50450007,
+        50448921,
+        50446520,
+        50449275,
+        50446246
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 28.3,
+      "actual_prev_date": "2026-11-10",
+      "today": 27.3,
+      "forecast_next": 27.9,
+      "forecast_next_date": "2026-11-12"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.523,
+      "basis": {
+        "today_usd": 73993,
+        "change_24h": -0.29
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 3.0
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Ramayana:_Part_1"
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50449748,
+        "top_title": "Protecting SSH Keys with macOS Secure Enclave"
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 27.9,
+        "for_date": "2026-11-12",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.546,
+      "basis": {
+        "today_usd": 73993,
+        "change_24h": -0.29,
+        "model": {
+          "p_event": 0.5456,
+          "n_train": 105,
+          "fallback": null,
+          "features": [
+            -0.29,
+            -2.4495392282237516,
+            -7.634597860415182,
+            2.110651696922346
+          ],
+          "weights": [
+            -0.2012,
+            0.1335,
+            -0.1301,
+            -0.2281
+          ],
+          "bias": 0.2131
+        }
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.639,
+      "basis": {
+        "today_max_kp": 3.0,
+        "model": {
+          "p_event": 0.3608,
+          "n_train": 108,
+          "fallback": null,
+          "features": [
+            3.0,
+            3.11,
+            3.237142857142857,
+            3.0
+          ],
+          "weights": [
+            0.8711,
+            -0.3227,
+            -0.1333,
+            0.2609
+          ],
+          "bias": -0.4544
+        }
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9909,
+          "n_train": 108,
+          "fallback": "laplace",
+          "features": [
+            5.6,
+            202.14285714285714,
+            5.871428571428572,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.563,
+      "basis": {
+        "today_top": "Ramayana:_Part_1",
+        "model": {
+          "p_event": 0.5628,
+          "n_train": 98,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.64221494451293,
+            0.9254598239238151,
+            1.0
+          ],
+          "weights": [
+            -0.4651,
+            -0.5406,
+            0.4128,
+            -0.4786
+          ],
+          "bias": 0.5181
+        }
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50449748,
+        "top_title": "Protecting SSH Keys with macOS Secure Enclave",
+        "model": {
+          "p_event": 0.9994,
+          "n_train": 108,
+          "fallback": null,
+          "features": [
+            0.4,
+            4.0,
+            2.0
+          ],
+          "weights": [
+            0.3853,
+            -0.1768,
+            0.2342
+          ],
+          "bias": 2.7715
+        }
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-12"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.719,
+      "basis": {
+        "forecast_c": 27.9,
+        "for_date": "2026-11-12",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.7189,
+          "n_train": 95,
+          "fallback": null,
+          "features": [
+            0.5999999999999979,
+            0.1417744687875787,
+            0.6000000000000014,
+            0.6000000000000014
+          ],
+          "weights": [
+            -0.4386,
+            0.3387,
+            -0.3933,
+            0.9134
+          ],
+          "bias": 2.5885
+        }
+      },
+      "made_on": "2026-11-11",
+      "resolve_on": "2026-11-13"
+    }
+  ]
+}
