@@ -1,19 +1,19 @@
 {
   "date": "2026-11-12",
-  "fetched_at": "2026-11-12T12:09:43.862201+00:00",
+  "fetched_at": "2026-11-12T21:58:18.239651+00:00",
   "observations": {
     "btc": {
-      "usd": 72809,
-      "usd_24h_change": -1.45
+      "usd": 71525,
+      "usd_24h_change": -3.8
     },
     "kp": {
-      "max_kp": 2.67,
-      "latest_kp": 0.67,
+      "max_kp": 1.67,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.4,
-      "count": 196,
+      "count": 260,
       "strongest_place": "South Sandwich Islands region"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-11-11"
     },
     "hn": {
-      "top_id": 50465829,
-      "top_title": "Anthropic IPO",
+      "top_id": 50467087,
+      "top_title": "Jensen Huang resigns",
       "top10": [
-        50465829,
-        50465352,
-        50438261,
-        50425017,
-        50450488,
-        50459745,
-        50462177,
-        50456631,
-        50455394,
-        50431971
+        50467087,
+        50472038,
+        50472260,
+        50472490,
+        50474361,
+        50470488,
+        50471731,
+        50471761,
+        50468888,
+        50467618
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 27.9,
-      "actual_prev_date": "2026-11-11",
-      "today": 27.8,
-      "forecast_next": 28.7,
-      "forecast_next_date": "2026-11-13"
+      "actual_prev": 28.4,
+      "actual_prev_date": "2026-11-12",
+      "today": 29.1,
+      "forecast_next": 28.4,
+      "forecast_next_date": "2026-11-14"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.534,
+      "confidence": 0.558,
       "basis": {
-        "today_usd": 72809,
-        "change_24h": -1.45
+        "today_usd": 71525,
+        "change_24h": -3.8
       },
       "made_on": "2026-11-12",
       "resolve_on": "2026-11-13"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.67
+        "today_max_kp": 1.67
       },
       "made_on": "2026-11-12",
       "resolve_on": "2026-11-13"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50465829,
-        "top_title": "Anthropic IPO"
+        "top_id": 50467087,
+        "top_title": "Jensen Huang resigns"
       },
       "made_on": "2026-11-12",
       "resolve_on": "2026-11-13"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.7,
-        "for_date": "2026-11-13",
+        "forecast_c": 28.4,
+        "for_date": "2026-11-14",
         "city": "New Delhi"
       },
       "made_on": "2026-11-12",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.53,
+      "confidence": 0.564,
       "basis": {
-        "today_usd": 72809,
-        "change_24h": -1.45,
+        "today_usd": 71525,
+        "change_24h": -3.8,
         "model": {
-          "p_event": 0.5302,
+          "p_event": 0.5642,
           "n_train": 106,
           "fallback": null,
           "features": [
-            -1.45,
-            -3.2052645572985927,
-            -4.158329823083406,
-            2.1054127721873144
+            -3.8,
+            -4.912257378356822,
+            -5.8485151642797,
+            2.3010684202141873
           ],
           "weights": [
             -0.2231,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.655,
+      "confidence": 0.767,
       "basis": {
-        "today_max_kp": 2.67,
+        "today_max_kp": 1.67,
         "model": {
-          "p_event": 0.3451,
+          "p_event": 0.2334,
           "n_train": 109,
           "fallback": null,
           "features": [
-            2.67,
-            2.78,
-            3.2857142857142856,
+            1.67,
+            2.4466666666666668,
+            3.142857142857143,
             3.33
           ],
           "weights": [
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.4,
-            198.85714285714286,
+            208.0,
             5.7,
             1.0
           ]
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.942,
       "basis": {
-        "top_id": 50465829,
-        "top_title": "Anthropic IPO",
+        "top_id": 50467087,
+        "top_title": "Jensen Huang resigns",
         "model": {
-          "p_event": 0.9962,
+          "p_event": 0.9418,
           "n_train": 109,
           "fallback": null,
           "features": [
-            0.3,
+            0.0,
             11.0,
             3.0
           ],
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.648,
+      "confidence": 0.925,
       "basis": {
-        "forecast_c": 28.7,
-        "for_date": "2026-11-13",
+        "forecast_c": 28.4,
+        "for_date": "2026-11-14",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.6481,
-          "n_train": 96,
+          "p_event": 0.9251,
+          "n_train": 97,
           "fallback": null,
           "features": [
-            0.8999999999999986,
-            0.2578759391645535,
-            0.0,
-            0.0
+            0.7000000000000028,
+            0.2097617696340311,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4493,
-            0.3266,
-            -0.3847,
-            0.9198
+            -0.4572,
+            0.31,
+            -0.3737,
+            0.9276
           ],
-          "bias": 2.6035
+          "bias": 2.6176
         }
       },
       "made_on": "2026-11-12",

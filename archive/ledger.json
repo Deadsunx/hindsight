@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-12T12:09:45.174387+00:00",
+  "updated": "2026-11-12T21:58:20.307582+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -118,49 +118,49 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 70,
-      "rule_correct": 62,
-      "model_correct": 62,
-      "rule_accuracy": 0.8857,
-      "model_accuracy": 0.8857,
-      "rule_brier": 0.1086,
-      "model_brier": 0.0992,
-      "rule_log_loss": 0.3816,
-      "model_log_loss": 0.3561,
+      "shared_days": 71,
+      "rule_correct": 63,
+      "model_correct": 63,
+      "rule_accuracy": 0.8873,
+      "model_accuracy": 0.8873,
+      "rule_brier": 0.1076,
+      "model_brier": 0.0979,
+      "rule_log_loss": 0.3793,
+      "model_log_loss": 0.3523,
       "coin_flip": {
-        "n": 70,
+        "n": 71,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 166,
-        "rate": 0.8976,
-        "majority_accuracy": 0.8976
+        "n": 168,
+        "rate": 0.8988,
+        "majority_accuracy": 0.8988
       }
     }
   },
   "totals": {
-    "graded": 1106,
-    "correct": 843,
-    "accuracy": 0.7622,
-    "brier": 0.1465,
-    "log_loss": 0.4467,
+    "graded": 1108,
+    "correct": 845,
+    "accuracy": 0.7626,
+    "brier": 0.1463,
+    "log_loss": 0.4462,
     "open": 14,
-    "void": 41,
+    "void": 39,
     "days": 110
   },
   "baselines": {
     "coin_flip": {
-      "n": 1106,
+      "n": 1108,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 1106,
-      "rate": 0.7297,
-      "majority_accuracy": 0.7297
+      "n": 1108,
+      "rate": 0.7301,
+      "majority_accuracy": 0.7301
     }
   },
   "by_predictor": {
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 96,
-      "correct": 87,
-      "accuracy": 0.9062,
-      "brier": 0.0962,
-      "log_loss": 0.3531,
-      "base_rate": 0.9062,
-      "majority_accuracy": 0.9062
+      "graded": 97,
+      "correct": 88,
+      "accuracy": 0.9072,
+      "brier": 0.0957,
+      "log_loss": 0.3518,
+      "base_rate": 0.9072,
+      "majority_accuracy": 0.9072
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 70,
-      "correct": 62,
-      "accuracy": 0.8857,
-      "brier": 0.0992,
-      "log_loss": 0.3561,
-      "base_rate": 0.8857,
-      "majority_accuracy": 0.8857
+      "graded": 71,
+      "correct": 63,
+      "accuracy": 0.8873,
+      "brier": 0.0979,
+      "log_loss": 0.3523,
+      "base_rate": 0.8873,
+      "majority_accuracy": 0.8873
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 262,
-      "claimed": 0.8445,
-      "actual": 0.8817
+      "n": 263,
+      "claimed": 0.8444,
+      "actual": 0.8821
     },
     {
       "label": "90\u2013100%",
-      "n": 331,
+      "n": 332,
       "claimed": 0.9438,
-      "actual": 0.9637
+      "actual": 0.9639
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.534,
+      "confidence": 0.558,
       "basis": {
-        "today_usd": 72809,
-        "change_24h": -1.45
+        "today_usd": 71525,
+        "change_24h": -3.8
       },
       "made_on": "2026-11-12",
       "resolve_on": "2026-11-13"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.67
+        "today_max_kp": 1.67
       },
       "made_on": "2026-11-12",
       "resolve_on": "2026-11-13"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50465829,
-        "top_title": "Anthropic IPO"
+        "top_id": 50467087,
+        "top_title": "Jensen Huang resigns"
       },
       "made_on": "2026-11-12",
       "resolve_on": "2026-11-13"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.7,
-        "for_date": "2026-11-13",
+        "forecast_c": 28.4,
+        "for_date": "2026-11-14",
         "city": "New Delhi"
       },
       "made_on": "2026-11-12",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.53,
+      "confidence": 0.564,
       "basis": {
-        "today_usd": 72809,
-        "change_24h": -1.45,
+        "today_usd": 71525,
+        "change_24h": -3.8,
         "model": {
-          "p_event": 0.5302,
+          "p_event": 0.5642,
           "n_train": 106,
           "fallback": null,
           "features": [
-            -1.45,
-            -3.2052645572985927,
-            -4.158329823083406,
-            2.1054127721873144
+            -3.8,
+            -4.912257378356822,
+            -5.8485151642797,
+            2.3010684202141873
           ],
           "weights": [
             -0.2231,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.655,
+      "confidence": 0.767,
       "basis": {
-        "today_max_kp": 2.67,
+        "today_max_kp": 1.67,
         "model": {
-          "p_event": 0.3451,
+          "p_event": 0.2334,
           "n_train": 109,
           "fallback": null,
           "features": [
-            2.67,
-            2.78,
-            3.2857142857142856,
+            1.67,
+            2.4466666666666668,
+            3.142857142857143,
             3.33
           ],
           "weights": [
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.4,
-            198.85714285714286,
+            208.0,
             5.7,
             1.0
           ]
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.942,
       "basis": {
-        "top_id": 50465829,
-        "top_title": "Anthropic IPO",
+        "top_id": 50467087,
+        "top_title": "Jensen Huang resigns",
         "model": {
-          "p_event": 0.9962,
+          "p_event": 0.9418,
           "n_train": 109,
           "fallback": null,
           "features": [
-            0.3,
+            0.0,
             11.0,
             3.0
           ],
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.648,
+      "confidence": 0.925,
       "basis": {
-        "forecast_c": 28.7,
-        "for_date": "2026-11-13",
+        "forecast_c": 28.4,
+        "for_date": "2026-11-14",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.6481,
-          "n_train": 96,
+          "p_event": 0.9251,
+          "n_train": 97,
           "fallback": null,
           "features": [
-            0.8999999999999986,
-            0.2578759391645535,
-            0.0,
-            0.0
+            0.7000000000000028,
+            0.2097617696340311,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4493,
-            0.3266,
-            -0.3847,
-            0.9198
+            -0.4572,
+            0.31,
+            -0.3737,
+            0.9276
           ],
-          "bias": 2.6035
+          "bias": 2.6176
         }
       },
       "made_on": "2026-11-12",
@@ -14865,6 +14865,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-12",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -14926,6 +14939,19 @@
       "resolve_on": "2026-11-11",
       "call": true,
       "confidence": 0.933,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-11-10",
+      "resolve_on": "2026-11-12",
+      "call": true,
+      "confidence": 0.919,
       "actual": true,
       "correct": true
     },
