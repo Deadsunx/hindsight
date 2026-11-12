@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-12",
+  "fetched_at": "2026-11-12T12:09:43.862201+00:00",
+  "observations": {
+    "btc": {
+      "usd": 72809,
+      "usd_24h_change": -1.45
+    },
+    "kp": {
+      "max_kp": 2.67,
+      "latest_kp": 0.67,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.4,
+      "count": 196,
+      "strongest_place": "South Sandwich Islands region"
+    },
+    "wiki": {
+      "top": "Ramayana:_Part_1",
+      "views": 776693,
+      "for_date": "2026-11-11"
+    },
+    "hn": {
+      "top_id": 50465829,
+      "top_title": "Anthropic IPO",
+      "top10": [
+        50465829,
+        50465352,
+        50438261,
+        50425017,
+        50450488,
+        50459745,
+        50462177,
+        50456631,
+        50455394,
+        50431971
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 27.9,
+      "actual_prev_date": "2026-11-11",
+      "today": 27.8,
+      "forecast_next": 28.7,
+      "forecast_next_date": "2026-11-13"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.534,
+      "basis": {
+        "today_usd": 72809,
+        "change_24h": -1.45
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 2.67
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_top": "Ramayana:_Part_1"
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50465829,
+        "top_title": "Anthropic IPO"
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 28.7,
+        "for_date": "2026-11-13",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-14"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.53,
+      "basis": {
+        "today_usd": 72809,
+        "change_24h": -1.45,
+        "model": {
+          "p_event": 0.5302,
+          "n_train": 106,
+          "fallback": null,
+          "features": [
+            -1.45,
+            -3.2052645572985927,
+            -4.158329823083406,
+            2.1054127721873144
+          ],
+          "weights": [
+            -0.2231,
+            0.1326,
+            -0.0713,
+            -0.2717
+          ],
+          "bias": 0.192
+        }
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.655,
+      "basis": {
+        "today_max_kp": 2.67,
+        "model": {
+          "p_event": 0.3451,
+          "n_train": 109,
+          "fallback": null,
+          "features": [
+            2.67,
+            2.78,
+            3.2857142857142856,
+            3.33
+          ],
+          "weights": [
+            0.8763,
+            -0.3214,
+            -0.1395,
+            0.2587
+          ],
+          "bias": -0.4718
+        }
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.991,
+          "n_train": 109,
+          "fallback": "laplace",
+          "features": [
+            5.4,
+            198.85714285714286,
+            5.7,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.747,
+      "basis": {
+        "today_top": "Ramayana:_Part_1",
+        "model": {
+          "p_event": 0.7473,
+          "n_train": 99,
+          "fallback": null,
+          "features": [
+            2.0,
+            13.562801729387557,
+            0.9499571834858427,
+            0.0
+          ],
+          "weights": [
+            -0.4663,
+            -0.5386,
+            0.4029,
+            -0.4567
+          ],
+          "bias": 0.5338
+        }
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50465829,
+        "top_title": "Anthropic IPO",
+        "model": {
+          "p_event": 0.9962,
+          "n_train": 109,
+          "fallback": null,
+          "features": [
+            0.3,
+            11.0,
+            3.0
+          ],
+          "weights": [
+            0.3624,
+            -0.1722,
+            0.1154
+          ],
+          "bias": 2.9194
+        }
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.648,
+      "basis": {
+        "forecast_c": 28.7,
+        "for_date": "2026-11-13",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.6481,
+          "n_train": 96,
+          "fallback": null,
+          "features": [
+            0.8999999999999986,
+            0.2578759391645535,
+            0.0,
+            0.0
+          ],
+          "weights": [
+            -0.4493,
+            0.3266,
+            -0.3847,
+            0.9198
+          ],
+          "bias": 2.6035
+        }
+      },
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-14"
+    }
+  ]
+}

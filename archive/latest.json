@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-11",
-  "fetched_at": "2026-11-11T22:22:08.157166+00:00",
+  "date": "2026-11-12",
+  "fetched_at": "2026-11-12T12:09:43.862201+00:00",
   "observations": {
     "btc": {
-      "usd": 74446,
-      "usd_24h_change": 0.87
+      "usd": 72809,
+      "usd_24h_change": -1.45
     },
     "kp": {
       "max_kp": 2.67,
-      "latest_kp": 2.67,
+      "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.1,
-      "count": 203,
-      "strongest_place": "80 km W of Panguna, Papua New Guinea"
+      "max_mag": 5.4,
+      "count": 196,
+      "strongest_place": "South Sandwich Islands region"
     },
     "wiki": {
       "top": "Ramayana:_Part_1",
-      "views": 840888,
-      "for_date": "2026-11-10"
+      "views": 776693,
+      "for_date": "2026-11-11"
     },
     "hn": {
-      "top_id": 50458900,
-      "top_title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "top_id": 50465829,
+      "top_title": "Anthropic IPO",
       "top10": [
-        50458900,
-        50456631,
+        50465829,
+        50465352,
+        50438261,
+        50425017,
         50450488,
+        50459745,
+        50462177,
+        50456631,
         50455394,
-        50458532,
-        50456791,
-        50457230,
-        50458208,
-        50458710,
-        50458166
+        50431971
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 27.9,
       "actual_prev_date": "2026-11-11",
-      "today": 28.7,
-      "forecast_next": 28.8,
+      "today": 27.8,
+      "forecast_next": 28.7,
       "forecast_next_date": "2026-11-13"
     }
   },
@@ -53,14 +53,14 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.529,
+      "call": false,
+      "confidence": 0.534,
       "basis": {
-        "today_usd": 74446,
-        "change_24h": 0.87
+        "today_usd": 72809,
+        "change_24h": -1.45
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "kp_storm",
@@ -73,8 +73,8 @@
       "basis": {
         "today_max_kp": 2.67
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Ramayana:_Part_1"
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50458900,
-        "top_title": "United Airlines bans AI agents from booking flights on behalf of travelers"
+        "top_id": 50465829,
+        "top_title": "Anthropic IPO"
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.8,
+        "forecast_c": 28.7,
         "for_date": "2026-11-13",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.517,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 74446,
-        "change_24h": 0.87,
+        "today_usd": 72809,
+        "change_24h": -1.45,
         "model": {
-          "p_event": 0.5172,
-          "n_train": 105,
+          "p_event": 0.5302,
+          "n_train": 106,
           "fallback": null,
           "features": [
-            0.87,
-            -1.8523157242488542,
-            -7.069118326280444,
-            2.1352346969868186
+            -1.45,
+            -3.2052645572985927,
+            -4.158329823083406,
+            2.1054127721873144
           ],
           "weights": [
-            -0.2012,
-            0.1335,
-            -0.1301,
-            -0.2281
+            -0.2231,
+            0.1326,
+            -0.0713,
+            -0.2717
           ],
-          "bias": 0.2131
+          "bias": 0.192
         }
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.679,
+      "confidence": 0.655,
       "basis": {
         "today_max_kp": 2.67,
         "model": {
-          "p_event": 0.3206,
-          "n_train": 108,
+          "p_event": 0.3451,
+          "n_train": 109,
           "fallback": null,
           "features": [
             2.67,
-            3.0,
-            3.19,
-            3.0
+            2.78,
+            3.2857142857142856,
+            3.33
           ],
           "weights": [
-            0.8711,
-            -0.3227,
-            -0.1333,
-            0.2609
+            0.8763,
+            -0.3214,
+            -0.1395,
+            0.2587
           ],
-          "bias": -0.4544
+          "bias": -0.4718
         }
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9909,
-          "n_train": 108,
+          "p_event": 0.991,
+          "n_train": 109,
           "fallback": "laplace",
           "features": [
-            5.1,
-            203.0,
-            5.8,
+            5.4,
+            198.85714285714286,
+            5.7,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.563,
+      "confidence": 0.747,
       "basis": {
         "today_top": "Ramayana:_Part_1",
         "model": {
-          "p_event": 0.5628,
-          "n_train": 98,
+          "p_event": 0.7473,
+          "n_train": 99,
           "fallback": null,
           "features": [
-            1.0,
-            13.64221494451293,
-            0.9254598239238151,
-            1.0
+            2.0,
+            13.562801729387557,
+            0.9499571834858427,
+            0.0
           ],
           "weights": [
-            -0.4651,
-            -0.5406,
-            0.4128,
-            -0.4786
+            -0.4663,
+            -0.5386,
+            0.4029,
+            -0.4567
           ],
-          "bias": 0.5181
+          "bias": 0.5338
         }
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.938,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50458900,
-        "top_title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+        "top_id": 50465829,
+        "top_title": "Anthropic IPO",
         "model": {
-          "p_event": 0.9379,
-          "n_train": 108,
+          "p_event": 0.9962,
+          "n_train": 109,
           "fallback": null,
           "features": [
-            0.0,
+            0.3,
             11.0,
-            2.0
+            3.0
           ],
           "weights": [
-            0.3641,
-            -0.1729,
-            0.1191
+            0.3624,
+            -0.1722,
+            0.1154
           ],
-          "bias": 2.9107
+          "bias": 2.9194
         }
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-12"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-13"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.936,
+      "confidence": 0.648,
       "basis": {
-        "forecast_c": 28.8,
+        "forecast_c": 28.7,
         "for_date": "2026-11-13",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9359,
+          "p_event": 0.6481,
           "n_train": 96,
           "fallback": null,
           "features": [
-            0.10000000000000142,
-            0.21189620100417164,
-            1.2,
-            2.0
+            0.8999999999999986,
+            0.2578759391645535,
+            0.0,
+            0.0
           ],
           "weights": [
             -0.4493,
@@ -319,8 +319,8 @@
           "bias": 2.6035
         }
       },
-      "made_on": "2026-11-11",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-12",
+      "resolve_on": "2026-11-14"
     }
   ]
 }
