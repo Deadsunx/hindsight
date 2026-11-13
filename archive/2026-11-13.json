@@ -1,20 +1,20 @@
 {
   "date": "2026-11-13",
-  "fetched_at": "2026-11-13T11:50:42.410956+00:00",
+  "fetched_at": "2026-11-13T21:43:48.481021+00:00",
   "observations": {
     "btc": {
-      "usd": 69353,
-      "usd_24h_change": -4.83
+      "usd": 68210,
+      "usd_24h_change": -4.63
     },
     "kp": {
       "max_kp": 1.67,
-      "latest_kp": 1.33,
+      "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.8,
-      "count": 221,
-      "strongest_place": "148 km NW of Kavieng, Papua New Guinea"
+      "count": 251,
+      "strongest_place": "79 km WSW of Changuillo, Peru"
     },
     "wiki": {
       "top": "Jensen_Huang",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-12"
     },
     "hn": {
-      "top_id": 50481187,
-      "top_title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+      "top_id": 50489641,
+      "top_title": "FAA Issues National Ground Stop",
       "top10": [
-        50481187,
-        50467087,
-        50478515,
-        50480480,
-        50472038,
-        50477649,
-        50470488,
-        50472260,
-        50472490,
-        50475713
+        50489641,
+        50487864,
+        50489083,
+        50488325,
+        50487185,
+        50474959,
+        50489589,
+        50488464,
+        50488470,
+        50482379
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 28.4,
-      "actual_prev_date": "2026-11-12",
-      "today": 28.6,
-      "forecast_next": 28.4,
-      "forecast_next_date": "2026-11-14"
+      "actual_prev": 29.5,
+      "actual_prev_date": "2026-11-13",
+      "today": 28.9,
+      "forecast_next": 24.5,
+      "forecast_next_date": "2026-11-15"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.568,
+      "confidence": 0.566,
       "basis": {
-        "today_usd": 69353,
-        "change_24h": -4.83
+        "today_usd": 68210,
+        "change_24h": -4.63
       },
       "made_on": "2026-11-13",
       "resolve_on": "2026-11-14"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50481187,
-        "top_title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com"
+        "top_id": 50489641,
+        "top_title": "FAA Issues National Ground Stop"
       },
       "made_on": "2026-11-13",
       "resolve_on": "2026-11-14"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 28.4,
-        "for_date": "2026-11-14",
+        "forecast_c": 24.5,
+        "for_date": "2026-11-15",
         "city": "New Delhi"
       },
       "made_on": "2026-11-13",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.584,
+      "confidence": 0.545,
       "basis": {
-        "today_usd": 69353,
-        "change_24h": -4.83,
+        "today_usd": 68210,
+        "change_24h": -4.63,
         "model": {
-          "p_event": 0.584,
+          "p_event": 0.5451,
           "n_train": 107,
           "fallback": null,
           "features": [
-            -4.83,
-            -6.159258507543464,
-            -8.50648408332344,
-            1.9305680984666245
+            -4.63,
+            -7.705838576550983,
+            -10.014379757522985,
+            2.1213491127184416
           ],
           "weights": [
             -0.1936,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.8,
-            210.0,
+            214.28571428571428,
             5.6571428571428575,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.945,
       "basis": {
-        "top_id": 50481187,
-        "top_title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+        "top_id": 50489641,
+        "top_title": "FAA Issues National Ground Stop",
         "model": {
-          "p_event": 0.9999,
+          "p_event": 0.9455,
           "n_train": 110,
           "fallback": null,
           "features": [
-            0.5,
-            2.0,
+            0.0,
+            11.0,
             4.0
           ],
           "weights": [
-            0.3873,
-            -0.1812,
-            0.0971
+            0.3605,
+            -0.1713,
+            0.1163
           ],
-          "bias": 2.7693
+          "bias": 2.9285
         }
       },
       "made_on": "2026-11-13",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.723,
+      "confidence": 0.741,
       "basis": {
-        "forecast_c": 28.4,
-        "for_date": "2026-11-14",
+        "forecast_c": 24.5,
+        "for_date": "2026-11-15",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7228,
-          "n_train": 97,
+          "p_event": 0.741,
+          "n_train": 98,
           "fallback": null,
           "features": [
-            0.20000000000000284,
-            0.20712315177208057,
-            0.09999999999999787,
-            0.09999999999999787
+            4.399999999999999,
+            0.3924283374069721,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.4572,
-            0.31,
-            -0.3737,
-            0.9276
+            -0.4664,
+            0.2979,
+            -0.3656,
+            0.9332
           ],
-          "bias": 2.6176
+          "bias": 2.632
         }
       },
       "made_on": "2026-11-13",
