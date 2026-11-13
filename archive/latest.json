@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-12",
-  "fetched_at": "2026-11-12T21:58:18.239651+00:00",
+  "date": "2026-11-13",
+  "fetched_at": "2026-11-13T11:50:42.410956+00:00",
   "observations": {
     "btc": {
-      "usd": 71525,
-      "usd_24h_change": -3.8
+      "usd": 69353,
+      "usd_24h_change": -4.83
     },
     "kp": {
       "max_kp": 1.67,
@@ -12,36 +12,36 @@
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.4,
-      "count": 260,
-      "strongest_place": "South Sandwich Islands region"
+      "max_mag": 5.8,
+      "count": 221,
+      "strongest_place": "148 km NW of Kavieng, Papua New Guinea"
     },
     "wiki": {
-      "top": "Ramayana:_Part_1",
-      "views": 776693,
-      "for_date": "2026-11-11"
+      "top": "Jensen_Huang",
+      "views": 1072168,
+      "for_date": "2026-11-12"
     },
     "hn": {
-      "top_id": 50467087,
-      "top_title": "Jensen Huang resigns",
+      "top_id": 50481187,
+      "top_title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
       "top10": [
+        50481187,
         50467087,
+        50478515,
+        50480480,
         50472038,
+        50477649,
+        50470488,
         50472260,
         50472490,
-        50474361,
-        50470488,
-        50471731,
-        50471761,
-        50468888,
-        50467618
+        50475713
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.4,
       "actual_prev_date": "2026-11-12",
-      "today": 29.1,
+      "today": 28.6,
       "forecast_next": 28.4,
       "forecast_next_date": "2026-11-14"
     }
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.558,
+      "confidence": 0.568,
       "basis": {
-        "today_usd": 71525,
-        "change_24h": -3.8
+        "today_usd": 69353,
+        "change_24h": -4.83
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "kp_storm",
@@ -73,8 +73,8 @@
       "basis": {
         "today_max_kp": 1.67
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Ramayana:_Part_1"
+        "today_top": "Jensen_Huang"
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50467087,
-        "top_title": "Jensen Huang resigns"
+        "top_id": 50481187,
+        "top_title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com"
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "forecast_hit",
@@ -132,8 +132,8 @@
         "for_date": "2026-11-14",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-15"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": true,
-      "confidence": 0.564,
+      "confidence": 0.584,
       "basis": {
-        "today_usd": 71525,
-        "change_24h": -3.8,
+        "today_usd": 69353,
+        "change_24h": -4.83,
         "model": {
-          "p_event": 0.5642,
-          "n_train": 106,
+          "p_event": 0.584,
+          "n_train": 107,
           "fallback": null,
           "features": [
-            -3.8,
-            -4.912257378356822,
-            -5.8485151642797,
-            2.3010684202141873
+            -4.83,
+            -6.159258507543464,
+            -8.50648408332344,
+            1.9305680984666245
           ],
           "weights": [
-            -0.2231,
-            0.1326,
-            -0.0713,
-            -0.2717
+            -0.1936,
+            0.1368,
+            -0.0393,
+            -0.3142
           ],
-          "bias": 0.192
+          "bias": 0.1713
         }
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.767,
+      "confidence": 0.721,
       "basis": {
         "today_max_kp": 1.67,
         "model": {
-          "p_event": 0.2334,
-          "n_train": 109,
+          "p_event": 0.2792,
+          "n_train": 110,
           "fallback": null,
           "features": [
             1.67,
-            2.4466666666666668,
-            3.142857142857143,
-            3.33
+            2.0033333333333334,
+            3.0,
+            3.67
           ],
           "weights": [
-            0.8763,
-            -0.3214,
-            -0.1395,
-            0.2587
+            0.8927,
+            -0.3152,
+            -0.1472,
+            0.2499
           ],
-          "bias": -0.4718
+          "bias": -0.4891
         }
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.991,
-          "n_train": 109,
+          "p_event": 0.9911,
+          "n_train": 110,
           "fallback": "laplace",
           "features": [
-            5.4,
-            208.0,
-            5.7,
+            5.8,
+            210.0,
+            5.6571428571428575,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.747,
+      "confidence": 0.563,
       "basis": {
-        "today_top": "Ramayana:_Part_1",
+        "today_top": "Jensen_Huang",
         "model": {
-          "p_event": 0.7473,
-          "n_train": 99,
+          "p_event": 0.5627,
+          "n_train": 100,
           "fallback": null,
           "features": [
-            2.0,
-            13.562801729387557,
-            0.9499571834858427,
-            0.0
+            1.0,
+            13.885194257441277,
+            1.253636965270811,
+            1.0
           ],
           "weights": [
-            -0.4663,
-            -0.5386,
-            0.4029,
-            -0.4567
+            -0.4097,
+            -0.5063,
+            0.3769,
+            -0.3958
           ],
-          "bias": 0.5338
+          "bias": 0.503
         }
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.942,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50467087,
-        "top_title": "Jensen Huang resigns",
+        "top_id": 50481187,
+        "top_title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
         "model": {
-          "p_event": 0.9418,
-          "n_train": 109,
+          "p_event": 0.9999,
+          "n_train": 110,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            3.0
+            0.5,
+            2.0,
+            4.0
           ],
           "weights": [
-            0.3624,
-            -0.1722,
-            0.1154
+            0.3873,
+            -0.1812,
+            0.0971
           ],
-          "bias": 2.9194
+          "bias": 2.7693
         }
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-13"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-14"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.925,
+      "confidence": 0.723,
       "basis": {
         "forecast_c": 28.4,
         "for_date": "2026-11-14",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9251,
+          "p_event": 0.7228,
           "n_train": 97,
           "fallback": null,
           "features": [
-            0.7000000000000028,
-            0.2097617696340311,
-            1.2,
-            2.0
+            0.20000000000000284,
+            0.20712315177208057,
+            0.09999999999999787,
+            0.09999999999999787
           ],
           "weights": [
             -0.4572,
@@ -319,8 +319,8 @@
           "bias": 2.6176
         }
       },
-      "made_on": "2026-11-12",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-13",
+      "resolve_on": "2026-11-15"
     }
   ]
 }
