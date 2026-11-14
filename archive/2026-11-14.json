@@ -1,0 +1,271 @@
+{
+  "date": "2026-11-14",
+  "fetched_at": "2026-11-14T11:12:20.396983+00:00",
+  "observations": {
+    "btc": {
+      "usd": 67208,
+      "usd_24h_change": -2.99
+    },
+    "kp": {
+      "max_kp": 1.0,
+      "latest_kp": 1.0,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.8,
+      "count": 215,
+      "strongest_place": "79 km WSW of Changuillo, Peru"
+    },
+    "wiki": {
+      "top": "Jensen_Huang",
+      "views": 727529,
+      "for_date": "2026-11-13"
+    },
+    "hn": {
+      "top_id": 50440709,
+      "top_title": "Why get an expensive Pi when I have an old phone?",
+      "top10": [
+        50440709,
+        50493062,
+        50493904,
+        50493251,
+        50489641,
+        50491980,
+        50491423,
+        50491545,
+        50491830,
+        50484658
+      ]
+    },
+    "weather": {
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.55,
+      "basis": {
+        "today_usd": 67208,
+        "change_24h": -2.99
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 1.0
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_top": "Jensen_Huang"
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50440709,
+        "top_title": "Why get an expensive Pi when I have an old phone?"
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.507,
+      "basis": {
+        "today_usd": 67208,
+        "change_24h": -2.99,
+        "model": {
+          "p_event": 0.4928,
+          "n_train": 108,
+          "fallback": null,
+          "features": [
+            -2.99,
+            -9.722483410794403,
+            -11.212101195587554,
+            1.743264619183563
+          ],
+          "weights": [
+            -0.1694,
+            0.1529,
+            -0.0054,
+            -0.3526
+          ],
+          "bias": 0.1511
+        }
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.793,
+      "basis": {
+        "today_max_kp": 1.0,
+        "model": {
+          "p_event": 0.2072,
+          "n_train": 111,
+          "fallback": null,
+          "features": [
+            1.0,
+            1.4466666666666665,
+            2.6671428571428573,
+            3.0
+          ],
+          "weights": [
+            0.9068,
+            -0.2986,
+            -0.1562,
+            0.2351
+          ],
+          "bias": -0.5056
+        }
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9912,
+          "n_train": 111,
+          "fallback": "laplace",
+          "features": [
+            5.8,
+            220.28571428571428,
+            5.7,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.73,
+      "basis": {
+        "today_top": "Jensen_Huang",
+        "model": {
+          "p_event": 0.7299,
+          "n_train": 101,
+          "fallback": null,
+          "features": [
+            2.0,
+            13.49741051429096,
+            0.8589471827149441,
+            0.0
+          ],
+          "weights": [
+            -0.4093,
+            -0.5006,
+            0.3727,
+            -0.3752
+          ],
+          "bias": 0.5185
+        }
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50440709,
+        "top_title": "Why get an expensive Pi when I have an old phone?",
+        "model": {
+          "p_event": 0.9893,
+          "n_train": 111,
+          "fallback": null,
+          "features": [
+            0.1,
+            5.0,
+            5.0
+          ],
+          "weights": [
+            0.3885,
+            -0.1829,
+            0.0355
+          ],
+          "bias": 2.7744
+        }
+      },
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
+    }
+  ]
+}

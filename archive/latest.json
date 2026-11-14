@@ -1,49 +1,44 @@
 {
-  "date": "2026-11-13",
-  "fetched_at": "2026-11-13T21:43:48.481021+00:00",
+  "date": "2026-11-14",
+  "fetched_at": "2026-11-14T11:12:20.396983+00:00",
   "observations": {
     "btc": {
-      "usd": 68210,
-      "usd_24h_change": -4.63
+      "usd": 67208,
+      "usd_24h_change": -2.99
     },
     "kp": {
-      "max_kp": 1.67,
-      "latest_kp": 0.67,
+      "max_kp": 1.0,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.8,
-      "count": 251,
+      "count": 215,
       "strongest_place": "79 km WSW of Changuillo, Peru"
     },
     "wiki": {
       "top": "Jensen_Huang",
-      "views": 1072168,
-      "for_date": "2026-11-12"
+      "views": 727529,
+      "for_date": "2026-11-13"
     },
     "hn": {
-      "top_id": 50489641,
-      "top_title": "FAA Issues National Ground Stop",
+      "top_id": 50440709,
+      "top_title": "Why get an expensive Pi when I have an old phone?",
       "top10": [
+        50440709,
+        50493062,
+        50493904,
+        50493251,
         50489641,
-        50487864,
-        50489083,
-        50488325,
-        50487185,
-        50474959,
-        50489589,
-        50488464,
-        50488470,
-        50482379
+        50491980,
+        50491423,
+        50491545,
+        50491830,
+        50484658
       ]
     },
     "weather": {
-      "city": "New Delhi",
-      "actual_prev": 29.5,
-      "actual_prev_date": "2026-11-13",
-      "today": 28.9,
-      "forecast_next": 24.5,
-      "forecast_next_date": "2026-11-15"
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
     }
   },
   "predictions": [
@@ -54,13 +49,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.566,
+      "confidence": 0.55,
       "basis": {
-        "today_usd": 68210,
-        "change_24h": -4.63
+        "today_usd": 67208,
+        "change_24h": -2.99
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
     },
     {
       "id": "kp_storm",
@@ -71,10 +66,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.67
+        "today_max_kp": 1.0
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
     },
     {
       "id": "quake_m5",
@@ -87,8 +82,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +91,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Jensen_Huang"
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
     },
     {
       "id": "hn_fade",
@@ -113,26 +108,10 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50489641,
-        "top_title": "FAA Issues National Ground Stop"
+        "top_id": 50440709,
+        "top_title": "Why get an expensive Pi when I have an old phone?"
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
-    },
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 24.5,
-        "for_date": "2026-11-15",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-11-13",
+      "made_on": "2026-11-14",
       "resolve_on": "2026-11-15"
     },
     {
@@ -141,32 +120,32 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.545,
+      "call": false,
+      "confidence": 0.507,
       "basis": {
-        "today_usd": 68210,
-        "change_24h": -4.63,
+        "today_usd": 67208,
+        "change_24h": -2.99,
         "model": {
-          "p_event": 0.5451,
-          "n_train": 107,
+          "p_event": 0.4928,
+          "n_train": 108,
           "fallback": null,
           "features": [
-            -4.63,
-            -7.705838576550983,
-            -10.014379757522985,
-            2.1213491127184416
+            -2.99,
+            -9.722483410794403,
+            -11.212101195587554,
+            1.743264619183563
           ],
           "weights": [
-            -0.1936,
-            0.1368,
-            -0.0393,
-            -0.3142
+            -0.1694,
+            0.1529,
+            -0.0054,
+            -0.3526
           ],
-          "bias": 0.1713
+          "bias": 0.1511
         }
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +154,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.721,
+      "confidence": 0.793,
       "basis": {
-        "today_max_kp": 1.67,
+        "today_max_kp": 1.0,
         "model": {
-          "p_event": 0.2792,
-          "n_train": 110,
+          "p_event": 0.2072,
+          "n_train": 111,
           "fallback": null,
           "features": [
-            1.67,
-            2.0033333333333334,
-            3.0,
-            3.67
+            1.0,
+            1.4466666666666665,
+            2.6671428571428573,
+            3.0
           ],
           "weights": [
-            0.8927,
-            -0.3152,
-            -0.1472,
-            0.2499
+            0.9068,
+            -0.2986,
+            -0.1562,
+            0.2351
           ],
-          "bias": -0.4891
+          "bias": -0.5056
         }
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +190,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9911,
-          "n_train": 110,
+          "p_event": 0.9912,
+          "n_train": 111,
           "fallback": "laplace",
           "features": [
             5.8,
-            214.28571428571428,
-            5.6571428571428575,
+            220.28571428571428,
+            5.7,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +211,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.563,
+      "confidence": 0.73,
       "basis": {
         "today_top": "Jensen_Huang",
         "model": {
-          "p_event": 0.5627,
-          "n_train": 100,
+          "p_event": 0.7299,
+          "n_train": 101,
           "fallback": null,
           "features": [
-            1.0,
-            13.885194257441277,
-            1.253636965270811,
-            1.0
+            2.0,
+            13.49741051429096,
+            0.8589471827149441,
+            0.0
           ],
           "weights": [
-            -0.4097,
-            -0.5063,
-            0.3769,
-            -0.3958
+            -0.4093,
+            -0.5006,
+            0.3727,
+            -0.3752
           ],
-          "bias": 0.503
+          "bias": 0.5185
         }
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
+      "made_on": "2026-11-14",
+      "resolve_on": "2026-11-15"
     },
     {
       "id": "hn_fade_ml",
@@ -264,62 +243,28 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.945,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50489641,
-        "top_title": "FAA Issues National Ground Stop",
+        "top_id": 50440709,
+        "top_title": "Why get an expensive Pi when I have an old phone?",
         "model": {
-          "p_event": 0.9455,
-          "n_train": 110,
+          "p_event": 0.9893,
+          "n_train": 111,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            4.0
+            0.1,
+            5.0,
+            5.0
           ],
           "weights": [
-            0.3605,
-            -0.1713,
-            0.1163
+            0.3885,
+            -0.1829,
+            0.0355
           ],
-          "bias": 2.9285
+          "bias": 2.7744
         }
       },
-      "made_on": "2026-11-13",
-      "resolve_on": "2026-11-14"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.741,
-      "basis": {
-        "forecast_c": 24.5,
-        "for_date": "2026-11-15",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.741,
-          "n_train": 98,
-          "fallback": null,
-          "features": [
-            4.399999999999999,
-            0.3924283374069721,
-            1.2,
-            2.0
-          ],
-          "weights": [
-            -0.4664,
-            0.2979,
-            -0.3656,
-            0.9332
-          ],
-          "bias": 2.632
-        }
-      },
-      "made_on": "2026-11-13",
+      "made_on": "2026-11-14",
       "resolve_on": "2026-11-15"
     }
   ]
