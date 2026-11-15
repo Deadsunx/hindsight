@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-14",
-  "fetched_at": "2026-11-14T20:14:36.407378+00:00",
+  "date": "2026-11-15",
+  "fetched_at": "2026-11-15T11:44:42.647853+00:00",
   "observations": {
     "btc": {
-      "usd": 65592,
-      "usd_24h_change": -4.95
+      "usd": 65538,
+      "usd_24h_change": -2.48
     },
     "kp": {
-      "max_kp": 1.67,
-      "latest_kp": 1.0,
+      "max_kp": 2.0,
+      "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.5,
-      "count": 187,
-      "strongest_place": "northern Mid-Atlantic Ridge"
+      "count": 191,
+      "strongest_place": "Fiji region"
     },
     "wiki": {
-      "top": "Jensen_Huang",
-      "views": 727529,
-      "for_date": "2026-11-13"
+      "top": "Ramayana:_Part_1",
+      "views": 581992,
+      "for_date": "2026-11-14"
     },
     "hn": {
-      "top_id": 50499017,
-      "top_title": "Lovable apps expose passport details and more than 200K private messages",
+      "top_id": 50500963,
+      "top_title": "SpaceX catches the Starship to end Flight 15",
       "top10": [
+        50500963,
+        50505271,
         50499017,
-        50499083,
-        50497892,
-        50499038,
-        50496976,
-        50440709,
-        50499723,
-        50453901,
-        50496811,
-        50497589
+        50502988,
+        50481056,
+        50474529,
+        50504277,
+        50501594,
+        50503465,
+        50484234
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 28.8,
       "actual_prev_date": "2026-11-14",
-      "today": 27.0,
-      "forecast_next": 26.0,
+      "today": 25.9,
+      "forecast_next": 26.1,
       "forecast_next_date": "2026-11-16"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.57,
+      "confidence": 0.545,
       "basis": {
-        "today_usd": 65592,
-        "change_24h": -4.95
+        "today_usd": 65538,
+        "change_24h": -2.48
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.67
+        "today_max_kp": 2.0
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Jensen_Huang"
+        "today_top": "Ramayana:_Part_1"
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50499017,
-        "top_title": "Lovable apps expose passport details and more than 200K private messages"
+        "top_id": 50500963,
+        "top_title": "SpaceX catches the Starship to end Flight 15"
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 26.0,
+        "forecast_c": 26.1,
         "for_date": "2026-11-16",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-17"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.512,
+      "confidence": 0.571,
       "basis": {
-        "today_usd": 65592,
-        "change_24h": -4.95,
+        "today_usd": 65538,
+        "change_24h": -2.48,
         "model": {
-          "p_event": 0.4882,
-          "n_train": 108,
+          "p_event": 0.4286,
+          "n_train": 109,
           "fallback": null,
           "features": [
-            -4.95,
-            -11.893184321521645,
-            -13.346984609287272,
-            1.913910665174363
+            -2.48,
+            -8.370499825235933,
+            -13.596392928240897,
+            1.9253799209576479
           ],
           "weights": [
-            -0.1694,
-            0.1529,
-            -0.0054,
-            -0.3526
+            -0.1627,
+            0.2013,
+            0.0137,
+            -0.3806
           ],
-          "bias": 0.1511
+          "bias": 0.1311
         }
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.722,
+      "confidence": 0.714,
       "basis": {
-        "today_max_kp": 1.67,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.2776,
-          "n_train": 111,
+          "p_event": 0.2861,
+          "n_train": 112,
           "fallback": null,
           "features": [
-            1.67,
-            1.67,
-            2.762857142857143,
-            3.0
+            2.0,
+            1.78,
+            2.287142857142857,
+            1.67
           ],
           "weights": [
-            0.9068,
-            -0.2986,
-            -0.1562,
-            0.2351
+            0.9142,
+            -0.2799,
+            -0.1612,
+            0.2273
           ],
-          "bias": -0.5056
+          "bias": -0.5221
         }
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "quake_m5_ml",
@@ -212,18 +212,18 @@
         "base_rate": 1.0,
         "model": {
           "p_event": 0.9912,
-          "n_train": 111,
+          "n_train": 112,
           "fallback": "laplace",
           "features": [
             5.5,
-            216.28571428571428,
-            5.6571428571428575,
+            214.85714285714286,
+            5.614285714285714,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.73,
+      "confidence": 0.636,
       "basis": {
-        "today_top": "Jensen_Huang",
+        "today_top": "Ramayana:_Part_1",
         "model": {
-          "p_event": 0.7299,
-          "n_train": 101,
+          "p_event": 0.6356,
+          "n_train": 102,
           "fallback": null,
           "features": [
-            2.0,
-            13.49741051429096,
-            0.8589471827149441,
-            0.0
+            1.0,
+            13.274213699149835,
+            0.7115123547942078,
+            1.0
           ],
           "weights": [
-            -0.4093,
-            -0.5006,
-            0.3727,
-            -0.3752
+            -0.3567,
+            -0.4696,
+            0.3515,
+            -0.3195
           ],
-          "bias": 0.5185
+          "bias": 0.4893
         }
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.949,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50499017,
-        "top_title": "Lovable apps expose passport details and more than 200K private messages",
+        "top_id": 50500963,
+        "top_title": "SpaceX catches the Starship to end Flight 15",
         "model": {
-          "p_event": 0.9492,
-          "n_train": 111,
+          "p_event": 0.9916,
+          "n_train": 112,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            5.0
+            0.1,
+            3.0,
+            6.0
           ],
           "weights": [
-            0.3586,
-            -0.1703,
-            0.1213
+            0.3895,
+            -0.1841,
+            -0.0216
           ],
-          "bias": 2.9379
+          "bias": 2.7826
         }
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-15"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.931,
+      "confidence": 0.781,
       "basis": {
-        "forecast_c": 26.0,
+        "forecast_c": 26.1,
         "for_date": "2026-11-16",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9306,
+          "p_event": 0.7814,
           "n_train": 99,
           "fallback": null,
           "features": [
-            1.0,
-            0.4004996878900161,
-            1.2,
-            2.0
+            0.20000000000000284,
+            0.4079215610874232,
+            0.40000000000000213,
+            0.40000000000000213
           ],
           "weights": [
             -0.472,
@@ -319,8 +319,8 @@
           "bias": 2.6458
         }
       },
-      "made_on": "2026-11-14",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-17"
     }
   ]
 }

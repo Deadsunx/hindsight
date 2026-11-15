@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-15",
+  "fetched_at": "2026-11-15T11:44:42.647853+00:00",
+  "observations": {
+    "btc": {
+      "usd": 65538,
+      "usd_24h_change": -2.48
+    },
+    "kp": {
+      "max_kp": 2.0,
+      "latest_kp": 0.67,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.5,
+      "count": 191,
+      "strongest_place": "Fiji region"
+    },
+    "wiki": {
+      "top": "Ramayana:_Part_1",
+      "views": 581992,
+      "for_date": "2026-11-14"
+    },
+    "hn": {
+      "top_id": 50500963,
+      "top_title": "SpaceX catches the Starship to end Flight 15",
+      "top10": [
+        50500963,
+        50505271,
+        50499017,
+        50502988,
+        50481056,
+        50474529,
+        50504277,
+        50501594,
+        50503465,
+        50484234
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 28.8,
+      "actual_prev_date": "2026-11-14",
+      "today": 25.9,
+      "forecast_next": 26.1,
+      "forecast_next_date": "2026-11-16"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.545,
+      "basis": {
+        "today_usd": 65538,
+        "change_24h": -2.48
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 2.0
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Ramayana:_Part_1"
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50500963,
+        "top_title": "SpaceX catches the Starship to end Flight 15"
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 26.1,
+        "for_date": "2026-11-16",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-17"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.571,
+      "basis": {
+        "today_usd": 65538,
+        "change_24h": -2.48,
+        "model": {
+          "p_event": 0.4286,
+          "n_train": 109,
+          "fallback": null,
+          "features": [
+            -2.48,
+            -8.370499825235933,
+            -13.596392928240897,
+            1.9253799209576479
+          ],
+          "weights": [
+            -0.1627,
+            0.2013,
+            0.0137,
+            -0.3806
+          ],
+          "bias": 0.1311
+        }
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.714,
+      "basis": {
+        "today_max_kp": 2.0,
+        "model": {
+          "p_event": 0.2861,
+          "n_train": 112,
+          "fallback": null,
+          "features": [
+            2.0,
+            1.78,
+            2.287142857142857,
+            1.67
+          ],
+          "weights": [
+            0.9142,
+            -0.2799,
+            -0.1612,
+            0.2273
+          ],
+          "bias": -0.5221
+        }
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9912,
+          "n_train": 112,
+          "fallback": "laplace",
+          "features": [
+            5.5,
+            214.85714285714286,
+            5.614285714285714,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.636,
+      "basis": {
+        "today_top": "Ramayana:_Part_1",
+        "model": {
+          "p_event": 0.6356,
+          "n_train": 102,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.274213699149835,
+            0.7115123547942078,
+            1.0
+          ],
+          "weights": [
+            -0.3567,
+            -0.4696,
+            0.3515,
+            -0.3195
+          ],
+          "bias": 0.4893
+        }
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50500963,
+        "top_title": "SpaceX catches the Starship to end Flight 15",
+        "model": {
+          "p_event": 0.9916,
+          "n_train": 112,
+          "fallback": null,
+          "features": [
+            0.1,
+            3.0,
+            6.0
+          ],
+          "weights": [
+            0.3895,
+            -0.1841,
+            -0.0216
+          ],
+          "bias": 2.7826
+        }
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-16"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.781,
+      "basis": {
+        "forecast_c": 26.1,
+        "for_date": "2026-11-16",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.7814,
+          "n_train": 99,
+          "fallback": null,
+          "features": [
+            0.20000000000000284,
+            0.4079215610874232,
+            0.40000000000000213,
+            0.40000000000000213
+          ],
+          "weights": [
+            -0.472,
+            0.2833,
+            -0.3567,
+            0.9396
+          ],
+          "bias": 2.6458
+        }
+      },
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-17"
+    }
+  ]
+}
