@@ -1,20 +1,20 @@
 {
   "date": "2026-11-16",
-  "fetched_at": "2026-11-16T12:25:06.035279+00:00",
+  "fetched_at": "2026-11-16T23:54:45.936433+00:00",
   "observations": {
     "btc": {
-      "usd": 63997,
-      "usd_24h_change": -2.19
+      "usd": 64907,
+      "usd_24h_change": -0.4
     },
     "kp": {
-      "max_kp": 1.0,
+      "max_kp": 1.33,
       "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.5,
-      "count": 174,
-      "strongest_place": "9 km E of Union, Philippines"
+      "max_mag": 6.6,
+      "count": 196,
+      "strongest_place": "148 km WSW of Tual, Indonesia"
     },
     "wiki": {
       "top": "Archive_of_Our_Own",
@@ -22,23 +22,28 @@
       "for_date": "2026-11-15"
     },
     "hn": {
-      "top_id": 50516245,
-      "top_title": "Coffeehouses and the Rise of Science [pdf]",
+      "top_id": 50522980,
+      "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free",
       "top10": [
-        50516245,
-        50516232,
-        50516473,
-        50514470,
-        50513160,
-        50486745,
-        50513215,
-        50511395,
-        50512235,
-        50490159
+        50522980,
+        50523601,
+        50524736,
+        50524225,
+        50523459,
+        50523300,
+        50520182,
+        50519744,
+        50522563,
+        50521045
       ]
     },
     "weather": {
-      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+      "city": "New Delhi",
+      "actual_prev": 26.4,
+      "actual_prev_date": "2026-11-16",
+      "today": 25.2,
+      "forecast_next": 25.0,
+      "forecast_next_date": "2026-11-18"
     }
   },
   "predictions": [
@@ -49,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.542,
+      "confidence": 0.524,
       "basis": {
-        "today_usd": 63997,
-        "change_24h": -2.19
+        "today_usd": 64907,
+        "change_24h": -0.4
       },
       "made_on": "2026-11-16",
       "resolve_on": "2026-11-17"
@@ -66,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.0
+        "today_max_kp": 1.33
       },
       "made_on": "2026-11-16",
       "resolve_on": "2026-11-17"
@@ -108,11 +113,27 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50516245,
-        "top_title": "Coffeehouses and the Rise of Science [pdf]"
+        "top_id": 50522980,
+        "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free"
       },
       "made_on": "2026-11-16",
       "resolve_on": "2026-11-17"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 25.0,
+        "for_date": "2026-11-18",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "btc_up_ml",
@@ -121,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.561,
+      "confidence": 0.59,
       "basis": {
-        "today_usd": 63997,
-        "change_24h": -2.19,
+        "today_usd": 64907,
+        "change_24h": -0.4,
         "model": {
-          "p_event": 0.4387,
+          "p_event": 0.4097,
           "n_train": 110,
           "fallback": null,
           "features": [
-            -2.19,
-            -6.176513707667497,
-            -14.920233980324383,
-            1.7946609203993293
+            -0.4,
+            -4.842398475296871,
+            -13.710449348577502,
+            1.8688649158534294
           ],
           "weights": [
             -0.1891,
@@ -154,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.79,
+      "confidence": 0.756,
       "basis": {
-        "today_max_kp": 1.0,
+        "today_max_kp": 1.33,
         "model": {
-          "p_event": 0.2097,
+          "p_event": 0.244,
           "n_train": 113,
           "fallback": null,
           "features": [
-            1.0,
-            1.5566666666666666,
-            1.9542857142857142,
+            1.33,
+            1.6666666666666667,
+            2.0014285714285713,
             2.67
           ],
           "weights": [
@@ -194,9 +215,9 @@
           "n_train": 113,
           "fallback": "laplace",
           "features": [
-            5.5,
-            210.85714285714286,
-            5.485714285714286,
+            6.6,
+            214.0,
+            5.642857142857143,
             1.0
           ]
         }
@@ -245,8 +266,8 @@
       "call": true,
       "confidence": 0.932,
       "basis": {
-        "top_id": 50516245,
-        "top_title": "Coffeehouses and the Rise of Science [pdf]",
+        "top_id": 50522980,
+        "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free",
         "model": {
           "p_event": 0.9317,
           "n_train": 113,
@@ -266,6 +287,40 @@
       },
       "made_on": "2026-11-16",
       "resolve_on": "2026-11-17"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "forecast_c": 25.0,
+        "for_date": "2026-11-18",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.953,
+          "n_train": 101,
+          "fallback": null,
+          "features": [
+            0.1999999999999993,
+            0.8170679286326203,
+            1.2,
+            2.0
+          ],
+          "weights": [
+            -0.6129,
+            0.3908,
+            -0.4113,
+            0.8906
+          ],
+          "bias": 2.6017
+        }
+      },
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-18"
     }
   ]
 }

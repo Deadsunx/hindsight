@@ -1561,8 +1561,8 @@
       "weather"
     ],
     "made": 12,
-    "graded": 10,
-    "correct": 8
+    "graded": 12,
+    "correct": 10
   },
   {
     "date": "2026-11-15",
@@ -1585,9 +1585,10 @@
       "kp",
       "quakes",
       "wiki",
-      "hn"
+      "hn",
+      "weather"
     ],
-    "made": 10,
+    "made": 12,
     "graded": 0,
     "correct": 0
   }
