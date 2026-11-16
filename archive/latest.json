@@ -1,49 +1,44 @@
 {
-  "date": "2026-11-15",
-  "fetched_at": "2026-11-15T20:39:49.417031+00:00",
+  "date": "2026-11-16",
+  "fetched_at": "2026-11-16T12:25:06.035279+00:00",
   "observations": {
     "btc": {
-      "usd": 65024,
-      "usd_24h_change": -0.66
+      "usd": 63997,
+      "usd_24h_change": -2.19
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 1.0,
+      "max_kp": 1.0,
+      "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.5,
-      "count": 189,
+      "count": 174,
       "strongest_place": "9 km E of Union, Philippines"
     },
     "wiki": {
-      "top": "Ramayana:_Part_1",
-      "views": 581992,
-      "for_date": "2026-11-14"
+      "top": "Archive_of_Our_Own",
+      "views": 860729,
+      "for_date": "2026-11-15"
     },
     "hn": {
-      "top_id": 50509308,
-      "top_title": "A short explainer on how El Ni\u00f1o works [video]",
+      "top_id": 50516245,
+      "top_title": "Coffeehouses and the Rise of Science [pdf]",
       "top10": [
-        50509308,
-        50509023,
-        50510005,
-        50506719,
-        50463399,
-        50507553,
-        50506894,
-        50509411,
-        50509416,
-        50500963
+        50516245,
+        50516232,
+        50516473,
+        50514470,
+        50513160,
+        50486745,
+        50513215,
+        50511395,
+        50512235,
+        50490159
       ]
     },
     "weather": {
-      "city": "New Delhi",
-      "actual_prev": 27.2,
-      "actual_prev_date": "2026-11-15",
-      "today": 26.4,
-      "forecast_next": 25.1,
-      "forecast_next_date": "2026-11-17"
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
     }
   },
   "predictions": [
@@ -54,13 +49,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.527,
+      "confidence": 0.542,
       "basis": {
-        "today_usd": 65024,
-        "change_24h": -0.66
+        "today_usd": 63997,
+        "change_24h": -2.19
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-17"
     },
     {
       "id": "kp_storm",
@@ -71,10 +66,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 1.0
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-17"
     },
     {
       "id": "quake_m5",
@@ -87,8 +82,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-17"
     },
     {
       "id": "wiki_hold",
@@ -99,10 +94,10 @@
       "call": false,
       "confidence": 0.62,
       "basis": {
-        "today_top": "Ramayana:_Part_1"
+        "today_top": "Archive_of_Our_Own"
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-17"
     },
     {
       "id": "hn_fade",
@@ -113,26 +108,10 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50509308,
-        "top_title": "A short explainer on how El Ni\u00f1o works [video]"
+        "top_id": 50516245,
+        "top_title": "Coffeehouses and the Rise of Science [pdf]"
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
-    },
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 25.1,
-        "for_date": "2026-11-17",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-11-15",
+      "made_on": "2026-11-16",
       "resolve_on": "2026-11-17"
     },
     {
@@ -142,31 +121,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.607,
+      "confidence": 0.561,
       "basis": {
-        "today_usd": 65024,
-        "change_24h": -0.66,
+        "today_usd": 63997,
+        "change_24h": -2.19,
         "model": {
-          "p_event": 0.3931,
-          "n_train": 109,
+          "p_event": 0.4387,
+          "n_train": 110,
           "fallback": null,
           "features": [
-            -0.66,
-            -9.089129674938834,
-            -14.274037257254356,
-            1.8724702353218785
+            -2.19,
+            -6.176513707667497,
+            -14.920233980324383,
+            1.7946609203993293
           ],
           "weights": [
-            -0.1627,
-            0.2013,
-            0.0137,
-            -0.3806
+            -0.1891,
+            0.2362,
+            0.0491,
+            -0.407
           ],
-          "bias": 0.1311
+          "bias": 0.1113
         }
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-17"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +154,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.714,
+      "confidence": 0.79,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 1.0,
         "model": {
-          "p_event": 0.2861,
-          "n_train": 112,
+          "p_event": 0.2097,
+          "n_train": 113,
           "fallback": null,
           "features": [
-            2.0,
-            1.78,
-            2.287142857142857,
-            1.67
+            1.0,
+            1.5566666666666666,
+            1.9542857142857142,
+            2.67
           ],
           "weights": [
-            0.9142,
-            -0.2799,
-            -0.1612,
-            0.2273
+            0.9118,
+            -0.2723,
+            -0.1507,
+            0.2372
           ],
-          "bias": -0.5221
+          "bias": -0.5388
         }
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-17"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +190,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9912,
-          "n_train": 112,
+          "p_event": 0.9913,
+          "n_train": 113,
           "fallback": "laplace",
           "features": [
             5.5,
-            214.57142857142858,
-            5.614285714285714,
+            210.85714285714286,
+            5.485714285714286,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-17"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +211,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.636,
+      "confidence": 0.575,
       "basis": {
-        "today_top": "Ramayana:_Part_1",
+        "today_top": "Archive_of_Our_Own",
         "model": {
-          "p_event": 0.6356,
-          "n_train": 102,
+          "p_event": 0.5746,
+          "n_train": 103,
           "fallback": null,
           "features": [
             1.0,
-            13.274213699149835,
-            0.7115123547942078,
+            13.665536145380429,
+            1.0264146051275902,
             1.0
           ],
           "weights": [
-            -0.3567,
-            -0.4696,
-            0.3515,
-            -0.3195
+            -0.3441,
+            -0.4294,
+            0.3379,
+            -0.3502
           ],
-          "bias": 0.4893
+          "bias": 0.4636
         }
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
+      "made_on": "2026-11-16",
+      "resolve_on": "2026-11-17"
     },
     {
       "id": "hn_fade_ml",
@@ -264,62 +243,28 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.932,
       "basis": {
-        "top_id": 50509308,
-        "top_title": "A short explainer on how El Ni\u00f1o works [video]",
+        "top_id": 50516245,
+        "top_title": "Coffeehouses and the Rise of Science [pdf]",
         "model": {
-          "p_event": 0.9531,
-          "n_train": 112,
+          "p_event": 0.9317,
+          "n_train": 113,
           "fallback": null,
           "features": [
             0.0,
             11.0,
-            6.0
+            0.0
           ],
           "weights": [
-            0.3566,
-            -0.1693,
-            0.13
+            0.3547,
+            -0.1681,
+            0.142
           ],
-          "bias": 2.9478
+          "bias": 2.958
         }
       },
-      "made_on": "2026-11-15",
-      "resolve_on": "2026-11-16"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.901,
-      "basis": {
-        "forecast_c": 25.1,
-        "for_date": "2026-11-17",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.9007,
-          "n_train": 100,
-          "fallback": null,
-          "features": [
-            1.2999999999999972,
-            0.5656854249492385,
-            1.2,
-            2.0
-          ],
-          "weights": [
-            -0.6073,
-            0.4059,
-            -0.42,
-            0.8829
-          ],
-          "bias": 2.589
-        }
-      },
-      "made_on": "2026-11-15",
+      "made_on": "2026-11-16",
       "resolve_on": "2026-11-17"
     }
   ]
