@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T12:45:37.076222+00:00",
+  "updated": "2026-11-17T23:14:42.443313+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 89,
-      "rule_correct": 84,
-      "model_correct": 84,
-      "rule_accuracy": 0.9438,
-      "model_accuracy": 0.9438,
-      "rule_brier": 0.0571,
-      "model_brier": 0.0542,
-      "rule_log_loss": 0.2398,
-      "model_log_loss": 0.2251,
+      "rule_correct": 85,
+      "model_correct": 85,
+      "rule_accuracy": 0.9551,
+      "model_accuracy": 0.9551,
+      "rule_brier": 0.0486,
+      "model_brier": 0.0445,
+      "rule_log_loss": 0.2174,
+      "model_log_loss": 0.1957,
       "coin_flip": {
         "n": 89,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 203,
-        "rate": 0.9409,
-        "majority_accuracy": 0.9409
+        "rate": 0.9507,
+        "majority_accuracy": 0.9507
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 75,
-      "rule_correct": 66,
-      "model_correct": 66,
-      "rule_accuracy": 0.88,
-      "model_accuracy": 0.88,
-      "rule_brier": 0.112,
-      "model_brier": 0.1002,
-      "rule_log_loss": 0.3895,
-      "model_log_loss": 0.3544,
+      "shared_days": 76,
+      "rule_correct": 67,
+      "model_correct": 67,
+      "rule_accuracy": 0.8816,
+      "model_accuracy": 0.8816,
+      "rule_brier": 0.1111,
+      "model_brier": 0.099,
+      "rule_log_loss": 0.3873,
+      "model_log_loss": 0.3511,
       "coin_flip": {
-        "n": 75,
+        "n": 76,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 176,
-        "rate": 0.892,
-        "majority_accuracy": 0.892
+        "n": 178,
+        "rate": 0.8933,
+        "majority_accuracy": 0.8933
       }
     }
   },
   "totals": {
-    "graded": 1166,
-    "correct": 888,
-    "accuracy": 0.7616,
-    "brier": 0.1474,
-    "log_loss": 0.4488,
+    "graded": 1168,
+    "correct": 892,
+    "accuracy": 0.7637,
+    "brier": 0.1458,
+    "log_loss": 0.4443,
     "open": 14,
-    "void": 41,
+    "void": 39,
     "days": 115
   },
   "baselines": {
     "coin_flip": {
-      "n": 1166,
+      "n": 1168,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 1166,
-      "rate": 0.7178,
-      "majority_accuracy": 0.7178
+      "n": 1168,
+      "rate": 0.72,
+      "majority_accuracy": 0.72
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 114,
-      "correct": 107,
-      "accuracy": 0.9386,
-      "brier": 0.0611,
-      "log_loss": 0.2502,
-      "base_rate": 0.9386,
-      "majority_accuracy": 0.9386
+      "correct": 108,
+      "accuracy": 0.9474,
+      "brier": 0.0544,
+      "log_loss": 0.2327,
+      "base_rate": 0.9474,
+      "majority_accuracy": 0.9474
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 101,
-      "correct": 91,
-      "accuracy": 0.901,
-      "brier": 0.0994,
-      "log_loss": 0.3604,
-      "base_rate": 0.901,
-      "majority_accuracy": 0.901
+      "graded": 102,
+      "correct": 92,
+      "accuracy": 0.902,
+      "brier": 0.0988,
+      "log_loss": 0.3591,
+      "base_rate": 0.902,
+      "majority_accuracy": 0.902
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 89,
-      "correct": 84,
-      "accuracy": 0.9438,
-      "brier": 0.0542,
-      "log_loss": 0.2251,
-      "base_rate": 0.9438,
-      "majority_accuracy": 0.9438
+      "correct": 85,
+      "accuracy": 0.9551,
+      "brier": 0.0445,
+      "log_loss": 0.1957,
+      "base_rate": 0.9551,
+      "majority_accuracy": 0.9551
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 75,
-      "correct": 66,
-      "accuracy": 0.88,
-      "brier": 0.1002,
-      "log_loss": 0.3544,
-      "base_rate": 0.88,
-      "majority_accuracy": 0.88
+      "graded": 76,
+      "correct": 67,
+      "accuracy": 0.8816,
+      "brier": 0.099,
+      "log_loss": 0.3511,
+      "base_rate": 0.8816,
+      "majority_accuracy": 0.8816
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 272,
-      "claimed": 0.8444,
-      "actual": 0.8787
+      "n": 273,
+      "claimed": 0.8442,
+      "actual": 0.8828
     },
     {
       "label": "90\u2013100%",
-      "n": 350,
-      "claimed": 0.9438,
-      "actual": 0.9629
+      "n": 351,
+      "claimed": 0.9437,
+      "actual": 0.9658
     }
   ],
   "open_bets": [
@@ -410,11 +410,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.532,
+      "call": false,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 64959,
-        "change_24h": 1.21
+        "today_usd": 65140,
+        "change_24h": -0.12
       },
       "made_on": "2026-11-17",
       "resolve_on": "2026-11-18"
@@ -428,7 +428,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.33
+        "today_max_kp": 2.0
       },
       "made_on": "2026-11-17",
       "resolve_on": "2026-11-18"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50522980,
-        "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free"
+        "top_id": 50538240,
+        "top_title": "Java4Shell: RCE in OpenJDK when processing Base64"
       },
       "made_on": "2026-11-17",
       "resolve_on": "2026-11-18"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 25.0,
-        "for_date": "2026-11-18",
+        "forecast_c": 24.3,
+        "for_date": "2026-11-19",
         "city": "New Delhi"
       },
       "made_on": "2026-11-17",
@@ -498,20 +498,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.518,
+      "call": true,
+      "confidence": 0.508,
       "basis": {
-        "today_usd": 64959,
-        "change_24h": 1.21,
+        "today_usd": 65140,
+        "change_24h": -0.12,
         "model": {
-          "p_event": 0.4824,
+          "p_event": 0.5083,
           "n_train": 111,
           "fallback": null,
           "features": [
-            1.21,
-            -0.9650567142334476,
-            -12.104729044043028,
-            1.8551371472895837
+            -0.12,
+            -0.6891084278570547,
+            -11.859820039239565,
+            1.8865071216931644
           ],
           "weights": [
             -0.1674,
@@ -532,17 +532,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.694,
+      "confidence": 0.602,
       "basis": {
-        "today_max_kp": 1.33,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.3057,
+          "p_event": 0.3979,
           "n_train": 114,
           "fallback": null,
           "features": [
-            1.33,
-            1.5533333333333335,
-            1.762857142857143,
+            2.0,
+            1.7766666666666666,
+            1.8585714285714285,
             4.0
           ],
           "weights": [
@@ -572,9 +572,9 @@
           "n_train": 114,
           "fallback": "laplace",
           "features": [
-            6.6,
-            208.0,
-            5.785714285714286,
+            5.2,
+            217.57142857142858,
+            5.585714285714286,
             1.0
           ]
         }
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.938,
       "basis": {
-        "top_id": 50522980,
-        "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+        "top_id": 50538240,
+        "top_title": "Java4Shell: RCE in OpenJDK when processing Base64",
         "model": {
-          "p_event": 0.9966,
+          "p_event": 0.9375,
           "n_train": 114,
           "fallback": null,
           "features": [
-            0.2,
-            1.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.3715,
-            -0.1682,
-            0.3121
+            0.3532,
+            -0.1678,
+            0.1287
           ],
-          "bias": 2.8439
+          "bias": 2.9651
         }
       },
       "made_on": "2026-11-17",
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.829,
+      "confidence": 0.946,
       "basis": {
-        "forecast_c": 25.0,
-        "for_date": "2026-11-18",
+        "forecast_c": 24.3,
+        "for_date": "2026-11-19",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8289,
-          "n_train": 101,
+          "p_event": 0.9456,
+          "n_train": 102,
           "fallback": null,
           "features": [
-            0.3000000000000007,
-            0.9583318840568756,
-            0.3999999999999986,
-            0.3999999999999986
+            0.8999999999999986,
+            1.170683561001862,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.6129,
-            0.3908,
-            -0.4113,
-            0.8906
+            -0.6162,
+            0.3776,
+            -0.4035,
+            0.898
           ],
-          "bias": 2.6017
+          "bias": 2.6143
         }
       },
       "made_on": "2026-11-17",
@@ -15645,6 +15645,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-17",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -15710,6 +15723,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-11-15",
+      "resolve_on": "2026-11-17",
+      "call": true,
+      "confidence": 0.901,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -15771,8 +15797,8 @@
       "resolve_on": "2026-11-17",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -15836,8 +15862,8 @@
       "resolve_on": "2026-11-17",
       "call": true,
       "confidence": 0.932,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }

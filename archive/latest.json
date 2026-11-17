@@ -1,20 +1,20 @@
 {
   "date": "2026-11-17",
-  "fetched_at": "2026-11-17T12:45:35.762725+00:00",
+  "fetched_at": "2026-11-17T23:14:40.120341+00:00",
   "observations": {
     "btc": {
-      "usd": 64959,
-      "usd_24h_change": 1.21
+      "usd": 65140,
+      "usd_24h_change": -0.12
     },
     "kp": {
-      "max_kp": 1.33,
-      "latest_kp": 1.0,
+      "max_kp": 2.0,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.6,
-      "count": 170,
-      "strongest_place": "148 km WSW of Tual, Indonesia"
+      "max_mag": 5.2,
+      "count": 237,
+      "strongest_place": "south of the Kermadec Islands"
     },
     "wiki": {
       "top": "Robert_Pattinson",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-16"
     },
     "hn": {
-      "top_id": 50522980,
-      "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+      "top_id": 50538240,
+      "top_title": "Java4Shell: RCE in OpenJDK when processing Base64",
       "top10": [
-        50522980,
-        50511874,
-        50508845,
-        50530163,
-        50523601,
-        50524767,
-        50512779,
-        50470523,
-        50529612,
-        50526560
+        50538240,
+        50535230,
+        50538994,
+        50537156,
+        50534631,
+        50535885,
+        50536813,
+        50535992,
+        50532849,
+        50537290
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 26.4,
-      "actual_prev_date": "2026-11-16",
-      "today": 25.3,
-      "forecast_next": 25.0,
-      "forecast_next_date": "2026-11-18"
+      "actual_prev": 25.3,
+      "actual_prev_date": "2026-11-17",
+      "today": 25.2,
+      "forecast_next": 24.3,
+      "forecast_next_date": "2026-11-19"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.532,
+      "call": false,
+      "confidence": 0.521,
       "basis": {
-        "today_usd": 64959,
-        "change_24h": 1.21
+        "today_usd": 65140,
+        "change_24h": -0.12
       },
       "made_on": "2026-11-17",
       "resolve_on": "2026-11-18"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 1.33
+        "today_max_kp": 2.0
       },
       "made_on": "2026-11-17",
       "resolve_on": "2026-11-18"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50522980,
-        "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free"
+        "top_id": 50538240,
+        "top_title": "Java4Shell: RCE in OpenJDK when processing Base64"
       },
       "made_on": "2026-11-17",
       "resolve_on": "2026-11-18"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 25.0,
-        "for_date": "2026-11-18",
+        "forecast_c": 24.3,
+        "for_date": "2026-11-19",
         "city": "New Delhi"
       },
       "made_on": "2026-11-17",
@@ -141,20 +141,20 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": false,
-      "confidence": 0.518,
+      "call": true,
+      "confidence": 0.508,
       "basis": {
-        "today_usd": 64959,
-        "change_24h": 1.21,
+        "today_usd": 65140,
+        "change_24h": -0.12,
         "model": {
-          "p_event": 0.4824,
+          "p_event": 0.5083,
           "n_train": 111,
           "fallback": null,
           "features": [
-            1.21,
-            -0.9650567142334476,
-            -12.104729044043028,
-            1.8551371472895837
+            -0.12,
+            -0.6891084278570547,
+            -11.859820039239565,
+            1.8865071216931644
           ],
           "weights": [
             -0.1674,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.694,
+      "confidence": 0.602,
       "basis": {
-        "today_max_kp": 1.33,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.3057,
+          "p_event": 0.3979,
           "n_train": 114,
           "fallback": null,
           "features": [
-            1.33,
-            1.5533333333333335,
-            1.762857142857143,
+            2.0,
+            1.7766666666666666,
+            1.8585714285714285,
             4.0
           ],
           "weights": [
@@ -215,9 +215,9 @@
           "n_train": 114,
           "fallback": "laplace",
           "features": [
-            6.6,
-            208.0,
-            5.785714285714286,
+            5.2,
+            217.57142857142858,
+            5.585714285714286,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.938,
       "basis": {
-        "top_id": 50522980,
-        "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+        "top_id": 50538240,
+        "top_title": "Java4Shell: RCE in OpenJDK when processing Base64",
         "model": {
-          "p_event": 0.9966,
+          "p_event": 0.9375,
           "n_train": 114,
           "fallback": null,
           "features": [
-            0.2,
-            1.0,
+            0.0,
+            11.0,
             1.0
           ],
           "weights": [
-            0.3715,
-            -0.1682,
-            0.3121
+            0.3532,
+            -0.1678,
+            0.1287
           ],
-          "bias": 2.8439
+          "bias": 2.9651
         }
       },
       "made_on": "2026-11-17",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.829,
+      "confidence": 0.946,
       "basis": {
-        "forecast_c": 25.0,
-        "for_date": "2026-11-18",
+        "forecast_c": 24.3,
+        "for_date": "2026-11-19",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8289,
-          "n_train": 101,
+          "p_event": 0.9456,
+          "n_train": 102,
           "fallback": null,
           "features": [
-            0.3000000000000007,
-            0.9583318840568756,
-            0.3999999999999986,
-            0.3999999999999986
+            0.8999999999999986,
+            1.170683561001862,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.6129,
-            0.3908,
-            -0.4113,
-            0.8906
+            -0.6162,
+            0.3776,
+            -0.4035,
+            0.898
           ],
-          "bias": 2.6017
+          "bias": 2.6143
         }
       },
       "made_on": "2026-11-17",
