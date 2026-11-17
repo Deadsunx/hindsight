@@ -1,47 +1,47 @@
 {
-  "date": "2026-11-16",
-  "fetched_at": "2026-11-16T23:54:45.936433+00:00",
+  "date": "2026-11-17",
+  "fetched_at": "2026-11-17T12:45:35.762725+00:00",
   "observations": {
     "btc": {
-      "usd": 64907,
-      "usd_24h_change": -0.4
+      "usd": 64959,
+      "usd_24h_change": 1.21
     },
     "kp": {
       "max_kp": 1.33,
-      "latest_kp": 0.67,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.6,
-      "count": 196,
+      "count": 170,
       "strongest_place": "148 km WSW of Tual, Indonesia"
     },
     "wiki": {
-      "top": "Archive_of_Our_Own",
-      "views": 860729,
-      "for_date": "2026-11-15"
+      "top": "Robert_Pattinson",
+      "views": 1363657,
+      "for_date": "2026-11-16"
     },
     "hn": {
       "top_id": 50522980,
       "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free",
       "top10": [
         50522980,
+        50511874,
+        50508845,
+        50530163,
         50523601,
-        50524736,
-        50524225,
-        50523459,
-        50523300,
-        50520182,
-        50519744,
-        50522563,
-        50521045
+        50524767,
+        50512779,
+        50470523,
+        50529612,
+        50526560
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 26.4,
       "actual_prev_date": "2026-11-16",
-      "today": 25.2,
+      "today": 25.3,
       "forecast_next": 25.0,
       "forecast_next_date": "2026-11-18"
     }
@@ -53,14 +53,14 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.524,
+      "call": true,
+      "confidence": 0.532,
       "basis": {
-        "today_usd": 64907,
-        "change_24h": -0.4
+        "today_usd": 64959,
+        "change_24h": 1.21
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "kp_storm",
@@ -73,8 +73,8 @@
       "basis": {
         "today_max_kp": 1.33
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "wiki_hold",
@@ -99,10 +99,10 @@
       "call": false,
       "confidence": 0.62,
       "basis": {
-        "today_top": "Archive_of_Our_Own"
+        "today_top": "Robert_Pattinson"
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "hn_fade",
@@ -116,8 +116,8 @@
         "top_id": 50522980,
         "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free"
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "forecast_hit",
@@ -132,8 +132,8 @@
         "for_date": "2026-11-18",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-19"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.59,
+      "confidence": 0.518,
       "basis": {
-        "today_usd": 64907,
-        "change_24h": -0.4,
+        "today_usd": 64959,
+        "change_24h": 1.21,
         "model": {
-          "p_event": 0.4097,
-          "n_train": 110,
+          "p_event": 0.4824,
+          "n_train": 111,
           "fallback": null,
           "features": [
-            -0.4,
-            -4.842398475296871,
-            -13.710449348577502,
-            1.8688649158534294
+            1.21,
+            -0.9650567142334476,
+            -12.104729044043028,
+            1.8551371472895837
           ],
           "weights": [
-            -0.1891,
-            0.2362,
-            0.0491,
-            -0.407
+            -0.1674,
+            0.2444,
+            -0.0284,
+            -0.3652
           ],
-          "bias": 0.1113
+          "bias": 0.1287
         }
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.756,
+      "confidence": 0.694,
       "basis": {
         "today_max_kp": 1.33,
         "model": {
-          "p_event": 0.244,
-          "n_train": 113,
+          "p_event": 0.3057,
+          "n_train": 114,
           "fallback": null,
           "features": [
             1.33,
-            1.6666666666666667,
-            2.0014285714285713,
-            2.67
+            1.5533333333333335,
+            1.762857142857143,
+            4.0
           ],
           "weights": [
-            0.9118,
-            -0.2723,
-            -0.1507,
-            0.2372
+            0.9256,
+            -0.272,
+            -0.1353,
+            0.2322
           ],
-          "bias": -0.5388
+          "bias": -0.5553
         }
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9913,
-          "n_train": 113,
+          "p_event": 0.9914,
+          "n_train": 114,
           "fallback": "laplace",
           "features": [
             6.6,
-            214.0,
-            5.642857142857143,
+            208.0,
+            5.785714285714286,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.575,
+      "confidence": 0.532,
       "basis": {
-        "today_top": "Archive_of_Our_Own",
+        "today_top": "Robert_Pattinson",
         "model": {
-          "p_event": 0.5746,
-          "n_train": 103,
+          "p_event": 0.5321,
+          "n_train": 104,
           "fallback": null,
           "features": [
             1.0,
-            13.665536145380429,
-            1.0264146051275902,
+            14.125681352808906,
+            1.5337607027123608,
             1.0
           ],
           "weights": [
-            -0.3441,
-            -0.4294,
-            0.3379,
-            -0.3502
+            -0.3411,
+            -0.4237,
+            0.3401,
+            -0.3786
           ],
-          "bias": 0.4636
+          "bias": 0.4393
         }
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.932,
+      "confidence": 0.95,
       "basis": {
         "top_id": 50522980,
         "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free",
         "model": {
-          "p_event": 0.9317,
-          "n_train": 113,
+          "p_event": 0.9966,
+          "n_train": 114,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            0.0
+            0.2,
+            1.0,
+            1.0
           ],
           "weights": [
-            0.3547,
-            -0.1681,
-            0.142
+            0.3715,
+            -0.1682,
+            0.3121
           ],
-          "bias": 2.958
+          "bias": 2.8439
         }
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-17"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.829,
       "basis": {
         "forecast_c": 25.0,
         "for_date": "2026-11-18",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.953,
+          "p_event": 0.8289,
           "n_train": 101,
           "fallback": null,
           "features": [
-            0.1999999999999993,
-            0.8170679286326203,
-            1.2,
-            2.0
+            0.3000000000000007,
+            0.9583318840568756,
+            0.3999999999999986,
+            0.3999999999999986
           ],
           "weights": [
             -0.6129,
@@ -319,8 +319,8 @@
           "bias": 2.6017
         }
       },
-      "made_on": "2026-11-16",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-19"
     }
   ]
 }

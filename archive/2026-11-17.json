@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-17",
+  "fetched_at": "2026-11-17T12:45:35.762725+00:00",
+  "observations": {
+    "btc": {
+      "usd": 64959,
+      "usd_24h_change": 1.21
+    },
+    "kp": {
+      "max_kp": 1.33,
+      "latest_kp": 1.0,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6.6,
+      "count": 170,
+      "strongest_place": "148 km WSW of Tual, Indonesia"
+    },
+    "wiki": {
+      "top": "Robert_Pattinson",
+      "views": 1363657,
+      "for_date": "2026-11-16"
+    },
+    "hn": {
+      "top_id": 50522980,
+      "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+      "top10": [
+        50522980,
+        50511874,
+        50508845,
+        50530163,
+        50523601,
+        50524767,
+        50512779,
+        50470523,
+        50529612,
+        50526560
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 26.4,
+      "actual_prev_date": "2026-11-16",
+      "today": 25.3,
+      "forecast_next": 25.0,
+      "forecast_next_date": "2026-11-18"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.532,
+      "basis": {
+        "today_usd": 64959,
+        "change_24h": 1.21
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 1.33
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Robert_Pattinson"
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50522980,
+        "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free"
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 25.0,
+        "for_date": "2026-11-18",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-19"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.518,
+      "basis": {
+        "today_usd": 64959,
+        "change_24h": 1.21,
+        "model": {
+          "p_event": 0.4824,
+          "n_train": 111,
+          "fallback": null,
+          "features": [
+            1.21,
+            -0.9650567142334476,
+            -12.104729044043028,
+            1.8551371472895837
+          ],
+          "weights": [
+            -0.1674,
+            0.2444,
+            -0.0284,
+            -0.3652
+          ],
+          "bias": 0.1287
+        }
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.694,
+      "basis": {
+        "today_max_kp": 1.33,
+        "model": {
+          "p_event": 0.3057,
+          "n_train": 114,
+          "fallback": null,
+          "features": [
+            1.33,
+            1.5533333333333335,
+            1.762857142857143,
+            4.0
+          ],
+          "weights": [
+            0.9256,
+            -0.272,
+            -0.1353,
+            0.2322
+          ],
+          "bias": -0.5553
+        }
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9914,
+          "n_train": 114,
+          "fallback": "laplace",
+          "features": [
+            6.6,
+            208.0,
+            5.785714285714286,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.532,
+      "basis": {
+        "today_top": "Robert_Pattinson",
+        "model": {
+          "p_event": 0.5321,
+          "n_train": 104,
+          "fallback": null,
+          "features": [
+            1.0,
+            14.125681352808906,
+            1.5337607027123608,
+            1.0
+          ],
+          "weights": [
+            -0.3411,
+            -0.4237,
+            0.3401,
+            -0.3786
+          ],
+          "bias": 0.4393
+        }
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50522980,
+        "top_title": "Carnegie Mellon is putting computer science courses on YouTube for free",
+        "model": {
+          "p_event": 0.9966,
+          "n_train": 114,
+          "fallback": null,
+          "features": [
+            0.2,
+            1.0,
+            1.0
+          ],
+          "weights": [
+            0.3715,
+            -0.1682,
+            0.3121
+          ],
+          "bias": 2.8439
+        }
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-18"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.829,
+      "basis": {
+        "forecast_c": 25.0,
+        "for_date": "2026-11-18",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.8289,
+          "n_train": 101,
+          "fallback": null,
+          "features": [
+            0.3000000000000007,
+            0.9583318840568756,
+            0.3999999999999986,
+            0.3999999999999986
+          ],
+          "weights": [
+            -0.6129,
+            0.3908,
+            -0.4113,
+            0.8906
+          ],
+          "bias": 2.6017
+        }
+      },
+      "made_on": "2026-11-17",
+      "resolve_on": "2026-11-19"
+    }
+  ]
+}
