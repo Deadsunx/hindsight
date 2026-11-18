@@ -1,20 +1,20 @@
 {
   "date": "2026-11-18",
-  "fetched_at": "2026-11-18T12:38:09.701106+00:00",
+  "fetched_at": "2026-11-18T22:46:38.013439+00:00",
   "observations": {
     "btc": {
-      "usd": 64135,
-      "usd_24h_change": -1.06
+      "usd": 62468,
+      "usd_24h_change": -3.53
     },
     "kp": {
       "max_kp": 3.33,
-      "latest_kp": 2.33,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.9,
-      "count": 195,
-      "strongest_place": "85 km WNW of San Juan, Peru"
+      "max_mag": 6.1,
+      "count": 174,
+      "strongest_place": "Pacific-Antarctic Ridge"
     },
     "wiki": {
       "top": "Robert_Pattinson",
@@ -22,23 +22,28 @@
       "for_date": "2026-11-17"
     },
     "hn": {
-      "top_id": 50543989,
-      "top_title": "Energy-Based Reasoners: 385x more efficient inference",
+      "top_id": 50547374,
+      "top_title": "Unauthenticated remote code execution in Nginx",
       "top10": [
-        50543989,
-        50538240,
-        50540178,
-        50544261,
-        50538994,
-        50540437,
-        50545118,
-        50543343,
-        50534631,
-        50541790
+        50547374,
+        50552424,
+        50548021,
+        50547620,
+        50551046,
+        50547777,
+        50545958,
+        50510385,
+        50549493,
+        50546914
       ]
     },
     "weather": {
-      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+      "city": "New Delhi",
+      "actual_prev": 25.5,
+      "actual_prev_date": "2026-11-18",
+      "today": 24.1,
+      "forecast_next": 24.2,
+      "forecast_next_date": "2026-11-20"
     }
   },
   "predictions": [
@@ -49,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.531,
+      "confidence": 0.555,
       "basis": {
-        "today_usd": 64135,
-        "change_24h": -1.06
+        "today_usd": 62468,
+        "change_24h": -3.53
       },
       "made_on": "2026-11-18",
       "resolve_on": "2026-11-19"
@@ -108,11 +113,27 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50543989,
-        "top_title": "Energy-Based Reasoners: 385x more efficient inference"
+        "top_id": 50547374,
+        "top_title": "Unauthenticated remote code execution in Nginx"
       },
       "made_on": "2026-11-18",
       "resolve_on": "2026-11-19"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 24.2,
+        "for_date": "2026-11-20",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "btc_up_ml",
@@ -121,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.523,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 64135,
-        "change_24h": -1.06,
+        "today_usd": 62468,
+        "change_24h": -3.53,
         "model": {
-          "p_event": 0.4775,
+          "p_event": 0.47,
           "n_train": 112,
           "fallback": null,
           "features": [
-            -1.06,
-            -1.3671875,
-            -13.850307605512723,
-            1.8649792846309157
+            -3.53,
+            -3.930856299212604,
+            -16.089514547457217,
+            2.003482731867363
           ],
           "weights": [
             -0.1697,
@@ -194,9 +215,9 @@
           "n_train": 115,
           "fallback": "laplace",
           "features": [
-            5.9,
-            216.42857142857142,
-            5.7,
+            6.1,
+            213.42857142857142,
+            5.728571428571429,
             1.0
           ]
         }
@@ -243,29 +264,63 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.942,
       "basis": {
-        "top_id": 50543989,
-        "top_title": "Energy-Based Reasoners: 385x more efficient inference",
+        "top_id": 50547374,
+        "top_title": "Unauthenticated remote code execution in Nginx",
         "model": {
-          "p_event": 0.9988,
+          "p_event": 0.9419,
           "n_train": 115,
           "fallback": null,
           "features": [
-            0.3,
-            2.0,
+            0.0,
+            11.0,
             2.0
           ],
           "weights": [
-            0.3721,
-            -0.1711,
-            0.2355
+            0.3517,
+            -0.1673,
+            0.1207
           ],
-          "bias": 2.8341
+          "bias": 2.9728
         }
       },
       "made_on": "2026-11-18",
       "resolve_on": "2026-11-19"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "forecast_c": 24.2,
+        "for_date": "2026-11-20",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.9682,
+          "n_train": 103,
+          "fallback": null,
+          "features": [
+            0.09999999999999787,
+            1.3380956617521782,
+            1.2,
+            2.0
+          ],
+          "weights": [
+            -0.6216,
+            0.3724,
+            -0.4003,
+            0.9015
+          ],
+          "bias": 2.629
+        }
+      },
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-20"
     }
   ]
 }
