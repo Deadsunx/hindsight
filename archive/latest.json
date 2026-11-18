@@ -1,49 +1,44 @@
 {
-  "date": "2026-11-17",
-  "fetched_at": "2026-11-17T23:14:40.120341+00:00",
+  "date": "2026-11-18",
+  "fetched_at": "2026-11-18T12:38:09.701106+00:00",
   "observations": {
     "btc": {
-      "usd": 65140,
-      "usd_24h_change": -0.12
+      "usd": 64135,
+      "usd_24h_change": -1.06
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 2.0,
+      "max_kp": 3.33,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.2,
-      "count": 237,
-      "strongest_place": "south of the Kermadec Islands"
+      "max_mag": 5.9,
+      "count": 195,
+      "strongest_place": "85 km WNW of San Juan, Peru"
     },
     "wiki": {
       "top": "Robert_Pattinson",
-      "views": 1363657,
-      "for_date": "2026-11-16"
+      "views": 840972,
+      "for_date": "2026-11-17"
     },
     "hn": {
-      "top_id": 50538240,
-      "top_title": "Java4Shell: RCE in OpenJDK when processing Base64",
+      "top_id": 50543989,
+      "top_title": "Energy-Based Reasoners: 385x more efficient inference",
       "top10": [
+        50543989,
         50538240,
-        50535230,
+        50540178,
+        50544261,
         50538994,
-        50537156,
+        50540437,
+        50545118,
+        50543343,
         50534631,
-        50535885,
-        50536813,
-        50535992,
-        50532849,
-        50537290
+        50541790
       ]
     },
     "weather": {
-      "city": "New Delhi",
-      "actual_prev": 25.3,
-      "actual_prev_date": "2026-11-17",
-      "today": 25.2,
-      "forecast_next": 24.3,
-      "forecast_next_date": "2026-11-19"
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
     }
   },
   "predictions": [
@@ -54,13 +49,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.521,
+      "confidence": 0.531,
       "basis": {
-        "today_usd": 65140,
-        "change_24h": -0.12
+        "today_usd": 64135,
+        "change_24h": -1.06
       },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-19"
     },
     {
       "id": "kp_storm",
@@ -68,13 +63,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 3.33
       },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-19"
     },
     {
       "id": "quake_m5",
@@ -87,8 +82,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-19"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +91,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Robert_Pattinson"
       },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-19"
     },
     {
       "id": "hn_fade",
@@ -113,26 +108,10 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50538240,
-        "top_title": "Java4Shell: RCE in OpenJDK when processing Base64"
+        "top_id": 50543989,
+        "top_title": "Energy-Based Reasoners: 385x more efficient inference"
       },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
-    },
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 24.3,
-        "for_date": "2026-11-19",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-11-17",
+      "made_on": "2026-11-18",
       "resolve_on": "2026-11-19"
     },
     {
@@ -141,32 +120,32 @@
       "rule": "logistic regression",
       "family": "btc_up",
       "variant": "model",
-      "call": true,
-      "confidence": 0.508,
+      "call": false,
+      "confidence": 0.523,
       "basis": {
-        "today_usd": 65140,
-        "change_24h": -0.12,
+        "today_usd": 64135,
+        "change_24h": -1.06,
         "model": {
-          "p_event": 0.5083,
-          "n_train": 111,
+          "p_event": 0.4775,
+          "n_train": 112,
           "fallback": null,
           "features": [
-            -0.12,
-            -0.6891084278570547,
-            -11.859820039239565,
-            1.8865071216931644
+            -1.06,
+            -1.3671875,
+            -13.850307605512723,
+            1.8649792846309157
           ],
           "weights": [
-            -0.1674,
-            0.2444,
-            -0.0284,
-            -0.3652
+            -0.1697,
+            0.2001,
+            0.0509,
+            -0.3952
           ],
-          "bias": 0.1287
+          "bias": 0.1095
         }
       },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-19"
     },
     {
       "id": "kp_storm_ml",
@@ -174,31 +153,31 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": false,
-      "confidence": 0.602,
+      "call": true,
+      "confidence": 0.678,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 3.33,
         "model": {
-          "p_event": 0.3979,
-          "n_train": 114,
+          "p_event": 0.678,
+          "n_train": 115,
           "fallback": null,
           "features": [
-            2.0,
-            1.7766666666666666,
-            1.8585714285714285,
-            4.0
+            3.33,
+            2.22,
+            1.9528571428571428,
+            4.67
           ],
           "weights": [
-            0.9256,
-            -0.272,
-            -0.1353,
-            0.2322
+            0.9119,
+            -0.2829,
+            -0.1901,
+            0.2685
           ],
-          "bias": -0.5553
+          "bias": -0.5296
         }
       },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-19"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +190,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9914,
-          "n_train": 114,
+          "p_event": 0.9915,
+          "n_train": 115,
           "fallback": "laplace",
           "features": [
-            5.2,
-            217.57142857142858,
-            5.585714285714286,
+            5.9,
+            216.42857142857142,
+            5.7,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-19"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +211,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.532,
+      "confidence": 0.692,
       "basis": {
         "today_top": "Robert_Pattinson",
         "model": {
-          "p_event": 0.5321,
-          "n_train": 104,
+          "p_event": 0.6916,
+          "n_train": 105,
           "fallback": null,
           "features": [
-            1.0,
-            14.125681352808906,
-            1.5337607027123608,
-            1.0
+            2.0,
+            13.642314833802384,
+            0.9458627770440281,
+            0.0
           ],
           "weights": [
-            -0.3411,
-            -0.4237,
-            0.3401,
-            -0.3786
+            -0.338,
+            -0.41,
+            0.3371,
+            -0.3586
           ],
-          "bias": 0.4393
+          "bias": 0.4544
         }
       },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
+      "made_on": "2026-11-18",
+      "resolve_on": "2026-11-19"
     },
     {
       "id": "hn_fade_ml",
@@ -264,62 +243,28 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.938,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50538240,
-        "top_title": "Java4Shell: RCE in OpenJDK when processing Base64",
+        "top_id": 50543989,
+        "top_title": "Energy-Based Reasoners: 385x more efficient inference",
         "model": {
-          "p_event": 0.9375,
-          "n_train": 114,
+          "p_event": 0.9988,
+          "n_train": 115,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            1.0
-          ],
-          "weights": [
-            0.3532,
-            -0.1678,
-            0.1287
-          ],
-          "bias": 2.9651
-        }
-      },
-      "made_on": "2026-11-17",
-      "resolve_on": "2026-11-18"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.946,
-      "basis": {
-        "forecast_c": 24.3,
-        "for_date": "2026-11-19",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.9456,
-          "n_train": 102,
-          "fallback": null,
-          "features": [
-            0.8999999999999986,
-            1.170683561001862,
-            1.2,
+            0.3,
+            2.0,
             2.0
           ],
           "weights": [
-            -0.6162,
-            0.3776,
-            -0.4035,
-            0.898
+            0.3721,
+            -0.1711,
+            0.2355
           ],
-          "bias": 2.6143
+          "bias": 2.8341
         }
       },
-      "made_on": "2026-11-17",
+      "made_on": "2026-11-18",
       "resolve_on": "2026-11-19"
     }
   ]
