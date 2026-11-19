@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-18",
-  "fetched_at": "2026-11-18T22:46:38.013439+00:00",
+  "date": "2026-11-19",
+  "fetched_at": "2026-11-19T12:28:48.401148+00:00",
   "observations": {
     "btc": {
-      "usd": 62468,
-      "usd_24h_change": -3.53
+      "usd": 63559,
+      "usd_24h_change": -1.04
     },
     "kp": {
-      "max_kp": 3.33,
+      "max_kp": 5.0,
       "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.1,
-      "count": 174,
+      "count": 171,
       "strongest_place": "Pacific-Antarctic Ridge"
     },
     "wiki": {
-      "top": "Robert_Pattinson",
-      "views": 840972,
-      "for_date": "2026-11-17"
+      "top": "Wikipedia:Featured_pictures",
+      "views": 534251,
+      "for_date": "2026-11-18"
     },
     "hn": {
-      "top_id": 50547374,
-      "top_title": "Unauthenticated remote code execution in Nginx",
+      "top_id": 50558533,
+      "top_title": "How the European Commission rolled out Matrix to more than 40k staff",
       "top10": [
-        50547374,
+        50558533,
+        50557870,
+        50556287,
+        50557537,
+        50519231,
         50552424,
-        50548021,
-        50547620,
-        50551046,
-        50547777,
-        50545958,
-        50510385,
-        50549493,
-        50546914
+        50557716,
+        50547374,
+        50556533,
+        50554038
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 25.5,
       "actual_prev_date": "2026-11-18",
-      "today": 24.1,
-      "forecast_next": 24.2,
+      "today": 23.5,
+      "forecast_next": 23.6,
       "forecast_next_date": "2026-11-20"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.555,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 62468,
-        "change_24h": -3.53
+        "today_usd": 63559,
+        "change_24h": -1.04
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": true,
       "confidence": 0.7,
       "basis": {
-        "today_max_kp": 3.33
+        "today_max_kp": 5.0
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Robert_Pattinson"
+        "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50547374,
-        "top_title": "Unauthenticated remote code execution in Nginx"
+        "top_id": 50558533,
+        "top_title": "How the European Commission rolled out Matrix to more than 40k staff"
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 24.2,
+        "forecast_c": 23.6,
         "for_date": "2026-11-20",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-20"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-21"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.53,
+      "confidence": 0.554,
       "basis": {
-        "today_usd": 62468,
-        "change_24h": -3.53,
+        "today_usd": 63559,
+        "change_24h": -1.04,
         "model": {
-          "p_event": 0.47,
-          "n_train": 112,
+          "p_event": 0.4465,
+          "n_train": 113,
           "fallback": null,
           "features": [
-            -3.53,
-            -3.930856299212604,
-            -16.089514547457217,
-            2.003482731867363
+            -1.04,
+            -2.0768176005669603,
+            -11.137364557846908,
+            2.330900108898253
           ],
           "weights": [
-            -0.1697,
-            0.2001,
-            0.0509,
-            -0.3952
+            -0.1984,
+            0.2477,
+            -0.0299,
+            -0.3579
           ],
-          "bias": 0.1095
+          "bias": 0.1262
         }
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": true,
-      "confidence": 0.678,
+      "confidence": 0.776,
       "basis": {
-        "today_max_kp": 3.33,
+        "today_max_kp": 5.0,
         "model": {
-          "p_event": 0.678,
-          "n_train": 115,
+          "p_event": 0.7761,
+          "n_train": 116,
           "fallback": null,
           "features": [
-            3.33,
-            2.22,
-            1.9528571428571428,
-            4.67
+            5.0,
+            3.4433333333333334,
+            2.4285714285714284,
+            3.67
           ],
           "weights": [
-            0.9119,
-            -0.2829,
-            -0.1901,
-            0.2685
+            0.9202,
+            -0.2918,
+            -0.2208,
+            0.2914
           ],
-          "bias": -0.5296
+          "bias": -0.507
         }
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "quake_m5_ml",
@@ -212,18 +212,18 @@
         "base_rate": 1.0,
         "model": {
           "p_event": 0.9915,
-          "n_train": 115,
+          "n_train": 116,
           "fallback": "laplace",
           "features": [
             6.1,
-            213.42857142857142,
-            5.728571428571429,
+            200.71428571428572,
+            5.828571428571428,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.692,
+      "confidence": 0.61,
       "basis": {
-        "today_top": "Robert_Pattinson",
+        "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.6916,
-          "n_train": 105,
+          "p_event": 0.6097,
+          "n_train": 106,
           "fallback": null,
           "features": [
-            2.0,
-            13.642314833802384,
-            0.9458627770440281,
-            0.0
+            1.0,
+            13.188622916740133,
+            0.6252417117488546,
+            1.0
           ],
           "weights": [
-            -0.338,
-            -0.41,
-            0.3371,
-            -0.3586
+            -0.2957,
+            -0.3998,
+            0.3286,
+            -0.3092
           ],
-          "bias": 0.4544
+          "bias": 0.4281
         }
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.942,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50547374,
-        "top_title": "Unauthenticated remote code execution in Nginx",
+        "top_id": 50558533,
+        "top_title": "How the European Commission rolled out Matrix to more than 40k staff",
         "model": {
-          "p_event": 0.9419,
-          "n_train": 115,
+          "p_event": 0.9938,
+          "n_train": 116,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            2.0
+            0.2,
+            8.0,
+            3.0
           ],
           "weights": [
-            0.3517,
-            -0.1673,
-            0.1207
+            0.3731,
+            -0.1735,
+            0.1649
           ],
-          "bias": 2.9728
+          "bias": 2.83
         }
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-19"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-20"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.881,
       "basis": {
-        "forecast_c": 24.2,
+        "forecast_c": 23.6,
         "for_date": "2026-11-20",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9682,
+          "p_event": 0.8813,
           "n_train": 103,
           "fallback": null,
           "features": [
-            0.09999999999999787,
-            1.3380956617521782,
-            1.2,
-            2.0
+            0.10000000000000142,
+            1.4476187343358058,
+            0.5,
+            0.5
           ],
           "weights": [
             -0.6216,
@@ -319,8 +319,8 @@
           "bias": 2.629
         }
       },
-      "made_on": "2026-11-18",
-      "resolve_on": "2026-11-20"
+      "made_on": "2026-11-19",
+      "resolve_on": "2026-11-21"
     }
   ]
 }
