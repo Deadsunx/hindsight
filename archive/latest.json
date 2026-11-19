@@ -1,20 +1,20 @@
 {
   "date": "2026-11-19",
-  "fetched_at": "2026-11-19T12:28:48.401148+00:00",
+  "fetched_at": "2026-11-19T22:49:46.459257+00:00",
   "observations": {
     "btc": {
-      "usd": 63559,
-      "usd_24h_change": -1.04
+      "usd": 62202,
+      "usd_24h_change": -0.23
     },
     "kp": {
       "max_kp": 5.0,
-      "latest_kp": 1.33,
+      "latest_kp": 3.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.1,
-      "count": 171,
-      "strongest_place": "Pacific-Antarctic Ridge"
+      "max_mag": 5.3,
+      "count": 219,
+      "strongest_place": "South Georgia Island region"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-18"
     },
     "hn": {
-      "top_id": 50558533,
-      "top_title": "How the European Commission rolled out Matrix to more than 40k staff",
+      "top_id": 50562754,
+      "top_title": "Anthropic hits $2T in Nasdaq debut",
       "top10": [
-        50558533,
-        50557870,
-        50556287,
-        50557537,
+        50562754,
+        50563066,
+        50567209,
+        50563148,
+        50564159,
         50519231,
-        50552424,
-        50557716,
-        50547374,
-        50556533,
-        50554038
+        50564366,
+        50561515,
+        50567374,
+        50558906
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 25.5,
-      "actual_prev_date": "2026-11-18",
-      "today": 23.5,
-      "forecast_next": 23.6,
-      "forecast_next_date": "2026-11-20"
+      "actual_prev": 24.5,
+      "actual_prev_date": "2026-11-19",
+      "today": 24.1,
+      "forecast_next": 24.0,
+      "forecast_next_date": "2026-11-21"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.53,
+      "confidence": 0.522,
       "basis": {
-        "today_usd": 63559,
-        "change_24h": -1.04
+        "today_usd": 62202,
+        "change_24h": -0.23
       },
       "made_on": "2026-11-19",
       "resolve_on": "2026-11-20"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50558533,
-        "top_title": "How the European Commission rolled out Matrix to more than 40k staff"
+        "top_id": 50562754,
+        "top_title": "Anthropic hits $2T in Nasdaq debut"
       },
       "made_on": "2026-11-19",
       "resolve_on": "2026-11-20"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-20",
+        "forecast_c": 24.0,
+        "for_date": "2026-11-21",
         "city": "New Delhi"
       },
       "made_on": "2026-11-19",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.554,
+      "confidence": 0.634,
       "basis": {
-        "today_usd": 63559,
-        "change_24h": -1.04,
+        "today_usd": 62202,
+        "change_24h": -0.23,
         "model": {
-          "p_event": 0.4465,
+          "p_event": 0.3663,
           "n_train": 113,
           "fallback": null,
           "features": [
-            -1.04,
-            -2.0768176005669603,
-            -11.137364557846908,
-            2.330900108898253
+            -0.23,
+            -4.1675011940160545,
+            -13.034603285564483,
+            2.065727495317497
           ],
           "weights": [
-            -0.1984,
-            0.2477,
-            -0.0299,
-            -0.3579
+            -0.1468,
+            0.1583,
+            0.1243,
+            -0.4263
           ],
-          "bias": 0.1262
+          "bias": 0.0907
         }
       },
       "made_on": "2026-11-19",
@@ -215,9 +215,9 @@
           "n_train": 116,
           "fallback": "laplace",
           "features": [
-            6.1,
-            200.71428571428572,
-            5.828571428571428,
+            5.3,
+            207.57142857142858,
+            5.714285714285714,
             1.0
           ]
         }
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.946,
       "basis": {
-        "top_id": 50558533,
-        "top_title": "How the European Commission rolled out Matrix to more than 40k staff",
+        "top_id": 50562754,
+        "top_title": "Anthropic hits $2T in Nasdaq debut",
         "model": {
-          "p_event": 0.9938,
+          "p_event": 0.9456,
           "n_train": 116,
           "fallback": null,
           "features": [
-            0.2,
-            8.0,
+            0.0,
+            11.0,
             3.0
           ],
           "weights": [
-            0.3731,
-            -0.1735,
-            0.1649
+            0.3501,
+            -0.1667,
+            0.1173
           ],
-          "bias": 2.83
+          "bias": 2.981
         }
       },
       "made_on": "2026-11-19",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.881,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-20",
+        "forecast_c": 24.0,
+        "for_date": "2026-11-21",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8813,
-          "n_train": 103,
+          "p_event": 0.9727,
+          "n_train": 104,
           "fallback": null,
           "features": [
             0.10000000000000142,
-            1.4476187343358058,
-            0.5,
-            0.5
+            1.5942396306703706,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.6216,
-            0.3724,
-            -0.4003,
-            0.9015
+            -0.6233,
+            0.3686,
+            -0.3972,
+            0.9056
           ],
-          "bias": 2.629
+          "bias": 2.6432
         }
       },
       "made_on": "2026-11-19",
