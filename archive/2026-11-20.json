@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-20",
+  "fetched_at": "2026-11-20T12:28:51.741002+00:00",
+  "observations": {
+    "btc": {
+      "usd": 61532,
+      "usd_24h_change": -3.24
+    },
+    "kp": {
+      "max_kp": 3.0,
+      "latest_kp": 0.67,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.6,
+      "count": 280,
+      "strongest_place": "southeast of the Loyalty Islands"
+    },
+    "wiki": {
+      "top": "Grand_Theft_Auto_VI",
+      "views": 750227,
+      "for_date": "2026-11-19"
+    },
+    "hn": {
+      "top_id": 50572116,
+      "top_title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)",
+      "top10": [
+        50572116,
+        50572503,
+        50572355,
+        50572822,
+        50569226,
+        50541568,
+        50523241,
+        50569998,
+        50545818,
+        50572448
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 24.5,
+      "actual_prev_date": "2026-11-19",
+      "today": 23.6,
+      "forecast_next": 23.6,
+      "forecast_next_date": "2026-11-21"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.552,
+      "basis": {
+        "today_usd": 61532,
+        "change_24h": -3.24
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 3.0
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Grand_Theft_Auto_VI"
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50572116,
+        "top_title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)"
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 23.6,
+        "for_date": "2026-11-21",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-22"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.567,
+      "basis": {
+        "today_usd": 61532,
+        "change_24h": -3.24,
+        "model": {
+          "p_event": 0.433,
+          "n_train": 114,
+          "fallback": null,
+          "features": [
+            -3.24,
+            -5.538839422781705,
+            -9.790353320627476,
+            1.8820716875897894
+          ],
+          "weights": [
+            -0.1598,
+            0.1562,
+            0.1678,
+            -0.4496
+          ],
+          "bias": 0.0717
+        }
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.585,
+      "basis": {
+        "today_max_kp": 3.0,
+        "model": {
+          "p_event": 0.4149,
+          "n_train": 117,
+          "fallback": null,
+          "features": [
+            3.0,
+            3.776666666666667,
+            2.6185714285714283,
+            4.33
+          ],
+          "weights": [
+            0.8572,
+            -0.3012,
+            -0.1594,
+            0.2911
+          ],
+          "bias": -0.5207
+        }
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9916,
+          "n_train": 117,
+          "fallback": "laplace",
+          "features": [
+            5.6,
+            211.71428571428572,
+            5.685714285714285,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.565,
+      "basis": {
+        "today_top": "Grand_Theft_Auto_VI",
+        "model": {
+          "p_event": 0.5652,
+          "n_train": 107,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.528132439313856,
+            0.9279479983326727,
+            1.0
+          ],
+          "weights": [
+            -0.2831,
+            -0.3589,
+            0.3153,
+            -0.3362
+          ],
+          "bias": 0.4044
+        }
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.949,
+      "basis": {
+        "top_id": 50572116,
+        "top_title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)",
+        "model": {
+          "p_event": 0.949,
+          "n_train": 117,
+          "fallback": null,
+          "features": [
+            0.0,
+            11.0,
+            4.0
+          ],
+          "weights": [
+            0.3484,
+            -0.1659,
+            0.1181
+          ],
+          "bias": 2.9895
+        }
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-21"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.888,
+      "basis": {
+        "forecast_c": 23.6,
+        "for_date": "2026-11-21",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.8882,
+          "n_train": 104,
+          "fallback": null,
+          "features": [
+            0.0,
+            1.729161646579058,
+            0.1999999999999993,
+            0.1999999999999993
+          ],
+          "weights": [
+            -0.6233,
+            0.3686,
+            -0.3972,
+            0.9056
+          ],
+          "bias": 2.6432
+        }
+      },
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-22"
+    }
+  ]
+}
