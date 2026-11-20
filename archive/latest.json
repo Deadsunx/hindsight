@@ -1,19 +1,19 @@
 {
   "date": "2026-11-20",
-  "fetched_at": "2026-11-20T12:28:51.741002+00:00",
+  "fetched_at": "2026-11-20T22:26:27.931367+00:00",
   "observations": {
     "btc": {
-      "usd": 61532,
-      "usd_24h_change": -3.24
+      "usd": 59086,
+      "usd_24h_change": -4.66
     },
     "kp": {
-      "max_kp": 3.0,
-      "latest_kp": 0.67,
+      "max_kp": 2.0,
+      "latest_kp": 1.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.6,
-      "count": 280,
+      "count": 284,
       "strongest_place": "southeast of the Loyalty Islands"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-11-19"
     },
     "hn": {
-      "top_id": 50572116,
-      "top_title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)",
+      "top_id": 50579568,
+      "top_title": "Hurried Announcement: Alessandro Masullo GRH",
       "top10": [
-        50572116,
-        50572503,
-        50572355,
-        50572822,
-        50569226,
-        50541568,
-        50523241,
-        50569998,
-        50545818,
-        50572448
+        50579568,
+        50581260,
+        50574968,
+        50579331,
+        50581084,
+        50578358,
+        50577265,
+        50582629,
+        50579297,
+        50576232
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 24.5,
-      "actual_prev_date": "2026-11-19",
-      "today": 23.6,
-      "forecast_next": 23.6,
-      "forecast_next_date": "2026-11-21"
+      "actual_prev_date": "2026-11-20",
+      "today": 24.3,
+      "forecast_next": 24.0,
+      "forecast_next_date": "2026-11-22"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.552,
+      "confidence": 0.567,
       "basis": {
-        "today_usd": 61532,
-        "change_24h": -3.24
+        "today_usd": 59086,
+        "change_24h": -4.66
       },
       "made_on": "2026-11-20",
       "resolve_on": "2026-11-21"
@@ -71,7 +71,7 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 3.0
+        "today_max_kp": 2.0
       },
       "made_on": "2026-11-20",
       "resolve_on": "2026-11-21"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50572116,
-        "top_title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)"
+        "top_id": 50579568,
+        "top_title": "Hurried Announcement: Alessandro Masullo GRH"
       },
       "made_on": "2026-11-20",
       "resolve_on": "2026-11-21"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-21",
+        "forecast_c": 24.0,
+        "for_date": "2026-11-22",
         "city": "New Delhi"
       },
       "made_on": "2026-11-20",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.567,
+      "confidence": 0.625,
       "basis": {
-        "today_usd": 61532,
-        "change_24h": -3.24,
+        "today_usd": 59086,
+        "change_24h": -4.66,
         "model": {
-          "p_event": 0.433,
+          "p_event": 0.375,
           "n_train": 114,
           "fallback": null,
           "features": [
-            -3.24,
-            -5.538839422781705,
-            -9.790353320627476,
-            1.8820716875897894
+            -4.66,
+            -9.293828676696346,
+            -13.376337780384107,
+            2.0484520146703145
           ],
           "weights": [
             -0.1598,
@@ -175,17 +175,17 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.585,
+      "confidence": 0.706,
       "basis": {
-        "today_max_kp": 3.0,
+        "today_max_kp": 2.0,
         "model": {
-          "p_event": 0.4149,
+          "p_event": 0.2937,
           "n_train": 117,
           "fallback": null,
           "features": [
-            3.0,
-            3.776666666666667,
-            2.6185714285714283,
+            2.0,
+            3.4433333333333334,
+            2.4757142857142855,
             4.33
           ],
           "weights": [
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.6,
-            211.71428571428572,
+            212.28571428571428,
             5.685714285714285,
             1.0
           ]
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.949,
       "basis": {
-        "top_id": 50572116,
-        "top_title": "Carnival Cruises emits ten times more sulphur oxide than all of Europe's cars (2019)",
+        "top_id": 50579568,
+        "top_title": "Hurried Announcement: Alessandro Masullo GRH",
         "model": {
           "p_event": 0.949,
           "n_train": 117,
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.888,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-21",
+        "forecast_c": 24.0,
+        "for_date": "2026-11-22",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8882,
-          "n_train": 104,
+          "p_event": 0.9719,
+          "n_train": 105,
           "fallback": null,
           "features": [
-            0.0,
+            0.3000000000000007,
             1.729161646579058,
-            0.1999999999999993,
-            0.1999999999999993
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.6233,
-            0.3686,
-            -0.3972,
-            0.9056
+            -0.6272,
+            0.3664,
+            -0.3956,
+            0.9079
           ],
-          "bias": 2.6432
+          "bias": 2.6591
         }
       },
       "made_on": "2026-11-20",
