@@ -1,19 +1,19 @@
 {
   "date": "2026-11-21",
-  "fetched_at": "2026-11-21T12:05:37.138098+00:00",
+  "fetched_at": "2026-11-21T21:20:57.949968+00:00",
   "observations": {
     "btc": {
-      "usd": 58092,
-      "usd_24h_change": -5.69
+      "usd": 60349,
+      "usd_24h_change": 3.71
     },
     "kp": {
       "max_kp": 2.67,
-      "latest_kp": 2.0,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.8,
-      "count": 250,
+      "count": 234,
       "strongest_place": "105 km NE of Lospalos, Timor Leste"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-11-20"
     },
     "hn": {
-      "top_id": 50579568,
-      "top_title": "Hurried Announcement: Alessandro Masullo GRH",
+      "top_id": 50591853,
+      "top_title": "Inkling-2-Mini in 5.4 GB Memory",
       "top10": [
-        50579568,
-        50574968,
-        50581260,
-        50587208,
-        50586292,
-        50579331,
-        50578358,
-        50583274,
-        50585376,
-        50586648
+        50591853,
+        50582069,
+        50589618,
+        50588982,
+        50532613,
+        50593679,
+        50591260,
+        50583028,
+        50587875,
+        50579568
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 24.5,
-      "actual_prev_date": "2026-11-20",
-      "today": 24.0,
-      "forecast_next": 23.6,
-      "forecast_next_date": "2026-11-22"
+      "actual_prev": 24.7,
+      "actual_prev_date": "2026-11-21",
+      "today": 24.3,
+      "forecast_next": 24.0,
+      "forecast_next_date": "2026-11-23"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.577,
+      "call": true,
+      "confidence": 0.557,
       "basis": {
-        "today_usd": 58092,
-        "change_24h": -5.69
+        "today_usd": 60349,
+        "change_24h": 3.71
       },
       "made_on": "2026-11-21",
       "resolve_on": "2026-11-22"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50579568,
-        "top_title": "Hurried Announcement: Alessandro Masullo GRH"
+        "top_id": 50591853,
+        "top_title": "Inkling-2-Mini in 5.4 GB Memory"
       },
       "made_on": "2026-11-21",
       "resolve_on": "2026-11-22"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-22",
+        "forecast_c": 24.0,
+        "for_date": "2026-11-23",
         "city": "New Delhi"
       },
       "made_on": "2026-11-21",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.592,
+      "confidence": 0.729,
       "basis": {
-        "today_usd": 58092,
-        "change_24h": -5.69,
+        "today_usd": 60349,
+        "change_24h": 3.71,
         "model": {
-          "p_event": 0.4084,
+          "p_event": 0.2708,
           "n_train": 115,
           "fallback": null,
           "features": [
-            -5.69,
-            -7.005186655567652,
-            -11.434321258690083,
-            1.99747608589446
+            3.71,
+            -3.392136774028298,
+            -7.993352847908286,
+            2.4341583687867527
           ],
           "weights": [
-            -0.1483,
-            0.1722,
-            0.1866,
-            -0.4673
+            -0.1849,
+            0.1365,
+            0.1425,
+            -0.4174
           ],
-          "bias": 0.053
+          "bias": 0.089
         }
       },
       "made_on": "2026-11-21",
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             6.8,
-            221.28571428571428,
+            219.0,
             5.871428571428572,
             1.0
           ]
@@ -266,15 +266,15 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50579568,
-        "top_title": "Hurried Announcement: Alessandro Masullo GRH",
+        "top_id": 50591853,
+        "top_title": "Inkling-2-Mini in 5.4 GB Memory",
         "model": {
-          "p_event": 0.9999,
+          "p_event": 0.9797,
           "n_train": 118,
           "fallback": null,
           "features": [
-            0.5,
-            1.0,
+            0.1,
+            10.0,
             5.0
           ],
           "weights": [
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.874,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-22",
+        "forecast_c": 24.0,
+        "for_date": "2026-11-23",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8737,
-          "n_train": 105,
+          "p_event": 0.9731,
+          "n_train": 106,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            1.811739495622922,
             0.3000000000000007,
-            0.3000000000000007
+            1.790977386791916,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.6272,
-            0.3664,
-            -0.3956,
-            0.9079
+            -0.6304,
+            0.3654,
+            -0.3946,
+            0.9097
           ],
-          "bias": 2.6591
+          "bias": 2.6754
         }
       },
       "made_on": "2026-11-21",
