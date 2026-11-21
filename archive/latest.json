@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-20",
-  "fetched_at": "2026-11-20T22:26:27.931367+00:00",
+  "date": "2026-11-21",
+  "fetched_at": "2026-11-21T12:05:37.138098+00:00",
   "observations": {
     "btc": {
-      "usd": 59086,
-      "usd_24h_change": -4.66
+      "usd": 58092,
+      "usd_24h_change": -5.69
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 1.67,
+      "max_kp": 2.67,
+      "latest_kp": 2.0,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.6,
-      "count": 284,
-      "strongest_place": "southeast of the Loyalty Islands"
+      "max_mag": 6.8,
+      "count": 250,
+      "strongest_place": "105 km NE of Lospalos, Timor Leste"
     },
     "wiki": {
       "top": "Grand_Theft_Auto_VI",
-      "views": 750227,
-      "for_date": "2026-11-19"
+      "views": 540793,
+      "for_date": "2026-11-20"
     },
     "hn": {
       "top_id": 50579568,
       "top_title": "Hurried Announcement: Alessandro Masullo GRH",
       "top10": [
         50579568,
-        50581260,
         50574968,
+        50581260,
+        50587208,
+        50586292,
         50579331,
-        50581084,
         50578358,
-        50577265,
-        50582629,
-        50579297,
-        50576232
+        50583274,
+        50585376,
+        50586648
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 24.5,
       "actual_prev_date": "2026-11-20",
-      "today": 24.3,
-      "forecast_next": 24.0,
+      "today": 24.0,
+      "forecast_next": 23.6,
       "forecast_next_date": "2026-11-22"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.567,
+      "confidence": 0.577,
       "basis": {
-        "today_usd": 59086,
-        "change_24h": -4.66
+        "today_usd": 58092,
+        "change_24h": -5.69
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 2.67
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Grand_Theft_Auto_VI"
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "hn_fade",
@@ -116,8 +116,8 @@
         "top_id": 50579568,
         "top_title": "Hurried Announcement: Alessandro Masullo GRH"
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 24.0,
+        "forecast_c": 23.6,
         "for_date": "2026-11-22",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.625,
+      "confidence": 0.592,
       "basis": {
-        "today_usd": 59086,
-        "change_24h": -4.66,
+        "today_usd": 58092,
+        "change_24h": -5.69,
         "model": {
-          "p_event": 0.375,
-          "n_train": 114,
+          "p_event": 0.4084,
+          "n_train": 115,
           "fallback": null,
           "features": [
-            -4.66,
-            -9.293828676696346,
-            -13.376337780384107,
-            2.0484520146703145
+            -5.69,
+            -7.005186655567652,
+            -11.434321258690083,
+            1.99747608589446
           ],
           "weights": [
-            -0.1598,
-            0.1562,
-            0.1678,
-            -0.4496
+            -0.1483,
+            0.1722,
+            0.1866,
+            -0.4673
           ],
-          "bias": 0.0717
+          "bias": 0.053
         }
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.706,
+      "confidence": 0.75,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 2.67,
         "model": {
-          "p_event": 0.2937,
-          "n_train": 117,
+          "p_event": 0.2503,
+          "n_train": 118,
           "fallback": null,
           "features": [
-            2.0,
-            3.4433333333333334,
-            2.4757142857142855,
-            4.33
+            2.67,
+            3.223333333333333,
+            2.6185714285714283,
+            1.67
           ],
           "weights": [
-            0.8572,
-            -0.3012,
-            -0.1594,
-            0.2911
+            0.8855,
+            -0.3315,
+            -0.1376,
+            0.2758
           ],
-          "bias": -0.5207
+          "bias": -0.5364
         }
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9916,
-          "n_train": 117,
+          "p_event": 0.9917,
+          "n_train": 118,
           "fallback": "laplace",
           "features": [
-            5.6,
-            212.28571428571428,
-            5.685714285714285,
+            6.8,
+            221.28571428571428,
+            5.871428571428572,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.565,
+      "confidence": 0.714,
       "basis": {
         "today_top": "Grand_Theft_Auto_VI",
         "model": {
-          "p_event": 0.5652,
-          "n_train": 107,
+          "p_event": 0.7141,
+          "n_train": 108,
           "fallback": null,
           "features": [
-            1.0,
-            13.528132439313856,
-            0.9279479983326727,
-            1.0
+            2.0,
+            13.200793708974789,
+            0.6917254090864322,
+            0.0
           ],
           "weights": [
-            -0.2831,
-            -0.3589,
-            0.3153,
-            -0.3362
+            -0.2869,
+            -0.3696,
+            0.317,
+            -0.3183
           ],
-          "bias": 0.4044
+          "bias": 0.4197
         }
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.949,
+      "confidence": 0.95,
       "basis": {
         "top_id": 50579568,
         "top_title": "Hurried Announcement: Alessandro Masullo GRH",
         "model": {
-          "p_event": 0.949,
-          "n_train": 117,
+          "p_event": 0.9999,
+          "n_train": 118,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            4.0
+            0.5,
+            1.0,
+            5.0
           ],
           "weights": [
-            0.3484,
-            -0.1659,
-            0.1181
+            0.3756,
+            -0.1771,
+            0.0374
           ],
-          "bias": 2.9895
+          "bias": 2.835
         }
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-21"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-22"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.874,
       "basis": {
-        "forecast_c": 24.0,
+        "forecast_c": 23.6,
         "for_date": "2026-11-22",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9719,
+          "p_event": 0.8737,
           "n_train": 105,
           "fallback": null,
           "features": [
+            0.3999999999999986,
+            1.811739495622922,
             0.3000000000000007,
-            1.729161646579058,
-            1.2,
-            2.0
+            0.3000000000000007
           ],
           "weights": [
             -0.6272,
@@ -319,8 +319,8 @@
           "bias": 2.6591
         }
       },
-      "made_on": "2026-11-20",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-21",
+      "resolve_on": "2026-11-23"
     }
   ]
 }
