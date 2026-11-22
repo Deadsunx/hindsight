@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-21",
-  "fetched_at": "2026-11-21T21:20:57.949968+00:00",
+  "date": "2026-11-22",
+  "fetched_at": "2026-11-22T12:15:44.068375+00:00",
   "observations": {
     "btc": {
-      "usd": 60349,
-      "usd_24h_change": 3.71
+      "usd": 61096,
+      "usd_24h_change": 4.99
     },
     "kp": {
-      "max_kp": 2.67,
-      "latest_kp": 1.33,
+      "max_kp": 2.33,
+      "latest_kp": 0.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.8,
-      "count": 234,
-      "strongest_place": "105 km NE of Lospalos, Timor Leste"
+      "max_mag": 5.4,
+      "count": 216,
+      "strongest_place": "224 km NE of Bitung, Indonesia"
     },
     "wiki": {
-      "top": "Grand_Theft_Auto_VI",
-      "views": 540793,
-      "for_date": "2026-11-20"
+      "top": "Wikipedia:Featured_pictures",
+      "views": 516059,
+      "for_date": "2026-11-21"
     },
     "hn": {
-      "top_id": 50591853,
-      "top_title": "Inkling-2-Mini in 5.4 GB Memory",
+      "top_id": 50596133,
+      "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
       "top10": [
-        50591853,
+        50596133,
         50582069,
+        50533945,
         50589618,
-        50588982,
-        50532613,
-        50593679,
-        50591260,
-        50583028,
-        50587875,
-        50579568
+        50597743,
+        50594911,
+        50566495,
+        50591853,
+        50596664,
+        50588982
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 24.7,
       "actual_prev_date": "2026-11-21",
-      "today": 24.3,
-      "forecast_next": 24.0,
+      "today": 24.0,
+      "forecast_next": 23.8,
       "forecast_next_date": "2026-11-23"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.557,
+      "confidence": 0.57,
       "basis": {
-        "today_usd": 60349,
-        "change_24h": 3.71
+        "today_usd": 61096,
+        "change_24h": 4.99
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.67
+        "today_max_kp": 2.33
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": true,
-      "confidence": 0.7,
+      "call": false,
+      "confidence": 0.62,
       "basis": {
-        "today_top": "Grand_Theft_Auto_VI"
+        "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50591853,
-        "top_title": "Inkling-2-Mini in 5.4 GB Memory"
+        "top_id": 50596133,
+        "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs"
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 24.0,
+        "forecast_c": 23.8,
         "for_date": "2026-11-23",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.729,
+      "confidence": 0.648,
       "basis": {
-        "today_usd": 60349,
-        "change_24h": 3.71,
+        "today_usd": 61096,
+        "change_24h": 4.99,
         "model": {
-          "p_event": 0.2708,
-          "n_train": 115,
+          "p_event": 0.3518,
+          "n_train": 116,
           "fallback": null,
           "features": [
-            3.71,
-            -3.392136774028298,
-            -7.993352847908286,
-            2.4341583687867527
+            4.99,
+            -1.7780778753094806,
+            -6.0408464566929165,
+            2.3841110620941177
           ],
           "weights": [
-            -0.1849,
-            0.1365,
-            0.1425,
-            -0.4174
+            -0.0941,
+            0.0875,
+            0.0887,
+            -0.3635
           ],
-          "bias": 0.089
+          "bias": 0.1059
         }
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.75,
+      "confidence": 0.723,
       "basis": {
-        "today_max_kp": 2.67,
+        "today_max_kp": 2.33,
         "model": {
-          "p_event": 0.2503,
-          "n_train": 118,
+          "p_event": 0.2771,
+          "n_train": 119,
           "fallback": null,
           "features": [
-            2.67,
-            3.223333333333333,
-            2.6185714285714283,
-            1.67
+            2.33,
+            2.3333333333333335,
+            2.665714285714286,
+            2.0
           ],
           "weights": [
-            0.8855,
-            -0.3315,
-            -0.1376,
-            0.2758
+            0.888,
+            -0.3481,
+            -0.1243,
+            0.2901
           ],
-          "bias": -0.5364
+          "bias": -0.5528
         }
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "quake_m5_ml",
@@ -212,18 +212,18 @@
         "base_rate": 1.0,
         "model": {
           "p_event": 0.9917,
-          "n_train": 118,
+          "n_train": 119,
           "fallback": "laplace",
           "features": [
-            6.8,
-            219.0,
-            5.871428571428572,
+            5.4,
+            222.85714285714286,
+            5.857142857142857,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.714,
+      "confidence": 0.599,
       "basis": {
-        "today_top": "Grand_Theft_Auto_VI",
+        "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.7141,
-          "n_train": 108,
+          "p_event": 0.5994,
+          "n_train": 109,
           "fallback": null,
           "features": [
-            2.0,
-            13.200793708974789,
-            0.6917254090864322,
-            0.0
+            1.0,
+            13.15397831677358,
+            0.6681378692463852,
+            1.0
           ],
           "weights": [
-            -0.2869,
-            -0.3696,
-            0.317,
-            -0.3183
+            -0.2329,
+            -0.3083,
+            0.2757,
+            -0.2658
           ],
-          "bias": 0.4197
+          "bias": 0.3946
         }
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.85,
       "basis": {
-        "top_id": 50591853,
-        "top_title": "Inkling-2-Mini in 5.4 GB Memory",
+        "top_id": 50596133,
+        "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
         "model": {
-          "p_event": 0.9797,
-          "n_train": 118,
+          "p_event": 0.8496,
+          "n_train": 119,
           "fallback": null,
           "features": [
-            0.1,
-            10.0,
-            5.0
+            0.4,
+            8.0,
+            6.0
           ],
           "weights": [
-            0.3756,
-            -0.1771,
-            0.0374
+            -0.1258,
+            -0.2013,
+            -0.0537
           ],
-          "bias": 2.835
+          "bias": 2.6399
         }
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-22"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.901,
       "basis": {
-        "forecast_c": 24.0,
+        "forecast_c": 23.8,
         "for_date": "2026-11-23",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9731,
+          "p_event": 0.9006,
           "n_train": 106,
           "fallback": null,
           "features": [
-            0.3000000000000007,
-            1.790977386791916,
-            1.2,
-            2.0
+            0.1999999999999993,
+            1.737498201437918,
+            0.6999999999999993,
+            0.6999999999999993
           ],
           "weights": [
             -0.6304,
@@ -319,8 +319,8 @@
           "bias": 2.6754
         }
       },
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-24"
     }
   ]
 }

@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-22",
+  "fetched_at": "2026-11-22T12:15:44.068375+00:00",
+  "observations": {
+    "btc": {
+      "usd": 61096,
+      "usd_24h_change": 4.99
+    },
+    "kp": {
+      "max_kp": 2.33,
+      "latest_kp": 0.33,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.4,
+      "count": 216,
+      "strongest_place": "224 km NE of Bitung, Indonesia"
+    },
+    "wiki": {
+      "top": "Wikipedia:Featured_pictures",
+      "views": 516059,
+      "for_date": "2026-11-21"
+    },
+    "hn": {
+      "top_id": 50596133,
+      "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+      "top10": [
+        50596133,
+        50582069,
+        50533945,
+        50589618,
+        50597743,
+        50594911,
+        50566495,
+        50591853,
+        50596664,
+        50588982
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 24.7,
+      "actual_prev_date": "2026-11-21",
+      "today": 24.0,
+      "forecast_next": 23.8,
+      "forecast_next_date": "2026-11-23"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.57,
+      "basis": {
+        "today_usd": 61096,
+        "change_24h": 4.99
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 2.33
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.62,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures"
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50596133,
+        "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs"
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 23.8,
+        "for_date": "2026-11-23",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-24"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.648,
+      "basis": {
+        "today_usd": 61096,
+        "change_24h": 4.99,
+        "model": {
+          "p_event": 0.3518,
+          "n_train": 116,
+          "fallback": null,
+          "features": [
+            4.99,
+            -1.7780778753094806,
+            -6.0408464566929165,
+            2.3841110620941177
+          ],
+          "weights": [
+            -0.0941,
+            0.0875,
+            0.0887,
+            -0.3635
+          ],
+          "bias": 0.1059
+        }
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.723,
+      "basis": {
+        "today_max_kp": 2.33,
+        "model": {
+          "p_event": 0.2771,
+          "n_train": 119,
+          "fallback": null,
+          "features": [
+            2.33,
+            2.3333333333333335,
+            2.665714285714286,
+            2.0
+          ],
+          "weights": [
+            0.888,
+            -0.3481,
+            -0.1243,
+            0.2901
+          ],
+          "bias": -0.5528
+        }
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9917,
+          "n_train": 119,
+          "fallback": "laplace",
+          "features": [
+            5.4,
+            222.85714285714286,
+            5.857142857142857,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.599,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures",
+        "model": {
+          "p_event": 0.5994,
+          "n_train": 109,
+          "fallback": null,
+          "features": [
+            1.0,
+            13.15397831677358,
+            0.6681378692463852,
+            1.0
+          ],
+          "weights": [
+            -0.2329,
+            -0.3083,
+            0.2757,
+            -0.2658
+          ],
+          "bias": 0.3946
+        }
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.85,
+      "basis": {
+        "top_id": 50596133,
+        "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+        "model": {
+          "p_event": 0.8496,
+          "n_train": 119,
+          "fallback": null,
+          "features": [
+            0.4,
+            8.0,
+            6.0
+          ],
+          "weights": [
+            -0.1258,
+            -0.2013,
+            -0.0537
+          ],
+          "bias": 2.6399
+        }
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-23"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.901,
+      "basis": {
+        "forecast_c": 23.8,
+        "for_date": "2026-11-23",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.9006,
+          "n_train": 106,
+          "fallback": null,
+          "features": [
+            0.1999999999999993,
+            1.737498201437918,
+            0.6999999999999993,
+            0.6999999999999993
+          ],
+          "weights": [
+            -0.6304,
+            0.3654,
+            -0.3946,
+            0.9097
+          ],
+          "bias": 2.6754
+        }
+      },
+      "made_on": "2026-11-22",
+      "resolve_on": "2026-11-24"
+    }
+  ]
+}
