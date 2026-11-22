@@ -1,19 +1,19 @@
 {
   "date": "2026-11-22",
-  "fetched_at": "2026-11-22T12:15:44.068375+00:00",
+  "fetched_at": "2026-11-22T21:24:40.193781+00:00",
   "observations": {
     "btc": {
-      "usd": 61096,
-      "usd_24h_change": 4.99
+      "usd": 60863,
+      "usd_24h_change": 0.81
     },
     "kp": {
       "max_kp": 2.33,
-      "latest_kp": 0.33,
+      "latest_kp": 0.67,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.4,
-      "count": 216,
+      "count": 204,
       "strongest_place": "224 km NE of Bitung, Indonesia"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-11-21"
     },
     "hn": {
-      "top_id": 50596133,
-      "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+      "top_id": 50602843,
+      "top_title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
       "top10": [
+        50602843,
+        50601525,
+        50603465,
         50596133,
-        50582069,
-        50533945,
-        50589618,
-        50597743,
-        50594911,
-        50566495,
-        50591853,
-        50596664,
-        50588982
+        50602947,
+        50599762,
+        50603589,
+        50600622,
+        50600511,
+        50603232
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 24.7,
-      "actual_prev_date": "2026-11-21",
-      "today": 24.0,
-      "forecast_next": 23.8,
-      "forecast_next_date": "2026-11-23"
+      "actual_prev": 24.4,
+      "actual_prev_date": "2026-11-22",
+      "today": 23.8,
+      "forecast_next": 24.3,
+      "forecast_next_date": "2026-11-24"
     }
   },
   "predictions": [
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.57,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 61096,
-        "change_24h": 4.99
+        "today_usd": 60863,
+        "change_24h": 0.81
       },
       "made_on": "2026-11-22",
       "resolve_on": "2026-11-23"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50596133,
-        "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs"
+        "top_id": 50602843,
+        "top_title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife"
       },
       "made_on": "2026-11-22",
       "resolve_on": "2026-11-23"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 23.8,
-        "for_date": "2026-11-23",
+        "forecast_c": 24.3,
+        "for_date": "2026-11-24",
         "city": "New Delhi"
       },
       "made_on": "2026-11-22",
@@ -142,19 +142,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.648,
+      "confidence": 0.603,
       "basis": {
-        "today_usd": 61096,
-        "change_24h": 4.99,
+        "today_usd": 60863,
+        "change_24h": 0.81,
         "model": {
-          "p_event": 0.3518,
+          "p_event": 0.397,
           "n_train": 116,
           "fallback": null,
           "features": [
-            4.99,
-            -1.7780778753094806,
-            -6.0408464566929165,
-            2.3841110620941177
+            0.81,
+            -2.1526639014822657,
+            -6.399175688976378,
+            2.343209160010595
           ],
           "weights": [
             -0.0941,
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.4,
-            222.85714285714286,
+            221.14285714285714,
             5.857142857142857,
             1.0
           ]
@@ -264,25 +264,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.85,
+      "confidence": 0.941,
       "basis": {
-        "top_id": 50596133,
-        "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+        "top_id": 50602843,
+        "top_title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
         "model": {
-          "p_event": 0.8496,
+          "p_event": 0.9406,
           "n_train": 119,
           "fallback": null,
           "features": [
-            0.4,
-            8.0,
+            0.0,
+            11.0,
             6.0
           ],
           "weights": [
-            -0.1258,
-            -0.2013,
-            -0.0537
+            0.398,
+            -0.1815,
+            0.0398
           ],
-          "bias": 2.6399
+          "bias": 2.8511
         }
       },
       "made_on": "2026-11-22",
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.901,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 23.8,
-        "for_date": "2026-11-23",
+        "forecast_c": 24.3,
+        "for_date": "2026-11-24",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9006,
-          "n_train": 106,
+          "p_event": 0.9699,
+          "n_train": 107,
           "fallback": null,
           "features": [
-            0.1999999999999993,
-            1.737498201437918,
-            0.6999999999999993,
-            0.6999999999999993
+            0.5,
+            1.7639727889057701,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.6304,
-            0.3654,
-            -0.3946,
-            0.9097
+            -0.6323,
+            0.3651,
+            -0.3936,
+            0.9116
           ],
-          "bias": 2.6754
+          "bias": 2.6914
         }
       },
       "made_on": "2026-11-22",

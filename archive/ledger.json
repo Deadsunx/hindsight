@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T12:15:44.996494+00:00",
+  "updated": "2026-11-22T21:24:41.772370+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -96,14 +96,14 @@
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "shared_days": 94,
-      "rule_correct": 88,
-      "model_correct": 88,
-      "rule_accuracy": 0.9362,
-      "model_accuracy": 0.9362,
-      "rule_brier": 0.0629,
-      "model_brier": 0.0614,
-      "rule_log_loss": 0.255,
-      "model_log_loss": 0.2508,
+      "rule_correct": 89,
+      "model_correct": 89,
+      "rule_accuracy": 0.9468,
+      "model_accuracy": 0.9468,
+      "rule_brier": 0.0548,
+      "model_brier": 0.0519,
+      "rule_log_loss": 0.2338,
+      "model_log_loss": 0.2194,
       "coin_flip": {
         "n": 94,
         "accuracy": 0.5,
@@ -112,55 +112,55 @@
       },
       "base_rate": {
         "n": 213,
-        "rate": 0.9343,
-        "majority_accuracy": 0.9343
+        "rate": 0.9437,
+        "majority_accuracy": 0.9437
       }
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 80,
-      "rule_correct": 71,
-      "model_correct": 71,
-      "rule_accuracy": 0.8875,
-      "model_accuracy": 0.8875,
-      "rule_brier": 0.1075,
-      "model_brier": 0.0942,
-      "rule_log_loss": 0.3791,
-      "model_log_loss": 0.3362,
+      "shared_days": 81,
+      "rule_correct": 72,
+      "model_correct": 72,
+      "rule_accuracy": 0.8889,
+      "model_accuracy": 0.8889,
+      "rule_brier": 0.1067,
+      "model_brier": 0.093,
+      "rule_log_loss": 0.3772,
+      "model_log_loss": 0.3326,
       "coin_flip": {
-        "n": 80,
+        "n": 81,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 186,
-        "rate": 0.8978,
-        "majority_accuracy": 0.8978
+        "n": 188,
+        "rate": 0.8989,
+        "majority_accuracy": 0.8989
       }
     }
   },
   "totals": {
-    "graded": 1226,
-    "correct": 931,
-    "accuracy": 0.7594,
-    "brier": 0.1491,
-    "log_loss": 0.4529,
+    "graded": 1228,
+    "correct": 935,
+    "accuracy": 0.7614,
+    "brier": 0.1475,
+    "log_loss": 0.4483,
     "open": 14,
-    "void": 41,
+    "void": 39,
     "days": 120
   },
   "baselines": {
     "coin_flip": {
-      "n": 1226,
+      "n": 1228,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 1226,
-      "rate": 0.7153,
-      "majority_accuracy": 0.7153
+      "n": 1228,
+      "rate": 0.7174,
+      "majority_accuracy": 0.7174
     }
   },
   "by_predictor": {
@@ -222,25 +222,25 @@
       "family": "hn_fade",
       "variant": "rule",
       "graded": 119,
-      "correct": 111,
-      "accuracy": 0.9328,
-      "brier": 0.0655,
-      "log_loss": 0.2618,
-      "base_rate": 0.9328,
-      "majority_accuracy": 0.9328
+      "correct": 112,
+      "accuracy": 0.9412,
+      "brier": 0.0591,
+      "log_loss": 0.245,
+      "base_rate": 0.9412,
+      "majority_accuracy": 0.9412
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 106,
-      "correct": 96,
-      "accuracy": 0.9057,
-      "brier": 0.0966,
-      "log_loss": 0.3539,
-      "base_rate": 0.9057,
-      "majority_accuracy": 0.9057
+      "graded": 107,
+      "correct": 97,
+      "accuracy": 0.9065,
+      "brier": 0.0961,
+      "log_loss": 0.3527,
+      "base_rate": 0.9065,
+      "majority_accuracy": 0.9065
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -300,25 +300,25 @@
       "family": "hn_fade",
       "variant": "model",
       "graded": 94,
-      "correct": 88,
-      "accuracy": 0.9362,
-      "brier": 0.0614,
-      "log_loss": 0.2508,
-      "base_rate": 0.9362,
-      "majority_accuracy": 0.9362
+      "correct": 89,
+      "accuracy": 0.9468,
+      "brier": 0.0519,
+      "log_loss": 0.2194,
+      "base_rate": 0.9468,
+      "majority_accuracy": 0.9468
     },
     "forecast_hit_ml": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 80,
-      "correct": 71,
-      "accuracy": 0.8875,
-      "brier": 0.0942,
-      "log_loss": 0.3362,
-      "base_rate": 0.8875,
-      "majority_accuracy": 0.8875
+      "graded": 81,
+      "correct": 72,
+      "accuracy": 0.8889,
+      "brier": 0.093,
+      "log_loss": 0.3326,
+      "base_rate": 0.8889,
+      "majority_accuracy": 0.8889
     }
   },
   "calibration": [
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 282,
-      "claimed": 0.8442,
-      "actual": 0.8794
+      "n": 283,
+      "claimed": 0.8441,
+      "actual": 0.8834
     },
     {
       "label": "90\u2013100%",
-      "n": 370,
+      "n": 371,
       "claimed": 0.944,
-      "actual": 0.9622
+      "actual": 0.965
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.57,
+      "confidence": 0.528,
       "basis": {
-        "today_usd": 61096,
-        "change_24h": 4.99
+        "today_usd": 60863,
+        "change_24h": 0.81
       },
       "made_on": "2026-11-22",
       "resolve_on": "2026-11-23"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50596133,
-        "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs"
+        "top_id": 50602843,
+        "top_title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife"
       },
       "made_on": "2026-11-22",
       "resolve_on": "2026-11-23"
@@ -485,8 +485,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 23.8,
-        "for_date": "2026-11-23",
+        "forecast_c": 24.3,
+        "for_date": "2026-11-24",
         "city": "New Delhi"
       },
       "made_on": "2026-11-22",
@@ -499,19 +499,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.648,
+      "confidence": 0.603,
       "basis": {
-        "today_usd": 61096,
-        "change_24h": 4.99,
+        "today_usd": 60863,
+        "change_24h": 0.81,
         "model": {
-          "p_event": 0.3518,
+          "p_event": 0.397,
           "n_train": 116,
           "fallback": null,
           "features": [
-            4.99,
-            -1.7780778753094806,
-            -6.0408464566929165,
-            2.3841110620941177
+            0.81,
+            -2.1526639014822657,
+            -6.399175688976378,
+            2.343209160010595
           ],
           "weights": [
             -0.0941,
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.4,
-            222.85714285714286,
+            221.14285714285714,
             5.857142857142857,
             1.0
           ]
@@ -621,25 +621,25 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.85,
+      "confidence": 0.941,
       "basis": {
-        "top_id": 50596133,
-        "top_title": "Toyota, Nissan, and Honda to standardize parts to lower costs",
+        "top_id": 50602843,
+        "top_title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
         "model": {
-          "p_event": 0.8496,
+          "p_event": 0.9406,
           "n_train": 119,
           "fallback": null,
           "features": [
-            0.4,
-            8.0,
+            0.0,
+            11.0,
             6.0
           ],
           "weights": [
-            -0.1258,
-            -0.2013,
-            -0.0537
+            0.398,
+            -0.1815,
+            0.0398
           ],
-          "bias": 2.6399
+          "bias": 2.8511
         }
       },
       "made_on": "2026-11-22",
@@ -652,28 +652,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.901,
+      "confidence": 0.95,
       "basis": {
-        "forecast_c": 23.8,
-        "for_date": "2026-11-23",
+        "forecast_c": 24.3,
+        "for_date": "2026-11-24",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9006,
-          "n_train": 106,
+          "p_event": 0.9699,
+          "n_train": 107,
           "fallback": null,
           "features": [
-            0.1999999999999993,
-            1.737498201437918,
-            0.6999999999999993,
-            0.6999999999999993
+            0.5,
+            1.7639727889057701,
+            1.2,
+            2.0
           ],
           "weights": [
-            -0.6304,
-            0.3654,
-            -0.3946,
-            0.9097
+            -0.6323,
+            0.3651,
+            -0.3936,
+            0.9116
           ],
-          "bias": 2.6754
+          "bias": 2.6914
         }
       },
       "made_on": "2026-11-22",
@@ -16425,6 +16425,19 @@
       "correct": false
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-22",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -16490,6 +16503,19 @@
       "correct": false
     },
     {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-11-20",
+      "resolve_on": "2026-11-22",
+      "call": true,
+      "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -16551,8 +16577,8 @@
       "resolve_on": "2026-11-22",
       "call": true,
       "confidence": 0.88,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "btc_up_ml",
@@ -16616,8 +16642,8 @@
       "resolve_on": "2026-11-22",
       "call": true,
       "confidence": 0.95,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     }
   ]
 }
