@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-22",
-  "fetched_at": "2026-11-22T21:24:40.193781+00:00",
+  "date": "2026-11-23",
+  "fetched_at": "2026-11-23T13:59:52.226827+00:00",
   "observations": {
     "btc": {
-      "usd": 60863,
-      "usd_24h_change": 0.81
+      "usd": 62993,
+      "usd_24h_change": 3.86
     },
     "kp": {
-      "max_kp": 2.33,
-      "latest_kp": 0.67,
+      "max_kp": 1.67,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.4,
-      "count": 204,
-      "strongest_place": "224 km NE of Bitung, Indonesia"
+      "max_mag": 6.5,
+      "count": 217,
+      "strongest_place": "Vanuatu region"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 516059,
-      "for_date": "2026-11-21"
+      "views": 530567,
+      "for_date": "2026-11-22"
     },
     "hn": {
-      "top_id": 50602843,
-      "top_title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+      "top_id": 50609685,
+      "top_title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
       "top10": [
-        50602843,
-        50601525,
-        50603465,
-        50596133,
-        50602947,
-        50599762,
-        50603589,
-        50600622,
-        50600511,
-        50603232
+        50609685,
+        50610334,
+        50610743,
+        50607261,
+        50606192,
+        50587750,
+        50610318,
+        50584526,
+        50607668,
+        50603845
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 24.4,
       "actual_prev_date": "2026-11-22",
-      "today": 23.8,
-      "forecast_next": 24.3,
+      "today": 24.1,
+      "forecast_next": 24.1,
       "forecast_next_date": "2026-11-24"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.528,
+      "confidence": 0.559,
       "basis": {
-        "today_usd": 60863,
-        "change_24h": 0.81
+        "today_usd": 62993,
+        "change_24h": 3.86
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.33
+        "today_max_kp": 1.67
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "wiki_hold",
@@ -96,13 +96,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.62,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50602843,
-        "top_title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife"
+        "top_id": 50609685,
+        "top_title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer"
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 24.3,
+        "forecast_c": 24.1,
         "for_date": "2026-11-24",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-24"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-25"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.603,
+      "confidence": 0.58,
       "basis": {
-        "today_usd": 60863,
-        "change_24h": 0.81,
+        "today_usd": 62993,
+        "change_24h": 3.86,
         "model": {
-          "p_event": 0.397,
-          "n_train": 116,
+          "p_event": 0.4197,
+          "n_train": 117,
           "fallback": null,
           "features": [
-            0.81,
-            -2.1526639014822657,
-            -6.399175688976378,
-            2.343209160010595
+            3.86,
+            6.612395491317735,
+            -2.948834486264962,
+            2.560496398344652
           ],
           "weights": [
-            -0.0941,
-            0.0875,
-            0.0887,
-            -0.3635
+            -0.0706,
+            0.084,
+            0.0497,
+            -0.3291
           ],
-          "bias": 0.1059
+          "bias": 0.1222
         }
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.723,
+      "confidence": 0.777,
       "basis": {
-        "today_max_kp": 2.33,
+        "today_max_kp": 1.67,
         "model": {
-          "p_event": 0.2771,
-          "n_train": 119,
+          "p_event": 0.2228,
+          "n_train": 120,
           "fallback": null,
           "features": [
-            2.33,
-            2.3333333333333335,
-            2.665714285714286,
-            2.0
+            1.67,
+            2.223333333333333,
+            2.7142857142857144,
+            2.67
           ],
           "weights": [
-            0.888,
-            -0.3481,
-            -0.1243,
-            0.2901
+            0.8867,
+            -0.3441,
+            -0.1209,
+            0.2984
           ],
-          "bias": -0.5528
+          "bias": -0.5685
         }
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.9917,
-          "n_train": 119,
+          "p_event": 0.9918,
+          "n_train": 120,
           "fallback": "laplace",
           "features": [
-            5.4,
-            221.14285714285714,
-            5.857142857142857,
+            6.5,
+            224.14285714285714,
+            5.8428571428571425,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.599,
+      "confidence": 0.701,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.5994,
-          "n_train": 109,
+          "p_event": 0.7009,
+          "n_train": 110,
           "fallback": null,
           "features": [
-            1.0,
-            13.15397831677358,
-            0.6681378692463852,
-            1.0
+            2.0,
+            13.181703409783054,
+            0.7315965682043193,
+            0.0
           ],
           "weights": [
-            -0.2329,
-            -0.3083,
-            0.2757,
-            -0.2658
+            -0.2413,
+            -0.34,
+            0.2892,
+            -0.2507
           ],
-          "bias": 0.3946
+          "bias": 0.4099
         }
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.941,
+      "confidence": 0.933,
       "basis": {
-        "top_id": 50602843,
-        "top_title": "The Birds of GTA 6: A Field Guide to Vice City and Leonida's Wildlife",
+        "top_id": 50609685,
+        "top_title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
         "model": {
-          "p_event": 0.9406,
-          "n_train": 119,
+          "p_event": 0.933,
+          "n_train": 120,
           "fallback": null,
           "features": [
             0.0,
             11.0,
-            6.0
+            0.0
           ],
           "weights": [
-            0.398,
-            -0.1815,
-            0.0398
+            0.3955,
+            -0.1803,
+            0.0521
           ],
-          "bias": 2.8511
+          "bias": 2.8599
         }
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-23"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.881,
       "basis": {
-        "forecast_c": 24.3,
+        "forecast_c": 24.1,
         "for_date": "2026-11-24",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.9699,
+          "p_event": 0.8813,
           "n_train": 107,
           "fallback": null,
           "features": [
-            0.5,
-            1.7639727889057701,
-            1.2,
-            2.0
+            0.0,
+            1.4014635207525028,
+            0.3999999999999986,
+            0.3999999999999986
           ],
           "weights": [
             -0.6323,
@@ -319,8 +319,8 @@
           "bias": 2.6914
         }
       },
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-24"
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-25"
     }
   ]
 }
