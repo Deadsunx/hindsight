@@ -1,10 +1,10 @@
 {
   "date": "2026-11-24",
-  "fetched_at": "2026-11-24T02:40:52.105291+00:00",
+  "fetched_at": "2026-11-24T14:32:01.404059+00:00",
   "observations": {
     "btc": {
-      "usd": 60472,
-      "usd_24h_change": -0.22
+      "usd": 60362,
+      "usd_24h_change": -5.71
     },
     "kp": {
       "max_kp": 1.67,
@@ -12,38 +12,33 @@
       "samples": 8
     },
     "quakes": {
-      "max_mag": 6.5,
-      "count": 231,
-      "strongest_place": "Vanuatu region"
+      "max_mag": 6.4,
+      "count": 233,
+      "strongest_place": "Mauritius - Reunion region"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 530567,
-      "for_date": "2026-11-22"
+      "views": 525995,
+      "for_date": "2026-11-23"
     },
     "hn": {
-      "top_id": 50611576,
-      "top_title": "Nvidia Reinstates Jensen Huang as CEO",
+      "top_id": 50627340,
+      "top_title": "LLM agents work for their parent companies, not for you",
       "top10": [
-        50611576,
-        50620349,
+        50627340,
+        50626578,
+        50626861,
+        50624497,
+        50626413,
+        50605361,
         50614249,
-        50619103,
-        50619207,
-        50620831,
-        50617499,
-        50620721,
-        50615308,
-        50620328
+        50598094,
+        50620349,
+        50625384
       ]
     },
     "weather": {
-      "city": "New Delhi",
-      "actual_prev": 24.1,
-      "actual_prev_date": "2026-11-23",
-      "today": 24.0,
-      "forecast_next": 23.6,
-      "forecast_next_date": "2026-11-25"
+      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
     }
   },
   "predictions": [
@@ -54,10 +49,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.522,
+      "confidence": 0.577,
       "basis": {
-        "today_usd": 60472,
-        "change_24h": -0.22
+        "today_usd": 60362,
+        "change_24h": -5.71
       },
       "made_on": "2026-11-24",
       "resolve_on": "2026-11-25"
@@ -113,27 +108,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50611576,
-        "top_title": "Nvidia Reinstates Jensen Huang as CEO"
+        "top_id": 50627340,
+        "top_title": "LLM agents work for their parent companies, not for you"
       },
       "made_on": "2026-11-24",
       "resolve_on": "2026-11-25"
-    },
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-25",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-26"
     },
     {
       "id": "btc_up_ml",
@@ -142,19 +121,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.644,
+      "confidence": 0.596,
       "basis": {
-        "today_usd": 60472,
-        "change_24h": -0.22,
+        "today_usd": 60362,
+        "change_24h": -5.71,
         "model": {
-          "p_event": 0.3555,
+          "p_event": 0.4038,
           "n_train": 118,
           "fallback": null,
           "features": [
-            -0.22,
-            0.20381447911315131,
-            -7.166103776481425,
-            2.8003132062020026
+            -5.71,
+            0.021541367711153114,
+            -7.334970832054033,
+            2.823196398694577
           ],
           "weights": [
             -0.0879,
@@ -215,9 +194,9 @@
           "n_train": 121,
           "fallback": "laplace",
           "features": [
-            6.5,
-            223.28571428571428,
-            6.028571428571429,
+            6.4,
+            223.57142857142858,
+            6.014285714285714,
             1.0
           ]
         }
@@ -232,26 +211,26 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.714,
+      "confidence": 0.695,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.7139,
-          "n_train": 110,
+          "p_event": 0.6952,
+          "n_train": 111,
           "fallback": null,
           "features": [
-            2.0,
-            13.181703409783054,
-            0.8752268209064541,
+            3.0,
+            13.173048887128195,
+            0.8686206964884932,
             0.0
           ],
           "weights": [
-            -0.2413,
-            -0.34,
-            0.2892,
-            -0.2507
+            -0.2625,
+            -0.3679,
+            0.3083,
+            -0.2722
           ],
-          "bias": 0.4099
+          "bias": 0.4261
         }
       },
       "made_on": "2026-11-24",
@@ -266,8 +245,8 @@
       "call": true,
       "confidence": 0.936,
       "basis": {
-        "top_id": 50611576,
-        "top_title": "Nvidia Reinstates Jensen Huang as CEO",
+        "top_id": 50627340,
+        "top_title": "LLM agents work for their parent companies, not for you",
         "model": {
           "p_event": 0.936,
           "n_train": 121,
@@ -287,40 +266,6 @@
       },
       "made_on": "2026-11-24",
       "resolve_on": "2026-11-25"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.844,
-      "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-25",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.8443,
-          "n_train": 108,
-          "fallback": null,
-          "features": [
-            0.3999999999999986,
-            0.9570788891204316,
-            0.25,
-            0.3999999999999986
-          ],
-          "weights": [
-            -0.6341,
-            0.3652,
-            -0.3927,
-            0.9134
-          ],
-          "bias": 2.7074
-        }
-      },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-26"
     }
   ]
 }

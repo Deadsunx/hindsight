@@ -1659,8 +1659,8 @@
       "weather"
     ],
     "made": 12,
-    "graded": 12,
-    "correct": 9
+    "graded": 10,
+    "correct": 7
   },
   {
     "date": "2026-11-22",
@@ -1687,8 +1687,8 @@
       "weather"
     ],
     "made": 12,
-    "graded": 8,
-    "correct": 7
+    "graded": 10,
+    "correct": 9
   },
   {
     "date": "2026-11-24",
@@ -1697,10 +1697,9 @@
       "kp",
       "quakes",
       "wiki",
-      "hn",
-      "weather"
+      "hn"
     ],
-    "made": 12,
+    "made": 10,
     "graded": 0,
     "correct": 0
   }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T02:40:56.586649+00:00",
+  "updated": "2026-11-24T14:33:05.571192+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -72,25 +72,25 @@
     },
     "wiki_hold": {
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "shared_days": 85,
-      "rule_correct": 45,
-      "model_correct": 47,
-      "rule_accuracy": 0.5294,
-      "model_accuracy": 0.5529,
-      "rule_brier": 0.2649,
-      "model_brier": 0.271,
-      "rule_log_loss": 0.7254,
-      "model_log_loss": 0.7486,
+      "shared_days": 86,
+      "rule_correct": 46,
+      "model_correct": 48,
+      "rule_accuracy": 0.5349,
+      "model_accuracy": 0.5581,
+      "rule_brier": 0.2628,
+      "model_brier": 0.2688,
+      "rule_log_loss": 0.7211,
+      "model_log_loss": 0.744,
       "coin_flip": {
-        "n": 85,
+        "n": 86,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 195,
-        "rate": 0.5846,
-        "majority_accuracy": 0.5846
+        "n": 197,
+        "rate": 0.5888,
+        "majority_accuracy": 0.5888
       }
     },
     "hn_fade": {
@@ -118,25 +118,25 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 82,
-      "rule_correct": 73,
-      "model_correct": 73,
-      "rule_accuracy": 0.8902,
-      "model_accuracy": 0.8902,
-      "rule_brier": 0.1059,
-      "model_brier": 0.0919,
-      "rule_log_loss": 0.3753,
-      "model_log_loss": 0.3292,
+      "shared_days": 81,
+      "rule_correct": 72,
+      "model_correct": 72,
+      "rule_accuracy": 0.8889,
+      "model_accuracy": 0.8889,
+      "rule_brier": 0.1067,
+      "model_brier": 0.093,
+      "rule_log_loss": 0.3772,
+      "model_log_loss": 0.3326,
       "coin_flip": {
-        "n": 82,
+        "n": 81,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 190,
-        "rate": 0.9,
-        "majority_accuracy": 0.9
+        "n": 188,
+        "rate": 0.8989,
+        "majority_accuracy": 0.8989
       }
     }
   },
@@ -144,9 +144,9 @@
     "graded": 1248,
     "correct": 952,
     "accuracy": 0.7628,
-    "brier": 0.1467,
-    "log_loss": 0.4462,
-    "open": 14,
+    "brier": 0.1468,
+    "log_loss": 0.4466,
+    "open": 12,
     "void": 43,
     "days": 122
   },
@@ -208,13 +208,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "graded": 110,
-      "correct": 60,
-      "accuracy": 0.5455,
-      "brier": 0.2572,
-      "log_loss": 0.709,
-      "base_rate": 0.6,
-      "majority_accuracy": 0.6
+      "graded": 111,
+      "correct": 61,
+      "accuracy": 0.5495,
+      "brier": 0.2557,
+      "log_loss": 0.7059,
+      "base_rate": 0.6036,
+      "majority_accuracy": 0.6036
     },
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 108,
-      "correct": 98,
-      "accuracy": 0.9074,
-      "brier": 0.0956,
-      "log_loss": 0.3515,
-      "base_rate": 0.9074,
-      "majority_accuracy": 0.9074
+      "graded": 107,
+      "correct": 97,
+      "accuracy": 0.9065,
+      "brier": 0.0961,
+      "log_loss": 0.3527,
+      "base_rate": 0.9065,
+      "majority_accuracy": 0.9065
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -286,13 +286,13 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "graded": 85,
-      "correct": 47,
-      "accuracy": 0.5529,
-      "brier": 0.271,
-      "log_loss": 0.7486,
-      "base_rate": 0.5647,
-      "majority_accuracy": 0.5647
+      "graded": 86,
+      "correct": 48,
+      "accuracy": 0.5581,
+      "brier": 0.2688,
+      "log_loss": 0.744,
+      "base_rate": 0.5698,
+      "majority_accuracy": 0.5698
     },
     "hn_fade_ml": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 82,
-      "correct": 73,
-      "accuracy": 0.8902,
-      "brier": 0.0919,
-      "log_loss": 0.3292,
-      "base_rate": 0.8902,
-      "majority_accuracy": 0.8902
+      "graded": 81,
+      "correct": 72,
+      "accuracy": 0.8889,
+      "brier": 0.093,
+      "log_loss": 0.3326,
+      "base_rate": 0.8889,
+      "majority_accuracy": 0.8889
     }
   },
   "calibration": [
@@ -336,21 +336,21 @@
     },
     {
       "label": "70\u201380%",
-      "n": 262,
-      "claimed": 0.7365,
-      "actual": 0.6718
+      "n": 264,
+      "claimed": 0.7362,
+      "actual": 0.6742
     },
     {
       "label": "80\u201390%",
-      "n": 286,
-      "claimed": 0.8442,
-      "actual": 0.8846
+      "n": 285,
+      "claimed": 0.8443,
+      "actual": 0.8842
     },
     {
       "label": "90\u2013100%",
-      "n": 378,
+      "n": 377,
       "claimed": 0.944,
-      "actual": 0.9656
+      "actual": 0.9655
     }
   ],
   "open_bets": [
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.522,
+      "confidence": 0.577,
       "basis": {
-        "today_usd": 60472,
-        "change_24h": -0.22
+        "today_usd": 60362,
+        "change_24h": -5.71
       },
       "made_on": "2026-11-24",
       "resolve_on": "2026-11-25"
@@ -470,27 +470,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50611576,
-        "top_title": "Nvidia Reinstates Jensen Huang as CEO"
+        "top_id": 50627340,
+        "top_title": "LLM agents work for their parent companies, not for you"
       },
       "made_on": "2026-11-24",
       "resolve_on": "2026-11-25"
-    },
-    {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-25",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-26"
     },
     {
       "id": "btc_up_ml",
@@ -499,19 +483,19 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.644,
+      "confidence": 0.596,
       "basis": {
-        "today_usd": 60472,
-        "change_24h": -0.22,
+        "today_usd": 60362,
+        "change_24h": -5.71,
         "model": {
-          "p_event": 0.3555,
+          "p_event": 0.4038,
           "n_train": 118,
           "fallback": null,
           "features": [
-            -0.22,
-            0.20381447911315131,
-            -7.166103776481425,
-            2.8003132062020026
+            -5.71,
+            0.021541367711153114,
+            -7.334970832054033,
+            2.823196398694577
           ],
           "weights": [
             -0.0879,
@@ -572,9 +556,9 @@
           "n_train": 121,
           "fallback": "laplace",
           "features": [
-            6.5,
-            223.28571428571428,
-            6.028571428571429,
+            6.4,
+            223.57142857142858,
+            6.014285714285714,
             1.0
           ]
         }
@@ -589,26 +573,26 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.714,
+      "confidence": 0.695,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.7139,
-          "n_train": 110,
+          "p_event": 0.6952,
+          "n_train": 111,
           "fallback": null,
           "features": [
-            2.0,
-            13.181703409783054,
-            0.8752268209064541,
+            3.0,
+            13.173048887128195,
+            0.8686206964884932,
             0.0
           ],
           "weights": [
-            -0.2413,
-            -0.34,
-            0.2892,
-            -0.2507
+            -0.2625,
+            -0.3679,
+            0.3083,
+            -0.2722
           ],
-          "bias": 0.4099
+          "bias": 0.4261
         }
       },
       "made_on": "2026-11-24",
@@ -623,8 +607,8 @@
       "call": true,
       "confidence": 0.936,
       "basis": {
-        "top_id": 50611576,
-        "top_title": "Nvidia Reinstates Jensen Huang as CEO",
+        "top_id": 50627340,
+        "top_title": "LLM agents work for their parent companies, not for you",
         "model": {
           "p_event": 0.936,
           "n_train": 121,
@@ -644,40 +628,6 @@
       },
       "made_on": "2026-11-24",
       "resolve_on": "2026-11-25"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.844,
-      "basis": {
-        "forecast_c": 23.6,
-        "for_date": "2026-11-25",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.8443,
-          "n_train": 108,
-          "fallback": null,
-          "features": [
-            0.3999999999999986,
-            0.9570788891204316,
-            0.25,
-            0.3999999999999986
-          ],
-          "weights": [
-            -0.6341,
-            0.3652,
-            -0.3927,
-            0.9134
-          ],
-          "bias": 2.7074
-        }
-      },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-26"
     }
   ],
   "grades": [
@@ -16581,19 +16531,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-23",
-      "call": true,
-      "confidence": 0.8,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -16653,19 +16590,6 @@
       "variant": "model",
       "made_on": "2026-11-21",
       "resolve_on": "2026-11-22",
-      "call": true,
-      "confidence": 0.95,
-      "actual": true,
-      "correct": true
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "made_on": "2026-11-21",
-      "resolve_on": "2026-11-23",
       "call": true,
       "confidence": 0.95,
       "actual": true,
@@ -16841,6 +16765,19 @@
       "correct": true
     },
     {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24",
+      "call": true,
+      "confidence": 0.7,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "hn_fade",
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "decay",
@@ -16889,6 +16826,19 @@
       "resolve_on": "2026-11-24",
       "call": true,
       "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "made_on": "2026-11-23",
+      "resolve_on": "2026-11-24",
+      "call": true,
+      "confidence": 0.701,
       "actual": true,
       "correct": true
     },
