@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-24",
+  "fetched_at": "2026-11-24T02:40:52.105291+00:00",
+  "observations": {
+    "btc": {
+      "usd": 60472,
+      "usd_24h_change": -0.22
+    },
+    "kp": {
+      "max_kp": 1.67,
+      "latest_kp": 1.0,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 6.5,
+      "count": 231,
+      "strongest_place": "Vanuatu region"
+    },
+    "wiki": {
+      "top": "Wikipedia:Featured_pictures",
+      "views": 530567,
+      "for_date": "2026-11-22"
+    },
+    "hn": {
+      "top_id": 50611576,
+      "top_title": "Nvidia Reinstates Jensen Huang as CEO",
+      "top10": [
+        50611576,
+        50620349,
+        50614249,
+        50619103,
+        50619207,
+        50620831,
+        50617499,
+        50620721,
+        50615308,
+        50620328
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 24.1,
+      "actual_prev_date": "2026-11-23",
+      "today": 24.0,
+      "forecast_next": 23.6,
+      "forecast_next_date": "2026-11-25"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.522,
+      "basis": {
+        "today_usd": 60472,
+        "change_24h": -0.22
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.78,
+      "basis": {
+        "today_max_kp": 1.67
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures"
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50611576,
+        "top_title": "Nvidia Reinstates Jensen Huang as CEO"
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 23.6,
+        "for_date": "2026-11-25",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-26"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.644,
+      "basis": {
+        "today_usd": 60472,
+        "change_24h": -0.22,
+        "model": {
+          "p_event": 0.3555,
+          "n_train": 118,
+          "fallback": null,
+          "features": [
+            -0.22,
+            0.20381447911315131,
+            -7.166103776481425,
+            2.8003132062020026
+          ],
+          "weights": [
+            -0.0879,
+            0.0381,
+            0.106,
+            -0.3579
+          ],
+          "bias": 0.1041
+        }
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.772,
+      "basis": {
+        "today_max_kp": 1.67,
+        "model": {
+          "p_event": 0.2277,
+          "n_train": 121,
+          "fallback": null,
+          "features": [
+            1.67,
+            1.89,
+            2.6671428571428573,
+            2.33
+          ],
+          "weights": [
+            0.897,
+            -0.3416,
+            -0.1203,
+            0.2968
+          ],
+          "bias": -0.5841
+        }
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9919,
+          "n_train": 121,
+          "fallback": "laplace",
+          "features": [
+            6.5,
+            223.28571428571428,
+            6.028571428571429,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.714,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures",
+        "model": {
+          "p_event": 0.7139,
+          "n_train": 110,
+          "fallback": null,
+          "features": [
+            2.0,
+            13.181703409783054,
+            0.8752268209064541,
+            0.0
+          ],
+          "weights": [
+            -0.2413,
+            -0.34,
+            0.2892,
+            -0.2507
+          ],
+          "bias": 0.4099
+        }
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.936,
+      "basis": {
+        "top_id": 50611576,
+        "top_title": "Nvidia Reinstates Jensen Huang as CEO",
+        "model": {
+          "p_event": 0.936,
+          "n_train": 121,
+          "fallback": null,
+          "features": [
+            0.0,
+            11.0,
+            1.0
+          ],
+          "weights": [
+            0.3944,
+            -0.18,
+            0.0398
+          ],
+          "bias": 2.8675
+        }
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-25"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.844,
+      "basis": {
+        "forecast_c": 23.6,
+        "for_date": "2026-11-25",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.8443,
+          "n_train": 108,
+          "fallback": null,
+          "features": [
+            0.3999999999999986,
+            0.9570788891204316,
+            0.25,
+            0.3999999999999986
+          ],
+          "weights": [
+            -0.6341,
+            0.3652,
+            -0.3927,
+            0.9134
+          ],
+          "bias": 2.7074
+        }
+      },
+      "made_on": "2026-11-24",
+      "resolve_on": "2026-11-26"
+    }
+  ]
+}
