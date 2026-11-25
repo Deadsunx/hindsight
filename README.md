@@ -36,27 +36,27 @@ test.
 <!-- LEDGER:START -->
 ### Standing — 2026-11-25
 
-**964 right / 1260 settled (77%)** · Brier 0.146 · log loss 0.444 · 12 still open
+**966 right / 1262 settled (77%)** · Brier 0.146 · log loss 0.444 · 12 still open
 
-Saying "50%" to all 1260 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
+Saying "50%" to all 1262 of them instead would score Brier 0.250, log loss 0.693. Lower is better; every figure below is only worth what it beats.
 
 | Call | Answered by | Settled | Right | Brier | Log loss |
 | --- | --- | --- | --- | --- | --- |
 | Bitcoin will be higher tomorrow than it is today. | momentum | n=120 | 56/120 (47%) | 0.253 | 0.699 |
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | persistence | n=122 | 88/122 (72%) | 0.198 | 0.583 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | base rate | n=122 | 122/122 (100%) | 0.003 | 0.055 |
-| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=111 | 61/111 (55%) | 0.256 | 0.706 |
+| Today's most-read Wikipedia article will still be #1 tomorrow. | persistence | n=112 | 62/112 (55%) | 0.254 | 0.703 |
 | The current #1 story on Hacker News will fall out of the top 10. | decay | n=122 | 115/122 (94%) | 0.058 | 0.242 |
 | Tomorrow's high in New Delhi will land within 2°C of today's forecast. | trust the forecaster | n=109 | 99/109 (91%) | 0.095 | 0.350 |
 | Bitcoin will be higher tomorrow than it is today. | logistic regression | n=94 | 43/94 (46%) | 0.284 | 0.780 |
 | Geomagnetic Kp will exceed 3 within the next 24 hours. | logistic regression | n=97 | 69/97 (71%) | 0.212 | 0.637 |
 | A magnitude 5.0+ earthquake will strike somewhere tomorrow. | logistic regression | n=97 | 97/97 (100%) | 0.003 | 0.051 |
-| Today's most-read Wikipedia article will still be #1 tomorrow. | logistic regression | n=86 | 48/86 (56%) | 0.269 | 0.744 |
+| Today's most-read Wikipedia article will still be #1 tomorrow. | logistic regression | n=87 | 49/87 (56%) | 0.267 | 0.740 |
 | The current #1 story on Hacker News will fall out of the top 10. | logistic regression | n=97 | 92/97 (95%) | 0.050 | 0.215 |
 | Tomorrow's high in New Delhi will land within 2°C of today's forecast. | logistic regression | n=83 | 74/83 (89%) | 0.091 | 0.327 |
-| _coin flip — the baseline_ | _50% to everything_ | n=1260 | _50%_ | _0.250_ | _0.693_ |
+| _coin flip — the baseline_ | _50% to everything_ | n=1262 | _50%_ | _0.250_ | _0.693_ |
 
-_Sample is 1260 settled bets across 123 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
+_Sample is 1262 settled bets across 123 days. Nothing here is significant yet, and it is published daily precisely so that it becomes so._
 
 **Open bets, placed today:**
 
@@ -66,10 +66,10 @@ _Sample is 1260 settled bets across 123 days. Nothing here is significant yet, a
 - **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, persistence)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(88% confident, decay)_
 - **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(80% confident, trust the forecaster)_
-- **no** — Bitcoin will be higher tomorrow than it is today. _(65% confident, logistic regression)_
-- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(75% confident, logistic regression)_
+- **no** — Bitcoin will be higher tomorrow than it is today. _(67% confident, logistic regression)_
+- **no** — Geomagnetic Kp will exceed 3 within the next 24 hours. _(59% confident, logistic regression)_
 - **yes** — A magnitude 5.0+ earthquake will strike somewhere tomorrow. _(95% confident, logistic regression)_
-- **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(70% confident, logistic regression)_
+- **yes** — Today's most-read Wikipedia article will still be #1 tomorrow. _(68% confident, logistic regression)_
 - **yes** — The current #1 story on Hacker News will fall out of the top 10. _(94% confident, logistic regression)_
 - **yes** — Tomorrow's high in New Delhi will land within 2°C of today's forecast. _(86% confident, logistic regression)_
 
@@ -94,15 +94,15 @@ weather service**, which nobody publishes.
 <!-- VERDICT:START -->
 ## Where it does not beat the baseline
 
-Judged against the coin flip's Brier of 0.250, over 1260 settled bets:
+Judged against the coin flip's Brier of 0.250, over 1262 settled bets:
 
 - **Bitcoin will be higher tomorrow than it is today.** scores Brier **0.253** against the coin flip's 0.250 over n=120. It is worse than shrugging.
-- **Today's most-read Wikipedia article will still be #1 tomorrow.** scores Brier **0.256** against the coin flip's 0.250 over n=111. It is worse than shrugging.
+- **Today's most-read Wikipedia article will still be #1 tomorrow.** scores Brier **0.254** against the coin flip's 0.250 over n=112. It is worse than shrugging.
 - **A magnitude 5.0+ earthquake will strike somewhere tomorrow.** is effectively one-sided: the event happened 100% of the time, so always calling the majority side would have scored 100% against this rule's 100%. Accuracy here measures the question, not the predictor.
 - **The current #1 story on Hacker News will fall out of the top 10.** is effectively one-sided: the event happened 94% of the time, so always calling the majority side would have scored 94% against this rule's 94%. Accuracy here measures the question, not the predictor.
 - **Tomorrow's high in New Delhi will land within 2°C of today's forecast.** is effectively one-sided: the event happened 91% of the time, so always calling the majority side would have scored 91% against this rule's 91%. Accuracy here measures the question, not the predictor.
 
-_Derived from the 1260 settled bets in the ledger on every run, not written by hand. At this sample size none of it is significant; it is published daily so that one day it might be._
+_Derived from the 1262 settled bets in the ledger on every run, not written by hand. At this sample size none of it is significant; it is published daily so that one day it might be._
 
 <!-- VERDICT:END -->
 
