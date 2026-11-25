@@ -1,19 +1,19 @@
 {
-  "date": "2026-11-24",
-  "fetched_at": "2026-11-24T14:32:01.404059+00:00",
+  "date": "2026-11-25",
+  "fetched_at": "2026-11-25T00:14:52.058939+00:00",
   "observations": {
     "btc": {
-      "usd": 60362,
-      "usd_24h_change": -5.71
+      "usd": 59549,
+      "usd_24h_change": -2.68
     },
     "kp": {
       "max_kp": 1.67,
-      "latest_kp": 1.0,
+      "latest_kp": 1.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 6.4,
-      "count": 233,
+      "count": 267,
       "strongest_place": "Mauritius - Reunion region"
     },
     "wiki": {
@@ -22,23 +22,28 @@
       "for_date": "2026-11-23"
     },
     "hn": {
-      "top_id": 50627340,
-      "top_title": "LLM agents work for their parent companies, not for you",
+      "top_id": 50633922,
+      "top_title": "Ternary Bonsai 2.5 27B",
       "top10": [
-        50627340,
-        50626578,
-        50626861,
-        50624497,
-        50626413,
-        50605361,
-        50614249,
-        50598094,
-        50620349,
-        50625384
+        50633922,
+        50634658,
+        50634426,
+        50630594,
+        50636286,
+        50625265,
+        50635698,
+        50598555,
+        50609483,
+        50633424
       ]
     },
     "weather": {
-      "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+      "city": "New Delhi",
+      "actual_prev": 24.8,
+      "actual_prev_date": "2026-11-24",
+      "today": 24.0,
+      "forecast_next": 24.3,
+      "forecast_next_date": "2026-11-26"
     }
   },
   "predictions": [
@@ -49,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.577,
+      "confidence": 0.547,
       "basis": {
-        "today_usd": 60362,
-        "change_24h": -5.71
+        "today_usd": 59549,
+        "change_24h": -2.68
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
     },
     {
       "id": "kp_storm",
@@ -68,8 +73,8 @@
       "basis": {
         "today_max_kp": 1.67
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
     },
     {
       "id": "quake_m5",
@@ -82,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
     },
     {
       "id": "wiki_hold",
@@ -96,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
     },
     {
       "id": "hn_fade",
@@ -108,11 +113,27 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50627340,
-        "top_title": "LLM agents work for their parent companies, not for you"
+        "top_id": 50633922,
+        "top_title": "Ternary Bonsai 2.5 27B"
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 24.3,
+        "for_date": "2026-11-26",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-27"
     },
     {
       "id": "btc_up_ml",
@@ -121,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.596,
+      "confidence": 0.649,
       "basis": {
-        "today_usd": 60362,
-        "change_24h": -5.71,
+        "today_usd": 59549,
+        "change_24h": -2.68,
         "model": {
-          "p_event": 0.4038,
-          "n_train": 118,
+          "p_event": 0.3511,
+          "n_train": 119,
           "fallback": null,
           "features": [
-            -5.71,
-            0.021541367711153114,
-            -7.334970832054033,
-            2.823196398694577
+            -2.68,
+            -2.1589471435847774,
+            -4.672792469744513,
+            2.8193218692934345
           ],
           "weights": [
-            -0.0879,
-            0.0381,
-            0.106,
-            -0.3579
+            -0.0389,
+            -0.0142,
+            0.1457,
+            -0.3903
           ],
-          "bias": 0.1041
+          "bias": 0.0863
         }
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
     },
     {
       "id": "kp_storm_ml",
@@ -154,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.772,
+      "confidence": 0.752,
       "basis": {
         "today_max_kp": 1.67,
         "model": {
-          "p_event": 0.2277,
-          "n_train": 121,
+          "p_event": 0.2478,
+          "n_train": 122,
           "fallback": null,
           "features": [
             1.67,
-            1.89,
-            2.6671428571428573,
+            1.67,
+            2.4299999999999997,
             2.33
           ],
           "weights": [
-            0.897,
-            -0.3416,
-            -0.1203,
-            0.2968
+            0.9029,
+            -0.3336,
+            -0.1214,
+            0.2978
           ],
-          "bias": -0.5841
+          "bias": -0.5995
         }
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
     },
     {
       "id": "quake_m5_ml",
@@ -191,18 +212,18 @@
         "base_rate": 1.0,
         "model": {
           "p_event": 0.9919,
-          "n_train": 121,
+          "n_train": 122,
           "fallback": "laplace",
           "features": [
             6.4,
-            223.57142857142858,
-            6.014285714285714,
+            236.85714285714286,
+            6.057142857142857,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
     },
     {
       "id": "wiki_hold_ml",
@@ -211,17 +232,17 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.695,
+      "confidence": 0.702,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.6952,
+          "p_event": 0.702,
           "n_train": 111,
           "fallback": null,
           "features": [
             3.0,
             13.173048887128195,
-            0.8686206964884932,
+            0.938346338719744,
             0.0
           ],
           "weights": [
@@ -233,8 +254,8 @@
           "bias": 0.4261
         }
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
     },
     {
       "id": "hn_fade_ml",
@@ -243,29 +264,63 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.936,
+      "confidence": 0.938,
       "basis": {
-        "top_id": 50627340,
-        "top_title": "LLM agents work for their parent companies, not for you",
+        "top_id": 50633922,
+        "top_title": "Ternary Bonsai 2.5 27B",
         "model": {
-          "p_event": 0.936,
-          "n_train": 121,
+          "p_event": 0.9379,
+          "n_train": 122,
           "fallback": null,
           "features": [
             0.0,
             11.0,
-            1.0
+            2.0
           ],
           "weights": [
-            0.3944,
-            -0.18,
-            0.0398
+            0.3931,
+            -0.1795,
+            0.032
           ],
-          "bias": 2.8675
+          "bias": 2.8753
         }
       },
-      "made_on": "2026-11-24",
-      "resolve_on": "2026-11-25"
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-26"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.858,
+      "basis": {
+        "forecast_c": 24.3,
+        "for_date": "2026-11-26",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.8576,
+          "n_train": 109,
+          "fallback": null,
+          "features": [
+            0.3000000000000007,
+            0.6344045521608976,
+            0.5333333333333327,
+            0.6999999999999993
+          ],
+          "weights": [
+            -0.6458,
+            0.3643,
+            -0.3844,
+            0.8981
+          ],
+          "bias": 2.7135
+        }
+      },
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-27"
     }
   ]
 }
