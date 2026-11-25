@@ -1,19 +1,19 @@
 {
   "date": "2026-11-25",
-  "fetched_at": "2026-11-25T13:52:25.270334+00:00",
+  "fetched_at": "2026-11-25T23:54:37.946263+00:00",
   "observations": {
     "btc": {
-      "usd": 58159,
-      "usd_24h_change": -3.14
+      "usd": 60364,
+      "usd_24h_change": 1.01
     },
     "kp": {
       "max_kp": 3.0,
-      "latest_kp": 2.0,
+      "latest_kp": 1.0,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.9,
-      "count": 218,
+      "count": 198,
       "strongest_place": "Balleny Islands region"
     },
     "wiki": {
@@ -22,28 +22,28 @@
       "for_date": "2026-11-24"
     },
     "hn": {
-      "top_id": 50641171,
-      "top_title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+      "top_id": 50644817,
+      "top_title": "1Password Security Incident",
       "top10": [
-        50641171,
-        50638032,
-        50637220,
-        50607849,
-        50637686,
-        50627726,
-        50642086,
-        50638503,
-        50633922,
-        50641323
+        50644817,
+        50648823,
+        50648050,
+        50647673,
+        50601280,
+        50647158,
+        50647181,
+        50643129,
+        50647161,
+        50646108
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 24.8,
-      "actual_prev_date": "2026-11-24",
-      "today": 24.4,
-      "forecast_next": 24.2,
-      "forecast_next_date": "2026-11-26"
+      "actual_prev": 24.4,
+      "actual_prev_date": "2026-11-25",
+      "today": 24.3,
+      "forecast_next": 24.1,
+      "forecast_next_date": "2026-11-27"
     }
   },
   "predictions": [
@@ -53,11 +53,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.551,
+      "call": true,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 58159,
-        "change_24h": -3.14
+        "today_usd": 60364,
+        "change_24h": 1.01
       },
       "made_on": "2026-11-25",
       "resolve_on": "2026-11-26"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50641171,
-        "top_title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire"
+        "top_id": 50644817,
+        "top_title": "1Password Security Incident"
       },
       "made_on": "2026-11-25",
       "resolve_on": "2026-11-26"
@@ -128,8 +128,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 24.2,
-        "for_date": "2026-11-26",
+        "forecast_c": 24.1,
+        "for_date": "2026-11-27",
         "city": "New Delhi"
       },
       "made_on": "2026-11-25",
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.673,
+      "confidence": 0.632,
       "basis": {
-        "today_usd": 58159,
-        "change_24h": -3.14,
+        "today_usd": 60364,
+        "change_24h": 1.01,
         "model": {
-          "p_event": 0.327,
+          "p_event": 0.3679,
           "n_train": 119,
           "fallback": null,
           "features": [
-            -3.14,
-            -4.442764898214024,
-            -6.897931741051422,
-            2.948655047768709
+            1.01,
+            -0.8198741435683443,
+            -3.368124479733625,
+            2.828127872470675
           ],
           "weights": [
-            -0.0389,
-            -0.0142,
-            0.1457,
-            -0.3903
+            -0.1645,
+            0.114,
+            0.0477,
+            -0.3175
           ],
-          "bias": 0.0863
+          "bias": 0.1198
         }
       },
       "made_on": "2026-11-25",
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.9,
-            229.85714285714286,
+            227.0,
             5.985714285714286,
             1.0
           ]
@@ -266,8 +266,8 @@
       "call": true,
       "confidence": 0.938,
       "basis": {
-        "top_id": 50641171,
-        "top_title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+        "top_id": 50644817,
+        "top_title": "1Password Security Incident",
         "model": {
           "p_event": 0.9379,
           "n_train": 122,
@@ -295,28 +295,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.865,
+      "confidence": 0.818,
       "basis": {
-        "forecast_c": 24.2,
-        "for_date": "2026-11-26",
+        "forecast_c": 24.1,
+        "for_date": "2026-11-27",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8647,
-          "n_train": 109,
+          "p_event": 0.8179,
+          "n_train": 107,
           "fallback": null,
           "features": [
             0.1999999999999993,
-            0.6344045521608976,
-            0.5333333333333327,
-            0.6999999999999993
+            0.6565905201197404,
+            0.3999999999999986,
+            0.3999999999999986
           ],
           "weights": [
-            -0.6458,
-            0.3643,
-            -0.3844,
-            0.8981
+            -0.6323,
+            0.3651,
+            -0.3936,
+            0.9116
           ],
-          "bias": 2.7135
+          "bias": 2.6914
         }
       },
       "made_on": "2026-11-25",

@@ -1,17 +1,17 @@
 {
-  "updated": "2026-11-25T13:52:47.693862+00:00",
+  "updated": "2026-11-25T23:54:39.158473+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 94,
-      "rule_correct": 42,
-      "model_correct": 43,
-      "rule_accuracy": 0.4468,
-      "model_accuracy": 0.4574,
-      "rule_brier": 0.2548,
-      "model_brier": 0.2843,
-      "rule_log_loss": 0.7027,
-      "model_log_loss": 0.7801,
+      "rule_correct": 41,
+      "model_correct": 42,
+      "rule_accuracy": 0.4362,
+      "model_accuracy": 0.4468,
+      "rule_brier": 0.2564,
+      "model_brier": 0.2864,
+      "rule_log_loss": 0.706,
+      "model_log_loss": 0.7843,
       "coin_flip": {
         "n": 94,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 214,
-        "rate": 0.5,
-        "majority_accuracy": 0.5
+        "rate": 0.5093,
+        "majority_accuracy": 0.5093
       }
     },
     "kp_storm": {
@@ -118,49 +118,49 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 83,
-      "rule_correct": 74,
-      "model_correct": 74,
-      "rule_accuracy": 0.8916,
-      "model_accuracy": 0.8916,
-      "rule_brier": 0.1051,
-      "model_brier": 0.091,
-      "rule_log_loss": 0.3735,
-      "model_log_loss": 0.3268,
+      "shared_days": 81,
+      "rule_correct": 72,
+      "model_correct": 72,
+      "rule_accuracy": 0.8889,
+      "model_accuracy": 0.8889,
+      "rule_brier": 0.1067,
+      "model_brier": 0.093,
+      "rule_log_loss": 0.3772,
+      "model_log_loss": 0.3326,
       "coin_flip": {
-        "n": 83,
+        "n": 81,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 192,
-        "rate": 0.901,
-        "majority_accuracy": 0.901
+        "n": 188,
+        "rate": 0.8989,
+        "majority_accuracy": 0.8989
       }
     }
   },
   "totals": {
-    "graded": 1262,
-    "correct": 966,
-    "accuracy": 0.7655,
-    "brier": 0.1458,
-    "log_loss": 0.4442,
+    "graded": 1258,
+    "correct": 960,
+    "accuracy": 0.7631,
+    "brier": 0.1464,
+    "log_loss": 0.4456,
     "open": 12,
-    "void": 41,
+    "void": 45,
     "days": 123
   },
   "baselines": {
     "coin_flip": {
-      "n": 1262,
+      "n": 1258,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 1262,
-      "rate": 0.7171,
-      "majority_accuracy": 0.7171
+      "n": 1258,
+      "rate": 0.7178,
+      "majority_accuracy": 0.7178
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 120,
-      "correct": 56,
-      "accuracy": 0.4667,
-      "brier": 0.253,
-      "log_loss": 0.6991,
-      "base_rate": 0.525,
-      "majority_accuracy": 0.525
+      "correct": 55,
+      "accuracy": 0.4583,
+      "brier": 0.2542,
+      "log_loss": 0.7017,
+      "base_rate": 0.5333,
+      "majority_accuracy": 0.5333
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 109,
-      "correct": 99,
-      "accuracy": 0.9083,
-      "brier": 0.095,
-      "log_loss": 0.3503,
-      "base_rate": 0.9083,
-      "majority_accuracy": 0.9083
+      "graded": 107,
+      "correct": 97,
+      "accuracy": 0.9065,
+      "brier": 0.0961,
+      "log_loss": 0.3527,
+      "base_rate": 0.9065,
+      "majority_accuracy": 0.9065
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -248,12 +248,12 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 94,
-      "correct": 43,
-      "accuracy": 0.4574,
-      "brier": 0.2843,
-      "log_loss": 0.7801,
-      "base_rate": 0.4681,
-      "majority_accuracy": 0.5319
+      "correct": 42,
+      "accuracy": 0.4468,
+      "brier": 0.2864,
+      "log_loss": 0.7843,
+      "base_rate": 0.4787,
+      "majority_accuracy": 0.5213
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 83,
-      "correct": 74,
-      "accuracy": 0.8916,
-      "brier": 0.091,
-      "log_loss": 0.3268,
-      "base_rate": 0.8916,
-      "majority_accuracy": 0.8916
+      "graded": 81,
+      "correct": 72,
+      "accuracy": 0.8889,
+      "brier": 0.093,
+      "log_loss": 0.3326,
+      "base_rate": 0.8889,
+      "majority_accuracy": 0.8889
     }
   },
   "calibration": [
@@ -326,7 +326,7 @@
       "label": "50\u201360%",
       "n": 201,
       "claimed": 0.5424,
-      "actual": 0.4726
+      "actual": 0.4627
     },
     {
       "label": "60\u201370%",
@@ -342,15 +342,15 @@
     },
     {
       "label": "80\u201390%",
-      "n": 289,
-      "claimed": 0.8443,
-      "actual": 0.8858
+      "n": 286,
+      "claimed": 0.8444,
+      "actual": 0.8846
     },
     {
       "label": "90\u2013100%",
-      "n": 381,
+      "n": 380,
       "claimed": 0.944,
-      "actual": 0.9659
+      "actual": 0.9658
     }
   ],
   "open_bets": [
@@ -360,11 +360,11 @@
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.551,
+      "call": true,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 58159,
-        "change_24h": -3.14
+        "today_usd": 60364,
+        "change_24h": 1.01
       },
       "made_on": "2026-11-25",
       "resolve_on": "2026-11-26"
@@ -420,8 +420,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50641171,
-        "top_title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire"
+        "top_id": 50644817,
+        "top_title": "1Password Security Incident"
       },
       "made_on": "2026-11-25",
       "resolve_on": "2026-11-26"
@@ -435,8 +435,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 24.2,
-        "for_date": "2026-11-26",
+        "forecast_c": 24.1,
+        "for_date": "2026-11-27",
         "city": "New Delhi"
       },
       "made_on": "2026-11-25",
@@ -449,27 +449,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.673,
+      "confidence": 0.632,
       "basis": {
-        "today_usd": 58159,
-        "change_24h": -3.14,
+        "today_usd": 60364,
+        "change_24h": 1.01,
         "model": {
-          "p_event": 0.327,
+          "p_event": 0.3679,
           "n_train": 119,
           "fallback": null,
           "features": [
-            -3.14,
-            -4.442764898214024,
-            -6.897931741051422,
-            2.948655047768709
+            1.01,
+            -0.8198741435683443,
+            -3.368124479733625,
+            2.828127872470675
           ],
           "weights": [
-            -0.0389,
-            -0.0142,
-            0.1457,
-            -0.3903
+            -0.1645,
+            0.114,
+            0.0477,
+            -0.3175
           ],
-          "bias": 0.0863
+          "bias": 0.1198
         }
       },
       "made_on": "2026-11-25",
@@ -523,7 +523,7 @@
           "fallback": "laplace",
           "features": [
             5.9,
-            229.85714285714286,
+            227.0,
             5.985714285714286,
             1.0
           ]
@@ -573,8 +573,8 @@
       "call": true,
       "confidence": 0.938,
       "basis": {
-        "top_id": 50641171,
-        "top_title": "Windows Loudness Equalization, reverse-engineered and ported to PipeWire",
+        "top_id": 50644817,
+        "top_title": "1Password Security Incident",
         "model": {
           "p_event": 0.9379,
           "n_train": 122,
@@ -602,28 +602,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.865,
+      "confidence": 0.818,
       "basis": {
-        "forecast_c": 24.2,
-        "for_date": "2026-11-26",
+        "forecast_c": 24.1,
+        "for_date": "2026-11-27",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.8647,
-          "n_train": 109,
+          "p_event": 0.8179,
+          "n_train": 107,
           "fallback": null,
           "features": [
             0.1999999999999993,
-            0.6344045521608976,
-            0.5333333333333327,
-            0.6999999999999993
+            0.6565905201197404,
+            0.3999999999999986,
+            0.3999999999999986
           ],
           "weights": [
-            -0.6458,
-            0.3643,
-            -0.3844,
-            0.8981
+            -0.6323,
+            0.3651,
+            -0.3936,
+            0.9116
           ],
-          "bias": 2.7135
+          "bias": 2.6914
         }
       },
       "made_on": "2026-11-25",
@@ -16661,19 +16661,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-24",
-      "call": true,
-      "confidence": 0.8,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -16735,19 +16722,6 @@
       "resolve_on": "2026-11-23",
       "call": true,
       "confidence": 0.941,
-      "actual": true,
-      "correct": true
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "made_on": "2026-11-22",
-      "resolve_on": "2026-11-24",
-      "call": true,
-      "confidence": 0.95,
       "actual": true,
       "correct": true
     },
@@ -16817,19 +16791,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "made_on": "2026-11-23",
-      "resolve_on": "2026-11-25",
-      "call": true,
-      "confidence": 0.8,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -16895,19 +16856,6 @@
       "correct": true
     },
     {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "made_on": "2026-11-23",
-      "resolve_on": "2026-11-25",
-      "call": true,
-      "confidence": 0.881,
-      "actual": true,
-      "correct": true
-    },
-    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -16917,8 +16865,8 @@
       "resolve_on": "2026-11-25",
       "call": false,
       "confidence": 0.577,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "kp_storm",
@@ -16982,8 +16930,8 @@
       "resolve_on": "2026-11-25",
       "call": false,
       "confidence": 0.596,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "kp_storm_ml",
