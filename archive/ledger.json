@@ -1,17 +1,17 @@
 {
-  "updated": "2026-11-27T13:27:56.535672+00:00",
+  "updated": "2026-11-27T23:50:20.076523+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 96,
-      "rule_correct": 43,
-      "model_correct": 42,
-      "rule_accuracy": 0.4479,
-      "model_accuracy": 0.4375,
-      "rule_brier": 0.2554,
-      "model_brier": 0.2891,
-      "rule_log_loss": 0.704,
-      "model_log_loss": 0.7896,
+      "rule_correct": 42,
+      "model_correct": 43,
+      "rule_accuracy": 0.4375,
+      "model_accuracy": 0.4479,
+      "rule_brier": 0.2566,
+      "model_brier": 0.2858,
+      "rule_log_loss": 0.7064,
+      "model_log_loss": 0.7826,
       "coin_flip": {
         "n": 96,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 218,
-        "rate": 0.5183,
-        "majority_accuracy": 0.5183
+        "rate": 0.5092,
+        "majority_accuracy": 0.5092
       }
     },
     "kp_storm": {
@@ -118,49 +118,49 @@
     },
     "forecast_hit": {
       "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "shared_days": 81,
-      "rule_correct": 72,
-      "model_correct": 72,
-      "rule_accuracy": 0.8889,
-      "model_accuracy": 0.8889,
-      "rule_brier": 0.1067,
-      "model_brier": 0.093,
-      "rule_log_loss": 0.3772,
-      "model_log_loss": 0.3326,
+      "shared_days": 83,
+      "rule_correct": 74,
+      "model_correct": 74,
+      "rule_accuracy": 0.8916,
+      "model_accuracy": 0.8916,
+      "rule_brier": 0.1051,
+      "model_brier": 0.0918,
+      "rule_log_loss": 0.3735,
+      "model_log_loss": 0.3301,
       "coin_flip": {
-        "n": 81,
+        "n": 83,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 188,
-        "rate": 0.8989,
-        "majority_accuracy": 0.8989
+        "n": 192,
+        "rate": 0.901,
+        "majority_accuracy": 0.901
       }
     }
   },
   "totals": {
-    "graded": 1278,
-    "correct": 976,
-    "accuracy": 0.7637,
-    "brier": 0.147,
-    "log_loss": 0.4476,
-    "open": 14,
-    "void": 47,
+    "graded": 1282,
+    "correct": 980,
+    "accuracy": 0.7644,
+    "brier": 0.1465,
+    "log_loss": 0.4466,
+    "open": 12,
+    "void": 45,
     "days": 125
   },
   "baselines": {
     "coin_flip": {
-      "n": 1278,
+      "n": 1282,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 1278,
-      "rate": 0.7175,
-      "majority_accuracy": 0.7175
+      "n": 1282,
+      "rate": 0.7168,
+      "majority_accuracy": 0.7168
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 122,
-      "correct": 57,
-      "accuracy": 0.4672,
-      "brier": 0.2535,
-      "log_loss": 0.7002,
-      "base_rate": 0.541,
-      "majority_accuracy": 0.541
+      "correct": 56,
+      "accuracy": 0.459,
+      "brier": 0.2544,
+      "log_loss": 0.702,
+      "base_rate": 0.5328,
+      "majority_accuracy": 0.5328
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -234,13 +234,13 @@
       "rule": "trust the forecaster",
       "family": "forecast_hit",
       "variant": "rule",
-      "graded": 107,
-      "correct": 97,
-      "accuracy": 0.9065,
-      "brier": 0.0961,
-      "log_loss": 0.3527,
-      "base_rate": 0.9065,
-      "majority_accuracy": 0.9065
+      "graded": 109,
+      "correct": 99,
+      "accuracy": 0.9083,
+      "brier": 0.095,
+      "log_loss": 0.3503,
+      "base_rate": 0.9083,
+      "majority_accuracy": 0.9083
     },
     "btc_up_ml": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
@@ -248,12 +248,12 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 96,
-      "correct": 42,
-      "accuracy": 0.4375,
-      "brier": 0.2891,
-      "log_loss": 0.7896,
-      "base_rate": 0.4896,
-      "majority_accuracy": 0.5104
+      "correct": 43,
+      "accuracy": 0.4479,
+      "brier": 0.2858,
+      "log_loss": 0.7826,
+      "base_rate": 0.4792,
+      "majority_accuracy": 0.5208
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -312,13 +312,13 @@
       "rule": "logistic regression",
       "family": "forecast_hit",
       "variant": "model",
-      "graded": 81,
-      "correct": 72,
-      "accuracy": 0.8889,
-      "brier": 0.093,
-      "log_loss": 0.3326,
-      "base_rate": 0.8889,
-      "majority_accuracy": 0.8889
+      "graded": 83,
+      "correct": 74,
+      "accuracy": 0.8916,
+      "brier": 0.0918,
+      "log_loss": 0.3301,
+      "base_rate": 0.8916,
+      "majority_accuracy": 0.8916
     }
   },
   "calibration": [
@@ -326,25 +326,25 @@
       "label": "50\u201360%",
       "n": 204,
       "claimed": 0.5426,
-      "actual": 0.4706
+      "actual": 0.4657
     },
     {
       "label": "60\u201370%",
       "n": 128,
       "claimed": 0.6409,
-      "actual": 0.5312
+      "actual": 0.5391
     },
     {
       "label": "70\u201380%",
-      "n": 272,
-      "claimed": 0.7364,
-      "actual": 0.6838
+      "n": 273,
+      "claimed": 0.7366,
+      "actual": 0.685
     },
     {
       "label": "80\u201390%",
-      "n": 288,
-      "claimed": 0.8447,
-      "actual": 0.8819
+      "n": 291,
+      "claimed": 0.8443,
+      "actual": 0.8832
     },
     {
       "label": "90\u2013100%",
@@ -355,66 +355,16 @@
   ],
   "open_bets": [
     {
-      "id": "forecast_hit",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "trust the forecaster",
-      "family": "forecast_hit",
-      "variant": "rule",
-      "call": true,
-      "confidence": 0.8,
-      "basis": {
-        "forecast_c": 24.1,
-        "for_date": "2026-11-27",
-        "city": "New Delhi"
-      },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-28"
-    },
-    {
-      "id": "forecast_hit_ml",
-      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
-      "rule": "logistic regression",
-      "family": "forecast_hit",
-      "variant": "model",
-      "call": true,
-      "confidence": 0.778,
-      "basis": {
-        "forecast_c": 24.1,
-        "for_date": "2026-11-27",
-        "city": "New Delhi",
-        "model": {
-          "p_event": 0.7778,
-          "n_train": 107,
-          "fallback": null,
-          "features": [
-            0.3999999999999986,
-            0.3993822390135878,
-            0.3999999999999986,
-            0.3999999999999986
-          ],
-          "weights": [
-            -0.6323,
-            0.3651,
-            -0.3936,
-            0.9116
-          ],
-          "bias": 2.6914
-        }
-      },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-28"
-    },
-    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
       "family": "btc_up",
       "variant": "rule",
-      "call": true,
+      "call": false,
       "confidence": 0.53,
       "basis": {
-        "today_usd": 61405,
-        "change_24h": 1.03
+        "today_usd": 59819,
+        "change_24h": -1.0
       },
       "made_on": "2026-11-27",
       "resolve_on": "2026-11-28"
@@ -470,8 +420,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50665968,
-        "top_title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]"
+        "top_id": 50643158,
+        "top_title": "GPT 6.2 Astra Solves a Historical Mystery"
       },
       "made_on": "2026-11-27",
       "resolve_on": "2026-11-28"
@@ -485,8 +435,8 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 23.2,
-        "for_date": "2026-11-28",
+        "forecast_c": 22.7,
+        "for_date": "2026-11-29",
         "city": "New Delhi"
       },
       "made_on": "2026-11-27",
@@ -499,27 +449,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.54,
+      "confidence": 0.555,
       "basis": {
-        "today_usd": 61405,
-        "change_24h": 1.03,
+        "today_usd": 59819,
+        "change_24h": -1.0,
         "model": {
-          "p_event": 0.4596,
+          "p_event": 0.4448,
           "n_train": 121,
           "fallback": null,
           "features": [
-            1.03,
-            1.727908286670421,
-            3.924787597738888,
-            2.6155783419039826
+            -1.0,
+            -0.8995725787747211,
+            1.240564600751437,
+            2.613787127329009
           ],
           "weights": [
-            -0.0714,
-            0.0441,
-            0.011,
-            -0.231
+            -0.1793,
+            0.1417,
+            0.0188,
+            -0.2993
           ],
-          "bias": 0.1507
+          "bias": 0.1173
         }
       },
       "made_on": "2026-11-27",
@@ -572,9 +522,9 @@
           "n_train": 124,
           "fallback": "laplace",
           "features": [
-            5.7,
-            216.85714285714286,
-            6.028571428571429,
+            5.1,
+            219.28571428571428,
+            5.942857142857143,
             1.0
           ]
         }
@@ -623,8 +573,8 @@
       "call": true,
       "confidence": 0.934,
       "basis": {
-        "top_id": 50665968,
-        "top_title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]",
+        "top_id": 50643158,
+        "top_title": "GPT 6.2 Astra Solves a Historical Mystery",
         "model": {
           "p_event": 0.9337,
           "n_train": 124,
@@ -652,28 +602,28 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.655,
+      "confidence": 0.771,
       "basis": {
-        "forecast_c": 23.2,
-        "for_date": "2026-11-28",
+        "forecast_c": 22.7,
+        "for_date": "2026-11-29",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.6547,
-          "n_train": 107,
+          "p_event": 0.7714,
+          "n_train": 109,
           "fallback": null,
           "features": [
-            1.4000000000000021,
-            0.3348115371848751,
+            0.8000000000000007,
+            0.33333333333333365,
             0.3999999999999986,
             0.3999999999999986
           ],
           "weights": [
-            -0.6323,
-            0.3651,
-            -0.3936,
-            0.9116
+            -0.6646,
+            0.3178,
+            -0.3652,
+            0.8565
           ],
-          "bias": 2.6914
+          "bias": 2.6944
         }
       },
       "made_on": "2026-11-27",
@@ -17101,6 +17051,19 @@
       "correct": false
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-27",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -17166,6 +17129,19 @@
       "correct": false
     },
     {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-11-25",
+      "resolve_on": "2026-11-27",
+      "call": true,
+      "confidence": 0.818,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "momentum",
@@ -17175,8 +17151,8 @@
       "resolve_on": "2026-11-27",
       "call": true,
       "confidence": 0.557,
-      "actual": true,
-      "correct": true
+      "actual": false,
+      "correct": false
     },
     {
       "id": "kp_storm",
@@ -17231,6 +17207,19 @@
       "correct": true
     },
     {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "made_on": "2026-11-26",
+      "resolve_on": "2026-11-28",
+      "call": true,
+      "confidence": 0.8,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "btc_up_ml",
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "rule": "logistic regression",
@@ -17240,8 +17229,8 @@
       "resolve_on": "2026-11-27",
       "call": false,
       "confidence": 0.661,
-      "actual": true,
-      "correct": false
+      "actual": false,
+      "correct": true
     },
     {
       "id": "kp_storm_ml",
@@ -17292,6 +17281,19 @@
       "resolve_on": "2026-11-27",
       "call": true,
       "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "made_on": "2026-11-26",
+      "resolve_on": "2026-11-28",
+      "call": true,
+      "confidence": 0.778,
       "actual": true,
       "correct": true
     }
