@@ -1,20 +1,20 @@
 {
-  "date": "2026-11-26",
-  "fetched_at": "2026-11-26T13:31:25.744322+00:00",
+  "date": "2026-11-27",
+  "fetched_at": "2026-11-27T00:10:58.853991+00:00",
   "observations": {
     "btc": {
-      "usd": 60785,
-      "usd_24h_change": 3.75
+      "usd": 60480,
+      "usd_24h_change": -0.0
     },
     "kp": {
-      "max_kp": 2.0,
-      "latest_kp": 0.67,
+      "max_kp": 2.33,
+      "latest_kp": 2.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.5,
-      "count": 233,
-      "strongest_place": "204 km S of Taliwang, Indonesia"
+      "max_mag": 5.7,
+      "count": 254,
+      "strongest_place": "Revilla Gigedo Islands region"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
@@ -22,28 +22,28 @@
       "for_date": "2026-11-25"
     },
     "hn": {
-      "top_id": 50654289,
-      "top_title": "Euro-Office comes to your desktop with the Nextcloud Office Desktop app",
+      "top_id": 50660180,
+      "top_title": "AI made self-hosting fun again",
       "top10": [
-        50654289,
+        50660180,
+        50659841,
+        50657265,
+        50657530,
+        50657645,
+        50658632,
         50653667,
-        50646108,
-        50644817,
-        50651719,
-        50647673,
-        50619466,
-        50650892,
-        50654353,
-        50649834
+        50658910,
+        50651099,
+        50657936
       ]
     },
     "weather": {
       "city": "New Delhi",
-      "actual_prev": 24.4,
-      "actual_prev_date": "2026-11-25",
+      "actual_prev": 24.5,
+      "actual_prev_date": "2026-11-26",
       "today": 24.5,
-      "forecast_next": 24.1,
-      "forecast_next_date": "2026-11-27"
+      "forecast_next": 23.3,
+      "forecast_next_date": "2026-11-28"
     }
   },
   "predictions": [
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.557,
+      "confidence": 0.52,
       "basis": {
-        "today_usd": 60785,
-        "change_24h": 3.75
+        "today_usd": 60480,
+        "change_24h": 0.0
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "kp_storm",
@@ -71,10 +71,10 @@
       "call": false,
       "confidence": 0.78,
       "basis": {
-        "today_max_kp": 2.0
+        "today_max_kp": 2.33
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50654289,
-        "top_title": "Euro-Office comes to your desktop with the Nextcloud Office Desktop app"
+        "top_id": 50660180,
+        "top_title": "AI made self-hosting fun again"
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 24.1,
-        "for_date": "2026-11-27",
+        "forecast_c": 23.3,
+        "for_date": "2026-11-28",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.661,
+      "confidence": 0.561,
       "basis": {
-        "today_usd": 60785,
-        "change_24h": 3.75,
+        "today_usd": 60480,
+        "change_24h": 0.0,
         "model": {
-          "p_event": 0.3389,
-          "n_train": 120,
+          "p_event": 0.4386,
+          "n_train": 121,
           "fallback": null,
           "features": [
-            3.75,
-            -3.5051513660247946,
-            -2.278061798655995,
-            2.844990817565219
+            0.0,
+            0.1954872270633734,
+            2.3592729242121635,
+            2.583088878677552
           ],
           "weights": [
-            -0.1413,
-            0.1085,
-            0.0162,
-            -0.2739
+            -0.1793,
+            0.1417,
+            0.0188,
+            -0.2993
           ],
-          "bias": 0.1354
+          "bias": 0.1173
         }
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "kp_storm_ml",
@@ -175,30 +175,30 @@
       "family": "kp_storm",
       "variant": "model",
       "call": false,
-      "confidence": 0.742,
+      "confidence": 0.596,
       "basis": {
-        "today_max_kp": 2.0,
+        "today_max_kp": 2.33,
         "model": {
-          "p_event": 0.2582,
-          "n_train": 123,
+          "p_event": 0.4044,
+          "n_train": 124,
           "fallback": null,
           "features": [
-            2.0,
-            2.223333333333333,
-            2.1914285714285713,
-            2.33
+            2.33,
+            2.4433333333333334,
+            2.2385714285714284,
+            4.33
           ],
           "weights": [
-            0.8819,
-            -0.3107,
-            -0.1188,
-            0.3061
+            0.8867,
+            -0.315,
+            -0.1042,
+            0.3091
           ],
-          "bias": -0.6143
+          "bias": -0.6293
         }
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "quake_m5_ml",
@@ -211,19 +211,19 @@
       "basis": {
         "base_rate": 1.0,
         "model": {
-          "p_event": 0.992,
-          "n_train": 123,
+          "p_event": 0.9921,
+          "n_train": 124,
           "fallback": "laplace",
           "features": [
-            5.5,
-            229.0,
-            6.014285714285714,
+            5.7,
+            224.71428571428572,
+            6.028571428571429,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,17 +232,17 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.653,
+      "confidence": 0.66,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.653,
+          "p_event": 0.66,
           "n_train": 113,
           "fallback": null,
           "features": [
             5.0,
             13.175428201705747,
-            0.9419028206277947,
+            0.9987368092906757,
             0.0
           ],
           "weights": [
@@ -254,8 +254,8 @@
           "bias": 0.4575
         }
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "hn_fade_ml",
@@ -266,27 +266,27 @@
       "call": true,
       "confidence": 0.95,
       "basis": {
-        "top_id": 50654289,
-        "top_title": "Euro-Office comes to your desktop with the Nextcloud Office Desktop app",
+        "top_id": 50660180,
+        "top_title": "AI made self-hosting fun again",
         "model": {
-          "p_event": 0.999,
-          "n_train": 123,
+          "p_event": 0.9725,
+          "n_train": 124,
           "fallback": null,
           "features": [
-            0.3,
-            4.0,
-            3.0
+            0.1,
+            11.0,
+            4.0
           ],
           "weights": [
-            0.4115,
-            -0.1848,
-            0.0791
+            0.4216,
+            -0.2074,
+            0.0803
           ],
-          "bias": 2.7497
+          "bias": 2.7665
         }
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-27"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-28"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,18 +295,18 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.778,
+      "confidence": 0.68,
       "basis": {
-        "forecast_c": 24.1,
-        "for_date": "2026-11-27",
+        "forecast_c": 23.3,
+        "for_date": "2026-11-28",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7778,
+          "p_event": 0.6804,
           "n_train": 107,
           "fallback": null,
           "features": [
-            0.3999999999999986,
-            0.3993822390135878,
+            1.1999999999999993,
+            0.3348115371848751,
             0.3999999999999986,
             0.3999999999999986
           ],
@@ -319,8 +319,8 @@
           "bias": 2.6914
         }
       },
-      "made_on": "2026-11-26",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-27",
+      "resolve_on": "2026-11-29"
     }
   ]
 }
