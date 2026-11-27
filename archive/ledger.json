@@ -1,17 +1,17 @@
 {
-  "updated": "2026-11-27T00:11:03.271943+00:00",
+  "updated": "2026-11-27T13:27:56.535672+00:00",
   "head_to_head": {
     "btc_up": {
       "question": "Bitcoin will be higher tomorrow than it is today.",
       "shared_days": 96,
-      "rule_correct": 42,
-      "model_correct": 43,
-      "rule_accuracy": 0.4375,
-      "model_accuracy": 0.4479,
-      "rule_brier": 0.2566,
-      "model_brier": 0.2858,
-      "rule_log_loss": 0.7064,
-      "model_log_loss": 0.7826,
+      "rule_correct": 43,
+      "model_correct": 42,
+      "rule_accuracy": 0.4479,
+      "model_accuracy": 0.4375,
+      "rule_brier": 0.2554,
+      "model_brier": 0.2891,
+      "rule_log_loss": 0.704,
+      "model_log_loss": 0.7896,
       "coin_flip": {
         "n": 96,
         "accuracy": 0.5,
@@ -20,8 +20,8 @@
       },
       "base_rate": {
         "n": 218,
-        "rate": 0.5092,
-        "majority_accuracy": 0.5092
+        "rate": 0.5183,
+        "majority_accuracy": 0.5183
       }
     },
     "kp_storm": {
@@ -72,25 +72,25 @@
     },
     "wiki_hold": {
       "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
-      "shared_days": 88,
-      "rule_correct": 48,
-      "model_correct": 50,
-      "rule_accuracy": 0.5455,
-      "model_accuracy": 0.5682,
-      "rule_brier": 0.2589,
-      "model_brier": 0.265,
-      "rule_log_loss": 0.7128,
-      "model_log_loss": 0.7356,
+      "shared_days": 89,
+      "rule_correct": 49,
+      "model_correct": 51,
+      "rule_accuracy": 0.5506,
+      "model_accuracy": 0.573,
+      "rule_brier": 0.257,
+      "model_brier": 0.2633,
+      "rule_log_loss": 0.7088,
+      "model_log_loss": 0.7322,
       "coin_flip": {
-        "n": 88,
+        "n": 89,
         "accuracy": 0.5,
         "brier": 0.25,
         "log_loss": 0.6931
       },
       "base_rate": {
-        "n": 201,
-        "rate": 0.597,
-        "majority_accuracy": 0.597
+        "n": 203,
+        "rate": 0.601,
+        "majority_accuracy": 0.601
       }
     },
     "hn_fade": {
@@ -141,26 +141,26 @@
     }
   },
   "totals": {
-    "graded": 1276,
-    "correct": 974,
-    "accuracy": 0.7633,
-    "brier": 0.1469,
-    "log_loss": 0.4474,
+    "graded": 1278,
+    "correct": 976,
+    "accuracy": 0.7637,
+    "brier": 0.147,
+    "log_loss": 0.4476,
     "open": 14,
-    "void": 49,
+    "void": 47,
     "days": 125
   },
   "baselines": {
     "coin_flip": {
-      "n": 1276,
+      "n": 1278,
       "accuracy": 0.5,
       "brier": 0.25,
       "log_loss": 0.6931
     },
     "base_rate": {
-      "n": 1276,
-      "rate": 0.7155,
-      "majority_accuracy": 0.7155
+      "n": 1278,
+      "rate": 0.7175,
+      "majority_accuracy": 0.7175
     }
   },
   "by_predictor": {
@@ -170,12 +170,12 @@
       "family": "btc_up",
       "variant": "rule",
       "graded": 122,
-      "correct": 56,
-      "accuracy": 0.459,
-      "brier": 0.2544,
-      "log_loss": 0.702,
-      "base_rate": 0.5328,
-      "majority_accuracy": 0.5328
+      "correct": 57,
+      "accuracy": 0.4672,
+      "brier": 0.2535,
+      "log_loss": 0.7002,
+      "base_rate": 0.541,
+      "majority_accuracy": 0.541
     },
     "kp_storm": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -208,13 +208,13 @@
       "rule": "persistence",
       "family": "wiki_hold",
       "variant": "rule",
-      "graded": 113,
-      "correct": 63,
-      "accuracy": 0.5575,
-      "brier": 0.2528,
-      "log_loss": 0.6997,
-      "base_rate": 0.6106,
-      "majority_accuracy": 0.6106
+      "graded": 114,
+      "correct": 64,
+      "accuracy": 0.5614,
+      "brier": 0.2513,
+      "log_loss": 0.6967,
+      "base_rate": 0.614,
+      "majority_accuracy": 0.614
     },
     "hn_fade": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -248,12 +248,12 @@
       "family": "btc_up",
       "variant": "model",
       "graded": 96,
-      "correct": 43,
-      "accuracy": 0.4479,
-      "brier": 0.2858,
-      "log_loss": 0.7826,
-      "base_rate": 0.4792,
-      "majority_accuracy": 0.5208
+      "correct": 42,
+      "accuracy": 0.4375,
+      "brier": 0.2891,
+      "log_loss": 0.7896,
+      "base_rate": 0.4896,
+      "majority_accuracy": 0.5104
     },
     "kp_storm_ml": {
       "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
@@ -286,13 +286,13 @@
       "rule": "logistic regression",
       "family": "wiki_hold",
       "variant": "model",
-      "graded": 88,
-      "correct": 50,
-      "accuracy": 0.5682,
-      "brier": 0.265,
-      "log_loss": 0.7356,
-      "base_rate": 0.5795,
-      "majority_accuracy": 0.5795
+      "graded": 89,
+      "correct": 51,
+      "accuracy": 0.573,
+      "brier": 0.2633,
+      "log_loss": 0.7322,
+      "base_rate": 0.5843,
+      "majority_accuracy": 0.5843
     },
     "hn_fade_ml": {
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
@@ -326,19 +326,19 @@
       "label": "50\u201360%",
       "n": 204,
       "claimed": 0.5426,
-      "actual": 0.4657
+      "actual": 0.4706
     },
     {
       "label": "60\u201370%",
-      "n": 127,
-      "claimed": 0.6408,
-      "actual": 0.5354
+      "n": 128,
+      "claimed": 0.6409,
+      "actual": 0.5312
     },
     {
       "label": "70\u201380%",
-      "n": 271,
-      "claimed": 0.7366,
-      "actual": 0.6827
+      "n": 272,
+      "claimed": 0.7364,
+      "actual": 0.6838
     },
     {
       "label": "80\u201390%",
@@ -411,10 +411,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.52,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 60480,
-        "change_24h": 0.0
+        "today_usd": 61405,
+        "change_24h": 1.03
       },
       "made_on": "2026-11-27",
       "resolve_on": "2026-11-28"
@@ -470,8 +470,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50660180,
-        "top_title": "AI made self-hosting fun again"
+        "top_id": 50665968,
+        "top_title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]"
       },
       "made_on": "2026-11-27",
       "resolve_on": "2026-11-28"
@@ -485,7 +485,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 23.3,
+        "forecast_c": 23.2,
         "for_date": "2026-11-28",
         "city": "New Delhi"
       },
@@ -499,27 +499,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.561,
+      "confidence": 0.54,
       "basis": {
-        "today_usd": 60480,
-        "change_24h": 0.0,
+        "today_usd": 61405,
+        "change_24h": 1.03,
         "model": {
-          "p_event": 0.4386,
+          "p_event": 0.4596,
           "n_train": 121,
           "fallback": null,
           "features": [
-            0.0,
-            0.1954872270633734,
-            2.3592729242121635,
-            2.583088878677552
+            1.03,
+            1.727908286670421,
+            3.924787597738888,
+            2.6155783419039826
           ],
           "weights": [
-            -0.1793,
-            0.1417,
-            0.0188,
-            -0.2993
+            -0.0714,
+            0.0441,
+            0.011,
+            -0.231
           ],
-          "bias": 0.1173
+          "bias": 0.1507
         }
       },
       "made_on": "2026-11-27",
@@ -573,7 +573,7 @@
           "fallback": "laplace",
           "features": [
             5.7,
-            224.71428571428572,
+            216.85714285714286,
             6.028571428571429,
             1.0
           ]
@@ -589,26 +589,26 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.66,
+      "confidence": 0.637,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.66,
-          "n_train": 113,
+          "p_event": 0.6375,
+          "n_train": 114,
           "fallback": null,
           "features": [
-            5.0,
-            13.175428201705747,
-            0.9987368092906757,
+            6.0,
+            13.184584841236708,
+            1.0066027899706345,
             0.0
           ],
           "weights": [
-            -0.2736,
-            -0.4279,
-            0.3559,
-            -0.2955
+            -0.2618,
+            -0.4529,
+            0.3766,
+            -0.2953
           ],
-          "bias": 0.4575
+          "bias": 0.4724
         }
       },
       "made_on": "2026-11-27",
@@ -621,16 +621,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.934,
       "basis": {
-        "top_id": 50660180,
-        "top_title": "AI made self-hosting fun again",
+        "top_id": 50665968,
+        "top_title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]",
         "model": {
-          "p_event": 0.9725,
+          "p_event": 0.9337,
           "n_train": 124,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             4.0
           ],
@@ -652,17 +652,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.68,
+      "confidence": 0.655,
       "basis": {
-        "forecast_c": 23.3,
+        "forecast_c": 23.2,
         "for_date": "2026-11-28",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.6804,
+          "p_event": 0.6547,
           "n_train": 107,
           "fallback": null,
           "features": [
-            1.1999999999999993,
+            1.4000000000000021,
             0.3348115371848751,
             0.3999999999999986,
             0.3999999999999986
@@ -17175,8 +17175,8 @@
       "resolve_on": "2026-11-27",
       "call": true,
       "confidence": 0.557,
-      "actual": false,
-      "correct": false
+      "actual": true,
+      "correct": true
     },
     {
       "id": "kp_storm",
@@ -17205,6 +17205,19 @@
       "correct": true
     },
     {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "made_on": "2026-11-26",
+      "resolve_on": "2026-11-27",
+      "call": true,
+      "confidence": 0.7,
+      "actual": true,
+      "correct": true
+    },
+    {
       "id": "hn_fade",
       "question": "The current #1 story on Hacker News will fall out of the top 10.",
       "rule": "decay",
@@ -17227,8 +17240,8 @@
       "resolve_on": "2026-11-27",
       "call": false,
       "confidence": 0.661,
-      "actual": false,
-      "correct": true
+      "actual": true,
+      "correct": false
     },
     {
       "id": "kp_storm_ml",
@@ -17253,6 +17266,19 @@
       "resolve_on": "2026-11-27",
       "call": true,
       "confidence": 0.95,
+      "actual": true,
+      "correct": true
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "made_on": "2026-11-26",
+      "resolve_on": "2026-11-27",
+      "call": true,
+      "confidence": 0.653,
       "actual": true,
       "correct": true
     },

@@ -1,48 +1,48 @@
 {
   "date": "2026-11-27",
-  "fetched_at": "2026-11-27T00:10:58.853991+00:00",
+  "fetched_at": "2026-11-27T13:27:55.108988+00:00",
   "observations": {
     "btc": {
-      "usd": 60480,
-      "usd_24h_change": -0.0
+      "usd": 61405,
+      "usd_24h_change": 1.03
     },
     "kp": {
       "max_kp": 2.33,
-      "latest_kp": 2.33,
+      "latest_kp": 0.33,
       "samples": 8
     },
     "quakes": {
       "max_mag": 5.7,
-      "count": 254,
+      "count": 199,
       "strongest_place": "Revilla Gigedo Islands region"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 527248,
-      "for_date": "2026-11-25"
+      "views": 532098,
+      "for_date": "2026-11-26"
     },
     "hn": {
-      "top_id": 50660180,
-      "top_title": "AI made self-hosting fun again",
+      "top_id": 50665968,
+      "top_title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]",
       "top10": [
+        50665968,
+        50666436,
+        50663595,
+        50665920,
         50660180,
+        50666279,
         50659841,
-        50657265,
         50657530,
-        50657645,
-        50658632,
-        50653667,
-        50658910,
-        50651099,
-        50657936
+        50657265,
+        50661646
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 24.5,
       "actual_prev_date": "2026-11-26",
-      "today": 24.5,
-      "forecast_next": 23.3,
+      "today": 24.6,
+      "forecast_next": 23.2,
       "forecast_next_date": "2026-11-28"
     }
   },
@@ -54,10 +54,10 @@
       "family": "btc_up",
       "variant": "rule",
       "call": true,
-      "confidence": 0.52,
+      "confidence": 0.53,
       "basis": {
-        "today_usd": 60480,
-        "change_24h": 0.0
+        "today_usd": 61405,
+        "change_24h": 1.03
       },
       "made_on": "2026-11-27",
       "resolve_on": "2026-11-28"
@@ -113,8 +113,8 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50660180,
-        "top_title": "AI made self-hosting fun again"
+        "top_id": 50665968,
+        "top_title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]"
       },
       "made_on": "2026-11-27",
       "resolve_on": "2026-11-28"
@@ -128,7 +128,7 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 23.3,
+        "forecast_c": 23.2,
         "for_date": "2026-11-28",
         "city": "New Delhi"
       },
@@ -142,27 +142,27 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.561,
+      "confidence": 0.54,
       "basis": {
-        "today_usd": 60480,
-        "change_24h": 0.0,
+        "today_usd": 61405,
+        "change_24h": 1.03,
         "model": {
-          "p_event": 0.4386,
+          "p_event": 0.4596,
           "n_train": 121,
           "fallback": null,
           "features": [
-            0.0,
-            0.1954872270633734,
-            2.3592729242121635,
-            2.583088878677552
+            1.03,
+            1.727908286670421,
+            3.924787597738888,
+            2.6155783419039826
           ],
           "weights": [
-            -0.1793,
-            0.1417,
-            0.0188,
-            -0.2993
+            -0.0714,
+            0.0441,
+            0.011,
+            -0.231
           ],
-          "bias": 0.1173
+          "bias": 0.1507
         }
       },
       "made_on": "2026-11-27",
@@ -216,7 +216,7 @@
           "fallback": "laplace",
           "features": [
             5.7,
-            224.71428571428572,
+            216.85714285714286,
             6.028571428571429,
             1.0
           ]
@@ -232,26 +232,26 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.66,
+      "confidence": 0.637,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.66,
-          "n_train": 113,
+          "p_event": 0.6375,
+          "n_train": 114,
           "fallback": null,
           "features": [
-            5.0,
-            13.175428201705747,
-            0.9987368092906757,
+            6.0,
+            13.184584841236708,
+            1.0066027899706345,
             0.0
           ],
           "weights": [
-            -0.2736,
-            -0.4279,
-            0.3559,
-            -0.2955
+            -0.2618,
+            -0.4529,
+            0.3766,
+            -0.2953
           ],
-          "bias": 0.4575
+          "bias": 0.4724
         }
       },
       "made_on": "2026-11-27",
@@ -264,16 +264,16 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.95,
+      "confidence": 0.934,
       "basis": {
-        "top_id": 50660180,
-        "top_title": "AI made self-hosting fun again",
+        "top_id": 50665968,
+        "top_title": "A Deterministic Subexponential-Time Algorithm for the Discrete Logarithm Problem [pdf]",
         "model": {
-          "p_event": 0.9725,
+          "p_event": 0.9337,
           "n_train": 124,
           "fallback": null,
           "features": [
-            0.1,
+            0.0,
             11.0,
             4.0
           ],
@@ -295,17 +295,17 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.68,
+      "confidence": 0.655,
       "basis": {
-        "forecast_c": 23.3,
+        "forecast_c": 23.2,
         "for_date": "2026-11-28",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.6804,
+          "p_event": 0.6547,
           "n_train": 107,
           "fallback": null,
           "features": [
-            1.1999999999999993,
+            1.4000000000000021,
             0.3348115371848751,
             0.3999999999999986,
             0.3999999999999986
