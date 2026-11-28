@@ -1,48 +1,48 @@
 {
-  "date": "2026-11-27",
-  "fetched_at": "2026-11-27T23:50:18.430179+00:00",
+  "date": "2026-11-28",
+  "fetched_at": "2026-11-28T12:41:53.456512+00:00",
   "observations": {
     "btc": {
-      "usd": 59819,
-      "usd_24h_change": -1.0
+      "usd": 59203,
+      "usd_24h_change": -3.76
     },
     "kp": {
-      "max_kp": 2.33,
-      "latest_kp": 1.0,
+      "max_kp": 4.0,
+      "latest_kp": 3.33,
       "samples": 8
     },
     "quakes": {
-      "max_mag": 5.1,
-      "count": 216,
-      "strongest_place": "107 km SSE of Auki, Solomon Islands"
+      "max_mag": 5.2,
+      "count": 241,
+      "strongest_place": "93 km W of San Antonio de los Cobres, Argentina"
     },
     "wiki": {
       "top": "Wikipedia:Featured_pictures",
-      "views": 532098,
-      "for_date": "2026-11-26"
+      "views": 511715,
+      "for_date": "2026-11-27"
     },
     "hn": {
-      "top_id": 50643158,
-      "top_title": "GPT 6.2 Astra Solves a Historical Mystery",
+      "top_id": 50676672,
+      "top_title": "Farewell",
       "top10": [
+        50676672,
+        50674218,
+        50632052,
+        50674452,
+        50672565,
+        50657346,
+        50655389,
         50643158,
-        50668145,
-        50669765,
-        50672142,
-        50672008,
-        50662313,
-        50670841,
-        50667726,
-        50631823,
-        50670855
+        50666724,
+        50668145
       ]
     },
     "weather": {
       "city": "New Delhi",
       "actual_prev": 24.6,
       "actual_prev_date": "2026-11-27",
-      "today": 23.5,
-      "forecast_next": 22.7,
+      "today": 23.6,
+      "forecast_next": 22.9,
       "forecast_next_date": "2026-11-29"
     }
   },
@@ -54,13 +54,13 @@
       "family": "btc_up",
       "variant": "rule",
       "call": false,
-      "confidence": 0.53,
+      "confidence": 0.558,
       "basis": {
-        "today_usd": 59819,
-        "change_24h": -1.0
+        "today_usd": 59203,
+        "change_24h": -3.76
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "kp_storm",
@@ -68,13 +68,13 @@
       "rule": "persistence",
       "family": "kp_storm",
       "variant": "rule",
-      "call": false,
-      "confidence": 0.78,
+      "call": true,
+      "confidence": 0.7,
       "basis": {
-        "today_max_kp": 2.33
+        "today_max_kp": 4.0
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "quake_m5",
@@ -87,8 +87,8 @@
       "basis": {
         "base_rate": 1.0
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "wiki_hold",
@@ -101,8 +101,8 @@
       "basis": {
         "today_top": "Wikipedia:Featured_pictures"
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "hn_fade",
@@ -113,11 +113,11 @@
       "call": true,
       "confidence": 0.88,
       "basis": {
-        "top_id": 50643158,
-        "top_title": "GPT 6.2 Astra Solves a Historical Mystery"
+        "top_id": 50676672,
+        "top_title": "Farewell"
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "forecast_hit",
@@ -128,12 +128,12 @@
       "call": true,
       "confidence": 0.8,
       "basis": {
-        "forecast_c": 22.7,
+        "forecast_c": 22.9,
         "for_date": "2026-11-29",
         "city": "New Delhi"
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-29"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-30"
     },
     {
       "id": "btc_up_ml",
@@ -142,31 +142,31 @@
       "family": "btc_up",
       "variant": "model",
       "call": false,
-      "confidence": 0.555,
+      "confidence": 0.525,
       "basis": {
-        "today_usd": 59819,
-        "change_24h": -1.0,
+        "today_usd": 59203,
+        "change_24h": -3.76,
         "model": {
-          "p_event": 0.4448,
-          "n_train": 121,
+          "p_event": 0.4748,
+          "n_train": 122,
           "fallback": null,
           "features": [
-            -1.0,
-            -0.8995725787747211,
-            1.240564600751437,
-            2.613787127329009
+            -3.76,
+            -1.9233317871579114,
+            -1.8989544151518656,
+            2.6201599056687574
           ],
           "weights": [
-            -0.1793,
-            0.1417,
-            0.0188,
-            -0.2993
+            -0.1725,
+            0.1461,
+            0.0168,
+            -0.3202
           ],
-          "bias": 0.1173
+          "bias": 0.0997
         }
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "kp_storm_ml",
@@ -174,31 +174,31 @@
       "rule": "logistic regression",
       "family": "kp_storm",
       "variant": "model",
-      "call": false,
-      "confidence": 0.596,
+      "call": true,
+      "confidence": 0.779,
       "basis": {
-        "today_max_kp": 2.33,
+        "today_max_kp": 4.0,
         "model": {
-          "p_event": 0.4044,
-          "n_train": 124,
+          "p_event": 0.7785,
+          "n_train": 125,
           "fallback": null,
           "features": [
-            2.33,
-            2.4433333333333334,
-            2.2385714285714284,
-            4.33
+            4.0,
+            2.776666666666667,
+            2.4285714285714284,
+            6.0
           ],
           "weights": [
-            0.8867,
-            -0.315,
-            -0.1042,
-            0.3091
+            0.8656,
+            -0.3089,
+            -0.1381,
+            0.3438
           ],
-          "bias": -0.6293
+          "bias": -0.6047
         }
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "quake_m5_ml",
@@ -212,18 +212,18 @@
         "base_rate": 1.0,
         "model": {
           "p_event": 0.9921,
-          "n_train": 124,
+          "n_train": 125,
           "fallback": "laplace",
           "features": [
-            5.1,
-            219.28571428571428,
-            5.942857142857143,
+            5.2,
+            220.28571428571428,
+            5.714285714285714,
             1.0
           ]
         }
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "wiki_hold_ml",
@@ -232,30 +232,30 @@
       "family": "wiki_hold",
       "variant": "model",
       "call": true,
-      "confidence": 0.637,
+      "confidence": 0.628,
       "basis": {
         "today_top": "Wikipedia:Featured_pictures",
         "model": {
-          "p_event": 0.6375,
-          "n_train": 114,
+          "p_event": 0.6284,
+          "n_train": 115,
           "fallback": null,
           "features": [
-            6.0,
-            13.184584841236708,
-            1.0066027899706345,
+            7.0,
+            13.145525062625621,
+            0.9757105080224974,
             0.0
           ],
           "weights": [
-            -0.2618,
-            -0.4529,
-            0.3766,
-            -0.2953
+            -0.2383,
+            -0.4746,
+            0.396,
+            -0.2867
           ],
-          "bias": 0.4724
+          "bias": 0.4869
         }
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "hn_fade_ml",
@@ -264,29 +264,29 @@
       "family": "hn_fade",
       "variant": "model",
       "call": true,
-      "confidence": 0.934,
+      "confidence": 0.95,
       "basis": {
-        "top_id": 50643158,
-        "top_title": "GPT 6.2 Astra Solves a Historical Mystery",
+        "top_id": 50676672,
+        "top_title": "Farewell",
         "model": {
-          "p_event": 0.9337,
-          "n_train": 124,
+          "p_event": 0.9929,
+          "n_train": 125,
           "fallback": null,
           "features": [
-            0.0,
-            11.0,
-            4.0
+            0.2,
+            8.0,
+            5.0
           ],
           "weights": [
-            0.4216,
-            -0.2074,
-            0.0803
+            0.4473,
+            -0.2173,
+            0.0193
           ],
-          "bias": 2.7665
+          "bias": 2.6514
         }
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-28"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
     },
     {
       "id": "forecast_hit_ml",
@@ -295,20 +295,20 @@
       "family": "forecast_hit",
       "variant": "model",
       "call": true,
-      "confidence": 0.771,
+      "confidence": 0.777,
       "basis": {
-        "forecast_c": 22.7,
+        "forecast_c": 22.9,
         "for_date": "2026-11-29",
         "city": "New Delhi",
         "model": {
-          "p_event": 0.7714,
+          "p_event": 0.7773,
           "n_train": 109,
           "fallback": null,
           "features": [
-            0.8000000000000007,
-            0.33333333333333365,
-            0.3999999999999986,
-            0.3999999999999986
+            0.7000000000000028,
+            0.10540925533894673,
+            0.4666666666666662,
+            0.5
           ],
           "weights": [
             -0.6646,
@@ -319,8 +319,8 @@
           "bias": 2.6944
         }
       },
-      "made_on": "2026-11-27",
-      "resolve_on": "2026-11-29"
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-30"
     }
   ]
 }

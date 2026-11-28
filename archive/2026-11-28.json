@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-28",
+  "fetched_at": "2026-11-28T12:41:53.456512+00:00",
+  "observations": {
+    "btc": {
+      "usd": 59203,
+      "usd_24h_change": -3.76
+    },
+    "kp": {
+      "max_kp": 4.0,
+      "latest_kp": 3.33,
+      "samples": 8
+    },
+    "quakes": {
+      "max_mag": 5.2,
+      "count": 241,
+      "strongest_place": "93 km W of San Antonio de los Cobres, Argentina"
+    },
+    "wiki": {
+      "top": "Wikipedia:Featured_pictures",
+      "views": 511715,
+      "for_date": "2026-11-27"
+    },
+    "hn": {
+      "top_id": 50676672,
+      "top_title": "Farewell",
+      "top10": [
+        50676672,
+        50674218,
+        50632052,
+        50674452,
+        50672565,
+        50657346,
+        50655389,
+        50643158,
+        50666724,
+        50668145
+      ]
+    },
+    "weather": {
+      "city": "New Delhi",
+      "actual_prev": 24.6,
+      "actual_prev_date": "2026-11-27",
+      "today": 23.6,
+      "forecast_next": 22.9,
+      "forecast_next_date": "2026-11-29"
+    }
+  },
+  "predictions": [
+    {
+      "id": "btc_up",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "momentum",
+      "family": "btc_up",
+      "variant": "rule",
+      "call": false,
+      "confidence": 0.558,
+      "basis": {
+        "today_usd": 59203,
+        "change_24h": -3.76
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "kp_storm",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "persistence",
+      "family": "kp_storm",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_max_kp": 4.0
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "quake_m5",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "base rate",
+      "family": "quake_m5",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "wiki_hold",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "persistence",
+      "family": "wiki_hold",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.7,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures"
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "hn_fade",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "decay",
+      "family": "hn_fade",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.88,
+      "basis": {
+        "top_id": 50676672,
+        "top_title": "Farewell"
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "forecast_hit",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "trust the forecaster",
+      "family": "forecast_hit",
+      "variant": "rule",
+      "call": true,
+      "confidence": 0.8,
+      "basis": {
+        "forecast_c": 22.9,
+        "for_date": "2026-11-29",
+        "city": "New Delhi"
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-30"
+    },
+    {
+      "id": "btc_up_ml",
+      "question": "Bitcoin will be higher tomorrow than it is today.",
+      "rule": "logistic regression",
+      "family": "btc_up",
+      "variant": "model",
+      "call": false,
+      "confidence": 0.525,
+      "basis": {
+        "today_usd": 59203,
+        "change_24h": -3.76,
+        "model": {
+          "p_event": 0.4748,
+          "n_train": 122,
+          "fallback": null,
+          "features": [
+            -3.76,
+            -1.9233317871579114,
+            -1.8989544151518656,
+            2.6201599056687574
+          ],
+          "weights": [
+            -0.1725,
+            0.1461,
+            0.0168,
+            -0.3202
+          ],
+          "bias": 0.0997
+        }
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "kp_storm_ml",
+      "question": "Geomagnetic Kp will exceed 3 within the next 24 hours.",
+      "rule": "logistic regression",
+      "family": "kp_storm",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.779,
+      "basis": {
+        "today_max_kp": 4.0,
+        "model": {
+          "p_event": 0.7785,
+          "n_train": 125,
+          "fallback": null,
+          "features": [
+            4.0,
+            2.776666666666667,
+            2.4285714285714284,
+            6.0
+          ],
+          "weights": [
+            0.8656,
+            -0.3089,
+            -0.1381,
+            0.3438
+          ],
+          "bias": -0.6047
+        }
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "quake_m5_ml",
+      "question": "A magnitude 5.0+ earthquake will strike somewhere tomorrow.",
+      "rule": "logistic regression",
+      "family": "quake_m5",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "base_rate": 1.0,
+        "model": {
+          "p_event": 0.9921,
+          "n_train": 125,
+          "fallback": "laplace",
+          "features": [
+            5.2,
+            220.28571428571428,
+            5.714285714285714,
+            1.0
+          ]
+        }
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "wiki_hold_ml",
+      "question": "Today's most-read Wikipedia article will still be #1 tomorrow.",
+      "rule": "logistic regression",
+      "family": "wiki_hold",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.628,
+      "basis": {
+        "today_top": "Wikipedia:Featured_pictures",
+        "model": {
+          "p_event": 0.6284,
+          "n_train": 115,
+          "fallback": null,
+          "features": [
+            7.0,
+            13.145525062625621,
+            0.9757105080224974,
+            0.0
+          ],
+          "weights": [
+            -0.2383,
+            -0.4746,
+            0.396,
+            -0.2867
+          ],
+          "bias": 0.4869
+        }
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "hn_fade_ml",
+      "question": "The current #1 story on Hacker News will fall out of the top 10.",
+      "rule": "logistic regression",
+      "family": "hn_fade",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.95,
+      "basis": {
+        "top_id": 50676672,
+        "top_title": "Farewell",
+        "model": {
+          "p_event": 0.9929,
+          "n_train": 125,
+          "fallback": null,
+          "features": [
+            0.2,
+            8.0,
+            5.0
+          ],
+          "weights": [
+            0.4473,
+            -0.2173,
+            0.0193
+          ],
+          "bias": 2.6514
+        }
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-29"
+    },
+    {
+      "id": "forecast_hit_ml",
+      "question": "Tomorrow's high in New Delhi will land within 2\u00b0C of today's forecast.",
+      "rule": "logistic regression",
+      "family": "forecast_hit",
+      "variant": "model",
+      "call": true,
+      "confidence": 0.777,
+      "basis": {
+        "forecast_c": 22.9,
+        "for_date": "2026-11-29",
+        "city": "New Delhi",
+        "model": {
+          "p_event": 0.7773,
+          "n_train": 109,
+          "fallback": null,
+          "features": [
+            0.7000000000000028,
+            0.10540925533894673,
+            0.4666666666666662,
+            0.5
+          ],
+          "weights": [
+            -0.6646,
+            0.3178,
+            -0.3652,
+            0.8565
+          ],
+          "bias": 2.6944
+        }
+      },
+      "made_on": "2026-11-28",
+      "resolve_on": "2026-11-30"
+    }
+  ]
+}
